@@ -1,5 +1,127 @@
 # Native Skyborne appearance
 
+## Female Vrykul and Alliance Ogre
+
+`tools/vrykul_female_pack.py` stages the supplied SnowzoCraft player female on Vrykul races56/57.
+The female model/display are120069/60060, scale1.0, with six skin colors, one face, five hairstyles,
+five hair colors and one facial-hair choice. The existing male model, scale, saved choices and native
+selection catalog remain intact. Female materials resolve through the ordinary CharSections rows;
+the native compositor and male geoset selections are bypassed only for this authored female body.
+The hair getter uses the female hairstyle and hair-color fields independently of skin color.
+Server creation/load validation and the creator gender guard accept both Vrykul genders.
+
+Alliance Ogre reuses the unused Furbolg reservation61. It shares Horde Ogre60's two player models,
+uses `OgreAlliance`, Common, Human starting data/eligibility and the Ogre visual equipment base.
+The existing race limit remains64. Furbolg's historical packer rejects attempts to reclaim61.
+Both Ogre faction identities are paired in SharedDefines and the registry. The supplied Alliance
+portraits were already installed with the Horde Ogre package.
+
+The new assets are staged in `Data/Patch-7.MPQ`; matching root/enUS Z archives, six server DBCs,
+appearance/geometry catalogs, native helper and dedicated pending SQL form one installation.
+`tools/test_vrykul_female_pack.py` checks source dependency closure,340 fitted female Vrykul helmets,
+all female selector combinations, Alliance Ogre identity and preservation of old client/server rows.
+`tools/vrykul_female_deploy.py` requires the successful native/server build receipts, verifies backups,
+preserves existing character appearances and recreates only worldserver.
+The native harnesses cover female field limits, hair lookup, ordinary body/face materials and
+preservation of authored equipment geosets. Live creator, equipment, barber and relog acceptance
+remains separate from these checks.
+
+The October7 package is installed in `G:\3.3.5a - Dev`. Both native and worldserver builds passed;
+only worldserver was recreated and it reached its ready command prompt. Its image is
+`bdf4cc65760d8ec59207cbbbccd94954efc5f795e560123ef55962f8b3b0f877`.
+Client files, server mount hashes, Common/ten starts for Ogre61 and the migration receipt were verified.
+Rollback files are under `C:\Users\Zach\.codex\backups\vrykul-female-ogre-20261007-003659`;
+the prior server image is tagged `esteria-worldserver:pre-vrykul-female-20261007`.
+One female effect texture was shadowed by Patch-C. Only its filename reference is redirected to
+the private female asset path; donor geometry, skin files, animation tracks and source files stay intact.
+
+The creator follow-up fixed two remaining male-only guards in race selection and the gender-click
+handler. All three callers now share `CharacterCreate_IsMaleOnlyRace`; Vrykul56/57 keep female selection
+while Tuskarr55, Forgotten58/59 and Gnoll63 remain male-only. `tools/test_vrykul_creator_gender.py`
+reproduces the former failure and executes the corrected real handlers in Lua5.1.
+`tools/vrykul_creator_fix.py` updated only CharacterCreate.lua in both active Z archives, with
+readback checks and verified backups under `C:\Users\Zach\.codex\backups\vrykul-creator-20261007-013653`.
+
+The subsequent crash report names `Character\Vrykul\Female\VrykulFemaleSkin00_00.blp` on the texture
+load/compositor stack. The donor's six512x512 body skins were raw BGRA,1398248 bytes each; the native
+component contract is indexed BLP with a20-bit buffer length. `tools/vrykul_component_fix.py` converted
+all25 female CharSections textures to the existing indexed contract, retaining their dimensions and
+exact base-level alpha masks. Non-square fragments stop mips when the shorter edge reaches one pixel.
+Only `Data/Patch-7.MPQ` changed; model, skin, animation, helmet and other asset bytes were preserved.
+Archive readback and component-limit checks passed. Verified rollback files are under
+`C:\Users\Zach\.codex\backups\vrykul-components-20261007-014832`. Live crash retesting remains required.
+
+The invisible-model report was traced with a read-only live capture: the female M2 existed, but
+skin/render-mesh tables were null. Header relocation had stopped during bone128's scale track.
+The donor shares writable global-animation outer arrays across bones127..162. Stock loading rebases
+the first reference in place, then rejects the next reference's already-absolute inner pointer.
+`separate_bone_track_arrays` gives each track separate outer metadata; keyframe payloads, vertices,
+sequences, skins and textures stay unchanged. A native-reader reproduction fails at bone128 before
+the patch and completes all163 bones after70 aliases are separated. `tools/vrykul_track_fix.py`
+installed only the female M2 asset change, with backups under
+`C:\Users\Zach\.codex\backups\vrykul-tracks-20261007-021904`.
+The user confirmed the female renders in creation, Character Select and the world, with Big Momma's
+camera at normal ground height after this repair. The original saved Human start coordinates were
+not changed.
+Big Momma's saved starting coordinates match the Human donor position; live model/camera recovery
+must be checked before moving the character or changing spawn data.
+
+## Horde Gnoll (RaceID 63, installed)
+
+`tools/gnoll_race_pack.py` stages the modern Gnoll creature116355, display501, model12643,
+FileDataID3886641 from Retail12.1.0.69933. The content build remains
+`dcfc90fffd79ba00406ae46f5f657592`; Gnoll records the refreshed CDN distribution metadata separately
+from the previous ports. The source cache preserves content keys, SHA-256 and all reachable dependencies.
+
+One authored male body exposes15 independent controls: ten fur skins, six manes, beard, ears, eyes,
+three outfit palettes, chest sling, cuffs, waist, loincloth, tail, leg wraps, pauldrons, belt strap and trousers.
+Five ordinary appearance bytes hold capacities120/54/60/48/3. Creation, nearby-player and roster packets
+retain their existing shape; server creation/load/barber validation rejects unsupported gender or bytes.
+The stock barber cycles packed fields; independent controls use the existing creator interface.
+
+The source's primary14823 vertices and every distinct authored surface remain present. Native clothing
+moves into geoset groups31..43, independently of equipped player garments. Horde/Orcish and the current
+Orc Hero start are copied additively. The model/display targets are120068/60059. Helmets are hidden;
+boots retain the authored paws and use fitted calf geometry. No separate female body or new racials are invented.
+
+The staged model has136 sequences, including missing actions retargeted from the installed Worgen male.
+Original Gnoll actions/events remain. Shoulder/shield/sheath frames and cape geometry reuse the prior
+equipment pipeline. The full torso includes the hunch above the shoulder pivots. Offline shirt/plate/robe
+previews use actual installed item textures; their fitted anatomy is checked separately from live acceptance.
+
+The installed stage is `C:\Users\Zach\.codex\tmp\gnoll-horde-deploy-20261006`. Earlier snapshots under
+`gnoll-playable` and `gnoll-horde-20261006` remain recoverable; their geometry merge bases became stale.
+`tools/test_gnoll_race_pack.py` checks source surfaces, all controls, native limits, material/animation closure,
+Horde identity, male starts, unrelated DBC rows and asset/root/enUS archive readbacks. The prepared asset
+archive is `Data/Patch-6.MPQ`; executable changes are unnecessary. The scoped pending world revision is
+`data/sql/updates/pending_db_world/rev_20261006230000000.sql`.
+
+The user authorized the builds and coordinated deployment. All four native harnesses pass, covering controls,
+invalid appearance rejection, equipment visibility, compositor ownership, packet layout and teardown.
+Worldserver image `d23472ac5f23c9fc27f854e2724e7457d09af256c5eef97a3b3d3bf1699c6011` reached ready state.
+Only ac-worldserver was recreated. Eight client files and six mounted server DBCs match staging; Orcish,
+ten class starts, the migration receipt, unchanged existing appearance/startup data and executable are verified.
+Hash-verified rollback files are under `C:\Users\Zach\.codex\backups\gnoll-20261006-081122`.
+The prior image remains tagged `esteria-worldserver:pre-gnoll-20261006`. `tools/gnoll_deploy.py` reproduces
+the guarded backup/installation; its receipts and startup log are retained beside the installed stage.
+Fresh-client acceptance remains required for every choice, armor/weapons, animations, creation,
+Character Select, nearby players, relog, logout and full exit.
+
+The first live Gnoll report exposed two integration errors. The port cloned NPC model flags0, so the native
+unit initializer's bit4 test at0x007301BB skipped creating CCharComponent. Creation explicitly created one,
+which is why that screen behaved differently. Model120068 now uses the existing player/HD flags0x804.
+Native geoset801 supplies the pelvis; the initial equipment rule hid it as a removable loincloth when pants
+were equipped. Covered waist/loin selectors now retain the authored belly3701/pelvis3801 defaults.
+The fixture exercises equipped pants/belt and their removal. All four native harnesses pass.
+
+`tools/gnoll_render_repair.py` installed only the checked model-row metadata in root/enUS and server DBC,
+plus the rebuilt helper. No executable or saved character values changed. Backups are under
+`C:\Users\Zach\.codex\backups\gnoll-render-20261006-191924`. The existing worldserver image was reused.
+Read-only live captures under `C:\Users\Zach\.codex\tmp\gnoll-render-repair` prove creator pelvis3801
+visible with starter pants9892, and an in-game race63 appearance component with loaded skin/outfit/body
+textures and filtered mesh variants. The user confirmed the creator now looks complete. Broader appearance,
+equipment, animation and persistence acceptance still follows the manual gate above.
+
 ## Vulpera Retail rebase (RaceID 20)
 
 The later blue-eye follow-up changed cosmetic group17's fallback from1701 (the additive DK glow sprite)
@@ -496,7 +618,7 @@ Live rendering, every mechanical/material choice, chat, creation, selection, equ
 remain manual acceptance checks until confirmed in the client.
 
 `Wow.exe` imports `EsteriaAppearance.dll` directly. Customization does not use a WXL extension,
-API, loader callback, or message. WXL still supplies Esteria's existing 64-race support and other features.
+API, loader callback, or message. WXL supplies Esteria's 129-slot race support (IDs 0..128) and other features.
 The permanent patch validates the exact original executable and each replaced instruction. It preserves the
 foundation signature, Lua callback validation, race-table fingerprints, and character-limit byte.
 
@@ -526,8 +648,9 @@ controls are anchored below the first/last name fields.
 `EsteriaAppearance.bin` starts with three little-endian uint32s: magic `0x50504145`, version 2, profile count.
 Each fixed profile has race, gender, option count, and 16 descriptors. Each descriptor contains offset, count,
 factor, optional geometry offset, and 32 geometry choices. Unused descriptors are zero. Profiles support up to
-16 controls, 64 profiles, and a maximum encoded value of 255 in each appearance field. Future races require
-their own asset and DBC preparation; they can reuse this codec and native callbacks.
+16 controls, 258 profiles (129 race slots with two genders), and a maximum encoded value of 255 in each
+appearance field. Future races require their own asset and DBC preparation; they can reuse this codec
+and native callbacks.
 
 `EsteriaAppearanceGeometry.bin` contains two prepared SKIN profiles, each preceded by a 128-byte terminated
 model path and a uint32 byte length. Its header is magic `0x4D474145`, version 1, profile count. Array ranges,
@@ -624,3 +747,37 @@ removal, delayed loading and teardown. The live protocol case is
 Its oracle follows real casts and cancellation through logout and the returned roster trailer.
 Live visual acceptance still requires a fresh client: wing/no-wing characters, changing wings,
 removing an aura, repeated character switches, custom races of both genders, and logout/client exit.
+
+## Race capacity: IDs 0 through 128
+
+The existing `races-64-esteria` extension now exposes 129 slots, preserving its folder/DLL ID for
+compatibility. Version 2 expands model/name tables, initialization and cleanup, and uses an imm32
+restriction comparison so ID 128 is accepted and ID 129 is rejected. Foundation fingerprints,
+rollback behavior, existing names and the 100-character limit remain intact; `Wow.exe` is unchanged.
+The native appearance helper accepts IDs below 129 and up to 258 appearance/geometry profiles.
+Both winning root/enUS creator archives contain `MAX_RACES = 129` and buttons 1..129.
+
+Build the extension and run its compiled boundary/fingerprint harness with
+`client-customization\build-races.bat C:\Users\Zach\.codex\tmp\races-129\repro`.
+The source lives in the sibling `AzerothPlex\build\wxl-core\extensions\races-64-esteria` checkout.
+Build the native helper using `build-native.bat` with the current `Esteria*.bin` catalogs beside its
+output. Its customization harness checks both genders at IDs 63, 64, 127 and 128, and rejects 129.
+The creator capacity check uses `python -m unittest` with
+`tools.test_retroported_race_pack.RetroportedRacePackTests.test_character_create_patches_are_additive`.
+
+This changes capacity only. New playable races still need assets, DBC definitions, start data and
+explicit legacy mask mappings. Live creation, selection, customization and relog need a client retest.
+
+## Horde Arakkoa (RaceID 68, staged)
+
+`tools/arakkoa_race_pack.py` imports the supplied HD Outland Arakkoa pack (`Arakkoa-race/`) as Horde race 68.
+The pack came from another server, so none of its numbering is used: its race 45 is Mag'har here, so every row
+is rebased. Race 68, models 120075/120076, displays 60066/60067, CharSections 1116300+, CharHairGeosets and
+BarberShopStyle 1116300+, outfits 22180+, NameGen 90000+, spells 13990001-5, SoundEntries 414401-6, voice
+set 9045001 and emote sounds 680001+ were all checked free in the live client, server DBCs and world DB.
+All models/textures live under `custom\arakkoa\` in `Data/Patch-H.MPQ`; the 26 Outland textures the pack
+leaves out come from Project Reforged `patch-V.MPQ`. Appearance is stock five-byte: male 30 skins, 10 faces,
+12 hair styles, 11 hair colors; female 15 skins, 10 faces, 13 hair styles, 10 hair colors. Race uses Orc
+(mask race 2, Durotar start, Orcish). `tools/test_arakkoa_race_pack.py` proves no baseline row was changed.
+Install needs a native rebuild (`EsteriaSkillRace` case 68) and a worldserver rebuild (`RACE_ARAKKOA_HORDE`),
+then `tools/arakkoa_deploy.py`. Helmet models for the `Ak` client prefix are not part of the pack.

@@ -1,0 +1,7 @@
+# Disabled until linked accounts and a private/TLS API are configured.
+EsteriaChat.Enable = 0
+EsteriaChat.ApiOrigin = "http://127.0.0.1:7384"
+EsteriaChat.ServerId = "esteria"
+EsteriaChat.RealmId = "1"
+# Same random 32+ character secret as CHAT_BRIDGE_SECRET. Never distribute to clients.
+EsteriaChat.BridgeSecret = ""

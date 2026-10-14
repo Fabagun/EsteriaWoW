@@ -31,6 +31,8 @@ const skipPatterns: RegExp[] = [
 const isSkipPattern = (file: string) => skipPatterns.some(p => p.test(file));
 
 const skipDirsPosix = new Set([
+	'Cache',
+	'WTF',
 	'Errors',
 	'Logs',
 	'Screenshots',
@@ -110,7 +112,7 @@ const getHash = (...filePath: string[]): Promise<string> =>
 		const hash = crypto.createHash('sha1');
 		const stream = fs.createReadStream(path.join(...filePath));
 		stream.on('error', reject);
-		stream.on('data', (chunk: Buffer) => hash.update(chunk));
+		stream.on('data', chunk => { hash.update(chunk); });
 		stream.on('end', () => resolve(hash.digest('hex').toLocaleUpperCase()));
 	});
 

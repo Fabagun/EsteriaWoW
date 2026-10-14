@@ -92,6 +92,56 @@ def keys(track, index):
     return track.timestamps[slot], track.values[slot]
 
 
+def pose_matrices(model, action, time, sequence_index=None):
+    """Evaluate embedded M2 bone transforms for offline fitting and pose checks."""
+    import bisect
+    import numpy as np
+    index = sequence(model, action) if sequence_index is None else sequence_index
+    while model.sequences[index]['flags'] & 0x40:
+        index = model.sequences[index]['alias_next']
+
+    def sample(track, default, quaternion=False):
+        times, values = keys(track, index)
+        if not times:
+            return np.array(default)
+        clock = time % model.global_loops[track.global_sequence] if track.global_sequence >= 0 else time
+        left = max(0, bisect.bisect_right(times, clock) - 1)
+        right = min(left + 1, len(times) - 1)
+        a, b = (np.array(quat(values[i]) if quaternion else values[i]) for i in (left, right))
+        if quaternion and np.dot(a, b) < 0:
+            b = -b
+        fraction = 0 if times[right] == times[left] or not track.interpolation else (
+            max(0, min(1, (clock - times[left]) / (times[right] - times[left]))))
+        value = a * (1 - fraction) + b * fraction
+        return value / np.linalg.norm(value) if quaternion else value
+
+    matrices = []
+    for bone in model.bones:
+        x, y, z, w = sample(bone['rotation'], (0, 0, 0, 1), True)
+        rotation = np.array(((1 - 2*y*y - 2*z*z, 2*x*y - 2*z*w, 2*x*z + 2*y*w),
+                             (2*x*y + 2*z*w, 1 - 2*x*x - 2*z*z, 2*y*z - 2*x*w),
+                             (2*x*z - 2*y*w, 2*y*z + 2*x*w, 1 - 2*x*x - 2*y*y)))
+        local = np.eye(4)
+        local[:3, :3] = rotation @ np.diag(sample(bone['scale'], (1, 1, 1)))
+        pivot = np.array(bone['pivot'])
+        local[:3, 3] = pivot + sample(bone['translation'], (0, 0, 0)) - local[:3, :3] @ pivot
+        assert bone['parent_bone'] < len(matrices)
+        matrices.append(matrices[bone['parent_bone']] @ local if bone['parent_bone'] >= 0 else local)
+    return np.array(matrices)
+
+
+def posed_vertices(model, matrices):
+    """Apply the model's four weighted bone bindings to its vertex positions."""
+    import numpy as np
+    positions = np.ndarray((model.vertex_count, 3), '<f4', model.vertices, strides=(48, 4))
+    weights = np.ndarray((model.vertex_count, 4), 'u1', model.vertices, offset=12, strides=(48, 1)) / 255
+    bones = np.ndarray((model.vertex_count, 4), 'u1', model.vertices, offset=16, strides=(48, 1))
+    bones = np.where(weights > 0, bones, 0)
+    points = np.column_stack((positions, np.ones(model.vertex_count)))
+    transformed = np.einsum('vsij,vj->vsi', matrices[bones], points)
+    return np.einsum('vs,vsi->vi', weights, transformed)[:, :3]
+
+
 def per_sequence(track, model):
     if track.global_sequence >= 0:
         # Shared animated effects keep their own clock. Constant bind transforms can be expanded exactly.

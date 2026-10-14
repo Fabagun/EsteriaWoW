@@ -13,6 +13,9 @@ Tools/launcher/node/
 
 *.log
 
+server/addons/catalog.json
+server/addons/**/*.zip
+
 .DS_Store
 Thumbs.db
 

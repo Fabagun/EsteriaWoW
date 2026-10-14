@@ -1,4 +1,5 @@
 #include <windows.h>
+#include <algorithm>
 #include <cassert>
 #include <cstdint>
 #include <cstdio>
@@ -9,6 +10,7 @@
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
+#include <vector>
 #include "../src/server/shared/HaranirAppearance.h"
 #include "../src/server/shared/VulperaAppearance.h"
 #include "../src/server/shared/CreatureAppearance.h"
@@ -25,6 +27,10 @@ namespace
     unsigned vulperaEarrings = 3500;
     unsigned earthenFootMask = 255;
     bool nagaBodyVisible = false;
+    bool sethrakNPCArmor = false;
+    std::unordered_set<unsigned> gnollGeosets;
+    std::unordered_set<unsigned> drakonidGeosets;
+    std::unordered_set<unsigned> saberonRegions;
     char path[] = "custom\\highmountain\\fixture.blp";
     char const haranirPrefix[] = "Interface\\AddOns\\EsteriaAppearanceCache\\Haranir\\";
     std::unordered_set<void*> generatedTextures;
@@ -32,6 +38,43 @@ namespace
     std::unordered_map<void*, std::string> generatedLayerPaths;
     std::array<void*, 16> boundTextures{};
     unsigned decodedTextures;
+    std::vector<unsigned char> clothingPixels;
+    void* pendingClothingBytes;
+    void* retainedClothingLayer;
+    unsigned clothingReadyCalls;
+
+    char __fastcall ClothingLayers(void* character, void*, int wait)
+    {
+        auto* data = static_cast<unsigned char*>(character);
+        assert(wait == 1 && (*reinterpret_cast<unsigned*>(data + 0x0C) & 0xFF) == 0xFF);
+        for (unsigned region = 0; region < 8; ++region)
+        {
+            unsigned base = 0x1D0 + region * 0x3C;
+            if (*reinterpret_cast<unsigned*>(data + base + 0x1C) != 1)
+                continue;
+            assert(pendingClothingBytes);
+            auto* layer = static_cast<unsigned char*>(*reinterpret_cast<void**>(data + base));
+            if (!layer)
+            {
+                layer = static_cast<unsigned char*>(retainedClothingLayer);
+                *reinterpret_cast<void**>(data + base) = layer;
+            }
+            assert(layer);
+            *reinterpret_cast<void**>(layer + 0xAC) = pendingClothingBytes;
+            *reinterpret_cast<unsigned*>(layer + 0x1C) = 0x10002;
+            *reinterpret_cast<unsigned*>(data + base + 0x38) |= 1;
+        }
+        return 1;
+    }
+
+    int __cdecl ClothingReady(void* layer, void*, int wait)
+    {
+        assert(wait == 1 && pendingClothingBytes);
+        *reinterpret_cast<void**>(static_cast<unsigned char*>(layer) + 0xAC) = pendingClothingBytes;
+        *reinterpret_cast<unsigned*>(static_cast<unsigned char*>(layer) + 0x1C) = 0x10002;
+        ++clothingReadyCalls;
+        return 1;
+    }
 
     void* __stdcall Allocate(unsigned size, char const*, unsigned, unsigned)
     {
@@ -55,6 +98,11 @@ namespace
         assert(generatedTextures.contains(value));
         assert(*reinterpret_cast<unsigned const*>(data) == 0x32504C42);
         assert(*reinterpret_cast<unsigned const*>(data + 20) == 1172);
+        if (std::strstr(static_cast<char*>(value) + 0x6C, "\\clothing-"))
+        {
+            assert(data[8] == 3 && data[9] == 8);
+            clothingPixels.assign(data + 1172, data + 1172 + 512 * 512 * 4);
+        }
         ++decodedTextures;
         return 1;
     }
@@ -78,7 +126,11 @@ namespace
             || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\Naga\\")
             || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\Tuskarr\\")
             || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\Vrykul\\")
-            || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\ThinHuman\\"));
+            || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\ThinHuman\\")
+            || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\Sethrak\\")
+            || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\Saberon\\")
+            || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\Drakonid\\")
+            || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\Gnoll\\"));
     }
 
     void __fastcall AppendByte(void* packet, void*, unsigned byte)
@@ -127,7 +179,7 @@ namespace
         assert(lastKind <= 4);
         assert(lastStyle < 5);
         assert(lastColor < 108);
-        if (lastKind == 3)
+        if (lastKind == 3 && !CreatureAppearance::UsesStockMaterials(race, gender))
             assert(lastStyle == 0 && lastColor == 0);
         return row;
     }
@@ -136,6 +188,14 @@ namespace
     {
         assert(!std::strcmp(name, path) || !std::strncmp(name, "custom\\earthen\\", 15)
             || !std::strncmp(name, "custom\\naga\\sirus\\", 18)
+            || !std::strncmp(name, "custom\\sethrak\\", 15)
+            || !std::strncmp(name, "custom\\saberon\\", 15)
+        || !std::strncmp(name, "custom\\drakonid\\", 16)
+            || !std::strcmp(name, "Item\\TextureComponents\\LegUpperTexture\\"
+                "leather_raidrogue_h_01blood_belt_lu_U.blp")
+            || !std::strcmp(name, "Item\\TextureComponents\\LegUpperTexture\\"
+                "plate_raiddeathknight_h_01red_pant_lu_U.blp")
+            || !std::strncmp(name, "custom\\gnoll\\", 13)
             || HaranirPath(name));
         ++loads;
         return &texture;
@@ -191,8 +251,28 @@ namespace
 
     void __fastcall Visibility(void*, void*, unsigned first, unsigned last, int enabled)
     {
+        if (first >= 3100 && last < 4400)
+            for (unsigned value = first; value <= last; ++value)
+                if (enabled)
+                    gnollGeosets.insert(value);
+                else
+                    gnollGeosets.erase(value);
+        if (first >= 4500 && last < 5200)
+            for (unsigned value = first; value <= last; ++value)
+                if (enabled)
+                    drakonidGeosets.insert(value);
+                else
+                    drakonidGeosets.erase(value);
         if (first <= 10000 && last >= 10000)
             nagaBodyVisible = enabled != 0;
+        if (first <= 21000 && last >= 21999)
+            sethrakNPCArmor = false;
+        if (first == last && first >= 21000 && first < 22000 && enabled)
+            sethrakNPCArmor = true;
+        if (first <= 20001 && last >= 20009)
+            saberonRegions.clear();
+        if (first == last && first >= 20001 && first <= 20009 && enabled)
+            saberonRegions.insert(first);
         if (first >= 3500 && last < 3600)
             vulperaEarrings = enabled ? first : 3500;
         for (unsigned i = 0; i < 8; ++i)
@@ -227,6 +307,8 @@ int main(int argc, char** argv)
     Hook(0x0047BF30, reinterpret_cast<void*>(&ReleaseTexture));
     Hook(0x004F3930, reinterpret_cast<void*>(&Layer));
     Hook(0x004F31A0, reinterpret_cast<void*>(&ReleaseLayer));
+    Hook(0x004F2E50, reinterpret_cast<void*>(&ClothingReady));
+    Hook(0x004ED6D0, reinterpret_cast<void*>(&ClothingLayers));
     row[4] = row[5] = row[6] = static_cast<unsigned>(reinterpret_cast<std::uintptr_t>(path));
     unsigned char character[0x600]{};
     *reinterpret_cast<unsigned*>(character + 0x18) = 46;
@@ -587,6 +669,309 @@ int main(int argc, char** argv)
             ReleaseLayer(*reinterpret_cast<void**>(component + 0x194));
             *reinterpret_cast<void**>(component + 0x194) = nullptr;
         }
+    }
+    *reinterpret_cast<unsigned*>(component + 0x18) = 62;
+    *reinterpret_cast<unsigned*>(component + 0x1C) = 0;
+    *reinterpret_cast<unsigned*>(unit + 0x18) = 62;
+    for (unsigned offset : offsets)
+        *reinterpret_cast<unsigned*>(component + offset) = 0;
+    for (unsigned slot = 0; slot < 14; ++slot)
+        *reinterpret_cast<unsigned*>(component + 0x428 + slot * 4) = 0;
+    forget(component);
+    geometry(component);
+    assert(sethrakNPCArmor);
+    for (unsigned race : {56u, 57u})
+    {
+        *reinterpret_cast<unsigned*>(component + 0x18) = race;
+        *reinterpret_cast<unsigned*>(component + 0x1C) = 1;
+        *reinterpret_cast<unsigned*>(component + 0x28) = 5;
+        *reinterpret_cast<unsigned*>(component + 0x34) = 4;
+        *reinterpret_cast<unsigned*>(component + 0x24) = 4;
+        boundTextures.fill(nullptr);
+        assert(direct(component, 0, haranirBody));
+        assert(boundTextures[8] == &texture);
+        assert(direct(component, 1, haranirBody));
+        assert(lastKind == 3 && lastStyle == 4 && lastColor == 4);
+        assert(boundTextures[6] == &texture);
+        unsigned face[] = {1, 0, 0, 5, 9, 0};
+        assert(direct(component, 2, face));
+        assert(lastKind == 1 && lastStyle == 0 && lastColor == 5);
+        assert(*reinterpret_cast<void**>(component + 0x194 + 3 * 4) == &newLayer);
+        *reinterpret_cast<unsigned*>(component + 0x184) = 1703;
+        geometry(component);
+        assert(*reinterpret_cast<unsigned*>(component + 0x184) == 1703);
+        ReleaseLayer(*reinterpret_cast<void**>(component + 0x194 + 3 * 4));
+        *reinterpret_cast<void**>(component + 0x194 + 3 * 4) = nullptr;
+        forget(component);
+    }
+    *reinterpret_cast<unsigned*>(component + 0x18) = 62;
+    *reinterpret_cast<unsigned*>(component + 0x1C) = 0;
+    for (unsigned offset : offsets)
+        *reinterpret_cast<unsigned*>(component + offset) = 0;
+    *reinterpret_cast<unsigned*>(component + 0x434) = 25749; // Imperial Plate Chest visual.
+    geometry(component);
+    assert(!sethrakNPCArmor);
+    *reinterpret_cast<unsigned*>(component + 0x434) = 0;
+    geometry(component);
+    assert(sethrakNPCArmor);
+    forget(component);
+    *reinterpret_cast<unsigned*>(component + 0x18) = 63;
+    *reinterpret_cast<unsigned*>(unit + 0x18) = 63;
+    for (unsigned offset : offsets)
+        *reinterpret_cast<unsigned*>(component + offset) = 0;
+    for (unsigned slot = 0; slot < 14; ++slot)
+        *reinterpret_cast<unsigned*>(component + 0x428 + slot * 4) = 0;
+    *reinterpret_cast<unsigned*>(component + 0x24) = 8; // Independently packed native pauldrons choice1.
+    std::array<std::uint8_t, 5> gnollAppearance = {0, 0, 0, 8, 0};
+    std::memcpy(playerData + 0x14, gnollAppearance.data(), gnollAppearance.size());
+    geometry(component);
+    assert(gnollGeosets.contains(4102) && gnollGeosets.contains(4302));
+    *reinterpret_cast<unsigned*>(component + 0x42C) = 25749; // Equipped shoulder hides native pauldrons.
+    geometry(component);
+    assert(!gnollGeosets.contains(4102) && gnollGeosets.contains(4302));
+    *reinterpret_cast<unsigned*>(component + 0x42C) = 0;
+    geometry(component);
+    assert(gnollGeosets.contains(4102));
+    gnollAppearance[3] = 11; // Waist armor and loincloth; each byte still retains the native pauldron choice.
+    std::memcpy(playerData + 0x14, gnollAppearance.data(), gnollAppearance.size());
+    *reinterpret_cast<unsigned*>(component + 0x178) = 1301;
+    unitExtra(unit);
+    assert(gnollGeosets.contains(3702) && gnollGeosets.contains(3802));
+    *reinterpret_cast<unsigned*>(component + 0x438) = 10001; // Belt cannot remove the belly's body surface.
+    *reinterpret_cast<unsigned*>(component + 0x43C) = 9892; // Recruit pants cannot remove the pelvis.
+    geometry(component);
+    assert(gnollGeosets.contains(3701) && gnollGeosets.contains(3801));
+    assert(!gnollGeosets.contains(3702) && !gnollGeosets.contains(3802));
+    *reinterpret_cast<unsigned*>(component + 0x438) = 0;
+    *reinterpret_cast<unsigned*>(component + 0x43C) = 0;
+    geometry(component);
+    assert(gnollGeosets.contains(3702) && gnollGeosets.contains(3802));
+    for (unsigned color = 0; color < 10; ++color)
+    {
+        gnollAppearance[0] = static_cast<std::uint8_t>(color);
+        std::memcpy(playerData + 0x14, gnollAppearance.data(), gnollAppearance.size());
+        unitExtra(unit);
+        assert(direct(component, 2, haranirBody));
+        void* gnollBody = *reinterpret_cast<void**>(component + 0x194);
+        assert(gnollBody && generatedLayers.contains(gnollBody));
+        auto* gnollPixels = *reinterpret_cast<unsigned char**>(static_cast<unsigned char*>(gnollBody) + 0xac);
+        assert(gnollPixels && gnollPixels[8] == 1 && gnollPixels[9] == 8);
+        assert(*reinterpret_cast<unsigned*>(gnollPixels + 12) == 512);
+        assert(*reinterpret_cast<unsigned*>(gnollPixels + 16) == 512);
+        unsigned gnollAlpha = *reinterpret_cast<unsigned*>(gnollPixels + 20) + 512 * 512;
+        assert(std::all_of(gnollPixels + gnollAlpha, gnollPixels + gnollAlpha + 512 * 512,
+            [](unsigned char value) { return value == 0; }));
+        ReleaseLayer(gnollBody);
+        *reinterpret_cast<void**>(component + 0x194) = nullptr;
+        forget(component);
+    }
+    forget(component);
+    *reinterpret_cast<unsigned*>(component + 0x18) = 64;
+    *reinterpret_cast<unsigned*>(unit + 0x18) = 64;
+    for (unsigned offset : offsets)
+        *reinterpret_cast<unsigned*>(component + offset) = 0;
+    for (unsigned slot = 0; slot < 14; ++slot)
+        *reinterpret_cast<unsigned*>(component + 0x428 + slot * 4) = 0;
+    std::array<std::uint8_t, 5> saberonAppearance = {3, 1, 2, 2, 0};
+    std::memcpy(playerData + 0x14, saberonAppearance.data(), saberonAppearance.size());
+    unitExtra(unit);
+    geometry(component);
+    assert(sethrakNPCArmor);
+    assert(direct(component, 2, haranirBody));
+    void* saberonBody = *reinterpret_cast<void**>(component + 0x194);
+    assert(saberonBody && generatedLayers.contains(saberonBody));
+    auto* saberonPixels = *reinterpret_cast<unsigned char**>(static_cast<unsigned char*>(saberonBody) + 0xac);
+    assert(saberonPixels && *reinterpret_cast<unsigned*>(saberonPixels + 12) == 512);
+    assert(*reinterpret_cast<unsigned*>(saberonPixels + 16) == 512);
+    assert(saberonPixels[8] == 1 && saberonPixels[9] == 8);
+    unsigned saberonAlpha = *reinterpret_cast<unsigned*>(saberonPixels + 20) + 512 * 512;
+    assert(std::all_of(saberonPixels + saberonAlpha, saberonPixels + saberonAlpha + 512 * 512,
+        [](unsigned char value) { return value == 0; }));
+    *reinterpret_cast<unsigned*>(component + 0x448) = 64585; // Reported Fleshrending Gauntlets.
+    geometry(component);
+    assert(saberonRegions == std::unordered_set<unsigned>({20002, 20003}));
+    *reinterpret_cast<unsigned*>(component + 0x448) = 0;
+    *reinterpret_cast<unsigned*>(component + 0x43C) = 64588;
+    geometry(component);
+    assert(saberonRegions == std::unordered_set<unsigned>({20006, 20007}));
+    *reinterpret_cast<unsigned*>(component + 0x438) = 64430;
+    geometry(component);
+    assert(saberonRegions == std::unordered_set<unsigned>({20007, 20008, 20009}));
+    *reinterpret_cast<unsigned*>(component + 0x43C) = 24506; // Other leggings retain their ordinary atlas.
+    geometry(component);
+    assert(saberonRegions.contains(20006) && saberonRegions.contains(20008)
+        && !saberonRegions.contains(20009));
+    *reinterpret_cast<unsigned*>(component + 0x43C) = 64588;
+    *reinterpret_cast<unsigned*>(component + 0x438) = 0;
+    *reinterpret_cast<unsigned*>(component + 0x43C) = 0;
+    for (unsigned slot = 2; slot <= 9; ++slot)
+    {
+        *reinterpret_cast<unsigned*>(component + 0x428 + slot * 4) = 25749;
+        geometry(component);
+        assert(!sethrakNPCArmor);
+        *reinterpret_cast<unsigned*>(component + 0x428 + slot * 4) = 0;
+        geometry(component);
+        assert(sethrakNPCArmor);
+    }
+    for (unsigned i = 0; i < saberonAppearance.size(); ++i)
+        assert(*reinterpret_cast<unsigned*>(component + offsets[i]) == saberonAppearance[i]);
+    ReleaseLayer(saberonBody);
+    *reinterpret_cast<void**>(component + 0x194) = nullptr;
+    forget(component);
+    // Drakonid: cosmetic geosets follow the packed bytes; the retail NPC outfit is not part of the model.
+    for (unsigned race : {69u, 70u})
+    {
+        *reinterpret_cast<unsigned*>(component + 0x18) = race;
+        *reinterpret_cast<unsigned*>(unit + 0x18) = race;
+        for (unsigned offset : offsets)
+            *reinterpret_cast<unsigned*>(component + offset) = 0;
+        for (unsigned slot = 0; slot < 14; ++slot)
+            *reinterpret_cast<unsigned*>(component + 0x428 + slot * 4) = 0;
+        drakonidGeosets.clear(); // Other races' fixtures may have left geosets enabled in this range.
+        // skin 2, face = head 1 + 2 * tail 1, horns 3, eyes 5.
+        std::array<std::uint8_t, 5> drakonidAppearance = {2, 3, 3, 5, 0};
+        std::memcpy(playerData + 0x14, drakonidAppearance.data(), drakonidAppearance.size());
+        unitExtra(unit);
+        geometry(component);
+        assert(gnollGeosets.contains(3102) && gnollGeosets.contains(3204) && gnollGeosets.contains(3502));
+        assert(!gnollGeosets.contains(3101) && !gnollGeosets.contains(3201) && !gnollGeosets.contains(3501));
+        assert(drakonidGeosets.empty());
+        for (unsigned i = 0; i < drakonidAppearance.size(); ++i)
+            assert(*reinterpret_cast<unsigned*>(component + offsets[i]) == drakonidAppearance[i]);
+        drakonidAppearance = {4, 0, 5, 75, 0}; // Last skin, first head/tail, last eye color.
+        std::memcpy(playerData + 0x14, drakonidAppearance.data(), drakonidAppearance.size());
+        unitExtra(unit);
+        geometry(component);
+        assert(gnollGeosets.contains(3101) && gnollGeosets.contains(3206) && gnollGeosets.contains(3501));
+        forget(component);
+    }
+    // Real Wrath composition forces alpha opaque; our render-only slot must preserve uncovered fur.
+    std::vector<unsigned char> clothingFixture(1176);
+    std::memcpy(clothingFixture.data(), "BLP2", 4);
+    *reinterpret_cast<unsigned*>(clothingFixture.data() + 4) = 1;
+    clothingFixture[8] = 1;
+    clothingFixture[9] = 8;
+    clothingFixture[11] = 1;
+    *reinterpret_cast<unsigned*>(clothingFixture.data() + 12) = 2;
+    *reinterpret_cast<unsigned*>(clothingFixture.data() + 16) = 1;
+    *reinterpret_cast<unsigned*>(clothingFixture.data() + 20) = 1172;
+    *reinterpret_cast<unsigned*>(clothingFixture.data() + 84) = 4;
+    clothingFixture[152] = 30;
+    clothingFixture[153] = 80;
+    clothingFixture[154] = 200;
+    clothingFixture[1173] = 1;
+    clothingFixture[1175] = 255;
+    unsigned char clothingLayer[0xB4]{};
+    *reinterpret_cast<unsigned*>(clothingLayer + 0xB0) = static_cast<unsigned>(clothingFixture.size());
+    pendingClothingBytes = clothingFixture.data();
+    retainedClothingLayer = clothingLayer;
+    for (unsigned race : {63u, 64u})
+    {
+        *reinterpret_cast<unsigned*>(component + 0x18) = race;
+        for (unsigned offset : offsets)
+            *reinterpret_cast<unsigned*>(component + offset) = 0;
+        *reinterpret_cast<void**>(clothingLayer + 0xAC) = nullptr;
+        *reinterpret_cast<unsigned*>(clothingLayer + 0x1C) = 0;
+        clothingFixture[1175] = 255;
+        *reinterpret_cast<void**>(component + 0x284) = clothingLayer;
+        *reinterpret_cast<unsigned*>(component + 0x2BC) = 1;
+        clothingPixels.clear();
+        geometry(component);
+        assert(generatedTextures.contains(boundTextures[14]));
+        assert(clothingPixels.size() == 512 * 512 * 4);
+        unsigned uncovered = (10 * 512 + 256) * 4;
+        unsigned covered = (10 * 512 + 511) * 4;
+        assert(clothingPixels[uncovered + 3] == 0);
+        assert(clothingPixels[covered] == 30 && clothingPixels[covered + 1] == 80
+            && clothingPixels[covered + 2] == 200 && clothingPixels[covered + 3] == 255);
+        assert(clothingReadyCalls == (race == 63 ? 1u : 2u));
+        unsigned prior = decodedTextures;
+        geometry(component);
+        assert(decodedTextures == prior); // Unchanged equipment reuses its owned texture.
+        clothingFixture[1175] = 128;
+        geometry(component);
+        assert(clothingPixels[covered + 3] == 128 && clothingPixels[uncovered + 3] == 0);
+        *reinterpret_cast<unsigned*>(component + 0x2BC) = 0;
+        geometry(component);
+        assert(std::all_of(clothingPixels.begin(), clothingPixels.end(),
+            [](unsigned char value) { return value == 0; }));
+        *reinterpret_cast<void**>(component + 0x284) = nullptr;
+        forget(component);
+        assert(generatedTextures.empty());
+    }
+    // An unrelated equip must not erase retained chest/boot regions whose ready bits were invalidated.
+    clothingFixture[1175] = 255;
+    for (unsigned race : {63u, 64u})
+    {
+        *reinterpret_cast<unsigned*>(component + 0x18) = race;
+        for (unsigned base : {0x284u, 0x374u})
+        {
+            *reinterpret_cast<void**>(component + base) = clothingLayer;
+            *reinterpret_cast<unsigned*>(component + base + 0x1C) = 1;
+            *reinterpret_cast<unsigned*>(component + base + 0x38) = 1;
+        }
+        *reinterpret_cast<unsigned*>(component + 0x434) = 25749;
+        *reinterpret_cast<unsigned*>(component + 0x440) = 10001;
+        *reinterpret_cast<unsigned*>(component + 0x0C) = 0x88;
+        geometry(component);
+        unsigned chest = (10 * 512 + 511) * 4 + 3;
+        unsigned boots = (470 * 512 + 511) * 4 + 3;
+        assert(clothingPixels[chest] == 255 && clothingPixels[boots] == 255);
+        assert(*reinterpret_cast<unsigned*>(component + 0x0C) == 0x88);
+        *reinterpret_cast<unsigned*>(component + 0x42C) = 25749;
+        *reinterpret_cast<void**>(component + 0x284) = nullptr;
+        *reinterpret_cast<unsigned*>(component + 0x2BC) = 0;
+        *reinterpret_cast<unsigned*>(component + 0x0C) = 0;
+        geometry(component);
+        assert(clothingPixels[chest] == 255 && clothingPixels[boots] == 255);
+        assert(*reinterpret_cast<unsigned*>(component + 0x0C) == 0);
+        *reinterpret_cast<unsigned*>(component + 0x448) = 64585;
+        *reinterpret_cast<void**>(component + 0x248) = clothingLayer;
+        *reinterpret_cast<unsigned*>(component + 0x264) = 1;
+        *reinterpret_cast<unsigned*>(component + 0x280) = 0;
+        *reinterpret_cast<unsigned*>(component + 0x3AC) = 0;
+        *reinterpret_cast<void**>(component + 0x374) = nullptr;
+        *reinterpret_cast<unsigned*>(component + 0x0C) = 4;
+        geometry(component);
+        assert(clothingPixels[chest] == 255 && clothingPixels[boots] == 255);
+        assert(clothingPixels[(270 * 512 + 255) * 4 + 3] == 255);
+        assert(*reinterpret_cast<unsigned*>(component + 0x0C) == 4);
+        *reinterpret_cast<void**>(component + 0x284) = nullptr;
+        *reinterpret_cast<unsigned*>(component + 0x2A0) = 0;
+        *reinterpret_cast<unsigned*>(component + 0x2BC) = 0;
+        *reinterpret_cast<unsigned*>(component + 0x434) = 0;
+        geometry(component);
+        assert(clothingPixels[chest] == 0 && clothingPixels[boots] == 255);
+        assert(clothingPixels[(270 * 512 + 255) * 4 + 3] == 255);
+        for (unsigned base : {0x248u, 0x284u, 0x374u})
+        {
+            *reinterpret_cast<void**>(component + base) = nullptr;
+            *reinterpret_cast<unsigned*>(component + base + 0x1C) = 0;
+            *reinterpret_cast<unsigned*>(component + base + 0x38) = 0;
+        }
+        for (unsigned slot : {1u, 3u, 6u, 8u})
+            *reinterpret_cast<unsigned*>(component + 0x428 + slot * 4) = 0;
+        geometry(component);
+        assert(std::all_of(clothingPixels.begin(), clothingPixels.end(),
+            [](unsigned char value) { return value == 0; }));
+        forget(component);
+        assert(generatedTextures.empty());
+    }
+    for (unsigned gender : {0u, 1u})
+    {
+        *reinterpret_cast<unsigned*>(component + 0x18) = 66;
+        *reinterpret_cast<unsigned*>(component + 0x1C) = gender;
+        *reinterpret_cast<void**>(component + 0x38) = &texture;
+        *reinterpret_cast<unsigned*>(component + 0x28) = 7;
+        *reinterpret_cast<unsigned*>(component + 0x34) = 0;
+        *reinterpret_cast<unsigned*>(component + 0x24) = 24;
+        assert(direct(component, 1, hair));
+        assert(lastKind == 3 && lastStyle == 0 && lastColor == 24 && lastSlot == 6);
+        *reinterpret_cast<unsigned*>(component + 0x28) = 15;
+        *reinterpret_cast<unsigned*>(component + 0x24) = 3;
+        assert(direct(component, 1, hair));
+        assert(lastColor == 3 && lastSlot == 6);
+        forget(component);
     }
     VirtualFree(haranirConnectionPage, 0, MEM_RELEASE);
     VirtualFree(allocationPage, 0, MEM_RELEASE);

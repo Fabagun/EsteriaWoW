@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "slug": "drakkin_alliance",
+  "name": "Drakkin",
+  "race_ids": [
+    66
+  ],
+  "enum": "RACE_DRAKKIN_ALLIANCE",
+  "faction": "alliance",
+  "source_race_id": 1,
+  "legacy_mask_race": 1,
+  "visual_base_race": 20,
+  "helmet_prefix": "Kb",
+  "client_file_strings": {
+    "66": "DrakkinAlliance"
+  },
+  "glue_token": "DRAKKINALLIANCE",
+  "start_profile": "elwynn",
+  "donor_totem_race": 1,
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11
+  ],
+  "source_patch_root": "G:\\Kobold\\KoboldColours_FIX",
+  "runtime_patch_root": "G:\\RetroPorterWork\\drakkin\\options-20261011\\assets",
+  "models": {
+    "female": {
+      "model_id": 120073,
+      "display_id": 60064,
+      "model_path": "custom\\kobold\\koboldfemale.m2"
+    },
+    "male": {
+      "model_id": 120073,
+      "display_id": 60064,
+      "model_path": "custom\\kobold\\koboldfemale.m2"
+    }
+  },
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "supported_genders": [
+      0,
+      1
+    ],
+    "profiles": {
+      "0": {
+        "capacities": [
+          16,
+          1,
+          1,
+          25,
+          1
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "choices": [
+              "koboldfemaleskin00_Black",
+              "koboldfemaleskin00_Blue",
+              "koboldfemaleskin00_Cyan",
+              "koboldfemaleskin00_Green",
+              "koboldfemaleskin00_Magenta",
+              "koboldfemaleskin00_Orange",
+              "koboldfemaleskin00_Petrol",
+              "koboldfemaleskin00_Purple",
+              "koboldfemaleskin00_Red",
+              "koboldfemaleskin00_Violett",
+              "koboldfemaleskin00_White",
+              "koboldfemaleskin00_Yellow",
+              "koboldfemaleskin00_00",
+              "koboldfemaleskin01_00",
+              "koboldfemaleskin02_00",
+              "koboldfemaleskin03_00"
+            ]
+          },
+          {
+            "label": "Face",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Hair Style",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Eye Color",
+            "choices": [
+              "koboldeyes00_00",
+              "koboldeyes00_01",
+              "koboldeyes00_02",
+              "koboldeyes00_03",
+              "koboldeyes00_04",
+              "koboldeyes00_05",
+              "koboldeyes00_06",
+              "koboldeyes00_07",
+              "koboldeyes00_08",
+              "koboldeyes00_09",
+              "koboldeyes00_10",
+              "koboldeyes00_11",
+              "koboldeyes00_12",
+              "koboldeyes00_13",
+              "koboldeyes00_14",
+              "koboldeyes00_15",
+              "koboldeyes00_16",
+              "koboldeyes00_17",
+              "koboldeyes00_18",
+              "koboldeyes00_19",
+              "koboldeyes00_20",
+              "koboldeyes00_21",
+              "koboldeyes00_22",
+              "koboldeyes00_23",
+              "koboldeyes00_24"
+            ]
+          },
+          {
+            "label": "Facial Hair",
+            "choices": [
+              0
+            ]
+          }
+        ]
+      },
+      "1": {
+        "capacities": [
+          16,
+          1,
+          1,
+          25,
+          1
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "choices": [
+              "koboldfemaleskin00_Black",
+              "koboldfemaleskin00_Blue",
+              "koboldfemaleskin00_Cyan",
+              "koboldfemaleskin00_Green",
+              "koboldfemaleskin00_Magenta",
+              "koboldfemaleskin00_Orange",
+              "koboldfemaleskin00_Petrol",
+              "koboldfemaleskin00_Purple",
+              "koboldfemaleskin00_Red",
+              "koboldfemaleskin00_Violett",
+              "koboldfemaleskin00_White",
+              "koboldfemaleskin00_Yellow",
+              "koboldfemaleskin00_00",
+              "koboldfemaleskin01_00",
+              "koboldfemaleskin02_00",
+              "koboldfemaleskin03_00"
+            ]
+          },
+          {
+            "label": "Face",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Hair Style",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Eye Color",
+            "choices": [
+              "koboldeyes00_00",
+              "koboldeyes00_01",
+              "koboldeyes00_02",
+              "koboldeyes00_03",
+              "koboldeyes00_04",
+              "koboldeyes00_05",
+              "koboldeyes00_06",
+              "koboldeyes00_07",
+              "koboldeyes00_08",
+              "koboldeyes00_09",
+              "koboldeyes00_10",
+              "koboldeyes00_11",
+              "koboldeyes00_12",
+              "koboldeyes00_13",
+              "koboldeyes00_14",
+              "koboldeyes00_15",
+              "koboldeyes00_16",
+              "koboldeyes00_17",
+              "koboldeyes00_18",
+              "koboldeyes00_19",
+              "koboldeyes00_20",
+              "koboldeyes00_21",
+              "koboldeyes00_22",
+              "koboldeyes00_23",
+              "koboldeyes00_24"
+            ]
+          },
+          {
+            "label": "Facial Hair",
+            "choices": [
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "armor": "fitted-vulpera-garments-and-baked-player-atlas",
+    "hide_helm": false
+  },
+  "random_playerbot_enabled": false,
+  "custom_racial_spells": []
+}

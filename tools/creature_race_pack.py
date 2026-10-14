@@ -113,14 +113,14 @@ def references(data, skeleton=False):
 class Source:
     """The existing CDN range reader plus a content-verified, immutable FileDataID cache."""
 
-    def __init__(self):
+    def __init__(self, expected_pin=None):
         sys.path.insert(0, str(PROJECT / "src"))
         from raceporter.config import load_project_config
         self.project = load_project_config(PROJECT)
         self.storage = CascStorage.open(DEFAULT.retail_root, product=self.project.retail_source.product,
             locale=self.project.retail_source.locale.lower(), keys=KeyRing.load(DEFAULT.keys))
         self.pin = asdict(self.storage.build)
-        expected = p.load_json(SEED / "reports/source-pin.json")
+        expected = expected_pin or p.load_json(SEED / "reports/source-pin.json")
         for key in ("product", "version", "build_key", "cdn_key"):
             if self.pin[key] != expected[key]:
                 self.storage.close()
@@ -337,6 +337,8 @@ def convert(slugs):
 
 def profiles(slug):
     manifest = p.load_manifest(slug)
+    if slug == 'vrykul' and manifest['appearance'].get('female_source') == 'snowzocraft-player':
+        return manifest['appearance']['profiles']
     if manifest.get('appearance', {}).get('source') == 'sirus-naga':
         return manifest['appearance']['profiles']
     discovery = p.load_json(WORK / slug / "reports/discovery.json")
@@ -363,23 +365,75 @@ def header():
              '#include <array>', '#include <cstdint>', '', 'namespace CreatureAppearance', '{',
              '    struct Option', '    {', '        unsigned field;', '        unsigned count;',
              '        unsigned factor;', '    };', '']
-    for slug, spec in SPECS.items():
-        for gender, profile in profiles(slug).items():
+    header_specs = dict(SPECS)
+    if p.manifest_path('sethrak').exists():
+        header_specs['sethrak'] = {'targets': [62], 'genders': [0, 1]}
+    if p.manifest_path('gnoll').exists():
+        header_specs['gnoll'] = {'targets': [63], 'genders': [0]}
+    if p.manifest_path('saberon').exists():
+        header_specs['saberon'] = {'targets': [64], 'genders': [0]}
+    for faction, race in (('alliance', 66), ('horde', 67)):
+        if p.manifest_path('drakkin_' + faction).exists():
+            header_specs['drakkin_' + faction] = {'targets': [race],
+                'genders': p.load_manifest('drakkin_' + faction)['appearance']['supported_genders']}
+    for faction, race in (('alliance', 69), ('horde', 70)):
+        if p.manifest_path('drakonid_' + faction).exists():
+            header_specs['drakonid_' + faction] = {'targets': [race], 'genders': [0]}
+    if p.load_manifest('vrykul')['appearance'].get('female_source') == 'snowzocraft-player':
+        header_specs['vrykul'] = {**SPECS['vrykul'], 'genders': [0, 1]}
+    for slug, spec in header_specs.items():
+        selected_profiles = p.load_manifest(slug)['appearance']['profiles'] if slug in (
+            'sethrak', 'gnoll', 'saberon', 'drakkin_alliance', 'drakkin_horde', 'drakonid_alliance',
+            'drakonid_horde') \
+            else profiles(slug)
+        for gender, profile in selected_profiles.items():
             name = slug.title() + ('Male' if gender == '0' else 'Female')
             lines.extend([f'    inline constexpr std::array<Option, 5> {name} = {{{{',
                 *[f'        {{{i}, {n}, 1}},' for i, n in enumerate(profile['capacities'])], '    }};', ''])
-    lines.extend(['    constexpr bool Uses(unsigned race)', '    {', '        return race >= 54 && race <= 59;',
+    if 'gnoll' in header_specs:
+        profile = p.load_manifest('gnoll')['appearance']['profiles']['0']
+        lines.extend([f"    inline constexpr std::array<Option, {len(profile['options'])}> GnollControls = {{{{",
+                      *[f'        {{{field}, {count}, {factor}}},'
+                        for field, count, factor in profile['descriptors']], '    }};', '',
+                      f"    inline constexpr std::array<char const*, {len(profile['options'])}> GnollLabels = {{",
+                      *['        ' + json.dumps(o['label']) + ',' for o in profile['options']], '    };', ''])
+    if 'drakonid_alliance' in header_specs:
+        profile = p.load_manifest('drakonid_alliance')['appearance']['profiles']['0']
+        lines.extend([f"    inline constexpr std::array<Option, {len(profile['options'])}> DrakonidControls = {{{{",
+                      *[f'        {{{field}, {count}, {factor}}},'
+                        for field, count, factor in profile['descriptors']], '    }};', '',
+                      f"    inline constexpr std::array<char const*, {len(profile['options'])}> DrakonidLabels = {{",
+                      *['        ' + json.dumps(o['label']) + ',' for o in profile['options']], '    };', ''])
+    uses = 'race >= 54 && race <= 59'
+    for slug in ('sethrak', 'gnoll', 'saberon', 'drakkin_alliance', 'drakkin_horde', 'drakonid_alliance',
+                 'drakonid_horde'):
+        if slug in header_specs:
+            uses = '(' + uses + ') || race == ' + str(header_specs[slug]['targets'][0])
+    both = ' || '.join('race == ' + str(race) for spec in header_specs.values()
+                       if len(spec['genders']) == 2 for race in spec['targets'])
+    female_only = ' || '.join('race == ' + str(race) for spec in header_specs.values()
+                              if spec['genders'] == [1] for race in spec['targets'])
+    female_rule = ([f'        if ({female_only})', '            return gender == 1;'] if female_only else [])
+    lines.extend(['    constexpr bool Uses(unsigned race)', '    {', f'        return {uses};',
                   '    }', '', '    constexpr bool GenderAllowed(unsigned race, unsigned gender)', '    {',
-                  '        return Uses(race) && (gender == 0 || (race == 54 && gender == 1));', '    }', '',
+                  *female_rule,
+                  '        return Uses(race) && (gender == 0',
+                  f'            || (({both}) && gender == 1));', '    }', '',
+                  '    constexpr bool UsesPlayerVrykul(unsigned race, unsigned gender)', '    {',
+                  '        return (race == 56 || race == 57) && gender == 1;', '    }', '',
+                  '    constexpr bool UsesStockMaterials(unsigned race, unsigned gender)', '    {',
+                  '        return UsesPlayerVrykul(race, gender)'
+                  + ' || ((race == 66 || race == 67) && gender < 2);', '    }', '',
                   '    constexpr std::array<Option, 5> const& Options(unsigned race, unsigned gender)', '    {',
                   '        switch (race)', '        {'])
-    for slug, spec in SPECS.items():
+    for slug, spec in header_specs.items():
         for race in spec['targets']:
             lines.append(f'            case {race}:')
         if len(spec['genders']) == 2:
             lines.append(f'                return gender ? {slug.title()}Female : {slug.title()}Male;')
         else:
-            lines.append(f'                return {slug.title()}Male;')
+            sex = 'Female' if spec['genders'] == [1] else 'Male'
+            lines.append(f'                return {slug.title()}{sex};')
     lines.extend(['            default:', '                return NagaMale;', '        }', '    }', '',
         '    constexpr bool Validate(unsigned race, unsigned gender, std::array<std::uint8_t, 5> const& fields)',
         '    {', '        if (!GenderAllowed(race, gender))', '            return false;',
@@ -398,6 +452,8 @@ def prepare(slugs):
     for slug in slugs:
         if p.load_manifest(slug).get('appearance', {}).get('source') == 'sirus-naga':
             raise ValueError('Prepare the Sirus Naga replacement with tools/sirus_naga_pack.py')
+        if slug == 'vrykul' and p.load_manifest(slug)['appearance'].get('female_source'):
+            raise ValueError('Preserve the player female with tools/vrykul_female_pack.py')
         root = WORK / slug
         discovery = p.load_json(root / 'reports/discovery.json')
         inventory = p.load_json(root / 'reports/source-inventory.json')
@@ -661,6 +717,8 @@ def reserve(slugs):
 
 
 def tables():
+    if p.load_manifest('vrykul')['appearance'].get('female_source'):
+        raise ValueError('The legacy male-only builder cannot replace the combined Vrykul player package')
     names = ('ChrRaces', 'CreatureModelData', 'CreatureDisplayInfo', 'CharSections', 'CharHairGeosets',
              'CharHairTextures', 'CharacterFacialHairStyles', 'BarberShopStyle', 'CharBaseInfo',
              'CharStartOutfit', 'NameGen', 'Spell')

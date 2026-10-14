@@ -3,6 +3,7 @@
 #include <windows.h>
 
 #include <cmath>
+#include <cstdarg>
 #include <cstdint>
 #include <cstdio>
 #include <cstring>
@@ -33,6 +34,9 @@ namespace
 
 namespace
 {
+    constexpr unsigned RaceCount = 129;
+    constexpr unsigned AppearanceProfileCount = RaceCount * 2;
+
     FILE* CatalogFile(wchar_t const* name)
     {
         wchar_t path[MAX_PATH] = {};
@@ -73,7 +77,7 @@ namespace
                 return result;
             std::uint32_t header[3] = {};
             if (std::fread(header, sizeof(header), 1, file) != 1 || header[0] != 0x50504145
-                || header[1] != 2 || header[2] > 64)
+                || header[1] != 2 || header[2] > AppearanceProfileCount)
             {
                 std::fclose(file);
                 return result;
@@ -83,7 +87,7 @@ namespace
                 Profile profile{};
                 if (std::fread(&profile, sizeof(profile), 1, file) != 1)
                     break;
-                bool valid = profile.race < 64 && profile.gender < 2
+                bool valid = profile.race < RaceCount && profile.gender < 2
                     && profile.optionCount > 0 && profile.optionCount <= 16;
                 for (std::uint32_t j = 0; valid && j < profile.optionCount; ++j)
                 {
@@ -208,7 +212,7 @@ namespace
                 return result;
             unsigned header[3] = {};
             if (std::fread(header, sizeof(header), 1, file) == 1 && header[0] == 0x4D474145
-                && header[1] == 1 && header[2] <= 64)
+                && header[1] == 1 && header[2] <= AppearanceProfileCount)
                 for (unsigned i = 0; i < header[2]; ++i)
                 {
                     Geometry geometry{};
@@ -459,7 +463,7 @@ extern "C" __declspec(dllexport) int __cdecl EsteriaCycle(void* state)
         unsigned race = Field<unsigned>(character, 0x18);
         unsigned gender = Field<unsigned>(character, 0x1C);
         if (!std::isfinite(requested) || requested < 1 || requested > 5
-            || requested != std::floor(requested) || race >= 64 || gender > 1)
+            || requested != std::floor(requested) || race >= RaceCount || gender > 1)
             return 0;
         unsigned index = static_cast<unsigned>(requested) - 1;
         constexpr unsigned offsets[] = {0x28, 0x2C, 0x34, 0x24, 0x30};
@@ -584,11 +588,19 @@ extern "C" __declspec(dllexport) unsigned __cdecl EsteriaSkillRace(unsigned race
         case 57:
         case 59: return 2;
         case 60: return 2;
-        case 61: return 4;
+        case 61: return 1;
+        case 62: return 1;
+        case 63: return 2;
+        case 64: return 2;
+        case 65: return 1;
+        case 66: return 1;
+        case 67: return 2;
+        case 68: return 2;
+        case 69: return 1;
+        case 70: return 2;
         default: return race;
     }
 }
-
 
 extern "C" __declspec(dllexport) std::uint32_t __cdecl EsteriaWideSource(void const* section, void const* skin)
 {
@@ -922,6 +934,34 @@ namespace
             return HighmountainControl(state, command, character, CreatureAppearance::Options(54, gender),
                 gender ? femaleLabels : maleLabels, requirements);
         }
+        if (Field<unsigned>(character, 0x18) == 62)
+        {
+            constexpr std::array<char const*, 5> labels =
+                {"Skin Color", "Face", "Armor Style", "Armor Color", "Facial Features"};
+            constexpr std::array<VulperaAppearance::Requirement, 0> requirements{};
+            return HighmountainControl(state, command, character,
+                CreatureAppearance::Options(62, Field<unsigned>(character, 0x1C)), labels, requirements);
+        }
+        if (Field<unsigned>(character, 0x18) == 63)
+        {
+            constexpr std::array<VulperaAppearance::Requirement, 0> requirements{};
+            return HighmountainControl(state, command, character, CreatureAppearance::GnollControls,
+                CreatureAppearance::GnollLabels, requirements);
+        }
+        if (Field<unsigned>(character, 0x18) == 69 || Field<unsigned>(character, 0x18) == 70)
+        {
+            constexpr std::array<VulperaAppearance::Requirement, 0> requirements{};
+            return HighmountainControl(state, command, character, CreatureAppearance::DrakonidControls,
+                CreatureAppearance::DrakonidLabels, requirements);
+        }
+        if (Field<unsigned>(character, 0x18) == 64)
+        {
+            constexpr std::array<char const*, 5> labels =
+                {"Fur Color", "Outfit Style", "Armor Color", "Cloth Color", "Facial Features"};
+            constexpr std::array<VulperaAppearance::Requirement, 0> requirements{};
+            return HighmountainControl(state, command, character, CreatureAppearance::Options(64, 0),
+                labels, requirements);
+        }
         if (CreatureAppearance::Uses(Field<unsigned>(character, 0x18)))
             return false;
         if (Field<unsigned>(character, 0x18) == 20)
@@ -981,8 +1021,10 @@ namespace
                     HighmountainSelection record{};
                     if (std::fread(&record, sizeof(record), 1, file) != 1)
                         break;
-                    bool valid = record.gender < 2 && record.kind <= 4
-                        && (record.kind == 4 ? record.target && record.value < 52
+                    bool valid = record.gender < 2 && record.kind <= 5
+                        && (record.kind == 5 ? record.target < 16 && record.value && record.path[0]
+                            && std::memchr(record.path, 0, sizeof(record.path))
+                            : record.kind == 4 ? record.target && record.value < 52
                             : record.kind == 3 ? record.target < 9 && record.value >= 16
                             && std::memchr(record.path, 0, sizeof(record.path))
                             : record.kind == 2 ? record.target < 5200 && record.value >= 10000
@@ -1030,6 +1072,10 @@ namespace
         static auto const tuskarr = ReadSelections(L"EsteriaTuskarr.bin");
         static auto const vrykul = ReadSelections(L"EsteriaVrykul.bin");
         static auto const human = ReadSelections(L"EsteriaThinHuman.bin");
+        static auto const sethrak = ReadSelections(L"EsteriaSethrak.bin");
+        static auto const gnoll = ReadSelections(L"EsteriaGnoll.bin");
+        static auto const saberon = ReadSelections(L"EsteriaSaberon.bin");
+        static auto const drakonid = ReadSelections(L"EsteriaDrakonid.bin");
         switch (race)
         {
             case 54: return naga;
@@ -1038,6 +1084,11 @@ namespace
             case 57: return vrykul;
             case 58:
             case 59: return human;
+            case 62: return sethrak;
+            case 63: return gnoll;
+            case 64: return saberon;
+            case 69:
+            case 70: return drakonid;
             case 20: return VulperaSelections();
             default: return HaranirSelections();
         }
@@ -1053,6 +1104,11 @@ namespace
             case 57: return L"EsteriaVrykulTextures.bin";
             case 58:
             case 59: return L"EsteriaThinHumanTextures.bin";
+            case 62: return L"EsteriaSethrakTextures.bin";
+            case 63: return L"EsteriaGnollTextures.bin";
+            case 64: return L"EsteriaSaberonTextures.bin";
+            case 69:
+            case 70: return L"EsteriaDrakonidTextures.bin";
             case 20: return L"EsteriaVulperaTextures.bin";
             default: return L"EsteriaHaranirTextures.bin";
         }
@@ -1068,9 +1124,110 @@ namespace
             case 57: return "Vrykul";
             case 58:
             case 59: return "ThinHuman";
+            case 62: return "Sethrak";
+            case 63: return "Gnoll";
+            case 64: return "Saberon";
+            case 69:
+            case 70: return "Drakonid";
             case 20: return "Vulpera";
             default: return "Haranir";
         }
+    }
+
+    unsigned SaberonTextureCoverage(void* character)
+    {
+        static auto const masks = []
+        {
+            std::unordered_map<unsigned, unsigned> result;
+            FILE* file = CatalogFile(L"EsteriaSaberonCoverage.bin");
+            if (!file)
+                return result;
+            unsigned header[3]{};
+            if (std::fread(header, sizeof(header), 1, file) == 1 && header[0] == 0x56434253
+                && header[1] == 1 && header[2] <= 65536)
+                for (unsigned i = 0; i < header[2]; ++i)
+                {
+                    unsigned row[2]{};
+                    if (std::fread(row, sizeof(row), 1, file) != 1 || !row[0] || !row[1] || row[1] >= 128)
+                    {
+                        result.clear();
+                        break;
+                    }
+                    result.emplace(row[0], row[1]);
+                }
+            std::fclose(file);
+            return result;
+        }();
+        unsigned result = 0;
+        for (unsigned slot = 2; slot <= 9; ++slot)
+        {
+            if (slot == 4)
+                continue; // Belts have a separate raised waist surface.
+            auto found = masks.find(Field<unsigned>(character, 0x428 + slot * 4));
+            if (found != masks.end())
+                result |= found->second;
+        }
+        return result;
+    }
+
+    // Bounded diagnostic trace for the Drakonid pipeline (EsteriaDrakonid.log beside Wow.exe).
+    void DrakonidTrace(char const* format, ...)
+    {
+        static unsigned lines = 0;
+        if (lines >= 1500)
+            return;
+        char executable[MAX_PATH]{};
+        if (!GetModuleFileNameA(nullptr, executable, MAX_PATH))
+            return;
+        char* slash = std::strrchr(executable, '\\');
+        if (!slash)
+            return;
+        std::strcpy(slash + 1, "EsteriaDrakonid.log");
+        FILE* file = nullptr;
+        if (fopen_s(&file, executable, "a") || !file)
+            return;
+        va_list arguments;
+        va_start(arguments, format);
+        std::vfprintf(file, format, arguments);
+        va_end(arguments);
+        std::fputc('\n', file);
+        std::fclose(file);
+        ++lines;
+    }
+
+    // Body regions painted by the equipped items' texture components (bit n = Wrath region n, 0..7).
+    unsigned DrakonidTextureCoverage(void* character)
+    {
+        static auto const masks = []
+        {
+            std::unordered_map<unsigned, unsigned> result;
+            FILE* file = CatalogFile(L"EsteriaDrakonidCoverage.bin");
+            if (!file)
+                return result;
+            unsigned header[3]{};
+            if (std::fread(header, sizeof(header), 1, file) == 1 && header[0] == 0x56434253
+                && header[1] == 1 && header[2] <= 65536)
+                for (unsigned i = 0; i < header[2]; ++i)
+                {
+                    unsigned row[2]{};
+                    if (std::fread(row, sizeof(row), 1, file) != 1 || !row[0] || !row[1] || row[1] >= 256)
+                    {
+                        result.clear();
+                        break;
+                    }
+                    result.emplace(row[0], row[1]);
+                }
+            std::fclose(file);
+            return result;
+        }();
+        unsigned result = 0;
+        for (unsigned slot = 2; slot <= 9; ++slot)
+        {
+            auto found = masks.find(Field<unsigned>(character, 0x428 + slot * 4));
+            if (found != masks.end())
+                result |= found->second;
+        }
+        return result;
     }
 
 #include "HaranirMaterials.inl"
@@ -1092,9 +1249,24 @@ namespace
         void* instance = Field<void*>(character, 0x38);
         if (!instance)
             return true;
+        bool nativeClothingCovered = false;
+        if (Field<unsigned>(character, 0x18) == 62 || Field<unsigned>(character, 0x18) == 64)
+            for (unsigned slot = 2; slot <= 9; ++slot)
+                nativeClothingCovered = nativeClothingCovered || Field<unsigned>(character, 0x428 + slot * 4) != 0;
+        if (Field<unsigned>(character, 0x18) == 69 || Field<unsigned>(character, 0x18) == 70)
+            DrakonidTrace("refresh character=%p race=%u gender=%u records=%u slots=[%u %u %u %u %u %u %u %u %u %u] "
+                          "robe=%u coverage=%x", character, Field<unsigned>(character, 0x18), gender,
+                          static_cast<unsigned>(records.size()),
+                          Field<unsigned>(character, 0x428), Field<unsigned>(character, 0x42C),
+                          Field<unsigned>(character, 0x430), Field<unsigned>(character, 0x434),
+                          Field<unsigned>(character, 0x438), Field<unsigned>(character, 0x43C),
+                          Field<unsigned>(character, 0x440), Field<unsigned>(character, 0x444),
+                          Field<unsigned>(character, 0x448), Field<unsigned>(character, 0x44C),
+                          Field<unsigned>(character, 0x178), DrakonidTextureCoverage(character));
         unsigned materials = 0;
         std::uint64_t helmetGroups = 0;
-        if (Field<unsigned>(character, 0x18) == 20 || Field<unsigned>(character, 0x18) == 54)
+        if (Field<unsigned>(character, 0x18) == 20 || Field<unsigned>(character, 0x18) == 54
+            || Field<unsigned>(character, 0x18) == 69 || Field<unsigned>(character, 0x18) == 70)
             for (auto const& record : records)
                 if (record.kind == 4 && record.gender == gender && record.value < 52
                     && record.target == Field<unsigned>(character, 0x428))
@@ -1104,7 +1276,10 @@ namespace
         Native<void(__thiscall*)(void*, unsigned, unsigned, int)>(0x0082C7C0)(instance, 10000, 29999, 0);
         for (auto const& record : records)
         {
-            if (record.gender != gender || record.kind >= 3)
+            bool equipmentTexture = record.kind == 5 && Field<unsigned>(character, 0x18) == 64
+                && ((record.target == 9 && record.value == Field<unsigned>(character, 0x438))
+                    || (record.target == 10 && record.value == Field<unsigned>(character, 0x43C)));
+            if (record.gender != gender || (record.kind >= 3 && !equipmentTexture))
                 continue;
             bool selected = true;
             for (unsigned selector : record.choices)
@@ -1124,6 +1299,35 @@ namespace
                 continue;
             if (record.kind == 2)
             {
+                if (nativeClothingCovered && record.value >= 21000 && record.value < 22000)
+                    continue;
+                if (Field<unsigned>(character, 0x18) == 64 && record.value >= 20001 && record.value <= 20009)
+                {
+                    unsigned coverage = SaberonTextureCoverage(character);
+                    unsigned beltDisplay = Field<unsigned>(character, 0x438);
+                    bool belt = std::any_of(records.begin(), records.end(), [beltDisplay](auto const& item)
+                    {
+                        return item.kind == 5 && item.target == 9 && item.value == beltDisplay;
+                    });
+                    unsigned pantsDisplay = Field<unsigned>(character, 0x43C);
+                    bool separatePants = belt && std::any_of(records.begin(), records.end(),
+                        [pantsDisplay](auto const& item)
+                    {
+                        return item.kind == 5 && item.target == 10 && item.value == pantsDisplay;
+                    });
+                    unsigned region = record.value == 20009 ? 5 : record.value - 20001;
+                    bool covered = record.value == 20008 ? belt : (coverage & (1u << region)) != 0;
+                    if (record.value == 20006 && separatePants)
+                        covered = false;
+                    if (record.value == 20009 && !separatePants)
+                        covered = false;
+                    if (!covered)
+                        continue;
+                }
+                if ((Field<unsigned>(character, 0x18) == 69 || Field<unsigned>(character, 0x18) == 70)
+                    && record.value >= 20001 && record.value <= 20028 && (record.value - 20001) % 10 < 8
+                    && !(DrakonidTextureCoverage(character) & (1u << ((record.value - 20001) % 10))))
+                    continue; // 2000x body shells, 2001x / 2002x dorsal shells of tail 0 / 1
                 unsigned group = record.target / 100;
                 unsigned source = group < 19 ? Field<unsigned>(character, 0x144 + group * 4)
                     : selectedGeosets[group];
@@ -1141,6 +1345,24 @@ namespace
                 if (helmetGroups & (std::uint64_t{1} << record.target))
                     selectedValue = record.target * 100;
                 unsigned race = Field<unsigned>(character, 0x18);
+                if (race == 63)
+                {
+                    // Native Gnoll outfits yield only to equipment covering the same body region.
+                    auto equipped = [&](unsigned slot)
+                    {
+                        return Field<unsigned>(character, 0x428 + slot * 4) != 0;
+                    };
+                    unsigned group = record.target;
+                    bool covered = (group == 35 && (equipped(2) || equipped(3) || equipped(9)))
+                        || (group == 36 && (equipped(7) || equipped(8)))
+                        || ((group == 37 || group == 42) && equipped(4))
+                        || ((group == 38 || group == 43) && (equipped(5)
+                            || Field<unsigned>(character, 0x178) == 1302))
+                        || (group == 40 && (equipped(5) || equipped(6))) || (group == 41 && equipped(1));
+                    if (covered)
+                        // These defaults are authored body surfaces, not removable outfit decorations.
+                        selectedValue = group == 37 ? 3701 : group == 38 ? 3801 : group * 100;
+                }
                 if (record.target == 20 && (race == 48 || race == 49 || race == 50 || race == 51
                     || race == 56 || race == 57))
                     // Native equipment slot7 (Feet) maps to component visual slot6 at 0x428 + 6*4.
@@ -1186,11 +1408,18 @@ namespace
         unsigned race = Field<unsigned>(character, 0x18);
         if (!ExtendedRace(race))
             return false;
+        // The authored female player model uses ordinary DBC materials and equipment geosets.
+        if (CreatureAppearance::UsesStockMaterials(race, Field<unsigned>(character, 0x1C)))
+            return false;
         if (race != 46 && Field<void*>(character, 0x38))
             CaptureEarthenOwner(character);
         if (CreatureAppearance::Uses(race))
         {
             SetHaranirMaterials(character);
+            if (race == 63)
+                return ExtendedGeometry(character, CreatureAppearance::GnollControls, RetailSelections(race));
+            if (race == 69 || race == 70)
+                return ExtendedGeometry(character, CreatureAppearance::DrakonidControls, RetailSelections(race));
             return ExtendedGeometry(character, CreatureAppearance::Options(race, Field<unsigned>(character, 0x1C)),
                 RetailSelections(race));
         }
@@ -1415,6 +1644,51 @@ extern "C" __declspec(dllexport) bool __cdecl EsteriaDirectSection(
         return true;
     unsigned style = operation == 2 ? arguments[2] : 0;
     unsigned color = operation == 2 ? arguments[3] : Field<unsigned>(character, 0x28);
+    if (operation == 1 && CreatureAppearance::UsesStockMaterials(
+        Field<unsigned>(character, 0x18), Field<unsigned>(character, 0x1C)))
+    {
+        style = Field<unsigned>(character, 0x34);
+        color = Field<unsigned>(character, 0x24);
+    }
+    if (operation == 1 && (Field<unsigned>(character, 0x18) == 69 || Field<unsigned>(character, 0x18) == 70))
+    {
+        // The stock Hair Color row selects Drakonid eyes; the hair-texture setter is the only call it triggers.
+        void* instance = Field<void*>(character, 0x38);
+        if (!instance)
+            return true;
+        auto fields = HighmountainFields(character);
+        unsigned gender = Field<unsigned>(character, 0x1C);
+        for (auto const& record : RetailSelections(Field<unsigned>(character, 0x18)))
+        {
+            if (record.kind != 1 || record.target != 6 || record.gender != gender)
+                continue;
+            bool selected = true;
+            for (unsigned selector : record.choices)
+            {
+                if (selector == 0xffffffff)
+                    continue;
+                unsigned index = selector & 0xffff;
+                if (index >= CreatureAppearance::DrakonidControls.size())
+                {
+                    selected = false;
+                    break;
+                }
+                auto const& option = CreatureAppearance::DrakonidControls[index];
+                selected = selected && (fields[option.field] / option.factor) % option.count == selector >> 16;
+            }
+            if (!selected)
+                continue;
+            void* texture = Native<void*(__cdecl*)(char const*, void*)>(0x004E8D30)(
+                record.path, reinterpret_cast<void*>(Address(0x00AC46D0)));
+            if (texture)
+            {
+                Native<void(__thiscall*)(void*, unsigned, void*)>(0x00825260)(instance, 6, texture);
+                Native<void(__cdecl*)(void*)>(0x0047BF30)(texture);
+            }
+            break;
+        }
+        return true;
+    }
     char const* path = HaranirLayerPath(character, kind, slot);
     if (!path)
     {
@@ -1430,7 +1704,9 @@ extern "C" __declspec(dllexport) bool __cdecl EsteriaDirectSection(
         return true;
     if (operation < 2)
     {
-        if (Field<unsigned>(character, 0x18) == 20 || CreatureAppearance::Uses(Field<unsigned>(character, 0x18)))
+        unsigned race = Field<unsigned>(character, 0x18);
+        if (race == 20 || (CreatureAppearance::Uses(race)
+            && !CreatureAppearance::UsesStockMaterials(race, Field<unsigned>(character, 0x1C))))
         {
             SetHaranirMaterials(character);
             return true;
@@ -1456,7 +1732,9 @@ extern "C" __declspec(dllexport) bool __cdecl EsteriaDirectSection(
         Native<void(__cdecl*)(void*)>(0x004F31A0)(layer);
     layer = nullptr;
     unsigned race = Field<unsigned>(character, 0x18);
-    layer = path[0] ? (race == 20 || race == 50 || race == 51 || CreatureAppearance::Uses(race) ? HaranirLoadLayer(path)
+    bool nativeMaterials = race == 20 || race == 50 || race == 51 || (CreatureAppearance::Uses(race)
+        && !CreatureAppearance::UsesStockMaterials(race, Field<unsigned>(character, 0x1C)));
+    layer = path[0] ? (nativeMaterials ? HaranirLoadLayer(path)
         : Native<void*(__cdecl*)(char const*)>(0x004F3930)(path)) : nullptr;
     if (arguments[4] < 32)
         Field<unsigned>(character, 0x0C) |= 1u << arguments[4];

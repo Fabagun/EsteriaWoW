@@ -467,7 +467,8 @@
       "visual_base_race": 1,
       "start_profile": "elwynn",
       "supported_genders": [
-        0
+        0,
+        1
       ],
       "species_selection": true
     },
@@ -481,7 +482,8 @@
       "visual_base_race": 1,
       "start_profile": "durotar",
       "supported_genders": [
-        0
+        0,
+        1
       ],
       "species_selection": true
     },
@@ -526,22 +528,138 @@
         0,
         1
       ],
-      "species_selection": false
+      "species_selection": true
     },
     {
       "id": 61,
-      "species_key": "furbolg",
-      "display_name": "Furbolg",
+      "species_key": "ogre",
+      "display_name": "Ogre",
       "faction": "alliance",
-      "asset_owner": "retroporter_ogre_furbolg",
-      "legacy_mask_race": 4,
-      "visual_base_race": 4,
-      "start_profile": "teldrassil",
+      "asset_owner": "reforged_ogre_alliance",
+      "legacy_mask_race": 1,
+      "visual_base_race": 2,
+      "start_profile": "elwynn",
       "supported_genders": [
         0,
         1
       ],
-      "species_selection": false
+      "species_selection": true
+    },
+    {
+      "id": 62,
+      "species_key": "sethrak_alliance",
+      "display_name": "Sethrak",
+      "faction": "alliance",
+      "species_selection": false,
+      "start_profile": "elwynn",
+      "asset_owner": "animated_sethrak",
+      "legacy_mask_race": 1,
+      "visual_base_race": 11,
+      "supported_genders": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 63,
+      "species_key": "gnoll_horde",
+      "display_name": "Gnoll",
+      "faction": "horde",
+      "species_selection": false,
+      "start_profile": "durotar",
+      "asset_owner": "retroporter_gnoll",
+      "legacy_mask_race": 2,
+      "visual_base_race": 12,
+      "supported_genders": [
+        0
+      ]
+    },
+    {
+      "id": 64,
+      "species_key": "saberon_horde",
+      "display_name": "Saberon",
+      "faction": "horde",
+      "species_selection": false,
+      "start_profile": "durotar",
+      "asset_owner": "retroporter_saberon",
+      "legacy_mask_race": 2,
+      "visual_base_race": 12,
+      "supported_genders": [
+        0
+      ]
+    },
+    {
+      "id": 65,
+      "species_key": "jinyu_alliance",
+      "display_name": "Jinyu",
+      "faction": "alliance",
+      "species_selection": false,
+      "start_profile": "elwynn",
+      "asset_owner": "snowzocraft_jinyu",
+      "legacy_mask_race": 1,
+      "visual_base_race": 1,
+      "supported_genders": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 66,
+      "species_key": "drakkin_alliance",
+      "display_name": "Drakkin",
+      "faction": "alliance",
+      "species_selection": false,
+      "start_profile": "elwynn",
+      "asset_owner": "supplied_drakkin",
+      "legacy_mask_race": 1,
+      "visual_base_race": 20,
+      "supported_genders": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 68,
+      "species_key": "arakkoa_horde",
+      "display_name": "Arakkoa",
+      "faction": "horde",
+      "species_selection": false,
+      "start_profile": "durotar",
+      "asset_owner": "supplied_arakkoa",
+      "legacy_mask_race": 2,
+      "visual_base_race": 2,
+      "supported_genders": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 69,
+      "species_key": "drakonid_alliance",
+      "display_name": "Drakonid",
+      "faction": "alliance",
+      "species_selection": false,
+      "start_profile": "elwynn",
+      "asset_owner": "retroporter_drakonid",
+      "legacy_mask_race": 1,
+      "visual_base_race": 6,
+      "supported_genders": [
+        0
+      ]
+    },
+    {
+      "id": 70,
+      "species_key": "drakonid_horde",
+      "display_name": "Drakonid",
+      "faction": "horde",
+      "species_selection": false,
+      "start_profile": "durotar",
+      "asset_owner": "retroporter_drakonid",
+      "legacy_mask_race": 2,
+      "visual_base_race": 6,
+      "supported_genders": [
+        0
+      ]
     }
   ],
   "npc_only": [
@@ -610,6 +728,11 @@
       "name": "Broken NPC",
       "legacy_id": 25,
       "not_playable": true
+    },
+    {
+      "id": 67,
+      "name": "Drakkin Horde (retired)",
+      "not_playable": true
     }
   ],
   "faction_pairs": [
@@ -647,6 +770,11 @@
       "species_key": "thinhuman",
       "alliance_id": 58,
       "horde_id": 59
+    },
+    {
+      "species_key": "ogre",
+      "alliance_id": 61,
+      "horde_id": 60
     }
   ],
   "sources": {
@@ -675,6 +803,13 @@
     "retroporter_naga": "G:\\RetroPorterWork\\naga\\integration\\patch-root",
     "retroporter_tuskarr": "G:\\RetroPorterWork\\tuskarr\\integration\\patch-root",
     "retroporter_vrykul": "G:\\RetroPorterWork\\vrykul\\integration\\patch-root",
-    "retroporter_thinhuman": "G:\\RetroPorterWork\\thinhuman\\integration\\patch-root"
+    "retroporter_thinhuman": "G:\\RetroPorterWork\\thinhuman\\integration\\patch-root",
+    "animated_sethrak": "C:\\Users\\Zach\\.codex\\tmp\\sethrak-playable\\assets",
+    "retroporter_gnoll": "C:\\Users\\Zach\\.codex\\tmp\\gnoll-horde-deploy-20261006\\assets",
+    "retroporter_saberon": "C:\\Users\\Zach\\.codex\\tmp\\saberon-playable\\assets",
+    "snowzocraft_jinyu": "G:\\RetroPorterWork\\jinyu\\stage-20261008\\assets",
+    "supplied_drakkin": "G:\\RetroPorterWork\\drakkin\\options-20261011\\assets",
+    "supplied_arakkoa": "G:\\RetroPorterWork\\arakkoa\\stage-20261011\\assets",
+    "retroporter_drakonid": "G:\\RetroPorterWork\\drakonid\\deploy\\assets"
   }
 }

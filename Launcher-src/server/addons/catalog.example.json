@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "baseUrl": "https://cdn.example.com/addons/",
+  "addons": [
+    {
+      "id": "questie",
+      "name": "Questie",
+      "version": "1.2.0",
+      "description": "Quest tracking for Esteria.",
+      "author": "Esteria Team",
+      "category": "Questing",
+      "homepage": "",
+      "changelog": "Initial managed release.",
+      "packageUrl": "Questie/1.2.0.zip",
+      "sha256": "REPLACE_WITH_SHA256",
+      "size": 0,
+      "folders": ["Questie"],
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "slug": "arakkoa_horde",
+  "name": "Arakkoa",
+  "race_ids": [
+    68
+  ],
+  "enum": "RACE_ARAKKOA_HORDE",
+  "faction": "horde",
+  "source_race_id": 2,
+  "source_package_race_id": 45,
+  "legacy_mask_race": 2,
+  "visual_base_race": 2,
+  "client_file_strings": {
+    "68": "ArakkoaHorde"
+  },
+  "glue_token": "ARAKKOAHORDE",
+  "helmet_prefix": "Ak",
+  "start_profile": "durotar",
+  "donor_totem_race": 2,
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11
+  ],
+  "source_patch_root": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\Arakkoa-race",
+  "runtime_patch_root": "G:\\RetroPorterWork\\arakkoa\\stage-20261011\\assets",
+  "models": {
+    "male": {
+      "model_id": 120075,
+      "display_id": 60066,
+      "model_path": "custom\\arakkoa\\Character\\Arakkoa\\Male\\ArakkoaMale.m2"
+    },
+    "female": {
+      "model_id": 120076,
+      "display_id": 60067,
+      "model_path": "custom\\arakkoa\\Character\\Arakkoa\\Female\\ArakkoaFemale.m2"
+    }
+  },
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "source": "hd-outland-arakkoa-pack",
+    "supported_genders": [
+      0,
+      1
+    ],
+    "profiles": {
+      "0": {
+        "capacities": [
+          30,
+          10,
+          12,
+          11,
+          1
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "label": "Face",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "label": "Hair Style",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          {
+            "label": "Hair Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          },
+          {
+            "label": "Facial Hair",
+            "choices": [
+              0
+            ]
+          }
+        ]
+      },
+      "1": {
+        "capacities": [
+          15,
+          10,
+          13,
+          10,
+          1
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          {
+            "label": "Face",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "label": "Hair Style",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          },
+          {
+            "label": "Hair Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "label": "Facial Hair",
+            "choices": [
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "equipped_armor_geosets": "authored-player-geosets",
+    "hide_helm": false
+  },
+  "random_playerbot_enabled": false,
+  "custom_racial_spells": [
+    {
+      "spell": 13990001,
+      "name": "Outcast's Curse"
+    },
+    {
+      "spell": 13990002,
+      "name": "Feathered Descent"
+    },
+    {
+      "spell": 13990003,
+      "name": "Lore of Skettis"
+    },
+    {
+      "spell": 13990004,
+      "name": "Flight of the Raven"
+    },
+    {
+      "spell": 13990005,
+      "name": "Skyward Glide"
+    }
+  ],
+  "extra_allocations": {
+    "SoundEntries": [
+      414401,
+      414406
+    ],
+    "CreatureSoundData": [
+      9045001,
+      9045001
+    ],
+    "Spell": [
+      13990001,
+      13990005
+    ],
+    "EmotesTextSound": [
+      680001,
+      680099
+    ]
+  }
+}

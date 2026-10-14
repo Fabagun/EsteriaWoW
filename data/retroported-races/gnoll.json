@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "slug": "gnoll",
+  "name": "Gnoll",
+  "race_ids": [
+    63
+  ],
+  "enum": "RACE_GNOLL_HORDE",
+  "faction": "horde",
+  "client_file_strings": {
+    "63": "GnollHorde"
+  },
+  "glue_token": "GNOLLHORDE",
+  "helmet_prefix": "Gn",
+  "source_race_id": 2,
+  "legacy_mask_race": 2,
+  "visual_base_race": 12,
+  "start_profile": "durotar",
+  "donor_totem_race": 2,
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11
+  ],
+  "source_patch_root": "G:\\RetroPorterWork\\gnoll\\converted",
+  "runtime_patch_root": "C:\\Users\\Zach\\.codex\\tmp\\gnoll-horde-deploy-20261006\\assets",
+  "models": {
+    "male": {
+      "model_id": 120068,
+      "display_id": 60059,
+      "model_path": "custom\\gnoll\\native\\gnoll.m2"
+    }
+  },
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "source": "retail-creature-gnoll2",
+    "hide_helm": true,
+    "supported_genders": [
+      0
+    ],
+    "profiles": {
+      "0": {
+        "descriptors": [
+          [
+            0,
+            10,
+            1
+          ],
+          [
+            1,
+            6,
+            1
+          ],
+          [
+            1,
+            3,
+            6
+          ],
+          [
+            1,
+            3,
+            18
+          ],
+          [
+            0,
+            3,
+            10
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            2,
+            4,
+            3
+          ],
+          [
+            2,
+            5,
+            12
+          ],
+          [
+            3,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            2
+          ],
+          [
+            0,
+            4,
+            30
+          ],
+          [
+            3,
+            2,
+            4
+          ],
+          [
+            3,
+            3,
+            8
+          ],
+          [
+            3,
+            2,
+            24
+          ],
+          [
+            4,
+            3,
+            1
+          ]
+        ],
+        "capacities": [
+          120,
+          54,
+          60,
+          48,
+          3
+        ],
+        "options": [
+          {
+            "label": "Fur Color",
+            "choices": [
+              3886649,
+              3886650,
+              3886651,
+              3925236,
+              3925237,
+              3886648,
+              3886652,
+              3886646,
+              3887342,
+              3887343
+            ]
+          },
+          {
+            "label": "Mane",
+            "choices": [
+              101,
+              102,
+              103,
+              104,
+              105,
+              106
+            ]
+          },
+          {
+            "label": "Beard",
+            "choices": [
+              201,
+              202,
+              203
+            ]
+          },
+          {
+            "label": "Ears",
+            "choices": [
+              301,
+              302,
+              303
+            ]
+          },
+          {
+            "label": "Eyes",
+            "choices": [
+              401,
+              402,
+              403
+            ]
+          },
+          {
+            "label": "Outfit Color",
+            "choices": [
+              3886645,
+              3886644,
+              3886643
+            ]
+          },
+          {
+            "label": "Chest Sling",
+            "choices": [
+              500,
+              502,
+              503,
+              504
+            ]
+          },
+          {
+            "label": "Cuffs",
+            "choices": [
+              600,
+              602,
+              603,
+              604,
+              605
+            ]
+          },
+          {
+            "label": "Waist",
+            "choices": [
+              701,
+              702
+            ]
+          },
+          {
+            "label": "Loincloth",
+            "choices": [
+              801,
+              802
+            ]
+          },
+          {
+            "label": "Tail",
+            "choices": [
+              901,
+              902,
+              903,
+              904
+            ]
+          },
+          {
+            "label": "Leg Wraps",
+            "choices": [
+              1001,
+              1002
+            ]
+          },
+          {
+            "label": "Pauldrons",
+            "choices": [
+              1100,
+              1102,
+              1103
+            ]
+          },
+          {
+            "label": "Belt Strap",
+            "choices": [
+              1200,
+              1202
+            ]
+          },
+          {
+            "label": "Trousers",
+            "choices": [
+              1302,
+              1303,
+              1304
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "random_playerbot_enabled": false,
+  "custom_racial_spells": []
+}

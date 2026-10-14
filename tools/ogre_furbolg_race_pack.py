@@ -414,16 +414,16 @@ def merge_creature_display_info(base: bytes, donor: bytes, spec_entry: dict) -> 
     return table.build(records, bytes(pool))
 
 
-SECTION_TYPES = {"skin": 0, "face": 1, "hair": 2, "facial": 3, "underwear": 4}
+SECTION_TYPES = {"skin": 0, "face": 1, "hair": 3, "facial": 2, "underwear": 4}
 
 
-def _donor_section_rows(donor: bytes) -> dict:
+def _donor_section_rows(donor: bytes, donor_race: int) -> dict:
     table = p.RawWdbc(donor)
     grouped = {}
     for row in table.records:
         race, gender, kind, t1, t2, t3, flags, style, color = struct.unpack_from(
             "<9I", row, 4)
-        if not (flags & 1) or (flags & 4):
+        if race != donor_race or not (flags & 1) or (flags & 4):
             continue
         grouped.setdefault((gender, kind, style, color), row)
         grouped.setdefault((gender, kind, style, None), row)
@@ -434,7 +434,7 @@ def build_char_sections(base: bytes, donor: bytes, allocation: dict, spec_entry:
     table = p.RawWdbc(base)
     pool = bytearray(table.strings)
     records = list(table.records)
-    donor_table, donor_rows = _donor_section_rows(donor)
+    donor_table, donor_rows = _donor_section_rows(donor, spec_entry['donor_race_id'])
     ids = p._allocated_sequence(allocation, spec_entry["slug"], "CharSections", 0)
     bounds = allocation["race_allocations"][spec_entry["slug"]]["CharSections"]
     next_id = bounds[0]
@@ -892,6 +892,8 @@ def clone_barber(base: bytes, allocation: dict, spec_entry: dict) -> tuple[bytes
 
 
 def build_tables(client_data: Path, allocation: dict) -> tuple[dict[str, bytes], dict]:
+    if allocation['race_ids'].get('ogre_alliance') == [61]:
+        raise ValueError('Race 61 now belongs to Alliance Ogre; the Furbolg reservation is retired')
     donor = _donor_tables()
     evidence = {"tables": {}, "counts": {}}
     output = {}
@@ -1225,6 +1227,8 @@ def validate(client: Path) -> dict:
 
 def update_allocation(allocation: dict) -> dict:
     """Reserve the new table ranges and per-race allocations (idempotent)."""
+    if allocation['race_ids'].get('ogre_alliance') == [61]:
+        raise ValueError('Refusing to replace the Alliance Ogre reservation with Furbolg')
     ranges = allocation["dbc_ranges"]
     ranges["CreatureDisplayInfo"] = [60030, max(60056, ranges["CreatureDisplayInfo"][1])]
     ranges["CharSections"] = [450000, max(1100999, ranges["CharSections"][1])]

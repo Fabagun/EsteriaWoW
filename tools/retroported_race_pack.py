@@ -44,6 +44,7 @@ from playable_race_pack import RawWdbc, STRING_FIELDS, WDBC_LAYOUTS  # noqa: E40
 from wod_model_migration import rebuild_archive_streaming  # noqa: E402
 
 CLIENT_DEFAULT = Path(r"G:\3.3.5a - Dev")
+RACE_SLOT_COUNT = 129
 CONFIG_ROOT = ROOT / "data" / "retroported-races"
 ALLOCATION_PATH = CONFIG_ROOT / "allocation.json"
 SERVER_DBC_ROOT = ROOT / "modules" / "mod-custom-server" / "data" / "dbc" / "retroported-races"
@@ -698,8 +699,9 @@ def _server_continuations(tables: dict[str, bytes], manifest: dict, allocation: 
 
 def _patch_character_create_lua(data: bytes) -> bytes:
     text = data.decode("utf-8")
-    text, count = re.subn(r"(?m)^MAX_RACES\s*=\s*40\s*;", "MAX_RACES = 64;", text, count=1)
-    if count != 1 and "MAX_RACES = 64;" not in text:
+    text, count = re.subn(r"(?m)^MAX_RACES\s*=\s*(?:40|64|129)\s*;",
+                         f"MAX_RACES = {RACE_SLOT_COUNT};", text, count=1)
+    if count != 1:
         raise ValueError("CharacterCreate.lua MAX_RACES anchor not found")
 
     old = """    local selectedSex = GetSelectedSex();\n    if ( selectedSex == SEX_MALE ) then"""
@@ -743,15 +745,16 @@ def _patch_character_create_lua(data: bytes) -> bytes:
 
 def _patch_character_create_xml(data: bytes) -> bytes:
     text = data.decode("utf-8")
-    if "CharacterCreateRaceButton64" in text:
-        return data
     anchor = '                                <CheckButton name="CharacterCreateRaceButton40" inherits="CharacterCreateRaceButtonTemplate" id="40"/>'
     if anchor not in text:
         raise ValueError("CharacterCreate.xml race button 40 anchor not found")
     extra = "\n".join(
         f'                                <CheckButton name="CharacterCreateRaceButton{index}" inherits="CharacterCreateRaceButtonTemplate" id="{index}"/>'
-        for index in range(41, 65)
+        for index in range(41, RACE_SLOT_COUNT + 1)
+        if f'name="CharacterCreateRaceButton{index}"' not in text
     )
+    if not extra:
+        return data
     return text.replace(anchor, anchor + "\n" + extra, 1).encode("utf-8")
 
 
@@ -1587,15 +1590,15 @@ def validate(slug: str, client: Path, paths: BuildPaths | None = None) -> dict:
             raise ValueError(f"{archive}: no CharSections for race {race_id}")
         glue = _read_archive_entry(storm, archive, f"{GLUE_ROOT}CharacterCreate.lua").decode("utf-8")
         if (
-            "MAX_RACES = 64;" not in glue
+            f"MAX_RACES = {RACE_SLOT_COUNT};" not in glue
             or "button.raceID = raceID;" not in glue
             or "CharacterCreate.selectedRaceID" not in glue
             or "local exactRaceID = _G.GetExactRaceIDForFileString(fileString);" not in glue
         ):
             raise ValueError(f"{archive}: CharacterCreate high-ID mapping is missing")
         xml = _read_archive_entry(storm, archive, f"{GLUE_ROOT}CharacterCreate.xml").decode("utf-8")
-        if "CharacterCreateRaceButton64" not in xml:
-            raise ValueError(f"{archive}: CharacterCreate button capacity is below 64")
+        if f"CharacterCreateRaceButton{RACE_SLOT_COUNT}" not in xml:
+            raise ValueError(f"{archive}: CharacterCreate button capacity is below {RACE_SLOT_COUNT}")
         info = _read_archive_entry(storm, archive, f"{GLUE_ROOT}CharacterInfo.lua").decode("utf-8")
         if '[45] = { glueString = "MAGHAR", name = "Mag\'har Orc", faction = "Horde", fileString = "Maghar" }' not in info:
             raise ValueError(f"{archive}: Mag'har exact CharacterInfo row is missing")

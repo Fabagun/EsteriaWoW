@@ -12,7 +12,7 @@ k.ReadProcessMemory.argtypes = [c.c_void_p, c.c_void_p, c.c_void_p, c.c_size_t, 
 k.CloseHandle.argtypes = [c.c_void_p]
 
 
-def capture(pid):
+def capture(pid, allowed_races=(50, 51), component_address=None):
     handle = k.OpenProcess(0x410, False, pid)
     if not handle:
         raise OSError(c.get_last_error())
@@ -29,11 +29,13 @@ def capture(pid):
         return struct.unpack("<I", read(address, 4))[0]
 
     try:
-        component = u(0x00B6B1A0)
-        if not component or u(component + 0x18) not in (50, 51):
-            raise ValueError("Leave a Haranir visible in Character Create")
+        component = component_address or u(0x00B6B1A0)
+        if not component or u(component + 0x18) not in allowed_races:
+            raise ValueError("Leave a supported race visible in Character Create")
         result = {"component": hex(component), "fields": {hex(at): u(component + at)
-            for at in (0x18, 0x1C, 0x24, 0x28, 0x2C, 0x30, 0x34)}, "layers": []}
+            for at in (0x18, 0x1C, 0x24, 0x28, 0x2C, 0x30, 0x34)},
+            "geoset_selectors": [u(component + 0x144 + i * 4) for i in range(19)],
+            "equipment_displays": [u(component + 0x428 + i * 4) for i in range(14)], "layers": []}
         for kind in range(5):
             for slot in range(3):
                 pointer = u(component + 0x194 + (kind * 3 + slot) * 4)

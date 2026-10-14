@@ -75,8 +75,12 @@ application. It serves the staged client, its manifest, and launcher updates:
 ```powershell
 Set-Location server
 npm install
-$env:SOURCE_DIR = 'C:\Esteria\CDN\client\live'
+$env:CLIENT_ROOT_DIR = 'C:\Esteria\CDN\client'
+$env:CLIENT_CHANNELS = 'live,ptr'
 $env:LAUNCHER_UPDATES_DIR = 'C:\Esteria\CDN\launcher-updates'
+$env:ADDONS_DIR = 'C:\Esteria\CDN\addons'
+$env:NEWS_FILE = 'C:\Esteria\CDN\news.json'
+$env:STATUS_FILE = 'C:\Esteria\CDN\status.json'
 npm run dev
 ```
 
@@ -88,6 +92,17 @@ Endpoints:
 - `GET /client/live/<relative-file-path>`
 - `GET /launcher-updates/<release-file>`
 - `GET /api/addons.json`
+- `GET /api/v2/build-status` - SHA-256 manifest build state for the new Tauri launcher
+- `GET /api/v2/client/<channel>/manifest.json` - complete flat SHA-256 client manifest for `live`, `ptr`, or another configured channel
+- `GET /api/v2/addons/catalog.json` - packaged add-on catalog
+- `GET /api/v2/news.json` - launcher news feed
+- `GET /api/v2/status` - realm, player-count, maintenance, and per-channel build status
+- `GET /api/v2/social.json` - player presence snapshot; derives from published online characters when no dedicated social file exists
+- `GET /api/v2/armory/characters.json?q=<search>` - sanitized character and equipment search
+- `GET /api/v2/database/index.json?q=<search>&type=<type>` - sanitized world database search
+- `GET /addons/<package-file>` - packaged add-on downloads
+
+The v2 endpoints are additive. The Electron launcher can keep using the original routes while the new Tauri launcher uses the v2 SHA-256 manifest and packaged add-on catalog.
 
 The first manifest build can take time for a complete client. Poll
 `/api/build-status` while it is building. See

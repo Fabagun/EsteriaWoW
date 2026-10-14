@@ -1,0 +1,17 @@
+USE acore_world;
+START TRANSACTION;
+DELETE FROM playercreateinfo WHERE race=45;
+DELETE FROM playercreateinfo_item WHERE race=45;
+DELETE FROM playercreateinfo_action WHERE race=45;
+DELETE FROM player_race_stats WHERE Race=45;
+DELETE FROM ascension_custom_class_race WHERE race=45;
+INSERT INTO playercreateinfo SELECT 45,class,map,zone,position_x,position_y,position_z,orientation FROM playercreateinfo WHERE race=50;
+INSERT INTO playercreateinfo_item SELECT 45,class,itemid,amount,Note FROM playercreateinfo_item WHERE race=50;
+INSERT INTO playercreateinfo_action SELECT 45,class,button,action,type FROM playercreateinfo_action WHERE race=50;
+INSERT INTO player_race_stats SELECT 45,Strength,Agility,Stamina,Intellect,Spirit FROM player_race_stats WHERE Race=50;
+INSERT INTO ascension_custom_class_race SELECT DISTINCT class,45 FROM ascension_custom_class_race;
+DELETE FROM creature_model_info WHERE DisplayID=977475;
+INSERT INTO creature_model_info (DisplayID,BoundingRadius,CombatReach,Gender,DisplayID_Other_Gender) SELECT 977475,BoundingRadius,CombatReach,0,0 FROM creature_model_info WHERE DisplayID IN (977473,49) ORDER BY DisplayID=977473 DESC LIMIT 1;
+DELETE FROM creature_model_info WHERE DisplayID=977476;
+INSERT INTO creature_model_info (DisplayID,BoundingRadius,CombatReach,Gender,DisplayID_Other_Gender) SELECT 977476,BoundingRadius,CombatReach,1,0 FROM creature_model_info WHERE DisplayID=977475;
+COMMIT;

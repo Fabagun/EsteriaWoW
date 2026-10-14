@@ -8,12 +8,14 @@ struct HaranirImages
     std::array<std::shared_ptr<void>, 9> textures;
     std::string lower;
     std::string upper;
+    std::uint64_t clothingHash = 0;
+    std::shared_ptr<void> clothingTexture;
 };
 
 std::unordered_map<void*, HaranirImages> haranirImages;
 
 bool WriteHaranirBlp(std::string const& relative, std::vector<unsigned char> pixels,
-    unsigned width, unsigned height, bool indexed)
+    unsigned width, unsigned height, bool indexed, bool preserveAlpha = false)
 {
     char executable[MAX_PATH]{};
     if (!GetModuleFileNameA(nullptr, executable, MAX_PATH))
@@ -29,6 +31,7 @@ bool WriteHaranirBlp(std::string const& relative, std::vector<unsigned char> pix
         unsigned char header[24]{};
         bool cached = std::fread(header, sizeof(header), 1, existing) == 1
             && !std::memcmp(header, "BLP2", 4) && header[8] == (indexed ? 1 : 3)
+            && header[9] == (indexed && !preserveAlpha ? 0 : 8)
             && Field<unsigned>(header, 20) == 1172 && header[11] == 1
             && Field<unsigned>(header, 12) == width && Field<unsigned>(header, 16) == height;
         std::fclose(existing);
@@ -56,7 +59,7 @@ bool WriteHaranirBlp(std::string const& relative, std::vector<unsigned char> pix
     std::memcpy(data.data(), "BLP2", 4);
     Field<unsigned>(data.data(), 4) = 1;
     data[8] = indexed ? 1 : 3;
-    data[9] = indexed ? 0 : 8;
+    data[9] = indexed && !preserveAlpha ? 0 : 8;
     data[10] = 8;
     data[11] = 1;
     Field<unsigned>(data.data(), 12) = width;
@@ -88,6 +91,9 @@ bool WriteHaranirBlp(std::string const& relative, std::vector<unsigned char> pix
                     WICBitmapDitherTypeNone, palette.Get(), 0, WICBitmapPaletteTypeCustom))
                 || FAILED(converter->CopyPixels(nullptr, width, static_cast<UINT>(level.size()), level.data())))
                 return false;
+            if (preserveAlpha)
+                for (unsigned i = 0; i < width * height; ++i)
+                    level.push_back(pixels[i * 4 + 3]);
         }
         else
         {
@@ -243,7 +249,8 @@ bool ComposeHaranir(void* character, Options const& options, HaranirImages& imag
         next.paths[group] = name;
         // ponytail: disk cache retains visited combinations; add bounded eviction if client disk usage warrants it.
         if (group != 1)
-            valid = WriteHaranirBlp(next.paths[group], pixels, width, height, group == 0);
+            valid = WriteHaranirBlp(next.paths[group], pixels, width, height, group == 0,
+                (race == 63 || race == 64) && group == 0);
         else
         {
             // The catalogs project source sections into Wrath's 256x192 face destination first.
@@ -292,11 +299,17 @@ bool ComposeHaranir(void* character, Options const& options, HaranirImages& imag
 char const* HaranirLayerPath(void* character, unsigned kind, unsigned slot)
 {
     unsigned race = Field<unsigned>(character, 0x18);
+    if (CreatureAppearance::UsesStockMaterials(race, Field<unsigned>(character, 0x1C)))
+        return nullptr;
     if (race != 20 && race != 50 && race != 51 && !CreatureAppearance::Uses(race))
         return nullptr;
     auto& images = haranirImages[character];
     bool valid;
-    if (CreatureAppearance::Uses(race))
+    if (race == 63)
+        valid = ComposeHaranir(character, CreatureAppearance::GnollControls, images);
+    else if (race == 69 || race == 70)
+        valid = ComposeHaranir(character, CreatureAppearance::DrakonidControls, images);
+    else if (CreatureAppearance::Uses(race))
         valid = ComposeHaranir(character, CreatureAppearance::Options(race, Field<unsigned>(character, 0x1C)), images);
     else if (race == 20)
         valid = Field<unsigned>(character, 0x1C) == 0
@@ -425,6 +438,8 @@ std::shared_ptr<void> HaranirLoadTexture(char const* path)
     return result;
 }
 
+#include "ClothingMaterials.inl"
+
 void SetHaranirMaterials(void* character)
 {
     if (!HaranirLayerPath(character, 0, 0))
@@ -433,6 +448,9 @@ void SetHaranirMaterials(void* character)
     void* instance = Field<void*>(character, 0x38);
     if (found == haranirImages.end() || !instance)
         return;
+    if (found->second.race == 63 || found->second.race == 64 || found->second.race == 69
+        || found->second.race == 70)
+        SetClothingMaterial(character, found->second, instance);
     unsigned const slots[] = {0, 0, 6, 5, 8, 12, 13, 9, 10};
     for (unsigned group = 2; group < found->second.paths.size(); ++group)
     {

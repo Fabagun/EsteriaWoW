@@ -1,4 +1,4 @@
-FROM node:22-alpine AS build
+FROM node:24-alpine AS build
 
 WORKDIR /app
 COPY server/package.json server/package-lock.json* ./
@@ -6,7 +6,7 @@ RUN npm install --omit=dev --no-audit --no-fund
 
 COPY server/src/ ./src/
 
-FROM node:22-alpine AS runtime
+FROM node:24-alpine AS runtime
 
 RUN adduser -D -H -s /sbin/nologin manifest
 

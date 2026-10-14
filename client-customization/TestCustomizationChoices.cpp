@@ -113,7 +113,7 @@ int main(int argc, char** argv)
     alignas(4) unsigned char character[0x200]{};
     *reinterpret_cast<void**>(Address(0x00B6B1A0)) = character;
     *reinterpret_cast<void**>(Address(0x00B6B864)) = character;
-    unsigned features[128]{};
+    unsigned features[129 * 2]{};
     features[2] = 3;
     *reinterpret_cast<unsigned**>(Address(0x00B6B860)) = features;
     *reinterpret_cast<unsigned*>(character + 0x18) = 1;
@@ -160,8 +160,39 @@ int main(int argc, char** argv)
         Lua choices{"EA_STOCK_CHOICES", static_cast<double>(i)};
         assert(cycle(&choices) == 1 && choices.choices == stock[i - 1]);
     }
-    for (unsigned race : {20u, 46u, 47u, 48u, 49u, 50u, 51u, 52u, 53u, 54u})
+    for (unsigned race : {63u, 64u, 127u, 128u})
         for (unsigned gender = 0; gender < 2; ++gender)
+        {
+            *reinterpret_cast<unsigned*>(character + 0x18) = race;
+            *reinterpret_cast<unsigned*>(character + 0x1C) = gender;
+            features[race * 2 + gender] = 3;
+            Lua get{"EA_STOCK_GET", 5};
+            assert(cycle(&get) == 2 && get.numbers[1] == 3);
+            Lua choices{"EA_STOCK_CHOICES", 5};
+            assert(cycle(&choices) == 1 && choices.choices == "0,1,2,");
+        }
+    for (unsigned race : {129u, 255u})
+    {
+        *reinterpret_cast<unsigned*>(character + 0x18) = race;
+        Lua get{"EA_STOCK_GET", 5};
+        assert(cycle(&get) == 0 && get.numbers.empty());
+    }
+    for (unsigned race : {56u, 57u})
+    {
+        *reinterpret_cast<unsigned*>(character + 0x18) = race;
+        *reinterpret_cast<unsigned*>(character + 0x1C) = 1;
+        for (unsigned index = 0; index < CreatureAppearance::VrykulFemale.size(); ++index)
+        {
+            unsigned count = CreatureAppearance::VrykulFemale[index].count;
+            Lua set{"EA_SET", static_cast<double>(index + 1), static_cast<double>(count - 1)};
+            cycle(&set);
+            Lua get{"EA_GET", static_cast<double>(index + 1)};
+            assert(cycle(&get) == 2 && get.numbers[0] == count - 1 && get.numbers[1] == count);
+        }
+        forget(character);
+    }
+    for (unsigned race : {20u, 46u, 47u, 48u, 49u, 50u, 51u, 52u, 53u, 54u, 63u, 64u, 66u, 67u})
+        for (unsigned gender = 0; gender < (race == 63 || race == 64 ? 1u : 2u); ++gender)
         {
             forget(character);
             std::memset(character, 0, sizeof(character));
@@ -172,11 +203,11 @@ int main(int argc, char** argv)
             {
                 Lua get{"EA_GET", static_cast<double>(i)};
                 int result = cycle(&get);
-                if (race == 47 || race == 52 || race == 53)
+                if (race == 47 || race == 52 || race == 53 || race == 66 || race == 67)
                 {
                     if (!result)
                     {
-                        assert(i > 10);
+                        assert(i > (race >= 66 ? 5u : 10u));
                         continue;
                     }
                     assert(result == 2);
@@ -184,8 +215,10 @@ int main(int argc, char** argv)
                 else
                     assert(result == 3);
                 assert(get.numbers.size() == 2);
-                if (race == 54 && i <= 5)
+                if ((race == 54 || race == 64 || race == 66 || race == 67) && i <= 5)
                     assert(get.numbers[1] == CreatureAppearance::Options(race, gender)[i - 1].count);
+                if (race == 63 && i <= CreatureAppearance::GnollControls.size())
+                    assert(get.numbers[1] == CreatureAppearance::GnollControls[i - 1].count);
                 Lua choices{"EA_CHOICES", static_cast<double>(i)};
                 auto before = std::array<unsigned char, sizeof(character)>{};
                 std::memcpy(before.data(), character, sizeof(character));

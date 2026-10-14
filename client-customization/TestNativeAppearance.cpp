@@ -7,6 +7,7 @@
 #include "../src/server/shared/EarthenAppearance.h"
 #include "../src/server/shared/HaranirAppearance.h"
 #include "../src/server/shared/VulperaAppearance.h"
+#include "../src/server/shared/CreatureAppearance.h"
 
 int main(int argc, char** argv)
 {
@@ -130,13 +131,76 @@ int main(int argc, char** argv)
     std::strcpy(reinterpret_cast<char*>(model) + 0x3C, "custom\\vulpera\\native\\male\\vulperamale.m2");
     restore(model);
     assert(skin[1] == 22163 && skin[3] > 65535 && skin[11] == 75);
+    std::strcpy(reinterpret_cast<char*>(model) + 0x3C, "custom\\saberon\\native\\saberon.m2");
+    restore(model);
+    assert(skin[1] > 18000 && skin[3] > 65535 && skin[11] == 75);
     auto skillRace = reinterpret_cast<unsigned(__cdecl*)(unsigned)>(GetProcAddress(module, "EsteriaSkillRace"));
     assert(skillRace);
-    for (unsigned race = 1; race < 64; ++race)
+    for (unsigned race = 1; race < 129; ++race)
         assert(skillRace(race) == (race == 45 ? 2 : race == 46 ? 6 : race == 47 ? 7 : race == 48 ? 3
             : race == 49 ? 2 : race == 50 ? 4 : race == 51 ? 8 : race == 52 ? 13 : race == 53 ? 10
             : race == 54 ? 10 : race == 55 ? 3 : race == 56 || race == 58 ? 1
-            : race == 57 || race == 59 ? 2 : race == 60 ? 2 : race == 61 ? 4 : race));
+            : race == 57 || race == 59 ? 2 : race == 60 ? 2 : race == 61 ? 1 : race == 62 ? 1
+            : race == 63 || race == 64 || race == 67 || race == 68 || race == 70 ? 2 : race == 65 || race == 66 || race == 69 ? 1 : race));
+    for (unsigned race : {56u, 57u})
+    {
+        assert(CreatureAppearance::Validate(race, 1, {5, 0, 4, 4, 0}));
+        assert(!CreatureAppearance::Validate(race, 1, {6, 0, 4, 4, 0}));
+        assert(!CreatureAppearance::Validate(race, 1, {5, 0, 5, 4, 0}));
+        assert(!CreatureAppearance::Validate(race, 1, {5, 0, 4, 4, 1}));
+        assert(CreatureAppearance::Validate(race, 0, {5, 0, 5, 4, 5}));
+    }
+    assert(CreatureAppearance::Validate(62, 0, {4, 0, 3, 3, 0}));
+    assert(CreatureAppearance::Validate(62, 1, {}));
+    assert(!CreatureAppearance::Validate(62, 0, {5, 0, 3, 3, 0}));
+    assert(!CreatureAppearance::Validate(62, 0, {4, 1, 3, 3, 0}));
+    assert(!CreatureAppearance::Validate(62, 0, {4, 0, 4, 3, 0}));
+    assert(!CreatureAppearance::Validate(62, 0, {4, 0, 3, 4, 0}));
+    assert(!CreatureAppearance::Validate(62, 0, {4, 0, 3, 3, 1}));
+    assert(!CreatureAppearance::Validate(62, 1, {1, 0, 0, 0, 0}));
+    assert(!CreatureAppearance::Validate(62, 2, {}));
+    assert(CreatureAppearance::Validate(63, 0, {119, 53, 59, 47, 2}));
+    assert(!CreatureAppearance::Validate(63, 1, {}));
+    assert(CreatureAppearance::Validate(64, 0, {3, 9, 2, 2, 0}));
+    assert(!CreatureAppearance::Validate(64, 1, {}));
+    for (unsigned race : {66u, 67u})
+    {
+        unsigned const count = 16;
+        assert(CreatureAppearance::Validate(race, 0, {15, 0, 0, 24, 0}));
+        assert(CreatureAppearance::Validate(race, 1, {15, 0, 0, 24, 0}));
+        assert(!CreatureAppearance::Validate(race, 0, {16, 0, 0, 24, 0}));
+        assert(!CreatureAppearance::Validate(race, 1, {15, 0, 0, 25, 0}));
+        assert(!CreatureAppearance::Validate(race, 2, {}));
+        assert(CreatureAppearance::UsesStockMaterials(race, 1));
+        assert(CreatureAppearance::UsesStockMaterials(race, 0));
+        for (unsigned color = 0; color < count; ++color)
+            assert(CreatureAppearance::Validate(race, 1, {static_cast<std::uint8_t>(color), 0, 0, 0, 0}));
+        for (unsigned i = 0; i < 5; ++i)
+        {
+            std::array<std::uint8_t, 5> invalid{};
+            invalid[i] = static_cast<std::uint8_t>(CreatureAppearance::Options(race, 1)[i].count);
+            assert(!CreatureAppearance::Validate(race, 1, invalid));
+        }
+        unsigned arguments[] = {0, race, 1, 0, 0, 0, 0};
+        assert(sectionCount(arguments) == count);
+        arguments[2] = 0;
+        assert(sectionCount(arguments) == count);
+    }
+    for (unsigned i = 0; i < 5; ++i)
+    {
+        std::array<std::uint8_t, 5> invalid{};
+        invalid[i] = static_cast<std::uint8_t>(CreatureAppearance::GnollMale[i].count);
+        assert(!CreatureAppearance::Validate(63, 0, invalid));
+        invalid = {};
+        invalid[i] = static_cast<std::uint8_t>(CreatureAppearance::SaberonMale[i].count);
+        assert(!CreatureAppearance::Validate(64, 0, invalid));
+    }
+    unsigned sethrakArguments[] = {0, 62, 0, 0, 0, 0, 0};
+    assert(sectionCount(sethrakArguments) == 5);
+    sethrakArguments[3] = 3;
+    assert(sectionCount(sethrakArguments) == 4);
+    sethrakArguments[2] = 1;
+    assert(sectionCount(sethrakArguments) == 1);
     for (unsigned race : {48u, 49u})
     {
         unsigned char earthen[0x200] = {};

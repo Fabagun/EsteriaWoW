@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "slug": "sethrak",
+  "name": "Sethrak",
+  "race_ids": [62],
+  "enum": "RACE_SETHRAK_ALLIANCE",
+  "faction": "alliance",
+  "client_file_strings": {"62": "SethrakAlliance"},
+  "glue_token": "SETHRAKALLIANCE",
+  "helmet_prefix": "Se",
+  "source_race_id": 1,
+  "legacy_mask_race": 1,
+  "visual_base_race": 11,
+  "start_profile": "elwynn",
+  "donor_totem_race": 11,
+  "classes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11],
+  "source_patch_root": "G:\\RetroPorterWork\\sethrak-animations\\patch-root",
+  "runtime_patch_root": "C:\\Users\\Zach\\.codex\\tmp\\sethrak-playable\\assets",
+  "models": {
+    "male": {
+      "model_id": 120066,
+      "display_id": 60057,
+      "source_model_id": 2248,
+      "source_display_id": 16125,
+      "model_path": "custom\\sethrak\\native\\male\\sethrakmale.m2"
+    },
+    "female": {
+      "model_id": 120067,
+      "display_id": 60058,
+      "source_model_id": 2250,
+      "source_display_id": 16126,
+      "model_path": "custom\\sethrak\\native\\female\\sethrakfemale.m2"
+    }
+  },
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "hide_helm": true,
+    "source": "sethrak-replacer-with-retargeted-actions",
+    "supported_genders": [0, 1],
+    "profiles": {
+      "0": {"capacities": [5, 1, 4, 4, 1]},
+      "1": {"capacities": [1, 1, 1, 1, 1]}
+    },
+    "skin_textures": ["sethrak_black", "sethrak_diamondback", "sethrak_dust", "sethrak_green", "sethrak_white"],
+    "armor_textures": ["sethrak_melee_brown", "sethrak_melee_blue", "sethrak_melee_red", "sethrak_melee_white"],
+    "male_armor_geosets": [101, 102, 103, 104],
+    "female_armor_geoset": 102
+  },
+  "preserved_legacy_race": 15,
+  "random_playerbot_enabled": false,
+  "custom_racial_spells": []
+}

@@ -103,14 +103,21 @@ the launcher instead of replacing the player's working directory.
 
 ## 4. Install and start the CDN service
 
-The server has no dotenv dependency, so set SOURCE_DIR in the PowerShell
+The server has no dotenv dependency, so set its CDN and snapshot paths in the PowerShell
 session that starts it. From the Esteria launcher checkout:
 
 ~~~powershell
 Set-Location R:\Users\Zach\Documents\GitHub\EsteriaWoW\Launcher-src\server
 npm install
-$env:SOURCE_DIR = 'C:\Esteria\CDN\client\live'
+$env:CLIENT_ROOT_DIR = 'C:\Esteria\CDN\client'
+$env:CLIENT_CHANNELS = 'live,ptr'
+$env:ADDONS_DIR = 'C:\Esteria\CDN\addons'
 $env:LAUNCHER_UPDATES_DIR = 'C:\Esteria\CDN\launcher-updates'
+$env:NEWS_FILE = 'C:\Esteria\CDN\news.json'
+$env:STATUS_FILE = 'C:\Esteria\CDN\status.json'
+$env:SOCIAL_FILE = 'C:\Esteria\CDN\social.json'
+$env:ARMORY_FILE = 'C:\Esteria\CDN\armory.json'
+$env:DATABASE_FILE = 'C:\Esteria\CDN\database-index.json'
 npm run dev
 ~~~
 
@@ -165,13 +172,36 @@ Check the launcher update metadata from the same listener:
 Invoke-WebRequest "$base/launcher-updates/latest.yml" -UseBasicParsing
 ~~~
 
-The launcher consumes these routes:
+The legacy Electron launcher consumes these routes:
 
 - /api/file/live/manifest.json
 - /client/live/<relative-file-path>
 - /launcher-updates/<release-file>
 
-The route rejects paths that escape the staged source directory.
+The new Tauri launcher can use the additive v2 routes from the same service:
+
+- /api/v2/build-status
+- /api/v2/client/live/manifest.json
+- /api/v2/addons/catalog.json
+- /api/v2/news.json
+- /api/v2/status
+- /api/v2/social.json
+- /api/v2/armory/characters.json?q=<search>
+- /api/v2/database/index.json?q=<search>&type=<type>
+- /client/live/<relative-file-path>
+- /addons/<package-file>
+
+Set `ADDONS_DIR` when starting the service if packaged add-ons are hosted there:
+
+~~~powershell
+$env:ADDONS_DIR = 'C:\Esteria\CDN\addons'
+$env:CLIENT_ROOT_DIR = 'C:\Esteria\CDN\client'
+$env:CLIENT_CHANNELS = 'live,ptr'
+~~~
+
+The v2 client manifest uses SHA-256 and can be consumed by the new launcher to install a complete client into an empty directory. Existing Electron launcher routes remain unchanged.
+
+The file route rejects paths that escape the staged source directory.
 
 ## 6. Allow LAN access in Windows Defender Firewall only when needed
 

@@ -225,12 +225,15 @@ class RetroportedRacePackTests(unittest.TestCase):
         patched = pack._patch_character_create_xml(data).decode("utf-8")
         for index in range(1, 41):
             self.assertIn(f'CharacterCreateRaceButton{index}"', patched)
-        self.assertIn('CharacterCreateRaceButton64"', patched)
+        self.assertIn('CharacterCreateRaceButton129"', patched)
         self.assertIn('inherits="CharacterCreateRaceButtonTemplate"', patched)
+        for index in range(1, 130):
+            self.assertEqual(patched.count(f'name="CharacterCreateRaceButton{index}"'), 1)
+        self.assertEqual(pack._patch_character_create_xml(patched.encode("utf-8")), patched.encode("utf-8"))
 
         lua, _ = pack._effective_file(CLIENT / "Data", r"Interface\GlueXML\CharacterCreate.lua")
         patched_lua = pack._patch_character_create_lua(lua).decode("utf-8")
-        self.assertIn("MAX_RACES = 64;", patched_lua)
+        self.assertIn("MAX_RACES = 129;", patched_lua)
         self.assertIn("availableRaceIDs = {GetAvailableRaceIDs()};", patched_lua)
         self.assertIn("button.uiSlot = index;", patched_lua)
         self.assertIn("button.raceID = raceID;", patched_lua)

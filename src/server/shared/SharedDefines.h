@@ -115,7 +115,16 @@ enum Races
     RACE_THIN_HUMAN_ALLIANCE   = 58,
     RACE_THIN_HUMAN_HORDE      = 59,
     RACE_OGRE_HORDE            = 60,
-    RACE_FURBOLG_ALLIANCE      = 61
+    RACE_OGRE_ALLIANCE         = 61,
+    RACE_SETHRAK_ALLIANCE      = 62,
+    RACE_GNOLL_HORDE           = 63,
+    RACE_SABERON_HORDE         = 64,
+    RACE_JINYU_ALLIANCE        = 65,
+    RACE_DRAKKIN_ALLIANCE       = 66,
+    RACE_DRAKKIN_HORDE          = 67,
+    RACE_ARAKKOA_HORDE         = 68,
+    RACE_DRAKONID_ALLIANCE     = 69,
+    RACE_DRAKONID_HORDE        = 70
 };
 
 uint32 constexpr DARKFALLEN_RACE_MASK = 0x80000000u;
@@ -132,7 +141,7 @@ inline constexpr bool UsesHaranirAppearance(uint32 race)
 
 inline constexpr bool IsExtendedPlayableRace(uint32 race)
 {
-    return race >= RACE_MAGHAR_ORC && race <= RACE_FURBOLG_ALLIANCE;
+    return race >= RACE_MAGHAR_ORC && race <= RACE_DRAKONID_HORDE;
 }
 
 inline constexpr uint8 GetLegacyMaskRaceForRace(uint32 race)
@@ -155,7 +164,16 @@ inline constexpr uint8 GetLegacyMaskRaceForRace(uint32 race)
         case RACE_VRYKUL_HORDE:
         case RACE_THIN_HUMAN_HORDE:     return RACE_ORC;
         case RACE_OGRE_HORDE:           return RACE_ORC;
-        case RACE_FURBOLG_ALLIANCE:     return RACE_NIGHTELF;
+        case RACE_OGRE_ALLIANCE:        return RACE_HUMAN;
+        case RACE_SETHRAK_ALLIANCE:     return RACE_HUMAN;
+        case RACE_GNOLL_HORDE:          return RACE_ORC;
+        case RACE_SABERON_HORDE:        return RACE_ORC;
+        case RACE_JINYU_ALLIANCE:       return RACE_HUMAN;
+        case RACE_DRAKKIN_ALLIANCE:      return RACE_HUMAN;
+        case RACE_DRAKKIN_HORDE:         return RACE_ORC;
+        case RACE_ARAKKOA_HORDE:        return RACE_ORC;
+        case RACE_DRAKONID_ALLIANCE:    return RACE_HUMAN;
+        case RACE_DRAKONID_HORDE:       return RACE_ORC;
         default:                        return uint8(race);
     }
 }
@@ -180,7 +198,16 @@ inline constexpr uint8 GetVisualBaseRaceForRace(uint32 race)
         case RACE_THIN_HUMAN_ALLIANCE:
         case RACE_THIN_HUMAN_HORDE:     return RACE_HUMAN;
         case RACE_OGRE_HORDE:           return RACE_ORC;
-        case RACE_FURBOLG_ALLIANCE:     return RACE_NIGHTELF;
+        case RACE_OGRE_ALLIANCE:        return RACE_ORC;
+        case RACE_SETHRAK_ALLIANCE:     return RACE_DRAENEI;
+        case RACE_GNOLL_HORDE:          return RACE_WORGEN;
+        case RACE_SABERON_HORDE:        return RACE_WORGEN;
+        case RACE_JINYU_ALLIANCE:       return RACE_HUMAN;
+        case RACE_DRAKKIN_ALLIANCE:
+        case RACE_DRAKKIN_HORDE:         return RACE_VULPERA;
+        case RACE_ARAKKOA_HORDE:        return RACE_ORC;
+        case RACE_DRAKONID_ALLIANCE:
+        case RACE_DRAKONID_HORDE:       return RACE_TAUREN;
         default:                        return uint8(race);
     }
 }
@@ -189,6 +216,8 @@ inline constexpr uint8 GetPairedRaceForRace(uint32 race)
 {
     switch (race)
     {
+        case RACE_OGRE_ALLIANCE:     return RACE_OGRE_HORDE;
+        case RACE_OGRE_HORDE:        return RACE_OGRE_ALLIANCE;
         case RACE_EARTHEN_ALLIANCE:  return RACE_EARTHEN_HORDE;
         case RACE_EARTHEN_HORDE:     return RACE_EARTHEN_ALLIANCE;
         case RACE_HARANIR_ALLIANCE:  return RACE_HARANIR_HORDE;
@@ -199,6 +228,8 @@ inline constexpr uint8 GetPairedRaceForRace(uint32 race)
         case RACE_VRYKUL_HORDE:      return RACE_VRYKUL_ALLIANCE;
         case RACE_THIN_HUMAN_ALLIANCE: return RACE_THIN_HUMAN_HORDE;
         case RACE_THIN_HUMAN_HORDE:  return RACE_THIN_HUMAN_ALLIANCE;
+        case RACE_DRAKONID_ALLIANCE: return RACE_DRAKONID_HORDE;
+        case RACE_DRAKONID_HORDE:    return RACE_DRAKONID_ALLIANCE;
         default:                      return RACE_NONE;
     }
 }
