@@ -41,6 +41,7 @@
 #include <cstring>
 #include <list>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 using namespace RaceRacials;
@@ -185,9 +186,23 @@ namespace
             if (grant.race != player->getRace(true))
                 continue;
 
+            // `custom_race_racial_skip` lets a single racial be withheld (and removed) without a rebuild.
+            std::unordered_set<uint32> skipped;
+            if (QueryResult result = WorldDatabase.Query("SELECT `spell` FROM `custom_race_racial_skip`"))
+                do
+                    skipped.insert((*result)[0].Get<uint32>());
+                while (result->NextRow());
+
             for (uint32 spellId : grant.spells)
-                if (!player->HasSpell(spellId))
+            {
+                if (skipped.count(spellId))
+                {
+                    if (player->HasSpell(spellId))
+                        player->removeSpell(spellId, SPEC_MASK_ALL, false);
+                }
+                else if (!player->HasSpell(spellId))
                     player->learnSpell(spellId);
+            }
         }
     }
 

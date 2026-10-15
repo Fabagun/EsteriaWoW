@@ -807,6 +807,9 @@ IDENTITY_RACES = ((1, "Human"), (2, "Orc"), (3, "Dwarf"), (4, "Night Elf"), (5, 
 LOA_COOLDOWN_DAYS = 5
 ITEM_ALPACA_BAG = 4240
 WORLD_OBJECTS_SQL = f"""
+-- Racials listed here are not granted (and are removed at login); empty by default.
+CREATE TABLE IF NOT EXISTS `custom_race_racial_skip` (`spell` INT UNSIGNED NOT NULL, PRIMARY KEY (`spell`));
+
 -- Hyper Organic Light Originator decoy: a passive humanoid that Clone Me! dresses as the caster.
 DELETE FROM `creature_template` WHERE `entry` = {CREATURE_HOLO_DECOY};
 INSERT INTO `creature_template` (`entry`, `name`, `subname`, `minlevel`, `maxlevel`, `faction`, `speed_walk`, `speed_run`, `BaseAttackTime`, `RangeAttackTime`, `unit_class`, `type`, `DamageModifier`, `flags_extra`) VALUES
@@ -845,6 +848,28 @@ RETAIL_ICONS: dict[str, int] = {
     "THORN_BLOOM": 7491039, "THORN_BLOOM_DAMAGE": 7491039, "THORN_BLOOM_HEAL": 7491039,
     "SUBTERRANEAN_PREDATOR": 7491038, "ONE_WITH_NATURE": 7491036,
 }
+# Stock WotLK spells whose cast animation and effect (SpellVisualID) each racial borrows until a retail effect is
+# ported. Without a visual the client plays no cast animation and shows nothing.
+VISUAL_DONORS: dict[str, int] = {
+    "ARCANE_PULSE": 1449, "ENTROPIC_EMBRACE_BUFF": 976, "LIGHTS_JUDGMENT": 879, "LIGHTS_JUDGMENT_DAMAGE": 15237,
+    "LIGHTS_RECKONING_DAMAGE": 15237, "LIGHTS_RECKONING_HEAL": 23455, "REGENERATIN": 740, "PTERRORDAX_SWOOP": 130,
+    "FIREBLOOD": 2825, "FIREBLOOD_BUFF": 2825, "BULL_RUSH": 100, "BULL_RUSH_KNOCKDOWN": 853,
+    "BAG_OF_TRICKS": 30455, "BAG_OF_TRICKS_DAMAGE": 30455, "BAG_OF_TRICKS_SLOW": 1715, "BAG_OF_TRICKS_HEAL": 2050,
+    "BAG_OF_TRICKS_SPEED": 2983, "BAG_OF_TRICKS_FIRE": 2136, "BAG_OF_TRICKS_FROST": 116,
+    "QUAKING_PALM": 1776, "WING_BUFFET": 18500, "DRACTHYR_GLIDE": 130, "SKYBORNE_GLIDE": 130,
+    "AZERITE_SURGE": 2120, "AZERITE_SURGE_DAMAGE": 2136, "AZERITE_SURGE_HEAL": 23455, "AZERITE_SURGE_STRIKE": 133,
+    "THORN_BLOOM": 339, "THORN_BLOOM_DAMAGE": 8921, "THORN_BLOOM_HEAL": 774,
+    "FELBLOOD_SURGE": 2825, "EDICT_OF_THE_HIGH_ORDER": 6673, "RUNIC_WARCRY": 6673, "GALE_STEP": 2983,
+    "DESPERATE_FLIGHT": 2983, "STATIC_COIL": 6343, "COILING_GRASP": 339, "HARPOON_TOSS": 30455,
+    "HEADBUTT": 6552, "SAVAGE_BITE": 1822, "POUNCE": 9005, "POUNCE_DAZE": 1715, "TIDAL_MEND": 139,
+    "CANTRIPS": 587, "SPATIAL_RIFT": 1953, "SPATIAL_RIFT_OPEN": 1953, "FORGE_OF_LIGHT": 587, "MOLE_MACHINE": 8690,
+    "HOLO": 1856, "MAKE_CAMP": 587, "RETURN_TO_CAMP": 8690, "RUMMAGE_YOUR_BAG": 587, "SOAR": 130,
+    "VISAGE": 783, "ROOTWALKING": 8690,
+}
+# Spells with a cast time must be interrupted by movement and pushback or the client keeps "casting" while walking.
+CAST_INTERRUPT_FLAGS = 0x0F
+INSTANT_CAST = 1
+
 SPELL_ICON_BASE = 92000   # SpellIcon.dbc ids for the retail icons; the stage asserts they are free
 
 
@@ -881,6 +906,14 @@ def prepare(table: Wdbc, retail_icons: bool = False) -> list[Prepared]:
         key = next(k for k, v in KEYS.items() if v == spell.spell_id)
         if retail_icons and key in RETAIL_ICONS:
             row[index["SpellIconID"]] = retail_icon_ids()[RETAIL_ICONS[key]]
+        if key in VISUAL_DONORS:
+            source = donor(VISUAL_DONORS[key])
+            for column in ("SpellVisualID_1", "SpellVisualID_2"):
+                row[index[column]] = source[index[column]]
+        passive = row[index["Attributes"]] & ATTR_PASSIVE
+        if (not passive and row[index["CastingTimeIndex"]] != INSTANT_CAST and not row[index["InterruptFlags"]]
+                and not row[index["ChannelInterruptFlags"]]):
+            row[index["InterruptFlags"]] = CAST_INTERRUPT_FLAGS
         for name in ("Name_Lang_enUS", "NameSubtext_Lang_enUS", "Description_Lang_enUS", "AuraDescription_Lang_enUS"):
             row[index[name]] = 0
         prepared.append(Prepared(spell, row))
@@ -900,17 +933,24 @@ def merge_spell_table(data: bytes, retail_icons: bool = False) -> bytes:
                 value = table.text(row[index[column]])
                 if value:
                     strings[(row_index, index[column])] = value
+    position = {row[0]: i for i, row in enumerate(table.rows)}
     for item in prepare(table, retail_icons):
-        if item.spell.spell_id in existing:
-            owner = next(row for row in table.rows if row[0] == item.spell.spell_id)
+        spell_id = item.spell.spell_id
+        if spell_id in existing:
+            owner = table.rows[position[spell_id]]
             if table.text(owner[index["Name_Lang_enUS"]]) != item.spell.name:
-                raise ValueError(f"spell id {item.spell.spell_id} already belongs to another spell")
-            continue
+                raise ValueError(f"spell id {spell_id} already belongs to another spell")
+            slot = position[spell_id]
+            records[slot] = item.row     # the spec is the source of truth, so a re-run refreshes the row
+        else:
+            slot = len(records)
+            records.append(item.row)
         for column, attribute in TEXT_COLUMNS:
             value = getattr(item.spell, attribute)
             if value:
-                strings[(len(records), index[column])] = value
-        records.append(item.row)
+                strings[(slot, index[column])] = value
+            else:
+                strings.pop((slot, index[column]), None)
     return build_wdbc(records, table.fields, table.record_size, strings)
 
 
@@ -997,6 +1037,8 @@ def check() -> None:
     for race, keys in RACE_GRANTS.items():
         for key in keys:
             assert key in KEYS, (race, key)
+    for key in VISUAL_DONORS:
+        assert key in KEYS, key
 
 
 def main() -> None:
