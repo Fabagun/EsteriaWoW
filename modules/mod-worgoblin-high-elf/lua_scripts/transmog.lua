@@ -148,6 +148,7 @@ local TRANSMOG_MAX_LEVEL = 80
 local TRANSMOG_MAX_SLOT_COST = 360000 -- 36 gold in copper
 local TRANSMOG_MIN_SLOT_COST = 100 -- 1 silver in copper
 local TRANSMOG_LEVEL_COST_POWER = 4
+local ETHEREAL_CONNECTION_SPELL = 110525
 local EQUIPMENT_SLOT_TO_VISIBLE_SLOT = {
     [15] = 313,
     [16] = 315,
@@ -1603,7 +1604,16 @@ local function GetTransmogBaseSlotCost(player)
     local scaledCost = math.floor(
         TRANSMOG_MAX_SLOT_COST * (levelRatio ^ TRANSMOG_LEVEL_COST_POWER) + 0.5
     )
-    return math.max(TRANSMOG_MIN_SLOT_COST, scaledCost)
+    scaledCost = math.max(TRANSMOG_MIN_SLOT_COST, scaledCost)
+
+    -- Ethereal Connection (Void Elf racial, spell 110525, see tools/race_racials.py): 50% cheaper.
+    if player and player.HasSpell then
+        local ok, has = pcall(player.HasSpell, player, ETHEREAL_CONNECTION_SPELL)
+        if ok and has then
+            scaledCost = math.max(TRANSMOG_MIN_SLOT_COST, math.floor(scaledCost / 2))
+        end
+    end
+    return scaledCost
 end
 
 local function GetTransmogSlotCost(player, visibleSlot, baseSlotCost)
