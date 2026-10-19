@@ -689,6 +689,8 @@ public:                                                 // opcodes handlers
     void Handle_Deprecated(WorldPacket& recvPacket);    // never used anymore by client
 
     void HandleCharEnumOpcode(WorldPacket& recvPacket);
+    void HandleEsteriaInventoryOpcode(WorldPacket& recvPacket);
+    bool IsAtBanker() const { return CanUseBank(); }
     void HandleCharDeleteOpcode(WorldPacket& recvPacket);
     void HandleCharCreateOpcode(WorldPacket& recvPacket);
     void HandlePlayerLoginOpcode(WorldPacket& recvPacket);

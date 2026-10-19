@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "slug": "jinyu",
+  "name": "Jinyu",
+  "race_ids": [
+    65
+  ],
+  "enum": "RACE_JINYU_ALLIANCE",
+  "faction": "alliance",
+  "source_race_id": 1,
+  "source_donor_race_id": 18,
+  "legacy_mask_race": 1,
+  "visual_base_race": 1,
+  "client_file_strings": {
+    "65": "JinyuAlliance"
+  },
+  "glue_token": "JINYUALLIANCE",
+  "helmet_prefix": "Jn",
+  "start_profile": "elwynn",
+  "donor_totem_race": 1,
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11
+  ],
+  "source_patch_root": "G:\\Downloads\\HDWoWModels\\Jinyu_race_files",
+  "runtime_patch_root": "G:\\RetroPorterWork\\jinyu\\stage-20261008\\assets",
+  "models": {
+    "male": {
+      "model_id": 120071,
+      "display_id": 60062,
+      "model_path": "custom\\jinyu\\Character\\Jinyu\\Male\\JinyuMale.m2"
+    },
+    "female": {
+      "model_id": 120072,
+      "display_id": 60063,
+      "model_path": "custom\\jinyu\\Character\\Jinyu\\Female\\JinyuFemale.m2"
+    }
+  },
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "source": "snowzocraft-player",
+    "supported_genders": [
+      0,
+      1
+    ],
+    "body_labels": [
+      "River Jinyu",
+      "Ankoan"
+    ],
+    "profiles": {
+      "0": {
+        "capacities": [
+          7,
+          1,
+          1,
+          7,
+          1
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "label": "Face",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Hair Style",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Fin Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "label": "Facial Hair",
+            "choices": [
+              0
+            ]
+          }
+        ]
+      },
+      "1": {
+        "capacities": [
+          4,
+          1,
+          1,
+          4,
+          1
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "label": "Face",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Hair Style",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Fin Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "label": "Facial Hair",
+            "choices": [
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "equipped_armor_geosets": "authored-human-player",
+    "hide_helm": false,
+    "constants": [
+      "Face",
+      "Hair Style",
+      "Facial Hair"
+    ]
+  },
+  "random_playerbot_enabled": false,
+  "custom_racial_spells": []
+}

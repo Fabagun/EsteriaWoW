@@ -390,6 +390,9 @@ void Item::SaveToDB(CharacterDatabaseTransaction trans)
             }
         case ITEM_REMOVED:
             {
+                auto* location = CharacterDatabase.GetPreparedStatement(CHAR_DEL_DIGITAL_ITEM_BY_GUID);
+                location->SetData(0, guid);
+                trans->Append(location);
                 CharacterDatabasePreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_ITEM_INSTANCE);
                 stmt->SetData(0, guid);
                 trans->Append(stmt);
@@ -519,6 +522,9 @@ bool Item::LoadFromDB(ObjectGuid::LowType guid, ObjectGuid owner_guid, Field* fi
 void Item::DeleteFromDB(CharacterDatabaseTransaction trans, ObjectGuid::LowType itemGuid)
 {
     sScriptMgr->OnGlobalItemDelFromDB(trans, itemGuid);
+    auto* location = CharacterDatabase.GetPreparedStatement(CHAR_DEL_DIGITAL_ITEM_BY_GUID);
+    location->SetData(0, itemGuid);
+    trans->Append(location);
     CharacterDatabasePreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_ITEM_INSTANCE);
     stmt->SetData(0, itemGuid);
     trans->Append(stmt);

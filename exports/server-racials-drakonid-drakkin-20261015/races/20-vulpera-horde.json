@@ -1,0 +1,71 @@
+{
+  "race_id": 20,
+  "name": "Vulpera",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 20,
+  "display_ids": [
+    60006,
+    60007
+  ],
+  "script_grants": [
+    110640,
+    110645,
+    110646,
+    110647,
+    110648,
+    110649,
+    110650
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    20572,
+    20573,
+    20574,
+    20575,
+    20576,
+    21563,
+    33697,
+    33702
+  ],
+  "racial_spell_ids": [
+    20572,
+    20573,
+    20574,
+    20575,
+    20576,
+    21563,
+    33697,
+    33702,
+    110640,
+    110645,
+    110646,
+    110647,
+    110648,
+    110649,
+    110650
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "20572": "Blood Fury",
+    "20573": "Hardiness",
+    "20574": "Axe Specialization",
+    "20575": "Command",
+    "20576": "Command",
+    "21563": "Command",
+    "33697": "Blood Fury",
+    "33702": "Blood Fury",
+    "110640": "Bag of Tricks",
+    "110645": "Nose for Trouble",
+    "110646": "Fire Resistance",
+    "110647": "Make Camp",
+    "110648": "Return to Camp",
+    "110649": "Rummage Your Bag",
+    "110650": "Alpaca Saddlebags"
+  }
+}

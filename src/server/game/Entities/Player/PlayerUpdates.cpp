@@ -433,6 +433,7 @@ void Player::Update(uint32 p_time)
     }
 
     sScriptMgr->OnPlayerAfterUpdate(this, p_time);
+    _digitalInventory.Update(p_time);
 }
 
 void Player::UpdateMirrorTimers()

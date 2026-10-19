@@ -1,0 +1,43 @@
+{
+  "race_id": 31,
+  "name": "Illidari",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": false,
+  "legacy_mask_race": 31,
+  "display_ids": [
+    60026,
+    60027
+  ],
+  "script_grants": [],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    20582,
+    20583,
+    20585,
+    21009,
+    33697,
+    33702
+  ],
+  "racial_spell_ids": [
+    20582,
+    20583,
+    20585,
+    21009,
+    33697,
+    33702
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "20582": "Quickness",
+    "20583": "Nature Resistance",
+    "20585": "Wisp Spirit",
+    "21009": "Elusiveness",
+    "33697": "Blood Fury",
+    "33702": "Blood Fury"
+  }
+}

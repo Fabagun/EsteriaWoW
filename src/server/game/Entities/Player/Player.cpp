@@ -4329,6 +4329,13 @@ void Player::DeleteFromDB(ObjectGuid::LowType lowGuid, uint32 accountId, bool up
                 stmt->SetData(0, lowGuid);
                 trans->Append(stmt);
 
+                stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_DIGITAL_ITEMS_OWNER);
+                stmt->SetData(0, lowGuid);
+                trans->Append(stmt);
+                stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_DIGITAL_STORAGE_OWNER);
+                stmt->SetData(0, lowGuid);
+                trans->Append(stmt);
+
                 stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_CHAR_QUESTSTATUS);
                 stmt->SetData(0, lowGuid);
                 trans->Append(stmt);

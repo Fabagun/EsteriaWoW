@@ -1,0 +1,43 @@
+{
+  "race_id": 8,
+  "name": "Troll",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 8,
+  "display_ids": [
+    1478,
+    1479
+  ],
+  "script_grants": [],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    20555,
+    20557,
+    20558,
+    26290,
+    26297,
+    58943
+  ],
+  "racial_spell_ids": [
+    20555,
+    20557,
+    20558,
+    26290,
+    26297,
+    58943
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "20555": "Regeneration",
+    "20557": "Beast Slaying",
+    "20558": "Throwing Specialization",
+    "26290": "Bow Specialization",
+    "26297": "Berserking",
+    "58943": "Da Voodoo Shuffle"
+  }
+}

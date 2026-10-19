@@ -2,6 +2,7 @@ import crypto from 'crypto';
 import path from 'path';
 
 import fs from 'fs-extra';
+import { isExcludedClientPath } from './client-exclusions.js';
 
 const allowedExtra = [
 	'.launcher',
@@ -31,6 +32,7 @@ const skipPatterns: RegExp[] = [
 const isSkipPattern = (file: string) => skipPatterns.some(p => p.test(file));
 
 const skipDirsPosix = new Set([
+	'Eclipse/logs',
 	'Cache',
 	'WTF',
 	'Errors',
@@ -124,6 +126,7 @@ const countFiles = async (
 	const dir = path.join(clientPath, ...filePath);
 	const files = await fs.readdir(dir);
 	for (const file of files.sort()) {
+		if (isExcludedClientPath([...filePath, file].join('/'))) continue;
 		if (skipFiles.has(file)) continue;
 		if (isSkipPattern(file)) continue;
 		if (isBundleArchive(...filePath, file)) continue;
@@ -233,6 +236,7 @@ export const buildCache = async (
 		const patches: string[] = [];
 		const tree: FileManifest[] = [];
 		for (const file of files.sort()) {
+			if (isExcludedClientPath([...filePath, file].join('/'))) continue;
 			if (skipFiles.has(file)) continue;
 			if (isSkipPattern(file)) continue;
 			if (isBundleArchive(...filePath, file)) continue;

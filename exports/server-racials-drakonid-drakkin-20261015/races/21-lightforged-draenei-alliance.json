@@ -1,0 +1,71 @@
+{
+  "race_id": 21,
+  "name": "Lightforged Draenei",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 21,
+  "display_ids": [
+    60014,
+    60015
+  ],
+  "script_grants": [
+    110540,
+    110542,
+    110544,
+    110545,
+    110547
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    6562,
+    20579,
+    28875,
+    28878,
+    28880,
+    80869,
+    80870,
+    80872,
+    80873,
+    80874
+  ],
+  "racial_spell_ids": [
+    6562,
+    20579,
+    28875,
+    28878,
+    28880,
+    80869,
+    80870,
+    80872,
+    80873,
+    80874,
+    110540,
+    110542,
+    110544,
+    110545,
+    110547
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "6562": "Heroic Presence",
+    "20579": "Shadow Resistance",
+    "28875": "Gemcutting",
+    "28878": "Heroic Presence",
+    "28880": "Gift of the Naaru",
+    "80869": "MISSING",
+    "80870": "MISSING",
+    "80872": "MISSING",
+    "80873": "MISSING",
+    "80874": "MISSING",
+    "110540": "Light's Judgment",
+    "110542": "Light's Reckoning",
+    "110544": "Holy Providence",
+    "110545": "Demonbane",
+    "110547": "Forge of Light"
+  }
+}

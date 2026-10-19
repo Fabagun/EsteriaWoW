@@ -1,0 +1,49 @@
+{
+  "race_id": 10,
+  "name": "Blood Elf",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 10,
+  "display_ids": [
+    15476,
+    15475
+  ],
+  "script_grants": [],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    822,
+    25046,
+    28730,
+    28877,
+    50613,
+    80866,
+    80867,
+    80868
+  ],
+  "racial_spell_ids": [
+    822,
+    25046,
+    28730,
+    28877,
+    50613,
+    80866,
+    80867,
+    80868
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "822": "Magic Resistance",
+    "25046": "Arcane Torrent",
+    "28730": "Arcane Torrent",
+    "28877": "Arcane Affinity",
+    "50613": "Arcane Torrent",
+    "80866": "MISSING",
+    "80867": "MISSING",
+    "80868": "MISSING"
+  }
+}

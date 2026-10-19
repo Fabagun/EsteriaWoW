@@ -450,17 +450,26 @@ void CharacterDatabaseConnection::DoPrepareStatements()
     PrepareStatement(CHAR_SEL_MAIL, "SELECT id, messageType, sender, receiver, subject, body, expire_time, deliver_time, money, cod, checked, stationery, mailTemplateId, has_items FROM mail WHERE receiver = ? ORDER BY id DESC", CONNECTION_ASYNC);
     PrepareStatement(CHAR_SEL_NEXT_MAIL_DELIVERYTIME, "SELECT MIN(deliver_time) FROM mail WHERE receiver = ? AND deliver_time > ? AND (checked & 1) = 0 LIMIT 1", CONNECTION_SYNCH);
     PrepareStatement(CHAR_DEL_CHAR_AURA_FROZEN, "DELETE FROM character_aura WHERE spell = 9454 AND guid = ?", CONNECTION_ASYNC);
-    PrepareStatement(CHAR_SEL_CHAR_INVENTORY_COUNT_ITEM, "SELECT COUNT(itemEntry) FROM character_inventory ci INNER JOIN item_instance ii ON ii.guid = ci.item WHERE itemEntry = ?", CONNECTION_SYNCH);
+    PrepareStatement(CHAR_SEL_CHAR_INVENTORY_COUNT_ITEM, "SELECT COUNT(itemEntry) FROM item_instance ii "
+        "WHERE itemEntry = ? AND (EXISTS(SELECT 1 FROM character_inventory ci WHERE ci.item = ii.guid) "
+        "OR EXISTS(SELECT 1 FROM character_digital_storage_item ds WHERE ds.item = ii.guid))", CONNECTION_SYNCH);
     PrepareStatement(CHAR_SEL_MAIL_COUNT_ITEM, "SELECT COUNT(itemEntry) FROM mail_items mi INNER JOIN item_instance ii ON ii.guid = mi.item_guid WHERE itemEntry = ?", CONNECTION_SYNCH);
     PrepareStatement(CHAR_SEL_AUCTIONHOUSE_COUNT_ITEM, "SELECT COUNT(itemEntry) FROM auctionhouse ah INNER JOIN item_instance ii ON ii.guid = ah.itemguid WHERE itemEntry = ?", CONNECTION_SYNCH);
     PrepareStatement(CHAR_SEL_GUILD_BANK_COUNT_ITEM, "SELECT COUNT(itemEntry) FROM guild_bank_item gbi INNER JOIN item_instance ii ON ii.guid = gbi.item_guid WHERE itemEntry = ?", CONNECTION_SYNCH);
     PrepareStatement(CHAR_SEL_CHAR_INVENTORY_ITEM_BY_ENTRY, "SELECT ci.item, cb.slot AS bag, ci.slot, ci.guid, c.account, c.name FROM characters c "
-                     "INNER JOIN character_inventory ci ON ci.guid = c.guid "
+                     "INNER JOIN (SELECT guid, item, bag, slot FROM character_inventory UNION ALL "
+                     "SELECT guid, item, 0, 255 FROM character_digital_storage_item) ci ON ci.guid = c.guid "
                      "INNER JOIN item_instance ii ON ii.guid = ci.item "
                      "LEFT JOIN character_inventory cb ON cb.item = ci.bag WHERE ii.itemEntry = ? LIMIT ?", CONNECTION_SYNCH);
-    PrepareStatement(CHAR_SEL_CHAR_INVENTORY_ITEM_BY_ENTRY_AND_OWNER, "SELECT ci.item FROM character_inventory ci INNER JOIN item_instance ii ON ii.guid = ci.item WHERE ii.itemEntry = ? AND ii.owner_guid = ?", CONNECTION_SYNCH);
-    PrepareStatement(CHAR_SEL_CHAR_INVENTORY_STACKS_BY_ENTRY_AND_OWNER, "SELECT ci.item, ii.count FROM character_inventory ci INNER JOIN item_instance ii ON ii.guid = ci.item "
-                     "LEFT JOIN character_inventory cb ON cb.bag = ci.item WHERE ii.itemEntry = ? AND ii.owner_guid = ? AND cb.item IS NULL", CONNECTION_SYNCH);
+    PrepareStatement(CHAR_SEL_CHAR_INVENTORY_ITEM_BY_ENTRY_AND_OWNER, "SELECT ii.guid FROM item_instance ii "
+        "WHERE ii.itemEntry = ? AND ii.owner_guid = ? "
+        "AND (EXISTS(SELECT 1 FROM character_inventory ci WHERE ci.item = ii.guid) "
+        "OR EXISTS(SELECT 1 FROM character_digital_storage_item ds WHERE ds.item = ii.guid))", CONNECTION_SYNCH);
+    PrepareStatement(CHAR_SEL_CHAR_INVENTORY_STACKS_BY_ENTRY_AND_OWNER, "SELECT ii.guid, ii.count FROM item_instance ii "
+        "LEFT JOIN character_inventory cb ON cb.bag = ii.guid "
+        "WHERE ii.itemEntry = ? AND ii.owner_guid = ? AND cb.item IS NULL "
+        "AND (EXISTS(SELECT 1 FROM character_inventory ci WHERE ci.item = ii.guid) "
+        "OR EXISTS(SELECT 1 FROM character_digital_storage_item ds WHERE ds.item = ii.guid))", CONNECTION_SYNCH);
     PrepareStatement(CHAR_SEL_MAIL_ITEMS_BY_ENTRY, "SELECT mi.item_guid, m.sender, m.receiver, cs.account, cs.name, cr.account, cr.name "
                      "FROM mail m INNER JOIN mail_items mi ON mi.mail_id = m.id INNER JOIN item_instance ii ON ii.guid = mi.item_guid "
                      "INNER JOIN characters cs ON cs.guid = m.sender INNER JOIN characters cr ON cr.guid = m.receiver WHERE ii.itemEntry = ? LIMIT ?", CONNECTION_SYNCH);
@@ -499,7 +508,10 @@ void CharacterDatabaseConnection::DoPrepareStatements()
     PrepareStatement(CHAR_DEL_CHAR_SOCIAL_BY_FRIEND, "DELETE FROM character_social WHERE friend = ?", CONNECTION_ASYNC);
     PrepareStatement(CHAR_DEL_CHAR_ACHIEVEMENT_BY_ACHIEVEMENT, "DELETE FROM character_achievement WHERE achievement = ? AND guid = ?", CONNECTION_ASYNC);
     PrepareStatement(CHAR_UPD_CHAR_ACHIEVEMENT, "UPDATE character_achievement SET achievement = ? WHERE achievement = ? AND guid = ?", CONNECTION_ASYNC);
-    PrepareStatement(CHAR_UPD_CHAR_INVENTORY_FACTION_CHANGE, "UPDATE item_instance ii, character_inventory ci SET ii.itemEntry = ? WHERE ii.itemEntry = ? AND ci.guid = ? AND ci.item = ii.guid", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_UPD_CHAR_INVENTORY_FACTION_CHANGE, "UPDATE item_instance ii SET ii.itemEntry = ? "
+        "WHERE ii.itemEntry = ? AND ii.owner_guid = ? "
+        "AND (EXISTS(SELECT 1 FROM character_inventory ci WHERE ci.item = ii.guid) "
+        "OR EXISTS(SELECT 1 FROM character_digital_storage_item ds WHERE ds.item = ii.guid))", CONNECTION_ASYNC);
     PrepareStatement(CHAR_DEL_CHAR_SPELL_BY_SPELL, "DELETE FROM character_spell WHERE guid = ? AND spell = ?", CONNECTION_ASYNC);
     PrepareStatement(CHAR_UPD_CHAR_SPELL_FACTION_CHANGE, "UPDATE character_spell SET spell = ? WHERE spell = ? AND guid = ?", CONNECTION_ASYNC);
     PrepareStatement(CHAR_SEL_CHAR_REP_BY_FACTION, "SELECT standing FROM character_reputation WHERE faction = ? AND guid = ?", CONNECTION_SYNCH);
@@ -662,6 +674,49 @@ void CharacterDatabaseConnection::DoPrepareStatements()
     // world_state
     PrepareStatement(CHAR_SEL_WORLD_STATE, "SELECT Id, Data FROM world_state", CONNECTION_SYNCH);
     PrepareStatement(CHAR_REP_WORLD_STATE, "REPLACE INTO world_state (Id, Data) VALUES(?, ?)", CONNECTION_ASYNC);
+
+    PrepareStatement(CHAR_SEL_DIGITAL_STORAGE,
+        "SELECT capacity, revision FROM character_digital_storage WHERE guid = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_SEL_DIGITAL_ITEMS,
+        "SELECT ii.creatorGuid, ii.giftCreatorGuid, ii.count, ii.duration, ii.charges, ii.flags, ii.enchantments, "
+        "ii.randomPropertyId, ii.durability, ii.playedTime, ii.text, ds.item, ii.itemEntry, ds.favorite, ii.owner_guid, "
+        "(EXISTS(SELECT 1 FROM character_inventory ci WHERE ci.item = ds.item) "
+        "OR EXISTS(SELECT 1 FROM mail_items mi WHERE mi.item_guid = ds.item) "
+        "OR EXISTS(SELECT 1 FROM auctionhouse ah WHERE ah.itemguid = ds.item) "
+        "OR EXISTS(SELECT 1 FROM guild_bank_item gb WHERE gb.item_guid = ds.item)), ds.tag, ds.split "
+        "FROM character_digital_storage_item ds LEFT JOIN item_instance ii ON ii.guid = ds.item WHERE ds.guid = ?",
+        CONNECTION_ASYNC);
+    PrepareStatement(CHAR_REP_DIGITAL_STORAGE,
+        "REPLACE INTO character_digital_storage (guid, capacity, revision) VALUES (?, ?, ?)", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_REP_DIGITAL_ITEM,
+        "REPLACE INTO character_digital_storage_item (guid, item, favorite, tag, split) VALUES (?, ?, ?, ?, ?)", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_DEL_DIGITAL_ITEM,
+        "DELETE FROM character_digital_storage_item WHERE guid = ? AND item = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_DEL_DIGITAL_STORAGE_OWNER,
+        "DELETE FROM character_digital_storage WHERE guid = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_DEL_DIGITAL_ITEMS_OWNER,
+        "DELETE FROM character_digital_storage_item WHERE guid = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_DEL_DIGITAL_ITEM_BY_GUID,
+        "DELETE FROM character_digital_storage_item WHERE item = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_UPD_GUILD_BANK_TAB_SLOTS, "UPDATE guild_bank_tab SET slots = ? WHERE guildid = ? AND TabId = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_SEL_ACCOUNT_BANK,
+        "SELECT capacity, revision, unlocked FROM account_bank WHERE account = ?", CONNECTION_SYNCH);
+    PrepareStatement(CHAR_SEL_ACCOUNT_BANK_ITEMS,
+        "SELECT ii.creatorGuid, ii.giftCreatorGuid, ii.count, ii.duration, ii.charges, ii.flags, ii.enchantments, "
+        "ii.randomPropertyId, ii.durability, ii.playedTime, ii.text, ab.item, ii.itemEntry, ab.favorite, ii.owner_guid, "
+        "(EXISTS(SELECT 1 FROM character_inventory ci WHERE ci.item = ab.item) "
+        "OR EXISTS(SELECT 1 FROM mail_items mi WHERE mi.item_guid = ab.item) "
+        "OR EXISTS(SELECT 1 FROM auctionhouse ah WHERE ah.itemguid = ab.item) "
+        "OR EXISTS(SELECT 1 FROM guild_bank_item gb WHERE gb.item_guid = ab.item) "
+        "OR EXISTS(SELECT 1 FROM character_digital_storage_item ds WHERE ds.item = ab.item)), ab.tag, ab.split "
+        "FROM account_bank_item ab LEFT JOIN item_instance ii ON ii.guid = ab.item WHERE ab.account = ?",
+        CONNECTION_SYNCH);
+    PrepareStatement(CHAR_REP_ACCOUNT_BANK,
+        "REPLACE INTO account_bank (account, capacity, revision, unlocked) VALUES (?, ?, ?, ?)", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_REP_ACCOUNT_BANK_ITEM,
+        "REPLACE INTO account_bank_item (account, item, favorite, tag, split) VALUES (?, ?, ?, ?, ?)", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_DEL_ACCOUNT_BANK_ITEM,
+        "DELETE FROM account_bank_item WHERE account = ? AND item = ?", CONNECTION_ASYNC);
 
     // CHAR_NO_OP_PROVIDE_REALM_CONTEXT is a no-op query that accepts a single parameter: the realm ID.
     // This query is used specifically in cross-realm scenarios when the database transaction

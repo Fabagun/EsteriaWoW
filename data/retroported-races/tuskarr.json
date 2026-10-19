@@ -31,6 +31,12 @@
       "model_id": 120059,
       "display_id": 60050,
       "model_path": "custom\\tuskarr\\native\\male\\tuskarrmale.m2"
+    },
+    "female": {
+      "model_id": 120080,
+      "display_id": 60071,
+      "model_path": "custom\\tuskarr\\native\\female\\tuskarrfemale.m2",
+      "display_scale": 1.0
     }
   },
   "appearance": {
@@ -39,7 +45,8 @@
       17
     ],
     "supported_genders": [
-      0
+      0,
+      1
     ],
     "profiles": {
       "0": {
@@ -590,10 +597,78 @@
           7,
           7
         ]
+      },
+      "1": {
+        "capacities": [
+          7,
+          1,
+          1,
+          1,
+          1
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "choices": [
+              4039141,
+              4039142,
+              4039147,
+              4039148,
+              4039149,
+              4039150,
+              4039151
+            ]
+          },
+          {
+            "label": "Face",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Hair Style",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Hair Color",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Facial Hair",
+            "choices": [
+              0
+            ]
+          }
+        ]
       }
     },
     "hide_helm": true,
     "hide_feet": false,
-    "source_build": "12.1.0.69933"
+    "source_build": "12.1.0.69933",
+    "female_source": "hd-npc",
+    "female_model": {
+      "file_data_id": 4039116,
+      "creature_model_id": 12844,
+      "source_build": "12.1.0.69933",
+      "skin_slot": 1,
+      "skin_file_data_ids": [
+        4039141,
+        4039142,
+        4039147,
+        4039148,
+        4039149,
+        4039150,
+        4039151
+      ],
+      "excluded_slots": {
+        "2": "clothing and props",
+        "3": "accessory pieces"
+      },
+      "runtime_patch_root": "G:\\RetroPorterWork\\skin-expansion\\tuskarr-female\\stage\\assets"
+    }
   }
 }

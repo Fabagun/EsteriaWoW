@@ -1,0 +1,123 @@
+{
+  "race_id": 69,
+  "name": "Drakonid",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 1,
+  "display_ids": [
+    60068,
+    0
+  ],
+  "script_grants": [
+    110400,
+    110404,
+    110405,
+    110406
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    110400,
+    110404,
+    110405,
+    110406
+  ],
+  "racial_spell_ids": [
+    110400,
+    110404,
+    110405,
+    110406
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 69,
+      "spell": 668,
+      "comment": "Language Common",
+      "classMask": 0
+    },
+    {
+      "race": 69,
+      "spell": 110400,
+      "comment": "Racial: Draconic Charge",
+      "classMask": 0
+    },
+    {
+      "race": 69,
+      "spell": 110404,
+      "comment": "Racial: Draconic Hide",
+      "classMask": 0
+    },
+    {
+      "race": 69,
+      "spell": 110405,
+      "comment": "Racial: Dragonkin",
+      "classMask": 0
+    },
+    {
+      "race": 69,
+      "spell": 110406,
+      "comment": "Racial: Treasure Hoarder",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 69,
+      "rank": 0,
+      "skill": 98,
+      "comment": "Language Common",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [
+    {
+      "race": 69,
+      "spell": 20597,
+      "comment": "Human Sword Specialization"
+    },
+    {
+      "race": 69,
+      "spell": 20598,
+      "comment": "Human The Human Spirit"
+    },
+    {
+      "race": 69,
+      "spell": 20599,
+      "comment": "Human Diplomacy"
+    },
+    {
+      "race": 69,
+      "spell": 20600,
+      "comment": "Human Perception"
+    },
+    {
+      "race": 69,
+      "spell": 20864,
+      "comment": "Human Mace Specialization"
+    },
+    {
+      "race": 69,
+      "spell": 58985,
+      "comment": "Human Perception"
+    },
+    {
+      "race": 69,
+      "spell": 59752,
+      "comment": "Human Every Man for Himself"
+    }
+  ],
+  "excluded_start_skills": [
+    {
+      "race": 69,
+      "skill": 754,
+      "comment": "Human Racial"
+    }
+  ],
+  "spell_names": {
+    "110400": "Draconic Charge",
+    "110404": "Draconic Hide",
+    "110405": "Dragonkin",
+    "110406": "Treasure Hoarder"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "creature_template": {
+    "where": "entry IN (36613,9100001)",
+    "rows": 1
+  },
+  "creature_template_model": {
+    "where": "CreatureID IN (36613,9100001)",
+    "rows": 1
+  },
+  "creature_template_addon": {
+    "where": "entry IN (36613,9100001)",
+    "rows": 0
+  },
+  "gameobject_template": {
+    "where": "entry IN (1744,1798,143990,184911,9100101,9100102)",
+    "rows": 6
+  },
+  "gameobject_template_addon": {
+    "where": "entry IN (1744,1798,143990,184911,9100101,9100102)",
+    "rows": 4
+  },
+  "item_template": {
+    "where": "entry IN (4240)",
+    "rows": 1
+  },
+  "game_tele": {
+    "where": "id IN (50,72,100,179,507,821,1258,1398,1405,1489)",
+    "rows": 10
+  }
+}

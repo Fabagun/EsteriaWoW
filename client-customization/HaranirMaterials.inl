@@ -448,7 +448,9 @@ void SetHaranirMaterials(void* character)
     void* instance = Field<void*>(character, 0x38);
     if (found == haranirImages.end() || !instance)
         return;
-    if (found->second.race == 63 || found->second.race == 64 || found->second.race == 69
+    if (found->second.race == 63 || found->second.race == 64
+        || (found->second.race == 55 && found->second.gender == 1)
+        || (found->second.race == 66 && found->second.gender == 0) || found->second.race == 69
         || found->second.race == 70)
         SetClothingMaterial(character, found->second, instance);
     unsigned const slots[] = {0, 0, 6, 5, 8, 12, 13, 9, 10};

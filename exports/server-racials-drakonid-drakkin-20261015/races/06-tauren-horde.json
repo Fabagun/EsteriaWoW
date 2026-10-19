@@ -1,0 +1,37 @@
+{
+  "race_id": 6,
+  "name": "Tauren",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 6,
+  "display_ids": [
+    59,
+    60
+  ],
+  "script_grants": [],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    20549,
+    20550,
+    20551,
+    20552
+  ],
+  "racial_spell_ids": [
+    20549,
+    20550,
+    20551,
+    20552
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "20549": "War Stomp",
+    "20550": "Endurance",
+    "20551": "Nature Resistance",
+    "20552": "Cultivation"
+  }
+}

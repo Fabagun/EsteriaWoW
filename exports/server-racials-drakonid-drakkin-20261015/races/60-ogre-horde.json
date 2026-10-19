@@ -1,0 +1,55 @@
+{
+  "race_id": 60,
+  "name": "Ogre",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 2,
+  "display_ids": [
+    60053,
+    60054
+  ],
+  "script_grants": [
+    110900,
+    110901,
+    110902,
+    110903,
+    110904
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [],
+  "racial_spell_ids": [
+    110900,
+    110901,
+    110902,
+    110903,
+    110904
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 60,
+      "spell": 669,
+      "comment": "Language Orcish",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 60,
+      "rank": 0,
+      "skill": 109,
+      "comment": "Language Orcish",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "110900": "Headbutt",
+    "110901": "Brute Strength",
+    "110902": "Thick Hide",
+    "110903": "Heavy Hands",
+    "110904": "Ogre Cuisine"
+  }
+}

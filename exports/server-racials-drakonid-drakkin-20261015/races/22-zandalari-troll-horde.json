@@ -1,0 +1,53 @@
+{
+  "race_id": 22,
+  "name": "Zandalari Troll",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 22,
+  "display_ids": [
+    60016,
+    60017
+  ],
+  "script_grants": [
+    110560,
+    110561,
+    110562,
+    110563
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    20555,
+    20557,
+    20558,
+    26290,
+    26297
+  ],
+  "racial_spell_ids": [
+    20555,
+    20557,
+    20558,
+    26290,
+    26297,
+    110560,
+    110561,
+    110562,
+    110563
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "20555": "Regeneration",
+    "20557": "Beast Slaying",
+    "20558": "Throwing Specialization",
+    "26290": "Bow Specialization",
+    "26297": "Berserking",
+    "110560": "Regeneratin'",
+    "110561": "City of Gold",
+    "110562": "Pterrordax Swoop",
+    "110563": "Embrace of the Loa"
+  }
+}

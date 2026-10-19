@@ -38,6 +38,14 @@ namespace CreatureAppearance
         {4, 7, 1},
     }};
 
+    inline constexpr std::array<Option, 5> TuskarrFemale = {{
+        {0, 7, 1},
+        {1, 1, 1},
+        {2, 1, 1},
+        {3, 1, 1},
+        {4, 1, 1},
+    }};
+
     inline constexpr std::array<Option, 5> VrykulMale = {{
         {0, 6, 1},
         {1, 1, 1},
@@ -95,10 +103,10 @@ namespace CreatureAppearance
     }};
 
     inline constexpr std::array<Option, 5> Drakkin_AllianceMale = {{
-        {0, 16, 1},
+        {0, 7, 1},
         {1, 1, 1},
-        {2, 1, 1},
-        {3, 25, 1},
+        {2, 5, 1},
+        {3, 7, 1},
         {4, 1, 1},
     }};
 
@@ -127,7 +135,7 @@ namespace CreatureAppearance
     }};
 
     inline constexpr std::array<Option, 5> Drakonid_AllianceMale = {{
-        {0, 5, 1},
+        {0, 17, 1},
         {1, 4, 1},
         {2, 6, 1},
         {3, 76, 1},
@@ -135,10 +143,26 @@ namespace CreatureAppearance
     }};
 
     inline constexpr std::array<Option, 5> Drakonid_HordeMale = {{
-        {0, 5, 1},
+        {0, 17, 1},
         {1, 4, 1},
         {2, 6, 1},
         {3, 76, 1},
+        {4, 1, 1},
+    }};
+
+    inline constexpr std::array<Option, 5> DarkfallenMale = {{
+        {0, 5, 1},
+        {1, 1, 1},
+        {2, 21, 1},
+        {3, 4, 1},
+        {4, 1, 1},
+    }};
+
+    inline constexpr std::array<Option, 5> DarkfallenFemale = {{
+        {0, 4, 1},
+        {1, 1, 1},
+        {2, 25, 1},
+        {3, 5, 1},
         {4, 1, 1},
     }};
 
@@ -179,7 +203,7 @@ namespace CreatureAppearance
     };
 
     inline constexpr std::array<Option, 5> DrakonidControls = {{
-        {0, 5, 1},
+        {0, 17, 1},
         {1, 2, 1},
         {2, 6, 1},
         {1, 2, 2},
@@ -196,13 +220,13 @@ namespace CreatureAppearance
 
     constexpr bool Uses(unsigned race)
     {
-        return (((((((race >= 54 && race <= 59) || race == 62) || race == 63) || race == 64) || race == 66) || race == 67) || race == 69) || race == 70;
+        return (((((((((race >= 54 && race <= 59) || race == 62) || race == 63) || race == 64) || race == 66) || race == 67) || race == 69) || race == 70) || race == 43) || race == 44;
     }
 
     constexpr bool GenderAllowed(unsigned race, unsigned gender)
     {
         return Uses(race) && (gender == 0
-            || ((race == 54 || race == 56 || race == 57 || race == 62 || race == 66 || race == 67) && gender == 1));
+            || ((race == 54 || race == 55 || race == 56 || race == 57 || race == 62 || race == 66 || race == 67 || race == 43 || race == 44) && gender == 1));
     }
 
     constexpr bool UsesPlayerVrykul(unsigned race, unsigned gender)
@@ -212,7 +236,7 @@ namespace CreatureAppearance
 
     constexpr bool UsesStockMaterials(unsigned race, unsigned gender)
     {
-        return UsesPlayerVrykul(race, gender) || ((race == 66 || race == 67) && gender < 2);
+        return UsesPlayerVrykul(race, gender) || (race == 66 && gender == 1) || (race == 67 && gender < 2);
     }
 
     constexpr std::array<Option, 5> const& Options(unsigned race, unsigned gender)
@@ -222,7 +246,7 @@ namespace CreatureAppearance
             case 54:
                 return gender ? NagaFemale : NagaMale;
             case 55:
-                return TuskarrMale;
+                return gender ? TuskarrFemale : TuskarrMale;
             case 56:
             case 57:
                 return gender ? VrykulFemale : VrykulMale;
@@ -243,6 +267,9 @@ namespace CreatureAppearance
                 return Drakonid_AllianceMale;
             case 70:
                 return Drakonid_HordeMale;
+            case 43:
+            case 44:
+                return gender ? DarkfallenFemale : DarkfallenMale;
             default:
                 return NagaMale;
         }

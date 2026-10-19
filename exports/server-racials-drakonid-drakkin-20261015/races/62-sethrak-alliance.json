@@ -1,0 +1,59 @@
+{
+  "race_id": 62,
+  "name": "Sethrak",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 1,
+  "display_ids": [
+    60057,
+    60058
+  ],
+  "script_grants": [
+    110800,
+    110801,
+    110802,
+    110803,
+    110980
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    20600
+  ],
+  "racial_spell_ids": [
+    20600,
+    110800,
+    110801,
+    110802,
+    110803,
+    110980
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 62,
+      "spell": 668,
+      "comment": "Language Common",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 62,
+      "rank": 0,
+      "skill": 98,
+      "comment": "Language Common",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "20600": "Perception",
+    "110800": "Static Coil",
+    "110801": "Serpentine Reflexes",
+    "110802": "Stormblood",
+    "110803": "Venomous Constitution",
+    "110980": "Scaled Hide"
+  }
+}

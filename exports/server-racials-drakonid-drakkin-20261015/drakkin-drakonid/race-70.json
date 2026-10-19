@@ -1,0 +1,138 @@
+{
+  "race_id": 70,
+  "name": "Drakonid",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 2,
+  "display_ids": [
+    60069,
+    0
+  ],
+  "script_grants": [
+    110400,
+    110404,
+    110405,
+    110406
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    110400,
+    110404,
+    110405,
+    110406
+  ],
+  "racial_spell_ids": [
+    110400,
+    110404,
+    110405,
+    110406
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 70,
+      "spell": 669,
+      "comment": "Language Orcish",
+      "classMask": 0
+    },
+    {
+      "race": 70,
+      "spell": 110400,
+      "comment": "Racial: Draconic Charge",
+      "classMask": 0
+    },
+    {
+      "race": 70,
+      "spell": 110404,
+      "comment": "Racial: Draconic Hide",
+      "classMask": 0
+    },
+    {
+      "race": 70,
+      "spell": 110405,
+      "comment": "Racial: Dragonkin",
+      "classMask": 0
+    },
+    {
+      "race": 70,
+      "spell": 110406,
+      "comment": "Racial: Treasure Hoarder",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 70,
+      "rank": 0,
+      "skill": 109,
+      "comment": "Language Orcish",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [
+    {
+      "race": 70,
+      "spell": 20572,
+      "comment": "Orc Blood Fury"
+    },
+    {
+      "race": 70,
+      "spell": 20573,
+      "comment": "Orc Hardiness"
+    },
+    {
+      "race": 70,
+      "spell": 20574,
+      "comment": "Orc Axe Specialization"
+    },
+    {
+      "race": 70,
+      "spell": 20575,
+      "comment": "Orc Command"
+    },
+    {
+      "race": 70,
+      "spell": 20576,
+      "comment": "Orc Command"
+    },
+    {
+      "race": 70,
+      "spell": 21563,
+      "comment": "Orc Command"
+    },
+    {
+      "race": 70,
+      "spell": 33697,
+      "comment": "Orc Blood Fury"
+    },
+    {
+      "race": 70,
+      "spell": 33702,
+      "comment": "Orc Blood Fury"
+    },
+    {
+      "race": 70,
+      "spell": 54562,
+      "comment": "Orc Command"
+    },
+    {
+      "race": 70,
+      "spell": 65222,
+      "comment": "Orc Command"
+    }
+  ],
+  "excluded_start_skills": [
+    {
+      "race": 70,
+      "skill": 125,
+      "comment": "Orc Racial"
+    }
+  ],
+  "spell_names": {
+    "110400": "Draconic Charge",
+    "110404": "Draconic Hide",
+    "110405": "Dragonkin",
+    "110406": "Treasure Hoarder"
+  }
+}

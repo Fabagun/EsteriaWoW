@@ -61,6 +61,7 @@ public:
     ~DatabaseWorkerPool();
 
     void SetConnectionInfo(std::string_view infoString, uint8 const asyncThreads, uint8 const synchThreads);
+    [[nodiscard]] uint8 GetAsyncWorkerCount() const { return _async_threads; }
 
     uint32 Open();
     void Close();

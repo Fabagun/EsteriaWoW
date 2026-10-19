@@ -1,0 +1,53 @@
+{
+  "race_id": 52,
+  "name": "High Order Skyborne",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 13,
+  "display_ids": [
+    60044,
+    60045
+  ],
+  "script_grants": [
+    110760,
+    110761,
+    110762,
+    110763,
+    110764,
+    110765,
+    110766
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    110005,
+    110006
+  ],
+  "racial_spell_ids": [
+    110005,
+    110006,
+    110760,
+    110761,
+    110762,
+    110763,
+    110764,
+    110765,
+    110766
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "110005": "Quel’dorei Meditation",
+    "110006": "Swiftness of the Rangers",
+    "110760": "Skyborne Wings",
+    "110761": "Skyborne Glide",
+    "110762": "Edict of the High Order",
+    "110763": "Ordered Magic",
+    "110764": "Ordered Magic",
+    "110765": "Disciplined Mind",
+    "110766": "Arcane Scholarship"
+  }
+}

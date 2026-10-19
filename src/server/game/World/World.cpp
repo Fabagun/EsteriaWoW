@@ -45,6 +45,7 @@
 #include "DBUpdater.h"
 #include "DatabaseEnv.h"
 #include "DisableMgr.h"
+#include "DigitalInventory.h"
 #include "DynamicVisibility.h"
 #include "GameEventMgr.h"
 #include "GameGraveyard.h"
@@ -197,6 +198,7 @@ void World::LoadConfigSettings(bool reload)
         sWorldSessionMgr->SetPlayerAmountLimit(sConfigMgr->GetOption<int32>("PlayerLimit", 1000));
 
     _worldConfig.Initialize(reload);
+    DigitalInventory::LoadConfig();
 
     for (uint8 i = 0; i < MAX_MOVE_TYPE; ++i)
         playerBaseMoveSpeed[i] = baseMoveSpeed[i] * getRate(RATE_MOVESPEED_PLAYER);

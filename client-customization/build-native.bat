@@ -21,4 +21,13 @@ if not "%errorlevel%"=="0" exit /b %errorlevel%
 cl.exe /nologo /std:c++20 /O2 /EHsc /MT "%~dp0TestCosmeticWings.cpp" /Fo"%~1\TestCosmeticWings.obj" /link /DYNAMICBASE:NO /BASE:0x04000000 /OUT:"%~1\TestCosmeticWings.exe"
 if not "%errorlevel%"=="0" exit /b %errorlevel%
 if exist "%~1\EsteriaCosmeticWings.bin" "%~1\TestCosmeticWings.exe" "%~1\EsteriaAppearance.dll"
+if not "%errorlevel%"=="0" exit /b %errorlevel%
+cl.exe /nologo /std:c++20 /O2 /EHsc /MT "%~dp0TestRunningWild.cpp" /Fo"%~1\TestRunningWild.obj" /link /OUT:"%~1\TestRunningWild.exe"
+if not "%errorlevel%"=="0" exit /b %errorlevel%
+"%~1\TestRunningWild.exe" "%~1\EsteriaAppearance.dll"
+if not "%errorlevel%"=="0" exit /b %errorlevel%
+if "%~2"=="" exit /b 0
+cl.exe /nologo /std:c++20 /O2 /EHsc /MT "%~dp0TestRunningWildThunks.cpp" /Fo"%~1\TestRunningWildThunks.obj" /link /DYNAMICBASE:NO /BASE:0x04000000 /OUT:"%~1\TestRunningWildThunks.exe"
+if not "%errorlevel%"=="0" exit /b %errorlevel%
+"%~1\TestRunningWildThunks.exe" "%~1\EsteriaAppearance.dll" "%~2"
 exit /b %errorlevel%

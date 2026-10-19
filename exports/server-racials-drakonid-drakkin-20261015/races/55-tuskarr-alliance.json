@@ -1,0 +1,62 @@
+{
+  "race_id": 55,
+  "name": "Tuskarr",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 3,
+  "display_ids": [
+    60050,
+    60071
+  ],
+  "script_grants": [
+    110840,
+    110841,
+    110842,
+    110843,
+    110981
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    33697,
+    33702
+  ],
+  "racial_spell_ids": [
+    33697,
+    33702,
+    110840,
+    110841,
+    110842,
+    110843,
+    110981
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 55,
+      "spell": 668,
+      "comment": "Language Common",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 55,
+      "rank": 0,
+      "skill": 98,
+      "comment": "Language Common",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "33697": "Blood Fury",
+    "33702": "Blood Fury",
+    "110840": "Harpoon Toss",
+    "110841": "Thick Blubber",
+    "110842": "Snowstrider",
+    "110843": "Hearty Meals",
+    "110981": "Master Angler"
+  }
+}

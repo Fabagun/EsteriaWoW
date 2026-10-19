@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "slug": "naga",
+  "name": "Naga",
+  "race_ids": [
+    54
+  ],
+  "client_file_strings": {
+    "54": "NagaHorde"
+  },
+  "source_races": {
+    "54": 10
+  },
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11
+  ],
+  "source_patch_root": "G:\\RetroPorterWork\\naga\\output\\patch-root",
+  "runtime_patch_root": "C:\\Users\\Zach\\.codex\\tmp\\sirus-naga\\assets",
+  "asset_prefix": "custom\\naga",
+  "models": {
+    "male": {
+      "model_id": 120057,
+      "display_id": 60048,
+      "model_path": "custom\\naga\\sirus\\male\\snaga_male.m2"
+    },
+    "female": {
+      "model_id": 120058,
+      "display_id": 60049,
+      "model_path": "custom\\naga\\sirus\\female\\snaga_female.m2"
+    }
+  },
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "source_retail_race_ids": [
+      13
+    ],
+    "supported_genders": [
+      0,
+      1
+    ],
+    "profiles": {
+      "0": {
+        "capacities": [
+          25,
+          1,
+          5,
+          15,
+          96
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "id": null,
+            "field": 0,
+            "count": 25,
+            "factor": 1,
+            "choices": []
+          },
+          {
+            "label": "Face",
+            "id": null,
+            "field": 1,
+            "count": 1,
+            "factor": 1,
+            "choices": []
+          },
+          {
+            "label": "Crest Style",
+            "id": null,
+            "field": 2,
+            "count": 5,
+            "factor": 1,
+            "choices": []
+          },
+          {
+            "label": "Eye Color",
+            "id": null,
+            "field": 3,
+            "count": 15,
+            "factor": 1,
+            "choices": []
+          },
+          {
+            "label": "Facial Features",
+            "id": null,
+            "field": 4,
+            "count": 96,
+            "factor": 1,
+            "choices": []
+          }
+        ]
+      },
+      "1": {
+        "capacities": [
+          255,
+          1,
+          5,
+          80,
+          240
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "id": null,
+            "field": 0,
+            "count": 255,
+            "factor": 1,
+            "choices": []
+          },
+          {
+            "label": "Face",
+            "id": null,
+            "field": 1,
+            "count": 1,
+            "factor": 1,
+            "choices": []
+          },
+          {
+            "label": "Hair Style",
+            "id": null,
+            "field": 2,
+            "count": 5,
+            "factor": 1,
+            "choices": []
+          },
+          {
+            "label": "Hair Color",
+            "id": null,
+            "field": 3,
+            "count": 80,
+            "factor": 1,
+            "choices": []
+          },
+          {
+            "label": "Facial Features",
+            "id": null,
+            "field": 4,
+            "count": 240,
+            "factor": 1,
+            "choices": []
+          }
+        ]
+      }
+    },
+    "hide_helm": false,
+    "hide_feet": true,
+    "source_build": "Sirus 3.3.5a",
+    "source": "sirus-naga"
+  },
+  "asset_source": {
+    "name": "Sirus",
+    "family": "NagaSirusHD",
+    "race_id": 13,
+    "extraction": "D:\\Sirus\\_client\\World of Warcraft Sirus\\Naga_Extract_2026-10-03"
+  }
+}

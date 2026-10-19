@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+import race_racial_visuals
 from cars_mount_pack import Wdbc, build_wdbc
 from drakkin_drakonid_racials import (
     ALL_MAGIC_SCHOOLS, AREA_ENEMY, ATTR_AURA_IS_DEBUFF, ATTR_IS_ABILITY, ATTR_PASSIVE, AURA_DUMMY,
@@ -885,7 +886,7 @@ def spell_spec() -> tuple[Spell, ...]:
     return tuple(SPELLS)
 
 
-def prepare(table: Wdbc, retail_icons: bool = False) -> list[Prepared]:
+def prepare(table: Wdbc, retail_icons: bool = False, ported: frozenset = frozenset()) -> list[Prepared]:
     index, columns = field_index(), spell_columns()
     rows = {row[0]: row for row in table.rows}
 
@@ -910,6 +911,8 @@ def prepare(table: Wdbc, retail_icons: bool = False) -> list[Prepared]:
             source = donor(VISUAL_DONORS[key])
             for column in ("SpellVisualID_1", "SpellVisualID_2"):
                 row[index[column]] = source[index[column]]
+            if key in ported:    # a retail visual was ported for this racial (race_racial_visuals); it replaces the donor's
+                row[index["SpellVisualID_1"]], row[index["SpellVisualID_2"]] = race_racial_visuals.visual_id(key), 0
         passive = row[index["Attributes"]] & ATTR_PASSIVE
         if (not passive and row[index["CastingTimeIndex"]] != INSTANT_CAST and not row[index["InterruptFlags"]]
                 and not row[index["ChannelInterruptFlags"]]):
@@ -920,8 +923,8 @@ def prepare(table: Wdbc, retail_icons: bool = False) -> list[Prepared]:
     return prepared
 
 
-def merge_spell_table(data: bytes, retail_icons: bool = False) -> bytes:
-    """Append every racial the table does not already carry (client stage: ``retail_icons=True``)."""
+def merge_spell_table(data: bytes, retail_icons: bool = False, ported: frozenset = frozenset()) -> bytes:
+    """Append every racial the table does not already carry (client stage: ``retail_icons=True``, ``ported`` = keys with a retail visual)."""
     table = Wdbc(data)
     index = field_index()
     existing = {row[0] for row in table.rows}
@@ -934,7 +937,7 @@ def merge_spell_table(data: bytes, retail_icons: bool = False) -> bytes:
                 if value:
                     strings[(row_index, index[column])] = value
     position = {row[0]: i for i, row in enumerate(table.rows)}
-    for item in prepare(table, retail_icons):
+    for item in prepare(table, retail_icons, ported):
         spell_id = item.spell.spell_id
         if spell_id in existing:
             owner = table.rows[position[spell_id]]

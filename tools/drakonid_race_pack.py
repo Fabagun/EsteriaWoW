@@ -42,8 +42,11 @@ MIGRATION = p.ROOT / 'data/sql/updates/pending_db_world/rev_20261012010000000_dr
 # race, faction, donor race (start data, language, faction template), model id, display id, source skin
 SPECS = ((69, 'alliance', 1, 120077, 60068), (70, 'horde', 2, 120078, 60069))
 LABELS = ('Skin Color', 'Head', 'Horns', 'Tail', 'Eye Color')
-# Every retail skin and eye texture used by displays of this model (wow.export: drakonid2_<color>, drakonid2_eyes_<id>).
-SKINS = ('drakonid2_blue', 'drakonid2_black', 'drakonid2_bronze', 'drakonid2_green', 'drakonid2_red')
+# Installed indexes stay first; tools/skin_expansion.py prepares the additional HD atlases.
+SKINS = ('drakonid2_blue', 'drakonid2_black', 'drakonid2_bronze', 'drakonid2_green', 'drakonid2_red',
+         'drakonid2_white', 'drakonid2_olive', 'drakonid2_chromatic', 'drakonid2_twilight',
+         'drakonid2_void', 'drakonid2_azure', 'drakonid2_teal', 'drakonid2_indigo',
+         'drakonid2_darkteal', 'drakonid2_umber', 'drakonid2_charcoal', 'drakonid2_abyss')
 _EYE_IDS = (4218540, 4218485, 4218514, 4218590, 4218479, 4218480, 4218481, 4218482, 4218483, 4218484, 4218486,
             4218487, 4218488, 4218489, 4218490, 4218492, 4218493, 4218494, 4218495, 4218496, 4218497, 4218498,
             4218499, 4218500, 4218501, 4218502, 4218504, 4218505, 4218506, 4218510, 4218511, 4218512, 4218513,

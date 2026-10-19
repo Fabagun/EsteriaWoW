@@ -1,0 +1,3722 @@
+[
+  {
+    "race_id": 1,
+    "name": "Human",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 1,
+    "display_ids": [
+      49,
+      50
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20597,
+      20598,
+      20599,
+      20600,
+      20864,
+      58985,
+      59752
+    ],
+    "racial_spell_ids": [
+      20597,
+      20598,
+      20599,
+      20600,
+      20864,
+      58985,
+      59752
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20597": "Sword Specialization",
+      "20598": "The Human Spirit",
+      "20599": "Diplomacy",
+      "20600": "Perception",
+      "20864": "Mace Specialization",
+      "58985": "Perception",
+      "59752": "Every Man for Himself"
+    }
+  },
+  {
+    "race_id": 2,
+    "name": "Orc",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 2,
+    "display_ids": [
+      51,
+      52
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20572,
+      20573,
+      20574,
+      20575,
+      20576,
+      21563,
+      33697,
+      33702,
+      54562,
+      65222
+    ],
+    "racial_spell_ids": [
+      20572,
+      20573,
+      20574,
+      20575,
+      20576,
+      21563,
+      33697,
+      33702,
+      54562,
+      65222
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20572": "Blood Fury",
+      "20573": "Hardiness",
+      "20574": "Axe Specialization",
+      "20575": "Command",
+      "20576": "Command",
+      "21563": "Command",
+      "33697": "Blood Fury",
+      "33702": "Blood Fury",
+      "54562": "Command",
+      "65222": "Command"
+    }
+  },
+  {
+    "race_id": 3,
+    "name": "Dwarf",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 3,
+    "display_ids": [
+      53,
+      54
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      2481,
+      20594,
+      20595,
+      20596,
+      33697,
+      33702,
+      59224
+    ],
+    "racial_spell_ids": [
+      2481,
+      20594,
+      20595,
+      20596,
+      33697,
+      33702,
+      59224
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "2481": "Find Treasure",
+      "20594": "Stoneform",
+      "20595": "Gun Specialization",
+      "20596": "Frost Resistance",
+      "33697": "Blood Fury",
+      "33702": "Blood Fury",
+      "59224": "Mace Specialization"
+    }
+  },
+  {
+    "race_id": 4,
+    "name": "Night Elf",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 4,
+    "display_ids": [
+      55,
+      56
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20582,
+      20583,
+      20585,
+      21009,
+      33697,
+      33702,
+      58984
+    ],
+    "racial_spell_ids": [
+      20582,
+      20583,
+      20585,
+      21009,
+      33697,
+      33702,
+      58984
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20582": "Quickness",
+      "20583": "Nature Resistance",
+      "20585": "Wisp Spirit",
+      "21009": "Elusiveness",
+      "33697": "Blood Fury",
+      "33702": "Blood Fury",
+      "58984": "Shadowmeld"
+    }
+  },
+  {
+    "race_id": 5,
+    "name": "Undead",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 5,
+    "display_ids": [
+      57,
+      58
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      5227,
+      7744,
+      20577,
+      20579
+    ],
+    "racial_spell_ids": [
+      5227,
+      7744,
+      20577,
+      20579
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "5227": "Underwater Breathing",
+      "7744": "Will of the Forsaken",
+      "20577": "Vampiric Sustenance",
+      "20579": "Shadow Resistance"
+    }
+  },
+  {
+    "race_id": 6,
+    "name": "Tauren",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 6,
+    "display_ids": [
+      59,
+      60
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20549,
+      20550,
+      20551,
+      20552
+    ],
+    "racial_spell_ids": [
+      20549,
+      20550,
+      20551,
+      20552
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20549": "War Stomp",
+      "20550": "Endurance",
+      "20551": "Nature Resistance",
+      "20552": "Cultivation"
+    }
+  },
+  {
+    "race_id": 7,
+    "name": "Gnome",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 7,
+    "display_ids": [
+      1563,
+      1564
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20589,
+      20591,
+      20592,
+      20593
+    ],
+    "racial_spell_ids": [
+      20589,
+      20591,
+      20592,
+      20593
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20589": "Escape Artist",
+      "20591": "Expansive Mind",
+      "20592": "Arcane Resistance",
+      "20593": "Engineering Specialization"
+    }
+  },
+  {
+    "race_id": 8,
+    "name": "Troll",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 8,
+    "display_ids": [
+      1478,
+      1479
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20555,
+      20557,
+      20558,
+      26290,
+      26297,
+      58943
+    ],
+    "racial_spell_ids": [
+      20555,
+      20557,
+      20558,
+      26290,
+      26297,
+      58943
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20555": "Regeneration",
+      "20557": "Beast Slaying",
+      "20558": "Throwing Specialization",
+      "26290": "Bow Specialization",
+      "26297": "Berserking",
+      "58943": "Da Voodoo Shuffle"
+    }
+  },
+  {
+    "race_id": 9,
+    "name": "Goblin",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 9,
+    "display_ids": [
+      3000024,
+      3000025
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      69041,
+      69042,
+      69044,
+      69045,
+      69046,
+      69070
+    ],
+    "racial_spell_ids": [
+      69041,
+      69042,
+      69044,
+      69045,
+      69046,
+      69070
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "69041": "Rocket Barrage",
+      "69042": "Time is Money",
+      "69044": "Best Deals Anywhere",
+      "69045": "Better Living Through Chemistry",
+      "69046": "Pack Hobgoblin",
+      "69070": "Rocket Jump"
+    }
+  },
+  {
+    "race_id": 10,
+    "name": "Blood Elf",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 10,
+    "display_ids": [
+      15476,
+      15475
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      822,
+      25046,
+      28730,
+      28877,
+      50613,
+      80866,
+      80867,
+      80868
+    ],
+    "racial_spell_ids": [
+      822,
+      25046,
+      28730,
+      28877,
+      50613,
+      80866,
+      80867,
+      80868
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "822": "Magic Resistance",
+      "25046": "Arcane Torrent",
+      "28730": "Arcane Torrent",
+      "28877": "Arcane Affinity",
+      "50613": "Arcane Torrent",
+      "80866": "MISSING",
+      "80867": "MISSING",
+      "80868": "MISSING"
+    }
+  },
+  {
+    "race_id": 11,
+    "name": "Draenei",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 11,
+    "display_ids": [
+      16125,
+      16126
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      6562,
+      20579,
+      28875,
+      28878,
+      28880,
+      59221,
+      59535,
+      59536,
+      59538,
+      59539,
+      59540,
+      59541,
+      59542,
+      59543,
+      59544,
+      59545,
+      59547,
+      59548,
+      80869,
+      80870,
+      80871,
+      80872,
+      80873,
+      80874
+    ],
+    "racial_spell_ids": [
+      6562,
+      20579,
+      28875,
+      28878,
+      28880,
+      59221,
+      59535,
+      59536,
+      59538,
+      59539,
+      59540,
+      59541,
+      59542,
+      59543,
+      59544,
+      59545,
+      59547,
+      59548,
+      80869,
+      80870,
+      80871,
+      80872,
+      80873,
+      80874
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "6562": "Heroic Presence",
+      "20579": "Shadow Resistance",
+      "28875": "Gemcutting",
+      "28878": "Heroic Presence",
+      "28880": "Gift of the Naaru",
+      "59221": "Shadow Resistance",
+      "59535": "Shadow Resistance",
+      "59536": "Shadow Resistance",
+      "59538": "Shadow Resistance",
+      "59539": "Shadow Resistance",
+      "59540": "Shadow Resistance",
+      "59541": "Shadow Resistance",
+      "59542": "Gift of the Naaru",
+      "59543": "Gift of the Naaru",
+      "59544": "Gift of the Naaru",
+      "59545": "Gift of the Naaru",
+      "59547": "Gift of the Naaru",
+      "59548": "Gift of the Naaru",
+      "80869": "MISSING",
+      "80870": "MISSING",
+      "80871": "MISSING",
+      "80872": "MISSING",
+      "80873": "MISSING",
+      "80874": "MISSING"
+    }
+  },
+  {
+    "race_id": 12,
+    "name": "Worgen",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 12,
+    "display_ids": [
+      29422,
+      29423
+    ],
+    "script_grants": [],
+    "additional_source_racials": [
+      68992,
+      68994,
+      68995,
+      68996,
+      87840,
+      87841,
+      110010,
+      110011,
+      110020
+    ],
+    "racial_start_and_skill_candidates": [
+      68975,
+      68976,
+      68978,
+      68992
+    ],
+    "racial_spell_ids": [
+      68975,
+      68976,
+      68978,
+      68992,
+      68994,
+      68995,
+      68996,
+      87840,
+      87841,
+      110010,
+      110011,
+      110020
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "68975": "Viciousness",
+      "68976": "Aberration",
+      "68978": "Flayer",
+      "68992": "Darkflight",
+      "68994": "Two Forms",
+      "68995": "Two Forms",
+      "68996": "Two Forms",
+      "87840": "Running Wild",
+      "87841": "Running Wild",
+      "110010": "Running Wild",
+      "110011": "Running Wild",
+      "110020": "Two Forms"
+    }
+  },
+  {
+    "race_id": 13,
+    "name": "High Elf",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 13,
+    "display_ids": [
+      15476,
+      15475
+    ],
+    "script_grants": [],
+    "additional_source_racials": [
+      110005,
+      110006,
+      110007,
+      110008,
+      110009
+    ],
+    "racial_start_and_skill_candidates": [
+      110005,
+      110006
+    ],
+    "racial_spell_ids": [
+      110005,
+      110006,
+      110007,
+      110008,
+      110009
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110005": "Quel’dorei Meditation",
+      "110006": "Swiftness of the Rangers",
+      "110007": "Quel’dorei Meditation",
+      "110008": "Bow Specialization",
+      "110009": "Enchanting Specialization"
+    }
+  },
+  {
+    "race_id": 14,
+    "name": "Broken",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 14,
+    "display_ids": [
+      60002,
+      60003
+    ],
+    "script_grants": [],
+    "additional_source_racials": [
+      110001,
+      110002,
+      110003,
+      110004
+    ],
+    "racial_start_and_skill_candidates": [
+      20572,
+      20573,
+      20574,
+      20575,
+      20576,
+      21563,
+      33697,
+      33702,
+      110001,
+      110002,
+      110003,
+      110004
+    ],
+    "racial_spell_ids": [
+      20572,
+      20573,
+      20574,
+      20575,
+      20576,
+      21563,
+      33697,
+      33702,
+      110001,
+      110002,
+      110003,
+      110004
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20572": "Blood Fury",
+      "20573": "Hardiness",
+      "20574": "Axe Specialization",
+      "20575": "Command",
+      "20576": "Command",
+      "21563": "Command",
+      "33697": "Blood Fury",
+      "33702": "Blood Fury",
+      "110001": "Salvager",
+      "110002": "Krokul Cunning",
+      "110003": "Fel-Scarred",
+      "110004": "Echo of the Naaru"
+    }
+  },
+  {
+    "race_id": 15,
+    "name": "Sethrak",
+    "faction": "horde",
+    "effective_playable": false,
+    "listed_in_registry": true,
+    "legacy_mask_race": 15,
+    "display_ids": [
+      3000000,
+      3000001
+    ],
+    "script_grants": [
+      110800,
+      110801,
+      110802,
+      110803,
+      110980
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110800,
+      110801,
+      110802,
+      110803,
+      110980
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110800": "Static Coil",
+      "110801": "Serpentine Reflexes",
+      "110802": "Stormblood",
+      "110803": "Venomous Constitution",
+      "110980": "Scaled Hide"
+    }
+  },
+  {
+    "race_id": 16,
+    "name": "Eredar",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 16,
+    "display_ids": [
+      60008,
+      60009
+    ],
+    "script_grants": [
+      110740,
+      110741,
+      110742,
+      110743,
+      110744
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      822,
+      25046,
+      28730,
+      28877,
+      80866,
+      80867,
+      80868
+    ],
+    "racial_spell_ids": [
+      822,
+      25046,
+      28730,
+      28877,
+      80866,
+      80867,
+      80868,
+      110740,
+      110741,
+      110742,
+      110743,
+      110744
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "822": "Magic Resistance",
+      "25046": "Arcane Torrent",
+      "28730": "Arcane Torrent",
+      "28877": "Arcane Affinity",
+      "80866": "MISSING",
+      "80867": "MISSING",
+      "80868": "MISSING",
+      "110740": "Felblood Surge",
+      "110741": "Man'ari Blood",
+      "110742": "Demonic Resilience",
+      "110743": "Unbroken Will",
+      "110744": "Forbidden Knowledge"
+    }
+  },
+  {
+    "race_id": 17,
+    "name": "Nightborne",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 17,
+    "display_ids": [
+      60010,
+      60011
+    ],
+    "script_grants": [
+      110500,
+      110501,
+      110502,
+      110503,
+      110504
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      822,
+      25046,
+      28730,
+      28877,
+      80866,
+      80867,
+      80868
+    ],
+    "racial_spell_ids": [
+      822,
+      25046,
+      28730,
+      28877,
+      80866,
+      80867,
+      80868,
+      110500,
+      110501,
+      110502,
+      110503,
+      110504
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "822": "Magic Resistance",
+      "25046": "Arcane Torrent",
+      "28730": "Arcane Torrent",
+      "28877": "Arcane Affinity",
+      "80866": "MISSING",
+      "80867": "MISSING",
+      "80868": "MISSING",
+      "110500": "Arcane Pulse",
+      "110501": "Magical Affinity",
+      "110502": "Arcane Resistance",
+      "110503": "Ancient History",
+      "110504": "Cantrips"
+    }
+  },
+  {
+    "race_id": 18,
+    "name": "Pandaren",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 18,
+    "display_ids": [
+      60004,
+      60005
+    ],
+    "script_grants": [
+      110660,
+      110661,
+      110662,
+      110664,
+      110665
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20597,
+      20598,
+      20599,
+      20600,
+      20864
+    ],
+    "racial_spell_ids": [
+      20597,
+      20598,
+      20599,
+      20600,
+      20864,
+      110660,
+      110661,
+      110662,
+      110664,
+      110665
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20597": "Sword Specialization",
+      "20598": "The Human Spirit",
+      "20599": "Diplomacy",
+      "20600": "Perception",
+      "20864": "Mace Specialization",
+      "110660": "Quaking Palm",
+      "110661": "Epicurean",
+      "110662": "Gourmand",
+      "110664": "Bouncy",
+      "110665": "Inner Peace"
+    }
+  },
+  {
+    "race_id": 19,
+    "name": "Void Elf",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 19,
+    "display_ids": [
+      60012,
+      60013
+    ],
+    "script_grants": [
+      110520,
+      110522,
+      110523,
+      110524,
+      110525
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20582,
+      20583,
+      20585,
+      21009
+    ],
+    "racial_spell_ids": [
+      20582,
+      20583,
+      20585,
+      21009,
+      110520,
+      110522,
+      110523,
+      110524,
+      110525
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20582": "Quickness",
+      "20583": "Nature Resistance",
+      "20585": "Wisp Spirit",
+      "21009": "Elusiveness",
+      "110520": "Entropic Embrace",
+      "110522": "Preternatural Calm",
+      "110523": "Chill of Night",
+      "110524": "Spatial Rift",
+      "110525": "Ethereal Connection"
+    }
+  },
+  {
+    "race_id": 20,
+    "name": "Vulpera",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 20,
+    "display_ids": [
+      60006,
+      60007
+    ],
+    "script_grants": [
+      110640,
+      110645,
+      110646,
+      110647,
+      110648,
+      110649,
+      110650
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20572,
+      20573,
+      20574,
+      20575,
+      20576,
+      21563,
+      33697,
+      33702
+    ],
+    "racial_spell_ids": [
+      20572,
+      20573,
+      20574,
+      20575,
+      20576,
+      21563,
+      33697,
+      33702,
+      110640,
+      110645,
+      110646,
+      110647,
+      110648,
+      110649,
+      110650
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20572": "Blood Fury",
+      "20573": "Hardiness",
+      "20574": "Axe Specialization",
+      "20575": "Command",
+      "20576": "Command",
+      "21563": "Command",
+      "33697": "Blood Fury",
+      "33702": "Blood Fury",
+      "110640": "Bag of Tricks",
+      "110645": "Nose for Trouble",
+      "110646": "Fire Resistance",
+      "110647": "Make Camp",
+      "110648": "Return to Camp",
+      "110649": "Rummage Your Bag",
+      "110650": "Alpaca Saddlebags"
+    }
+  },
+  {
+    "race_id": 21,
+    "name": "Lightforged Draenei",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 21,
+    "display_ids": [
+      60014,
+      60015
+    ],
+    "script_grants": [
+      110540,
+      110542,
+      110544,
+      110545,
+      110547
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      6562,
+      20579,
+      28875,
+      28878,
+      28880,
+      80869,
+      80870,
+      80872,
+      80873,
+      80874
+    ],
+    "racial_spell_ids": [
+      6562,
+      20579,
+      28875,
+      28878,
+      28880,
+      80869,
+      80870,
+      80872,
+      80873,
+      80874,
+      110540,
+      110542,
+      110544,
+      110545,
+      110547
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "6562": "Heroic Presence",
+      "20579": "Shadow Resistance",
+      "28875": "Gemcutting",
+      "28878": "Heroic Presence",
+      "28880": "Gift of the Naaru",
+      "80869": "MISSING",
+      "80870": "MISSING",
+      "80872": "MISSING",
+      "80873": "MISSING",
+      "80874": "MISSING",
+      "110540": "Light's Judgment",
+      "110542": "Light's Reckoning",
+      "110544": "Holy Providence",
+      "110545": "Demonbane",
+      "110547": "Forge of Light"
+    }
+  },
+  {
+    "race_id": 22,
+    "name": "Zandalari Troll",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 22,
+    "display_ids": [
+      60016,
+      60017
+    ],
+    "script_grants": [
+      110560,
+      110561,
+      110562,
+      110563
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20555,
+      20557,
+      20558,
+      26290,
+      26297
+    ],
+    "racial_spell_ids": [
+      20555,
+      20557,
+      20558,
+      26290,
+      26297,
+      110560,
+      110561,
+      110562,
+      110563
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20555": "Regeneration",
+      "20557": "Beast Slaying",
+      "20558": "Throwing Specialization",
+      "26290": "Bow Specialization",
+      "26297": "Berserking",
+      "110560": "Regeneratin'",
+      "110561": "City of Gold",
+      "110562": "Pterrordax Swoop",
+      "110563": "Embrace of the Loa"
+    }
+  },
+  {
+    "race_id": 23,
+    "name": "Dark Iron Dwarf",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 23,
+    "display_ids": [
+      60018,
+      60019
+    ],
+    "script_grants": [
+      110580,
+      110582,
+      110583,
+      110584,
+      110585
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      2481,
+      20594,
+      20595,
+      20596
+    ],
+    "racial_spell_ids": [
+      2481,
+      20594,
+      20595,
+      20596,
+      110580,
+      110582,
+      110583,
+      110584,
+      110585
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "2481": "Find Treasure",
+      "20594": "Stoneform",
+      "20595": "Gun Specialization",
+      "20596": "Frost Resistance",
+      "110580": "Fireblood",
+      "110582": "Forged in Flames",
+      "110583": "Mass Production",
+      "110584": "Mole Machine",
+      "110585": "Dungeon Delver"
+    }
+  },
+  {
+    "race_id": 24,
+    "name": "Broken",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 24,
+    "display_ids": [
+      3000018,
+      3000019
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {}
+  },
+  {
+    "race_id": 25,
+    "name": "Forsaken",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 25,
+    "display_ids": [
+      3000020,
+      3000021
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {}
+  },
+  {
+    "race_id": 26,
+    "name": "Pandaren",
+    "faction": "horde",
+    "effective_playable": false,
+    "listed_in_registry": true,
+    "legacy_mask_race": 26,
+    "display_ids": [
+      3000006,
+      3000007
+    ],
+    "script_grants": [
+      110660,
+      110661,
+      110662,
+      110664,
+      110665
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110660,
+      110661,
+      110662,
+      110664,
+      110665
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110660": "Quaking Palm",
+      "110661": "Epicurean",
+      "110662": "Gourmand",
+      "110664": "Bouncy",
+      "110665": "Inner Peace"
+    }
+  },
+  {
+    "race_id": 27,
+    "name": "Broken",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 27,
+    "display_ids": [
+      3000018,
+      3000019
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {}
+  },
+  {
+    "race_id": 28,
+    "name": "Dracthyr",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 28,
+    "display_ids": [
+      60020,
+      60021
+    ],
+    "script_grants": [
+      110680,
+      110681,
+      110682,
+      110683,
+      110684,
+      110685,
+      110687
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20572,
+      20573,
+      20574,
+      20575,
+      20576,
+      21563,
+      33697,
+      33702
+    ],
+    "racial_spell_ids": [
+      20572,
+      20573,
+      20574,
+      20575,
+      20576,
+      21563,
+      33697,
+      33702,
+      110680,
+      110681,
+      110682,
+      110683,
+      110684,
+      110685,
+      110687
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20572": "Blood Fury",
+      "20573": "Hardiness",
+      "20574": "Axe Specialization",
+      "20575": "Command",
+      "20576": "Command",
+      "21563": "Command",
+      "33697": "Blood Fury",
+      "33702": "Blood Fury",
+      "110680": "Wing Buffet",
+      "110681": "Glide",
+      "110682": "Awakened",
+      "110683": "Discerning Eye",
+      "110684": "Soar",
+      "110685": "Visage",
+      "110687": "Chosen Identity"
+    }
+  },
+  {
+    "race_id": 29,
+    "name": "Kul Tiran",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": false,
+    "legacy_mask_race": 29,
+    "display_ids": [
+      60022,
+      60023
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      2481,
+      20594,
+      20595,
+      20596
+    ],
+    "racial_spell_ids": [
+      2481,
+      20594,
+      20595,
+      20596
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "2481": "Find Treasure",
+      "20594": "Stoneform",
+      "20595": "Gun Specialization",
+      "20596": "Frost Resistance"
+    }
+  },
+  {
+    "race_id": 30,
+    "name": "Illidari",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": false,
+    "legacy_mask_race": 30,
+    "display_ids": [
+      60024,
+      60025
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      822,
+      25046,
+      28730,
+      28877,
+      80866,
+      80867,
+      80868
+    ],
+    "racial_spell_ids": [
+      822,
+      25046,
+      28730,
+      28877,
+      80866,
+      80867,
+      80868
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "822": "Magic Resistance",
+      "25046": "Arcane Torrent",
+      "28730": "Arcane Torrent",
+      "28877": "Arcane Affinity",
+      "80866": "MISSING",
+      "80867": "MISSING",
+      "80868": "MISSING"
+    }
+  },
+  {
+    "race_id": 31,
+    "name": "Illidari",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": false,
+    "legacy_mask_race": 31,
+    "display_ids": [
+      60026,
+      60027
+    ],
+    "script_grants": [],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20582,
+      20583,
+      20585,
+      21009,
+      33697,
+      33702
+    ],
+    "racial_spell_ids": [
+      20582,
+      20583,
+      20585,
+      21009,
+      33697,
+      33702
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20582": "Quickness",
+      "20583": "Nature Resistance",
+      "20585": "Wisp Spirit",
+      "21009": "Elusiveness",
+      "33697": "Blood Fury",
+      "33702": "Blood Fury"
+    }
+  },
+  {
+    "race_id": 43,
+    "name": "Darkfallen",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 43,
+    "display_ids": [
+      60028,
+      60029
+    ],
+    "script_grants": [],
+    "additional_source_racials": [
+      110040,
+      110041,
+      110042
+    ],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110040,
+      110041,
+      110042
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110040": "Crimson Thirst",
+      "110041": "Crimson Thirst",
+      "110042": "Children of the Night"
+    }
+  },
+  {
+    "race_id": 44,
+    "name": "Darkfallen",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 44,
+    "display_ids": [
+      60028,
+      60029
+    ],
+    "script_grants": [],
+    "additional_source_racials": [
+      110040,
+      110041,
+      110042
+    ],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110040,
+      110041,
+      110042
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110040": "Crimson Thirst",
+      "110041": "Crimson Thirst",
+      "110042": "Children of the Night"
+    }
+  },
+  {
+    "race_id": 45,
+    "name": "Mag'har Orc",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 2,
+    "display_ids": [
+      60030,
+      60031
+    ],
+    "script_grants": [],
+    "additional_source_racials": [
+      110100,
+      110101,
+      110102,
+      110103
+    ],
+    "racial_start_and_skill_candidates": [
+      21563,
+      54562,
+      65222,
+      110100,
+      110101,
+      110102,
+      110103
+    ],
+    "racial_spell_ids": [
+      21563,
+      54562,
+      65222,
+      110100,
+      110101,
+      110102,
+      110103
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 45,
+        "spell": 110100,
+        "comment": "Ancestral Call",
+        "classMask": 0
+      },
+      {
+        "race": 45,
+        "spell": 110101,
+        "comment": "Savage Blood",
+        "classMask": 0
+      },
+      {
+        "race": 45,
+        "spell": 110102,
+        "comment": "Sympathetic Vigor",
+        "classMask": 0
+      },
+      {
+        "race": 45,
+        "spell": 110103,
+        "comment": "Unwavering Will",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [],
+    "excluded_start_spells": [
+      {
+        "race": 45,
+        "spell": 20572,
+        "comment": "Orc Blood Fury: Maghar uses Ancestral Call"
+      },
+      {
+        "race": 45,
+        "spell": 20573,
+        "comment": "Orc Hardiness"
+      },
+      {
+        "race": 45,
+        "spell": 20574,
+        "comment": "Orc Axe Specialization"
+      },
+      {
+        "race": 45,
+        "spell": 20575,
+        "comment": "Orc Command"
+      },
+      {
+        "race": 45,
+        "spell": 20576,
+        "comment": "Orc Command"
+      },
+      {
+        "race": 45,
+        "spell": 33697,
+        "comment": "Orc Blood Fury caster variant"
+      },
+      {
+        "race": 45,
+        "spell": 33702,
+        "comment": "Orc Blood Fury caster variant"
+      }
+    ],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "21563": "Command",
+      "54562": "Command",
+      "65222": "Command",
+      "110100": "Ancestral Call",
+      "110101": "Savage Blood",
+      "110102": "Sympathetic Vigor",
+      "110103": "Unwavering Will"
+    }
+  },
+  {
+    "race_id": 46,
+    "name": "Highmountain Tauren",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 6,
+    "display_ids": [
+      60032,
+      60033
+    ],
+    "script_grants": [
+      110600,
+      110602,
+      110603,
+      110604,
+      110605
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110600,
+      110602,
+      110603,
+      110604,
+      110605
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 46,
+        "spell": 669,
+        "comment": "Language Orcish",
+        "classMask": 0
+      },
+      {
+        "race": 46,
+        "spell": 670,
+        "comment": "Language Taurahe",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 46,
+        "rank": 0,
+        "skill": 109,
+        "comment": "Language Orcish",
+        "classMask": 0
+      },
+      {
+        "race": 46,
+        "rank": 0,
+        "skill": 115,
+        "comment": "Language Taurahe",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110600": "Bull Rush",
+      "110602": "Mountaineer",
+      "110603": "Rugged Tenacity",
+      "110604": "Pride of Ironhorn",
+      "110605": "Waste Not, Want Not"
+    }
+  },
+  {
+    "race_id": 47,
+    "name": "Mechagnome",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 7,
+    "display_ids": [
+      60034,
+      60035
+    ],
+    "script_grants": [
+      110620,
+      110622,
+      110623,
+      110624,
+      110625
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110620,
+      110622,
+      110623,
+      110624,
+      110625
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 47,
+        "spell": 668,
+        "comment": "Language Common",
+        "classMask": 0
+      },
+      {
+        "race": 47,
+        "spell": 7340,
+        "comment": "Language Gnomish",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 47,
+        "rank": 0,
+        "skill": 98,
+        "comment": "Language Common",
+        "classMask": 0
+      },
+      {
+        "race": 47,
+        "rank": 0,
+        "skill": 313,
+        "comment": "Language Gnomish",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110620": "Combat Analysis",
+      "110622": "Emergency Failsafe",
+      "110623": "Skeleton Pinkie",
+      "110624": "Mastercraft",
+      "110625": "Hyper Organic Light Originator"
+    }
+  },
+  {
+    "race_id": 48,
+    "name": "Earthen",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 3,
+    "display_ids": [
+      60036,
+      60037
+    ],
+    "script_grants": [
+      110700,
+      110704,
+      110705,
+      110706,
+      110707,
+      110708
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      33697,
+      33702
+    ],
+    "racial_spell_ids": [
+      33697,
+      33702,
+      110700,
+      110704,
+      110705,
+      110706,
+      110707,
+      110708
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 48,
+        "spell": 668,
+        "comment": "Language Common",
+        "classMask": 0
+      },
+      {
+        "race": 48,
+        "spell": 672,
+        "comment": "Language Dwarven",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 48,
+        "rank": 0,
+        "skill": 98,
+        "comment": "Language Common",
+        "classMask": 0
+      },
+      {
+        "race": 48,
+        "rank": 0,
+        "skill": 111,
+        "comment": "Language Dwarven",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "33697": "Blood Fury",
+      "33702": "Blood Fury",
+      "110700": "Azerite Surge",
+      "110704": "Titan-Wrought Frame",
+      "110705": "Wide-Eyed Wonder",
+      "110706": "Hyper Productive",
+      "110707": "Ingest Minerals",
+      "110708": "Quiet Contemplation"
+    }
+  },
+  {
+    "race_id": 49,
+    "name": "Earthen",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 2,
+    "display_ids": [
+      60036,
+      60037
+    ],
+    "script_grants": [
+      110700,
+      110704,
+      110705,
+      110706,
+      110707,
+      110708
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110700,
+      110704,
+      110705,
+      110706,
+      110707,
+      110708
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 49,
+        "spell": 669,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 49,
+        "rank": 0,
+        "skill": 109,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110700": "Azerite Surge",
+      "110704": "Titan-Wrought Frame",
+      "110705": "Wide-Eyed Wonder",
+      "110706": "Hyper Productive",
+      "110707": "Ingest Minerals",
+      "110708": "Quiet Contemplation"
+    }
+  },
+  {
+    "race_id": 50,
+    "name": "Haranir",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 4,
+    "display_ids": [
+      60038,
+      60039
+    ],
+    "script_grants": [
+      110720,
+      110723,
+      110724,
+      110725,
+      110726
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      33697,
+      33702
+    ],
+    "racial_spell_ids": [
+      33697,
+      33702,
+      110720,
+      110723,
+      110724,
+      110725,
+      110726
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 50,
+        "spell": 668,
+        "comment": "Language Common",
+        "classMask": 0
+      },
+      {
+        "race": 50,
+        "spell": 671,
+        "comment": "Language Darnassian",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 50,
+        "rank": 0,
+        "skill": 98,
+        "comment": "Language Common",
+        "classMask": 0
+      },
+      {
+        "race": 50,
+        "rank": 0,
+        "skill": 113,
+        "comment": "Language Darnassian",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "33697": "Blood Fury",
+      "33702": "Blood Fury",
+      "110720": "Thorn Bloom",
+      "110723": "Lash Out",
+      "110724": "Subterranean Predator",
+      "110725": "One with Nature",
+      "110726": "Rootwalking"
+    }
+  },
+  {
+    "race_id": 51,
+    "name": "Haranir",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 8,
+    "display_ids": [
+      60038,
+      60039
+    ],
+    "script_grants": [
+      110720,
+      110723,
+      110724,
+      110725,
+      110726
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110720,
+      110723,
+      110724,
+      110725,
+      110726
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 51,
+        "spell": 669,
+        "comment": "Language Orcish",
+        "classMask": 0
+      },
+      {
+        "race": 51,
+        "spell": 7341,
+        "comment": "Language Troll",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 51,
+        "rank": 0,
+        "skill": 109,
+        "comment": "Language Orcish",
+        "classMask": 0
+      },
+      {
+        "race": 51,
+        "rank": 0,
+        "skill": 315,
+        "comment": "Language Troll",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110720": "Thorn Bloom",
+      "110723": "Lash Out",
+      "110724": "Subterranean Predator",
+      "110725": "One with Nature",
+      "110726": "Rootwalking"
+    }
+  },
+  {
+    "race_id": 52,
+    "name": "High Order Skyborne",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 13,
+    "display_ids": [
+      60044,
+      60045
+    ],
+    "script_grants": [
+      110760,
+      110761,
+      110762,
+      110763,
+      110764,
+      110765,
+      110766
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      110005,
+      110006
+    ],
+    "racial_spell_ids": [
+      110005,
+      110006,
+      110760,
+      110761,
+      110762,
+      110763,
+      110764,
+      110765,
+      110766
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110005": "Quel’dorei Meditation",
+      "110006": "Swiftness of the Rangers",
+      "110760": "Skyborne Wings",
+      "110761": "Skyborne Glide",
+      "110762": "Edict of the High Order",
+      "110763": "Ordered Magic",
+      "110764": "Ordered Magic",
+      "110765": "Disciplined Mind",
+      "110766": "Arcane Scholarship"
+    }
+  },
+  {
+    "race_id": 53,
+    "name": "Windshaper Skyborne",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 10,
+    "display_ids": [
+      60044,
+      60045
+    ],
+    "script_grants": [
+      110760,
+      110761,
+      110767,
+      110768,
+      110769,
+      110770
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110760,
+      110761,
+      110767,
+      110768,
+      110769,
+      110770
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [],
+    "custom_start_skills": [],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110760": "Skyborne Wings",
+      "110761": "Skyborne Glide",
+      "110767": "Gale Step",
+      "110768": "Windborne Reflexes",
+      "110769": "Swift as the Gale",
+      "110770": "Stormborn"
+    }
+  },
+  {
+    "race_id": 54,
+    "name": "Naga",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 10,
+    "display_ids": [
+      60048,
+      60049
+    ],
+    "script_grants": [
+      110820,
+      110821,
+      110822,
+      110823,
+      110980
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110820,
+      110821,
+      110822,
+      110823,
+      110980
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 54,
+        "spell": 669,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 54,
+        "rank": 0,
+        "skill": 109,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110820": "Coiling Grasp",
+      "110821": "Highborne Legacy",
+      "110822": "Children of the Depths",
+      "110823": "Serpentine Weaponry",
+      "110980": "Scaled Hide"
+    }
+  },
+  {
+    "race_id": 55,
+    "name": "Tuskarr",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 3,
+    "display_ids": [
+      60050,
+      60071
+    ],
+    "script_grants": [
+      110840,
+      110841,
+      110842,
+      110843,
+      110981
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      33697,
+      33702
+    ],
+    "racial_spell_ids": [
+      33697,
+      33702,
+      110840,
+      110841,
+      110842,
+      110843,
+      110981
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 55,
+        "spell": 668,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 55,
+        "rank": 0,
+        "skill": 98,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "33697": "Blood Fury",
+      "33702": "Blood Fury",
+      "110840": "Harpoon Toss",
+      "110841": "Thick Blubber",
+      "110842": "Snowstrider",
+      "110843": "Hearty Meals",
+      "110981": "Master Angler"
+    }
+  },
+  {
+    "race_id": 56,
+    "name": "Vrykul",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 1,
+    "display_ids": [
+      60051,
+      60060
+    ],
+    "script_grants": [
+      110860,
+      110861,
+      110862,
+      110863,
+      110864
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20600
+    ],
+    "racial_spell_ids": [
+      20600,
+      110860,
+      110861,
+      110862,
+      110863,
+      110864
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 56,
+        "spell": 668,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 56,
+        "rank": 0,
+        "skill": 98,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20600": "Perception",
+      "110860": "Runic Warcry",
+      "110861": "Giant's Blood",
+      "110862": "Runic Heritage",
+      "110863": "Iron Will",
+      "110864": "Runecarver"
+    }
+  },
+  {
+    "race_id": 57,
+    "name": "Vrykul",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 2,
+    "display_ids": [
+      60051,
+      60060
+    ],
+    "script_grants": [
+      110860,
+      110861,
+      110862,
+      110863,
+      110864
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110860,
+      110861,
+      110862,
+      110863,
+      110864
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 57,
+        "spell": 669,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 57,
+        "rank": 0,
+        "skill": 109,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110860": "Runic Warcry",
+      "110861": "Giant's Blood",
+      "110862": "Runic Heritage",
+      "110863": "Iron Will",
+      "110864": "Runecarver"
+    }
+  },
+  {
+    "race_id": 58,
+    "name": "Forgotten",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 1,
+    "display_ids": [
+      60052,
+      0
+    ],
+    "script_grants": [
+      110880,
+      110881,
+      110882,
+      110883,
+      110884
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20600
+    ],
+    "racial_spell_ids": [
+      20600,
+      110880,
+      110881,
+      110882,
+      110883,
+      110884
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 58,
+        "spell": 668,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 58,
+        "rank": 0,
+        "skill": 98,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20600": "Perception",
+      "110880": "Desperate Flight",
+      "110881": "Wiry Frame",
+      "110882": "Nervous Energy",
+      "110883": "Make Do",
+      "110884": "Field Dressing"
+    }
+  },
+  {
+    "race_id": 59,
+    "name": "Forgotten",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 2,
+    "display_ids": [
+      60052,
+      0
+    ],
+    "script_grants": [
+      110880,
+      110881,
+      110882,
+      110883,
+      110884
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110880,
+      110881,
+      110882,
+      110883,
+      110884
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 59,
+        "spell": 669,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 59,
+        "rank": 0,
+        "skill": 109,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110880": "Desperate Flight",
+      "110881": "Wiry Frame",
+      "110882": "Nervous Energy",
+      "110883": "Make Do",
+      "110884": "Field Dressing"
+    }
+  },
+  {
+    "race_id": 60,
+    "name": "Ogre",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 2,
+    "display_ids": [
+      60053,
+      60054
+    ],
+    "script_grants": [
+      110900,
+      110901,
+      110902,
+      110903,
+      110904
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110900,
+      110901,
+      110902,
+      110903,
+      110904
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 60,
+        "spell": 669,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 60,
+        "rank": 0,
+        "skill": 109,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110900": "Headbutt",
+      "110901": "Brute Strength",
+      "110902": "Thick Hide",
+      "110903": "Heavy Hands",
+      "110904": "Ogre Cuisine"
+    }
+  },
+  {
+    "race_id": 61,
+    "name": "Ogre",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 1,
+    "display_ids": [
+      60053,
+      60054
+    ],
+    "script_grants": [
+      110900,
+      110901,
+      110902,
+      110903,
+      110904
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20600
+    ],
+    "racial_spell_ids": [
+      20600,
+      110900,
+      110901,
+      110902,
+      110903,
+      110904
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 61,
+        "spell": 668,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 61,
+        "rank": 0,
+        "skill": 98,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20600": "Perception",
+      "110900": "Headbutt",
+      "110901": "Brute Strength",
+      "110902": "Thick Hide",
+      "110903": "Heavy Hands",
+      "110904": "Ogre Cuisine"
+    }
+  },
+  {
+    "race_id": 62,
+    "name": "Sethrak",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 1,
+    "display_ids": [
+      60057,
+      60058
+    ],
+    "script_grants": [
+      110800,
+      110801,
+      110802,
+      110803,
+      110980
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20600
+    ],
+    "racial_spell_ids": [
+      20600,
+      110800,
+      110801,
+      110802,
+      110803,
+      110980
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 62,
+        "spell": 668,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 62,
+        "rank": 0,
+        "skill": 98,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20600": "Perception",
+      "110800": "Static Coil",
+      "110801": "Serpentine Reflexes",
+      "110802": "Stormblood",
+      "110803": "Venomous Constitution",
+      "110980": "Scaled Hide"
+    }
+  },
+  {
+    "race_id": 63,
+    "name": "Gnoll",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 2,
+    "display_ids": [
+      60059,
+      0
+    ],
+    "script_grants": [
+      110920,
+      110921,
+      110922,
+      110923,
+      110924
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110920,
+      110921,
+      110922,
+      110923,
+      110924
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 63,
+        "spell": 669,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 63,
+        "rank": 0,
+        "skill": 109,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110920": "Savage Bite",
+      "110921": "Pack Hunter",
+      "110922": "Keen Nose",
+      "110923": "Scavenger",
+      "110924": "Scrappy"
+    }
+  },
+  {
+    "race_id": 64,
+    "name": "Saberon",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 2,
+    "display_ids": [
+      60061,
+      0
+    ],
+    "script_grants": [
+      110940,
+      110942,
+      110943,
+      110944,
+      110946
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [],
+    "racial_spell_ids": [
+      110940,
+      110942,
+      110943,
+      110944,
+      110946
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 64,
+        "spell": 669,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 64,
+        "rank": 0,
+        "skill": 109,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "110940": "Pounce",
+      "110942": "Predatory Instincts",
+      "110943": "Feline Agility",
+      "110944": "Hunter's Pace",
+      "110946": "Thick Fur"
+    }
+  },
+  {
+    "race_id": 65,
+    "name": "Jinyu",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 1,
+    "display_ids": [
+      60062,
+      60063
+    ],
+    "script_grants": [
+      110960,
+      110961,
+      110962,
+      110963,
+      110981
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      20600
+    ],
+    "racial_spell_ids": [
+      20600,
+      110960,
+      110961,
+      110962,
+      110963,
+      110981
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 65,
+        "spell": 668,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 65,
+        "rank": 0,
+        "skill": 98,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20600": "Perception",
+      "110960": "Tidal Mend",
+      "110961": "Flow of the River",
+      "110962": "Fluid Footwork",
+      "110963": "Riverborn",
+      "110981": "Master Angler"
+    }
+  },
+  {
+    "race_id": 66,
+    "name": "Drakkin",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 1,
+    "display_ids": [
+      60070,
+      60064
+    ],
+    "script_grants": [
+      110300,
+      110301,
+      110302,
+      110303,
+      110304,
+      110305,
+      110306,
+      110307,
+      110308,
+      110309,
+      110316,
+      110318
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      110300,
+      110301,
+      110302,
+      110303,
+      110304,
+      110305,
+      110306,
+      110307,
+      110308,
+      110309,
+      110316,
+      110318
+    ],
+    "racial_spell_ids": [
+      110300,
+      110301,
+      110302,
+      110303,
+      110304,
+      110305,
+      110306,
+      110307,
+      110308,
+      110309,
+      110316,
+      110318
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 66,
+        "spell": 668,
+        "comment": "Language Common",
+        "classMask": 0
+      },
+      {
+        "race": 66,
+        "spell": 110300,
+        "comment": "Racial: Chromatic Ancestry",
+        "classMask": 0
+      },
+      {
+        "race": 66,
+        "spell": 110301,
+        "comment": "Racial: Ruby Blood",
+        "classMask": 0
+      },
+      {
+        "race": 66,
+        "spell": 110302,
+        "comment": "Racial: Azure Blood",
+        "classMask": 0
+      },
+      {
+        "race": 66,
+        "spell": 110303,
+        "comment": "Racial: Emerald Blood",
+        "classMask": 0
+      },
+      {
+        "race": 66,
+        "spell": 110304,
+        "comment": "Racial: Bronze Blood",
+        "classMask": 0
+      },
+      {
+        "race": 66,
+        "spell": 110305,
+        "comment": "Racial: Obsidian Blood",
+        "classMask": 0
+      },
+      {
+        "race": 66,
+        "spell": 110306,
+        "comment": "Racial: Twilight Blood",
+        "classMask": 0
+      },
+      {
+        "race": 66,
+        "spell": 110307,
+        "comment": "Racial: Infinite Blood",
+        "classMask": 0
+      },
+      {
+        "race": 66,
+        "spell": 110308,
+        "comment": "Racial: Frostbrood Blood",
+        "classMask": 0
+      },
+      {
+        "race": 66,
+        "spell": 110309,
+        "comment": "Racial: Lesser Dragonbreath",
+        "classMask": 0
+      },
+      {
+        "race": 66,
+        "spell": 110316,
+        "comment": "Racial: Drakkin Together Strong",
+        "classMask": 0
+      },
+      {
+        "race": 66,
+        "spell": 110318,
+        "comment": "Racial: Ancient Broodblood",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 66,
+        "rank": 0,
+        "skill": 98,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [
+      {
+        "race": 66,
+        "spell": 20597,
+        "comment": "Human Sword Specialization"
+      },
+      {
+        "race": 66,
+        "spell": 20598,
+        "comment": "Human The Human Spirit"
+      },
+      {
+        "race": 66,
+        "spell": 20599,
+        "comment": "Human Diplomacy"
+      },
+      {
+        "race": 66,
+        "spell": 20600,
+        "comment": "Human Perception"
+      },
+      {
+        "race": 66,
+        "spell": 20864,
+        "comment": "Human Mace Specialization"
+      },
+      {
+        "race": 66,
+        "spell": 58985,
+        "comment": "Human Perception"
+      },
+      {
+        "race": 66,
+        "spell": 59752,
+        "comment": "Human Every Man for Himself"
+      }
+    ],
+    "excluded_start_skills": [
+      {
+        "race": 66,
+        "skill": 754,
+        "comment": "Human Racial"
+      }
+    ],
+    "spell_names": {
+      "110300": "Chromatic Ancestry",
+      "110301": "Ruby Blood",
+      "110302": "Azure Blood",
+      "110303": "Emerald Blood",
+      "110304": "Bronze Blood",
+      "110305": "Obsidian Blood",
+      "110306": "Twilight Blood",
+      "110307": "Infinite Blood",
+      "110308": "Frostbrood Blood",
+      "110309": "Lesser Dragonbreath",
+      "110316": "Drakkin Together Strong",
+      "110318": "Ancient Broodblood"
+    },
+    "conditional_racials": {
+      "male_running_wild_riding_tiers": [
+        110050,
+        110051
+      ]
+    }
+  },
+  {
+    "race_id": 67,
+    "name": "Drakkin",
+    "faction": "horde",
+    "effective_playable": false,
+    "listed_in_registry": false,
+    "legacy_mask_race": 2,
+    "display_ids": [
+      60065,
+      60065
+    ],
+    "script_grants": [
+      110300,
+      110301,
+      110302,
+      110303,
+      110304,
+      110305,
+      110306,
+      110307,
+      110308,
+      110309,
+      110316,
+      110318
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      110300,
+      110301,
+      110302,
+      110303,
+      110304,
+      110305,
+      110306,
+      110307,
+      110308,
+      110309,
+      110316,
+      110318
+    ],
+    "racial_spell_ids": [
+      110300,
+      110301,
+      110302,
+      110303,
+      110304,
+      110305,
+      110306,
+      110307,
+      110308,
+      110309,
+      110316,
+      110318
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 67,
+        "spell": 669,
+        "comment": "Language Orcish",
+        "classMask": 0
+      },
+      {
+        "race": 67,
+        "spell": 110300,
+        "comment": "Racial: Chromatic Ancestry",
+        "classMask": 0
+      },
+      {
+        "race": 67,
+        "spell": 110301,
+        "comment": "Racial: Ruby Blood",
+        "classMask": 0
+      },
+      {
+        "race": 67,
+        "spell": 110302,
+        "comment": "Racial: Azure Blood",
+        "classMask": 0
+      },
+      {
+        "race": 67,
+        "spell": 110303,
+        "comment": "Racial: Emerald Blood",
+        "classMask": 0
+      },
+      {
+        "race": 67,
+        "spell": 110304,
+        "comment": "Racial: Bronze Blood",
+        "classMask": 0
+      },
+      {
+        "race": 67,
+        "spell": 110305,
+        "comment": "Racial: Obsidian Blood",
+        "classMask": 0
+      },
+      {
+        "race": 67,
+        "spell": 110306,
+        "comment": "Racial: Twilight Blood",
+        "classMask": 0
+      },
+      {
+        "race": 67,
+        "spell": 110307,
+        "comment": "Racial: Infinite Blood",
+        "classMask": 0
+      },
+      {
+        "race": 67,
+        "spell": 110308,
+        "comment": "Racial: Frostbrood Blood",
+        "classMask": 0
+      },
+      {
+        "race": 67,
+        "spell": 110309,
+        "comment": "Racial: Lesser Dragonbreath",
+        "classMask": 0
+      },
+      {
+        "race": 67,
+        "spell": 110316,
+        "comment": "Racial: Drakkin Together Strong",
+        "classMask": 0
+      },
+      {
+        "race": 67,
+        "spell": 110318,
+        "comment": "Racial: Ancient Broodblood",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 67,
+        "rank": 0,
+        "skill": 109,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [
+      {
+        "race": 67,
+        "spell": 20572,
+        "comment": "Orc Blood Fury"
+      },
+      {
+        "race": 67,
+        "spell": 20573,
+        "comment": "Orc Hardiness"
+      },
+      {
+        "race": 67,
+        "spell": 20574,
+        "comment": "Orc Axe Specialization"
+      },
+      {
+        "race": 67,
+        "spell": 20575,
+        "comment": "Orc Command"
+      },
+      {
+        "race": 67,
+        "spell": 20576,
+        "comment": "Orc Command"
+      },
+      {
+        "race": 67,
+        "spell": 21563,
+        "comment": "Orc Command"
+      },
+      {
+        "race": 67,
+        "spell": 33697,
+        "comment": "Orc Blood Fury"
+      },
+      {
+        "race": 67,
+        "spell": 33702,
+        "comment": "Orc Blood Fury"
+      },
+      {
+        "race": 67,
+        "spell": 54562,
+        "comment": "Orc Command"
+      },
+      {
+        "race": 67,
+        "spell": 65222,
+        "comment": "Orc Command"
+      }
+    ],
+    "excluded_start_skills": [
+      {
+        "race": 67,
+        "skill": 125,
+        "comment": "Orc Racial"
+      }
+    ],
+    "spell_names": {
+      "110300": "Chromatic Ancestry",
+      "110301": "Ruby Blood",
+      "110302": "Azure Blood",
+      "110303": "Emerald Blood",
+      "110304": "Bronze Blood",
+      "110305": "Obsidian Blood",
+      "110306": "Twilight Blood",
+      "110307": "Infinite Blood",
+      "110308": "Frostbrood Blood",
+      "110309": "Lesser Dragonbreath",
+      "110316": "Drakkin Together Strong",
+      "110318": "Ancient Broodblood"
+    },
+    "status_note": "Retired Horde Drakkin; preserved as existing server data."
+  },
+  {
+    "race_id": 68,
+    "name": "Arakkoa",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 2,
+    "display_ids": [
+      60066,
+      60067
+    ],
+    "script_grants": [],
+    "additional_source_racials": [
+      13990001,
+      13990002,
+      13990003,
+      13990004,
+      13990005
+    ],
+    "racial_start_and_skill_candidates": [
+      20572,
+      20573,
+      20574,
+      20575,
+      20576,
+      21563,
+      33697,
+      33702,
+      54562,
+      65222,
+      13990001,
+      13990002,
+      13990003,
+      13990004,
+      13990005
+    ],
+    "racial_spell_ids": [
+      20572,
+      20573,
+      20574,
+      20575,
+      20576,
+      21563,
+      33697,
+      33702,
+      54562,
+      65222,
+      13990001,
+      13990002,
+      13990003,
+      13990004,
+      13990005
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 68,
+        "spell": 669,
+        "comment": "Language Orcish",
+        "classMask": 0
+      },
+      {
+        "race": 68,
+        "spell": 13990001,
+        "comment": "Arakkoa racial: Outcast's Curse",
+        "classMask": 0
+      },
+      {
+        "race": 68,
+        "spell": 13990002,
+        "comment": "Arakkoa racial: Feathered Descent",
+        "classMask": 0
+      },
+      {
+        "race": 68,
+        "spell": 13990003,
+        "comment": "Arakkoa racial: Lore of Skettis",
+        "classMask": 0
+      },
+      {
+        "race": 68,
+        "spell": 13990004,
+        "comment": "Arakkoa racial: Flight of the Raven",
+        "classMask": 0
+      },
+      {
+        "race": 68,
+        "spell": 13990005,
+        "comment": "Arakkoa racial: Skyward Glide",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 68,
+        "rank": 0,
+        "skill": 109,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [],
+    "excluded_start_skills": [],
+    "spell_names": {
+      "20572": "Blood Fury",
+      "20573": "Hardiness",
+      "20574": "Axe Specialization",
+      "20575": "Command",
+      "20576": "Command",
+      "21563": "Command",
+      "33697": "Blood Fury",
+      "33702": "Blood Fury",
+      "54562": "Command",
+      "65222": "Command",
+      "13990001": "Outcast's Curse",
+      "13990002": "Feathered Descent",
+      "13990003": "Lore of Skettis",
+      "13990004": "Flight of the Raven",
+      "13990005": "Skyward Glide"
+    }
+  },
+  {
+    "race_id": 69,
+    "name": "Drakonid",
+    "faction": "alliance",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 1,
+    "display_ids": [
+      60068,
+      0
+    ],
+    "script_grants": [
+      110400,
+      110404,
+      110405,
+      110406
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      110400,
+      110404,
+      110405,
+      110406
+    ],
+    "racial_spell_ids": [
+      110400,
+      110404,
+      110405,
+      110406
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 69,
+        "spell": 668,
+        "comment": "Language Common",
+        "classMask": 0
+      },
+      {
+        "race": 69,
+        "spell": 110400,
+        "comment": "Racial: Draconic Charge",
+        "classMask": 0
+      },
+      {
+        "race": 69,
+        "spell": 110404,
+        "comment": "Racial: Draconic Hide",
+        "classMask": 0
+      },
+      {
+        "race": 69,
+        "spell": 110405,
+        "comment": "Racial: Dragonkin",
+        "classMask": 0
+      },
+      {
+        "race": 69,
+        "spell": 110406,
+        "comment": "Racial: Treasure Hoarder",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 69,
+        "rank": 0,
+        "skill": 98,
+        "comment": "Language Common",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [
+      {
+        "race": 69,
+        "spell": 20597,
+        "comment": "Human Sword Specialization"
+      },
+      {
+        "race": 69,
+        "spell": 20598,
+        "comment": "Human The Human Spirit"
+      },
+      {
+        "race": 69,
+        "spell": 20599,
+        "comment": "Human Diplomacy"
+      },
+      {
+        "race": 69,
+        "spell": 20600,
+        "comment": "Human Perception"
+      },
+      {
+        "race": 69,
+        "spell": 20864,
+        "comment": "Human Mace Specialization"
+      },
+      {
+        "race": 69,
+        "spell": 58985,
+        "comment": "Human Perception"
+      },
+      {
+        "race": 69,
+        "spell": 59752,
+        "comment": "Human Every Man for Himself"
+      }
+    ],
+    "excluded_start_skills": [
+      {
+        "race": 69,
+        "skill": 754,
+        "comment": "Human Racial"
+      }
+    ],
+    "spell_names": {
+      "110400": "Draconic Charge",
+      "110404": "Draconic Hide",
+      "110405": "Dragonkin",
+      "110406": "Treasure Hoarder"
+    }
+  },
+  {
+    "race_id": 70,
+    "name": "Drakonid",
+    "faction": "horde",
+    "effective_playable": true,
+    "listed_in_registry": true,
+    "legacy_mask_race": 2,
+    "display_ids": [
+      60069,
+      0
+    ],
+    "script_grants": [
+      110400,
+      110404,
+      110405,
+      110406
+    ],
+    "additional_source_racials": [],
+    "racial_start_and_skill_candidates": [
+      110400,
+      110404,
+      110405,
+      110406
+    ],
+    "racial_spell_ids": [
+      110400,
+      110404,
+      110405,
+      110406
+    ],
+    "withheld_racials": [],
+    "custom_start_spells": [
+      {
+        "race": 70,
+        "spell": 669,
+        "comment": "Language Orcish",
+        "classMask": 0
+      },
+      {
+        "race": 70,
+        "spell": 110400,
+        "comment": "Racial: Draconic Charge",
+        "classMask": 0
+      },
+      {
+        "race": 70,
+        "spell": 110404,
+        "comment": "Racial: Draconic Hide",
+        "classMask": 0
+      },
+      {
+        "race": 70,
+        "spell": 110405,
+        "comment": "Racial: Dragonkin",
+        "classMask": 0
+      },
+      {
+        "race": 70,
+        "spell": 110406,
+        "comment": "Racial: Treasure Hoarder",
+        "classMask": 0
+      }
+    ],
+    "custom_start_skills": [
+      {
+        "race": 70,
+        "rank": 0,
+        "skill": 109,
+        "comment": "Language Orcish",
+        "classMask": 0
+      }
+    ],
+    "excluded_start_spells": [
+      {
+        "race": 70,
+        "spell": 20572,
+        "comment": "Orc Blood Fury"
+      },
+      {
+        "race": 70,
+        "spell": 20573,
+        "comment": "Orc Hardiness"
+      },
+      {
+        "race": 70,
+        "spell": 20574,
+        "comment": "Orc Axe Specialization"
+      },
+      {
+        "race": 70,
+        "spell": 20575,
+        "comment": "Orc Command"
+      },
+      {
+        "race": 70,
+        "spell": 20576,
+        "comment": "Orc Command"
+      },
+      {
+        "race": 70,
+        "spell": 21563,
+        "comment": "Orc Command"
+      },
+      {
+        "race": 70,
+        "spell": 33697,
+        "comment": "Orc Blood Fury"
+      },
+      {
+        "race": 70,
+        "spell": 33702,
+        "comment": "Orc Blood Fury"
+      },
+      {
+        "race": 70,
+        "spell": 54562,
+        "comment": "Orc Command"
+      },
+      {
+        "race": 70,
+        "spell": 65222,
+        "comment": "Orc Command"
+      }
+    ],
+    "excluded_start_skills": [
+      {
+        "race": 70,
+        "skill": 125,
+        "comment": "Orc Racial"
+      }
+    ],
+    "spell_names": {
+      "110400": "Draconic Charge",
+      "110404": "Draconic Hide",
+      "110405": "Dragonkin",
+      "110406": "Treasure Hoarder"
+    }
+  }
+]

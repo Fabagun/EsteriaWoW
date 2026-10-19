@@ -1,0 +1,10 @@
+{
+  "verified_at_utc": "2026-10-16T04:02:57.689265+00:00",
+  "copied_live_files_hash_matched": 252,
+  "valid_wdbc_lengths": 250,
+  "world_tables_row_count_matched": 61,
+  "world_rows_count_matched": 120754,
+  "workspace_source_copies_match": true,
+  "manifest_file_count": 656,
+  "builds_or_gameplay_tests_run": false
+}

@@ -77,8 +77,8 @@ enum EContainerFields
 {
     CONTAINER_FIELD_NUM_SLOTS                 = ITEM_END + 0x0000, // Size: 1, Type: INT, Flags: PUBLIC
     CONTAINER_ALIGN_PAD                       = ITEM_END + 0x0001, // Size: 1, Type: BYTES, Flags: NONE
-    CONTAINER_FIELD_SLOT_1                    = ITEM_END + 0x0002, // Size: 72, Type: LONG, Flags: PUBLIC
-    CONTAINER_END                             = ITEM_END + 0x004A,
+    CONTAINER_FIELD_SLOT_1                    = ITEM_END + 0x0002, // Size: 508, Type: LONG, Flags: PUBLIC
+    CONTAINER_END                             = ITEM_END + 0x01FE, // Esteria: 254 GUID slots; matching client required
 };
 
 enum EUnitFields

@@ -1,0 +1,55 @@
+{
+  "race_id": 64,
+  "name": "Saberon",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 2,
+  "display_ids": [
+    60061,
+    0
+  ],
+  "script_grants": [
+    110940,
+    110942,
+    110943,
+    110944,
+    110946
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [],
+  "racial_spell_ids": [
+    110940,
+    110942,
+    110943,
+    110944,
+    110946
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 64,
+      "spell": 669,
+      "comment": "Language Orcish",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 64,
+      "rank": 0,
+      "skill": 109,
+      "comment": "Language Orcish",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "110940": "Pounce",
+    "110942": "Predatory Instincts",
+    "110943": "Feline Agility",
+    "110944": "Hunter's Pace",
+    "110946": "Thick Fur"
+  }
+}

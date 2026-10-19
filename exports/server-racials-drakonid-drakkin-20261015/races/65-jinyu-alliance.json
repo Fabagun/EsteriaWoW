@@ -1,0 +1,59 @@
+{
+  "race_id": 65,
+  "name": "Jinyu",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 1,
+  "display_ids": [
+    60062,
+    60063
+  ],
+  "script_grants": [
+    110960,
+    110961,
+    110962,
+    110963,
+    110981
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    20600
+  ],
+  "racial_spell_ids": [
+    20600,
+    110960,
+    110961,
+    110962,
+    110963,
+    110981
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 65,
+      "spell": 668,
+      "comment": "Language Common",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 65,
+      "rank": 0,
+      "skill": 98,
+      "comment": "Language Common",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "20600": "Perception",
+    "110960": "Tidal Mend",
+    "110961": "Flow of the River",
+    "110962": "Fluid Footwork",
+    "110963": "Riverborn",
+    "110981": "Master Angler"
+  }
+}

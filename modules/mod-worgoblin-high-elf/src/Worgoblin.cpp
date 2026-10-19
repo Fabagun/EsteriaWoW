@@ -21,6 +21,8 @@ enum WorgenRiding
     SPELL_RW_APPR_FEMALE     = 87841,
     SPELL_RW_JOURN_MALE      = 110010,
     SPELL_RW_JOURN_FEMALE    = 110011,
+    SPELL_RW_DRAKKIN_APPRENTICE = 110050,
+    SPELL_RW_DRAKKIN_JOURNEYMAN = 110051,
 };
 
 enum BrokenRacials : uint32
@@ -132,11 +134,17 @@ public:
 
     void OnPlayerLogin(Player* player) override { HandleWorgen(player); }
     void OnPlayerLevelChanged(Player* player, uint8 /*oldLevel*/) override { HandleWorgen(player); }
+    void OnPlayerLearnSpell(Player* player, uint32 spellId) override
+    {
+        if (spellId == SPELL_APPRENTICE_RIDING || spellId == SPELL_JOURNEYMAN_RIDING)
+            HandleWorgen(player);
+    }
 
 private:
     void HandleWorgen(Player* player)
     {
-        if (player->getRace() != RACE_WORGEN)
+        if (player->getRace() != RACE_WORGEN
+            && (player->getRace() != RACE_DRAKKIN_ALLIANCE || player->getGender() != GENDER_MALE))
             return;
 
         // riding-skill spells don't reliably show up on AC for DKs, so give them the fast RW at creation
@@ -169,6 +177,9 @@ private:
 
     uint32 GetRWSpell(Player* player, bool journeyman) const
     {
+        if (player->getRace() == RACE_DRAKKIN_ALLIANCE)
+            return journeyman ? SPELL_RW_DRAKKIN_JOURNEYMAN : SPELL_RW_DRAKKIN_APPRENTICE;
+
         bool isMale = player->getGender() == GENDER_MALE;
         if (journeyman)
             return isMale ? SPELL_RW_JOURN_MALE : SPELL_RW_JOURN_FEMALE;
@@ -198,10 +209,45 @@ private:
     }
 };
 
+class spell_drakkin_running_wild : public SpellScript
+{
+    PrepareSpellScript(spell_drakkin_running_wild);
+
+    SpellCastResult CheckForm()
+    {
+        Player* player = GetCaster()->ToPlayer();
+        if (!player || player->getRace() != RACE_DRAKKIN_ALLIANCE || player->getGender() != GENDER_MALE)
+            return SPELL_FAILED_SPELL_UNAVAILABLE;
+
+        if (player->GetShapeshiftForm() != FORM_NONE || player->getTransForm())
+            return SPELL_FAILED_NOT_SHAPESHIFT;
+
+        bool journeyman = GetSpellInfo()->Id == SPELL_RW_DRAKKIN_JOURNEYMAN;
+        uint16 riding = player->GetBaseSkillValue(SKILL_RIDING);
+        if (riding < (journeyman ? 150 : 75))
+            return SPELL_FAILED_MIN_SKILL;
+
+        return SPELL_CAST_OK;
+    }
+
+    void SheatheWeapons()
+    {
+        if (GetCaster()->HasAura(GetSpellInfo()->Id))
+            GetCaster()->SetSheath(SHEATH_STATE_UNARMED);
+    }
+
+    void Register() override
+    {
+        OnCheckCast += SpellCheckCastFn(spell_drakkin_running_wild::CheckForm);
+        AfterCast += SpellCastFn(spell_drakkin_running_wild::SheatheWeapons);
+    }
+};
+
 void Add_Worgoblin()
 {
     new worgoblin();
     RegisterSpellScript(spell_rocket_barrage);
     RegisterSpellScript(spell_broken_echo_of_the_naaru);
     new player_worgen_running_wild();
+    RegisterSpellScript(spell_drakkin_running_wild);
 }

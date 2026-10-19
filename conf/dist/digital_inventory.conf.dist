@@ -1,0 +1,9 @@
+# Copy these settings into worldserver.conf after applying the pending characters migration.
+# Disabled until matched native client/server builds have passed the documented acceptance checks.
+# Requires the default CharacterDatabase.WorkerThreads = 1 to preserve FIFO ownership writes.
+DigitalInventory.Enable = 0
+DigitalInventory.InitialSlots = 256
+DigitalInventory.MaximumSlots = 10000
+DigitalInventory.UpgradeSlots = 256
+# Copper; the default upgrade costs 100 gold. The server supplies this price to the UI.
+DigitalInventory.UpgradeCost = 1000000

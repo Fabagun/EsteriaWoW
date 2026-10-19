@@ -1,0 +1,219 @@
+{
+  "race_id": 67,
+  "name": "Drakkin",
+  "faction": "horde",
+  "effective_playable": false,
+  "listed_in_registry": false,
+  "legacy_mask_race": 2,
+  "display_ids": [
+    60065,
+    60065
+  ],
+  "script_grants": [
+    110300,
+    110301,
+    110302,
+    110303,
+    110304,
+    110305,
+    110306,
+    110307,
+    110308,
+    110309,
+    110316,
+    110318
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    110300,
+    110301,
+    110302,
+    110303,
+    110304,
+    110305,
+    110306,
+    110307,
+    110308,
+    110309,
+    110316,
+    110318
+  ],
+  "racial_spell_ids": [
+    110300,
+    110301,
+    110302,
+    110303,
+    110304,
+    110305,
+    110306,
+    110307,
+    110308,
+    110309,
+    110316,
+    110318
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 67,
+      "spell": 669,
+      "comment": "Language Orcish",
+      "classMask": 0
+    },
+    {
+      "race": 67,
+      "spell": 110300,
+      "comment": "Racial: Chromatic Ancestry",
+      "classMask": 0
+    },
+    {
+      "race": 67,
+      "spell": 110301,
+      "comment": "Racial: Ruby Blood",
+      "classMask": 0
+    },
+    {
+      "race": 67,
+      "spell": 110302,
+      "comment": "Racial: Azure Blood",
+      "classMask": 0
+    },
+    {
+      "race": 67,
+      "spell": 110303,
+      "comment": "Racial: Emerald Blood",
+      "classMask": 0
+    },
+    {
+      "race": 67,
+      "spell": 110304,
+      "comment": "Racial: Bronze Blood",
+      "classMask": 0
+    },
+    {
+      "race": 67,
+      "spell": 110305,
+      "comment": "Racial: Obsidian Blood",
+      "classMask": 0
+    },
+    {
+      "race": 67,
+      "spell": 110306,
+      "comment": "Racial: Twilight Blood",
+      "classMask": 0
+    },
+    {
+      "race": 67,
+      "spell": 110307,
+      "comment": "Racial: Infinite Blood",
+      "classMask": 0
+    },
+    {
+      "race": 67,
+      "spell": 110308,
+      "comment": "Racial: Frostbrood Blood",
+      "classMask": 0
+    },
+    {
+      "race": 67,
+      "spell": 110309,
+      "comment": "Racial: Lesser Dragonbreath",
+      "classMask": 0
+    },
+    {
+      "race": 67,
+      "spell": 110316,
+      "comment": "Racial: Drakkin Together Strong",
+      "classMask": 0
+    },
+    {
+      "race": 67,
+      "spell": 110318,
+      "comment": "Racial: Ancient Broodblood",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 67,
+      "rank": 0,
+      "skill": 109,
+      "comment": "Language Orcish",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [
+    {
+      "race": 67,
+      "spell": 20572,
+      "comment": "Orc Blood Fury"
+    },
+    {
+      "race": 67,
+      "spell": 20573,
+      "comment": "Orc Hardiness"
+    },
+    {
+      "race": 67,
+      "spell": 20574,
+      "comment": "Orc Axe Specialization"
+    },
+    {
+      "race": 67,
+      "spell": 20575,
+      "comment": "Orc Command"
+    },
+    {
+      "race": 67,
+      "spell": 20576,
+      "comment": "Orc Command"
+    },
+    {
+      "race": 67,
+      "spell": 21563,
+      "comment": "Orc Command"
+    },
+    {
+      "race": 67,
+      "spell": 33697,
+      "comment": "Orc Blood Fury"
+    },
+    {
+      "race": 67,
+      "spell": 33702,
+      "comment": "Orc Blood Fury"
+    },
+    {
+      "race": 67,
+      "spell": 54562,
+      "comment": "Orc Command"
+    },
+    {
+      "race": 67,
+      "spell": 65222,
+      "comment": "Orc Command"
+    }
+  ],
+  "excluded_start_skills": [
+    {
+      "race": 67,
+      "skill": 125,
+      "comment": "Orc Racial"
+    }
+  ],
+  "spell_names": {
+    "110300": "Chromatic Ancestry",
+    "110301": "Ruby Blood",
+    "110302": "Azure Blood",
+    "110303": "Emerald Blood",
+    "110304": "Bronze Blood",
+    "110305": "Obsidian Blood",
+    "110306": "Twilight Blood",
+    "110307": "Infinite Blood",
+    "110308": "Frostbrood Blood",
+    "110309": "Lesser Dragonbreath",
+    "110316": "Drakkin Together Strong",
+    "110318": "Ancient Broodblood"
+  },
+  "status_note": "Retired Horde Drakkin; preserved as existing server data."
+}

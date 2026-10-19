@@ -330,7 +330,7 @@ def verify():
         handle = storm.open_archive(pack.p.CLIENT_DEFAULT / pack.ASSET)
         try:
             expected = pack.p.load_json(pack.STAGE / 'report.json')['assets']
-            for key in (pack.MODEL, pack.MODEL[:-3] + '00.skin', pack.texture_path('drakonid2_blue')):
+            for key in (pack.MODEL, pack.MODEL[:-3] + '00.skin', *(pack.texture_path(s) for s in pack.SKINS)):
                 assert hashlib.sha256(storm.read(handle, key)).hexdigest() == expected[key], key
         finally:
             storm.dll.SFileCloseArchive(handle)

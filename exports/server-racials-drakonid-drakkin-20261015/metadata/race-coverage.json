@@ -1,0 +1,12 @@
+{
+  "registry_entries": 55,
+  "exported_race_entries": 59,
+  "effective_playable_entries": 56,
+  "effective_playable_missing_from_registry": [
+    29,
+    30,
+    31
+  ],
+  "racial_and_triggered_spell_records": 314,
+  "note": "Candidate racial lists are indexed from starting grants and racial skill lines; full tables and scripts are authoritative."
+}

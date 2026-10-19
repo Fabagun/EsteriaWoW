@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: Esteria Grand Satchel
+## Notes: Dedicated artwork and native item controls for Esteria's 237-slot bags.
+## Author: Esteria
+## Version: 1.0.0
+## OptionalDeps: DragonUI, ConsolePort
+## SavedVariables: EsteriaSatchelDB
+EsteriaSatchel.lua

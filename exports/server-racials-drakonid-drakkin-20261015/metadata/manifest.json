@@ -1,0 +1,3286 @@
+{
+  "generated_at_utc": "2026-10-16T04:02:57.688131+00:00",
+  "files": [
+    {
+      "path": "database/characters-schema-reference.sql",
+      "bytes": 5828,
+      "sha256": "c8b4594dcc203681b33a0e1aef58e325c8e19c9ceb2b224811c92036838381c2"
+    },
+    {
+      "path": "database/racial-support/conditions.sql",
+      "bytes": 1130,
+      "sha256": "e9bb4ae259851a25d03a809ad11de5ec07b767f3f34bff173785808e52754485"
+    },
+    {
+      "path": "database/racial-support/creature_template.sql",
+      "bytes": 2176,
+      "sha256": "80f7d77203712023f9c3a9b317037da037c3ea4e2c7565e6ba82ac4d8feb433a"
+    },
+    {
+      "path": "database/racial-support/creature_template_addon.sql",
+      "bytes": 1156,
+      "sha256": "9e6e0abfa95295fd293a85273c80f0bd962d6a92dcf32d72d207346c9415897b"
+    },
+    {
+      "path": "database/racial-support/creature_template_model.sql",
+      "bytes": 1320,
+      "sha256": "84e6ddb2086e0b7ddcd6279a2f32e30baaabfae4f8cc856dfca32d3c19f2ec43"
+    },
+    {
+      "path": "database/racial-support/disables.sql",
+      "bytes": 1126,
+      "sha256": "4c1d2f28adc46134a2fb316e3e53bdaa87c42a348606cd408acbe0a417f77ebb"
+    },
+    {
+      "path": "database/racial-support/game_tele.sql",
+      "bytes": 2807,
+      "sha256": "1d9adf4c9936e300c46bd30d4098d991deeef548db0166894bfbfdeb223c2a25"
+    },
+    {
+      "path": "database/racial-support/gameobject_template.sql",
+      "bytes": 4175,
+      "sha256": "8d6e70f90dde6be95fd92f63b3b2366be83fa6c20ed4b9a0a225e16b2f237ca0"
+    },
+    {
+      "path": "database/racial-support/gameobject_template_addon.sql",
+      "bytes": 1833,
+      "sha256": "d3bc903d7c7053a4a279b5f1703a26d9b0a943c198e17a458a091bbdf78c88fc"
+    },
+    {
+      "path": "database/racial-support/item_template.sql",
+      "bytes": 3691,
+      "sha256": "6987ef1692f8d20ea89251f787afc075895529e16cb2b4acb3753a2b47ca5a81"
+    },
+    {
+      "path": "database/shared-world-data.sql",
+      "bytes": 54643956,
+      "sha256": "f06d5ddf2dfd719749f5ea2a100221080c453ce84bf03db2fd260ef24909c0bd"
+    },
+    {
+      "path": "database/shared-world-schema.sql",
+      "bytes": 87144,
+      "sha256": "316ad1e4bd6bd504b975af5d5bb1153f20c23bba3d992301316f06b46e5bf2e8"
+    },
+    {
+      "path": "drakkin-drakonid/database/barbershopstyle_dbc.sql",
+      "bytes": 1148,
+      "sha256": "85a8fe19e11d7162c21483c1cf0b34cf7ae186beb33c5b06a48a5329b4742abf"
+    },
+    {
+      "path": "drakkin-drakonid/database/charsections_dbc.sql",
+      "bytes": 1142,
+      "sha256": "b53cafedae2bfc568541b0326749e9cbd3e92579d98e7670bf17a9e9c14ef56f"
+    },
+    {
+      "path": "drakkin-drakonid/database/charstartoutfit_dbc.sql",
+      "bytes": 1148,
+      "sha256": "7c7b37212c93ddd2d04046c5293c682da35c9cbefcc743870f31966b7a2c5deb"
+    },
+    {
+      "path": "drakkin-drakonid/database/chrraces_dbc.sql",
+      "bytes": 8368,
+      "sha256": "13175379bbd72b7215994907f70a11d5b15c1126d2c3513127e1f50ac250f705"
+    },
+    {
+      "path": "drakkin-drakonid/database/creaturedisplayinfo_dbc.sql",
+      "bytes": 1156,
+      "sha256": "c07251575ded01a81bc6ad3ba177f8a1d305db84dd5c4db1ceacf8756834059d"
+    },
+    {
+      "path": "drakkin-drakonid/database/creaturemodeldata_dbc.sql",
+      "bytes": 1152,
+      "sha256": "061505608b6d8670fa745617898e8d9f846d1161ac3390a5dbf252e99304d5a6"
+    },
+    {
+      "path": "drakkin-drakonid/database/custom_race_start_skill.sql",
+      "bytes": 1662,
+      "sha256": "819a7954d5ebdef713e84a1becb8fb544857e3df200883e5f29a67887dc85d06"
+    },
+    {
+      "path": "drakkin-drakonid/database/custom_race_start_skill_exclude.sql",
+      "bytes": 1596,
+      "sha256": "2e3b72df7949f86c3c5c51aa67a04aa6e7fec3719a932fbf8995ccecce051d6f"
+    },
+    {
+      "path": "drakkin-drakonid/database/custom_race_start_spell.sql",
+      "bytes": 5710,
+      "sha256": "d6e2f59bbcad2fd07d6766cb7ba4075e7bad4dfb76f27219cb0d57b44c685eb5"
+    },
+    {
+      "path": "drakkin-drakonid/database/custom_race_start_spell_exclude.sql",
+      "bytes": 5028,
+      "sha256": "1c94a44658b663b120ea5fd7bf483e19a779810a1d739c4588a5ebd770371e53"
+    },
+    {
+      "path": "drakkin-drakonid/database/player_race_stats.sql",
+      "bytes": 1632,
+      "sha256": "58723ba0ff525d3499112f620c99d9c8e44af0448cbd00ea316fc91af9f4ea0f"
+    },
+    {
+      "path": "drakkin-drakonid/database/player_totem_model.sql",
+      "bytes": 1842,
+      "sha256": "0383b3523ebec1562904c5dc138dbaf466d6813b415071e022ce2d755597d42f"
+    },
+    {
+      "path": "drakkin-drakonid/database/playercreateinfo.sql",
+      "bytes": 6230,
+      "sha256": "bf306784aefef84b98b939773b72c97c073097942d4ca3cccaeb6a7d589d3b3e"
+    },
+    {
+      "path": "drakkin-drakonid/database/playercreateinfo_action.sql",
+      "bytes": 20912,
+      "sha256": "7b684d48de5afe482e48d6956d6ac8217b887c80ad9dd3c369fe6176c2da5484"
+    },
+    {
+      "path": "drakkin-drakonid/database/playercreateinfo_item.sql",
+      "bytes": 1152,
+      "sha256": "8629c4eb06e28a19a20ddbd8cafeb7d53fd24fc53fa6c20d1824de132777c662"
+    },
+    {
+      "path": "drakkin-drakonid/database/schema.sql",
+      "bytes": 40415,
+      "sha256": "ed608e05455c947f8ce44f4d3f23d5df2297608824331b3bfc4f7f60326df022"
+    },
+    {
+      "path": "drakkin-drakonid/database/spell_dbc.sql",
+      "bytes": 166735,
+      "sha256": "3c9325e6b7d58f58aa2a3d66247d95704fbf2fb6f9bce818d28d66e1b888ae2f"
+    },
+    {
+      "path": "drakkin-drakonid/database/spell_proc.sql",
+      "bytes": 1461,
+      "sha256": "0347ef39e9362fd949f3c7afe7276363ed62a5c450d27a11e607709b68dc4821"
+    },
+    {
+      "path": "drakkin-drakonid/database/spell_script_names.sql",
+      "bytes": 3425,
+      "sha256": "a395efb7a581a9805c725803c4ab1d151351a4e2e87666418cd71c37954963a0"
+    },
+    {
+      "path": "drakkin-drakonid/race-66.json",
+      "bytes": 3844,
+      "sha256": "2a0b07a56b594f9317c0b4e829f0966b153adb8a0b0ca3efc68f2038b17c8613"
+    },
+    {
+      "path": "drakkin-drakonid/race-67.json",
+      "bytes": 4019,
+      "sha256": "24c689b7cacb74ebb9e714771c6827fa15ed4f6fb845166cecd3e0e846a45931"
+    },
+    {
+      "path": "drakkin-drakonid/race-69.json",
+      "bytes": 2214,
+      "sha256": "27cebef8bc5ae455f4e1acf682c43bc002ba5bf3a01d3ba73241b66ba04530e9"
+    },
+    {
+      "path": "drakkin-drakonid/race-70.json",
+      "bytes": 2414,
+      "sha256": "39899f17c7e2d09cb3f82fd17af930b3aa32979a8f3c40f8ec390ff92b6e33d1"
+    },
+    {
+      "path": "drakkin-drakonid/README.md",
+      "bytes": 1478,
+      "sha256": "a7236d6c871f11021cc5897efe89513ab4db6df22693026be16863e1ba51b84c"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_characters/rev_1790216655046269000.sql",
+      "bytes": 1616,
+      "sha256": "707bc993efe8eda3b0d355573760a0dbd21812e4fdf3fb8eff3f8baf29dad757"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_characters/rev_20260930004000000.sql",
+      "bytes": 1069,
+      "sha256": "62efb0bf5d7bc68df1dc5d565728eec1ac03d963f8172ff739d410288ad8e822"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_characters/rev_20261001006000000.sql",
+      "bytes": 159,
+      "sha256": "079c2145a5f109b2db418cd50b8473a80a894cfee09757ff3c9d33ded6c85575"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_characters/rev_20261002200000000.sql",
+      "bytes": 720,
+      "sha256": "dd2da0b01d0f9f4c853a2a78cb92417dc093e77ecf9a7facb9c9693acf34ff0b"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_characters/rev_20261002220000000.sql",
+      "bytes": 582,
+      "sha256": "c3f55b7b252694207fe2db5363c9d2a5048ae5120f1b56fbdefd1b0c7de10546"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_characters/rev_20261015020000000_tarasek_drakkin_male.sql",
+      "bytes": 414,
+      "sha256": "3cfc6fc972919cb6179193b0849a28567fefc2d4451c14b62324cec7b117dbdf"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_1788441207874.sql",
+      "bytes": 178,
+      "sha256": "129edc30ecdc5ef82cf28a4823135435291a80874696b5466a1dc1ed356a68fa"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_1788470834187296400.sql",
+      "bytes": 1244,
+      "sha256": "9f80a57fa62458eb54469b9e6063cce6ac186b50b085148b37c32aeec973feda"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_1788475312394443500.sql",
+      "bytes": 961,
+      "sha256": "1abce38374b04e65c9923393493b93eb9acdd5fa9f391c7dee6a57db61e5a2b5"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_1788640000000000000.sql",
+      "bytes": 479320,
+      "sha256": "00a881dcad98ae3cf635e80912db4930a2a6695bf511a68d1f570febff536dd0"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_1788720000000000000.sql",
+      "bytes": 8293,
+      "sha256": "90dbabb75e560a3df683697cc66ad8eead25647177f0657d508f5123fc2c02b3"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_1788800000000000000.sql",
+      "bytes": 678,
+      "sha256": "14e7770f2496d8935fb946a3f024771097a35ef2c907e00fb987a2b16f91e6f8"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_1789409288614_vulpera_client_prefix.sql",
+      "bytes": 128,
+      "sha256": "377846f2ebdd9a663108defddfaf2bfdd0dd75813034ff0623a20d84a5a2ddb9"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_1791272504791411800.sql",
+      "bytes": 2069,
+      "sha256": "f4876dd9ce6ceac2e8bbf2696f506dd5cafde24cb088707191acb20c4f7c614c"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20260903110203150.sql",
+      "bytes": 6008,
+      "sha256": "c8113ab2a6197fe226fb4d61404c231b64aebabb8de56cfca0ece84b7e1fc2ab"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20260907155900277.sql",
+      "bytes": 2712,
+      "sha256": "14569c9bfd466649de1cbdc82755037c876c4ed62fa23e43de32f4b1dbf97860"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20260929001000000.sql",
+      "bytes": 1642,
+      "sha256": "315941b5af6763f24dde75a704761fd7750eee375aebaa0de63c5971843042ed"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20260929002000000.sql",
+      "bytes": 2890,
+      "sha256": "cdfd42972fb8aa30d9222e9729d02721ad4e46d527d046cb41b15f6c1f870366"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20260930003000000.sql",
+      "bytes": 1670,
+      "sha256": "0d2fa169c6edcbd3a79fbe47d4755b0a96f57b08ec175e34c5d8f909c985da97"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261001005000000.sql",
+      "bytes": 1964,
+      "sha256": "5f33d67f5fc27bac50a1ea543a58b1e6c45834d66a1f781f2aa5ee17316480ff"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261001006000000.sql",
+      "bytes": 2014,
+      "sha256": "95ad496132edae260abaaff3909ed1401f6cec005feef539ef0b78d7a1f718af"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261001100000000.sql",
+      "bytes": 3718,
+      "sha256": "a66b73600278b485fa0183ca7ac440a4a17aff4a1c59a983d66a6b1d26687ad1"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261002120000000.sql",
+      "bytes": 3756,
+      "sha256": "ae3ed69943c3e22071c68b7309dbaf05ae59eca75be9d4853fd353b5569e8ba9"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261002230000000.sql",
+      "bytes": 10278,
+      "sha256": "8e44cbcdfb55eccb46dab50814137310169a1b20a293661d02b220c7a95ee2da"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261004080446877.sql",
+      "bytes": 4393,
+      "sha256": "5240a6798f1132b986ef51260cd28db292270637ea64184aa6c34ee5316fa35f"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261004215950242.sql",
+      "bytes": 2923,
+      "sha256": "cf12a1dd7ae4aadbd554dfb40710bcd73011e31aa72bb34b314dc964fbc094cd"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261004224000019.sql",
+      "bytes": 59057,
+      "sha256": "40202d8a6d683c4444ea883dac4e762eda1117b14837360906207cb33702e749"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261005000500001.sql",
+      "bytes": 3361,
+      "sha256": "e5ea2d538e74190dd34326f8ac444a88c79cfa3ed6ac8a87d698b083708c3be1"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261005001647632.sql",
+      "bytes": 33187,
+      "sha256": "706a3da2490da847ecc8fbacdbccc1da8f0ee2656ab0fbbc812579226ff1ae8d"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261005010000000.sql",
+      "bytes": 78971,
+      "sha256": "e43185ff1b91aeaf99c1014ccd578261f907c11a397bb250f478a037f59eb6c3"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261006230000000.sql",
+      "bytes": 2051,
+      "sha256": "ded56a91cd9ff09796e02440916e1ac27151f88ebcfa94dc7bf8fcbde2e17184"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261007013000000.sql",
+      "bytes": 2059,
+      "sha256": "2702a22c823ea224aea48feb2e9d1c2234549f18b5912a06d2925331a8eeddec"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261007040000000.sql",
+      "bytes": 2142,
+      "sha256": "ffb10cdf303a633f0c019bc8d083d19b0d3ee10d79f13607d7ce5b4a1851d1a8"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261007230000000.sql",
+      "bytes": 2059,
+      "sha256": "f3316f1fc968cd7acfd704a33bb976aeeb0f2321a0c5d26ba9a7d046d25bdd2b"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261008063000_alliance_siege_tank_mount.sql",
+      "bytes": 9023,
+      "sha256": "41a0c7f780b2ef5009d32e209762e21ab5844cb5d5a523e495e530f777833be8"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261009020000000_jinyu_alliance.sql",
+      "bytes": 2060,
+      "sha256": "2a05f9b564320b02e757edee2de329aff1d33250ab6e7dbdd5e9b815130f06f6"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261011010000000_drakkin.sql",
+      "bytes": 7238,
+      "sha256": "1b35ef9444a8bde3539c4cbe5e0e65e22669c5d9190d4d6b00ac140156f5278e"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261011020000000_drakkin_options.sql",
+      "bytes": 302,
+      "sha256": "10694cefd64ea5667e5839e7cf899f339708fb59aafddcfa310358ec40ea425d"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261011030000000_arakkoa_horde.sql",
+      "bytes": 2440,
+      "sha256": "08605ee68b2db42cd153fc833a6d5510705b9d617762717b89920788ff1144b3"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261012010000000_drakonid.sql",
+      "bytes": 6348,
+      "sha256": "46ce1822495b007e1580c17a7a1a8d1a37c0e767d82f39f3d97b5e8610f8be20"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261014030000000_remove_natures_ally.sql",
+      "bytes": 248,
+      "sha256": "edecf1f15de5e61e45ca54eeaffa9a5ec3d577a6ffe67044d3cbcc0a7df6509a"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261015020000000_tarasek_drakkin_male.sql",
+      "bytes": 184,
+      "sha256": "35f7fe03b1febf86c4b9a9219145df6078366b030e61042b26be797c57344399"
+    },
+    {
+      "path": "historical-sql/data/sql/updates/pending_db_world/rev_20261015130000000_tarasek_running_wild_worgen.sql",
+      "bytes": 2769,
+      "sha256": "6cb40458465e66908fb5d5d1c3d2dddde769e50ffbe788b754a2fefae5fe4401"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-characters/race_language_backfill.sql",
+      "bytes": 910,
+      "sha256": "58d0c8ca5e04585263120e6205dc51b8af40622478a77eba47cb1e454ef87498"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-characters/race_language_backfill_faction.sql",
+      "bytes": 851,
+      "sha256": "3a4dc2815b6e7b1e5f216075597df8c28a0e0171d70191e1100bb0e143d08e47"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-characters/race_language_backfill_full.sql",
+      "bytes": 682,
+      "sha256": "1929b8ac888835b0596cf00ef94ac7bb60abd80931e7754a43f931ff865ff33e"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/base/player_race_stats.sql",
+      "bytes": 632,
+      "sha256": "d805fc210ae29acf375df4228688a0c4c9be74a4dae9909b36a0ea9a933f7e04"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/base/playercreateinfo_skills.sql",
+      "bytes": 5161,
+      "sha256": "d99c2e224edc3c163522dd658d87f851c31c349416353e46f6ecd1026fc410fe"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/base/playercreateinfo_spell_custom.sql",
+      "bytes": 403559,
+      "sha256": "3ae18000952ca4eb27364a015db823c0886352ba332b99a0d004671c2e5b387f"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/dbc/chrraces_dbc.sql",
+      "bytes": 23206,
+      "sha256": "20a09214d896159ca61f05e0666e8f8bcbdd44f3af8c537affded61c4a856309"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/dbc/creaturedisplayinfoextra_dbc.sql",
+      "bytes": 229049,
+      "sha256": "deb78c3fc6503007f681ceafb53a832ebba7a8faba8f808850d8da8c9dc65f5e"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/dbc/skillline_dbc.sql",
+      "bytes": 2496,
+      "sha256": "4fda90a7971e383ca90908bedf8c89e17921d8b3647f58c1c5386b48e6da8d72"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/dbc/skilllineability_dbc.sql",
+      "bytes": 25479,
+      "sha256": "8fc3f54a4521f672dbc9036c5dd7b85ff2ccf6e200ba9814c1e01817a379306d"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/dbc/skillraceclassinfo_dbc.sql",
+      "bytes": 3116,
+      "sha256": "9ac62fe3e715b83d3711ce087acdda043f2d677cf056b3512857390290bd3567"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/dbc/spell_dbc.sql",
+      "bytes": 273826,
+      "sha256": "b0bb03b0048b273ced66de65f48b21e6c86f30edbcffde1a24f048ebbc458ae8"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_08_27_00.sql",
+      "bytes": 429,
+      "sha256": "57ae3b64185f494b97f2394f425fb7d3efd43359a520a5f57e903ae22f26be0f"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_08_27_01.sql",
+      "bytes": 1135,
+      "sha256": "2f5754904cdba260e0efc670777ed5c9c703b24931293a9facfb1ac4cdf907af"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_08_28_00_cars.sql",
+      "bytes": 10068,
+      "sha256": "e16ef227e176c4070a6065f7575084027414fd9b762bbff0ecc304bdf72659c0"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_08_29_races.sql",
+      "bytes": 251773,
+      "sha256": "6e51a034f4ae649ecd2e558ac948a9f12e40122198e762e0e6dccc0cdc420f53"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_08_30_race_models.sql",
+      "bytes": 8523,
+      "sha256": "aa864af3aa8d69a78875ee3f874e20c3ae616ac7823bd399ff90a49761f41f68"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_02_race_models.sql",
+      "bytes": 9820,
+      "sha256": "0952f775687f2f504a52d2ce8d842c256c70330a4c4801aa131ad3ec002d934b"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_02_race_sync.sql",
+      "bytes": 1149,
+      "sha256": "3cd609f35fc298d43ce34e4feb6df6271f5d1c8ff27b0604a1dd225760c8282e"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_03_race_scope.sql",
+      "bytes": 150,
+      "sha256": "f6b1522aa59c78ae3e8f31425a70d5e4b8e079b7e1d93bb89b42c48e00531b35"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_03_race_scope_sethrak.sql",
+      "bytes": 180,
+      "sha256": "74f69f30db28090dac57f22891e17f78bfcc7062cd7d375373cda3584412eb27"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_09_01_mounts.sql",
+      "bytes": 132333,
+      "sha256": "c32d0496665df09d90df3dc57bf703febeb95b3c354004900f59f66d990ef8ae"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_09_03_card_gameboy_mount_variants.sql",
+      "bytes": 168645,
+      "sha256": "6ba580f493f5921923c61fd3aab460ee5f2ab80cb65181ae592af67ecd88acd3"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_10_00_flying_nimbus.sql",
+      "bytes": 7563,
+      "sha256": "e4248ea867ff00e6e8b473081da616d90cad7ffec7fc24db4bea7d2358c80488"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_10_01_race_scope_corrective.sql",
+      "bytes": 5307,
+      "sha256": "3fe0864573a5e2db4576d3d41819d651f664a83b23077083d1ccfdf640145fbe"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_17_broken_race14_alignment.sql",
+      "bytes": 916,
+      "sha256": "085361d78a4ec7431efdcbec90cc22448da59a4145ae0176842b7540cda6d26b"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_17_classless_race_chassis.sql",
+      "bytes": 1263,
+      "sha256": "8c3f52ab7311a677f508603188a3f18aa5ba0d8874b18b1a9b11035bd532b22f"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_17_classless_restore_actions.sql",
+      "bytes": 622,
+      "sha256": "6bf41579c31774232a2da9184ae4f6b527d70bc0414e9d72122dc13e0a3b4bdc"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_18_00_mount_skilllineability.sql",
+      "bytes": 846,
+      "sha256": "75ad75bb070b94106e01666d3b92275ca3d74048dee6251734bd9dbfa11a13c0"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_21_00_darkfallen.sql",
+      "bytes": 10997,
+      "sha256": "ed5203359f9b778d7288eed5cec393e6b3a5684f5696b77fd385c4b59f196236"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_21_01_darkfallen_racials.sql",
+      "bytes": 4678,
+      "sha256": "6b037ed65c55d55e9f65b18bf6f5a89bed5cabcc9e70a8a3bf0b4c84ec3c8dea"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_10_14_00_drakkin_drakonid_racials.sql",
+      "bytes": 23549,
+      "sha256": "564f7a2a981cae7ac4d63f0757a3f2c010961851ed37ce73b192d6a9a82d620b"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_10_14_01_race_racials.sql",
+      "bytes": 127217,
+      "sha256": "7b7acbccf28dd50be8d842f77d60c5ecff0ca773708ab50c578d5a6e77bad1ee"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000002_race_models.sql",
+      "bytes": 8523,
+      "sha256": "aa864af3aa8d69a78875ee3f874e20c3ae616ac7823bd399ff90a49761f41f68"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000003_races_29_30.sql",
+      "bytes": 7839,
+      "sha256": "311e0a3c66daa9f0c491a4dac2fad195f5daab470ceade9190ee59992e737b83"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000004_race_display_id_band.sql",
+      "bytes": 2060,
+      "sha256": "b2d1e99744e634f9e6ad966d0dd297c92c8d3f70e99b131a52484fac7555c606"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000005_race_start_spells.sql",
+      "bytes": 189962,
+      "sha256": "afb687428e62bf241fb09ba3ac7a174e4a84f321f9e25b342820e6fcbb761366"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000006_race_modeldata.sql",
+      "bytes": 12969,
+      "sha256": "3718c97420c8b4ac2f2dc79d187b05b1463f9e5a336d843b7dd4cd39a3dd061a"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000007_race_languages.sql",
+      "bytes": 39269,
+      "sha256": "7309539c5b4f839bc56612e9f117fa5f5e883657bfeb6440d9cf4ec99dab401e"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000008_race_languages_full.sql",
+      "bytes": 14981,
+      "sha256": "207749aa362071d26c45601e39767e639918cecfb2c7dcd6bf9f804a90cdfe30"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000009_race_exploration_sound.sql",
+      "bytes": 365,
+      "sha256": "2cbad808926d97ccfa336b198a61804e3978a780a4c20daf358aa8453e749897"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000010_race_language_skills.sql",
+      "bytes": 1136,
+      "sha256": "29cda0e78399349d8121e7fcc1bed30643b4af316543e279885c9f8769f0a659"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000011_race_language_creation.sql",
+      "bytes": 1169,
+      "sha256": "4635e83746476edb37f9b19a764cf5060432bf58b9bf4bb3f6f4fdb19f8313a8"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000012_race_start_skills.sql",
+      "bytes": 9777,
+      "sha256": "4bc5b6ff8a39c89cac4e2a5f24db32004f442db52c517464a61cc306d0d62171"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000013_race_start_quests.sql",
+      "bytes": 2350,
+      "sha256": "1a633c167fe542dc569bf3f8c3c7d6d0d5a10c308a24411c5f47cb1e9e8a42fa"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000014_race_starter_outfit_skills.sql",
+      "bytes": 34087,
+      "sha256": "1bc0fe7b943be29c4322d9502e0572dc36d5159c5632ed3f3be4d72adf0567fb"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000015_alliance_illidari.sql",
+      "bytes": 7432,
+      "sha256": "62db6e37a0bc2acd9a4ea742226cb749a0881a297f06aac9d24bc5c2360dcf01"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000016_kul_tiran_common_language.sql",
+      "bytes": 565,
+      "sha256": "e1681c4d6a5e00d91f095402377e32913f08cbc1466546a5f0616f6d21fe4e5b"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000017_kul_tiran_common_only.sql",
+      "bytes": 380,
+      "sha256": "4023946d4c22c0204e54e74556a8ef18cb63e48e3d5ce2bd571915ae1f53fb73"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000018_illidari_name_alignment.sql",
+      "bytes": 409,
+      "sha256": "8ed089565f7bbd767d3f50d707044c7d0316e044a32ac944cc7134a8b7c870a8"
+    },
+    {
+      "path": "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000019_custom_language_alignment.sql",
+      "bytes": 5292,
+      "sha256": "f638d7d42f681da652c86bd9d00531c9f10eb291cc526e1c163537c04905c427"
+    },
+    {
+      "path": "historical-sql/modules/mod-worgoblin-high-elf/data/Optional/sql/dbc/chrraces_dbc.sql",
+      "bytes": 8800,
+      "sha256": "f8bc7fad8fa785aabbac998122e45d1bd8066ffc8d06bfac81c72e6778e25bf9"
+    },
+    {
+      "path": "historical-sql/modules/mod-worgoblin-high-elf/data/Optional/sql/dbc/creaturedisplayinfoextra_dbc.sql",
+      "bytes": 229049,
+      "sha256": "deb78c3fc6503007f681ceafb53a832ebba7a8faba8f808850d8da8c9dc65f5e"
+    },
+    {
+      "path": "historical-sql/modules/mod-worgoblin-high-elf/data/Optional/sql/dbc/skillline_dbc.sql",
+      "bytes": 2496,
+      "sha256": "4fda90a7971e383ca90908bedf8c89e17921d8b3647f58c1c5386b48e6da8d72"
+    },
+    {
+      "path": "historical-sql/modules/mod-worgoblin-high-elf/data/Optional/sql/dbc/skilllineability_dbc.sql",
+      "bytes": 25479,
+      "sha256": "8fc3f54a4521f672dbc9036c5dd7b85ff2ccf6e200ba9814c1e01817a379306d"
+    },
+    {
+      "path": "historical-sql/modules/mod-worgoblin-high-elf/data/Optional/sql/dbc/skillraceclassinfo_dbc.sql",
+      "bytes": 3116,
+      "sha256": "9ac62fe3e715b83d3711ce087acdda043f2d677cf056b3512857390290bd3567"
+    },
+    {
+      "path": "historical-sql/modules/mod-worgoblin-high-elf/data/Optional/sql/dbc/spell_dbc.sql",
+      "bytes": 273826,
+      "sha256": "b0bb03b0048b273ced66de65f48b21e6c86f30edbcffde1a24f048ebbc458ae8"
+    },
+    {
+      "path": "metadata/additional-support-filters.json",
+      "bytes": 6486,
+      "sha256": "58887223c20d57398d66135d5515864e45c0e95d5a86f7a24ee4370fb822ada7"
+    },
+    {
+      "path": "metadata/capture.json",
+      "bytes": 4800,
+      "sha256": "bc3781a450fb1f3ffeb7e972811fc5b8b60caa83d8fe01afc24c8fbb0fe3aa41"
+    },
+    {
+      "path": "metadata/existing-invalid-localized-string-offsets.json",
+      "bytes": 9203,
+      "sha256": "0bb5e3057ae5734b94f27819e2aa411485b5406638e66c0dcdf34a4422409c94"
+    },
+    {
+      "path": "metadata/live-dbc-sha256.txt",
+      "bytes": 29486,
+      "sha256": "16a292f4933ad15ef534bf241162a778ba47234f1249962ff71f08866bafd8ea"
+    },
+    {
+      "path": "metadata/provenance.json",
+      "bytes": 114833,
+      "sha256": "df0a12c4114f71edb28f03b54f62b325e8c8e463bc8a59fe5acf7a308efb82ac"
+    },
+    {
+      "path": "metadata/race-coverage.json",
+      "bytes": 353,
+      "sha256": "29ef4c0371c72663a7810cc087e103ecd622b914466563a2c880218224d1bafa"
+    },
+    {
+      "path": "metadata/racial-support-tables.json",
+      "bytes": 682,
+      "sha256": "266834fd65318661304e9387b1d04b47926b65e74aeeeb13dbbfc47191561ef3"
+    },
+    {
+      "path": "metadata/relevant-worldserver-settings.conf",
+      "bytes": 117,
+      "sha256": "8c031275ab6555ce112d18e6229a347ecbfc39f13696c67ed0d95bbb874a0b21"
+    },
+    {
+      "path": "metadata/server-data-mounts.json",
+      "bytes": 3342,
+      "sha256": "71e86d9e7b38981fbf1c31c76e6df3821bd15a5c938535f35b8de4a5e1035150"
+    },
+    {
+      "path": "metadata/source-capture.json",
+      "bytes": 9007,
+      "sha256": "382507b65ac42ecca914c4e825c4fe11c9846055b2b2e30db448d154b3122e3c"
+    },
+    {
+      "path": "metadata/world-column-types.json",
+      "bytes": 156040,
+      "sha256": "46286cb29648b03ddc9493e8ec4f8de41d889c28e34343af7dcb635d89094e11"
+    },
+    {
+      "path": "metadata/world-columns.json",
+      "bytes": 98817,
+      "sha256": "637ee6e6744ad933c55354b99755afa0135add1d66031b326490b17fbf9be205"
+    },
+    {
+      "path": "metadata/world-table-row-counts.json",
+      "bytes": 1774,
+      "sha256": "cc4ec25a2b963680f416afeccdda2c04ec07d728b5e051eb7bb11e2532a52472"
+    },
+    {
+      "path": "races/01-human-alliance.json",
+      "bytes": 865,
+      "sha256": "7b83ab6dd8f2e13734d84f6c5f02e12228a6b0306e9ea4aa0586bae2901c9729"
+    },
+    {
+      "path": "races/02-orc-horde.json",
+      "bytes": 964,
+      "sha256": "3203cb99ac2bd8f64516c2187bb5c4724ca5457bba4b1a0f6dbaf45844c4eac7"
+    },
+    {
+      "path": "races/03-dwarf-alliance.json",
+      "bytes": 852,
+      "sha256": "9222f8b6b13d940b66d26ac1a7fe458ca2180c87e55ae8688ca1cd224a7666b6"
+    },
+    {
+      "path": "races/04-night-elf-alliance.json",
+      "bytes": 842,
+      "sha256": "1c9aaf82e7be6ac5e8b1e656196b5b21bb3d16155a5d9fba1689cb550a789692"
+    },
+    {
+      "path": "races/05-undead-horde.json",
+      "bytes": 711,
+      "sha256": "7c02bcc1381c15a08c8456c6e6f3119ef0e93606ce83282cc6293767beb26470"
+    },
+    {
+      "path": "races/06-tauren-horde.json",
+      "bytes": 687,
+      "sha256": "0fd5043e427309e3b510516f6dc8c3d66aae774f135e3662e3cd1b54691ffa1d"
+    },
+    {
+      "path": "races/07-gnome-alliance.json",
+      "bytes": 717,
+      "sha256": "85ad14d4144084e099ce0545c526fed2c939d0c7d50318bd15fad950db8f5ba4"
+    },
+    {
+      "path": "races/08-troll-horde.json",
+      "bytes": 815,
+      "sha256": "d9b90ad31b2e3ce23a892662a2e76bfe5b83423a6a4c3531c50e04251c7f87b1"
+    },
+    {
+      "path": "races/09-goblin-horde.json",
+      "bytes": 831,
+      "sha256": "284fb30f797b34ae69be2cb1ff08f7bcd713cc302176a18ba078522128d09c71"
+    },
+    {
+      "path": "races/10-blood-elf-horde.json",
+      "bytes": 896,
+      "sha256": "ff0eac8dd66d9a63c7e5d50121027b16caed046bd512180cf2c37dfc3088e901"
+    },
+    {
+      "path": "races/11-draenei-alliance.json",
+      "bytes": 1767,
+      "sha256": "a9ed14a262cba009d5315c30fce2c826cd4d7f3787d8d6e6df2678f1e8c63b01"
+    },
+    {
+      "path": "races/12-worgen-alliance.json",
+      "bytes": 1107,
+      "sha256": "66a04979323a2a9a792cbf862b2ce4dbccee34cd519a9eef228db1bf865923bf"
+    },
+    {
+      "path": "races/13-high-elf-alliance.json",
+      "bytes": 847,
+      "sha256": "fb273b2900b6ef0a2ef536447a1c64a99f3c3ed56ae70af2a088712b7ee83384"
+    },
+    {
+      "path": "races/14-broken-horde.json",
+      "bytes": 1151,
+      "sha256": "ed3515a55f7ec47605b375c9def57ea404b5b77f3019655bc9624bf7642a55dc"
+    },
+    {
+      "path": "races/15-sethrak-horde.json",
+      "bytes": 781,
+      "sha256": "4b6874a92a455bbf4db5f8ef0a1dfff8dab93a81ef855602ee1d22d2f18e53b1"
+    },
+    {
+      "path": "races/16-eredar-horde.json",
+      "bytes": 1129,
+      "sha256": "a98ec48aa68d4326aacf08a3b24e6f2e3d765dffc377827a447036850783c4b0"
+    },
+    {
+      "path": "races/17-nightborne-horde.json",
+      "bytes": 1124,
+      "sha256": "b51025a4c3a341ed478e0fe848d4a60a34909329e07fad8cb8fa7008cd10c076"
+    },
+    {
+      "path": "races/18-pandaren-alliance.json",
+      "bytes": 1025,
+      "sha256": "498aff6fe6584bdf8e9dc411fe24d2d375e598444b252de07092995130958b65"
+    },
+    {
+      "path": "races/19-void-elf-alliance.json",
+      "bytes": 993,
+      "sha256": "beaa193e54f313be869607a4083ceea4e52c54f18ac7dea8ee5bbd97eea385dd"
+    },
+    {
+      "path": "races/20-vulpera-horde.json",
+      "bytes": 1280,
+      "sha256": "90d37bcf9a253301e3c49ff31c2aa99ffcf87d4b7b94db45d8494f9d2ccba9e9"
+    },
+    {
+      "path": "races/21-lightforged-draenei-alliance.json",
+      "bytes": 1288,
+      "sha256": "540771e22e9e9b0ce024b7bef2a889e66a17a1f0918880bf68aba6d92c5b0931"
+    },
+    {
+      "path": "races/22-zandalari-troll-horde.json",
+      "bytes": 1001,
+      "sha256": "38d9f5a9ddda258889374d41e371d11e9489f9a76e6822c0e6a7093fcb637cdf"
+    },
+    {
+      "path": "races/23-dark-iron-dwarf-alliance.json",
+      "bytes": 992,
+      "sha256": "d3b4380d13f30a97ce0637c33f9ddef653a9f8131964db67df1371eb20b19429"
+    },
+    {
+      "path": "races/24-broken-alliance.json",
+      "bytes": 494,
+      "sha256": "69d8ceb8574002921cc58b867472b5cb8d9ecc53733ea0aa514b2118aa54d3d5"
+    },
+    {
+      "path": "races/25-forsaken-alliance.json",
+      "bytes": 496,
+      "sha256": "8259d5248bd8459d994d354369f52c87e9a3527cdc9e64629d1ccd3da4949bda"
+    },
+    {
+      "path": "races/26-pandaren-horde.json",
+      "bytes": 756,
+      "sha256": "a06d70ad0186f022950f01deaec9f1f913b6670a74b2e4b67acc1547b83beaaa"
+    },
+    {
+      "path": "races/27-broken-horde.json",
+      "bytes": 491,
+      "sha256": "392c8c92a2cdb9200916f91743fceca132007e6a1c4bb2ab8bffe7484f62f1cc"
+    },
+    {
+      "path": "races/28-dracthyr-horde.json",
+      "bytes": 1244,
+      "sha256": "468ddc529202d4dd4d154803a99c9fc293e1cc416d1dead4b6992c707bc80ca7"
+    },
+    {
+      "path": "races/29-kul-tiran-alliance.json",
+      "bytes": 709,
+      "sha256": "030075b387b192d6612a19503e1aeb6610c141bbb38cb8f9e3e1c75a4c99c7a1"
+    },
+    {
+      "path": "races/30-illidari-horde.json",
+      "bytes": 843,
+      "sha256": "7afc3c98f5a34f956b551aa53e61b4f6a924ab073bbdf536b4303d9f875cc4b0"
+    },
+    {
+      "path": "races/31-illidari-alliance.json",
+      "bytes": 801,
+      "sha256": "9c9e1fe600562323d3533f9acdfac49d8ef70250939d06b0352cd1b0bc818bdd"
+    },
+    {
+      "path": "races/43-darkfallen-alliance.json",
+      "bytes": 675,
+      "sha256": "3ed840af0b4a2753cd0a883414de7b1f9f0f7b51f0c255984e05adc1e23a8191"
+    },
+    {
+      "path": "races/44-darkfallen-horde.json",
+      "bytes": 672,
+      "sha256": "a174b4784ef98ff2c932f252b3d791da4519d67d9f23379b73bb66563a5d8ad5"
+    },
+    {
+      "path": "races/45-mag-har-orc-horde.json",
+      "bytes": 2025,
+      "sha256": "9c920444746444893c04fdd01cedaacb2e12b3df4c9684187f9186a4e43362a1"
+    },
+    {
+      "path": "races/46-highmountain-tauren-horde.json",
+      "bytes": 1258,
+      "sha256": "8322767dd7ec5b8458ae6b6fdf4ea277c620228f66339c110eadfe6b17c2aedc"
+    },
+    {
+      "path": "races/47-mechagnome-alliance.json",
+      "bytes": 1270,
+      "sha256": "0d6df7099d78540e53f5d199505b7d880f2286bf8f427f543bafbfbfa82eb6c1"
+    },
+    {
+      "path": "races/48-earthen-alliance.json",
+      "bytes": 1417,
+      "sha256": "87e6d662e00761b6468047cee2678862278b542163d90a6095346ec3c5b93c83"
+    },
+    {
+      "path": "races/49-earthen-horde.json",
+      "bytes": 1080,
+      "sha256": "5d4ce579775e172a3c943ddd239c68778604d0299544d3c9488308bed3fc6ab7"
+    },
+    {
+      "path": "races/50-haranir-alliance.json",
+      "bytes": 1349,
+      "sha256": "33771ecaaf0329b6095e43e0c9b808dcc8816a8d3255edcf690fbc91128c2ece"
+    },
+    {
+      "path": "races/51-haranir-horde.json",
+      "bytes": 1238,
+      "sha256": "6a714c26f51a5c20678a3f4a2802d335d8dea80144554d69286080fa49f12045"
+    },
+    {
+      "path": "races/52-high-order-skyborne-alliance.json",
+      "bytes": 1047,
+      "sha256": "c0f02d7118ecb5eb004b77c2ad9c9503628928774837bfbbc39b6ff1ff9bbae6"
+    },
+    {
+      "path": "races/53-windshaper-skyborne-horde.json",
+      "bytes": 839,
+      "sha256": "9e52fe965df208674888ca14b4d89b46a75b3fd74170b2a561892828f5aad82d"
+    },
+    {
+      "path": "races/54-naga-horde.json",
+      "bytes": 1019,
+      "sha256": "22bd0be392d5d5b57c998905cca65e66b3c123ec5ff3faf66c32a8b0abbe7eb9"
+    },
+    {
+      "path": "races/55-tuskarr-alliance.json",
+      "bytes": 1103,
+      "sha256": "fb57963f228eac80a6b9482731dbb3cd99b9d8644dcc3f6608f202c071a9f7b4"
+    },
+    {
+      "path": "races/56-vrykul-alliance.json",
+      "bytes": 1050,
+      "sha256": "c2306e5d0365b5d1814bdcf9ff6d738757bcb45c3ba62b46284dcc97bc6f221d"
+    },
+    {
+      "path": "races/57-vrykul-horde.json",
+      "bytes": 997,
+      "sha256": "44133d10249f0daef95ba2fc13a946325749e09bc2fad65edd0a0ddd4e053d16"
+    },
+    {
+      "path": "races/58-forgotten-alliance.json",
+      "bytes": 1052,
+      "sha256": "d468531530ccc1e6649078ae513ef0e14cc208024f689f4297c45b8c893ff4af"
+    },
+    {
+      "path": "races/59-forgotten-horde.json",
+      "bytes": 999,
+      "sha256": "f92c677b67386dc9ec93f6dee8e190f8a6e784379acd0111cf1e6f9d0c06dd95"
+    },
+    {
+      "path": "races/60-ogre-horde.json",
+      "bytes": 992,
+      "sha256": "4adf85f8a8ed0c6a15a8ccb8b45798ed54fa665ae0a7c7bbfac54d607669e1fb"
+    },
+    {
+      "path": "races/61-ogre-alliance.json",
+      "bytes": 1045,
+      "sha256": "8bf30226fe2f109f657e20ad2e244f137486785a2d342bfa10e8a8ffe53377f8"
+    },
+    {
+      "path": "races/62-sethrak-alliance.json",
+      "bytes": 1065,
+      "sha256": "d82c9836e0ac1bae97478a05cc7352b3ad4e5f1030c29549707722526cd248f8"
+    },
+    {
+      "path": "races/63-gnoll-horde.json",
+      "bytes": 981,
+      "sha256": "904c1a337556e00c1938c98a8cb774906eb862e5a93a04df870a7aec5c3a5acc"
+    },
+    {
+      "path": "races/64-saberon-horde.json",
+      "bytes": 997,
+      "sha256": "64cad7434552aa17fa70ee3b1e92e2df2225b273426ed3c6fb2a0da1da3e16dd"
+    },
+    {
+      "path": "races/65-jinyu-alliance.json",
+      "bytes": 1054,
+      "sha256": "b528132f64552caf651be4100457a5c8bdf0f79a2266026d2b67c4d0b7919a58"
+    },
+    {
+      "path": "races/66-drakkin-alliance.json",
+      "bytes": 3844,
+      "sha256": "2a0b07a56b594f9317c0b4e829f0966b153adb8a0b0ca3efc68f2038b17c8613"
+    },
+    {
+      "path": "races/67-drakkin-horde.json",
+      "bytes": 4019,
+      "sha256": "24c689b7cacb74ebb9e714771c6827fa15ed4f6fb845166cecd3e0e846a45931"
+    },
+    {
+      "path": "races/68-arakkoa-horde.json",
+      "bytes": 2252,
+      "sha256": "cb45624394889a42d5d290bebc81229dc0bde878faee6601cfa2e84bec324b3a"
+    },
+    {
+      "path": "races/69-drakonid-alliance.json",
+      "bytes": 2214,
+      "sha256": "27cebef8bc5ae455f4e1acf682c43bc002ba5bf3a01d3ba73241b66ba04530e9"
+    },
+    {
+      "path": "races/70-drakonid-horde.json",
+      "bytes": 2414,
+      "sha256": "39899f17c7e2d09cb3f82fd17af930b3aa32979a8f3c40f8ec390ff92b6e33d1"
+    },
+    {
+      "path": "races/index.json",
+      "bytes": 75968,
+      "sha256": "d3a7c1f0dd9f8de080117b40bbc7702a82ddbcb3a5d46777e2f755e98a83c078"
+    },
+    {
+      "path": "races/racial-spell-records.json",
+      "bytes": 2337759,
+      "sha256": "889e48613379aba3fcde363b9f1e3a44c22773cf4068b308d2827b3bfe877e49"
+    },
+    {
+      "path": "RACES.md",
+      "bytes": 4029,
+      "sha256": "6e4a0cfc935f38c6a9edbdb4dbf1cff96c8d23f51d67b0c8a7ca2c49d7db9636"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5549,
+      "sha256": "f9150efc16dae12dd81ca56c240f5aed12eca03d97a9ff5872d945ac5ef763a6"
+    },
+    {
+      "path": "reference-tools/data/sql/base/db_world/spell_dbc.sql",
+      "bytes": 3180868,
+      "sha256": "4244b73996af464366d3ad857008b202f188e9c2247aea0931b25ba3109ef5f8"
+    },
+    {
+      "path": "reference-tools/tools/arakkoa_race_pack.py",
+      "bytes": 36435,
+      "sha256": "82168bb97c9eb6e3d635ebe0b2b501f80649b54d334ef9423c89fbdc6e831b6f"
+    },
+    {
+      "path": "reference-tools/tools/ascension_hd_migration.py",
+      "bytes": 28005,
+      "sha256": "2bc04f98ec7d417fc1356875a1e4b6e4944badcf8517bace2758c6351c54be68"
+    },
+    {
+      "path": "reference-tools/tools/cars_mount_pack.py",
+      "bytes": 88692,
+      "sha256": "8c0784131b6fad253149ecb1d7bfff54b1159cb2e11cfc2b5d66e165518c295d"
+    },
+    {
+      "path": "reference-tools/tools/creature_animation_repair.py",
+      "bytes": 27111,
+      "sha256": "3873bbf88231206114ea4f339cc0d974b0643cb18f442ca04e6294694f291c86"
+    },
+    {
+      "path": "reference-tools/tools/creature_clothing_repair.py",
+      "bytes": 4863,
+      "sha256": "a755916a36347eb6738923df6277f6c7fb604a861b952324954d856af900a3e2"
+    },
+    {
+      "path": "reference-tools/tools/creature_portrait_pack.py",
+      "bytes": 17553,
+      "sha256": "61eeb861a40d7f8346edf1afcfbb10e065b8c453f1f49f72423780701a239b51"
+    },
+    {
+      "path": "reference-tools/tools/creature_race_pack.py",
+      "bytes": 72710,
+      "sha256": "a9aee4f2e03b12d2c48ad23aec5c2d5e0dfc1ed6acc2171f86231f07671f7318"
+    },
+    {
+      "path": "reference-tools/tools/darkfallen_race_pack.py",
+      "bytes": 55855,
+      "sha256": "94c6198a31295aaf8e9babda96b9ba50cd1b1aa7e5224ec8367b249acbc4f689"
+    },
+    {
+      "path": "reference-tools/tools/derive_playable_race_portraits.py",
+      "bytes": 8375,
+      "sha256": "6e53a930efe9ea1d5f56b450b779efe2f2f8858ed2c2266ce2738310c9ce68aa"
+    },
+    {
+      "path": "reference-tools/tools/drakkin_deploy.py",
+      "bytes": 11206,
+      "sha256": "9455b7e93221960e0b1052afcdc0eb83ebc2755cdbdee98b2fecb3f4adce5fee"
+    },
+    {
+      "path": "reference-tools/tools/drakkin_drakonid_racials.py",
+      "bytes": 26778,
+      "sha256": "7c18d18d349a795c8d06f25bd0d512ec324b55aaab193950bbedd785b36d83ef"
+    },
+    {
+      "path": "reference-tools/tools/drakkin_male_portraits.py",
+      "bytes": 7666,
+      "sha256": "9544904aa992bb171011ab84a945e9375b6132f8e311b173640c28ccebcbd2da"
+    },
+    {
+      "path": "reference-tools/tools/drakkin_options_deploy.py",
+      "bytes": 9297,
+      "sha256": "5cc27762373882ace30457a322606b11c732004be29d22d24ede75cc756f51a7"
+    },
+    {
+      "path": "reference-tools/tools/drakkin_options_update.py",
+      "bytes": 20565,
+      "sha256": "4e11c7a733b583e4fad05b707771c6ed3827e72153844485c9a3d7173e480d77"
+    },
+    {
+      "path": "reference-tools/tools/drakkin_prepare.py",
+      "bytes": 4988,
+      "sha256": "4d11d8e101b89975646f56f39fa5756c1a688cfb2476e3c3bc8c48949af259b6"
+    },
+    {
+      "path": "reference-tools/tools/drakkin_race_pack.py",
+      "bytes": 49530,
+      "sha256": "8265d1ff60c2a0a9e693b913db1cd054ca307944c5ec7b092a456f6a04343d36"
+    },
+    {
+      "path": "reference-tools/tools/drakkin_racials_update.py",
+      "bytes": 7373,
+      "sha256": "dc4cdc8ca11ce1a999b992cc02f045569dc2053117f5f522eb84d8fa0d70cdb5"
+    },
+    {
+      "path": "reference-tools/tools/drakonid_deploy.py",
+      "bytes": 20848,
+      "sha256": "6e1f8eccc99f0f5241087efe7a3f3a63489f615d668e8746233e10c8601609d4"
+    },
+    {
+      "path": "reference-tools/tools/drakonid_portrait_blender.py",
+      "bytes": 2728,
+      "sha256": "34e83214f992f82c04376b3c99a69cb3a3ca83bfa6951d4d44983fdcd4116951"
+    },
+    {
+      "path": "reference-tools/tools/drakonid_race_pack.py",
+      "bytes": 49977,
+      "sha256": "90e79a50c035656515499c46a3c14f017cda8dda4449464ae05c55d8fde6fa93"
+    },
+    {
+      "path": "reference-tools/tools/earthen_race_pack.py",
+      "bytes": 51010,
+      "sha256": "08035ca3e36212aec96f301504f8ce4abdc40f2c226749dd0e412ee475a00fee"
+    },
+    {
+      "path": "reference-tools/tools/earthen_touchup.py",
+      "bytes": 16229,
+      "sha256": "98d3961037500ac3fd57c2043c8e4f2931dc877b60bb2dc4a752796d441fcf19"
+    },
+    {
+      "path": "reference-tools/tools/expanded_appearance_pack.py",
+      "bytes": 22537,
+      "sha256": "67e560e13ba99a8dbf3d43d9ea9a11978f578c1d253e36f37159e3ad96795f12"
+    },
+    {
+      "path": "reference-tools/tools/gnoll_cloak_landing_repair.py",
+      "bytes": 7979,
+      "sha256": "64db254697fb356058f0c1dfa172657597b14b5d5457d477ec8c048fb956382f"
+    },
+    {
+      "path": "reference-tools/tools/gnoll_equipment_repair.py",
+      "bytes": 5683,
+      "sha256": "92e09f736c50d52059abb1f69be725c3a297a507a462df4ce985043226a506b5"
+    },
+    {
+      "path": "reference-tools/tools/gnoll_race_pack.py",
+      "bytes": 68940,
+      "sha256": "a1f549cad3f01a9fcee23f61bb706554c9b97d69b1ea27c810736584063730a0"
+    },
+    {
+      "path": "reference-tools/tools/gnoll_texture_repair.py",
+      "bytes": 14922,
+      "sha256": "5e25fbef0dfcd69412541b1df0ab91be8ed20598acaf3bb27780d604f1a3ed23"
+    },
+    {
+      "path": "reference-tools/tools/haranir_race_pack.py",
+      "bytes": 55395,
+      "sha256": "afc493123310cc87a751f0d409944ce4359db89bb1150ae542efcc6ea59f2e14"
+    },
+    {
+      "path": "reference-tools/tools/highmountain_animation_repair.py",
+      "bytes": 6691,
+      "sha256": "864158eed8fb8effe1d0921e78d03fc9a748340e1dfa38992fa17019bbb5bd44"
+    },
+    {
+      "path": "reference-tools/tools/highmountain_appearance.py",
+      "bytes": 7481,
+      "sha256": "4598953c5e752d0486109a68cba12f55afad39f6a4b22e7cf040e8e535110a42"
+    },
+    {
+      "path": "reference-tools/tools/highmountain_complete_tracks.py",
+      "bytes": 9038,
+      "sha256": "8894bed2ad8fd0c889049c60c14f030cb4778a6642e2bd2391170b2912ceee53"
+    },
+    {
+      "path": "reference-tools/tools/highmountain_faces.py",
+      "bytes": 17211,
+      "sha256": "cd94b8f36b4968820db7b5776f16b5f5d3a8444c65ae3d70d11f532835777730"
+    },
+    {
+      "path": "reference-tools/tools/highmountain_head_repair.py",
+      "bytes": 7313,
+      "sha256": "0e98107acd50e03fd2411365952e6636d3fbb2b6ab727d5479c33cadfb3a666d"
+    },
+    {
+      "path": "reference-tools/tools/highmountain_integration.py",
+      "bytes": 31886,
+      "sha256": "abf69de6d3240230e77aa7eeec4bc057eea57ce518dae2dd987a109f3a3857fb"
+    },
+    {
+      "path": "reference-tools/tools/highmountain_race_pack.py",
+      "bytes": 23409,
+      "sha256": "4e6be094faff1cbcd2e57379ff5f93fc260691e9e74810466af38c1d51146af7"
+    },
+    {
+      "path": "reference-tools/tools/jinyu_race_pack.py",
+      "bytes": 29009,
+      "sha256": "10faf9a8b4cb7763632fc92154e591a37335781ffdd5b5f475db94a98ee851d8"
+    },
+    {
+      "path": "reference-tools/tools/mechagnome_animations.py",
+      "bytes": 7884,
+      "sha256": "b71d400fe744ad29b8cb7b54aeda027b9f23b68c267c8cd32c145c7fc2a121bd"
+    },
+    {
+      "path": "reference-tools/tools/mechagnome_race_pack.py",
+      "bytes": 40214,
+      "sha256": "bd4d668dcee01069194b8fd4e5eeaa575dd2d3022c8871d3bb571b221df5693d"
+    },
+    {
+      "path": "reference-tools/tools/native_appearance_patch.py",
+      "bytes": 12499,
+      "sha256": "aa8b64213cf5e2c9a6434e030448f01fce16be351d2f8304c25b747dabc79337"
+    },
+    {
+      "path": "reference-tools/tools/ogre_furbolg_race_pack.py",
+      "bytes": 63052,
+      "sha256": "ef7ea2df274758537049e0effeb7a764082660dea59749cc4f41c8c328031e3f"
+    },
+    {
+      "path": "reference-tools/tools/ogre_import.py",
+      "bytes": 18132,
+      "sha256": "9fb6e8ac5d752f9fcbb750d18ee90512899936099a14851f919bbdc9287ee9b6"
+    },
+    {
+      "path": "reference-tools/tools/playable_race_pack.py",
+      "bytes": 41718,
+      "sha256": "531d5ae89decded1eec203e951f2934b23c26aaa47af3b14f542969c1e446453"
+    },
+    {
+      "path": "reference-tools/tools/race_portrait_pack.py",
+      "bytes": 14730,
+      "sha256": "8bb8ebd6299b2fe2a46986550b831e7a98a37784ed42f00cf264d512a8b9b8e5"
+    },
+    {
+      "path": "reference-tools/tools/race_racial_visuals.py",
+      "bytes": 18740,
+      "sha256": "45ec797eadabd7bc4da47a5cc9087b24cc08571c07ddfb6993a7c79dccef4335"
+    },
+    {
+      "path": "reference-tools/tools/race_racials.py",
+      "bytes": 66512,
+      "sha256": "7cc6aeb77cfef47974e963f08cefa266a84fb8de06cc326095f5ff8665cface3"
+    },
+    {
+      "path": "reference-tools/tools/race_racials_update.py",
+      "bytes": 16758,
+      "sha256": "646a2f19e0f7f5485efb4c4188ba6a6e46c8c2c135684b32163006ad8f195808"
+    },
+    {
+      "path": "reference-tools/tools/retroported_race_pack.py",
+      "bytes": 104165,
+      "sha256": "cc1721efe4258f0769cf15610164c48f90add2a47f757abb659174e9750a33f0"
+    },
+    {
+      "path": "reference-tools/tools/saberon_equipment_fit.py",
+      "bytes": 23607,
+      "sha256": "afcb5c652f7b298afd56387aa2eb62123da0e79a39b90260b105fe7a573c0b42"
+    },
+    {
+      "path": "reference-tools/tools/saberon_equipment_pack.py",
+      "bytes": 27679,
+      "sha256": "f3566ca9899f3dc8031bad457a862795f6bbe7d25c57081f4f831af9257cfea7"
+    },
+    {
+      "path": "reference-tools/tools/saberon_race_pack.py",
+      "bytes": 36156,
+      "sha256": "0fbd1004bf2abdbae7bc1a5f34a2853e70e297fec421acefafa09145191a6d47"
+    },
+    {
+      "path": "reference-tools/tools/sethrak_animation_pack.py",
+      "bytes": 15285,
+      "sha256": "9559c053b4ae2fd36408c9e3a13fdb96174485cb8ae9eb221cf4f9cf0df8d567"
+    },
+    {
+      "path": "reference-tools/tools/sethrak_body_regions.py",
+      "bytes": 5512,
+      "sha256": "adc18e09caf293f42a2016ad7b984237f39207b667a018a120c065b003b0a15a"
+    },
+    {
+      "path": "reference-tools/tools/sethrak_equipment_repair.py",
+      "bytes": 43547,
+      "sha256": "b21de0e918ed4277c4f7d75792a0dee16d06fb78b6aa9209461489a47f45d042"
+    },
+    {
+      "path": "reference-tools/tools/sethrak_race_pack.py",
+      "bytes": 26875,
+      "sha256": "47cb77c209af9d3ae7265a98ea4e370edf783ff3c55749ab6fd01ae960967972"
+    },
+    {
+      "path": "reference-tools/tools/skyborne_race_pack.py",
+      "bytes": 17187,
+      "sha256": "a9f1743e44f8d1741d092dc13530a89f200df7a0055238c0b3b4ab2c5fd9889f"
+    },
+    {
+      "path": "reference-tools/tools/skyborne_visual_pack.py",
+      "bytes": 22976,
+      "sha256": "326e676fec6908b53182881357162528819d92decd69a43d9cf2cc28b5a819fc"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_cape.py",
+      "bytes": 13469,
+      "sha256": "1bf4816797f6d973479ddbb2f383825a06bdba42b2c2c607079d4b3d82ba63b5"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_customization_visibility.py",
+      "bytes": 8652,
+      "sha256": "9b1857acdc57dedf7baa8a4a1e5c2d6b1763b0318fa1bf1e780be81f96134a36"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_deploy.py",
+      "bytes": 16251,
+      "sha256": "8b6e5efd8560030f5c87155fcf8df3a77d58190669c387ee043a43387596f929"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_drakkin.py",
+      "bytes": 35117,
+      "sha256": "22f504074d4d2e19915a2f08cda1030af36c7d022f2bec74b7d5cd05a8911dd5"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_equipment.py",
+      "bytes": 17847,
+      "sha256": "f1396955d0a09eb5cea2c2cb6d0a1ce3eb1a36c67bf296a530a160356b635b10"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_fit_blender.py",
+      "bytes": 4051,
+      "sha256": "3b98d8250c6b87847ef4a5ebee349d3ddb879531fa618ce62e4c09f907050ecb"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_helmets.py",
+      "bytes": 15043,
+      "sha256": "99585b95ec16e1c0fac10b8f57916b04524989ddcfaa6563281f715832393a28"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_preview.py",
+      "bytes": 7799,
+      "sha256": "97c76a0f7c2bb2f5c9a79a9800c25e70f2317c84d02c0d832fd192646762ec83"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_refinements.py",
+      "bytes": 22968,
+      "sha256": "6f8eeb7c5b574d36720ac3e4ddfc1d1db6010dc6ab3f315697464a92b54df9e6"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_refinements_deploy.py",
+      "bytes": 9900,
+      "sha256": "fc6faa4c905bcd62fd8e38756af6e04024cda51c3720484e23b7169982a38006"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_render_blender.py",
+      "bytes": 4203,
+      "sha256": "2fb0450b37a9d561162766b0cad0338c5d276c98205f8f72be1f459765319382"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_running_wild.py",
+      "bytes": 11208,
+      "sha256": "e2d1db3b866be6322e09ebdc52771dfc115a988e2ae7f91e90cf5ac0c3fe9273"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_running_wild_deploy.py",
+      "bytes": 12029,
+      "sha256": "0c1d8199302bf31772dfd15a5c5e8a29f516be86a5e9d94bbac22811c4ed9f22"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_running_wild_patch.py",
+      "bytes": 5469,
+      "sha256": "3d2f8a2efb48477696c037ac50963055df4eb92d6d169f3f1876f860997735af"
+    },
+    {
+      "path": "reference-tools/tools/tarasek_source.py",
+      "bytes": 9264,
+      "sha256": "9f3aa3758974e80ed815245668455fddefd282b51ef47312c37784129895de5e"
+    },
+    {
+      "path": "reference-tools/tools/test_arakkoa_race_pack.py",
+      "bytes": 2803,
+      "sha256": "5c75f4a6f3117d54e2953bd62bb0c1f4b4b5f1b4239840c05f80c0c410c22132"
+    },
+    {
+      "path": "reference-tools/tools/test_creature_animations.py",
+      "bytes": 9177,
+      "sha256": "30c7ce9b5178ecc036003302c5f24a47d78eb56c96b1751b1d47a2feb5b6cd79"
+    },
+    {
+      "path": "reference-tools/tools/test_creature_race_pack.py",
+      "bytes": 6434,
+      "sha256": "5af649e30e88928083fea1ccec50848f0e20f5af2f50fd517692b078fcf0d529"
+    },
+    {
+      "path": "reference-tools/tools/test_drakkin_drakonid_racials.py",
+      "bytes": 2504,
+      "sha256": "73f76df911051b515b0f5c4aae09a8c3a2d2f6348bb655890c083ceae6a771ee"
+    },
+    {
+      "path": "reference-tools/tools/test_drakkin_options_update.py",
+      "bytes": 8165,
+      "sha256": "3c4ea1dcb7b461554eea7ba0b01bf75ba6e5bbfc891c274fc958dc15a007d98d"
+    },
+    {
+      "path": "reference-tools/tools/test_drakkin_race_pack.py",
+      "bytes": 8676,
+      "sha256": "605194d9f93e99b81c913f5c9b981f1641a1472e074b83563ec8feaf46c188e9"
+    },
+    {
+      "path": "reference-tools/tools/test_earthen_race_pack.py",
+      "bytes": 7305,
+      "sha256": "b3e1d126febde3e1d5f2aff1fd70c6ad479a4bc0c7f73ab4284b6db633bdbae6"
+    },
+    {
+      "path": "reference-tools/tools/test_gnoll_cloak_landing.py",
+      "bytes": 5743,
+      "sha256": "11a70dd7e22bb2b53988ab3fcd97fb97bdf5988343e218d3b4413635df6fc711"
+    },
+    {
+      "path": "reference-tools/tools/test_gnoll_equipment.py",
+      "bytes": 5309,
+      "sha256": "a9aa0d34d65e52b383d3ff03bf7a4632aa13f3b07a9180845a6460650fe8dfb6"
+    },
+    {
+      "path": "reference-tools/tools/test_gnoll_race_pack.py",
+      "bytes": 9361,
+      "sha256": "bc0238b988f10cab0d92b7434dbf367a36efab9f413623478891dee2bd210502"
+    },
+    {
+      "path": "reference-tools/tools/test_haranir_race_pack.py",
+      "bytes": 9679,
+      "sha256": "aba866661fba550a872d2aa9ad2998a014e5cc04c9bcdb4be2f9ff71b782ad3a"
+    },
+    {
+      "path": "reference-tools/tools/test_highmountain_race_pack.py",
+      "bytes": 5116,
+      "sha256": "b0f64625e608eda77a45876443bf06fca673882ebd05e3d78d780c5aa1e83d0f"
+    },
+    {
+      "path": "reference-tools/tools/test_mechagnome_race_pack.py",
+      "bytes": 7108,
+      "sha256": "1267f19e3497467ad1cf4d8461255bf82bdfb6ec5e4f583a932cecd7a6af5500"
+    },
+    {
+      "path": "reference-tools/tools/test_ogre_furbolg_race_pack.py",
+      "bytes": 6612,
+      "sha256": "4b8e164f9afd578287dd361fd999475e357011cc61f9798570818f2dada1038a"
+    },
+    {
+      "path": "reference-tools/tools/test_playable_race_pack.py",
+      "bytes": 36787,
+      "sha256": "ff3d4eb09e8fafde66b90b1c2e888287c8e5565bdad693534260a6c9afebc704"
+    },
+    {
+      "path": "reference-tools/tools/test_race_racials.py",
+      "bytes": 9507,
+      "sha256": "c91d5d81fc908da1905c85b1d2b6c6d501c494329670d5f1099214f94123d46a"
+    },
+    {
+      "path": "reference-tools/tools/test_retroported_race_contract.py",
+      "bytes": 8036,
+      "sha256": "348d625b88a4d7870b0a756fa9a82b954dcde0fd01121a52eb24d4caced94640"
+    },
+    {
+      "path": "reference-tools/tools/test_retroported_race_pack.py",
+      "bytes": 16277,
+      "sha256": "e0901675de89c058a32208dd8c986b83213d6970382738c5da3ae358cc868949"
+    },
+    {
+      "path": "reference-tools/tools/test_saberon_equipment.py",
+      "bytes": 5322,
+      "sha256": "3a6c8e7650143e91e5bd67a031dffc40a767699fe22c15dcdc19af5e5802361f"
+    },
+    {
+      "path": "reference-tools/tools/test_saberon_equipment_fit.py",
+      "bytes": 9376,
+      "sha256": "135efebdefe023f5d65455fab51a434656d959250a522895fae97e7125a543e5"
+    },
+    {
+      "path": "reference-tools/tools/test_saberon_race_pack.py",
+      "bytes": 11243,
+      "sha256": "56cf92666c7d4f824f0afd2ef8695e3ff0e492d2f805b9498a0f6f9131b1f90f"
+    },
+    {
+      "path": "reference-tools/tools/test_sethrak_equipment.py",
+      "bytes": 10770,
+      "sha256": "f3a32ad4cf92ef848d2340d0ee62664fb089e267660ff69ed2ac82c041d8efe5"
+    },
+    {
+      "path": "reference-tools/tools/test_sethrak_race_pack.py",
+      "bytes": 6460,
+      "sha256": "f79384b79d16e8b2fed81184116a7d546e92ea58494b32aa4b2892548f40a8d1"
+    },
+    {
+      "path": "reference-tools/tools/test_skyborne_race_pack.py",
+      "bytes": 5327,
+      "sha256": "baa1efa276452b14169d6c5c91e0be64642f142d3b6ab698bd43600f0a5a3358"
+    },
+    {
+      "path": "reference-tools/tools/test_tarasek_drakkin.py",
+      "bytes": 11841,
+      "sha256": "8224137b76bb76ae0c3703a2700e67d2ffbbbb1819085f980b69ceefb1e45042"
+    },
+    {
+      "path": "reference-tools/tools/test_tarasek_refinements.py",
+      "bytes": 8175,
+      "sha256": "08c7fd2c7b20f255b9a18db61789b62f660102a21ac3ebb5f76b1029d2de462e"
+    },
+    {
+      "path": "reference-tools/tools/test_tarasek_running_wild.py",
+      "bytes": 5728,
+      "sha256": "c658ce257885f70126993e4ef8f93909fdb1ed478ccd7b9eed7ad06bda229053"
+    },
+    {
+      "path": "reference-tools/tools/test_vulpera_race_pack.py",
+      "bytes": 8605,
+      "sha256": "288b67cc31d7d875bec257a5b347bd48037c0ed8a9694c1bda73b56e39bb68ac"
+    },
+    {
+      "path": "reference-tools/tools/thinhuman_equipment_repair.py",
+      "bytes": 41397,
+      "sha256": "7e3ad12179816b2efdd5d8c2d1b001b570be54e5a3429f338af82a7b733cb4eb"
+    },
+    {
+      "path": "reference-tools/tools/tuskarr_equipment_repair.py",
+      "bytes": 22078,
+      "sha256": "8722704cc557a8fb7526105bbea9b0f53965d6e5b1c85f02f35c197509ec8167"
+    },
+    {
+      "path": "reference-tools/tools/vrykul_female_pack.py",
+      "bytes": 26189,
+      "sha256": "49d77c1efcf66a9b44ef49af3b69ce7a547571ef71cbdaa193c1a2bcda3da83e"
+    },
+    {
+      "path": "reference-tools/tools/vulpera_migration.py",
+      "bytes": 3512,
+      "sha256": "af2f1a68894aab3fcffa7537136280d2845352b5b1ae068c2dbef3f6f0264975"
+    },
+    {
+      "path": "reference-tools/tools/vulpera_models.py",
+      "bytes": 12691,
+      "sha256": "b51101e8ad55b44e652d78096c9c11dc6b561ccf160e8471b4cb300f4a5c309f"
+    },
+    {
+      "path": "reference-tools/tools/vulpera_race_pack.py",
+      "bytes": 31685,
+      "sha256": "8c2e1cdf8aa3fbe16d199fb20ada9aecd7121fee3eee7c11085c663646682c50"
+    },
+    {
+      "path": "reference-tools/tools/wod_model_migration.py",
+      "bytes": 23217,
+      "sha256": "df468a6e8728b1694e4579dce4f3e9d665d20c7bae28ac8dfcc1cdc1d166bfa6"
+    },
+    {
+      "path": "reference-tools/tools/wow_xref.py",
+      "bytes": 4374,
+      "sha256": "e722ef4f3be66258529b0a3bedcc80483a7b76b079dff456117284b4056f61b1"
+    },
+    {
+      "path": "server-data/dbc/Achievement.dbc",
+      "bytes": 580804,
+      "sha256": "9821c7722707afb4d57413b58b46f6662d876c26b2dfd620fe5a91e133a10287"
+    },
+    {
+      "path": "server-data/dbc/Achievement_Category.dbc",
+      "bytes": 7956,
+      "sha256": "b9e2240eae751ec7171a53fa1abf04e4fc01923833ce6ed81f20dd3cc41a4d50"
+    },
+    {
+      "path": "server-data/dbc/Achievement_Criteria.dbc",
+      "bytes": 1045678,
+      "sha256": "cc2458b30773d874bfb98d79c668a0b6d4cff1059b019f0fbfd4d358c54a515a"
+    },
+    {
+      "path": "server-data/dbc/AnimationData.dbc",
+      "bytes": 22578,
+      "sha256": "5c694f178114b6e55e50ac9fa1045a69ff859ddf6dbd934e0334a4cda0172a3f"
+    },
+    {
+      "path": "server-data/dbc/AreaGroup.dbc",
+      "bytes": 9333,
+      "sha256": "aa50dc68f20007d3823e6413b2f5158dd83ade85c5aa59afdd870cf5d871b036"
+    },
+    {
+      "path": "server-data/dbc/AreaPOI.dbc",
+      "bytes": 167242,
+      "sha256": "ff0b639b0fc7b96c18035c46156fe23b344a89fcbecaeae908173cd8eadc77fa"
+    },
+    {
+      "path": "server-data/dbc/AreaTable.dbc",
+      "bytes": 366962,
+      "sha256": "4e1b3495ca7bcd4929ada743a506d845c12e8a58b6cbc8a7447f5dce9718c4d7"
+    },
+    {
+      "path": "server-data/dbc/AreaTrigger.dbc",
+      "bytes": 48821,
+      "sha256": "c043300ffae75d78374bcdde57c397ef8d07c2269d1d81d57acab44567d9866c"
+    },
+    {
+      "path": "server-data/dbc/AttackAnimKits.dbc",
+      "bytes": 541,
+      "sha256": "9b9a43f367aed2d98436cc9e57f8cb398b4a75c40ecca530b607370135096b0c"
+    },
+    {
+      "path": "server-data/dbc/AttackAnimTypes.dbc",
+      "bytes": 160,
+      "sha256": "330aaeb83908885a21dd9b9262cbf8423ac8802467234baab1caa24d0f682c88"
+    },
+    {
+      "path": "server-data/dbc/AuctionHouse.dbc",
+      "bytes": 778,
+      "sha256": "bb8b096723b7f9fa44f0c89818c8d9b3683e4a439510fc9ea70fa497038dd123"
+    },
+    {
+      "path": "server-data/dbc/BankBagSlotPrices.dbc",
+      "bytes": 117,
+      "sha256": "ad79ced9ec6588abd9d6041c6d509f78d94cf4924c0519d3bf79a1a5c4281105"
+    },
+    {
+      "path": "server-data/dbc/BannedAddOns.dbc",
+      "bytes": 4509,
+      "sha256": "8ce8191e12723a8038d1bb29c80def826493882ca084d56c4541b5c018ead4fe"
+    },
+    {
+      "path": "server-data/dbc/BarberShopStyle.dbc",
+      "bytes": 1548248,
+      "sha256": "283f930987d6b68d4721a7fce32807605074039a7f3e9a2f2d9cc24515d58f68"
+    },
+    {
+      "path": "server-data/dbc/BattlemasterList.dbc",
+      "bytes": 1900,
+      "sha256": "4fe0e9f594a660fbcfcea38a768c8b59a2b8bca5546592fe42b3d7ae9e1d7f13"
+    },
+    {
+      "path": "server-data/dbc/CameraShakes.dbc",
+      "bytes": 2517,
+      "sha256": "e95249073f694c7c4e8f71dd9a7d1289265b71a8e688b1bb22db83d5afb63ee3"
+    },
+    {
+      "path": "server-data/dbc/Cfg_Categories.dbc",
+      "bytes": 3356,
+      "sha256": "73d7a335cc92ebb9cd6be7e7e0be6c2b0775c8594e29528623b6457c86f35b36"
+    },
+    {
+      "path": "server-data/dbc/Cfg_Configs.dbc",
+      "bytes": 229,
+      "sha256": "3b5c427d8b1cd4169a59ab16ce73d1e4dfa29c9bed88caa5ba6ae31384a682d1"
+    },
+    {
+      "path": "server-data/dbc/CharacterFacialHairStyles.dbc",
+      "bytes": 16437,
+      "sha256": "96ece2fa221dacaafd6212132bbbc724117e4914984575c4c8b4abfc634fa893"
+    },
+    {
+      "path": "server-data/dbc/CharBaseInfo.dbc",
+      "bytes": 361,
+      "sha256": "205220b723836b72277e5b55e6ab7d2ecd73475f1b2a4514f2cd2119a4a722dd"
+    },
+    {
+      "path": "server-data/dbc/CharHairGeosets.dbc",
+      "bytes": 17277,
+      "sha256": "6787da6f44fac256e7edefece93152397bead33ab079fbdcb3cf19c658636cf3"
+    },
+    {
+      "path": "server-data/dbc/CharHairTextures.dbc",
+      "bytes": 2933,
+      "sha256": "09e187691c0b2fab0f2257649ba1d871d488b87e65f0d9b920828fa4d641c8c7"
+    },
+    {
+      "path": "server-data/dbc/CharSections.dbc",
+      "bytes": 91340279,
+      "sha256": "70f07f9688adb547ff58ce001e23a88934e6e06cece0ca189b9f8316ac12f5e3"
+    },
+    {
+      "path": "server-data/dbc/CharStartOutfit.dbc",
+      "bytes": 371503,
+      "sha256": "fb8aa746355f85dce6167043475a36c1388eb70147c3053d1efd0feaa4187076"
+    },
+    {
+      "path": "server-data/dbc/CharTitles.dbc",
+      "bytes": 23527,
+      "sha256": "e2d3f13def04de9a1e55eaf985f817ea2bda5c530ec756dfc3dab99741076f49"
+    },
+    {
+      "path": "server-data/dbc/CharVariations.dbc",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "server-data/dbc/ChatChannels.dbc",
+      "bytes": 1046,
+      "sha256": "4088979141d38b6f413b62a28ffe61b53d0484becb75d6d73e747c54c889ddaf"
+    },
+    {
+      "path": "server-data/dbc/ChatProfanity.dbc",
+      "bytes": 101815,
+      "sha256": "2128d9cbc3a86bff9cc5265c027882ce58de6927de6b54edd801dd8e25d161f6"
+    },
+    {
+      "path": "server-data/dbc/ChrClasses.dbc",
+      "bytes": 2580,
+      "sha256": "5b2bfc7dab577f48cafe86db1d6148515569507b273f0c95b5ae86713ff5b3e2"
+    },
+    {
+      "path": "server-data/dbc/ChrRaces.dbc",
+      "bytes": 75127,
+      "sha256": "adb2cb3fffe8eb0c464a7face9d5eb50e8d5b4529b8c6972ca40396ac4406559"
+    },
+    {
+      "path": "server-data/dbc/CinematicCamera.dbc",
+      "bytes": 758,
+      "sha256": "8c750b78e0a7c22951d1ed53e4e4c679fb17c647286aed902b54254a400480ff"
+    },
+    {
+      "path": "server-data/dbc/CinematicSequences.dbc",
+      "bytes": 581,
+      "sha256": "efa52f0c55bd8a9e5663b2f259bd0dd5a3f2bb385a56d901f3ebae253b83dd71"
+    },
+    {
+      "path": "server-data/dbc/component.wow-enUS.txt",
+      "bytes": 94,
+      "sha256": "5408a41a8b17499650ddda83c4289144a1fa8851820c28865042f1d31574b5e5"
+    },
+    {
+      "path": "server-data/dbc/CreatureDisplayInfo.dbc",
+      "bytes": 1911951,
+      "sha256": "d39b48ee8f96c8931d49179186bb4aadd2b45352bf046891d2d6533f817b303a"
+    },
+    {
+      "path": "server-data/dbc/CreatureDisplayInfoExtra.dbc",
+      "bytes": 2129415,
+      "sha256": "42c75861568b94312efde508aad5a435dc9d9de03665d541f93f66a7ece5af65"
+    },
+    {
+      "path": "server-data/dbc/CreatureFamily.dbc",
+      "bytes": 6246,
+      "sha256": "9f9d22cf0b213c45789266751dbdf2ee9162ba2be01eb2d89dd9c88cacefd5e2"
+    },
+    {
+      "path": "server-data/dbc/CreatureModelData.dbc",
+      "bytes": 265971,
+      "sha256": "32870b32491eb216577b724700745d06372992a4362ec569b02ce49624e2e613"
+    },
+    {
+      "path": "server-data/dbc/CreatureMovementInfo.dbc",
+      "bytes": 2053,
+      "sha256": "a7cf4bb5546b872679272cd3503a10f758a75a3086a117fd605c0907a3a8d6b9"
+    },
+    {
+      "path": "server-data/dbc/CreatureSoundData.dbc",
+      "bytes": 199293,
+      "sha256": "45714ae4a6053777377d5dee4484dcae5b2c6ae01eeb8ddb153230527f2191bd"
+    },
+    {
+      "path": "server-data/dbc/CreatureSpellData.dbc",
+      "bytes": 28893,
+      "sha256": "5f7bfdb14f966677ec18cd8b8572e0bd44eb3b12aa8e28fa420ea7a45420a9b9"
+    },
+    {
+      "path": "server-data/dbc/CreatureType.dbc",
+      "bytes": 1127,
+      "sha256": "27b5a33c0293122e87263871597f222abe8b9b98e4520acbd89cbeb7240fc0a4"
+    },
+    {
+      "path": "server-data/dbc/CurrencyCategory.dbc",
+      "bytes": 737,
+      "sha256": "b4e06d0e72925144b7668487c3439c778d35f997197f135ccd63cb7de027fb12"
+    },
+    {
+      "path": "server-data/dbc/CurrencyTypes.dbc",
+      "bytes": 437,
+      "sha256": "61ed134510b11f4c010e505d3167240924e4c105839c15c5ec473cbc51f1844d"
+    },
+    {
+      "path": "server-data/dbc/DanceMoves.dbc",
+      "bytes": 3018,
+      "sha256": "f5d29ee88b659aa33ce4627ac7b581571a7fc6931081c5c63bfa8a93cffd74ee"
+    },
+    {
+      "path": "server-data/dbc/DeathThudLookups.dbc",
+      "bytes": 921,
+      "sha256": "8db1d2d037a23a257e8057832481015654d21402d396aa74244e2f990e19b7c0"
+    },
+    {
+      "path": "server-data/dbc/DeclinedWord.dbc",
+      "bytes": 1313560,
+      "sha256": "bcb59c262020f1c6dc1efae67e69bfd77d5405f2b6b395009bcd43a5313090fc"
+    },
+    {
+      "path": "server-data/dbc/DeclinedWordCases.dbc",
+      "bytes": 6734878,
+      "sha256": "47c5b9adb49e1d1c5431fff8a7047c8a2f2c8f4fc85a0f8d678fd9f8975cf959"
+    },
+    {
+      "path": "server-data/dbc/DestructibleModelData.dbc",
+      "bytes": 3137,
+      "sha256": "9a942150457dd4159aa76653c5ee3e94949e4b9b65d3ea06b36bf953221d1432"
+    },
+    {
+      "path": "server-data/dbc/DungeonEncounter.dbc",
+      "bytes": 63033,
+      "sha256": "af174dff3933fc5263be204f6ccfa9388dfb7f19ad54563ae65e1a1a1aa95e73"
+    },
+    {
+      "path": "server-data/dbc/DungeonMap.dbc",
+      "bytes": 1781,
+      "sha256": "aa31db35a2266694d8318c410712a18540d86469e3d6134eb648a1d9694f21f5"
+    },
+    {
+      "path": "server-data/dbc/DungeonMapChunk.dbc",
+      "bytes": 12461,
+      "sha256": "c9fda294ce565501518aa782957a5fe45d92147a79c34a5f29493194a8d318c3"
+    },
+    {
+      "path": "server-data/dbc/DurabilityCosts.dbc",
+      "bytes": 36021,
+      "sha256": "9c76fe46133a6bf2f169bd2e435b09cbe5cc4915aa93d7a75cf3cb4444f3f4ba"
+    },
+    {
+      "path": "server-data/dbc/DurabilityQuality.dbc",
+      "bytes": 149,
+      "sha256": "293ac1f60e9d834accb869631e8fe42c9d13dd9454cefdfefc2f076cae8f5be7"
+    },
+    {
+      "path": "server-data/dbc/Emotes.dbc",
+      "bytes": 8117,
+      "sha256": "f76e66c57bd355870a315d116dfa83304f1b7d21636fd1ca6cbf65e1f012e4cc"
+    },
+    {
+      "path": "server-data/dbc/EmotesText.dbc",
+      "bytes": 20791,
+      "sha256": "54b6004b8cdf547387530151976c612724ebe4d6389c4a5c1d98647bb730bff6"
+    },
+    {
+      "path": "server-data/dbc/EmotesTextData.dbc",
+      "bytes": 133239,
+      "sha256": "3278cfe26ee5a4c9fd22e6eacd5acf7196bfb8318bf2963de11b735b96ebd47b"
+    },
+    {
+      "path": "server-data/dbc/EmotesTextSound.dbc",
+      "bytes": 12421,
+      "sha256": "9e4b00b0cb5fa354132debffbe73033523ea0043ccdc01690c9662df2122aa12"
+    },
+    {
+      "path": "server-data/dbc/EnvironmentalDamage.dbc",
+      "bytes": 93,
+      "sha256": "81f4a158d904fd04a6eac16dd5bbdd3fcba54e6711b935a5f7a0e6de98f5036e"
+    },
+    {
+      "path": "server-data/dbc/Exhaustion.dbc",
+      "bytes": 624,
+      "sha256": "c87430b03c5094715b604ec2f10d006087cdff1c34501d1199d6b0fdee68b79d"
+    },
+    {
+      "path": "server-data/dbc/Faction.dbc",
+      "bytes": 108787,
+      "sha256": "cb17db4d0b90e0d8f4801dc8ea926f05b73b8a8d512bae851bba6d28b79a8bd9"
+    },
+    {
+      "path": "server-data/dbc/FactionGroup.dbc",
+      "bytes": 371,
+      "sha256": "aa34965330500c5b57092d344cfd94cb75aeaa8d1f33cb183f869a2af648e791"
+    },
+    {
+      "path": "server-data/dbc/FactionTemplate.dbc",
+      "bytes": 47117,
+      "sha256": "a344d5546ce50f977170606f24a193066663c0675cdb893a93a6a6a9f21e3c5a"
+    },
+    {
+      "path": "server-data/dbc/FileData.dbc",
+      "bytes": 352,
+      "sha256": "d19a330c7748182df2b606b66d47bc4af838b08a6ee644b87b24c88bc62655a5"
+    },
+    {
+      "path": "server-data/dbc/FootprintTextures.dbc",
+      "bytes": 268,
+      "sha256": "139c946cf2ae36d142bd067460d490750a5ca4cce496c5e58d45ee0d1c34e57e"
+    },
+    {
+      "path": "server-data/dbc/FootstepTerrainLookup.dbc",
+      "bytes": 4361,
+      "sha256": "ab1c8252f7827877bdbffb67bf0900738a2f92c813dfddb2161891f881dd0e05"
+    },
+    {
+      "path": "server-data/dbc/GameObjectArtKit.dbc",
+      "bytes": 2011,
+      "sha256": "bb93023df469cd48452e0e8068721177550068fdafc25f383fa83c65f842e60f"
+    },
+    {
+      "path": "server-data/dbc/GameObjectDisplayInfo.dbc",
+      "bytes": 534007,
+      "sha256": "98affbc38e647afe1318f9a92cf05ed1b4823ee9b406c72a9a13e9cbf8b55a55"
+    },
+    {
+      "path": "server-data/dbc/GameTables.dbc",
+      "bytes": 2665,
+      "sha256": "fa4930d02d448c74eaaa79e097d4b5d202a43ea50514905693e96579e16913b3"
+    },
+    {
+      "path": "server-data/dbc/GameTips.dbc",
+      "bytes": 26915,
+      "sha256": "2b81e63c7a97925659db4ad5940b4b6f68b2522dbe5127d73b266a84f1039058"
+    },
+    {
+      "path": "server-data/dbc/GemProperties.dbc",
+      "bytes": 12541,
+      "sha256": "f8ec92e43ad7dacea5f94f1b19acca67f1c803d727da17099c10e66f04f19e3f"
+    },
+    {
+      "path": "server-data/dbc/GlyphProperties.dbc",
+      "bytes": 5813,
+      "sha256": "11237852179c218efdba4ddbb899c835a63770505c5dd383b710a3d8c01c1d50"
+    },
+    {
+      "path": "server-data/dbc/GlyphSlot.dbc",
+      "bytes": 141,
+      "sha256": "80e1076f884a69c3c6ca0e1f77170ed5517e1c41a6b8cc2f7c6ac2aa5a821701"
+    },
+    {
+      "path": "server-data/dbc/GMSurveyAnswers.dbc",
+      "bytes": 3715,
+      "sha256": "e9da9d9252d3d3961f7325dda2c08129e1a6c29e96a77985190f444c7b8eca74"
+    },
+    {
+      "path": "server-data/dbc/GMSurveyCurrentSurvey.dbc",
+      "bytes": 93,
+      "sha256": "b468c54bf7e6db404eaaabe3fb8db3f4644d541e4fd7f96ee9d41037ada05521"
+    },
+    {
+      "path": "server-data/dbc/GMSurveyQuestions.dbc",
+      "bytes": 1849,
+      "sha256": "5d94fb6968b1ce7a384641c8c22186d43bf768c43d0751b8133fc92ca1099b1e"
+    },
+    {
+      "path": "server-data/dbc/GMSurveySurveys.dbc",
+      "bytes": 109,
+      "sha256": "9b0edc0dc2af9e4349813ecf1f5532acb3ed050d89a20cfb083456b0ac4a731c"
+    },
+    {
+      "path": "server-data/dbc/GMTicketCategory.dbc",
+      "bytes": 3396,
+      "sha256": "f98fcf8b80768f484a62f64750a9955517fcb158a32d85f45a6a7989e05908ad"
+    },
+    {
+      "path": "server-data/dbc/GroundEffectDoodad.dbc",
+      "bytes": 14558,
+      "sha256": "af50bbf22f8119008f325abd6fbc474388727dfbb171c0cddede8d65e3ec4a2d"
+    },
+    {
+      "path": "server-data/dbc/GroundEffectTexture.dbc",
+      "bytes": 1099185,
+      "sha256": "28b4cb73981f329f89c84d4265bde6fee80910b7e777f317fb4e6e91d5ee3341"
+    },
+    {
+      "path": "server-data/dbc/gtBarberShopCostBase.dbc",
+      "bytes": 421,
+      "sha256": "67f516e72d709a74ad5e4e9a58297b495bd6ebb4a3052978ed6da16ca883be69"
+    },
+    {
+      "path": "server-data/dbc/gtChanceToMeleeCrit.dbc",
+      "bytes": 4421,
+      "sha256": "2acb54ef9c47418bea48e557503b7e9a03cfd1365ee2b7be4bc8c5cee5de7f30"
+    },
+    {
+      "path": "server-data/dbc/gtChanceToMeleeCritBase.dbc",
+      "bytes": 65,
+      "sha256": "e2a82b78cb1ac14b697312b1dad6ca85dcd25fe993e56be9aca9326f52c35ddf"
+    },
+    {
+      "path": "server-data/dbc/gtChanceToSpellCrit.dbc",
+      "bytes": 4421,
+      "sha256": "8ec9ba0579200283619491509618f2a176a52bcbaf60f4d5a885e2c7d90ef4de"
+    },
+    {
+      "path": "server-data/dbc/gtChanceToSpellCritBase.dbc",
+      "bytes": 65,
+      "sha256": "45963fe68a4293216a5345fb8cc5ba9acace8d93175d008148e11465416ffc5b"
+    },
+    {
+      "path": "server-data/dbc/gtCombatRatings.dbc",
+      "bytes": 12821,
+      "sha256": "92f4ef0247f6a23c7911e1a51ae0e9648e5d1ed1b5cbc1b01e646ddcae13f280"
+    },
+    {
+      "path": "server-data/dbc/gtNPCManaCostScaler.dbc",
+      "bytes": 421,
+      "sha256": "3b33c96f97acefa9b15aebfbbe311dc4db02fd32933d9e2e84bd59fd81cb306e"
+    },
+    {
+      "path": "server-data/dbc/gtOCTClassCombatRatingScalar.dbc",
+      "bytes": 2837,
+      "sha256": "7a4f0d2bdf163ab83f7e9260d6f4c577477053847e5df3fc14df9e4248b680fa"
+    },
+    {
+      "path": "server-data/dbc/gtOCTRegenHP.dbc",
+      "bytes": 4421,
+      "sha256": "8ccff60891dd4c45c0ffcea56fe652e28163d3c39f9261541ec1d9bcb3e94dd2"
+    },
+    {
+      "path": "server-data/dbc/gtOCTRegenMP.dbc",
+      "bytes": 4421,
+      "sha256": "503758abb3cece2dded98a62adbf665a8c04d77fabc3bed77f6cae51f7849109"
+    },
+    {
+      "path": "server-data/dbc/gtRegenHPPerSpt.dbc",
+      "bytes": 4421,
+      "sha256": "f4681e7686c9e2b8199634adf18f7fe18538557caf968d6f451613ec293419fc"
+    },
+    {
+      "path": "server-data/dbc/gtRegenMPPerSpt.dbc",
+      "bytes": 4421,
+      "sha256": "06b8000be88ce9795bff44a2bd3e31e519ea11e78c16c2e2a36eb144c5d24cfd"
+    },
+    {
+      "path": "server-data/dbc/HelmetGeosetVisData.dbc",
+      "bytes": 693,
+      "sha256": "23ededd559bc0a09952c6825af249310d39c126aef92b1b3177cde74c3035bed"
+    },
+    {
+      "path": "server-data/dbc/HolidayDescriptions.dbc",
+      "bytes": 6617,
+      "sha256": "2c50f12253003a037a11b1b53729b91b033f46de1e622d8db26c6556b0929b78"
+    },
+    {
+      "path": "server-data/dbc/HolidayNames.dbc",
+      "bytes": 2431,
+      "sha256": "24843983115b9251db4ad9c2619b464809d8b7f75549b37c428feb2f44432431"
+    },
+    {
+      "path": "server-data/dbc/Holidays.dbc",
+      "bytes": 6114,
+      "sha256": "89136b7ece127547916d5b6c57d44d10c4c87729229a191656273e6bbd1ebb62"
+    },
+    {
+      "path": "server-data/dbc/Item.dbc",
+      "bytes": 1475093,
+      "sha256": "d455bc30b59bc368b2a972a913864dd092d50695140b9513582100dc56ed777d"
+    },
+    {
+      "path": "server-data/dbc/ItemBagFamily.dbc",
+      "bytes": 1383,
+      "sha256": "39ec1262c4daf48bd4111288671ac9d3c4b266a06b83b52ac05b6806c775b24c"
+    },
+    {
+      "path": "server-data/dbc/ItemClass.dbc",
+      "bytes": 1538,
+      "sha256": "f14b09254010765ab75c3c04ddf55a4b03e75163655c5015d188b04e31fa1b20"
+    },
+    {
+      "path": "server-data/dbc/ItemCondExtCosts.dbc",
+      "bytes": 18629,
+      "sha256": "4271c7df2f6d7733da687adb61b0cc873641272264beb44c4f9e25bdea9cd3c5"
+    },
+    {
+      "path": "server-data/dbc/ItemDisplayInfo.dbc",
+      "bytes": 13949242,
+      "sha256": "a7e33dc812ada9172629982e3232b1b8e9f9f6ae9a73626a7d9acae4bc3fecb0"
+    },
+    {
+      "path": "server-data/dbc/ItemExtendedCost.dbc",
+      "bytes": 62229,
+      "sha256": "606622955569b472e9c9de13b352242f5f0ec8d8bda6c0c3667b9d07feffac8a"
+    },
+    {
+      "path": "server-data/dbc/ItemGroupSounds.dbc",
+      "bytes": 501,
+      "sha256": "34d370ab0b77017a9d9f083067f5ea2649deadcf7936ebe8aa2e04c7eaa97503"
+    },
+    {
+      "path": "server-data/dbc/ItemLimitCategory.dbc",
+      "bytes": 8442,
+      "sha256": "3c9f8e72a3b08a887b3f5b380ace8f0bf9ee5364239e26fc140897b0980f5626"
+    },
+    {
+      "path": "server-data/dbc/ItemPetFood.dbc",
+      "bytes": 651,
+      "sha256": "3dcd77b1585b59e8db123e11cce80e6665402a4bd70313d0cc0ee716cd47859f"
+    },
+    {
+      "path": "server-data/dbc/ItemPurchaseGroup.dbc",
+      "bytes": 158,
+      "sha256": "2d98d7213db0ed5f370a1b6147dcc54ccae37eb07e85e469a15f1c47b40d3c7d"
+    },
+    {
+      "path": "server-data/dbc/ItemRandomProperties.dbc",
+      "bytes": 193808,
+      "sha256": "1fbe2fe7de694bc0fac4d2f3687c38fb3a1b7b175a3d59fec9f00e15ecdebeca"
+    },
+    {
+      "path": "server-data/dbc/ItemRandomSuffix.dbc",
+      "bytes": 13084,
+      "sha256": "1a1c061c5b27970dc6e1680d6e448d51e89bfbc99f5ef88056eca93d44e9ba5e"
+    },
+    {
+      "path": "server-data/dbc/ItemSet.dbc",
+      "bytes": 118552,
+      "sha256": "28c285ea7cab86b74c06ad30138c62c26d5ea5303f1fd2bccb9b3285a95d3467"
+    },
+    {
+      "path": "server-data/dbc/ItemSubClass.dbc",
+      "bytes": 22190,
+      "sha256": "ed037619b6277fb2b05c3cf05233b19687a4004427d5e63a12d038804bc8b0e5"
+    },
+    {
+      "path": "server-data/dbc/ItemSubClassMask.dbc",
+      "bytes": 383,
+      "sha256": "4fa10195733e30c0821b7c705674dc2e9ec22cc1c0f1800d391e78417f678804"
+    },
+    {
+      "path": "server-data/dbc/ItemVisualEffects.dbc",
+      "bytes": 4008,
+      "sha256": "761649aab0d8a4fb3786c83c17bbf55f84b73cd4b96e736010031ee18d49a5ee"
+    },
+    {
+      "path": "server-data/dbc/ItemVisuals.dbc",
+      "bytes": 1941,
+      "sha256": "d2af5a29c78b10a3a366641de2785c15cb093d5e5f46fc740772a29b90164091"
+    },
+    {
+      "path": "server-data/dbc/Languages.dbc",
+      "bytes": 1399,
+      "sha256": "35b5d2750e86773f8e9c0ebad4e29ff6c82e0f889dee280c56c2ac7c6999caec"
+    },
+    {
+      "path": "server-data/dbc/LanguageWords.dbc",
+      "bytes": 26903,
+      "sha256": "00382b3c391386297647c2391d5dcbf51ede11b0575b961980ddadb46d599589"
+    },
+    {
+      "path": "server-data/dbc/LFGDungeonExpansion.dbc",
+      "bytes": 949,
+      "sha256": "f596277a9e1b321da3b674fbada5d38b742d7d55ee8cc3ed3f41cc61f0195da9"
+    },
+    {
+      "path": "server-data/dbc/LFGDungeonGroup.dbc",
+      "bytes": 1097,
+      "sha256": "3db11915e0ce818135a3ffaa1efb4a8142c16857a0b6b50c433df8ad2c67f9ba"
+    },
+    {
+      "path": "server-data/dbc/LFGDungeons.dbc",
+      "bytes": 41932,
+      "sha256": "99937ac9c700668bda26f5b01c8d611f3563f4dc07881a5cddbba7381d4fa3ae"
+    },
+    {
+      "path": "server-data/dbc/Light.dbc",
+      "bytes": 42921,
+      "sha256": "0387a608e1f4b353434ee8a72427692538c64fd11eb07e697e826e85008629b7"
+    },
+    {
+      "path": "server-data/dbc/LightFloatBand.dbc",
+      "bytes": 693621,
+      "sha256": "05cb9f3f41994929b1f7989b76e691b63254a13a834f8e1ef4f049561a103065"
+    },
+    {
+      "path": "server-data/dbc/LightIntBand.dbc",
+      "bytes": 2080821,
+      "sha256": "e86e662d3bd520125bae6f3028254936b9611b6ad21ee64fcf8a34afb63e21af"
+    },
+    {
+      "path": "server-data/dbc/LightParams.dbc",
+      "bytes": 30621,
+      "sha256": "0be83f26444fd886b6acbe61297ac0538aa36cb31151f66c591e3508ce2660d8"
+    },
+    {
+      "path": "server-data/dbc/LightSkybox.dbc",
+      "bytes": 3663,
+      "sha256": "ed9b9c23fac25cc3d57dcea14c98026d47d2a0d23002da1b1a8fa6ebd3d68803"
+    },
+    {
+      "path": "server-data/dbc/LiquidMaterial.dbc",
+      "bytes": 57,
+      "sha256": "103b8daa4f2b7d683ff95c19ffe03160ba684eb05e035491033b463911a23d0b"
+    },
+    {
+      "path": "server-data/dbc/LiquidType.dbc",
+      "bytes": 5420,
+      "sha256": "a511b7ffb5b6b20a0a45a57f71fa1c8e9d37616496d9ef8df1e38ba8573e40f4"
+    },
+    {
+      "path": "server-data/dbc/LoadingScreens.dbc",
+      "bytes": 8054,
+      "sha256": "8640ce1430c37182794ed331cbcc6fb890a0b22eb9616681503ba1a4ac9e4ac4"
+    },
+    {
+      "path": "server-data/dbc/LoadingScreenTaxiSplines.dbc",
+      "bytes": 2073,
+      "sha256": "9f1374425f76368b76fb1e284d70e24b28b3dc45a455c73417c04cb7bfc52553"
+    },
+    {
+      "path": "server-data/dbc/Lock.dbc",
+      "bytes": 51237,
+      "sha256": "c49bd7ed970583a3660d5d16d6917e91e46aafc9e9ed7926281f4889d45904d0"
+    },
+    {
+      "path": "server-data/dbc/LockType.dbc",
+      "bytes": 4916,
+      "sha256": "ff3f0db00e828ad02b4fc34fe9fd4560f720aea210cb3db5f73bb7eacadac22d"
+    },
+    {
+      "path": "server-data/dbc/MailTemplate.dbc",
+      "bytes": 64321,
+      "sha256": "672d4e835e9016e1581a41c763d5d62b100b6bd23ed572d491b6b2690bbe237a"
+    },
+    {
+      "path": "server-data/dbc/Map.dbc",
+      "bytes": 43226,
+      "sha256": "261bd7c2c9dbdba1f2966ca21106673ed722c2e3681d227f1eed261b6ce870d5"
+    },
+    {
+      "path": "server-data/dbc/MapDifficulty.dbc",
+      "bytes": 19067,
+      "sha256": "1ae8728a20a8ee236b4683a34886a2f16dd6402a83ab8768870321b2ea748c9c"
+    },
+    {
+      "path": "server-data/dbc/Material.dbc",
+      "bytes": 181,
+      "sha256": "0c30ba608a985d0b773a52b50e288789231206923b6120464646bd71286e265b"
+    },
+    {
+      "path": "server-data/dbc/Movie.dbc",
+      "bytes": 126,
+      "sha256": "6f3afe6f65b7559c46436ed2a0cda2d0ab72e7fe7c85c35ff825bc45a40b1da8"
+    },
+    {
+      "path": "server-data/dbc/MovieFileData.dbc",
+      "bytes": 85,
+      "sha256": "24664c98e9b1a1540dfed4dbb54c7a9ec1a1d8b93a386a3865741ee4c5a1aaf0"
+    },
+    {
+      "path": "server-data/dbc/MovieVariation.dbc",
+      "bytes": 141,
+      "sha256": "1e6f7135fced80340fa4a684c93b25e3c3e75d7f6fe8b6e58aed3276ee73fcdb"
+    },
+    {
+      "path": "server-data/dbc/NameGen.dbc",
+      "bytes": 305094,
+      "sha256": "fdb6c085ac5ab397a454fe6e28d9f54e6af0f4f8888ada9bd236bd7b7cda9409"
+    },
+    {
+      "path": "server-data/dbc/NamesProfanity.dbc",
+      "bytes": 134417,
+      "sha256": "ef5467847af400e29ca973b3f99e42fdb6110aae954559fb49f4299ba97e3d99"
+    },
+    {
+      "path": "server-data/dbc/NamesReserved.dbc",
+      "bytes": 229876,
+      "sha256": "75bd7a7aa1efb9b26a6e3eb1b96ba54b478083c54b9f45843a2ebefdc9b759f5"
+    },
+    {
+      "path": "server-data/dbc/NPCSounds.dbc",
+      "bytes": 6041,
+      "sha256": "d8ccaebee4b73c15421856e0d052f8551f24a839086a0f64eef53b5ffc81aee7"
+    },
+    {
+      "path": "server-data/dbc/ObjectEffect.dbc",
+      "bytes": 8545,
+      "sha256": "986686ae6bb157d0197ee8b03bd0511f2ff987fe354f148712a97515659b6370"
+    },
+    {
+      "path": "server-data/dbc/ObjectEffectGroup.dbc",
+      "bytes": 3493,
+      "sha256": "7a27f5bbef272308f8774a1670ef72a3d3e8df5e27b788b9c5f4c5f90833fee3"
+    },
+    {
+      "path": "server-data/dbc/ObjectEffectModifier.dbc",
+      "bytes": 373,
+      "sha256": "ba0b40da11ecc02e02bf20473ddb978589fe654307d951fe0aea71c8e7e60efc"
+    },
+    {
+      "path": "server-data/dbc/ObjectEffectPackage.dbc",
+      "bytes": 829,
+      "sha256": "10074c08823bc6d7efac2fa10456bf15f3166a1ed8578d25a2d5f2789b1c6891"
+    },
+    {
+      "path": "server-data/dbc/ObjectEffectPackageElem.dbc",
+      "bytes": 2437,
+      "sha256": "294df40848d0458e3ffa22243e7db1fd315e1ca98fc4f5ad77e957b48406f4e4"
+    },
+    {
+      "path": "server-data/dbc/OverrideSpellData.dbc",
+      "bytes": 405,
+      "sha256": "e18d721e743d3a2ba5353837ec1012d0ad120d7ac2039ddb54ecfff98b0413db"
+    },
+    {
+      "path": "server-data/dbc/Package.dbc",
+      "bytes": 125,
+      "sha256": "6708613d6f229c3b32efb37b591e2d1adca46ed4e022a715ef5bf4befefaaf6b"
+    },
+    {
+      "path": "server-data/dbc/PageTextMaterial.dbc",
+      "bytes": 132,
+      "sha256": "25f19f032c0ced6824d0e43296e27428767e64822d9954d12c89eec10ad2a560"
+    },
+    {
+      "path": "server-data/dbc/PaperDollItemFrame.dbc",
+      "bytes": 1602,
+      "sha256": "43c40ee0a4ea5bd9046056a18062e01ef7aafeea62fb2c5022421ef760642817"
+    },
+    {
+      "path": "server-data/dbc/ParticleColor.dbc",
+      "bytes": 4261,
+      "sha256": "5813e3a16315e150df1e571955b5e412281f211df3ce9cb65621639fb486f82f"
+    },
+    {
+      "path": "server-data/dbc/PetitionType.dbc",
+      "bytes": 62,
+      "sha256": "bf33b20226b455536ffb7b78b4f2f9eb7b143782a8c2ae98d82d51c7ac7e7ae4"
+    },
+    {
+      "path": "server-data/dbc/PetPersonality.dbc",
+      "bytes": 247,
+      "sha256": "31e0be3e060d7b7bb67ddbdb484669a66b9a895c5ab9a7d67cce7617187897c8"
+    },
+    {
+      "path": "server-data/dbc/PowerDisplay.dbc",
+      "bytes": 242,
+      "sha256": "b9dd3d7066ce8af3d102b28d424eb8cbc15f2a0bcbfbd2058cdf60fc35c11124"
+    },
+    {
+      "path": "server-data/dbc/PvpDifficulty.dbc",
+      "bytes": 2613,
+      "sha256": "deabd15566ec7cd00e456460e8fae387f5969fb9c6d0f167ec208314cda997e2"
+    },
+    {
+      "path": "server-data/dbc/QuestFactionReward.dbc",
+      "bytes": 109,
+      "sha256": "b77370593e354d6d58f30ede9faf4327fa418931b91a6bc4ccdead5d2a9c6dc5"
+    },
+    {
+      "path": "server-data/dbc/QuestInfo.dbc",
+      "bytes": 897,
+      "sha256": "f76eb735b078198b8c529b1622e41f25d84800054968c473833cc061b8292a81"
+    },
+    {
+      "path": "server-data/dbc/QuestSort.dbc",
+      "bytes": 3440,
+      "sha256": "d2707e3478d973f28c5714fb34ba525b624f5d3cb43375225b6fa43357cf984a"
+    },
+    {
+      "path": "server-data/dbc/QuestXP.dbc",
+      "bytes": 4421,
+      "sha256": "ae88d842e994dccad08d58983f8c524c0aa51a3557ebbb5aa687098298a7b8d5"
+    },
+    {
+      "path": "server-data/dbc/RandPropPoints.dbc",
+      "bytes": 19221,
+      "sha256": "0ad51c07a6c4fb08af50fd9b135bce18a5d15ff12d72fc441e5da3b3589b7048"
+    },
+    {
+      "path": "server-data/dbc/Resistances.dbc",
+      "bytes": 627,
+      "sha256": "7a6c88b2bbc951f9605081bb36b85502f169ec829acbfccbef25d0170c4e6e0a"
+    },
+    {
+      "path": "server-data/dbc/ScalingStatDistribution.dbc",
+      "bytes": 5037,
+      "sha256": "87d8f6e8a9e4b047f8b3d32987ac3948da75e3370f5cc4df94f88f0ba9803256"
+    },
+    {
+      "path": "server-data/dbc/ScalingStatValues.dbc",
+      "bytes": 7701,
+      "sha256": "4dbe737264f6652f7a4378e018caeb7db8def0fb8c116756a8887d2bbfdfee86"
+    },
+    {
+      "path": "server-data/dbc/ScreenEffect.dbc",
+      "bytes": 2746,
+      "sha256": "b345b319d8e214af28658b6ee310549525ee4b2d45d0f821317fea631a09b2d9"
+    },
+    {
+      "path": "server-data/dbc/ServerMessages.dbc",
+      "bytes": 912,
+      "sha256": "62c9082bc5caf05c46dc67c846514269a0f8d0741fa6ab6c8090925e0026149a"
+    },
+    {
+      "path": "server-data/dbc/SheatheSoundLookups.dbc",
+      "bytes": 945,
+      "sha256": "49dbe76506ea656d216911ceeaff70527d6430ae658f9870ad131bcd9bc79249"
+    },
+    {
+      "path": "server-data/dbc/SkillCostsData.dbc",
+      "bytes": 30021,
+      "sha256": "8c22981dc5c7cdccbe0905733a0c064871e90af7972048d2eda55317253499e8"
+    },
+    {
+      "path": "server-data/dbc/SkillLine.dbc",
+      "bytes": 39475,
+      "sha256": "f446062bede1a114afcabe323880bfdbc006d3ef88445a0a1046611fb518eb19"
+    },
+    {
+      "path": "server-data/dbc/SkillLineAbility.dbc",
+      "bytes": 574245,
+      "sha256": "5fe2b6db82291e41cd2221ccc0f8cd9e1d23a324ddf9aba78e0b351f2459118d"
+    },
+    {
+      "path": "server-data/dbc/SkillLineCategory.dbc",
+      "bytes": 740,
+      "sha256": "f3a0649d15a770cac5f900115d6390186729cb90202325de45a4992725edd93b"
+    },
+    {
+      "path": "server-data/dbc/SkillRaceClassInfo.dbc",
+      "bytes": 11669,
+      "sha256": "71cbaf79c8ae853740dedabe194498e44c1054441fb9e4540df0d172c6025258"
+    },
+    {
+      "path": "server-data/dbc/SkillTiers.dbc",
+      "bytes": 3453,
+      "sha256": "7bf8c5f87fc7917fa3bb42b459246fd8c5870e5223d24d66ae16e27e730c7e49"
+    },
+    {
+      "path": "server-data/dbc/SoundAmbience.dbc",
+      "bytes": 2493,
+      "sha256": "48597600c376f0bd55d24ecd14702d8a0276904e4e0d3d74b5cbd9f4c917594b"
+    },
+    {
+      "path": "server-data/dbc/SoundEmitters.dbc",
+      "bytes": 26779,
+      "sha256": "8c6c2f6b000184837d7c4d08e768b6e0d7eecdd66f6f81b83269c601bdc92f5d"
+    },
+    {
+      "path": "server-data/dbc/SoundEntries.dbc",
+      "bytes": 2537076,
+      "sha256": "4aba574fd0674500ef0e69b90508c156ca86d976d043a93103a40e76ee06ca63"
+    },
+    {
+      "path": "server-data/dbc/SoundEntriesAdvanced.dbc",
+      "bytes": 192415,
+      "sha256": "fff9c28caabb83266450d971c4d3fbe5a3292b1a25ee22d5b092dacbdabac72c"
+    },
+    {
+      "path": "server-data/dbc/SoundFilter.dbc",
+      "bytes": 699,
+      "sha256": "c4d0554bc4df842cad0c67a6ab96d6e218a238f2a2c74d51ba09f9299b8a4a49"
+    },
+    {
+      "path": "server-data/dbc/SoundFilterElem.dbc",
+      "bytes": 2673,
+      "sha256": "4eee838189a6ab5fc62f0e3b746c0e02d99bad388948d701480667e6435cd357"
+    },
+    {
+      "path": "server-data/dbc/SoundProviderPreferences.dbc",
+      "bytes": 3593,
+      "sha256": "995bd3d155ad2e4aac54216b3fcbf84dfb9426d85a023d6a32fbf70fccd744a6"
+    },
+    {
+      "path": "server-data/dbc/SoundSamplePreferences.dbc",
+      "bytes": 157,
+      "sha256": "94ed41f35196a91480ff91f2909322d9fabb0956bdeb7c4d0265af6decc29966"
+    },
+    {
+      "path": "server-data/dbc/SoundWaterType.dbc",
+      "bytes": 213,
+      "sha256": "5702931f6f68b38c5805b7a4720ebe6adf187054c99976fe5c5f000b90047cf7"
+    },
+    {
+      "path": "server-data/dbc/SpamMessages.dbc",
+      "bytes": 14950,
+      "sha256": "aeecd470d1c8a7c3a99e1aca17b5984e99454714a8c4d8bf6e49f6ba99b6c648"
+    },
+    {
+      "path": "server-data/dbc/Spell.dbc",
+      "bytes": 52899740,
+      "sha256": "5eb3778b0e6c4ba40763b8b65e179fc4dde4cd281a474f8f8e8c7d6d7bf3c463"
+    },
+    {
+      "path": "server-data/dbc/SpellCastTimes.dbc",
+      "bytes": 1141,
+      "sha256": "919ca9b65cb144a3a9cf0ce10d2a25fcc7cdccf33c752ed376e086ff62f8ccec"
+    },
+    {
+      "path": "server-data/dbc/SpellCategory.dbc",
+      "bytes": 2117,
+      "sha256": "0026cb005df9a7bc5f48c55fa453fc531c89fd28f50f217ffbc35684490b70c1"
+    },
+    {
+      "path": "server-data/dbc/SpellChainEffects.dbc",
+      "bytes": 174517,
+      "sha256": "df76c5f9e54584c494187e7d168e64689da6c3e885b259f910566dc227929e17"
+    },
+    {
+      "path": "server-data/dbc/SpellDescriptionVariables.dbc",
+      "bytes": 2787,
+      "sha256": "8b7179ad7561b920ebcba721c1efefb7fc5697f4e7cb8eb30ce30a542daa6d85"
+    },
+    {
+      "path": "server-data/dbc/SpellDifficulty.dbc",
+      "bytes": 11641,
+      "sha256": "9173f9a8c97e690fb5a7ce1d6730c1449da214752c52a3885f79d58952bb95a4"
+    },
+    {
+      "path": "server-data/dbc/SpellDispelType.dbc",
+      "bytes": 1146,
+      "sha256": "c642ffcf522828b436eff6ce68e568288fbe0eb2ab1cd69f7671d3566f0f6cad"
+    },
+    {
+      "path": "server-data/dbc/SpellDuration.dbc",
+      "bytes": 2101,
+      "sha256": "caa2cbec7fa711bba180af10c253ab0d111609ec2bda1c354fef09e54bc279e4"
+    },
+    {
+      "path": "server-data/dbc/SpellEffectCameraShakes.dbc",
+      "bytes": 501,
+      "sha256": "183d0b8d0e5cbd3722db535fbb33a856f21b05f21450c6f7f2e31c5e9ebd8817"
+    },
+    {
+      "path": "server-data/dbc/SpellFocusObject.dbc",
+      "bytes": 35886,
+      "sha256": "48173023cbf1f20b3a307d90b8ef95c910c0f7bb64d6738ee3c9ff605abfa3fb"
+    },
+    {
+      "path": "server-data/dbc/SpellIcon.dbc",
+      "bytes": 151540,
+      "sha256": "2b12326641dba1554878b3f53c993e1211e50b3839ccdbeca378a23e7b3248db"
+    },
+    {
+      "path": "server-data/dbc/SpellItemEnchantment.dbc",
+      "bytes": 451214,
+      "sha256": "6c8e8c7d6bc2030500a0687a2975e7f81eb1dc2a1da6939f7ddc64e55ce964de"
+    },
+    {
+      "path": "server-data/dbc/SpellItemEnchantmentCondition.dbc",
+      "bytes": 3157,
+      "sha256": "5907c2dc8c590a9d7a5e0ba124575201cd254a75c944d10494372386fd6310e4"
+    },
+    {
+      "path": "server-data/dbc/SpellMechanic.dbc",
+      "bytes": 2521,
+      "sha256": "4330fae827795e1b79a9ba576a45ae740e137d92d6ab312ac85a983368445a89"
+    },
+    {
+      "path": "server-data/dbc/SpellMissile.dbc",
+      "bytes": 6321,
+      "sha256": "a049e09d4027e7b0c7992aca3a0b002d522a25b4fed11de9ef88ab22b9511495"
+    },
+    {
+      "path": "server-data/dbc/SpellMissileMotion.dbc",
+      "bytes": 61609,
+      "sha256": "f24c81f36de34eab396eaf4771828c88c2a3fd0ff7d2a1c90682bec14cd20e64"
+    },
+    {
+      "path": "server-data/dbc/SpellRadius.dbc",
+      "bytes": 949,
+      "sha256": "409b1612d19bb7860de2a2ea0f18669be1cf40477f85f5c6e12c4758277f3475"
+    },
+    {
+      "path": "server-data/dbc/SpellRange.dbc",
+      "bytes": 11480,
+      "sha256": "82d261be5e42d90f62a13642a3fd8f421fe1b0056ad8ed7dea73cdf4f8c8cb7f"
+    },
+    {
+      "path": "server-data/dbc/SpellRuneCost.dbc",
+      "bytes": 9521,
+      "sha256": "731a884c3f92fd51da5ff1e942c02cf8a2c1bb15e027378326c1271694af7339"
+    },
+    {
+      "path": "server-data/dbc/SpellShapeshiftForm.dbc",
+      "bytes": 4890,
+      "sha256": "beebbd19d2d3e758496c0e5535fd3f301450b1fd984930841a9f120afcaa1dc5"
+    },
+    {
+      "path": "server-data/dbc/SpellVisual.dbc",
+      "bytes": 1203989,
+      "sha256": "966db0c9944068475b31d2584d5db88456d1ab26d0ca0658d75d048f1e00a601"
+    },
+    {
+      "path": "server-data/dbc/SpellVisualEffectName.dbc",
+      "bytes": 259675,
+      "sha256": "0556356171ea424666e0b42961bc5d6997a1c6c08242b2eee799bf75ba3559e8"
+    },
+    {
+      "path": "server-data/dbc/SpellVisualKit.dbc",
+      "bytes": 1316797,
+      "sha256": "3fd35945ed732ccc88ff9bdce91be05abb94bcd030a9cb84ce08e932dc5d24a1"
+    },
+    {
+      "path": "server-data/dbc/SpellVisualKitAreaModel.dbc",
+      "bytes": 696,
+      "sha256": "b7639042e3baa591be60de145696d3cbc8a55ce13c132ed0b2d1bb6bf505c716"
+    },
+    {
+      "path": "server-data/dbc/SpellVisualKitModelAttach.dbc",
+      "bytes": 23661,
+      "sha256": "01bdac91ce21525ffa4c527b9a0d227bd0a97d93f4a9f223c0b637c1ede17a6b"
+    },
+    {
+      "path": "server-data/dbc/SpellVisualPrecastTransitions.dbc",
+      "bytes": 115,
+      "sha256": "3f81455326df9c6568ce34bb8afe81b9d66694e5b763e0909380a9f184dd98ee"
+    },
+    {
+      "path": "server-data/dbc/StableSlotPrices.dbc",
+      "bytes": 53,
+      "sha256": "a74561d21b1878ae5f4587960ca749fdf132040c90555dfeddbe4dff5822bc4c"
+    },
+    {
+      "path": "server-data/dbc/Startup_Strings.dbc",
+      "bytes": 1574,
+      "sha256": "dbd35336bc773fe2947119d2f6ddd62b18869b29279ffd78d41e83845d36ad62"
+    },
+    {
+      "path": "server-data/dbc/Stationery.dbc",
+      "bytes": 224,
+      "sha256": "70fec42fc99542b6864df2d2d8a8f65bc966a22cab72724e47a60f4b3ef046cc"
+    },
+    {
+      "path": "server-data/dbc/StringLookups.dbc",
+      "bytes": 384,
+      "sha256": "06b2aef8087125463554e30d1fac1ebeedceed491fd0e7947081b3aacf41ce30"
+    },
+    {
+      "path": "server-data/dbc/SummonProperties.dbc",
+      "bytes": 4821,
+      "sha256": "6679ab0a596ecb3b7d5e220e3c1b482935f5b14bb6c38c19941b1bb4355ae367"
+    },
+    {
+      "path": "server-data/dbc/Talent.dbc",
+      "bytes": 82085,
+      "sha256": "23aefff3add151bf504c4d0bab247e2e622f9cf29a473d091cb9f11127d99d68"
+    },
+    {
+      "path": "server-data/dbc/TalentTab.dbc",
+      "bytes": 3972,
+      "sha256": "b9249642e06b2baa17793e50e6719f33b1f89729f6c31ea623d4a39e84660e31"
+    },
+    {
+      "path": "server-data/dbc/TaxiNodes.dbc",
+      "bytes": 46504,
+      "sha256": "ba2d0c16985a5e561afa8424e1dc826ead6c8db425af127490c5f58d45429b7f"
+    },
+    {
+      "path": "server-data/dbc/TaxiPath.dbc",
+      "bytes": 14661,
+      "sha256": "1af5ba71fca5684a432b9d3f449aaeb21e4c091532e4b5795335be200d88dd5d"
+    },
+    {
+      "path": "server-data/dbc/TaxiPathNode.dbc",
+      "bytes": 993805,
+      "sha256": "9e330838d1a50170354485514bf2d94395339070cde883fa8d18a5a7e7ed6214"
+    },
+    {
+      "path": "server-data/dbc/TeamContributionPoints.dbc",
+      "bytes": 11221,
+      "sha256": "1e05cc6f44185da8bb03d4e0fcb8eeda54a8af1818eb224b620b03ce0337c74e"
+    },
+    {
+      "path": "server-data/dbc/TerrainType.dbc",
+      "bytes": 385,
+      "sha256": "6f01e690efb37b2154afa52d7d2e9a614c287ed746d7e37af63891873288fe27"
+    },
+    {
+      "path": "server-data/dbc/TerrainTypeSounds.dbc",
+      "bytes": 61,
+      "sha256": "9164cf6f524240baaf48cf99306d7e75eaadd832af64cc2977abc1dc401928c6"
+    },
+    {
+      "path": "server-data/dbc/TotemCategory.dbc",
+      "bytes": 3128,
+      "sha256": "2e4daffaa75bc36d84c43ea4e78adb6725e4d52f99538dfe5826f8bae68badf9"
+    },
+    {
+      "path": "server-data/dbc/TransportAnimation.dbc",
+      "bytes": 147357,
+      "sha256": "3495ae27ffe61a63f8ce3dcbb9c72cd6716e6861c31c6b6e217be180910b52c2"
+    },
+    {
+      "path": "server-data/dbc/TransportPhysics.dbc",
+      "bytes": 153,
+      "sha256": "4a07002714c39dfe6e3834ff673796b7ff3db2f3a5d668d2bc8b138d6f1c9fa2"
+    },
+    {
+      "path": "server-data/dbc/TransportRotation.dbc",
+      "bytes": 6377,
+      "sha256": "60b9bb29d197f6a255c5b9700fe409d606887ac77274b62a0a05dc2d17af7cee"
+    },
+    {
+      "path": "server-data/dbc/UISoundLookups.dbc",
+      "bytes": 3928,
+      "sha256": "d10ee19f27a606bd072f0072767b3d7c551a7e637d515bb7d63641a39553150e"
+    },
+    {
+      "path": "server-data/dbc/UnitBlood.dbc",
+      "bytes": 641,
+      "sha256": "679d5846baf989e86dc089b477353867f359876d78b865550fc38d09c5522c2e"
+    },
+    {
+      "path": "server-data/dbc/UnitBloodLevels.dbc",
+      "bytes": 85,
+      "sha256": "6bdb8ae59e1fa45e313334503824d0a2fcf1bdd6c8265521b0fdf4f295f965cb"
+    },
+    {
+      "path": "server-data/dbc/Vehicle.dbc",
+      "bytes": 66651,
+      "sha256": "eed7c488c207acc0d9c122d17de00b52c6b8c212782d56bb50c8de62eeda72f7"
+    },
+    {
+      "path": "server-data/dbc/VehicleSeat.dbc",
+      "bytes": 167061,
+      "sha256": "5ebebcdeff2e0062a59a7e7fa3417cd0ec2f902482c5d3437cc820248bf94fef"
+    },
+    {
+      "path": "server-data/dbc/VehicleUIIndicator.dbc",
+      "bytes": 419,
+      "sha256": "e1d1f2e5c1b1f671c1ecfcde17927159f4921d27b86268a4938051a49374922b"
+    },
+    {
+      "path": "server-data/dbc/VehicleUIIndSeat.dbc",
+      "bytes": 401,
+      "sha256": "b2404079947f5e95193cd091c3ccf901f958fff102850de003b0588fd8516047"
+    },
+    {
+      "path": "server-data/dbc/VideoHardware.dbc",
+      "bytes": 17893,
+      "sha256": "729c24d4eb59baebc18f8e827d4c07f8a23bc3c2ce461d4f58d1f1558f9a4b46"
+    },
+    {
+      "path": "server-data/dbc/VocalUISounds.dbc",
+      "bytes": 19453,
+      "sha256": "0d143ac1d881ebc7954f9a3b7a88fcee714c271a3271b53f49914ef2369121d5"
+    },
+    {
+      "path": "server-data/dbc/WeaponImpactSounds.dbc",
+      "bytes": 2781,
+      "sha256": "adde2b6e8e205d60e8f7c4feee0169b2fdd8f77ac15ae49fc9a6bf297bdef428"
+    },
+    {
+      "path": "server-data/dbc/WeaponSwingSounds2.dbc",
+      "bytes": 117,
+      "sha256": "0c75521451dd4a28a32697aa546bf53738fcef7c3faff8d75c6b5372b893a928"
+    },
+    {
+      "path": "server-data/dbc/Weather.dbc",
+      "bytes": 1201,
+      "sha256": "302587d91ffc2b16ae81c437deb588ff80f3e1f78ade271a95d89c739ab48e95"
+    },
+    {
+      "path": "server-data/dbc/WMOAreaTable.dbc",
+      "bytes": 2540951,
+      "sha256": "ba36633b10518d438ce5af207f1b10278019505026aba7364a142362eecfbeca"
+    },
+    {
+      "path": "server-data/dbc/WorldChunkSounds.dbc",
+      "bytes": 21,
+      "sha256": "0a2fef88d13e28c4956b517a193364e3413183013e1cbd185d176cfcb25b88a2"
+    },
+    {
+      "path": "server-data/dbc/WorldMapArea.dbc",
+      "bytes": 6075,
+      "sha256": "90e1ec678c8226c76f4dd9f7904f05a4cb0a58c8b4d386719b24949bd55925bb"
+    },
+    {
+      "path": "server-data/dbc/WorldMapContinent.dbc",
+      "bytes": 245,
+      "sha256": "2aa85f78acfd2431a9782389161df6597bd440ffae0d758c0bb51f5c9a0ebe05"
+    },
+    {
+      "path": "server-data/dbc/WorldMapOverlay.dbc",
+      "bytes": 79710,
+      "sha256": "afd7b71415fe0406e6817c3a15ab2f8ba173d58de9f118d8f4ea4f4ed6b19650"
+    },
+    {
+      "path": "server-data/dbc/WorldMapTransforms.dbc",
+      "bytes": 381,
+      "sha256": "ba3f2a65c35ba0ab158f4a336c6195b0dcf4754d2e4f53fea5dbe5acf1ad479c"
+    },
+    {
+      "path": "server-data/dbc/WorldSafeLocs.dbc",
+      "bytes": 81245,
+      "sha256": "9a6e6280ae4d0c226b06df3bee1a4aa90d84a2a029bf2175b8a0b5520a9b89ef"
+    },
+    {
+      "path": "server-data/dbc/WorldStateUI.dbc",
+      "bytes": 46474,
+      "sha256": "a411e2a85c4df5e0a0e52b9bab370a514520e0f7e7dea1a113db22174053160d"
+    },
+    {
+      "path": "server-data/dbc/WorldStateZoneSounds.dbc",
+      "bytes": 1365,
+      "sha256": "74ccf1fc688e3d7ed0d02a935f52e803a14213b8ec12570fed4dd7d375543526"
+    },
+    {
+      "path": "server-data/dbc/WowError_Strings.dbc",
+      "bytes": 1474,
+      "sha256": "0aef55a0771c6fc7324c11322c72a600386ecf984b9572df9747e1cfeb3cbb86"
+    },
+    {
+      "path": "server-data/dbc/ZoneIntroMusicTable.dbc",
+      "bytes": 6500,
+      "sha256": "f393d6a5fade9a9b051132bbd0f1f0970b9da214c33c9d3f8a3d70a628531e07"
+    },
+    {
+      "path": "server-data/dbc/ZoneMusic.dbc",
+      "bytes": 20214,
+      "sha256": "754ad12cecab0ee38bdcad5b92fe45394aaff72655bbd95af40a3c0a6dd4c964"
+    },
+    {
+      "path": "server-data/dbc-continuations/CreatureDisplayInfo.dbc1-battlemon",
+      "bytes": 202735,
+      "sha256": "7c73e45b1652d4ca34a197af51b7bfd0495823cbc078817097b9d3c6d65cfb6d"
+    },
+    {
+      "path": "server-data/dbc-continuations/CreatureDisplayInfoExtra.dbc1-ascension-hd-npc",
+      "bytes": 8794,
+      "sha256": "dbfbd8c06eaf7d8b9f1ad6787f3f654320e0a42db9ddf0bbba26c57a08800e06"
+    },
+    {
+      "path": "server-data/dbc-continuations/CreatureModelData.dbc1-ascension-hd",
+      "bytes": 3057,
+      "sha256": "25477eee3b9548475888b217b3ed3e4247ec8cea42eda4e1bdc9c20560da0e09"
+    },
+    {
+      "path": "server-data/dbc-continuations/CreatureModelData.dbc1-battlemon",
+      "bytes": 477632,
+      "sha256": "bd677903ed47b7b6994dcb1b60595a61be19ec01f94adbf77fe1a78b8d6f2f72"
+    },
+    {
+      "path": "server-data/dbc-continuations/FactionTemplate.dbc1-freeborn",
+      "bytes": 861,
+      "sha256": "2adbed4ff4d4aa5dd4c59e0ab18fff17cd5cb23f313f6d44669408442ba60e4a"
+    },
+    {
+      "path": "source/AUTHORS",
+      "bytes": 2897,
+      "sha256": "76047a285432615359bba4f1e2e3cb02b9cc30617688b2a3341b1f963d2b683d"
+    },
+    {
+      "path": "source/CMakeLists.txt",
+      "bytes": 4859,
+      "sha256": "87b364dcb1a33a9acd13698ab22b7f4007583c09bd18f40a40d78a812b7a5334"
+    },
+    {
+      "path": "source/data/retroported-races/allocation.json",
+      "bytes": 13821,
+      "sha256": "955e8b1d30a6aa3a9ec72e5c536affc46c9e25f436f58f69cdc0c34509201a77"
+    },
+    {
+      "path": "source/data/retroported-races/arakkoa_horde.json",
+      "bytes": 5194,
+      "sha256": "7ef2edd34bbd85ae76cff5792f6fc1b6ae22691c21f5d2d8f32cec7723c658cd"
+    },
+    {
+      "path": "source/data/retroported-races/drakkin_alliance.json",
+      "bytes": 5760,
+      "sha256": "17dfa89aa4e98f9766609a9f37009b8111139e5c1bb292ebdf9b3965ec0a62ff"
+    },
+    {
+      "path": "source/data/retroported-races/drakkin_horde.json",
+      "bytes": 5648,
+      "sha256": "49affaa1054ede027b6372f467c6e6a9c904d156d081daf904d0e6c84f8eff87"
+    },
+    {
+      "path": "source/data/retroported-races/drakonid_alliance.json",
+      "bytes": 5877,
+      "sha256": "b7d8b01438d870bc98de91c1c8995b219d3fc61a3ce945e77a88ecb9bb2db5b3"
+    },
+    {
+      "path": "source/data/retroported-races/drakonid_horde.json",
+      "bytes": 5863,
+      "sha256": "2b6b1de8855fd9b4a71778dbd5b15183116c3be8582c7dedbe1dea19425b4e92"
+    },
+    {
+      "path": "source/data/retroported-races/earthen.json",
+      "bytes": 922,
+      "sha256": "d64f89909faea76a45f88649fbf00dadf4d66d28c8e6beb1b17f550e0ed970c4"
+    },
+    {
+      "path": "source/data/retroported-races/furbolg.json",
+      "bytes": 4168,
+      "sha256": "cd2ac0eabffb3e8f4642244c35467130a0ffb4715e02c7281ed39764e6c99557"
+    },
+    {
+      "path": "source/data/retroported-races/gnoll.json",
+      "bytes": 4802,
+      "sha256": "9386fe50d3ca07438d27aff024734e5d77c5ae65f872b892901fd66eea835536"
+    },
+    {
+      "path": "source/data/retroported-races/haranir.json",
+      "bytes": 982,
+      "sha256": "c00ed12145a3a3408ca6b0ba5f37f68a86069768ef51187c14d5ad2759b9580d"
+    },
+    {
+      "path": "source/data/retroported-races/highmountain.json",
+      "bytes": 951,
+      "sha256": "d01105b89c7e599b955cce34d78820f0160fe735d1cb685b55eeed1f8dcfc77a"
+    },
+    {
+      "path": "source/data/retroported-races/jinyu.json",
+      "bytes": 3192,
+      "sha256": "ed9578af70b42c20826bfe9fe4f8f37f884bf3a3f5ebbcdc350a7368d39b2fa7"
+    },
+    {
+      "path": "source/data/retroported-races/maghar.json",
+      "bytes": 2263,
+      "sha256": "fb4e1f6a113d18129fb65be358023423c3c2aaea30fa57c0dad9ec1d43d2ea26"
+    },
+    {
+      "path": "source/data/retroported-races/mechagnome.json",
+      "bytes": 909,
+      "sha256": "1f491433431f0c7404ab8a8ab3aeb1fefc0de606075671ac32579fb888a0c852"
+    },
+    {
+      "path": "source/data/retroported-races/naga.json",
+      "bytes": 3378,
+      "sha256": "b62c9447e96839068e9680074a32e7f516299ee1c8de5a3d13db3838d18e0049"
+    },
+    {
+      "path": "source/data/retroported-races/ogre.json",
+      "bytes": 6501,
+      "sha256": "e95701bb5352294791bb52be30318a6aa8d695524f194d33a0e85fd8df17e7d3"
+    },
+    {
+      "path": "source/data/retroported-races/ogre_alliance.json",
+      "bytes": 6534,
+      "sha256": "ada542b39061a790b25a72b69ffae4afc280082a46abf1689c89ab7a7b387295"
+    },
+    {
+      "path": "source/data/retroported-races/saberon.json",
+      "bytes": 2254,
+      "sha256": "6a25bd33202bc970871c385e2ced3ed465daa874d78d2ca1e483fe0b21362535"
+    },
+    {
+      "path": "source/data/retroported-races/sethrak.json",
+      "bytes": 1726,
+      "sha256": "5a0655c13eb29bc256f733951ea16b569288d60119d970a5621d0c498c778cae"
+    },
+    {
+      "path": "source/data/retroported-races/skyborne.json",
+      "bytes": 2441,
+      "sha256": "78596dea0871acd4ff0445fe6f22bf7fa735b01da1eed5d237dc7dc133c7702c"
+    },
+    {
+      "path": "source/data/retroported-races/thinhuman.json",
+      "bytes": 12642,
+      "sha256": "0e9814f2a5b58bdfe574254123432c284b5f520fdb8601166ba778b098199dfb"
+    },
+    {
+      "path": "source/data/retroported-races/tuskarr.json",
+      "bytes": 18936,
+      "sha256": "ac738bf556e52b79302b44806fe848715b05b478fb3a3f0d1bea28c2eea6466c"
+    },
+    {
+      "path": "source/data/retroported-races/vrykul.json",
+      "bytes": 16367,
+      "sha256": "39d1e4de08086db334f29fd2dd507cf5fc4ff39fa2ed731c8357802048c16dd1"
+    },
+    {
+      "path": "source/data/retroported-races/vulpera.json",
+      "bytes": 1405,
+      "sha256": "d2b1d803dafa56c766985d5683cb56adce79487f06b7f518f344bbbce18b6596"
+    },
+    {
+      "path": "source/LICENSE",
+      "bytes": 18091,
+      "sha256": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505"
+    },
+    {
+      "path": "source/modules/mod-account-mounts/src/mod_account_mount.cpp",
+      "bytes": 3805,
+      "sha256": "393efe22e87a143b04216a05bc6e4af84d289a7751087543be754da8488fe32d"
+    },
+    {
+      "path": "source/modules/mod-custom-server/data/races/race_registry.json",
+      "bytes": 20839,
+      "sha256": "311b5ded5bc17028db560913060695785d3324111333b03a2ff3fac4a96bccd9"
+    },
+    {
+      "path": "source/modules/mod-custom-server/LICENSE",
+      "bytes": 1068,
+      "sha256": "203a620948410283b0ca6c696133983ebd4050f1f258c5a66bfcb7f943190d5b"
+    },
+    {
+      "path": "source/modules/mod-custom-server/mod-custom-server.cmake",
+      "bytes": 130,
+      "sha256": "454a736524fea80c9f0fdf5dfaab317c6e5cce1b21870b79637d4357b50e231f"
+    },
+    {
+      "path": "source/modules/mod-custom-server/README.md",
+      "bytes": 690,
+      "sha256": "4af4ca6f0336d9cb741594bcd6b4f9bc0e0f6f2a1513e48a243d5b2a654696ef"
+    },
+    {
+      "path": "source/modules/mod-custom-server/src/darkfallen_racials.cpp",
+      "bytes": 3116,
+      "sha256": "7969219658dcbd3354d229e8b82c98781f8b118cd1f29b24c4e1a3cf1d868232"
+    },
+    {
+      "path": "source/modules/mod-custom-server/src/donor_racials.cpp",
+      "bytes": 2316,
+      "sha256": "b1a80b97917a02450fbbdf949c8eb1e4582ac599c424a4eb64f7c130f0cff660"
+    },
+    {
+      "path": "source/modules/mod-custom-server/src/drakkin_racials.cpp",
+      "bytes": 8270,
+      "sha256": "9518bae33ecd8f63137a43d06162e9abf5fa7bc2c76e6217bef5f4c916e41a3d"
+    },
+    {
+      "path": "source/modules/mod-custom-server/src/drakonid_racials.cpp",
+      "bytes": 8330,
+      "sha256": "34c5418e8c78dc0a62498d51f851b7e3affa3eadb5aca4abae69632ad01d75e2"
+    },
+    {
+      "path": "source/modules/mod-custom-server/src/InstanceMode.cpp",
+      "bytes": 1404,
+      "sha256": "9f7b7541f5567e705f2ee363fb133b3df7cb5abbc23f94916056b2a13d0479cf"
+    },
+    {
+      "path": "source/modules/mod-custom-server/src/InstanceMode.h",
+      "bytes": 658,
+      "sha256": "b2ea559c8cf3c42d291e32215010aaa448552eb4e5f8372969fccb3bd5982804"
+    },
+    {
+      "path": "source/modules/mod-custom-server/src/mod_attunement_plus.cpp",
+      "bytes": 41557,
+      "sha256": "ce12e083f3c3921b0abc9a9f033e06f352fe98d6fbacce55667c5eb983100593"
+    },
+    {
+      "path": "source/modules/mod-custom-server/src/MP_loader.cpp",
+      "bytes": 644,
+      "sha256": "ac1cfd06d0627546d902a3b46e380d023b5a2ed9bfdf46bc0c378eda6f09830b"
+    },
+    {
+      "path": "source/modules/mod-custom-server/src/progression_events.cpp",
+      "bytes": 545,
+      "sha256": "4b3696e7ddf9da5224d520c66bfbb2724e71ba4897830d2e4240151e544ef2bc"
+    },
+    {
+      "path": "source/modules/mod-custom-server/src/progression_events.h",
+      "bytes": 1429,
+      "sha256": "a3f5a59cc328b8b42fcf9fcd7858d90a73db82bdc0936de317827988128db06d"
+    },
+    {
+      "path": "source/modules/mod-custom-server/src/race_racials.cpp",
+      "bytes": 62368,
+      "sha256": "a8d9afd0cee38cb68e87d38b6cce12488ae9bea8ecd4d127436219782bce4cfa"
+    },
+    {
+      "path": "source/modules/mod-custom-server/src/race_racials_generated.h",
+      "bytes": 12891,
+      "sha256": "b203a6bd54e2cfdaa01603b8d49e8218939889c31fcfa14aa476f0833973e9a5"
+    },
+    {
+      "path": "source/modules/mod-playerbots/src/Ai/Base/Strategy/RacialsStrategy.cpp",
+      "bytes": 3532,
+      "sha256": "7b4d7624cb77b0ae0b7c6be00bbe758fde192f0339bd2cf78a6e562642d1d4dc"
+    },
+    {
+      "path": "source/modules/mod-playerbots/src/Ai/Base/Strategy/RacialsStrategy.h",
+      "bytes": 604,
+      "sha256": "e41c3574a0d048b324cf6c2244db15bcaf9e00d84a037be0faebc3ff05d0f88f"
+    },
+    {
+      "path": "source/modules/mod-playerbots/src/Bot/Factory/PlayerbotFactory.cpp",
+      "bytes": 194248,
+      "sha256": "478733c2e58eff5cb58d44db5b9a1c234dcea7ce5101290c9903f8d9c544c889"
+    },
+    {
+      "path": "source/modules/mod-worgoblin-high-elf/.git_commit_template.txt",
+      "bytes": 2126,
+      "sha256": "99f696940895658855f60bef20afc771b26465eec21548148b0652c714145c60"
+    },
+    {
+      "path": "source/modules/mod-worgoblin-high-elf/LICENSE",
+      "bytes": 34523,
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    },
+    {
+      "path": "source/modules/mod-worgoblin-high-elf/lua_scripts/racials.lua",
+      "bytes": 5544,
+      "sha256": "c404cf669b0c5fb19864ed7d570751392cc29a03825ed663539f5ea2f515c288"
+    },
+    {
+      "path": "source/modules/mod-worgoblin-high-elf/merge-notes.md",
+      "bytes": 13054,
+      "sha256": "99a39432366d98b0cd9892f4d7e16d9722caecbffff077b63ba403623b6dc6e0"
+    },
+    {
+      "path": "source/modules/mod-worgoblin-high-elf/README.md",
+      "bytes": 9061,
+      "sha256": "d2d44ef54935b841dd287e0a6ec817293d962e84df71d0918e8d5be0f199b01b"
+    },
+    {
+      "path": "source/modules/mod-worgoblin-high-elf/src/mod_race_costumes.cpp",
+      "bytes": 4089,
+      "sha256": "1a03b587e249c367440009c7ecc0eafe1236c96de746fb70cf68f5ff602b8b05"
+    },
+    {
+      "path": "source/modules/mod-worgoblin-high-elf/src/Worgoblin.cpp",
+      "bytes": 8435,
+      "sha256": "07ce23bea4aec47fcc0f1d9866188ad1fb1abb1887d02b53c837392b1ea46588"
+    },
+    {
+      "path": "source/modules/mod-worgoblin-high-elf/src/worgoblin_loader.h",
+      "bytes": 150,
+      "sha256": "28e88a5c399664a096881e242c62b81b67a807ebfd410ea0d177efda061a10c8"
+    },
+    {
+      "path": "source/src/common/DataStores/DBCFileLoader.cpp",
+      "bytes": 8974,
+      "sha256": "8c1996712c5d0e353c2bb7f75e0518c33b3975b0a15cb04da9dba2a581026fc3"
+    },
+    {
+      "path": "source/src/common/DataStores/DBCFileLoader.h",
+      "bytes": 4110,
+      "sha256": "f6e25acda7a1e82f0911200e523137df04e0fc15f30012542b5fc22d28082aa5"
+    },
+    {
+      "path": "source/src/server/database/Database/Implementation/CharacterDatabase.cpp",
+      "bytes": 86536,
+      "sha256": "d66e9adf764f279622ea8dc2a26d7117cd1bf32818e8288cbd4f08a7efe113e3"
+    },
+    {
+      "path": "source/src/server/database/Database/Implementation/CharacterDatabase.h",
+      "bytes": 17210,
+      "sha256": "bffcf384d10ef3cd0e15a76f9481b20d4b63a121a6c989b755bad4ae797da08c"
+    },
+    {
+      "path": "source/src/server/game/DataStores/DBCStores.cpp",
+      "bytes": 49298,
+      "sha256": "d83093815f834c562fdd10d82bfb2748322415fad4924e21c33842f79c466168"
+    },
+    {
+      "path": "source/src/server/game/DataStores/DBCStores.h",
+      "bytes": 12209,
+      "sha256": "77785150416ce9842ff7a1601b38af1a443d8cbc77b34dea8dcfbf6bf1630cf3"
+    },
+    {
+      "path": "source/src/server/game/Entities/Object/Updates/UpdateFieldFlags.cpp",
+      "bytes": 139195,
+      "sha256": "5851aea8d404ba393222d51060449314f2436ba784560d0e849d1945e67c18b0"
+    },
+    {
+      "path": "source/src/server/game/Entities/Player/BrokenRacialEffects.cpp",
+      "bytes": 348,
+      "sha256": "dde45eaba9d73f8443deb4ff685a0ebd4f111526fdf17ca591d364895720cb83"
+    },
+    {
+      "path": "source/src/server/game/Entities/Player/BrokenRacialEffects.h",
+      "bytes": 288,
+      "sha256": "ff46b14780b573ef761e1e9e6634e295000150be7078c4afc66f74c1acd99c72"
+    },
+    {
+      "path": "source/src/server/game/Entities/Player/Player.cpp",
+      "bytes": 622945,
+      "sha256": "295bed677b3b04d7815cc8e35257bfea0991b6f5596c1c633a663ccdab81fa14"
+    },
+    {
+      "path": "source/src/server/game/Entities/Player/Player.h",
+      "bytes": 135642,
+      "sha256": "20455ddfe1595b672018fd04b72b17609405fd3e388c685c0f19a888f1d90254"
+    },
+    {
+      "path": "source/src/server/game/Entities/Player/PlayerStorage.cpp",
+      "bytes": 313859,
+      "sha256": "49dff5be67ee3399f49ab62bdde97fd434533d08543556ff5cdf2cd0bb8dee0c"
+    },
+    {
+      "path": "source/src/server/game/Entities/Player/RaceMgr.cpp",
+      "bytes": 2008,
+      "sha256": "6189069d90fa5848e65bd2102b578148b0a42ec44b7b5b020d36a0febe9edb48"
+    },
+    {
+      "path": "source/src/server/game/Entities/Player/RaceMgr.h",
+      "bytes": 1590,
+      "sha256": "361e74b9b3a740586450c2bebb3b6c056fe3e386a11d4608244edb0c61d9648c"
+    },
+    {
+      "path": "source/src/server/game/Globals/ObjectMgr.cpp",
+      "bytes": 468104,
+      "sha256": "4e6e440e3b50fece00e36aa5a5c53cb8fb8eaaef3646b9cbb0f3dd8b276d4030"
+    },
+    {
+      "path": "source/src/server/game/Globals/ObjectMgr.h",
+      "bytes": 67680,
+      "sha256": "3fcce66e46154507c2a461f074c2e6b4f0404f6e13b8be3bfbb5134e4342072e"
+    },
+    {
+      "path": "source/src/server/game/Handlers/CharacterHandler.cpp",
+      "bytes": 113644,
+      "sha256": "3bb3f0091ce0cc4c4e8e0cb0d06c793ae8a473dcfe4e3dd96b720dabf4524d75"
+    },
+    {
+      "path": "source/src/server/game/Server/WorldSession.h",
+      "bytes": 55443,
+      "sha256": "aec76848296bdb892b184509673779638740f9396d36a93f686529d4c006a599"
+    },
+    {
+      "path": "source/src/server/game/Spells/SpellEffects.cpp",
+      "bytes": 245697,
+      "sha256": "49b73e6a2d7671475196db40b7dd5c03598f54c5d2ea80f2e119cd04aef96fd9"
+    },
+    {
+      "path": "source/src/server/scripts/Spells/spell_generic.cpp",
+      "bytes": 220571,
+      "sha256": "d5d084391790e840942f3f64571c8d6fd73bae7dec7bc65998d0e26c7eec7a3a"
+    },
+    {
+      "path": "source/src/server/shared/CreatureAppearance.h",
+      "bytes": 6480,
+      "sha256": "802feccad196a716db79fbc048db367fb482db1c32d4989617a4768bdeecc204"
+    },
+    {
+      "path": "source/src/server/shared/DataStores/DBCfmt.h",
+      "bytes": 8273,
+      "sha256": "9fbfb1f145d4db03d952311aa2bc05bb1c9496a980d2c42fe111c8b2d0d144a5"
+    },
+    {
+      "path": "source/src/server/shared/DataStores/DBCStructure.h",
+      "bytes": 100462,
+      "sha256": "c8f2d645c0ce4b51d5586aec6ba43143c8ea6fd2ed273efdc5a1528ae6bc3279"
+    },
+    {
+      "path": "source/src/server/shared/EarthenAppearance.h",
+      "bytes": 3998,
+      "sha256": "92f07087c78740780c8ebfea9ea32eb140b2267d0bf6f6c1d1e9ca7896307e7c"
+    },
+    {
+      "path": "source/src/server/shared/HaranirAppearance.h",
+      "bytes": 6353,
+      "sha256": "e6c8fca0f2e177f87a813f8292bc58f816077536e16db4567f4d8c0201d27bc5"
+    },
+    {
+      "path": "source/src/server/shared/HighmountainAppearance.h",
+      "bytes": 5171,
+      "sha256": "9db858d399fc6028ffd6c8934f3b9e5ba489d420122de6ea8ad22b8ea1f23531"
+    },
+    {
+      "path": "source/src/server/shared/SharedDefines.h",
+      "bytes": 213751,
+      "sha256": "ac4b9ae64cb2c8bc337882f45032feba771608524c9346e2d06cf588f5659abe"
+    },
+    {
+      "path": "source/src/server/shared/VulperaAppearance.h",
+      "bytes": 10931,
+      "sha256": "54b526b9a93f6b963467f6c218672c9662390cb82a6f538703143f75646c778c"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 682,
+      "sha256": "06b07d123a8d7c5908102baaa81545caf7309c461888ac69e5377fe390c87a7d"
+    }
+  ],
+  "total_bytes": 265682484
+}

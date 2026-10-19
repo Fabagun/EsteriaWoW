@@ -1,0 +1,55 @@
+{
+  "race_id": 63,
+  "name": "Gnoll",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 2,
+  "display_ids": [
+    60059,
+    0
+  ],
+  "script_grants": [
+    110920,
+    110921,
+    110922,
+    110923,
+    110924
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [],
+  "racial_spell_ids": [
+    110920,
+    110921,
+    110922,
+    110923,
+    110924
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 63,
+      "spell": 669,
+      "comment": "Language Orcish",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 63,
+      "rank": 0,
+      "skill": 109,
+      "comment": "Language Orcish",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "110920": "Savage Bite",
+    "110921": "Pack Hunter",
+    "110922": "Keen Nose",
+    "110923": "Scavenger",
+    "110924": "Scrappy"
+  }
+}

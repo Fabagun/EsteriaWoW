@@ -1,0 +1,75 @@
+{
+  "race_id": 50,
+  "name": "Haranir",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 4,
+  "display_ids": [
+    60038,
+    60039
+  ],
+  "script_grants": [
+    110720,
+    110723,
+    110724,
+    110725,
+    110726
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    33697,
+    33702
+  ],
+  "racial_spell_ids": [
+    33697,
+    33702,
+    110720,
+    110723,
+    110724,
+    110725,
+    110726
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 50,
+      "spell": 668,
+      "comment": "Language Common",
+      "classMask": 0
+    },
+    {
+      "race": 50,
+      "spell": 671,
+      "comment": "Language Darnassian",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 50,
+      "rank": 0,
+      "skill": 98,
+      "comment": "Language Common",
+      "classMask": 0
+    },
+    {
+      "race": 50,
+      "rank": 0,
+      "skill": 113,
+      "comment": "Language Darnassian",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "33697": "Blood Fury",
+    "33702": "Blood Fury",
+    "110720": "Thorn Bloom",
+    "110723": "Lash Out",
+    "110724": "Subterranean Predator",
+    "110725": "One with Nature",
+    "110726": "Rootwalking"
+  }
+}

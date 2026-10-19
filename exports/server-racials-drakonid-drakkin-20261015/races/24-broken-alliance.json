@@ -1,0 +1,22 @@
+{
+  "race_id": 24,
+  "name": "Broken",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 24,
+  "display_ids": [
+    3000018,
+    3000019
+  ],
+  "script_grants": [],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [],
+  "racial_spell_ids": [],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {}
+}

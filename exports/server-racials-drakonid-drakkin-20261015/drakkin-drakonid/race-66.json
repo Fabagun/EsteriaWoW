@@ -1,0 +1,209 @@
+{
+  "race_id": 66,
+  "name": "Drakkin",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 1,
+  "display_ids": [
+    60070,
+    60064
+  ],
+  "script_grants": [
+    110300,
+    110301,
+    110302,
+    110303,
+    110304,
+    110305,
+    110306,
+    110307,
+    110308,
+    110309,
+    110316,
+    110318
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    110300,
+    110301,
+    110302,
+    110303,
+    110304,
+    110305,
+    110306,
+    110307,
+    110308,
+    110309,
+    110316,
+    110318
+  ],
+  "racial_spell_ids": [
+    110300,
+    110301,
+    110302,
+    110303,
+    110304,
+    110305,
+    110306,
+    110307,
+    110308,
+    110309,
+    110316,
+    110318
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 66,
+      "spell": 668,
+      "comment": "Language Common",
+      "classMask": 0
+    },
+    {
+      "race": 66,
+      "spell": 110300,
+      "comment": "Racial: Chromatic Ancestry",
+      "classMask": 0
+    },
+    {
+      "race": 66,
+      "spell": 110301,
+      "comment": "Racial: Ruby Blood",
+      "classMask": 0
+    },
+    {
+      "race": 66,
+      "spell": 110302,
+      "comment": "Racial: Azure Blood",
+      "classMask": 0
+    },
+    {
+      "race": 66,
+      "spell": 110303,
+      "comment": "Racial: Emerald Blood",
+      "classMask": 0
+    },
+    {
+      "race": 66,
+      "spell": 110304,
+      "comment": "Racial: Bronze Blood",
+      "classMask": 0
+    },
+    {
+      "race": 66,
+      "spell": 110305,
+      "comment": "Racial: Obsidian Blood",
+      "classMask": 0
+    },
+    {
+      "race": 66,
+      "spell": 110306,
+      "comment": "Racial: Twilight Blood",
+      "classMask": 0
+    },
+    {
+      "race": 66,
+      "spell": 110307,
+      "comment": "Racial: Infinite Blood",
+      "classMask": 0
+    },
+    {
+      "race": 66,
+      "spell": 110308,
+      "comment": "Racial: Frostbrood Blood",
+      "classMask": 0
+    },
+    {
+      "race": 66,
+      "spell": 110309,
+      "comment": "Racial: Lesser Dragonbreath",
+      "classMask": 0
+    },
+    {
+      "race": 66,
+      "spell": 110316,
+      "comment": "Racial: Drakkin Together Strong",
+      "classMask": 0
+    },
+    {
+      "race": 66,
+      "spell": 110318,
+      "comment": "Racial: Ancient Broodblood",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 66,
+      "rank": 0,
+      "skill": 98,
+      "comment": "Language Common",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [
+    {
+      "race": 66,
+      "spell": 20597,
+      "comment": "Human Sword Specialization"
+    },
+    {
+      "race": 66,
+      "spell": 20598,
+      "comment": "Human The Human Spirit"
+    },
+    {
+      "race": 66,
+      "spell": 20599,
+      "comment": "Human Diplomacy"
+    },
+    {
+      "race": 66,
+      "spell": 20600,
+      "comment": "Human Perception"
+    },
+    {
+      "race": 66,
+      "spell": 20864,
+      "comment": "Human Mace Specialization"
+    },
+    {
+      "race": 66,
+      "spell": 58985,
+      "comment": "Human Perception"
+    },
+    {
+      "race": 66,
+      "spell": 59752,
+      "comment": "Human Every Man for Himself"
+    }
+  ],
+  "excluded_start_skills": [
+    {
+      "race": 66,
+      "skill": 754,
+      "comment": "Human Racial"
+    }
+  ],
+  "spell_names": {
+    "110300": "Chromatic Ancestry",
+    "110301": "Ruby Blood",
+    "110302": "Azure Blood",
+    "110303": "Emerald Blood",
+    "110304": "Bronze Blood",
+    "110305": "Obsidian Blood",
+    "110306": "Twilight Blood",
+    "110307": "Infinite Blood",
+    "110308": "Frostbrood Blood",
+    "110309": "Lesser Dragonbreath",
+    "110316": "Drakkin Together Strong",
+    "110318": "Ancient Broodblood"
+  },
+  "conditional_racials": {
+    "male_running_wild_riding_tiers": [
+      110050,
+      110051
+    ]
+  }
+}

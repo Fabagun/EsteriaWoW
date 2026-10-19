@@ -301,6 +301,17 @@ void WorldSession::HandleMessagechatOpcode(WorldPacket& recvData)
 
         if (lang == LANG_ADDON)
         {
+            // Discover support over a stock opcode before clients send the inventory extension opcode.
+            // Older cores echo HELLO unchanged; they never generate this READY response.
+            if (type == CHAT_MSG_WHISPER && to == sender->GetName() && msg == "ESTERIADI\tHELLO:1")
+            {
+                WorldPacket response;
+                ChatHandler::BuildChatPacket(response, CHAT_MSG_WHISPER, LANG_ADDON, sender, sender,
+                    "ESTERIADI\tREADY:1");
+                SendPacket(&response);
+                return;
+            }
+
             // The Freeborn claim rides the addon-message channel, the same one the Classless
             // Wildcard addon uses. See FreebornClaim.h for why the choice cannot be carried by
             // the create packet.

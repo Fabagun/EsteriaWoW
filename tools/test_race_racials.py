@@ -5,6 +5,7 @@ from collections import Counter
 
 from cars_mount_pack import Wdbc
 import drakkin_drakonid_racials as base
+import race_racial_visuals as v
 import race_racials as r
 
 MODULE = base.ROOT / "modules/mod-custom-server"
@@ -104,8 +105,85 @@ def test_loa_embraces_are_not_granted_directly():
     assert not granted & set(r.LOA_EMBRACES), "Loa are learned through the menu"
 
 
+def test_retail_visual_specs_point_at_real_racials_and_ids_are_disjoint():
+    for key in v.RETAIL_VISUALS:
+        assert key in r.KEYS and key in r.VISUAL_DONORS, key   # the stock donor stays as the fallback
+    ids = [v.visual_id(key) for key in v.RETAIL_VISUALS]
+    assert len(set(ids)) == len(ids) and min(ids) == v.VISUAL_BASE
+    assert v.VISUAL_BASE > 30112 and v.KIT_BASE > 22076 and v.ATTACH_BASE > 6076 and v.EFFECT_BASE > 8676, "must clear the client maxima"
+
+
+def test_event_slot_rules():
+    assert v.slot_for(1, 1) == "precast" and v.slot_for(3, 1) == "cast" and v.slot_for(3, 3) == "impact"
+    assert v.slot_for(7, 2) == "state" and v.slot_for(6, 2) == "impact" and v.slot_for(5, 1) == "caster_impact"
+    assert v.slot_for(99, 1) is None
+
+
+def _tables(tmp_path):
+    def write(name, header, *rows):
+        (tmp_path / f"{name}.csv").write_text(chr(10).join([header, *rows]) + chr(10), encoding="utf-8")
+    write("SpellXSpellVisual", "ID,SpellVisualID,SpellID", "1,10,900")
+    write("SpellVisual", "ID,StateKit", "10,7")
+    write("SpellVisualEvent", "ID,StartEvent,TargetType,SpellVisualKitID,SpellVisualID", "1,3,1,8,10", "2,6,2,9,10")
+    write("SpellVisualKitEffect", "ID,EffectType,Effect,ParentSpellVisualKitID", "1,2,100,7", "2,2,101,8", "3,5,102,9", "4,2,103,9")
+    write("SpellVisualKitModelAttach", "ID,AttachmentID,SpellVisualEffectNameID,ParentSpellVisualKitID,Offset_0,Offset_1,Offset_2,Yaw,Pitch,Roll,Scale",
+          "100,19,1,7,0,0,0,0,0,0,1", "101,22,2,8,0,0,0,0,0,0,2", "103,34,0,9,0,0,0,0,0,0,1")
+    write("SpellVisualEffectName", "ID,ModelFileDataID,Scale", "1,5000,1", "2,5001,0.5")
+    return v.Tables(tmp_path)
+
+
+def test_trace_maps_events_to_slots_and_ignores_non_model_effects(tmp_path):
+    found = v.trace(_tables(tmp_path), v.Retail(900))
+    assert {slot: [a.model for a in items] for slot, items in found.items()} == {"state": [5000], "cast": [5001]}
+    assert found["cast"][0].scale == 1.0 and found["cast"][0].attachment == 22   # attach scale 2 x effect name scale 0.5
+    assert v.trace(_tables(tmp_path), v.Retail(900, remap={"cast": "state"}, skip=("state",))) == {}
+    assert v.trace(_tables(tmp_path), v.Retail(901)) == {}
+
+
+def test_built_rows_use_fresh_ids_and_keep_the_donor_cast_pose(tmp_path):
+    key = next(iter(v.RETAIL_VISUALS))
+    found = {key: v.trace(_tables(tmp_path), v.Retail(900))}
+    built = v.build_rows(found, {5000: "Spells/Racials/a.mdx", 5001: "Spells/Racials/b.mdx"},
+                         lambda k, slot: (1, 2) if slot == "precast" else None)
+    visual, = built["rows"]["SpellVisual"]
+    assert visual[0] == v.visual_id(key) and len(visual) == 32
+    kits = {row[0]: row for row in built["rows"]["SpellVisualKit"]}
+    assert all(len(row) == 38 for row in kits.values())
+    assert visual[v.SLOTS["state"]] in kits and visual[v.SLOTS["cast"]] in kits
+    assert kits[visual[v.SLOTS["precast"]]][1:3] == [1, 2], "anim-only kit keeps the stock cast pose"
+    attaches = built["rows"]["SpellVisualKitModelAttach"]
+    assert {row[1] for row in attaches} <= set(kits) and all(len(row) == 10 for row in attaches)
+    assert built["effect_strings"] == {0: "Spells/Racials/a.mdx", 1: "Spells/Racials/b.mdx"}
+
+
+def test_usable_drops_models_that_did_not_convert():
+    a, b = v.Attach(1, 19, (0, 0, 0), 0, 0, 0, 1), v.Attach(2, 19, (0, 0, 0), 0, 0, 0, 1)
+    assert v.usable({"X": {"cast": [a, b], "state": [b]}, "Y": {"cast": [b]}}, {1}) == {"X": {"cast": [a]}}
+
+
+def test_ported_racials_take_the_new_visual_id_only_on_the_client():
+    table = Wdbc(table_bytes())
+    index = r.field_index()
+    key = "ARCANE_PULSE"
+    server = next(i for i in r.prepare(table) if i.spell.spell_id == r.KEYS[key])
+    client = next(i for i in r.prepare(table, True, frozenset({key})) if i.spell.spell_id == r.KEYS[key])
+    assert client.row[index["SpellVisualID_1"]] == v.visual_id(key) and client.row[index["SpellVisualID_2"]] == 0
+    assert server.row[index["SpellVisualID_1"]] != v.visual_id(key)
+
+
+def test_client_stage_never_writes_patch_z_and_keeps_archives_under_the_limit():
+    import race_racials_update as u
+    assert u.p.GLOBAL_ARCHIVE_REL not in u.ARCHIVES, "patch-Z is within ~67 MB of the 2 GiB read limit"
+    assert u.ASSET_ARCHIVE_REL.name.lower() not in {"patch-z.mpq", "patch-r.mpq"} and u.MAX_ARCHIVE_BYTES < 2 * 1024 ** 3
+
 if __name__ == "__main__":
     for name, function in sorted(globals().items()):
         if name.startswith("test_"):
-            function()
+            if "tmp_path" in function.__code__.co_varnames[:function.__code__.co_argcount]:
+                import tempfile
+                from pathlib import Path
+                with tempfile.TemporaryDirectory() as folder:
+                    function(Path(folder))
+            else:
+                function()
             print("PASS", name)

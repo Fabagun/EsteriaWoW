@@ -1,0 +1,59 @@
+{
+  "race_id": 58,
+  "name": "Forgotten",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 1,
+  "display_ids": [
+    60052,
+    0
+  ],
+  "script_grants": [
+    110880,
+    110881,
+    110882,
+    110883,
+    110884
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    20600
+  ],
+  "racial_spell_ids": [
+    20600,
+    110880,
+    110881,
+    110882,
+    110883,
+    110884
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 58,
+      "spell": 668,
+      "comment": "Language Common",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 58,
+      "rank": 0,
+      "skill": 98,
+      "comment": "Language Common",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "20600": "Perception",
+    "110880": "Desperate Flight",
+    "110881": "Wiry Frame",
+    "110882": "Nervous Energy",
+    "110883": "Make Do",
+    "110884": "Field Dressing"
+  }
+}

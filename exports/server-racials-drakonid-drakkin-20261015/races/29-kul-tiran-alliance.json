@@ -1,0 +1,37 @@
+{
+  "race_id": 29,
+  "name": "Kul Tiran",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": false,
+  "legacy_mask_race": 29,
+  "display_ids": [
+    60022,
+    60023
+  ],
+  "script_grants": [],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    2481,
+    20594,
+    20595,
+    20596
+  ],
+  "racial_spell_ids": [
+    2481,
+    20594,
+    20595,
+    20596
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "2481": "Find Treasure",
+    "20594": "Stoneform",
+    "20595": "Gun Specialization",
+    "20596": "Frost Resistance"
+  }
+}

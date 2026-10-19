@@ -1,0 +1,37 @@
+{
+  "race_id": 7,
+  "name": "Gnome",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 7,
+  "display_ids": [
+    1563,
+    1564
+  ],
+  "script_grants": [],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    20589,
+    20591,
+    20592,
+    20593
+  ],
+  "racial_spell_ids": [
+    20589,
+    20591,
+    20592,
+    20593
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "20589": "Escape Artist",
+    "20591": "Expansive Mind",
+    "20592": "Arcane Resistance",
+    "20593": "Engineering Specialization"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "race_id": 54,
+  "name": "Naga",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 10,
+  "display_ids": [
+    60048,
+    60049
+  ],
+  "script_grants": [
+    110820,
+    110821,
+    110822,
+    110823,
+    110980
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [],
+  "racial_spell_ids": [
+    110820,
+    110821,
+    110822,
+    110823,
+    110980
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 54,
+      "spell": 669,
+      "comment": "Language Orcish",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 54,
+      "rank": 0,
+      "skill": 109,
+      "comment": "Language Orcish",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "110820": "Coiling Grasp",
+    "110821": "Highborne Legacy",
+    "110822": "Children of the Depths",
+    "110823": "Serpentine Weaponry",
+    "110980": "Scaled Hide"
+  }
+}

@@ -16,6 +16,7 @@ test('builds a flat SHA-256 client manifest and skips player-owned state', async
 		await fs.outputFile(path.join(root, 'Data', 'patch-K.mpq', 'DBFilesClient', 'Example.dbc'), 'bundle-member');
 		await fs.outputFile(path.join(root, 'Data', 'patch-K.mpq.zip'), 'bundle-transport');
 		await fs.outputFile(path.join(root, 'Logs', 'connection.log'), 'private-log');
+		await fs.outputFile(path.join(root, 'Eclipse', 'logs', 'eclipse.log'), 'rotating-log');
 		await fs.outputFile(path.join(root, 'WTF', 'Account', 'Example', 'SavedVariables.lua'), 'private-state');
 
 		const manifest = await buildV2Manifest(root, 'live');

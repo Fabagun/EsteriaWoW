@@ -21,6 +21,7 @@
 #include "CharacterCache.h"
 #include "Chat.h"
 #include "Config.h"
+#include <cmath>
 #include "DatabaseEnv.h"
 #include "GameTime.h"
 #include "GuildMgr.h"
@@ -385,6 +386,17 @@ void Guild::BankTab::LoadFromDB(Field* fields)
     m_name = fields[2].Get<std::string>();
     m_icon = fields[3].Get<std::string>();
     m_text = fields[4].Get<std::string>();
+    m_slots = std::clamp<uint16>(fields[5].Get<uint16>(), 1, GUILD_BANK_MAX_SLOTS);
+}
+
+void Guild::BankTab::SetSlots(uint16 slots)
+{
+    m_slots = std::min<uint16>(slots, GUILD_BANK_MAX_SLOTS);
+    CharacterDatabasePreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_UPD_GUILD_BANK_TAB_SLOTS);
+    stmt->SetData(0, m_slots);
+    stmt->SetData(1, m_guildId);
+    stmt->SetData(2, m_tabId);
+    CharacterDatabase.Execute(stmt);
 }
 
 bool Guild::BankTab::LoadItemFromDB(Field* fields)
@@ -422,6 +434,7 @@ bool Guild::BankTab::LoadItemFromDB(Field* fields)
 
     pItem->AddToWorld();
     m_items[slotId] = pItem;
+    m_slots = std::max<uint16>(m_slots, slotId + 1);
     return true;
 }
 
@@ -973,7 +986,8 @@ bool Guild::BankMoveItemData::_ReserveSpace(uint8 slotId, Item* pItem, Item* pIt
 
 void Guild::BankMoveItemData::CanStoreItemInTab(Item* pItem, uint8 skipSlotId, bool merge, uint32& count)
 {
-    for (uint8 slotId = 0; (slotId < GUILD_BANK_MAX_SLOTS) && (count > 0); ++slotId)
+    uint16 tabSlots = m_pGuild->GetBankTabSlots(m_container);
+    for (uint16 slotId = 0; (slotId < tabSlots) && (count > 0); ++slotId)
     {
         // Skip slot already processed in CanStore (when destination slot was specified)
         if (slotId == skipSlotId)
@@ -1011,6 +1025,8 @@ InventoryResult Guild::BankMoveItemData::CanStore(Item* pItem, bool swap)
     // Slot explicitely specified. Check it.
     if (m_slotId != NULL_SLOT)
     {
+        if (m_slotId >= m_pGuild->GetBankTabSlots(m_container))
+            return EQUIP_ERR_ITEM_DOESNT_GO_INTO_BAG;
         Item* pItemDest = m_pGuild->_GetItem(m_container, m_slotId);
         // Ignore swapped item (this slot will be empty after move)
         if ((pItemDest == pItem) || swap)
@@ -1455,7 +1471,7 @@ void Guild::HandleBuyBankTab(WorldSession* session, uint8 tabId)
     if (tabId != _GetPurchasedTabsSize())
         return;
 
-    uint32 tabCost = _GetGuildBankTabPrice(tabId);
+    uint32 tabCost = GetNextBankTabPrice();
     if (!tabCost)
         return;
 
@@ -1467,6 +1483,46 @@ void Guild::HandleBuyBankTab(WorldSession* session, uint8 tabId)
     _CreateNewBankTab();
     _BroadcastEvent(GE_BANK_TAB_PURCHASED);
     SendPermissions(session); /// Hack to force client to update permissions
+}
+
+// Tab purchases scale the stock prices so later tabs cost far more (Guild.BankTabCostMultiplier).
+uint32 Guild::GetNextBankTabPrice() const
+{
+    double base = double(_GetGuildBankTabPrice(_GetPurchasedTabsSize()));
+    double scaled = base * double(sConfigMgr->GetOption<float>("Guild.BankTabCostMultiplier", 3.0f));
+    return uint32(std::min(scaled, double(MAX_MONEY_AMOUNT)));
+}
+
+// Each tab grows from 128 slots in steps; every step costs more than the last.
+uint32 Guild::GetBankTabExpandPrice(uint8 tabId) const
+{
+    uint32 step = std::max(1u, sConfigMgr->GetOption<uint32>("Guild.BankTabExpandSlots", 16));
+    uint32 slots = GetBankTabSlots(tabId);
+    uint32 steps = slots > 128 ? (slots - 128 + step - 1) / step : 0;
+    double price = double(sConfigMgr->GetOption<uint32>("Guild.BankTabExpandCost", 2500000))
+        * std::pow(double(sConfigMgr->GetOption<float>("Guild.BankTabExpandGrowth", 1.25f)), double(steps));
+    return uint32(std::min(price, double(MAX_MONEY_AMOUNT)));
+}
+
+bool Guild::HandleExpandBankTab(WorldSession* session, uint8 tabId, uint32 quotedPrice)
+{
+    Player* player = session->GetPlayer();
+    if (!player)
+        return false;
+    Member const* member = GetMember(player->GetGUID());
+    BankTab* tab = GetBankTab(tabId);
+    if (!member || !tab || member->GetRankId() != GR_GUILDMASTER)
+        return false;
+    uint32 step = std::max(1u, sConfigMgr->GetOption<uint32>("Guild.BankTabExpandSlots", 16));
+    uint32 maximum = std::min<uint32>(sConfigMgr->GetOption<uint32>("Guild.BankTabMaxSlots", GUILD_BANK_MAX_SLOTS),
+        GUILD_BANK_MAX_SLOTS);
+    uint32 price = GetBankTabExpandPrice(tabId);
+    if (tab->GetSlots() >= maximum || price != quotedPrice || !player->HasEnoughMoney(price))
+        return false;
+    player->ModifyMoney(-int32(price));
+    tab->SetSlots(uint16(std::min<uint32>(maximum, tab->GetSlots() + step)));
+    _BroadcastEvent(GE_BANK_TAB_UPDATED);
+    return true;
 }
 
 void Guild::HandleInviteMember(WorldSession* session, std::string const& name)
@@ -2432,8 +2488,8 @@ bool Guild::ChangeMemberRank(ObjectGuid guid, uint8 newRank)
 // Bank (items move)
 void Guild::SwapItems(Player* player, uint8 tabId, uint8 slotId, uint8 destTabId, uint8 destSlotId, uint32 splitedAmount)
 {
-    if (tabId >= _GetPurchasedTabsSize() || slotId >= GUILD_BANK_MAX_SLOTS ||
-        destTabId >= _GetPurchasedTabsSize() || destSlotId >= GUILD_BANK_MAX_SLOTS)
+    if (tabId >= _GetPurchasedTabsSize() || slotId >= GetBankTabSlots(tabId) ||
+        destTabId >= _GetPurchasedTabsSize() || destSlotId >= GetBankTabSlots(destTabId))
         return;
 
     if (tabId == destTabId && slotId == destSlotId)
@@ -2446,7 +2502,7 @@ void Guild::SwapItems(Player* player, uint8 tabId, uint8 slotId, uint8 destTabId
 
 void Guild::SwapItemsWithInventory(Player* player, bool toChar, uint8 tabId, uint8 slotId, uint8 playerBag, uint8 playerSlotId, uint32 splitedAmount)
 {
-    if ((slotId >= GUILD_BANK_MAX_SLOTS && slotId != NULL_SLOT) || tabId >= _GetPurchasedTabsSize())
+    if ((slotId != NULL_SLOT && slotId >= GetBankTabSlots(tabId)) || tabId >= _GetPurchasedTabsSize())
         return;
 
     BankMoveItemData bankData(this, player, tabId, slotId);

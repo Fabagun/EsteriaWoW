@@ -17,3 +17,6 @@ EXPORTS
     EsteriaDirectSection
     EsteriaSectionCount
     EsteriaForgetCharacter
+    EsteriaSelfMounted
+    EsteriaSelfAnimation
+    EsteriaSelfMotion

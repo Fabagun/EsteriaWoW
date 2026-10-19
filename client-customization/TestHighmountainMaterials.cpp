@@ -38,6 +38,7 @@ namespace
     std::unordered_map<void*, std::string> generatedLayerPaths;
     std::array<void*, 16> boundTextures{};
     unsigned decodedTextures;
+    std::string lastTexturePath;
     std::vector<unsigned char> clothingPixels;
     void* pendingClothingBytes;
     void* retainedClothingLayer;
@@ -130,6 +131,7 @@ namespace
             || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\Sethrak\\")
             || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\Saberon\\")
             || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\Drakonid\\")
+            || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\Tarasek\\")
             || std::strstr(name, "Interface\\AddOns\\EsteriaAppearanceCache\\Gnoll\\"));
     }
 
@@ -186,11 +188,13 @@ namespace
 
     void* __cdecl Texture(char const* name, void*)
     {
+        lastTexturePath = name;
         assert(!std::strcmp(name, path) || !std::strncmp(name, "custom\\earthen\\", 15)
             || !std::strncmp(name, "custom\\naga\\sirus\\", 18)
             || !std::strncmp(name, "custom\\sethrak\\", 15)
             || !std::strncmp(name, "custom\\saberon\\", 15)
-        || !std::strncmp(name, "custom\\drakonid\\", 16)
+            || !std::strncmp(name, "custom\\drakonid\\", 16)
+            || !std::strncmp(name, "custom\\tarasek\\", 15)
             || !std::strcmp(name, "Item\\TextureComponents\\LegUpperTexture\\"
                 "leather_raidrogue_h_01blood_belt_lu_U.blp")
             || !std::strcmp(name, "Item\\TextureComponents\\LegUpperTexture\\"
@@ -845,7 +849,51 @@ int main(int argc, char** argv)
         assert(gnollGeosets.contains(3101) && gnollGeosets.contains(3206) && gnollGeosets.contains(3501));
         forget(component);
     }
-    // Real Wrath composition forces alpha opaque; our render-only slot must preserve uncovered fur.
+    // Male Drakkin use Tarasek horns while retaining the last skin and all stock appearance bytes.
+    *reinterpret_cast<unsigned*>(component + 0x18) = 66;
+    *reinterpret_cast<unsigned*>(unit + 0x18) = 66;
+    *reinterpret_cast<unsigned*>(component + 0x1C) = 0;
+    for (unsigned horn = 0; horn < 5; ++horn)
+    {
+        std::array<std::uint8_t, 5> appearance = {5, 0, static_cast<std::uint8_t>(horn), 0, 0};
+        std::memcpy(playerData + 0x14, appearance.data(), appearance.size());
+        unitExtra(unit);
+        geometry(component);
+        for (unsigned option = 0; option < 5; ++option)
+            assert(gnollGeosets.contains(3301 + option) == (option == horn));
+        for (unsigned i = 0; i < appearance.size(); ++i)
+            assert(*reinterpret_cast<unsigned*>(component + offsets[i]) == appearance[i]);
+    }
+    char const* tarasekSkins[] = {"white", "black", "blue", "bronze", "green", "red"};
+    char const* tarasekEyes[] = {"original", "red", "amber", "green", "blue", "violet", "silver"};
+    for (unsigned skin = 0; skin < 6; ++skin)
+        for (unsigned eye = 0; eye < 7; ++eye)
+        {
+            std::array<std::uint8_t, 5> appearance = {static_cast<std::uint8_t>(skin), 0, 4,
+                static_cast<std::uint8_t>(eye), 0};
+            std::memcpy(playerData + 0x14, appearance.data(), appearance.size());
+            unitExtra(unit);
+            assert(direct(component, 1, hair));
+            std::string expected = "custom\\tarasek\\creature\\tarasek\\tarasek_";
+            expected += tarasekSkins[skin];
+            if (eye)
+                expected += std::string("_eyes_") + tarasekEyes[eye];
+            expected += ".blp";
+            assert(lastSlot == 11 && lastTexturePath == expected);
+            for (unsigned i = 0; i < appearance.size(); ++i)
+                assert(*reinterpret_cast<unsigned*>(component + offsets[i]) == appearance[i]);
+        }
+    *reinterpret_cast<unsigned*>(component + 0x428) = 45684; // Lightbringer War-Helm is open at the horns.
+    geometry(component);
+    assert(gnollGeosets.contains(3305));
+    *reinterpret_cast<unsigned*>(component + 0x428) = 14957; // A closed crusader helm uses the donor hide bit.
+    geometry(component);
+    assert(!gnollGeosets.contains(3305));
+    *reinterpret_cast<unsigned*>(component + 0x428) = 0;
+    geometry(component);
+    assert(gnollGeosets.contains(3305));
+    forget(component);
+    // Real Wrath composition forces alpha opaque; the overlay must preserve uncovered skin/fur.
     std::vector<unsigned char> clothingFixture(1176);
     std::memcpy(clothingFixture.data(), "BLP2", 4);
     *reinterpret_cast<unsigned*>(clothingFixture.data() + 4) = 1;
@@ -865,7 +913,7 @@ int main(int argc, char** argv)
     *reinterpret_cast<unsigned*>(clothingLayer + 0xB0) = static_cast<unsigned>(clothingFixture.size());
     pendingClothingBytes = clothingFixture.data();
     retainedClothingLayer = clothingLayer;
-    for (unsigned race : {63u, 64u})
+    for (unsigned race : {63u, 64u, 66u})
     {
         *reinterpret_cast<unsigned*>(component + 0x18) = race;
         for (unsigned offset : offsets)
@@ -884,7 +932,7 @@ int main(int argc, char** argv)
         assert(clothingPixels[uncovered + 3] == 0);
         assert(clothingPixels[covered] == 30 && clothingPixels[covered + 1] == 80
             && clothingPixels[covered + 2] == 200 && clothingPixels[covered + 3] == 255);
-        assert(clothingReadyCalls == (race == 63 ? 1u : 2u));
+        assert(clothingReadyCalls == (race == 63 ? 1u : race == 64 ? 2u : 3u));
         unsigned prior = decodedTextures;
         geometry(component);
         assert(decodedTextures == prior); // Unchanged equipment reuses its owned texture.
@@ -901,7 +949,7 @@ int main(int argc, char** argv)
     }
     // An unrelated equip must not erase retained chest/boot regions whose ready bits were invalidated.
     clothingFixture[1175] = 255;
-    for (unsigned race : {63u, 64u})
+    for (unsigned race : {63u, 64u, 66u})
     {
         *reinterpret_cast<unsigned*>(component + 0x18) = race;
         for (unsigned base : {0x284u, 0x374u})
@@ -957,7 +1005,7 @@ int main(int argc, char** argv)
         forget(component);
         assert(generatedTextures.empty());
     }
-    for (unsigned gender : {0u, 1u})
+    for (unsigned gender : {1u})
     {
         *reinterpret_cast<unsigned*>(component + 0x18) = 66;
         *reinterpret_cast<unsigned*>(component + 0x1C) = gender;

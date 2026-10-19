@@ -1,6 +1,7 @@
 import crypto from 'node:crypto';
 import fs from 'fs-extra';
 import path from 'node:path';
+import { isExcludedClientPath } from './client-exclusions.js';
 
 export type V2ManifestFile = {
 	path: string;
@@ -50,6 +51,7 @@ const SKIP_DIRS = new Set([
 	'WTF',
 	'Errors',
 	'Logs',
+	'Eclipse/logs',
 	'Screenshots',
 	'WDB',
 	'WTF/Account',
@@ -99,6 +101,7 @@ export const buildV2Manifest = async (
 	const bundleConfig = await loadBundleConfig(root);
 	const activeBundleConfig: BundleConfig[] = [];
 	for (const bundle of bundleConfig) {
+		if (isExcludedClientPath(bundle.path) || isExcludedClientPath(bundle.archive)) continue;
 		const target = path.join(root, ...normalize(bundle.path).split('/'));
 		const archive = path.join(root, ...normalize(bundle.archive).split('/'));
 		if ((await fs.pathExists(target)) && (await fs.pathExists(archive))) {
@@ -115,6 +118,7 @@ export const buildV2Manifest = async (
 			const fullPath = path.join(dir, name);
 			const relativePath = prefix ? path.join(prefix, name) : name;
 			const relativePosix = normalize(relativePath);
+			if (isExcludedClientPath(relativePosix)) continue;
 			const stat = await fs.stat(fullPath);
 			if (stat.isDirectory()) {
 				if (!shouldSkipDir(relativePosix)) await collect(fullPath, relativePath);

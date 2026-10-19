@@ -150,6 +150,21 @@ int main(int argc, char** argv)
         assert(!CreatureAppearance::Validate(race, 1, {5, 0, 4, 4, 1}));
         assert(CreatureAppearance::Validate(race, 0, {5, 0, 5, 4, 5}));
     }
+    // Female Tuskarr is the HD NPC model: seven skins, every other control fixed, own creature materials.
+    assert(CreatureAppearance::GenderAllowed(55, 0) && CreatureAppearance::GenderAllowed(55, 1));
+    assert(!CreatureAppearance::GenderAllowed(55, 2));
+    assert(CreatureAppearance::Validate(55, 1, {6, 0, 0, 0, 0}));
+    assert(!CreatureAppearance::Validate(55, 1, {7, 0, 0, 0, 0}));
+    assert(CreatureAppearance::Validate(55, 0, {6, 0, 6, 6, 6}));
+    assert(!CreatureAppearance::UsesStockMaterials(55, 0) && !CreatureAppearance::UsesStockMaterials(55, 1));
+    for (unsigned i = 1; i < 5; ++i)
+    {
+        std::array<std::uint8_t, 5> invalid{};
+        invalid[i] = 1;
+        assert(!CreatureAppearance::Validate(55, 1, invalid));
+    }
+    unsigned tuskarrArguments[] = {0, 55, 1, 0, 0, 0, 0};
+    assert(sectionCount(tuskarrArguments) == 7);
     assert(CreatureAppearance::Validate(62, 0, {4, 0, 3, 3, 0}));
     assert(CreatureAppearance::Validate(62, 1, {}));
     assert(!CreatureAppearance::Validate(62, 0, {5, 0, 3, 3, 0}));
@@ -166,13 +181,21 @@ int main(int argc, char** argv)
     for (unsigned race : {66u, 67u})
     {
         unsigned const count = 16;
-        assert(CreatureAppearance::Validate(race, 0, {15, 0, 0, 24, 0}));
+        assert(CreatureAppearance::Validate(race, 0, race == 66
+            ? std::array<std::uint8_t, 5>{5, 0, 4, 6, 0} : std::array<std::uint8_t, 5>{15, 0, 0, 24, 0}));
         assert(CreatureAppearance::Validate(race, 1, {15, 0, 0, 24, 0}));
         assert(!CreatureAppearance::Validate(race, 0, {16, 0, 0, 24, 0}));
         assert(!CreatureAppearance::Validate(race, 1, {15, 0, 0, 25, 0}));
         assert(!CreatureAppearance::Validate(race, 2, {}));
         assert(CreatureAppearance::UsesStockMaterials(race, 1));
-        assert(CreatureAppearance::UsesStockMaterials(race, 0));
+        assert(CreatureAppearance::UsesStockMaterials(race, 0) == (race == 67));
+        if (race == 66)
+            for (unsigned field = 0; field < 5; ++field)
+            {
+                std::array<std::uint8_t, 5> invalid{};
+                invalid[field] = static_cast<std::uint8_t>(CreatureAppearance::Options(race, 0)[field].count);
+                assert(!CreatureAppearance::Validate(race, 0, invalid));
+            }
         for (unsigned color = 0; color < count; ++color)
             assert(CreatureAppearance::Validate(race, 1, {static_cast<std::uint8_t>(color), 0, 0, 0, 0}));
         for (unsigned i = 0; i < 5; ++i)
@@ -184,7 +207,7 @@ int main(int argc, char** argv)
         unsigned arguments[] = {0, race, 1, 0, 0, 0, 0};
         assert(sectionCount(arguments) == count);
         arguments[2] = 0;
-        assert(sectionCount(arguments) == count);
+        assert(sectionCount(arguments) == (race == 66 ? 7 : count)); // Tarasek: six retail skins plus purple
     }
     for (unsigned i = 0; i < 5; ++i)
     {

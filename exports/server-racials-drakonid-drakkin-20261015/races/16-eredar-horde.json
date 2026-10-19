@@ -1,0 +1,62 @@
+{
+  "race_id": 16,
+  "name": "Eredar",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 16,
+  "display_ids": [
+    60008,
+    60009
+  ],
+  "script_grants": [
+    110740,
+    110741,
+    110742,
+    110743,
+    110744
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    822,
+    25046,
+    28730,
+    28877,
+    80866,
+    80867,
+    80868
+  ],
+  "racial_spell_ids": [
+    822,
+    25046,
+    28730,
+    28877,
+    80866,
+    80867,
+    80868,
+    110740,
+    110741,
+    110742,
+    110743,
+    110744
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "822": "Magic Resistance",
+    "25046": "Arcane Torrent",
+    "28730": "Arcane Torrent",
+    "28877": "Arcane Affinity",
+    "80866": "MISSING",
+    "80867": "MISSING",
+    "80868": "MISSING",
+    "110740": "Felblood Surge",
+    "110741": "Man'ari Blood",
+    "110742": "Demonic Resilience",
+    "110743": "Unbroken Will",
+    "110744": "Forbidden Knowledge"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "race_id": 45,
+  "name": "Mag'har Orc",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 2,
+  "display_ids": [
+    60030,
+    60031
+  ],
+  "script_grants": [],
+  "additional_source_racials": [
+    110100,
+    110101,
+    110102,
+    110103
+  ],
+  "racial_start_and_skill_candidates": [
+    21563,
+    54562,
+    65222,
+    110100,
+    110101,
+    110102,
+    110103
+  ],
+  "racial_spell_ids": [
+    21563,
+    54562,
+    65222,
+    110100,
+    110101,
+    110102,
+    110103
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 45,
+      "spell": 110100,
+      "comment": "Ancestral Call",
+      "classMask": 0
+    },
+    {
+      "race": 45,
+      "spell": 110101,
+      "comment": "Savage Blood",
+      "classMask": 0
+    },
+    {
+      "race": 45,
+      "spell": 110102,
+      "comment": "Sympathetic Vigor",
+      "classMask": 0
+    },
+    {
+      "race": 45,
+      "spell": 110103,
+      "comment": "Unwavering Will",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [],
+  "excluded_start_spells": [
+    {
+      "race": 45,
+      "spell": 20572,
+      "comment": "Orc Blood Fury: Maghar uses Ancestral Call"
+    },
+    {
+      "race": 45,
+      "spell": 20573,
+      "comment": "Orc Hardiness"
+    },
+    {
+      "race": 45,
+      "spell": 20574,
+      "comment": "Orc Axe Specialization"
+    },
+    {
+      "race": 45,
+      "spell": 20575,
+      "comment": "Orc Command"
+    },
+    {
+      "race": 45,
+      "spell": 20576,
+      "comment": "Orc Command"
+    },
+    {
+      "race": 45,
+      "spell": 33697,
+      "comment": "Orc Blood Fury caster variant"
+    },
+    {
+      "race": 45,
+      "spell": 33702,
+      "comment": "Orc Blood Fury caster variant"
+    }
+  ],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "21563": "Command",
+    "54562": "Command",
+    "65222": "Command",
+    "110100": "Ancestral Call",
+    "110101": "Savage Blood",
+    "110102": "Sympathetic Vigor",
+    "110103": "Unwavering Will"
+  }
+}

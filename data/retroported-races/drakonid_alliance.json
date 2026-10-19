@@ -50,7 +50,7 @@
         "descriptors": [
           [
             0,
-            5,
+            17,
             1
           ],
           [
@@ -75,7 +75,7 @@
           ]
         ],
         "capacities": [
-          5,
+          17,
           4,
           6,
           76,
@@ -89,7 +89,19 @@
               "drakonid2_black",
               "drakonid2_bronze",
               "drakonid2_green",
-              "drakonid2_red"
+              "drakonid2_red",
+              "drakonid2_white",
+              "drakonid2_olive",
+              "drakonid2_chromatic",
+              "drakonid2_twilight",
+              "drakonid2_void",
+              "drakonid2_azure",
+              "drakonid2_teal",
+              "drakonid2_indigo",
+              "drakonid2_darkteal",
+              "drakonid2_umber",
+              "drakonid2_charcoal",
+              "drakonid2_abyss"
             ]
           },
           {

@@ -1,0 +1,2492 @@
+{
+  "server-data/dbc/Achievement.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Achievement.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Achievement_Category.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Achievement_Category.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Achievement_Criteria.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Achievement_Criteria.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/AnimationData.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/AnimationData.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/AreaGroup.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/AreaGroup.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/AreaPOI.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/AreaPOI.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/AreaTable.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/AreaTable.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/AreaTrigger.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/AreaTrigger.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/AttackAnimKits.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/AttackAnimKits.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/AttackAnimTypes.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/AttackAnimTypes.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/AuctionHouse.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/AuctionHouse.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/BankBagSlotPrices.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/BankBagSlotPrices.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/BannedAddOns.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/BannedAddOns.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/BarberShopStyle.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/BarberShopStyle.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/BattlemasterList.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/BattlemasterList.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CameraShakes.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CameraShakes.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Cfg_Categories.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Cfg_Categories.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Cfg_Configs.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Cfg_Configs.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CharacterFacialHairStyles.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CharacterFacialHairStyles.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CharBaseInfo.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CharBaseInfo.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CharHairGeosets.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CharHairGeosets.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CharHairTextures.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CharHairTextures.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CharSections.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CharSections.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CharStartOutfit.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CharStartOutfit.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CharTitles.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CharTitles.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CharVariations.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CharVariations.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ChatChannels.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ChatChannels.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ChatProfanity.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ChatProfanity.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ChrClasses.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ChrClasses.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ChrRaces.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ChrRaces.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CinematicCamera.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CinematicCamera.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CinematicSequences.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CinematicSequences.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/component.wow-enUS.txt": {
+    "source": "/azerothcore/env/dist/data/dbc/component.wow-enUS.txt",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CreatureDisplayInfo.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CreatureDisplayInfo.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CreatureDisplayInfoExtra.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CreatureDisplayInfoExtra.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CreatureFamily.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CreatureFamily.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CreatureModelData.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CreatureModelData.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CreatureMovementInfo.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CreatureMovementInfo.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CreatureSoundData.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CreatureSoundData.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CreatureSpellData.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CreatureSpellData.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CreatureType.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CreatureType.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CurrencyCategory.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CurrencyCategory.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/CurrencyTypes.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/CurrencyTypes.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/DanceMoves.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/DanceMoves.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/DeathThudLookups.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/DeathThudLookups.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/DeclinedWord.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/DeclinedWord.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/DeclinedWordCases.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/DeclinedWordCases.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/DestructibleModelData.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/DestructibleModelData.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/DungeonEncounter.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/DungeonEncounter.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/DungeonMap.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/DungeonMap.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/DungeonMapChunk.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/DungeonMapChunk.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/DurabilityCosts.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/DurabilityCosts.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/DurabilityQuality.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/DurabilityQuality.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Emotes.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Emotes.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/EmotesText.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/EmotesText.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/EmotesTextData.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/EmotesTextData.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/EmotesTextSound.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/EmotesTextSound.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/EnvironmentalDamage.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/EnvironmentalDamage.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Exhaustion.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Exhaustion.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Faction.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Faction.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/FactionGroup.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/FactionGroup.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/FactionTemplate.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/FactionTemplate.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/FileData.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/FileData.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/FootprintTextures.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/FootprintTextures.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/FootstepTerrainLookup.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/FootstepTerrainLookup.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GameObjectArtKit.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GameObjectArtKit.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GameObjectDisplayInfo.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GameObjectDisplayInfo.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GameTables.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GameTables.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GameTips.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GameTips.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GemProperties.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GemProperties.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GlyphProperties.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GlyphProperties.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GlyphSlot.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GlyphSlot.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GMSurveyAnswers.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GMSurveyAnswers.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GMSurveyCurrentSurvey.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GMSurveyCurrentSurvey.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GMSurveyQuestions.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GMSurveyQuestions.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GMSurveySurveys.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GMSurveySurveys.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GMTicketCategory.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GMTicketCategory.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GroundEffectDoodad.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GroundEffectDoodad.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/GroundEffectTexture.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/GroundEffectTexture.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/gtBarberShopCostBase.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/gtBarberShopCostBase.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/gtChanceToMeleeCrit.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/gtChanceToMeleeCrit.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/gtChanceToMeleeCritBase.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/gtChanceToMeleeCritBase.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/gtChanceToSpellCrit.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/gtChanceToSpellCrit.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/gtChanceToSpellCritBase.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/gtChanceToSpellCritBase.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/gtCombatRatings.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/gtCombatRatings.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/gtNPCManaCostScaler.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/gtNPCManaCostScaler.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/gtOCTClassCombatRatingScalar.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/gtOCTClassCombatRatingScalar.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/gtOCTRegenHP.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/gtOCTRegenHP.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/gtOCTRegenMP.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/gtOCTRegenMP.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/gtRegenHPPerSpt.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/gtRegenHPPerSpt.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/gtRegenMPPerSpt.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/gtRegenMPPerSpt.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/HelmetGeosetVisData.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/HelmetGeosetVisData.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/HolidayDescriptions.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/HolidayDescriptions.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/HolidayNames.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/HolidayNames.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Holidays.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Holidays.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Item.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Item.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemBagFamily.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemBagFamily.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemClass.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemClass.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemCondExtCosts.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemCondExtCosts.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemDisplayInfo.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemDisplayInfo.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemExtendedCost.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemExtendedCost.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemGroupSounds.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemGroupSounds.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemLimitCategory.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemLimitCategory.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemPetFood.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemPetFood.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemPurchaseGroup.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemPurchaseGroup.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemRandomProperties.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemRandomProperties.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemRandomSuffix.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemRandomSuffix.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemSet.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemSet.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemSubClass.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemSubClass.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemSubClassMask.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemSubClassMask.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemVisualEffects.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemVisualEffects.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ItemVisuals.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ItemVisuals.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Languages.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Languages.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LanguageWords.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LanguageWords.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LFGDungeonExpansion.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LFGDungeonExpansion.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LFGDungeonGroup.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LFGDungeonGroup.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LFGDungeons.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LFGDungeons.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Light.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Light.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LightFloatBand.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LightFloatBand.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LightIntBand.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LightIntBand.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LightParams.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LightParams.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LightSkybox.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LightSkybox.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LiquidMaterial.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LiquidMaterial.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LiquidType.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LiquidType.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LoadingScreens.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LoadingScreens.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LoadingScreenTaxiSplines.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LoadingScreenTaxiSplines.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Lock.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Lock.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/LockType.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/LockType.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/MailTemplate.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/MailTemplate.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Map.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Map.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/MapDifficulty.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/MapDifficulty.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Material.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Material.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Movie.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Movie.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/MovieFileData.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/MovieFileData.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/MovieVariation.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/MovieVariation.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/NameGen.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/NameGen.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/NamesProfanity.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/NamesProfanity.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/NamesReserved.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/NamesReserved.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/NPCSounds.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/NPCSounds.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ObjectEffect.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ObjectEffect.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ObjectEffectGroup.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ObjectEffectGroup.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ObjectEffectModifier.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ObjectEffectModifier.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ObjectEffectPackage.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ObjectEffectPackage.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ObjectEffectPackageElem.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ObjectEffectPackageElem.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/OverrideSpellData.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/OverrideSpellData.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Package.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Package.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/PageTextMaterial.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/PageTextMaterial.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/PaperDollItemFrame.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/PaperDollItemFrame.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ParticleColor.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ParticleColor.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/PetitionType.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/PetitionType.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/PetPersonality.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/PetPersonality.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/PowerDisplay.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/PowerDisplay.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/PvpDifficulty.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/PvpDifficulty.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/QuestFactionReward.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/QuestFactionReward.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/QuestInfo.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/QuestInfo.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/QuestSort.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/QuestSort.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/QuestXP.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/QuestXP.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/RandPropPoints.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/RandPropPoints.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Resistances.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Resistances.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ScalingStatDistribution.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ScalingStatDistribution.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ScalingStatValues.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ScalingStatValues.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ScreenEffect.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ScreenEffect.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ServerMessages.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ServerMessages.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SheatheSoundLookups.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SheatheSoundLookups.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SkillCostsData.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SkillCostsData.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SkillLine.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SkillLine.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SkillLineAbility.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SkillLineAbility.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SkillLineCategory.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SkillLineCategory.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SkillRaceClassInfo.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SkillRaceClassInfo.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SkillTiers.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SkillTiers.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SoundAmbience.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SoundAmbience.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SoundEmitters.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SoundEmitters.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SoundEntries.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SoundEntries.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SoundEntriesAdvanced.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SoundEntriesAdvanced.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SoundFilter.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SoundFilter.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SoundFilterElem.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SoundFilterElem.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SoundProviderPreferences.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SoundProviderPreferences.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SoundSamplePreferences.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SoundSamplePreferences.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SoundWaterType.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SoundWaterType.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpamMessages.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpamMessages.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Spell.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Spell.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellCastTimes.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellCastTimes.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellCategory.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellCategory.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellChainEffects.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellChainEffects.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellDescriptionVariables.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellDescriptionVariables.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellDifficulty.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellDifficulty.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellDispelType.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellDispelType.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellDuration.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellDuration.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellEffectCameraShakes.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellEffectCameraShakes.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellFocusObject.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellFocusObject.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellIcon.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellIcon.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellItemEnchantment.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellItemEnchantment.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellItemEnchantmentCondition.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellItemEnchantmentCondition.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellMechanic.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellMechanic.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellMissile.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellMissile.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellMissileMotion.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellMissileMotion.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellRadius.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellRadius.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellRange.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellRange.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellRuneCost.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellRuneCost.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellShapeshiftForm.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellShapeshiftForm.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellVisual.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellVisual.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellVisualEffectName.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellVisualEffectName.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellVisualKit.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellVisualKit.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellVisualKitAreaModel.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellVisualKitAreaModel.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellVisualKitModelAttach.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellVisualKitModelAttach.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SpellVisualPrecastTransitions.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SpellVisualPrecastTransitions.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/StableSlotPrices.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/StableSlotPrices.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Startup_Strings.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Startup_Strings.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Stationery.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Stationery.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/StringLookups.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/StringLookups.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/SummonProperties.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/SummonProperties.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Talent.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Talent.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/TalentTab.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/TalentTab.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/TaxiNodes.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/TaxiNodes.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/TaxiPath.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/TaxiPath.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/TaxiPathNode.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/TaxiPathNode.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/TeamContributionPoints.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/TeamContributionPoints.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/TerrainType.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/TerrainType.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/TerrainTypeSounds.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/TerrainTypeSounds.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/TotemCategory.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/TotemCategory.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/TransportAnimation.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/TransportAnimation.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/TransportPhysics.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/TransportPhysics.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/TransportRotation.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/TransportRotation.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/UISoundLookups.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/UISoundLookups.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/UnitBlood.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/UnitBlood.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/UnitBloodLevels.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/UnitBloodLevels.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Vehicle.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Vehicle.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/VehicleSeat.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/VehicleSeat.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/VehicleUIIndicator.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/VehicleUIIndicator.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/VehicleUIIndSeat.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/VehicleUIIndSeat.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/VideoHardware.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/VideoHardware.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/VocalUISounds.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/VocalUISounds.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/WeaponImpactSounds.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/WeaponImpactSounds.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/WeaponSwingSounds2.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/WeaponSwingSounds2.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/Weather.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/Weather.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/WMOAreaTable.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/WMOAreaTable.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/WorldChunkSounds.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/WorldChunkSounds.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/WorldMapArea.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/WorldMapArea.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/WorldMapContinent.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/WorldMapContinent.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/WorldMapOverlay.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/WorldMapOverlay.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/WorldMapTransforms.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/WorldMapTransforms.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/WorldSafeLocs.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/WorldSafeLocs.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/WorldStateUI.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/WorldStateUI.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/WorldStateZoneSounds.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/WorldStateZoneSounds.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/WowError_Strings.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/WowError_Strings.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ZoneIntroMusicTable.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ZoneIntroMusicTable.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc/ZoneMusic.dbc": {
+    "source": "/azerothcore/env/dist/data/dbc/ZoneMusic.dbc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc-continuations/CreatureDisplayInfo.dbc1-battlemon": {
+    "source": "/azerothcore/env/dist/data/dbc-continuations/CreatureDisplayInfo.dbc1-battlemon",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc-continuations/CreatureDisplayInfoExtra.dbc1-ascension-hd-npc": {
+    "source": "/azerothcore/env/dist/data/dbc-continuations/CreatureDisplayInfoExtra.dbc1-ascension-hd-npc",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc-continuations/CreatureModelData.dbc1-ascension-hd": {
+    "source": "/azerothcore/env/dist/data/dbc-continuations/CreatureModelData.dbc1-ascension-hd",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc-continuations/CreatureModelData.dbc1-battlemon": {
+    "source": "/azerothcore/env/dist/data/dbc-continuations/CreatureModelData.dbc1-battlemon",
+    "kind": "effective live container file"
+  },
+  "server-data/dbc-continuations/FactionTemplate.dbc1-freeborn": {
+    "source": "/azerothcore/env/dist/data/dbc-continuations/FactionTemplate.dbc1-freeborn",
+    "kind": "effective live container file"
+  },
+  "database/shared-world-schema.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "barbershopstyle_dbc",
+      "charsections_dbc",
+      "charstartoutfit_dbc",
+      "chrraces_dbc",
+      "creaturedisplayinfo_dbc",
+      "creaturedisplayinfoextra_dbc",
+      "creaturemodeldata_dbc",
+      "custom_race_racial_skip",
+      "custom_race_start_skill",
+      "custom_race_start_skill_exclude",
+      "custom_race_start_spell",
+      "custom_race_start_spell_exclude",
+      "faction_dbc",
+      "factiontemplate_dbc",
+      "player_race_stats",
+      "player_totem_model",
+      "playercreateinfo",
+      "playercreateinfo_action",
+      "playercreateinfo_cast_spell",
+      "playercreateinfo_item",
+      "playercreateinfo_skills",
+      "playercreateinfo_spell_custom",
+      "skillline_dbc",
+      "skilllineability_dbc",
+      "skillraceclassinfo_dbc",
+      "soundentries_dbc",
+      "spell_area",
+      "spell_bonus_data",
+      "spell_cone",
+      "spell_cooldown_overrides",
+      "spell_custom_attr",
+      "spell_dbc",
+      "spell_enchant_proc_data",
+      "spell_group",
+      "spell_group_stack_rules",
+      "spell_jump_distance",
+      "spell_linked_spell",
+      "spell_loot_template",
+      "spell_mixology",
+      "spell_pet_auras",
+      "spell_proc",
+      "spell_proc_event",
+      "spell_ranks",
+      "spell_required",
+      "spell_script_names",
+      "spell_scripts",
+      "spell_target_position",
+      "spell_threat",
+      "spellcasttimes_dbc",
+      "spellcategory_dbc",
+      "spelldifficulty_dbc",
+      "spellduration_dbc",
+      "spellfocusobject_dbc",
+      "spellitemenchantment_dbc",
+      "spellitemenchantmentcondition_dbc",
+      "spellradius_dbc",
+      "spellrange_dbc",
+      "spellrunecost_dbc",
+      "spellshapeshiftform_dbc",
+      "spellvisual_dbc",
+      "summonproperties_dbc"
+    ],
+    "where": null,
+    "schema_only": true,
+    "kind": "mysqldump"
+  },
+  "database/shared-world-data.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "barbershopstyle_dbc",
+      "charsections_dbc",
+      "charstartoutfit_dbc",
+      "chrraces_dbc",
+      "creaturedisplayinfo_dbc",
+      "creaturedisplayinfoextra_dbc",
+      "creaturemodeldata_dbc",
+      "custom_race_racial_skip",
+      "custom_race_start_skill",
+      "custom_race_start_skill_exclude",
+      "custom_race_start_spell",
+      "custom_race_start_spell_exclude",
+      "faction_dbc",
+      "factiontemplate_dbc",
+      "player_race_stats",
+      "player_totem_model",
+      "playercreateinfo",
+      "playercreateinfo_action",
+      "playercreateinfo_cast_spell",
+      "playercreateinfo_item",
+      "playercreateinfo_skills",
+      "playercreateinfo_spell_custom",
+      "skillline_dbc",
+      "skilllineability_dbc",
+      "skillraceclassinfo_dbc",
+      "soundentries_dbc",
+      "spell_area",
+      "spell_bonus_data",
+      "spell_cone",
+      "spell_cooldown_overrides",
+      "spell_custom_attr",
+      "spell_dbc",
+      "spell_enchant_proc_data",
+      "spell_group",
+      "spell_group_stack_rules",
+      "spell_jump_distance",
+      "spell_linked_spell",
+      "spell_loot_template",
+      "spell_mixology",
+      "spell_pet_auras",
+      "spell_proc",
+      "spell_proc_event",
+      "spell_ranks",
+      "spell_required",
+      "spell_script_names",
+      "spell_scripts",
+      "spell_target_position",
+      "spell_threat",
+      "spellcasttimes_dbc",
+      "spellcategory_dbc",
+      "spelldifficulty_dbc",
+      "spellduration_dbc",
+      "spellfocusobject_dbc",
+      "spellitemenchantment_dbc",
+      "spellitemenchantmentcondition_dbc",
+      "spellradius_dbc",
+      "spellrange_dbc",
+      "spellrunecost_dbc",
+      "spellshapeshiftform_dbc",
+      "spellvisual_dbc",
+      "summonproperties_dbc"
+    ],
+    "where": null,
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/chrraces_dbc.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "chrraces_dbc"
+    ],
+    "where": "ID IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/playercreateinfo.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "playercreateinfo"
+    ],
+    "where": "race IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/playercreateinfo_action.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "playercreateinfo_action"
+    ],
+    "where": "race IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/playercreateinfo_item.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "playercreateinfo_item"
+    ],
+    "where": "race IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/player_race_stats.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "player_race_stats"
+    ],
+    "where": "Race IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/player_totem_model.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "player_totem_model"
+    ],
+    "where": "RaceID IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/custom_race_start_spell.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "custom_race_start_spell"
+    ],
+    "where": "race IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/custom_race_start_skill.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "custom_race_start_skill"
+    ],
+    "where": "race IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/custom_race_start_spell_exclude.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "custom_race_start_spell_exclude"
+    ],
+    "where": "race IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/custom_race_start_skill_exclude.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "custom_race_start_skill_exclude"
+    ],
+    "where": "race IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/spell_dbc.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "spell_dbc"
+    ],
+    "where": "ID BETWEEN 110300 AND 110406 OR ID IN (110050,110051)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/spell_proc.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "spell_proc"
+    ],
+    "where": "ABS(SpellId) BETWEEN 110300 AND 110406 OR ABS(SpellId) IN (110050,110051)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/spell_script_names.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "spell_script_names"
+    ],
+    "where": "ABS(spell_id) BETWEEN 110300 AND 110406 OR ABS(spell_id) IN (110050,110051)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/creaturedisplayinfo_dbc.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "creaturedisplayinfo_dbc"
+    ],
+    "where": "ID IN (60064,60065,60068,60069,60070)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/creaturemodeldata_dbc.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "creaturemodeldata_dbc"
+    ],
+    "where": "ID IN (120073,120074,120077,120078,120079)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/charsections_dbc.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "charsections_dbc"
+    ],
+    "where": "Race IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/charstartoutfit_dbc.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "charstartoutfit_dbc"
+    ],
+    "where": "RaceID IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/barbershopstyle_dbc.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "barbershopstyle_dbc"
+    ],
+    "where": "Race IN (66,67,69,70)",
+    "schema_only": false,
+    "kind": "mysqldump"
+  },
+  "drakkin-drakonid/database/schema.sql": {
+    "source": "live ac-database/acore_world",
+    "tables": [
+      "chrraces_dbc",
+      "playercreateinfo",
+      "playercreateinfo_action",
+      "playercreateinfo_item",
+      "player_race_stats",
+      "player_totem_model",
+      "custom_race_start_spell",
+      "custom_race_start_skill",
+      "custom_race_start_spell_exclude",
+      "custom_race_start_skill_exclude",
+      "spell_dbc",
+      "spell_proc",
+      "spell_script_names",
+      "creaturedisplayinfo_dbc",
+      "creaturemodeldata_dbc",
+      "charsections_dbc",
+      "charstartoutfit_dbc",
+      "barbershopstyle_dbc"
+    ],
+    "where": null,
+    "schema_only": true,
+    "kind": "mysqldump"
+  },
+  "source/src/server/shared/SharedDefines.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\shared\\SharedDefines.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/shared/CreatureAppearance.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\shared\\CreatureAppearance.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Entities/Player/RaceMgr.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Entities\\Player\\RaceMgr.cpp",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Entities/Player/RaceMgr.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Entities\\Player\\RaceMgr.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Entities/Player/BrokenRacialEffects.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Entities\\Player\\BrokenRacialEffects.cpp",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Entities/Player/BrokenRacialEffects.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Entities\\Player\\BrokenRacialEffects.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Entities/Player/Player.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Entities\\Player\\Player.cpp",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Entities/Player/Player.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Entities\\Player\\Player.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Entities/Player/PlayerStorage.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Entities\\Player\\PlayerStorage.cpp",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Handlers/CharacterHandler.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Handlers\\CharacterHandler.cpp",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Server/WorldSession.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Server\\WorldSession.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Globals/ObjectMgr.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Globals\\ObjectMgr.cpp",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Globals/ObjectMgr.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Globals\\ObjectMgr.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/DataStores/DBCStores.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\DataStores\\DBCStores.cpp",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/DataStores/DBCStores.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\DataStores\\DBCStores.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/shared/DataStores/DBCStructure.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\shared\\DataStores\\DBCStructure.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/shared/DataStores/DBCfmt.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\shared\\DataStores\\DBCfmt.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Spells/SpellEffects.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Spells\\SpellEffects.cpp",
+    "kind": "workspace copy"
+  },
+  "source/src/server/game/Entities/Object/Updates/UpdateFieldFlags.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\game\\Entities\\Object\\Updates\\UpdateFieldFlags.cpp",
+    "kind": "workspace copy"
+  },
+  "source/src/server/database/Database/Implementation/CharacterDatabase.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\database\\Database\\Implementation\\CharacterDatabase.cpp",
+    "kind": "workspace copy"
+  },
+  "source/src/server/database/Database/Implementation/CharacterDatabase.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\database\\Database\\Implementation\\CharacterDatabase.h",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-account-mounts/src/mod_account_mount.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-account-mounts\\src\\mod_account_mount.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-playerbots/src/Bot/Factory/PlayerbotFactory.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-playerbots\\src\\Bot\\Factory\\PlayerbotFactory.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-playerbots/src/Ai/Base/Strategy/RacialsStrategy.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-playerbots\\src\\Ai\\Base\\Strategy\\RacialsStrategy.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-playerbots/src/Ai/Base/Strategy/RacialsStrategy.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-playerbots\\src\\Ai\\Base\\Strategy\\RacialsStrategy.h",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-worgoblin-high-elf/src/Worgoblin.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\src\\Worgoblin.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-worgoblin-high-elf/lua_scripts/racials.lua": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\lua_scripts\\racials.lua",
+    "kind": "workspace copy"
+  },
+  "source/src/server/scripts/Spells/spell_generic.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\scripts\\Spells\\spell_generic.cpp",
+    "kind": "workspace copy"
+  },
+  "source/LICENSE": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\LICENSE",
+    "kind": "workspace copy"
+  },
+  "source/AUTHORS": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\AUTHORS",
+    "kind": "workspace copy"
+  },
+  "source/CMakeLists.txt": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\CMakeLists.txt",
+    "kind": "workspace copy"
+  },
+  "source/src/server/shared/EarthenAppearance.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\shared\\EarthenAppearance.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/shared/HaranirAppearance.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\shared\\HaranirAppearance.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/shared/HighmountainAppearance.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\shared\\HighmountainAppearance.h",
+    "kind": "workspace copy"
+  },
+  "source/src/server/shared/VulperaAppearance.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\src\\server\\shared\\VulperaAppearance.h",
+    "kind": "workspace copy"
+  },
+  "reference-tools/data/sql/base/db_world/spell_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\base\\db_world\\spell_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/LICENSE": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\LICENSE",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/mod-custom-server.cmake": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\mod-custom-server.cmake",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/README.md": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\README.md",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/src/darkfallen_racials.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\src\\darkfallen_racials.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/src/donor_racials.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\src\\donor_racials.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/src/drakkin_racials.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\src\\drakkin_racials.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/src/drakonid_racials.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\src\\drakonid_racials.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/src/InstanceMode.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\src\\InstanceMode.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/src/InstanceMode.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\src\\InstanceMode.h",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/src/mod_attunement_plus.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\src\\mod_attunement_plus.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/src/MP_loader.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\src\\MP_loader.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/src/progression_events.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\src\\progression_events.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/src/progression_events.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\src\\progression_events.h",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/src/race_racials.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\src\\race_racials.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/src/race_racials_generated.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\src\\race_racials_generated.h",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-worgoblin-high-elf/.git_commit_template.txt": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\.git_commit_template.txt",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-worgoblin-high-elf/LICENSE": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\LICENSE",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-worgoblin-high-elf/merge-notes.md": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\merge-notes.md",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-worgoblin-high-elf/README.md": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\README.md",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-worgoblin-high-elf/src/mod_race_costumes.cpp": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\src\\mod_race_costumes.cpp",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-worgoblin-high-elf/src/worgoblin_loader.h": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\src\\worgoblin_loader.h",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/allocation.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\allocation.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/arakkoa_horde.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\arakkoa_horde.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/drakkin_alliance.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\drakkin_alliance.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/drakkin_horde.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\drakkin_horde.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/drakonid_alliance.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\drakonid_alliance.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/drakonid_horde.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\drakonid_horde.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/earthen.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\earthen.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/furbolg.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\furbolg.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/gnoll.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\gnoll.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/haranir.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\haranir.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/highmountain.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\highmountain.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/jinyu.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\jinyu.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/maghar.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\maghar.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/mechagnome.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\mechagnome.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/naga.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\naga.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/ogre.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\ogre.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/ogre_alliance.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\ogre_alliance.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/saberon.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\saberon.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/sethrak.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\sethrak.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/skyborne.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\skyborne.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/thinhuman.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\thinhuman.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/tuskarr.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\tuskarr.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/vrykul.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\vrykul.json",
+    "kind": "workspace copy"
+  },
+  "source/data/retroported-races/vulpera.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\retroported-races\\vulpera.json",
+    "kind": "workspace copy"
+  },
+  "source/modules/mod-custom-server/data/races/race_registry.json": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\races\\race_registry.json",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_1788441207874.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_1788441207874.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_1788470834187296400.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_1788470834187296400.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_1788475312394443500.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_1788475312394443500.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_1788640000000000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_1788640000000000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_1788720000000000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_1788720000000000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_1788800000000000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_1788800000000000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_1789409288614_vulpera_client_prefix.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_1789409288614_vulpera_client_prefix.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_1791272504791411800.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_1791272504791411800.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20260903110203150.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20260903110203150.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20260907155900277.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20260907155900277.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20260929001000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20260929001000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20260929002000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20260929002000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20260930003000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20260930003000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261001005000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261001005000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261001006000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261001006000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261001100000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261001100000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261002120000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261002120000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261002230000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261002230000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261004080446877.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261004080446877.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261004215950242.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261004215950242.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261004224000019.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261004224000019.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261005000500001.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261005000500001.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261005001647632.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261005001647632.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261005010000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261005010000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261006230000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261006230000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261007013000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261007013000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261007040000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261007040000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261007230000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261007230000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261008063000_alliance_siege_tank_mount.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261008063000_alliance_siege_tank_mount.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261009020000000_jinyu_alliance.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261009020000000_jinyu_alliance.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261011010000000_drakkin.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261011010000000_drakkin.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261011020000000_drakkin_options.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261011020000000_drakkin_options.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261011030000000_arakkoa_horde.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261011030000000_arakkoa_horde.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261012010000000_drakonid.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261012010000000_drakonid.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261014030000000_remove_natures_ally.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261014030000000_remove_natures_ally.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261015020000000_tarasek_drakkin_male.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261015020000000_tarasek_drakkin_male.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_world/rev_20261015130000000_tarasek_running_wild_worgen.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_world\\rev_20261015130000000_tarasek_running_wild_worgen.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_characters/rev_1790216655046269000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_characters\\rev_1790216655046269000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_characters/rev_20260930004000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_characters\\rev_20260930004000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_characters/rev_20261001006000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_characters\\rev_20261001006000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_characters/rev_20261002200000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_characters\\rev_20261002200000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_characters/rev_20261002220000000.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_characters\\rev_20261002220000000.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/data/sql/updates/pending_db_characters/rev_20261015020000000_tarasek_drakkin_male.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\data\\sql\\updates\\pending_db_characters\\rev_20261015020000000_tarasek_drakkin_male.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-characters/race_language_backfill.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-characters\\race_language_backfill.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-characters/race_language_backfill_faction.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-characters\\race_language_backfill_faction.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-characters/race_language_backfill_full.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-characters\\race_language_backfill_full.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000002_race_models.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000002_race_models.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000003_races_29_30.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000003_races_29_30.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000004_race_display_id_band.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000004_race_display_id_band.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000005_race_start_spells.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000005_race_start_spells.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000006_race_modeldata.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000006_race_modeldata.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000007_race_languages.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000007_race_languages.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000008_race_languages_full.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000008_race_languages_full.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000009_race_exploration_sound.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000009_race_exploration_sound.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000010_race_language_skills.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000010_race_language_skills.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000011_race_language_creation.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000011_race_language_creation.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000012_race_start_skills.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000012_race_start_skills.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000013_race_start_quests.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000013_race_start_quests.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000014_race_starter_outfit_skills.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000014_race_starter_outfit_skills.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000015_alliance_illidari.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000015_alliance_illidari.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000016_kul_tiran_common_language.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000016_kul_tiran_common_language.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000017_kul_tiran_common_only.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000017_kul_tiran_common_only.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000018_illidari_name_alignment.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000018_illidari_name_alignment.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/updates/pending_db_world/rev_1787850000019_custom_language_alignment.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\updates\\pending_db_world\\rev_1787850000019_custom_language_alignment.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_08_27_00.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_08_27_00.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_08_27_01.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_08_27_01.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_08_28_00_cars.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_08_28_00_cars.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_08_29_races.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_08_29_races.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_08_30_race_models.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_08_30_race_models.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_02_race_models.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_02_race_models.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_02_race_sync.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_02_race_sync.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_03_race_scope.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_03_race_scope.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_03_race_scope_sethrak.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_03_race_scope_sethrak.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_09_01_mounts.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_09_01_mounts.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_09_03_card_gameboy_mount_variants.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_09_03_card_gameboy_mount_variants.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_10_00_flying_nimbus.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_10_00_flying_nimbus.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_10_01_race_scope_corrective.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_10_01_race_scope_corrective.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_17_broken_race14_alignment.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_17_broken_race14_alignment.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_17_classless_race_chassis.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_17_classless_race_chassis.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_17_classless_restore_actions.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_17_classless_restore_actions.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_18_00_mount_skilllineability.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_18_00_mount_skilllineability.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_21_00_darkfallen.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_21_00_darkfallen.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_09_21_01_darkfallen_racials.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_09_21_01_darkfallen_racials.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_10_14_00_drakkin_drakonid_racials.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_10_14_00_drakkin_drakonid_racials.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/u_custom_server_2026_10_14_01_race_racials.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\u_custom_server_2026_10_14_01_race_racials.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/base/playercreateinfo_skills.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\base\\playercreateinfo_skills.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/base/playercreateinfo_spell_custom.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\base\\playercreateinfo_spell_custom.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/base/player_race_stats.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\base\\player_race_stats.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/dbc/chrraces_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\dbc\\chrraces_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/dbc/creaturedisplayinfoextra_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\dbc\\creaturedisplayinfoextra_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/dbc/skilllineability_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\dbc\\skilllineability_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/dbc/skillline_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\dbc\\skillline_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/dbc/skillraceclassinfo_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\dbc\\skillraceclassinfo_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-custom-server/data/sql/db-world/updates/dbc/spell_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\sql\\db-world\\updates\\dbc\\spell_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-worgoblin-high-elf/data/Optional/sql/dbc/chrraces_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\data\\Optional\\sql\\dbc\\chrraces_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-worgoblin-high-elf/data/Optional/sql/dbc/creaturedisplayinfoextra_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\data\\Optional\\sql\\dbc\\creaturedisplayinfoextra_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-worgoblin-high-elf/data/Optional/sql/dbc/skilllineability_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\data\\Optional\\sql\\dbc\\skilllineability_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-worgoblin-high-elf/data/Optional/sql/dbc/skillline_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\data\\Optional\\sql\\dbc\\skillline_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-worgoblin-high-elf/data/Optional/sql/dbc/skillraceclassinfo_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\data\\Optional\\sql\\dbc\\skillraceclassinfo_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "historical-sql/modules/mod-worgoblin-high-elf/data/Optional/sql/dbc/spell_dbc.sql": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-worgoblin-high-elf\\data\\Optional\\sql\\dbc\\spell_dbc.sql",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/vulpera_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\vulpera_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/vulpera_models.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\vulpera_models.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/haranir_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\haranir_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/expanded_appearance_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\expanded_appearance_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/native_appearance_patch.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\native_appearance_patch.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/wow_xref.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\wow_xref.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/wod_model_migration.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\wod_model_migration.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/cars_mount_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\cars_mount_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/ascension_hd_migration.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\ascension_hd_migration.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/playable_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\playable_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/skyborne_visual_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\skyborne_visual_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/retroported_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\retroported_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/skyborne_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\skyborne_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/race_portrait_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\race_portrait_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/derive_playable_race_portraits.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\derive_playable_race_portraits.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/mechagnome_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\mechagnome_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/mechagnome_animations.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\mechagnome_animations.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/highmountain_appearance.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\highmountain_appearance.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/highmountain_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\highmountain_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/earthen_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\earthen_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/earthen_touchup.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\earthen_touchup.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/highmountain_integration.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\highmountain_integration.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/highmountain_complete_tracks.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\highmountain_complete_tracks.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/highmountain_head_repair.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\highmountain_head_repair.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/highmountain_animation_repair.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\highmountain_animation_repair.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/vulpera_migration.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\vulpera_migration.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_vulpera_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_vulpera_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_tarasek_running_wild.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_tarasek_running_wild.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_deploy.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_deploy.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_drakkin.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_drakkin.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/gnoll_texture_repair.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\gnoll_texture_repair.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/sethrak_equipment_repair.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\sethrak_equipment_repair.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_sethrak_equipment.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_sethrak_equipment.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/sethrak_body_regions.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\sethrak_body_regions.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/creature_animation_repair.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\creature_animation_repair.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_creature_animations.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_creature_animations.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/creature_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\creature_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/thinhuman_equipment_repair.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\thinhuman_equipment_repair.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tuskarr_equipment_repair.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tuskarr_equipment_repair.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_creature_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_creature_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/creature_portrait_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\creature_portrait_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/sethrak_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\sethrak_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/sethrak_animation_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\sethrak_animation_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/ogre_furbolg_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\ogre_furbolg_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/gnoll_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\gnoll_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/creature_clothing_repair.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\creature_clothing_repair.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/saberon_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\saberon_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/saberon_equipment_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\saberon_equipment_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/saberon_equipment_fit.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\saberon_equipment_fit.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_saberon_equipment.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_saberon_equipment.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_saberon_equipment_fit.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_saberon_equipment_fit.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/gnoll_equipment_repair.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\gnoll_equipment_repair.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_gnoll_equipment.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_gnoll_equipment.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/gnoll_cloak_landing_repair.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\gnoll_cloak_landing_repair.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_gnoll_cloak_landing.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_gnoll_cloak_landing.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/drakonid_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\drakonid_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/drakkin_drakonid_racials.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\drakkin_drakonid_racials.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/vrykul_female_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\vrykul_female_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/ogre_import.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\ogre_import.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_running_wild.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_running_wild.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_tarasek_refinements.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_tarasek_refinements.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_refinements.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_refinements.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_tarasek_drakkin.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_tarasek_drakkin.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_equipment.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_equipment.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_cape.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_cape.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_skyborne_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_skyborne_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_sethrak_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_sethrak_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_saberon_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_saberon_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_retroported_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_retroported_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_retroported_race_contract.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_retroported_race_contract.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_race_racials.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_race_racials.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/race_racials_update.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\race_racials_update.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/race_racials.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\race_racials.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/race_racial_visuals.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\race_racial_visuals.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_playable_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_playable_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_ogre_furbolg_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_ogre_furbolg_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_mechagnome_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_mechagnome_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_highmountain_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_highmountain_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/highmountain_faces.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\highmountain_faces.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_haranir_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_haranir_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_gnoll_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_gnoll_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_earthen_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_earthen_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_drakkin_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_drakkin_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/drakkin_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\drakkin_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_drakkin_options_update.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_drakkin_options_update.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/drakkin_options_update.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\drakkin_options_update.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_drakkin_drakonid_racials.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_drakkin_drakonid_racials.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/test_arakkoa_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\test_arakkoa_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/arakkoa_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\arakkoa_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_source.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_source.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_running_wild_patch.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_running_wild_patch.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_running_wild_deploy.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_running_wild_deploy.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_render_blender.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_render_blender.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_refinements_deploy.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_refinements_deploy.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_preview.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_preview.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_helmets.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_helmets.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_fit_blender.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_fit_blender.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/tarasek_customization_visibility.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\tarasek_customization_visibility.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/drakkin_male_portraits.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\drakkin_male_portraits.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/jinyu_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\jinyu_race_pack.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/drakonid_portrait_blender.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\drakonid_portrait_blender.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/drakonid_deploy.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\drakonid_deploy.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/drakkin_racials_update.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\drakkin_racials_update.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/drakkin_prepare.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\drakkin_prepare.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/drakkin_options_deploy.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\drakkin_options_deploy.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/drakkin_deploy.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\drakkin_deploy.py",
+    "kind": "workspace copy"
+  },
+  "reference-tools/tools/darkfallen_race_pack.py": {
+    "source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\tools\\darkfallen_race_pack.py",
+    "kind": "workspace copy"
+  }
+}

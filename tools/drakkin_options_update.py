@@ -52,6 +52,8 @@ def skin_order(race):
 
 
 def update_manifest(original):
+    if original['appearance'].get('male_source', {}).get('creature_id') == 183829:
+        raise ValueError('Preserve the Tarasek male profile; use tools/tarasek_drakkin.py for this race')
     result = copy.deepcopy(original)
     race = result['race_ids'][0]
     result['models']['male'] = copy.deepcopy(result['models']['female'])

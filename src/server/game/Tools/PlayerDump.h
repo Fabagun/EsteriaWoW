@@ -34,6 +34,8 @@ enum DumpTableType
 
     DTT_INVENTORY,      //    -> item guids collection      // character_inventory
 
+    DTT_DIGITAL_ITEM,   // <- character guid, item guid     // character_digital_storage_item
+
     DTT_MAIL,           //    -> mail ids collection        // mail
                         //    -> item_text
 

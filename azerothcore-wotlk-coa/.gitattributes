@@ -1,0 +1,43 @@
+# Auto detect text files and perform LF normalization
+* text eol=lf
+
+# Whitespace rules
+# strict (no trailing, no tabs)
+*.cpp    whitespace=trailing-space,space-before-tab,tab-in-indent,cr-at-eol
+*.h      whitespace=trailing-space,space-before-tab,tab-in-indent,cr-at-eol
+
+# normal (no trailing)
+*.sql    whitespace=trailing-space,space-before-tab,cr-at-eol
+*.txt    whitespace=trailing-space,space-before-tab,cr-at-eol
+
+# special files which must ignore whitespace
+*.patch  whitespace=-trailing-space eol=lf
+*.diff   whitespace=-trailing-space eol=lf
+
+# Standard to msysgit
+*.doc    diff=astextplain
+*.DOC    diff=astextplain
+*.docx   diff=astextplain
+*.DOCX   diff=astextplain
+*.dot    diff=astextplain
+*.DOT    diff=astextplain
+*.pdf    diff=astextplain
+*.PDF    diff=astextplain
+*.rtf    diff=astextplain
+*.RTF    diff=astextplain
+
+# Ignore sql/* files
+data/sql/*    linguist-documentation
+
+# Compressed world data must retain its exact bytes under the repository-wide text rule.
+data/coa-world/*.zip -text -diff
+
+# Preserve the exact bytes of this already-applied local migration on future checkouts.
+data/sql/updates/pending_db_world/rev_1787754600000000000.sql -text
+
+# Preserve the pinned and applied bytes of these imported CoA artifacts, including CRLF.
+modules/mod-ascension/data/sql/db-world/2026_08_26_01_ascension_appearance_item_templates.sql -text
+src/server/coa/AscensionClassContracts19To25Data.h -text
+src/server/coa/AscensionClassContracts26To32Data.h -text
+src/server/coa/AscensionCoATalentData.h -text
+src/server/coa/AscensionCustomClassData.h -text

@@ -1,0 +1,55 @@
+{
+  "race_id": 2,
+  "name": "Orc",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 2,
+  "display_ids": [
+    51,
+    52
+  ],
+  "script_grants": [],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    20572,
+    20573,
+    20574,
+    20575,
+    20576,
+    21563,
+    33697,
+    33702,
+    54562,
+    65222
+  ],
+  "racial_spell_ids": [
+    20572,
+    20573,
+    20574,
+    20575,
+    20576,
+    21563,
+    33697,
+    33702,
+    54562,
+    65222
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "20572": "Blood Fury",
+    "20573": "Hardiness",
+    "20574": "Axe Specialization",
+    "20575": "Command",
+    "20576": "Command",
+    "21563": "Command",
+    "33697": "Blood Fury",
+    "33702": "Blood Fury",
+    "54562": "Command",
+    "65222": "Command"
+  }
+}

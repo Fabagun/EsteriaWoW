@@ -1,0 +1,482 @@
+[
+  {
+    "id": 13990001,
+    "field": "Description_Lang_enGB",
+    "offset": 8606186,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_koKR",
+    "offset": 8606187,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_frFR",
+    "offset": 8606188,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_deDE",
+    "offset": 8606189,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_enCN",
+    "offset": 8606190,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_zhCN",
+    "offset": 8606191,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_enTW",
+    "offset": 8606192,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_zhTW",
+    "offset": 8606193,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_enGB",
+    "offset": 8606311,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_koKR",
+    "offset": 8606312,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_frFR",
+    "offset": 8606313,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_deDE",
+    "offset": 8606314,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_enCN",
+    "offset": 8606315,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_zhCN",
+    "offset": 8606316,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_enTW",
+    "offset": 8606317,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_zhTW",
+    "offset": 8606318,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_enGB",
+    "offset": 8606446,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_koKR",
+    "offset": 8606447,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_frFR",
+    "offset": 8606448,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_deDE",
+    "offset": 8606449,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_enCN",
+    "offset": 8606450,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_zhCN",
+    "offset": 8606451,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_enTW",
+    "offset": 8606452,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_zhTW",
+    "offset": 8606453,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_enGB",
+    "offset": 8606612,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_koKR",
+    "offset": 8606613,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_frFR",
+    "offset": 8606614,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_deDE",
+    "offset": 8606615,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_enCN",
+    "offset": 8606616,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_zhCN",
+    "offset": 8606617,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_enTW",
+    "offset": 8606618,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_zhTW",
+    "offset": 8606619,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_enGB",
+    "offset": 8606776,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_koKR",
+    "offset": 8606777,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_frFR",
+    "offset": 8606778,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_deDE",
+    "offset": 8606779,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_enCN",
+    "offset": 8606780,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_zhCN",
+    "offset": 8606781,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_enTW",
+    "offset": 8606782,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_zhTW",
+    "offset": 8606783,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_enGB",
+    "offset": 8606186,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_koKR",
+    "offset": 8606187,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_frFR",
+    "offset": 8606188,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_deDE",
+    "offset": 8606189,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_enCN",
+    "offset": 8606190,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_zhCN",
+    "offset": 8606191,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_enTW",
+    "offset": 8606192,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990001,
+    "field": "Description_Lang_zhTW",
+    "offset": 8606193,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_enGB",
+    "offset": 8606311,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_koKR",
+    "offset": 8606312,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_frFR",
+    "offset": 8606313,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_deDE",
+    "offset": 8606314,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_enCN",
+    "offset": 8606315,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_zhCN",
+    "offset": 8606316,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_enTW",
+    "offset": 8606317,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990002,
+    "field": "Description_Lang_zhTW",
+    "offset": 8606318,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_enGB",
+    "offset": 8606446,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_koKR",
+    "offset": 8606447,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_frFR",
+    "offset": 8606448,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_deDE",
+    "offset": 8606449,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_enCN",
+    "offset": 8606450,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_zhCN",
+    "offset": 8606451,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_enTW",
+    "offset": 8606452,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990003,
+    "field": "Description_Lang_zhTW",
+    "offset": 8606453,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_enGB",
+    "offset": 8606612,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_koKR",
+    "offset": 8606613,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_frFR",
+    "offset": 8606614,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_deDE",
+    "offset": 8606615,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_enCN",
+    "offset": 8606616,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_zhCN",
+    "offset": 8606617,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_enTW",
+    "offset": 8606618,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990004,
+    "field": "Description_Lang_zhTW",
+    "offset": 8606619,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_enGB",
+    "offset": 8606776,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_koKR",
+    "offset": 8606777,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_frFR",
+    "offset": 8606778,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_deDE",
+    "offset": 8606779,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_enCN",
+    "offset": 8606780,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_zhCN",
+    "offset": 8606781,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_enTW",
+    "offset": 8606782,
+    "pool_size": 4672320
+  },
+  {
+    "id": 13990005,
+    "field": "Description_Lang_zhTW",
+    "offset": 8606783,
+    "pool_size": 4672320
+  }
+]

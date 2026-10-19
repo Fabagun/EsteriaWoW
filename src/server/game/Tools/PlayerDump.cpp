@@ -95,6 +95,8 @@ DumpTable const DumpTables[] =
     { "character_action",               DTT_CHAR_TABLE   },
     { "character_aura",                 DTT_CHAR_TABLE   },
     { "character_declinedname",         DTT_CHAR_TABLE   },
+    { "character_digital_storage",      DTT_CHAR_TABLE   },
+    { "character_digital_storage_item", DTT_DIGITAL_ITEM },
     { "character_equipmentsets",        DTT_EQSET_TABLE  },
     { "character_glyphs",               DTT_CHAR_TABLE   },
     { "character_homebind",             DTT_CHAR_TABLE   },
@@ -314,6 +316,12 @@ void PlayerDump::InitializeTables()
 
             MarkDependentColumn(t, "guid", GUID_TYPE_CHAR);
             MarkDependentColumn(t, "bag", GUID_TYPE_ITEM);
+            MarkDependentColumn(t, "item", GUID_TYPE_ITEM);
+            break;
+        case DTT_DIGITAL_ITEM:
+            MarkWhereField(t, "guid");
+
+            MarkDependentColumn(t, "guid", GUID_TYPE_CHAR);
             MarkDependentColumn(t, "item", GUID_TYPE_ITEM);
             break;
         case DTT_MAIL:

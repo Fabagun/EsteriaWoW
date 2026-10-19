@@ -1,0 +1,37 @@
+{
+  "race_id": 5,
+  "name": "Undead",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 5,
+  "display_ids": [
+    57,
+    58
+  ],
+  "script_grants": [],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    5227,
+    7744,
+    20577,
+    20579
+  ],
+  "racial_spell_ids": [
+    5227,
+    7744,
+    20577,
+    20579
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "5227": "Underwater Breathing",
+    "7744": "Will of the Forsaken",
+    "20577": "Vampiric Sustenance",
+    "20579": "Shadow Resistance"
+  }
+}

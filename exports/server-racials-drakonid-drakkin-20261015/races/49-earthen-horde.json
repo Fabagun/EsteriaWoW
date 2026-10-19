@@ -1,0 +1,58 @@
+{
+  "race_id": 49,
+  "name": "Earthen",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 2,
+  "display_ids": [
+    60036,
+    60037
+  ],
+  "script_grants": [
+    110700,
+    110704,
+    110705,
+    110706,
+    110707,
+    110708
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [],
+  "racial_spell_ids": [
+    110700,
+    110704,
+    110705,
+    110706,
+    110707,
+    110708
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 49,
+      "spell": 669,
+      "comment": "Language Orcish",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 49,
+      "rank": 0,
+      "skill": 109,
+      "comment": "Language Orcish",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "110700": "Azerite Surge",
+    "110704": "Titan-Wrought Frame",
+    "110705": "Wide-Eyed Wonder",
+    "110706": "Hyper Productive",
+    "110707": "Ingest Minerals",
+    "110708": "Quiet Contemplation"
+  }
+}

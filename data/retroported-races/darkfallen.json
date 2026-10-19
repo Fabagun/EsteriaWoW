@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "slug": "darkfallen",
+  "name": "Darkfallen",
+  "race_ids": [
+    43,
+    44
+  ],
+  "client_file_strings": {
+    "43": "Darkfallen",
+    "44": "DarkfallenHorde"
+  },
+  "asset_prefix": "Character\\Darkfallen",
+  "supported_genders": [
+    0,
+    1
+  ],
+  "models": {
+    "male": {
+      "model_path": "Character\\Darkfallen\\Male\\DarkfallenMale.m2"
+    },
+    "female": {
+      "model_path": "Character\\Darkfallen\\Female\\DarkfallenFemale.m2"
+    }
+  },
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "source": "retail-bloodelf-hd",
+    "supported_genders": [
+      0,
+      1
+    ],
+    "profiles": {
+      "0": {
+        "capacities": [
+          5,
+          1,
+          21,
+          4,
+          1
+        ],
+        "descriptors": [
+          [
+            0,
+            5,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            21,
+            1
+          ],
+          [
+            3,
+            4,
+            1
+          ],
+          [
+            4,
+            1,
+            1
+          ]
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "label": "Face",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Hair Style",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ]
+          },
+          {
+            "label": "Hair Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "label": "Facial Hair",
+            "choices": [
+              0
+            ]
+          }
+        ]
+      },
+      "1": {
+        "capacities": [
+          4,
+          1,
+          25,
+          5,
+          1
+        ],
+        "descriptors": [
+          [
+            0,
+            4,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            25,
+            1
+          ],
+          [
+            3,
+            5,
+            1
+          ],
+          [
+            4,
+            1,
+            1
+          ]
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "label": "Face",
+            "choices": [
+              0
+            ]
+          },
+          {
+            "label": "Hair Style",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          {
+            "label": "Hair Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "label": "Facial Hair",
+            "choices": [
+              0
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

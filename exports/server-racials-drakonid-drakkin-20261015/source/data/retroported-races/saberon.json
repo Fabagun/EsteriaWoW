@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "slug": "saberon",
+  "name": "Saberon",
+  "race_ids": [
+    64
+  ],
+  "enum": "RACE_SABERON_HORDE",
+  "faction": "horde",
+  "client_file_strings": {
+    "64": "SaberonHorde"
+  },
+  "glue_token": "SABERONHORDE",
+  "helmet_prefix": "Sb",
+  "source_race_id": 2,
+  "legacy_mask_race": 2,
+  "visual_base_race": 12,
+  "start_profile": "durotar",
+  "donor_totem_race": 2,
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11
+  ],
+  "source_patch_root": "G:\\RetroPorterWork\\saberon\\converted",
+  "runtime_patch_root": "C:\\Users\\Zach\\.codex\\tmp\\saberon-playable\\assets",
+  "models": {
+    "male": {
+      "model_id": 120070,
+      "display_id": 60061,
+      "model_path": "custom\\saberon\\native\\saberon.m2"
+    }
+  },
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "source": "retail-creature-saberon",
+    "hide_helm": true,
+    "supported_genders": [
+      0
+    ],
+    "profiles": {
+      "0": {
+        "capacities": [
+          4,
+          10,
+          3,
+          3,
+          1
+        ],
+        "options": [
+          {
+            "label": "Fur Color",
+            "choices": [
+              982811,
+              982810,
+              982813,
+              982812
+            ]
+          },
+          {
+            "label": "Outfit Style",
+            "choices": [
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109
+            ]
+          },
+          {
+            "label": "Armor Color",
+            "choices": [
+              999926,
+              999928,
+              999930
+            ]
+          },
+          {
+            "label": "Cloth Color",
+            "choices": [
+              999927,
+              999929,
+              999931
+            ]
+          },
+          {
+            "label": "Facial Features",
+            "choices": [
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "equipped_armor_geosets": "source-fur-overlay-v2",
+    "equipment_stage": "C:\\Users\\Zach\\.codex\\tmp\\saberon-equipment-fit-v6"
+  },
+  "random_playerbot_enabled": false,
+  "custom_racial_spells": []
+}

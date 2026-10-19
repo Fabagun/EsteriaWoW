@@ -1,0 +1,43 @@
+{
+  "race_id": 13,
+  "name": "High Elf",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 13,
+  "display_ids": [
+    15476,
+    15475
+  ],
+  "script_grants": [],
+  "additional_source_racials": [
+    110005,
+    110006,
+    110007,
+    110008,
+    110009
+  ],
+  "racial_start_and_skill_candidates": [
+    110005,
+    110006
+  ],
+  "racial_spell_ids": [
+    110005,
+    110006,
+    110007,
+    110008,
+    110009
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "110005": "Quel’dorei Meditation",
+    "110006": "Swiftness of the Rangers",
+    "110007": "Quel’dorei Meditation",
+    "110008": "Bow Specialization",
+    "110009": "Enchanting Specialization"
+  }
+}

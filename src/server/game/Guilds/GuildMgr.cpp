@@ -323,7 +323,7 @@ void GuildMgr::LoadGuilds()
         CharacterDatabase.DirectExecute("DELETE gbt FROM guild_bank_tab gbt LEFT JOIN guild g ON gbt.guildId = g.guildId WHERE g.guildId IS NULL");
 
         //         0        1      2        3        4
-        QueryResult result = CharacterDatabase.Query("SELECT guildid, TabId, TabName, TabIcon, TabText FROM guild_bank_tab ORDER BY guildid ASC, TabId ASC");
+        QueryResult result = CharacterDatabase.Query("SELECT guildid, TabId, TabName, TabIcon, TabText, slots FROM guild_bank_tab ORDER BY guildid ASC, TabId ASC");
 
         if (!result)
         {

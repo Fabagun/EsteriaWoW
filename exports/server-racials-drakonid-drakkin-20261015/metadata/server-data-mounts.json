@@ -1,0 +1,92 @@
+[
+  {
+    "Type": "bind",
+    "Source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\dbc-continuations\\FactionTemplate.dbc1-freeborn",
+    "Destination": "/azerothcore/env/dist/data/dbc-continuations/FactionTemplate.dbc1-freeborn",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\dbc\\retroported-races\\CreatureModelData.dbc",
+    "Destination": "/azerothcore/env/dist/data/dbc/CreatureModelData.dbc",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\dbc\\SkillRaceClassInfo.dbc",
+    "Destination": "/azerothcore/env/dist/data/dbc/SkillRaceClassInfo.dbc",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-fly-anywhere\\data\\patch\\server\\AreaTable.dbc",
+    "Destination": "/azerothcore/env/dist/data/dbc/AreaTable.dbc",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\dbc\\retroported-races\\CharStartOutfit.dbc",
+    "Destination": "/azerothcore/env/dist/data/dbc/CharStartOutfit.dbc",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\dbc\\retroported-races\\Spell.dbc",
+    "Destination": "/azerothcore/env/dist/data/dbc/Spell.dbc",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\dbc\\retroported-races\\ChrRaces.dbc",
+    "Destination": "/azerothcore/env/dist/data/dbc/ChrRaces.dbc",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\dbc\\retroported-races\\CreatureDisplayInfo.dbc",
+    "Destination": "/azerothcore/env/dist/data/dbc/CreatureDisplayInfo.dbc",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\dbc\\retroported-races\\CharSections.dbc",
+    "Destination": "/azerothcore/env/dist/data/dbc/CharSections.dbc",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "bind",
+    "Source": "R:\\Users\\Zach\\Documents\\GitHub\\EsteriaWoW\\modules\\mod-custom-server\\data\\dbc\\retroported-races\\BarberShopStyle.dbc",
+    "Destination": "/azerothcore/env/dist/data/dbc/BarberShopStyle.dbc",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": "rprivate"
+  },
+  {
+    "Type": "volume",
+    "Name": "esteriawow_ac-client-data",
+    "Source": "/var/lib/docker/volumes/esteriawow_ac-client-data/_data",
+    "Destination": "/azerothcore/env/dist/data",
+    "Driver": "local",
+    "Mode": "rw",
+    "RW": true,
+    "Propagation": ""
+  }
+]

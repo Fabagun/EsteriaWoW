@@ -1,0 +1,59 @@
+{
+  "race_id": 56,
+  "name": "Vrykul",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 1,
+  "display_ids": [
+    60051,
+    60060
+  ],
+  "script_grants": [
+    110860,
+    110861,
+    110862,
+    110863,
+    110864
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    20600
+  ],
+  "racial_spell_ids": [
+    20600,
+    110860,
+    110861,
+    110862,
+    110863,
+    110864
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 56,
+      "spell": 668,
+      "comment": "Language Common",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 56,
+      "rank": 0,
+      "skill": 98,
+      "comment": "Language Common",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "20600": "Perception",
+    "110860": "Runic Warcry",
+    "110861": "Giant's Blood",
+    "110862": "Runic Heritage",
+    "110863": "Iron Will",
+    "110864": "Runecarver"
+  }
+}

@@ -262,6 +262,7 @@ namespace
 }
 
 #include "CosmeticWings.inl"
+#include "RunningWild.inl"
 
 extern "C" __declspec(dllexport) void __cdecl EsteriaSkin(void* model)
 {
@@ -1075,7 +1076,9 @@ namespace
         static auto const sethrak = ReadSelections(L"EsteriaSethrak.bin");
         static auto const gnoll = ReadSelections(L"EsteriaGnoll.bin");
         static auto const saberon = ReadSelections(L"EsteriaSaberon.bin");
+        static auto const tarasek = ReadSelections(L"EsteriaTarasek.bin");
         static auto const drakonid = ReadSelections(L"EsteriaDrakonid.bin");
+        static auto const darkfallen = ReadSelections(L"EsteriaDarkfallen.bin");
         switch (race)
         {
             case 54: return naga;
@@ -1087,6 +1090,9 @@ namespace
             case 62: return sethrak;
             case 63: return gnoll;
             case 64: return saberon;
+            case 66: return tarasek;
+            case 43:
+            case 44: return darkfallen;
             case 69:
             case 70: return drakonid;
             case 20: return VulperaSelections();
@@ -1107,6 +1113,9 @@ namespace
             case 62: return L"EsteriaSethrakTextures.bin";
             case 63: return L"EsteriaGnollTextures.bin";
             case 64: return L"EsteriaSaberonTextures.bin";
+            case 66: return L"EsteriaTarasekTextures.bin";
+            case 43:
+            case 44: return L"EsteriaDarkfallenTextures.bin";
             case 69:
             case 70: return L"EsteriaDrakonidTextures.bin";
             case 20: return L"EsteriaVulperaTextures.bin";
@@ -1127,6 +1136,9 @@ namespace
             case 62: return "Sethrak";
             case 63: return "Gnoll";
             case 64: return "Saberon";
+            case 66: return "Tarasek";
+            case 43:
+            case 44: return "Darkfallen";
             case 69:
             case 70: return "Drakonid";
             case 20: return "Vulpera";
@@ -1266,6 +1278,7 @@ namespace
         unsigned materials = 0;
         std::uint64_t helmetGroups = 0;
         if (Field<unsigned>(character, 0x18) == 20 || Field<unsigned>(character, 0x18) == 54
+            || (Field<unsigned>(character, 0x18) == 66 && gender == 0)
             || Field<unsigned>(character, 0x18) == 69 || Field<unsigned>(character, 0x18) == 70)
             for (auto const& record : records)
                 if (record.kind == 4 && record.gender == gender && record.value < 52
@@ -1569,6 +1582,7 @@ extern "C" __declspec(dllexport) void __cdecl EsteriaUnitExtra(void* unit)
             CaptureEarthenAppearance(character, playerData + 0x14, highmountainExtra[character]);
     }
     HighmountainGeometry(character);
+    RefreshTarasekSelfMount(unit, character);
 }
 
 extern "C" __declspec(dllexport) void __cdecl EsteriaRegisterExtra()
@@ -1579,6 +1593,7 @@ extern "C" __declspec(dllexport) void __cdecl EsteriaRegisterExtra()
 
 extern "C" __declspec(dllexport) void __cdecl EsteriaForgetCharacter(void* character)
 {
+    tarasekMountState.erase(character);
     ForgetCosmeticWing(character);
     cosmeticWingSelections.erase(character);
     haranirImages.erase(character);
@@ -1650,17 +1665,22 @@ extern "C" __declspec(dllexport) bool __cdecl EsteriaDirectSection(
         style = Field<unsigned>(character, 0x34);
         color = Field<unsigned>(character, 0x24);
     }
-    if (operation == 1 && (Field<unsigned>(character, 0x18) == 69 || Field<unsigned>(character, 0x18) == 70))
+    unsigned race = Field<unsigned>(character, 0x18);
+    bool tarasekEyes = race == 66 && Field<unsigned>(character, 0x1C) == 0;
+    if (operation == 1 && (race == 69 || race == 70 || tarasekEyes))
     {
-        // The stock Hair Color row selects Drakonid eyes; the hair-texture setter is the only call it triggers.
+        // Eye Color uses the stock hair-color setter; refresh the selected eye/body texture there too.
         void* instance = Field<void*>(character, 0x38);
         if (!instance)
             return true;
         auto fields = HighmountainFields(character);
         unsigned gender = Field<unsigned>(character, 0x1C);
-        for (auto const& record : RetailSelections(Field<unsigned>(character, 0x18)))
+        unsigned target = tarasekEyes ? 11 : 6;
+        auto const& options = tarasekEyes ? CreatureAppearance::Options(race, gender)
+                                         : CreatureAppearance::DrakonidControls;
+        for (auto const& record : RetailSelections(race))
         {
-            if (record.kind != 1 || record.target != 6 || record.gender != gender)
+            if (record.kind != 1 || record.target != target || record.gender != gender)
                 continue;
             bool selected = true;
             for (unsigned selector : record.choices)
@@ -1668,12 +1688,12 @@ extern "C" __declspec(dllexport) bool __cdecl EsteriaDirectSection(
                 if (selector == 0xffffffff)
                     continue;
                 unsigned index = selector & 0xffff;
-                if (index >= CreatureAppearance::DrakonidControls.size())
+                if (index >= options.size())
                 {
                     selected = false;
                     break;
                 }
-                auto const& option = CreatureAppearance::DrakonidControls[index];
+                auto const& option = options[index];
                 selected = selected && (fields[option.field] / option.factor) % option.count == selector >> 16;
             }
             if (!selected)
@@ -1682,7 +1702,7 @@ extern "C" __declspec(dllexport) bool __cdecl EsteriaDirectSection(
                 record.path, reinterpret_cast<void*>(Address(0x00AC46D0)));
             if (texture)
             {
-                Native<void(__thiscall*)(void*, unsigned, void*)>(0x00825260)(instance, 6, texture);
+                Native<void(__thiscall*)(void*, unsigned, void*)>(0x00825260)(instance, target, texture);
                 Native<void(__cdecl*)(void*)>(0x0047BF30)(texture);
             }
             break;
@@ -1731,7 +1751,6 @@ extern "C" __declspec(dllexport) bool __cdecl EsteriaDirectSection(
     if (layer)
         Native<void(__cdecl*)(void*)>(0x004F31A0)(layer);
     layer = nullptr;
-    unsigned race = Field<unsigned>(character, 0x18);
     bool nativeMaterials = race == 20 || race == 50 || race == 51 || (CreatureAppearance::Uses(race)
         && !CreatureAppearance::UsesStockMaterials(race, Field<unsigned>(character, 0x1C)));
     layer = path[0] ? (nativeMaterials ? HaranirLoadLayer(path)

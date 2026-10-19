@@ -28,14 +28,20 @@ WORKSPACE = Path('G:/RetroPorterWork/tool-workspace')
 # only its vendor folder is added so the repo's own tools keep resolving to this checkout.
 sys.path.insert(0, str(WORKSPACE / 'vendor'))
 
+import race_racial_visuals as visuals  # noqa: E402
 import race_racials as racials  # noqa: E402
 import retroported_race_pack as p  # noqa: E402
 from cars_mount_pack import Wdbc, build_wdbc  # noqa: E402
 
 RETAIL = Path('G:/Blizzard/World of Warcraft')
-STAGE = Path('G:/RetroPorterWork/racials-20261014')
+STAGE = Path('G:/RetroPorterWork/racials-20261015-visuals')
 BACKUPS = Path('G:/EsteriaBackups')
-ARCHIVES = (p.GLOBAL_ARCHIVE_REL, p.LOCALE_ARCHIVE_REL)
+# patch-Z.MPQ is already within ~67 MB of the 2 GiB this client can read, so it is never written here: the DBCs and
+# Glue lua go to the locale archive (which wins for them) and every model, texture and icon to a new archive.
+# 'Patch-Rv' sorts after Patch-R and is unused; the paths it holds are unique, so its load order does not matter.
+ASSET_ARCHIVE_REL = Path('Data') / 'Patch-Rv.MPQ'
+ARCHIVES = (p.LOCALE_ARCHIVE_REL, ASSET_ARCHIVE_REL)
+MAX_ARCHIVE_BYTES = 2 * 1024 ** 3 - 32 * 1024 ** 2   # stay well under the client's 2 GiB read limit
 ICON_DIR = 'Interface\\Icons\\'
 
 
@@ -164,11 +170,46 @@ def patch_character_create(text: str) -> str:
     return text
 
 
+VISUAL_TABLES = {   # table -> its string columns
+    'SpellVisual': (), 'SpellVisualKit': (), 'SpellVisualKitModelAttach': (), 'SpellVisualEffectName': (1, 2)}
+
+
+def visual_changes(files) -> tuple[frozenset, dict[str, bytes], list[str]]:
+    """Ported retail visuals: (racial keys that got one, {archive path: bytes}, notes on what fell back)."""
+    tables = visuals.Tables()
+    listfile = visuals.load_listfile()
+    found = visuals.plan(tables)
+    fdids = {a.model for slots in found.values() for attaches in slots.values() for a in attaches}
+    assets, notes, good = visuals.convert_assets(fdids, listfile)
+    found = visuals.usable(found, good)
+    notes += [f'{key}: no retail model effect, stock donor visual kept' for key in visuals.RETAIL_VISUALS if key not in found]
+
+    spell, visual, kit = (Wdbc(files.find(p.DBC_ROOT + name + '.dbc')[0]) for name in ('Spell', 'SpellVisual', 'SpellVisualKit'))
+    index = racials.field_index()
+    spells, visual_rows, kit_rows = ({row[0]: row for row in table.rows} for table in (spell, visual, kit))
+
+    def donor_anim(key, slot):
+        donor = spells.get(racials.VISUAL_DONORS.get(key))
+        stock = visual_rows.get(donor[index['SpellVisualID_1']]) if donor else None
+        row = kit_rows.get(stock[visuals.SLOTS[slot]]) if stock else None
+        return (row[1], row[2]) if row and (row[1], row[2]) != (visuals.NONE, visuals.NONE) else None
+
+    built = visuals.build_rows(found, visuals.model_paths(listfile, fdids), donor_anim)
+    changes = dict(assets)
+    for table, columns in VISUAL_TABLES.items():
+        strings = {i: {1: 'Racials ' + Path(text).stem, 2: text} for i, text in built['effect_strings'].items()} if columns else None
+        changes[p.DBC_ROOT + table + '.dbc'] = visuals.merge_table(
+            files.find(p.DBC_ROOT + table + '.dbc')[0], built['rows'][table], columns, strings)
+    return frozenset(found), changes, notes
+
+
 def build_changes(files, retail: Path):
     icons, notes = retail_icons(retail)
-    spell = racials.merge_spell_table(files.find(p.DBC_ROOT + 'Spell.dbc')[0], retail_icons=True)
+    ported, visual_files, visual_notes = visual_changes(files)
+    notes += visual_notes
+    spell = racials.merge_spell_table(files.find(p.DBC_ROOT + 'Spell.dbc')[0], retail_icons=True, ported=ported)
     spell_icon = merge_spell_icons(files.find(p.DBC_ROOT + 'SpellIcon.dbc')[0], icons)
-    changes = {p.DBC_ROOT + 'Spell.dbc': spell, p.DBC_ROOT + 'SpellIcon.dbc': spell_icon}
+    changes = {p.DBC_ROOT + 'Spell.dbc': spell, p.DBC_ROOT + 'SpellIcon.dbc': spell_icon, **visual_files}
     for name, blp in icons.values():
         changes[ICON_DIR + name + '.blp'] = blp
 
@@ -197,21 +238,25 @@ def stage(retail: Path):
     storm = p.Storm(p.DLL_DEFAULT)
     report = {'icons': notes, 'baseline': {}, 'staged': {}, 'changes': {}}
     for relative in ARCHIVES:
-        # The locale archive wins for DBCs; the icons only need to exist once, in the global archive.
-        wanted = {key: blob for key, blob in changes.items() if relative == ARCHIVES[0] or key.startswith((p.DBC_ROOT, p.GLUE_ROOT))}
+        wanted = {key: blob for key, blob in changes.items()
+                  if key.startswith((p.DBC_ROOT, p.GLUE_ROOT)) == (relative == p.LOCALE_ARCHIVE_REL)}
         live, target = p.CLIENT_DEFAULT / relative, STAGE / 'client' / relative
-        report['baseline'][str(relative)] = p.sha256(live)
+        report['baseline'][str(relative)] = p.sha256(live) if live.exists() else None   # None: the archive is new
         report['changes'][str(relative)] = sorted(wanted)
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(live, target)
-        storm.replace_archive_entries(target, wanted)
+        if live.exists():
+            shutil.copy2(live, target)
+            storm.replace_archive_entries(target, wanted)
+        else:
+            storm.create_archive(target, wanted)
+        assert target.stat().st_size < MAX_ARCHIVE_BYTES, f'{relative} would be {target.stat().st_size} bytes, over the 2 GiB client limit'
         handle = storm.open_archive(target)
         try:
             for key, blob in wanted.items():
                 assert storm.read(handle, key) == blob, key
         finally:
             storm.dll.SFileCloseArchive(handle)
-        assert p.sha256(live) == report['baseline'][str(relative)], 'Live archive changed while staging'
+        assert (p.sha256(live) if live.exists() else None) == report['baseline'][str(relative)], 'Live archive changed while staging'
         report['staged'][str(relative)] = p.sha256(target)
         print('STAGED AND READ BACK', relative, len(wanted), 'entries', flush=True)
     (STAGE / 'report.json').write_text(json.dumps(report, indent=2) + chr(10), encoding='utf-8', newline=chr(10))
@@ -221,7 +266,8 @@ def preflight():
     report = json.loads((STAGE / 'report.json').read_text(encoding='utf-8'))
     assert 'wow.exe' not in subprocess.check_output(['tasklist', '/FO', 'CSV', '/NH'], text=True).lower(), 'Close the game client first'
     for relative in ARCHIVES:
-        assert p.sha256(p.CLIENT_DEFAULT / relative) == report['baseline'][str(relative)],             'Live archive changed since staging: ' + str(relative)
+        live = p.CLIENT_DEFAULT / relative
+        assert (p.sha256(live) if live.exists() else None) == report['baseline'][str(relative)], 'Live archive changed since staging: ' + str(relative)
         assert p.sha256(STAGE / 'client' / relative) == report['staged'][str(relative)], 'Staged archive changed'
     return report
 
@@ -230,6 +276,8 @@ def install():
     report = preflight()
     root = BACKUPS / ('Race-racials-' + datetime.now().strftime('%Y%m%d-%H%M%S'))
     for relative in ARCHIVES:
+        if report['baseline'][str(relative)] is None:    # new archive: the backup is its absence
+            continue
         backup = root / 'client' / relative
         backup.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(p.CLIENT_DEFAULT / relative, backup)
@@ -253,8 +301,12 @@ def install():
 
 def restore(root, report):
     for relative in ARCHIVES:
-        shutil.copy2(root / 'client' / relative, p.CLIENT_DEFAULT / relative)
-        assert p.sha256(p.CLIENT_DEFAULT / relative) == report['baseline'][str(relative)]
+        live = p.CLIENT_DEFAULT / relative
+        if report['baseline'][str(relative)] is None:
+            live.unlink(missing_ok=True)
+            continue
+        shutil.copy2(root / 'client' / relative, live)
+        assert p.sha256(live) == report['baseline'][str(relative)]
 
 
 def rollback():

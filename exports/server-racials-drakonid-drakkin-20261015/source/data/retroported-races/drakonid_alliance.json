@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "slug": "drakonid_alliance",
+  "name": "Drakonid",
+  "race_ids": [
+    69
+  ],
+  "enum": "RACE_DRAKONID_ALLIANCE",
+  "faction": "alliance",
+  "source_race_id": 1,
+  "legacy_mask_race": 1,
+  "visual_base_race": 6,
+  "helmet_prefix": "Dk",
+  "client_file_strings": {
+    "69": "DrakonidAlliance"
+  },
+  "glue_token": "DRAKONIDALLIANCE",
+  "start_profile": "elwynn",
+  "donor_totem_race": 1,
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11
+  ],
+  "source_patch_root": "G:\\RetroPorterWork\\drakonid\\converted",
+  "runtime_patch_root": "G:\\RetroPorterWork\\drakonid\\deploy\\assets",
+  "models": {
+    "male": {
+      "model_id": 120077,
+      "display_id": 60068,
+      "model_path": "custom\\drakonid\\native\\drakonid.m2"
+    }
+  },
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "source": "retail-creature-191518",
+    "hide_helm": false,
+    "supported_genders": [
+      0
+    ],
+    "profiles": {
+      "0": {
+        "descriptors": [
+          [
+            0,
+            17,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            6,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            3,
+            76,
+            1
+          ]
+        ],
+        "capacities": [
+          17,
+          4,
+          6,
+          76,
+          1
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "choices": [
+              "drakonid2_blue",
+              "drakonid2_black",
+              "drakonid2_bronze",
+              "drakonid2_green",
+              "drakonid2_red",
+              "drakonid2_white",
+              "drakonid2_olive",
+              "drakonid2_chromatic",
+              "drakonid2_twilight",
+              "drakonid2_void",
+              "drakonid2_azure",
+              "drakonid2_teal",
+              "drakonid2_indigo",
+              "drakonid2_darkteal",
+              "drakonid2_umber",
+              "drakonid2_charcoal",
+              "drakonid2_abyss"
+            ]
+          },
+          {
+            "label": "Head",
+            "choices": [
+              3101,
+              3102
+            ]
+          },
+          {
+            "label": "Horns",
+            "choices": [
+              3201,
+              3202,
+              3203,
+              3204,
+              3205,
+              3206
+            ]
+          },
+          {
+            "label": "Tail",
+            "choices": [
+              3501,
+              3502
+            ]
+          },
+          {
+            "label": "Eye Color",
+            "choices": [
+              "drakonid2_eyes_4218540",
+              "drakonid2_eyes_4218485",
+              "drakonid2_eyes_4218514",
+              "drakonid2_eyes_4218590",
+              "drakonid2_eyes_4218479",
+              "drakonid2_eyes_4218480",
+              "drakonid2_eyes_4218481",
+              "drakonid2_eyes_4218482",
+              "drakonid2_eyes_4218483",
+              "drakonid2_eyes_4218484",
+              "drakonid2_eyes_4218486",
+              "drakonid2_eyes_4218487",
+              "drakonid2_eyes_4218488",
+              "drakonid2_eyes_4218489",
+              "drakonid2_eyes_4218490",
+              "drakonid2_eyes_4218492",
+              "drakonid2_eyes_4218493",
+              "drakonid2_eyes_4218494",
+              "drakonid2_eyes_4218495",
+              "drakonid2_eyes_4218496",
+              "drakonid2_eyes_4218497",
+              "drakonid2_eyes_4218498",
+              "drakonid2_eyes_4218499",
+              "drakonid2_eyes_4218500",
+              "drakonid2_eyes_4218501",
+              "drakonid2_eyes_4218502",
+              "drakonid2_eyes_4218504",
+              "drakonid2_eyes_4218505",
+              "drakonid2_eyes_4218506",
+              "drakonid2_eyes_4218510",
+              "drakonid2_eyes_4218511",
+              "drakonid2_eyes_4218512",
+              "drakonid2_eyes_4218513",
+              "drakonid2_eyes_4218515",
+              "drakonid2_eyes_4218516",
+              "drakonid2_eyes_4218519",
+              "drakonid2_eyes_4218520",
+              "drakonid2_eyes_4218522",
+              "drakonid2_eyes_4218523",
+              "drakonid2_eyes_4218527",
+              "drakonid2_eyes_4218528",
+              "drakonid2_eyes_4218530",
+              "drakonid2_eyes_4218535",
+              "drakonid2_eyes_4218536",
+              "drakonid2_eyes_4218538",
+              "drakonid2_eyes_4218542",
+              "drakonid2_eyes_4218543",
+              "drakonid2_eyes_4218544",
+              "drakonid2_eyes_4218545",
+              "drakonid2_eyes_4218546",
+              "drakonid2_eyes_4218547",
+              "drakonid2_eyes_4218549",
+              "drakonid2_eyes_4218550",
+              "drakonid2_eyes_4218551",
+              "drakonid2_eyes_4218554",
+              "drakonid2_eyes_4218555",
+              "drakonid2_eyes_4218556",
+              "drakonid2_eyes_4218559",
+              "drakonid2_eyes_4218561",
+              "drakonid2_eyes_4218563",
+              "drakonid2_eyes_4218565",
+              "drakonid2_eyes_4218569",
+              "drakonid2_eyes_4218572",
+              "drakonid2_eyes_4218573",
+              "drakonid2_eyes_4218574",
+              "drakonid2_eyes_4218578",
+              "drakonid2_eyes_4218583",
+              "drakonid2_eyes_4218585",
+              "drakonid2_eyes_4218588",
+              "drakonid2_eyes_4218589",
+              "drakonid2_eyes_4218592",
+              "drakonid2_eyes_4218599",
+              "drakonid2_eyes_4218600",
+              "drakonid2_eyes_4218602",
+              "drakonid2_eyes_4218604",
+              "drakonid2_eyes_4218605"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "random_playerbot_enabled": false,
+  "custom_racial_spells": []
+}

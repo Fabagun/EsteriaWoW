@@ -80,7 +80,7 @@
     ],
     "CreatureDisplayInfo": [
       60030,
-      60069
+      60071
     ],
     "CreatureDisplayInfoExtra": [
       60000,
@@ -370,10 +370,12 @@
     },
     "tuskarr": {
       "CreatureModelData": {
-        "male": 120059
+        "male": 120059,
+        "female": 120080
       },
       "CreatureDisplayInfo": {
-        "male": 60050
+        "male": 60050,
+        "female": 60071
       },
       "CharSections": [
         1000700,
@@ -661,10 +663,10 @@
     "drakkin_alliance": {
       "CreatureModelData": {
         "female": 120073,
-        "male": 120073
+        "male": 120079
       },
       "CreatureDisplayInfo": {
-        "male": 60064,
+        "male": 60070,
         "female": 60064
       },
       "CharSections": [

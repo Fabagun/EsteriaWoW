@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "name": "Oppressive Ruin extends Ruin's heal-absorb duration to 8 sec (#983)",
+  "contract": [
+    "Original Spell.dbc gives Ruin 801895 a zero base duration and the Magic damage class. Oppressive Ruin",
+    "561201 adds 8000 ms through its flat duration modifier (7999 base points plus DieSides 1), targeting",
+    "Ruin's family mask word 1 bit 2. Both level-80 fixtures have native spell-hit rating, enough Energy and",
+    "the normal two Felfury cost. Each normal 2500 ms cast and 30 units/sec projectile must be accepted and",
+    "deal actual damage before checking its aura. Untalented Ruin has no lasting heal absorb after its hit.",
+    "Talented Ruin starts with 7-8 seconds remaining, still has 1-2 seconds after a further six seconds, and",
+    "expires after a further two seconds. Polling native damage and remaining duration distinguishes a missed",
+    "or unfinished cast from the original duration contract."
+  ],
+  "timeout_ms": 90000,
+  "players": [
+    {
+      "id": "control",
+      "race": 1,
+      "class": 14,
+      "level": 80,
+      "spell_hit_rating": 10000
+    },
+    {
+      "id": "oppressive",
+      "race": 1,
+      "class": 14,
+      "level": 80,
+      "spell_hit_rating": 10000
+    }
+  ],
+  "creatures": [
+    {
+      "id": "dummy_control",
+      "owner": "control",
+      "entry": 36,
+      "health": 1000000,
+      "distance": 3,
+      "level": 80
+    },
+    {
+      "id": "dummy_oppressive",
+      "owner": "oppressive",
+      "entry": 36,
+      "health": 1000000,
+      "distance": 3,
+      "level": 80
+    }
+  ],
+  "steps": [
+    {
+      "action": "wait",
+      "label": "Let spawn AI and level scaling settle",
+      "ms": 5000
+    },
+    {
+      "action": "learn",
+      "actor": "control",
+      "spell": 801895
+    },
+    {
+      "action": "learn",
+      "actor": "oppressive",
+      "spell": 801895
+    },
+    {
+      "action": "learn",
+      "actor": "oppressive",
+      "spell": 561201
+    },
+    {
+      "action": "set_power",
+      "actor": "control",
+      "power": 3,
+      "value": 100
+    },
+    {
+      "action": "set_power",
+      "actor": "oppressive",
+      "power": 3,
+      "value": 100
+    },
+    {
+      "action": "set_aura",
+      "actor": "control",
+      "spell": 800058,
+      "stacks": 2
+    },
+    {
+      "action": "set_aura",
+      "actor": "oppressive",
+      "spell": 800058,
+      "stacks": 2
+    },
+    {
+      "action": "assert",
+      "actor": "control",
+      "metric": "spell_hit_chance",
+      "min": 100,
+      "label": "Native spell accuracy covers Ruin"
+    },
+    {
+      "action": "assert",
+      "actor": "oppressive",
+      "metric": "spell_hit_chance",
+      "min": 100,
+      "label": "Native spell accuracy covers Ruin"
+    },
+    {
+      "action": "cast",
+      "actor": "control",
+      "spell": 801895,
+      "target": "dummy_control"
+    },
+    {
+      "action": "cast",
+      "actor": "oppressive",
+      "spell": 801895,
+      "target": "dummy_oppressive"
+    },
+    {
+      "action": "assert",
+      "actor": "control",
+      "metric": "cast_failure",
+      "spell": 801895,
+      "equals": 0
+    },
+    {
+      "action": "assert",
+      "actor": "control",
+      "metric": "spell_damage_count",
+      "spell": 801895,
+      "target": "dummy_control",
+      "equals": 1,
+      "within_ms": 4000,
+      "label": "The normal Ruin cast actually hits its own target"
+    },
+    {
+      "action": "assert",
+      "actor": "oppressive",
+      "metric": "cast_failure",
+      "spell": 801895,
+      "equals": 0
+    },
+    {
+      "action": "assert",
+      "actor": "oppressive",
+      "metric": "spell_damage_count",
+      "spell": 801895,
+      "target": "dummy_oppressive",
+      "equals": 1,
+      "within_ms": 4000,
+      "label": "The normal Ruin cast actually hits its own target"
+    },
+    {
+      "action": "assert",
+      "label": "Untalented: heal-absorb expires almost instantly (0 ms base duration)",
+      "actor": "dummy_control",
+      "metric": "aura",
+      "spell": 801895,
+      "caster": "control",
+      "equals": 0
+    },
+    {
+      "action": "assert",
+      "label": "Talented: heal-absorb persists ~8 sec",
+      "actor": "dummy_oppressive",
+      "metric": "aura_duration_ms",
+      "spell": 801895,
+      "caster": "oppressive",
+      "min": 7000,
+      "max": 8000,
+      "within_ms": 6000
+    },
+    {
+      "action": "wait",
+      "ms": 6000,
+      "label": "Observe the original eight-second duration after a real hit"
+    },
+    {
+      "action": "assert",
+      "actor": "dummy_oppressive",
+      "metric": "aura_duration_ms",
+      "spell": 801895,
+      "caster": "oppressive",
+      "min": 950,
+      "max": 2000,
+      "label": "Talented Ruin still has one to two seconds remaining"
+    },
+    {
+      "action": "wait",
+      "ms": 2000,
+      "label": "Let the rest of Ruin's original duration expire"
+    },
+    {
+      "action": "assert",
+      "actor": "dummy_oppressive",
+      "metric": "aura",
+      "spell": 801895,
+      "caster": "oppressive",
+      "equals": 0,
+      "label": "The heal absorb expires after eight seconds"
+    }
+  ]
+}

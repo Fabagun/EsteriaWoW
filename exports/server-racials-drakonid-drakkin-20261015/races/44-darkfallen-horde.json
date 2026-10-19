@@ -1,0 +1,34 @@
+{
+  "race_id": 44,
+  "name": "Darkfallen",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 44,
+  "display_ids": [
+    60028,
+    60029
+  ],
+  "script_grants": [],
+  "additional_source_racials": [
+    110040,
+    110041,
+    110042
+  ],
+  "racial_start_and_skill_candidates": [],
+  "racial_spell_ids": [
+    110040,
+    110041,
+    110042
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "110040": "Crimson Thirst",
+    "110041": "Crimson Thirst",
+    "110042": "Children of the Night"
+  }
+}

@@ -18,11 +18,14 @@
 #ifndef ACORE_BAG_H
 #define ACORE_BAG_H
 
-// Maximum 36 Slots ((CONTAINER_END - CONTAINER_FIELD_SLOT_1)/2
-#define MAX_BAG_SIZE 36                                     // 2.0.12
+// Esteria: matches the custom client's 254-slot container layout; 255 remains NULL_SLOT.
+#define MAX_BAG_SIZE 254
 
 #include "Item.h"
 #include "ItemTemplate.h"
+
+static_assert(MAX_BAG_SIZE == (CONTAINER_END - CONTAINER_FIELD_SLOT_1) / 2);
+static_assert(MAX_BAG_SIZE < NULL_SLOT);
 
 class Bag : public Item
 {

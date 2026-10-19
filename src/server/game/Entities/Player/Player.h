@@ -35,6 +35,7 @@
 #include "PetDefines.h"
 #include "PlayerSettings.h"
 #include "PlayerTaxi.h"
+#include "DigitalInventory.h"
 #include "QuestDef.h"
 #include "SpellAuras.h"
 #include "SpellInfo.h"
@@ -889,6 +890,8 @@ enum PlayerLoginQueryIndex
     PLAYER_LOGIN_QUERY_LOAD_CHARACTER_SETTINGS           = 36,
     PLAYER_LOGIN_QUERY_LOAD_PET_SLOTS                    = 37,
     PLAYER_LOGIN_QUERY_LOAD_OFFLINE_ACHIEVEMENTS_UPDATES = 38,
+    PLAYER_LOGIN_QUERY_LOAD_DIGITAL_STORAGE,
+    PLAYER_LOGIN_QUERY_LOAD_DIGITAL_ITEMS,
     MAX_PLAYER_LOGIN_QUERY
 };
 
@@ -1091,6 +1094,10 @@ class Player : public Unit, public GridObject<Player>
 public:
     explicit Player(WorldSession* session);
     ~Player() override;
+
+    DigitalInventory& GetDigitalInventory() { return _digitalInventory; }
+    DigitalInventory const& GetDigitalInventory() const { return _digitalInventory; }
+    DigitalInventory& GetDigitalBank() { return _digitalBank; }
 
     void CleanupsBeforeDelete(bool finalCleanup = true) override;
 
@@ -3089,6 +3096,8 @@ private:
     bool _expectingChangeTransport;
     uint32 _pendingFlightChangeCounter;
     uint32 _mapChangeOrderCounter;
+    DigitalInventory _digitalInventory{*this};
+    DigitalInventory _digitalBank{*this, DigitalInventory::Bank};
 };
 
 void AddItemsSetItem(Player* player, Item* item);

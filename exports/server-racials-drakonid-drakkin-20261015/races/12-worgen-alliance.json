@@ -1,0 +1,63 @@
+{
+  "race_id": 12,
+  "name": "Worgen",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 12,
+  "display_ids": [
+    29422,
+    29423
+  ],
+  "script_grants": [],
+  "additional_source_racials": [
+    68992,
+    68994,
+    68995,
+    68996,
+    87840,
+    87841,
+    110010,
+    110011,
+    110020
+  ],
+  "racial_start_and_skill_candidates": [
+    68975,
+    68976,
+    68978,
+    68992
+  ],
+  "racial_spell_ids": [
+    68975,
+    68976,
+    68978,
+    68992,
+    68994,
+    68995,
+    68996,
+    87840,
+    87841,
+    110010,
+    110011,
+    110020
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "68975": "Viciousness",
+    "68976": "Aberration",
+    "68978": "Flayer",
+    "68992": "Darkflight",
+    "68994": "Two Forms",
+    "68995": "Two Forms",
+    "68996": "Two Forms",
+    "87840": "Running Wild",
+    "87841": "Running Wild",
+    "110010": "Running Wild",
+    "110011": "Running Wild",
+    "110020": "Two Forms"
+  }
+}

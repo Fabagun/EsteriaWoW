@@ -1,0 +1,40 @@
+{
+  "race_id": 26,
+  "name": "Pandaren",
+  "faction": "horde",
+  "effective_playable": false,
+  "listed_in_registry": true,
+  "legacy_mask_race": 26,
+  "display_ids": [
+    3000006,
+    3000007
+  ],
+  "script_grants": [
+    110660,
+    110661,
+    110662,
+    110664,
+    110665
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [],
+  "racial_spell_ids": [
+    110660,
+    110661,
+    110662,
+    110664,
+    110665
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "110660": "Quaking Palm",
+    "110661": "Epicurean",
+    "110662": "Gourmand",
+    "110664": "Bouncy",
+    "110665": "Inner Peace"
+  }
+}

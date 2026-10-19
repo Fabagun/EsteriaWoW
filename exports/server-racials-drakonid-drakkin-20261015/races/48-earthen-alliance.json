@@ -1,0 +1,78 @@
+{
+  "race_id": 48,
+  "name": "Earthen",
+  "faction": "alliance",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 3,
+  "display_ids": [
+    60036,
+    60037
+  ],
+  "script_grants": [
+    110700,
+    110704,
+    110705,
+    110706,
+    110707,
+    110708
+  ],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    33697,
+    33702
+  ],
+  "racial_spell_ids": [
+    33697,
+    33702,
+    110700,
+    110704,
+    110705,
+    110706,
+    110707,
+    110708
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [
+    {
+      "race": 48,
+      "spell": 668,
+      "comment": "Language Common",
+      "classMask": 0
+    },
+    {
+      "race": 48,
+      "spell": 672,
+      "comment": "Language Dwarven",
+      "classMask": 0
+    }
+  ],
+  "custom_start_skills": [
+    {
+      "race": 48,
+      "rank": 0,
+      "skill": 98,
+      "comment": "Language Common",
+      "classMask": 0
+    },
+    {
+      "race": 48,
+      "rank": 0,
+      "skill": 111,
+      "comment": "Language Dwarven",
+      "classMask": 0
+    }
+  ],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "33697": "Blood Fury",
+    "33702": "Blood Fury",
+    "110700": "Azerite Surge",
+    "110704": "Titan-Wrought Frame",
+    "110705": "Wide-Eyed Wonder",
+    "110706": "Hyper Productive",
+    "110707": "Ingest Minerals",
+    "110708": "Quiet Contemplation"
+  }
+}

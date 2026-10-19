@@ -339,6 +339,8 @@ def profiles(slug):
     manifest = p.load_manifest(slug)
     if slug == 'vrykul' and manifest['appearance'].get('female_source') == 'snowzocraft-player':
         return manifest['appearance']['profiles']
+    if slug == 'tuskarr' and manifest['appearance'].get('female_source') == 'hd-npc':
+        return manifest['appearance']['profiles']
     if manifest.get('appearance', {}).get('source') == 'sirus-naga':
         return manifest['appearance']['profiles']
     discovery = p.load_json(WORK / slug / "reports/discovery.json")
@@ -379,12 +381,16 @@ def header():
     for faction, race in (('alliance', 69), ('horde', 70)):
         if p.manifest_path('drakonid_' + faction).exists():
             header_specs['drakonid_' + faction] = {'targets': [race], 'genders': [0]}
+    if p.manifest_path('darkfallen').exists():
+        header_specs['darkfallen'] = {'targets': [43, 44], 'genders': [0, 1]}
     if p.load_manifest('vrykul')['appearance'].get('female_source') == 'snowzocraft-player':
         header_specs['vrykul'] = {**SPECS['vrykul'], 'genders': [0, 1]}
+    if p.load_manifest('tuskarr')['appearance'].get('female_source') == 'hd-npc':
+        header_specs['tuskarr'] = {**SPECS['tuskarr'], 'genders': [0, 1]}
     for slug, spec in header_specs.items():
         selected_profiles = p.load_manifest(slug)['appearance']['profiles'] if slug in (
             'sethrak', 'gnoll', 'saberon', 'drakkin_alliance', 'drakkin_horde', 'drakonid_alliance',
-            'drakonid_horde') \
+            'drakonid_horde', 'darkfallen') \
             else profiles(slug)
         for gender, profile in selected_profiles.items():
             name = slug.title() + ('Male' if gender == '0' else 'Female')
@@ -406,9 +412,10 @@ def header():
                       *['        ' + json.dumps(o['label']) + ',' for o in profile['options']], '    };', ''])
     uses = 'race >= 54 && race <= 59'
     for slug in ('sethrak', 'gnoll', 'saberon', 'drakkin_alliance', 'drakkin_horde', 'drakonid_alliance',
-                 'drakonid_horde'):
+                 'drakonid_horde', 'darkfallen'):
         if slug in header_specs:
-            uses = '(' + uses + ') || race == ' + str(header_specs[slug]['targets'][0])
+            for target in header_specs[slug]['targets']:
+                uses = '(' + uses + ') || race == ' + str(target)
     both = ' || '.join('race == ' + str(race) for spec in header_specs.values()
                        if len(spec['genders']) == 2 for race in spec['targets'])
     female_only = ' || '.join('race == ' + str(race) for spec in header_specs.values()
@@ -423,7 +430,7 @@ def header():
                   '        return (race == 56 || race == 57) && gender == 1;', '    }', '',
                   '    constexpr bool UsesStockMaterials(unsigned race, unsigned gender)', '    {',
                   '        return UsesPlayerVrykul(race, gender)'
-                  + ' || ((race == 66 || race == 67) && gender < 2);', '    }', '',
+                  + ' || (race == 66 && gender == 1) || (race == 67 && gender < 2);', '    }', '',
                   '    constexpr std::array<Option, 5> const& Options(unsigned race, unsigned gender)', '    {',
                   '        switch (race)', '        {'])
     for slug, spec in header_specs.items():

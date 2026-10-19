@@ -453,7 +453,8 @@
       "visual_base_race": 3,
       "start_profile": "dun_morogh",
       "supported_genders": [
-        0
+        0,
+        1
       ],
       "species_selection": false
     },

@@ -1,0 +1,43 @@
+{
+  "race_id": 9,
+  "name": "Goblin",
+  "faction": "horde",
+  "effective_playable": true,
+  "listed_in_registry": true,
+  "legacy_mask_race": 9,
+  "display_ids": [
+    3000024,
+    3000025
+  ],
+  "script_grants": [],
+  "additional_source_racials": [],
+  "racial_start_and_skill_candidates": [
+    69041,
+    69042,
+    69044,
+    69045,
+    69046,
+    69070
+  ],
+  "racial_spell_ids": [
+    69041,
+    69042,
+    69044,
+    69045,
+    69046,
+    69070
+  ],
+  "withheld_racials": [],
+  "custom_start_spells": [],
+  "custom_start_skills": [],
+  "excluded_start_spells": [],
+  "excluded_start_skills": [],
+  "spell_names": {
+    "69041": "Rocket Barrage",
+    "69042": "Time is Money",
+    "69044": "Best Deals Anywhere",
+    "69045": "Better Living Through Chemistry",
+    "69046": "Pack Hobgoblin",
+    "69070": "Rocket Jump"
+  }
+}

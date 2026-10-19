@@ -7,6 +7,7 @@ import { buildCache, type BuildProgress } from './cache.js';
 import { getAddons, warmUp as warmUpAddons } from './addons-resolver.js';
 import { writeV2Manifest } from './v2-manifest.js';
 import { attachSocial } from './social/routes.js';
+import { isExcludedClientPath } from './client-exclusions.js';
 
 const SourceDir = process.env.SOURCE_DIR || './client';
 const ClientRootDir = process.env.CLIENT_ROOT_DIR || '';
@@ -218,6 +219,10 @@ app.get('/api/file/:version/manifest.json', async (req, res) => {
 });
 
 app.get('/client/:version/*', async (req: express.Request<{ version: string; 0: string }>, res) => {
+	if (isExcludedClientPath(req.params[0])) {
+		res.status(404).end();
+		return;
+	}
 	const rootDir = await requireChannelDir(req.params.version);
 	if (!rootDir) {
 		res.status(404).end();
@@ -431,6 +436,7 @@ const newestSourceMtime = async (dir: string): Promise<number> => {
 	let newest = 0;
 	const entries = await fs.readdir(dir);
 	for (const name of entries) {
+		if (isExcludedClientPath(name)) continue;
 		if (
 			name === 'manifest.json' ||
 			name === 'manifest.json.tmp' ||

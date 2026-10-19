@@ -40,7 +40,7 @@ namespace WorldPackets
 enum GuildMisc
 {
     GUILD_BANK_MAX_TABS = 6,                    // send by client for money log also
-    GUILD_BANK_MAX_SLOTS = 98,
+    GUILD_BANK_MAX_SLOTS = 250,   // stays below NULL_SLOT (255); tabs grow from 128 up to this
     GUILD_BANK_MONEY_LOGS_TAB = 100,                  // used for money log in DB
     GUILD_RANKS_MIN_COUNT = 5,
     GUILD_RANKS_MAX_COUNT = 10,
@@ -573,6 +573,8 @@ private:
 
         void SetInfo(std::string_view name, std::string_view icon);
         void SetText(std::string_view text);
+        uint16 GetSlots() const { return m_slots; }
+        void SetSlots(uint16 slots);
         void SendText(Guild const* guild, WorldSession* session) const;
 
         std::string const& GetName() const { return m_name; }
@@ -586,6 +588,7 @@ private:
         uint32 m_guildId;
         uint8 m_tabId;
 
+        uint16 m_slots = 128;
         std::array<Item*, GUILD_BANK_MAX_SLOTS> m_items = {};
         std::string m_name;
         std::string m_icon;
@@ -714,6 +717,12 @@ public:
     void HandleSetRankInfo(WorldSession* session, uint8 rankId, std::string_view name, uint32 rights, uint32 moneyPerDay, std::array<GuildBankRightsAndSlots, GUILD_BANK_MAX_TABS> const& rightsAndSlots);
     void HandleSetRankInfo(uint8 rankId, uint32 rights = 0, std::string_view name = "", uint32 moneyPerDay = 0);
     void HandleBuyBankTab(WorldSession* session, uint8 tabId);
+    bool HandleExpandBankTab(WorldSession* session, uint8 tabId, uint32 quotedPrice);
+    uint32 GetNextBankTabPrice() const;
+    uint32 GetBankTabExpandPrice(uint8 tabId) const;
+    uint16 GetBankTabSlots(uint8 tabId) const { BankTab const* tab = GetBankTab(tabId); return tab ? tab->GetSlots() : 0; }
+    uint8 GetPurchasedBankTabs() const { return _GetPurchasedTabsSize(); }
+    std::string GetBankTabName(uint8 tabId) const { BankTab const* tab = GetBankTab(tabId); return tab ? tab->GetName() : std::string(); }
     void HandleInviteMember(WorldSession* session, std::string const& name);
     void HandleAcceptMember(WorldSession* session);
     void HandleLeaveMember(WorldSession* session);
