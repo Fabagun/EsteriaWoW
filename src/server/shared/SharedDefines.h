@@ -97,6 +97,7 @@ enum Races
     RACE_PANDAREN_HORDE      = 26,
     RACE_BROKEN_HORDE        = 27,
     RACE_DRACTHYR             = 28,
+    RACE_KULTIRAN             = 29,
     RACE_DARKFALLEN_ALLIANCE  = 43,
     RACE_DARKFALLEN_HORDE     = 44,
     RACE_MAGHAR_ORC           = 45,
@@ -124,7 +125,11 @@ enum Races
     RACE_DRAKKIN_HORDE          = 67,
     RACE_ARAKKOA_HORDE         = 68,
     RACE_DRAKONID_ALLIANCE     = 69,
-    RACE_DRAKONID_HORDE        = 70
+    RACE_DRAKONID_HORDE        = 70,
+    RACE_SLIME_GIANT_ALLIANCE  = 71,
+    RACE_SLIME_GIANT_HORDE     = 72,
+    RACE_CENTAUR_ALLIANCE      = 73,
+    RACE_CENTAUR_HORDE         = 74
 };
 
 uint32 constexpr DARKFALLEN_RACE_MASK = 0x80000000u;
@@ -141,7 +146,7 @@ inline constexpr bool UsesHaranirAppearance(uint32 race)
 
 inline constexpr bool IsExtendedPlayableRace(uint32 race)
 {
-    return race >= RACE_MAGHAR_ORC && race <= RACE_DRAKONID_HORDE;
+    return race >= RACE_MAGHAR_ORC && race <= RACE_CENTAUR_HORDE;
 }
 
 inline constexpr uint8 GetLegacyMaskRaceForRace(uint32 race)
@@ -174,6 +179,10 @@ inline constexpr uint8 GetLegacyMaskRaceForRace(uint32 race)
         case RACE_ARAKKOA_HORDE:        return RACE_ORC;
         case RACE_DRAKONID_ALLIANCE:    return RACE_HUMAN;
         case RACE_DRAKONID_HORDE:       return RACE_ORC;
+        case RACE_SLIME_GIANT_ALLIANCE: return RACE_HUMAN;
+        case RACE_SLIME_GIANT_HORDE:    return RACE_ORC;
+        case RACE_CENTAUR_ALLIANCE:     return RACE_HUMAN;
+        case RACE_CENTAUR_HORDE:        return RACE_ORC;
         default:                        return uint8(race);
     }
 }
@@ -208,6 +217,10 @@ inline constexpr uint8 GetVisualBaseRaceForRace(uint32 race)
         case RACE_ARAKKOA_HORDE:        return RACE_ORC;
         case RACE_DRAKONID_ALLIANCE:
         case RACE_DRAKONID_HORDE:       return RACE_TAUREN;
+        case RACE_SLIME_GIANT_ALLIANCE:
+        case RACE_SLIME_GIANT_HORDE:    return RACE_KULTIRAN;
+        case RACE_CENTAUR_ALLIANCE:
+        case RACE_CENTAUR_HORDE:        return RACE_DRAENEI;
         default:                        return uint8(race);
     }
 }

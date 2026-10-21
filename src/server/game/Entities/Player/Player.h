@@ -19,6 +19,8 @@
 #define _PLAYER_H
 
 #include "ArenaTeam.h"
+#include "BodyShapeWire.h"
+#include "RetailLookWire.h"
 #include "Battleground.h"
 #include "CharmInfo.h"
 #include "CharacterCache.h"
@@ -485,7 +487,7 @@ enum PlayerFlags : uint32
     PLAYER_FLAGS_NO_XP_GAIN        = 0x02000000,
     PLAYER_FLAGS_UNK26             = 0x04000000,
     PLAYER_FLAGS_UNK27             = 0x08000000,
-    PLAYER_FLAGS_UNK28             = 0x10000000,
+    PLAYER_FLAGS_CENTAUR_HIDE_LEGS = 0x10000000,                // Cosmetic only; restricted to Centaur players.
     PLAYER_FLAGS_UNK29             = 0x20000000,
     PLAYER_FLAGS_UNK30             = 0x40000000,
     PLAYER_FLAGS_UNK31             = 0x80000000,
@@ -892,6 +894,8 @@ enum PlayerLoginQueryIndex
     PLAYER_LOGIN_QUERY_LOAD_OFFLINE_ACHIEVEMENTS_UPDATES = 38,
     PLAYER_LOGIN_QUERY_LOAD_DIGITAL_STORAGE,
     PLAYER_LOGIN_QUERY_LOAD_DIGITAL_ITEMS,
+    PLAYER_LOGIN_QUERY_LOAD_BODY_SHAPE,
+    PLAYER_LOGIN_QUERY_LOAD_RETAIL_LOOK,
     MAX_PLAYER_LOGIN_QUERY
 };
 
@@ -1146,6 +1150,12 @@ public:
 
     void SendInitialPacketsBeforeAddToMap();
     void SendInitialPacketsAfterAddToMap();
+    // Body sliders (see BodyShapeWire.h): loaded at login, announced to every player who gets this one in view.
+    void LoadBodyShape(PreparedQueryResult result);
+    void SendBodyShapeTo(Player* receiver) const;
+    // Full Retail customization (see RetailLookWire.h): opaque to the server, passed on to every player who sees this one.
+    void LoadRetailLook(PreparedQueryResult result);
+    void SendRetailLookTo(Player* receiver) const;
     void SendTransferAborted(uint32 mapid, TransferAbortReason reason, uint8 arg = 0);
     void SendInstanceResetWarning(uint32 mapid, Difficulty difficulty, uint32 time, bool onEnterMap);
 
@@ -2400,6 +2410,7 @@ public:
         m_lastFallZ = z;
     }
     void HandleFall(MovementInfo const& movementInfo);
+    void ResetSlimeBounce() { m_slimeBounceLanding = false; }
 
     [[nodiscard]] bool canFlyInZone(uint32 mapid, uint32 zone, SpellInfo const* bySpell);
 
@@ -2809,6 +2820,9 @@ protected:
     void _LoadInstanceTimeRestrictions(PreparedQueryResult result);
     void _LoadBrewOfTheMonth(PreparedQueryResult result);
     void _LoadCharacterSettings(PreparedQueryResult result);
+    CharacterBodyShape::Values _bodyShape{};
+    bool _hasRetailLook = false;
+    std::array<uint8, CharacterRetailLook::PayloadSize> _retailLook{};
     void _LoadPetStable(uint8 petStableSlots, PreparedQueryResult result);
 
     /*********************************************************/
@@ -3038,6 +3052,7 @@ private:
 
     uint32 m_lastFallTime;
     float  m_lastFallZ;
+    bool m_slimeBounceLanding = false;
 
     int32 m_MirrorTimer[MAX_TIMERS];
     uint8 m_MirrorTimerFlags;

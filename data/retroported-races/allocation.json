@@ -71,6 +71,18 @@
     ],
     "drakonid_horde": [
       70
+    ],
+    "slime_giant_alliance": [
+      71
+    ],
+    "slime_giant_horde": [
+      72
+    ],
+    "centaur_alliance": [
+      73
+    ],
+    "centaur_horde": [
+      74
     ]
   },
   "dbc_ranges": {
@@ -80,7 +92,7 @@
     ],
     "CreatureDisplayInfo": [
       60030,
-      60071
+      60078
     ],
     "CreatureDisplayInfoExtra": [
       60000,
@@ -88,11 +100,11 @@
     ],
     "CharSections": [
       450000,
-      1119299
+      1123299
     ],
     "CharHairGeosets": [
       450000,
-      1118399
+      1122399
     ],
     "CharHairTextures": [
       450000,
@@ -100,15 +112,15 @@
     ],
     "BarberShopStyle": [
       450000,
-      1118399
+      1122499
     ],
     "CharStartOutfit": [
       21000,
-      22219
+      22279
     ],
     "NameGen": [
       22000,
-      98999
+      110999
     ]
   },
   "race_allocations": {
@@ -807,6 +819,124 @@
         96000,
         98999
       ]
+    },
+    "slime_giant_alliance": {
+      "CreatureModelData": {
+        "male": 120081
+      },
+      "CreatureDisplayInfo": {
+        "male": 60072,
+        "female": 0
+      },
+      "CharSections": [
+        1119300,
+        1120299
+      ],
+      "CharHairGeosets": [
+        1119300,
+        1119399
+      ],
+      "BarberShopStyle": [
+        1119300,
+        1119399
+      ],
+      "CharStartOutfit": [
+        22220,
+        22229
+      ],
+      "NameGen": [
+        99000,
+        101999
+      ]
+    },
+    "slime_giant_horde": {
+      "CreatureModelData": {
+        "male": 120082
+      },
+      "CreatureDisplayInfo": {
+        "male": 60073,
+        "female": 0
+      },
+      "CharSections": [
+        1120300,
+        1121299
+      ],
+      "CharHairGeosets": [
+        1120300,
+        1120399
+      ],
+      "BarberShopStyle": [
+        1120300,
+        1120399
+      ],
+      "CharStartOutfit": [
+        22230,
+        22239
+      ],
+      "NameGen": [
+        102000,
+        104999
+      ]
+    },
+    "centaur_alliance": {
+      "CreatureModelData": {
+        "male": 120083,
+        "female": 120084
+      },
+      "CreatureDisplayInfo": {
+        "male": 60074,
+        "female": 60075
+      },
+      "CharSections": [
+        1121300,
+        1122299
+      ],
+      "CharHairGeosets": [
+        1121300,
+        1121399
+      ],
+      "BarberShopStyle": [
+        1121300,
+        1121499
+      ],
+      "CharStartOutfit": [
+        22240,
+        22259
+      ],
+      "NameGen": [
+        105000,
+        107999
+      ]
+    },
+    "centaur_horde": {
+      "CreatureModelData": {
+        "male": 120085,
+        "female": 120086
+      },
+      "CreatureDisplayInfo": {
+        "male": 60076,
+        "female": 60077
+      },
+      "CharSections": [
+        1122300,
+        1123299
+      ],
+      "CharHairGeosets": [
+        1122300,
+        1122399
+      ],
+      "BarberShopStyle": [
+        1122300,
+        1122499
+      ],
+      "CharStartOutfit": [
+        22260,
+        22279
+      ],
+      "NameGen": [
+        108000,
+        110999
+      ]
     }
   },
   "extra_allocations": {
@@ -826,6 +956,28 @@
       "EmotesTextSound": [
         680001,
         680099
+      ]
+    },
+    "slime_centaur_racials": {
+      "CreatureModelData": [
+        120087,
+        120087
+      ],
+      "CreatureDisplayInfo": [
+        60078,
+        60078
+      ],
+      "Spell": [
+        111010,
+        111027
+      ],
+      "Vehicle": [
+        900306,
+        900307
+      ],
+      "VehicleSeat": [
+        900408,
+        900409
       ]
     }
   }

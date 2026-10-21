@@ -1,0 +1,259 @@
+{
+  "count": 30,
+  "size": [
+    512,
+    512
+  ],
+  "mode": "RGBA",
+  "method": "HLS recoloring with relative hue and shading preserved; exact alpha composite at (0, 0)",
+  "source_sha256": {
+    "SkeletonUnderlay.png": "53e53d9471ed46526664daa6c4b6d9af152873729a6ab5a1cabf5c14d99f1599",
+    "SlimeOverlay.png": "6ee3b5c8a99bb59968e4f92d62ea6f001f56a01127ffdeef167adb1c640199f4"
+  },
+  "source_files_unchanged": true,
+  "alpha_preserved": true,
+  "skeleton_pixels_unchanged": true,
+  "resized_or_cropped": false,
+  "variants": [
+    {
+      "name": "crimson",
+      "base_color": "#D93447",
+      "skin": "CompleteSkins\\slimeskeleton_skin_01_crimson.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_01_crimson.png",
+      "skin_sha256": "0e675d96bccd94c0b0c5388f87fbc444c711b6cc1bbf05e7e99a9bbb9572457a",
+      "overlay_sha256": "8ac9785520f2992df97358ba0834297ce9df7ecf21c8ddc2852b8c9008dc2b55"
+    },
+    {
+      "name": "scarlet",
+      "base_color": "#F04A2F",
+      "skin": "CompleteSkins\\slimeskeleton_skin_02_scarlet.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_02_scarlet.png",
+      "skin_sha256": "4620e67396502707b8b2b994a1fc28d3c48e2eb087aba208b6c90187c03d5a20",
+      "overlay_sha256": "d723d5626523bbb14727f837c37965f8ffbc2baab946c2edd1e81e7367b21e5d"
+    },
+    {
+      "name": "ember_orange",
+      "base_color": "#EF7C2B",
+      "skin": "CompleteSkins\\slimeskeleton_skin_03_ember_orange.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_03_ember_orange.png",
+      "skin_sha256": "1da5d2027c7148e4046e38883b01141baefa57c3a3470869dd80b6890c395cf7",
+      "overlay_sha256": "134968c40da334748eca6475b21bade9c716d82535f5efa0a31559f628bc83f8"
+    },
+    {
+      "name": "peach",
+      "base_color": "#EFA87D",
+      "skin": "CompleteSkins\\slimeskeleton_skin_04_peach.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_04_peach.png",
+      "skin_sha256": "5a421b6d15a4e47c57a98a15c904027e29e773a52070e4dec21946eb97c4eb3b",
+      "overlay_sha256": "8c570b1199b0b524772f9b1a32a7a3b07ea4d4a2a1498a9564e1c7db79cdba73"
+    },
+    {
+      "name": "amber",
+      "base_color": "#D99A28",
+      "skin": "CompleteSkins\\slimeskeleton_skin_05_amber.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_05_amber.png",
+      "skin_sha256": "e7e35bf5056a77613c9efe124f05bd39cf8f097faeb180e49c010f235f14dcec",
+      "overlay_sha256": "609f2f63d6b6e722187fd05a90d5400b38fec5a0bf9fca01b684390827cdafdc"
+    },
+    {
+      "name": "lemon",
+      "base_color": "#D6CD36",
+      "skin": "CompleteSkins\\slimeskeleton_skin_06_lemon.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_06_lemon.png",
+      "skin_sha256": "8c470ad5880d073d9a3e93cd652f89fc2cc53dc70cce7c07083ab8225268930a",
+      "overlay_sha256": "8c0619ec4c49a664439d1e5990e73d0a580cc6b40d81431c67ac9d1adb927378"
+    },
+    {
+      "name": "chartreuse",
+      "base_color": "#A2C936",
+      "skin": "CompleteSkins\\slimeskeleton_skin_07_chartreuse.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_07_chartreuse.png",
+      "skin_sha256": "7bfb4f668ce635bd663ef7d03aaa6aec8ec8a9f423dadb8e31a2954d0b63c2b4",
+      "overlay_sha256": "37025d3e80d4d7fbb98911084c567e0756479d598627486c37558168e124ddaa"
+    },
+    {
+      "name": "lime",
+      "base_color": "#63D63C",
+      "skin": "CompleteSkins\\slimeskeleton_skin_08_lime.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_08_lime.png",
+      "skin_sha256": "43cb7cb12b4c0e9c5b6bc516c2203c11ed3c4630eb0cbf3ef24a5701c3af6b18",
+      "overlay_sha256": "33cae9e779aa04b96a9edc27e757afe35110b5b547db68ca3bdea24239ac32a9"
+    },
+    {
+      "name": "toxic_green",
+      "base_color": "#2DC350",
+      "skin": "CompleteSkins\\slimeskeleton_skin_09_toxic_green.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_09_toxic_green.png",
+      "skin_sha256": "dcc9ef2ebc556e613f475ed3d8875faebe37729c6496cedfb9bd904c7833b674",
+      "overlay_sha256": "edc969c8e7555e43d9c799e3ac9e72e73fe6f08db9943ca635970a1ef5d83442"
+    },
+    {
+      "name": "emerald",
+      "base_color": "#209769",
+      "skin": "CompleteSkins\\slimeskeleton_skin_10_emerald.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_10_emerald.png",
+      "skin_sha256": "7e35bb587b573470b361748ba4abd3b4d1497a70232902ab3863a4acb2819a61",
+      "overlay_sha256": "c41baed0b7ca9ea345f27cda57eb6d555cedd1f4ed4b9b1d7aa349f11322b38f"
+    },
+    {
+      "name": "jade",
+      "base_color": "#48BD9B",
+      "skin": "CompleteSkins\\slimeskeleton_skin_11_jade.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_11_jade.png",
+      "skin_sha256": "3ef0ac9b1140578a645db8c8849f1ada4ea5226772eb8e94052560f70bc6e77b",
+      "overlay_sha256": "f4b4a691002d6a0ab0a66529ead1b0a81249d703f4853fc5063c56533cb8c539"
+    },
+    {
+      "name": "mint",
+      "base_color": "#98DCC2",
+      "skin": "CompleteSkins\\slimeskeleton_skin_12_mint.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_12_mint.png",
+      "skin_sha256": "d9d52b2943ad3ab8128cb82e43d42f60f2d108720f102ca73cd9101ffa09ffb0",
+      "overlay_sha256": "6abf9d0f244ff0352f129f9202993e730ec1420652d241e6b0088b77b92a1814"
+    },
+    {
+      "name": "teal",
+      "base_color": "#2BA8A2",
+      "skin": "CompleteSkins\\slimeskeleton_skin_13_teal.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_13_teal.png",
+      "skin_sha256": "e0d013f2fe3f13e7c0fdf01b3631fe2d5cfdda7bc5be22c81ec491cfa1de689c",
+      "overlay_sha256": "7a5692a01b61fa02ffac570675747fc8688bcd19132aa6cab3ff3d930e804c93"
+    },
+    {
+      "name": "turquoise",
+      "base_color": "#35CFD2",
+      "skin": "CompleteSkins\\slimeskeleton_skin_14_turquoise.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_14_turquoise.png",
+      "skin_sha256": "4dcdfaea7dbff37570fe1fd48853cd92f6c3f6ff6143b281e6fd736f3409eb97",
+      "overlay_sha256": "9a08bda257493533fbac6847aa648f15acc45d07943cc19b1449651ef5f64e89"
+    },
+    {
+      "name": "ice_blue",
+      "base_color": "#9DDCEB",
+      "skin": "CompleteSkins\\slimeskeleton_skin_15_ice_blue.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_15_ice_blue.png",
+      "skin_sha256": "ea6994a907f122db079cbb92167cffed05b8e511cdfe004b00c4bc74e0e9a9dd",
+      "overlay_sha256": "8672d32c0dc37e92e82a554dded2e98aaeec2616b413ebf4e78f78a40e4e0eb1"
+    },
+    {
+      "name": "sky_blue",
+      "base_color": "#52AFE4",
+      "skin": "CompleteSkins\\slimeskeleton_skin_16_sky_blue.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_16_sky_blue.png",
+      "skin_sha256": "0c903dbd7a47b90141c60ff32d59dc955333063dde9031dec3c1b13becb0335e",
+      "overlay_sha256": "3f892397b6c2688f0f5e33dec2bbbb704df7c623419b2fbbee063928bbb8a17d"
+    },
+    {
+      "name": "azure",
+      "base_color": "#3679DE",
+      "skin": "CompleteSkins\\slimeskeleton_skin_17_azure.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_17_azure.png",
+      "skin_sha256": "eb6eb7135d116c072aa6321f1d33d80a5a85b581f271273f941f2dfd9aa485a3",
+      "overlay_sha256": "ccd9739394d532dc8fc4ce97e7f6297b541a761b8d85a41098035266e5c0503a"
+    },
+    {
+      "name": "cobalt",
+      "base_color": "#3D4CC0",
+      "skin": "CompleteSkins\\slimeskeleton_skin_18_cobalt.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_18_cobalt.png",
+      "skin_sha256": "4f7fdcadf98082c2dc900be08395076c4e65a3698a3f1b9759be1ddd6b832efe",
+      "overlay_sha256": "b22201b89f06e7aafa5b301491180239e251c35cf9c62280abeaf508af63dea9"
+    },
+    {
+      "name": "indigo",
+      "base_color": "#6651BF",
+      "skin": "CompleteSkins\\slimeskeleton_skin_19_indigo.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_19_indigo.png",
+      "skin_sha256": "107b569add0e97a1e57967c438461f85b40b2c4dec928232920c7da7a39897b9",
+      "overlay_sha256": "b25ec9a45ee5fd155cf78d8e827632a8010154da64d40e529cf83874e9d21b37"
+    },
+    {
+      "name": "violet",
+      "base_color": "#9655CB",
+      "skin": "CompleteSkins\\slimeskeleton_skin_20_violet.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_20_violet.png",
+      "skin_sha256": "ce1afb9c32826717ebbcbea9545411ecd83c5efc0f91b4e59fe761947e61a1b9",
+      "overlay_sha256": "c4aa0ef815650e5c7b5f2a3e8174d217fdef9544ee183e005b8f8f3f93e3c1a5"
+    },
+    {
+      "name": "lilac",
+      "base_color": "#C7A0DD",
+      "skin": "CompleteSkins\\slimeskeleton_skin_21_lilac.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_21_lilac.png",
+      "skin_sha256": "91886ce5c104047047c1889456314398f4d90994933e38696dbaaa0da485f105",
+      "overlay_sha256": "45aa5a074a4cd4da4beaa603ef59f92b8706c9c0a758b0eef98549208e610879"
+    },
+    {
+      "name": "magenta",
+      "base_color": "#CC43BC",
+      "skin": "CompleteSkins\\slimeskeleton_skin_22_magenta.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_22_magenta.png",
+      "skin_sha256": "3ae5aac959dcc923ad8842c053d5a1cb56d317a9cd418cc4d2b6811ed16a7e78",
+      "overlay_sha256": "c46c852c74e01338fd77d0325ff38f5435193b869840d88ba308336c5746b2db"
+    },
+    {
+      "name": "hot_pink",
+      "base_color": "#E959A3",
+      "skin": "CompleteSkins\\slimeskeleton_skin_23_hot_pink.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_23_hot_pink.png",
+      "skin_sha256": "bdac56228323c1ea829ac1dfb0bba24b8f39b0b60fb9fdb76e4afbf8030a8153",
+      "overlay_sha256": "30d489ca4454a2fa5371c58ec07eda869950aea22f4649242572379e22c3bfa0"
+    },
+    {
+      "name": "rose",
+      "base_color": "#CB6E89",
+      "skin": "CompleteSkins\\slimeskeleton_skin_24_rose.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_24_rose.png",
+      "skin_sha256": "966364330047874e90d8a6b7229e5594de84ab43460884095813ce2b032547be",
+      "overlay_sha256": "dca814fec450dd7c2d800fc1263341bc8bf05c15f20583d23fc4be12294df4b6"
+    },
+    {
+      "name": "wine",
+      "base_color": "#7B304A",
+      "skin": "CompleteSkins\\slimeskeleton_skin_25_wine.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_25_wine.png",
+      "skin_sha256": "7ada342e759e6746a453b8211dee96f779ede720be945af8d65536abe3e803b4",
+      "overlay_sha256": "c6f1cabad1c15801c96e628ae62b6d07baf79cded21b37abd0cb358878215ae2"
+    },
+    {
+      "name": "bronze",
+      "base_color": "#9C7545",
+      "skin": "CompleteSkins\\slimeskeleton_skin_26_bronze.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_26_bronze.png",
+      "skin_sha256": "ca4b1ddf3d69bb7d736c1b744a072171503014f5d1c0e6df107b5c3dd8a39292",
+      "overlay_sha256": "474f2f3ab85433107cee242ee9358f7e35c0674eed1d50532caea3b94251cdf0"
+    },
+    {
+      "name": "copper",
+      "base_color": "#BD673D",
+      "skin": "CompleteSkins\\slimeskeleton_skin_27_copper.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_27_copper.png",
+      "skin_sha256": "a50eab41d1ad82d45f3e25cfba582ade15748d23d47a427516741c1bab88e7b7",
+      "overlay_sha256": "ca76c92e560f95291bd93a28c423f311c0f3dd2711f410c52e66d52a5250fdbe"
+    },
+    {
+      "name": "pearl",
+      "base_color": "#D8DBD7",
+      "skin": "CompleteSkins\\slimeskeleton_skin_28_pearl.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_28_pearl.png",
+      "skin_sha256": "e00cea18cf28fca4b3fd5069f6e8a5ae07ddc76a4fac9b51118a334d4028b99a",
+      "overlay_sha256": "769a0fe432d74ea9f9b88c1c895177715f2309c4ec1c048aabe979084df01b1e"
+    },
+    {
+      "name": "silver",
+      "base_color": "#9AA3AC",
+      "skin": "CompleteSkins\\slimeskeleton_skin_29_silver.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_29_silver.png",
+      "skin_sha256": "03a0e24f6ecf52c0cd9772e9425f3536c941208e4fa552914bbe6e5b23423cfe",
+      "overlay_sha256": "705cc042e9532cc24216c1c837e4f7e15bd68d7fab4e626d49cc0c591a01c33a"
+    },
+    {
+      "name": "charcoal",
+      "base_color": "#414A53",
+      "skin": "CompleteSkins\\slimeskeleton_skin_30_charcoal.png",
+      "overlay": "RecoloredOverlays\\slime_overlay_30_charcoal.png",
+      "skin_sha256": "c8e8c622026ed00e4bfc0f7e212f09ed31bea169d197991a666d017bfb0b6b60",
+      "overlay_sha256": "dc94df4bee0ead6d73ed6e721b99f0648f59c9f3cff5a2367ebc302d23a76046"
+    }
+  ]
+}

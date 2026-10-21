@@ -33,6 +33,9 @@
 #include "HighmountainAppearance.h"
 #include "EarthenAppearance.h"
 #include "HaranirAppearance.h"
+#include "BodyShapeWire.h"
+#include "RetailLookWire.h"
+#include "EyeEffects.h"
 #include "Guild.h"
 #include "GuildMgr.h"
 #include "InstanceSaveMgr.h"
@@ -229,11 +232,44 @@ bool LoginQueryHolder::Initialize()
     stmt->SetData(0, rawGUID);
     res &= SetPreparedQuery(PLAYER_LOGIN_QUERY_LOAD_OFFLINE_ACHIEVEMENTS_UPDATES, stmt);
 
+    stmt = CharacterDatabase.GetPreparedStatement(CHAR_SEL_BODY_SHAPE);
+    stmt->SetData(0, rawGUID);
+    res &= SetPreparedQuery(PLAYER_LOGIN_QUERY_LOAD_BODY_SHAPE, stmt);
+
+    stmt = CharacterDatabase.GetPreparedStatement(CHAR_SEL_RETAIL_LOOK);
+    stmt->SetData(0, rawGUID);
+    res &= SetPreparedQuery(PLAYER_LOGIN_QUERY_LOAD_RETAIL_LOOK, stmt);
+
     return res;
 }
 
-void WorldSession::HandleCharEnum(PreparedQueryResult result, PreparedQueryResult permanentAuras)
+void WorldSession::HandleCharEnum(PreparedQueryResult result, PreparedQueryResult permanentAuras, PreparedQueryResult bodyShape, PreparedQueryResult retailLook)
 {
+    // Saved full Retail looks, by character (opaque to the server; only structurally checked).
+    std::unordered_map<uint32, std::array<uint8, CharacterRetailLook::PayloadSize>> retailLooks;
+    if (retailLook)
+    {
+        do
+        {
+            auto const payload = (*retailLook)[1].Get<Binary, CharacterRetailLook::PayloadSize>();
+            CharacterRetailLook::Look look;
+            if (CharacterRetailLook::ReadPayload(payload.data(), payload.size(), look))
+                retailLooks[(*retailLook)[0].Get<uint32>()] = payload;
+        } while (retailLook->NextRow());
+    }
+
+    // Saved body sliders, by character. Rows that are not a valid payload are ignored.
+    std::unordered_map<uint32, std::array<uint8, CharacterBodyShape::PayloadSize>> bodyShapes;
+    if (bodyShape)
+    {
+        do
+        {
+            auto const payload = (*bodyShape)[1].Get<Binary, CharacterBodyShape::PayloadSize>();
+            CharacterBodyShape::Values values{};
+            if (CharacterBodyShape::ReadPayload(payload.data(), payload.size(), values) && !CharacterBodyShape::AllDefault(values))
+                bodyShapes[(*bodyShape)[0].Get<uint32>()] = payload;
+        } while (bodyShape->NextRow());
+    }
     // Cosmetics' server skill mapping is intentionally absent for classless characters.
     // The existing exclusive wing group identifies equipped wings without changing spell ownership.
     std::unordered_map<uint32, uint32> wings;
@@ -256,6 +292,10 @@ void WorldSession::HandleCharEnum(PreparedQueryResult result, PreparedQueryResul
     uint32 haranirCount = 0;
     ByteBuffer cosmeticWings;
     uint32 wingCount = 0;
+    ByteBuffer bodyShapeBlock;
+    uint32 bodyShapeCount = 0;
+    ByteBuffer retailLookBlock;
+    uint32 retailLookCount = 0;
 
     data << num;
 
@@ -275,17 +315,29 @@ void WorldSession::HandleCharEnum(PreparedQueryResult result, PreparedQueryResul
                     cosmeticWings << guid.GetRawValue() << wing->second;
                     ++wingCount;
                 }
-                if (UsesExtendedAppearance((*result)[2].Get<uint8>()))
+                if (auto const look = retailLooks.find((*result)[0].Get<uint32>()); look != retailLooks.end())
+                {
+                    retailLookBlock << guid.GetRawValue();
+                    retailLookBlock.append(look->second.data(), look->second.size());
+                    ++retailLookCount;
+                }
+                if (auto const shape = bodyShapes.find((*result)[0].Get<uint32>()); shape != bodyShapes.end())
+                {
+                    bodyShapeBlock << guid.GetRawValue();
+                    bodyShapeBlock.append(shape->second.data(), shape->second.size());
+                    ++bodyShapeCount;
+                }
+                uint64 const extra = (*result)[result->GetFieldCount() - 2].Get<uint64>();
+                if (UsesHaranirAppearance((*result)[2].Get<uint8>()) || CharacterEyeEffects::Lightning(extra))
+                {
+                    haranirAppearances << guid.GetRawValue() << extra;
+                    ++haranirCount;
+                }
+                else if (UsesExtendedAppearance((*result)[2].Get<uint8>()))
                 {
                     extraAppearances << guid.GetRawValue()
                         << uint8((*result)[result->GetFieldCount() - 2].Get<uint64>());
                     ++extraCount;
-                }
-                else if (UsesHaranirAppearance((*result)[2].Get<uint8>()))
-                {
-                    haranirAppearances << guid.GetRawValue()
-                        << (*result)[result->GetFieldCount() - 2].Get<uint64>();
-                    ++haranirCount;
                 }
             }
         } while (result->NextRow());
@@ -307,6 +359,18 @@ void WorldSession::HandleCharEnum(PreparedQueryResult result, PreparedQueryResul
     {
         data.append(cosmeticWings);
         data << wingCount << uint32(0x31475743); // CWG1: GUID + active wing spell, stripped before stock parsing.
+    }
+
+    if (bodyShapeCount)
+    {
+        data.append(bodyShapeBlock);
+        data << bodyShapeCount << CharacterBodyShape::EnumMagic; // BSE1: GUID + body-slider payload, stripped by the native client.
+    }
+
+    if (retailLookCount)
+    {
+        data.append(retailLookBlock);
+        data << retailLookCount << CharacterRetailLook::EnumMagic; // RLE1: GUID + full Retail look, stripped by the native client.
     }
 
     SendPacket(&data);
@@ -331,10 +395,24 @@ void WorldSession::HandleCharEnumOpcode(WorldPacket& /*recvData*/)
         {
             auto* auraStmt = CharacterDatabase.GetPreparedStatement(CHAR_SEL_ENUM_PERMANENT_AURAS);
             auraStmt->SetData(0, GetAccountId());
-            callback.WithPreparedCallback(
-                [this, result](PreparedQueryResult permanentAuras)
+            callback.WithChainingPreparedCallback(
+                [this, result](QueryCallback& nextCallback, PreparedQueryResult permanentAuras)
                 {
-                    HandleCharEnum(result, permanentAuras);
+                    auto* bodyShapeStmt = CharacterDatabase.GetPreparedStatement(CHAR_SEL_ENUM_BODY_SHAPE);
+                    bodyShapeStmt->SetData(0, GetAccountId());
+                    nextCallback.WithChainingPreparedCallback(
+                        [this, result, permanentAuras](QueryCallback& lastCallback, PreparedQueryResult bodyShape)
+                        {
+                            auto* lookStmt = CharacterDatabase.GetPreparedStatement(CHAR_SEL_ENUM_RETAIL_LOOK);
+                            lookStmt->SetData(0, GetAccountId());
+                            lastCallback.WithPreparedCallback(
+                                [this, result, permanentAuras, bodyShape](PreparedQueryResult retailLook)
+                                {
+                                    HandleCharEnum(result, permanentAuras, bodyShape, retailLook);
+                                });
+                            lastCallback.SetNextQuery(CharacterDatabase.AsyncQuery(lookStmt));
+                        });
+                    nextCallback.SetNextQuery(CharacterDatabase.AsyncQuery(bodyShapeStmt));
                 });
             callback.SetNextQuery(CharacterDatabase.AsyncQuery(auraStmt));
         }));
@@ -354,6 +432,33 @@ void WorldSession::HandleCharCreateOpcode(WorldPacket& recvData)
         >> createInfo->HairColor
         >> createInfo->FacialHair
         >> createInfo->OutfitId;
+
+    if (createInfo->Race == RACE_SLIME_GIANT_ALLIANCE || createInfo->Race == RACE_CENTAUR_HORDE)
+    {
+        SendCharCreate(CHAR_CREATE_DISABLED);
+        return;
+    }
+
+    if (!CharacterRetailLook::ReadTail(recvData, createInfo->HasRetailLook, createInfo->RetailLook)
+        || (createInfo->HasRetailLook && (createInfo->RetailLook.race != createInfo->Race || createInfo->RetailLook.sex != createInfo->Gender)))
+    {
+        SendCharCreate(CHAR_CREATE_FAILED);
+        return;
+    }
+
+    if (!CharacterBodyShape::ReadTail(recvData, createInfo->HasBodyShape, createInfo->BodyShape))
+    {
+        SendCharCreate(CHAR_CREATE_FAILED);
+        return;
+    }
+
+    bool hasEyeLightning = false;
+    if (!CharacterEyeEffects::ReadTail(recvData, UsesHaranirAppearance(createInfo->Race) ? 12 : 0,
+        hasEyeLightning, createInfo->EyeLightning))
+    {
+        SendCharCreate(CHAR_CREATE_FAILED);
+        return;
+    }
 
     if (CreatureAppearance::Uses(createInfo->Race) && (createInfo->OutfitId != 0
         || recvData.rpos() != recvData.size() || !CreatureAppearance::Validate(createInfo->Race,
@@ -714,6 +819,26 @@ void WorldSession::HandleCharCreateOpcode(WorldPacket& recvData)
                         // Player created, save it now
                         newChar->SaveToDB(characterTransaction, true, false);
                         createInfo->CharCount++;
+
+                        if (createInfo->HasBodyShape && !CharacterBodyShape::AllDefault(createInfo->BodyShape))
+                        {
+                            std::vector<uint8> payload(CharacterBodyShape::PayloadSize);
+                            CharacterBodyShape::WritePayload(payload.data(), createInfo->BodyShape);
+                            CharacterDatabasePreparedStatement* shapeStmt = CharacterDatabase.GetPreparedStatement(CHAR_REP_BODY_SHAPE);
+                            shapeStmt->SetData(0, newChar->GetGUID().GetCounter());
+                            shapeStmt->SetData(1, payload);
+                            characterTransaction->Append(shapeStmt);
+                        }
+
+                        if (createInfo->HasRetailLook)
+                        {
+                            std::vector<uint8> payload(CharacterRetailLook::PayloadSize);
+                            CharacterRetailLook::WritePayload(payload.data(), createInfo->RetailLook);
+                            CharacterDatabasePreparedStatement* lookStmt = CharacterDatabase.GetPreparedStatement(CHAR_REP_RETAIL_LOOK);
+                            lookStmt->SetData(0, newChar->GetGUID().GetCounter());
+                            lookStmt->SetData(1, payload);
+                            characterTransaction->Append(lookStmt);
+                        }
 
                         LoginDatabasePreparedStatement* stmt = LoginDatabase.GetPreparedStatement(LOGIN_DEL_REALM_CHARACTERS_BY_REALM);
                         stmt->SetData(0, GetAccountId());
@@ -1705,8 +1830,8 @@ void WorldSession::HandleAlterAppearance(WorldPacket& recvData)
 
     if (UsesHaranirAppearance(_player->getRace()))
     {
-        uint64 extra = uint64(_player->GetUInt32Value(UNIT_FIELD_PADDING))
-            | (uint64(_player->GetUInt32Value(OBJECT_FIELD_PADDING)) << 32);
+        uint64 const extra = CharacterEyeEffects::Appearance(uint64(_player->GetUInt32Value(UNIT_FIELD_PADDING))
+            | (uint64(_player->GetUInt32Value(OBJECT_FIELD_PADDING)) << 32));
         if (Color > 255 || !HaranirAppearance::Validate(_player->getGender(), HaranirAppearance::Fields(
             bs_skinColor ? uint8(bs_skinColor->hair_id) : _player->GetByteValue(PLAYER_BYTES, 0),
             _player->GetByteValue(PLAYER_BYTES, 1), uint8(bs_hair->hair_id), uint8(Color),
@@ -1836,6 +1961,24 @@ void WorldSession::HandleCharCustomize(WorldPacket& recvData)
         >> customizeInfo->HairStyle
         >> customizeInfo->FacialHair
         >> customizeInfo->Face;
+
+    if (!CharacterRetailLook::ReadTail(recvData, customizeInfo->HasRetailLook, customizeInfo->RetailLook))
+    {
+        SendCharCustomize(CHAR_CREATE_ERROR, customizeInfo.get());
+        return;
+    }
+
+    if (!CharacterBodyShape::ReadTail(recvData, customizeInfo->HasBodyShape, customizeInfo->BodyShape))
+    {
+        SendCharCustomize(CHAR_CREATE_ERROR, customizeInfo.get());
+        return;
+    }
+
+    if (!CharacterEyeEffects::ReadTail(recvData, 0, customizeInfo->HasEyeLightning, customizeInfo->EyeLightning))
+    {
+        SendCharCustomize(CHAR_CREATE_ERROR, customizeInfo.get());
+        return;
+    }
 
     CharacterDatabasePreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_SEL_CHAR_CUSTOMIZE_INFO);
     stmt->SetData(0, customizeInfo->Guid.GetCounter());
@@ -2152,6 +2295,24 @@ void WorldSession::HandleCharFactionOrRaceChange(WorldPacket& recvData)
         >> factionChangeInfo->Face
         >> factionChangeInfo->Race;
 
+    if (!CharacterRetailLook::ReadTail(recvData, factionChangeInfo->HasRetailLook, factionChangeInfo->RetailLook))
+    {
+        SendCharFactionChange(CHAR_CREATE_ERROR, factionChangeInfo.get());
+        return;
+    }
+
+    if (!CharacterBodyShape::ReadTail(recvData, factionChangeInfo->HasBodyShape, factionChangeInfo->BodyShape))
+    {
+        SendCharFactionChange(CHAR_CREATE_ERROR, factionChangeInfo.get());
+        return;
+    }
+
+    if (!CharacterEyeEffects::ReadTail(recvData, 0, factionChangeInfo->HasEyeLightning, factionChangeInfo->EyeLightning))
+    {
+        SendCharFactionChange(CHAR_CREATE_ERROR, factionChangeInfo.get());
+        return;
+    }
+
     // pussywizard:
     if (ObjectAccessor::FindConnectedPlayer(factionChangeInfo->Guid) || sWorldSessionMgr->FindOfflineSessionForCharacterGUID(factionChangeInfo->Guid.GetCounter()))
     {
@@ -2170,6 +2331,11 @@ void WorldSession::HandleCharFactionOrRaceChange(WorldPacket& recvData)
 
 void WorldSession::HandleCharFactionOrRaceChangeCallback(std::shared_ptr<CharacterFactionChangeInfo> factionChangeInfo, PreparedQueryResult result)
 {
+    if (factionChangeInfo->Race == RACE_SLIME_GIANT_ALLIANCE || factionChangeInfo->Race == RACE_CENTAUR_HORDE)
+    {
+        SendCharFactionChange(CHAR_CREATE_DISABLED, factionChangeInfo.get());
+        return;
+    }
     if (!result)
     {
         SendCharFactionChange(CHAR_CREATE_ERROR, factionChangeInfo.get());

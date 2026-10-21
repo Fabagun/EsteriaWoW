@@ -4167,12 +4167,19 @@ Wrong race mask 33554432 in `playercreateinfo_spell_custom` table, ignoring.
 Wrong race mask 33554432 in `playercreateinfo_spell_custom` table, ignoring.
 Wrong race mask 33554432 in `playercreateinfo_spell_custom` table, ignoring.
 Script named 'npc_cw_reclaimed_sentry' is not assigned in the database.
+Script named 'npc_racial_sticky_slime' is not assigned in the database.
 Script named 'spell_dk_blade_barrier' is not assigned in the database.
 Script named 'spell_dk_death_rune' is not assigned in the database.
 Script named 'spell_dru_frenzied_regeneration' is not assigned in the database.
 Script named 'spell_pet_hit_expertise_scalling' is not assigned in the database.
 Script named 'spell_gen_submerge_visual' is not assigned in the database.
 Script named 'spell_pal_judgement_of_wisdom_mana' is not assigned in the database.
+Script named 'spell_centaur_travel_passenger' is not assigned in the database.
+Script named 'spell_slime_reconstitution' is not assigned in the database.
+Script named 'spell_slime_trail' is not assigned in the database.
+Script named 'spell_sticky_slime' is not assigned in the database.
+Script named 'spell_centaur_warcry' is not assigned in the database.
+Script named 'spell_centaur_plainsrunner_speed' is not assigned in the database.
 Script named 'spell_rocket_barrage' is not assigned in the database.
 Script named 'spell_costume_override' is not assigned in the database.
 Script named 'npc_ac_skip_lich' is assigned in the database, but has no code!

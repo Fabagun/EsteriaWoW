@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "slug": "centaur_alliance",
+  "name": "Centaur",
+  "race_ids": [
+    73
+  ],
+  "enum": "RACE_CENTAUR_ALLIANCE",
+  "faction": "alliance",
+  "source_race_id": 1,
+  "legacy_mask_race": 1,
+  "visual_base_race": 11,
+  "helmet_prefix": "Dr",
+  "client_file_strings": {
+    "73": "CentaurAlliance"
+  },
+  "glue_token": "CENTAURALLIANCE",
+  "start_profile": "elwynn",
+  "donor_totem_race": 1,
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11
+  ],
+  "source_patch_root": "G:\\RetroportWork\\centaur\\source",
+  "runtime_patch_root": "G:\\RetroportWork\\centaur\\stage\\assets",
+  "models": {
+    "male": {
+      "model_id": 120083,
+      "display_id": 60074,
+      "model_path": "retail\\centaur\\4036647.m2"
+    },
+    "female": {
+      "model_id": 120084,
+      "display_id": 60075,
+      "model_path": "retail\\centaur\\4081379.m2"
+    }
+  },
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "source": "retail-centaur2",
+    "supported_genders": [
+      0,
+      1
+    ],
+    "hide_helm": false,
+    "profiles": {
+      "0": {
+        "capacities": [
+          16,
+          1,
+          9,
+          1,
+          8
+        ],
+        "descriptors": [
+          [
+            0,
+            16,
+            1
+          ],
+          [
+            2,
+            9,
+            1
+          ],
+          [
+            4,
+            8,
+            1
+          ]
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "label": "Head Style",
+            "choices": [
+              0,
+              1001,
+              1002,
+              1003,
+              1004,
+              1005,
+              1006,
+              1007,
+              1008
+            ]
+          },
+          {
+            "label": "Facial Hair",
+            "choices": [
+              0,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107
+            ]
+          }
+        ]
+      },
+      "1": {
+        "capacities": [
+          16,
+          1,
+          14,
+          1,
+          1
+        ],
+        "descriptors": [
+          [
+            0,
+            16,
+            1
+          ],
+          [
+            2,
+            14,
+            1
+          ]
+        ],
+        "options": [
+          {
+            "label": "Skin Color",
+            "choices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ]
+          },
+          {
+            "label": "Head Style",
+            "choices": [
+              0,
+              1001,
+              1002,
+              1003,
+              1004,
+              1005,
+              1006,
+              1007,
+              1008,
+              1009,
+              1010,
+              1011,
+              1012,
+              1013
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "random_playerbot_enabled": false,
+  "custom_racial_spells": [
+    111020,
+    111021,
+    111022,
+    111024,
+    111000,
+    111001,
+    111002,
+    111003
+  ],
+  "creation_enabled": true
+}

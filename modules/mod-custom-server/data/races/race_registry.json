@@ -661,6 +661,35 @@
       "supported_genders": [
         0
       ]
+    },
+    {
+      "id": 72,
+      "species_key": "slime_giant_horde",
+      "display_name": "Slime Giant",
+      "faction": "horde",
+      "species_selection": false,
+      "start_profile": "durotar",
+      "asset_owner": "native_slime_giant",
+      "legacy_mask_race": 2,
+      "visual_base_race": 29,
+      "supported_genders": [
+        0
+      ]
+    },
+    {
+      "id": 73,
+      "species_key": "centaur_alliance",
+      "display_name": "Centaur",
+      "faction": "alliance",
+      "species_selection": false,
+      "start_profile": "elwynn",
+      "asset_owner": "native_centaur",
+      "legacy_mask_race": 1,
+      "visual_base_race": 11,
+      "supported_genders": [
+        0,
+        1
+      ]
     }
   ],
   "npc_only": [
@@ -733,6 +762,18 @@
     {
       "id": 67,
       "name": "Drakkin Horde (retired)",
+      "not_playable": true
+    },
+    {
+      "id": 71,
+      "name": "Slime Giant",
+      "legacy_id": 1,
+      "not_playable": true
+    },
+    {
+      "id": 74,
+      "name": "Centaur",
+      "legacy_id": 2,
       "not_playable": true
     }
   ],
@@ -811,6 +852,8 @@
     "snowzocraft_jinyu": "G:\\RetroPorterWork\\jinyu\\stage-20261008\\assets",
     "supplied_drakkin": "G:\\RetroPorterWork\\drakkin\\options-20261011\\assets",
     "supplied_arakkoa": "G:\\RetroPorterWork\\arakkoa\\stage-20261011\\assets",
-    "retroporter_drakonid": "G:\\RetroPorterWork\\drakonid\\deploy\\assets"
+    "retroporter_drakonid": "G:\\RetroPorterWork\\drakonid\\deploy\\assets",
+    "native_slime_giant": "G:\\RetroportWork\\slime-giant-175382\\stage\\assets",
+    "native_centaur": "G:\\RetroportWork\\centaur\\stage\\assets"
   }
 }

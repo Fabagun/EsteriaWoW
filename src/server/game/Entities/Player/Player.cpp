@@ -16,6 +16,7 @@
  */
 
 #include "Player.h"
+#include "EyeEffects.h"
 #include "AccountMgr.h"
 #include "AchievementMgr.h"
 #include "AreaDefines.h"
@@ -71,6 +72,7 @@
 #include "ReputationMgr.h"
 #include "ScriptMgr.h"
 #include "SharedDefines.h"
+#include "SlimeCentaurRacials.h"
 #include "SocialMgr.h"
 #include "Spell.h"
 #include "SpellAuraDefines.h"
@@ -575,6 +577,9 @@ bool Player::Create(ObjectGuid::LowType guidlow, CharacterCreateInfo* createInfo
         SetUInt32Value(UNIT_FIELD_PADDING, uint32(createInfo->HaranirExtra));
         SetUInt32Value(OBJECT_FIELD_PADDING, uint32(createInfo->HaranirExtra >> 32));
     }
+    if (createInfo->EyeLightning)
+        SetUInt32Value(OBJECT_FIELD_PADDING,
+            GetUInt32Value(OBJECT_FIELD_PADDING) | CharacterEyeEffects::LightningWordMask);
     SetByteValue(PLAYER_BYTES_3, 3, 0);                     // BattlefieldArenaFaction (0 or 1)
 
     SetUInt32Value(PLAYER_GUILDID, 0);
@@ -1339,6 +1344,13 @@ bool Player::BuildEnumData(PreparedQueryResult result, WorldPacket* data)
     std::vector<std::string_view> equipment = Acore::Tokenize(fields[22].Get<std::string_view>(), ' ', false);
     for (uint8 slot = 0; slot < INVENTORY_SLOT_BAG_END; ++slot)
     {
+        if (slot == EQUIPMENT_SLOT_LEGS && (plrRace == RACE_CENTAUR_ALLIANCE || plrRace == RACE_CENTAUR_HORDE)
+            && (playerFlags & PLAYER_FLAGS_CENTAUR_HIDE_LEGS))
+        {
+            *data << uint32(0) << uint8(0) << uint32(0);
+            continue;
+        }
+
         uint32 const visualBase = slot * 2;
         Optional<uint32> itemId;
 
@@ -1461,6 +1473,7 @@ void Player::SendTeleportAckPacket()
 
 bool Player::TeleportTo(uint32 mapid, float x, float y, float z, float orientation, uint32 options /*= 0*/, Unit* target /*= nullptr*/, bool newInstance /*= false*/)
 {
+    ResetSlimeBounce();
     if (!MapMgr::IsValidMapCoord(mapid, x, y, z, orientation))
     {
         LOG_ERROR("entities.player", "TeleportTo: invalid map ({}) or invalid coordinates (X: {}, Y: {}, Z: {}, O: {}) given when teleporting player ({}, name: {}, map: {}, X: {}, Y: {}, Z: {}, O: {}).",
@@ -4451,6 +4464,14 @@ void Player::DeleteFromDB(ObjectGuid::LowType lowGuid, uint32 accountId, bool up
                 trans->Append(stmt);
 
                 stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_CHAR_SETTINGS);
+                stmt->SetData(0, lowGuid);
+                trans->Append(stmt);
+
+                stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_BODY_SHAPE);
+                stmt->SetData(0, lowGuid);
+                trans->Append(stmt);
+
+                stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_RETAIL_LOOK);
                 stmt->SetData(0, lowGuid);
                 trans->Append(stmt);
 
@@ -11939,8 +11960,65 @@ void Player::SendInitialPacketsBeforeAddToMap()
     sScriptMgr->OnPlayerSendInitialPacketsBeforeAddToMap(this, data);
 }
 
+void Player::LoadBodyShape(PreparedQueryResult result)
+{
+    _bodyShape = {};
+    if (!result)
+        return;
+
+    auto const payload = (*result)[0].Get<Binary, CharacterBodyShape::PayloadSize>();
+    CharacterBodyShape::Values values{};
+    if (CharacterBodyShape::ReadPayload(payload.data(), payload.size(), values))
+        _bodyShape = values;
+}
+
+void Player::SendBodyShapeTo(Player* receiver) const
+{
+    if (!receiver || !receiver->GetSession())
+        return;
+
+    // Always sent, defaults included, so a client that cached an older value for this guid replaces it.
+    uint8 payload[CharacterBodyShape::PayloadSize];
+    CharacterBodyShape::WritePayload(payload, _bodyShape);
+
+    WorldPacket data(SMSG_ESTERIA_BODY_SHAPE, 8 + CharacterBodyShape::PayloadSize);
+    data << GetGUID().GetRawValue();
+    data.append(payload, sizeof(payload));
+    receiver->GetSession()->SendPacket(&data);
+}
+
+void Player::LoadRetailLook(PreparedQueryResult result)
+{
+    _hasRetailLook = false;
+    _retailLook = {};
+    if (!result)
+        return;
+
+    auto const payload = (*result)[0].Get<Binary, CharacterRetailLook::PayloadSize>();
+    CharacterRetailLook::Look look;
+    if (CharacterRetailLook::ReadPayload(payload.data(), payload.size(), look))
+    {
+        _retailLook = payload;
+        _hasRetailLook = true;
+    }
+}
+
+void Player::SendRetailLookTo(Player* receiver) const
+{
+    // Players without a saved look have nothing to send: the client falls back to the five stock bytes.
+    if (!_hasRetailLook || !receiver || !receiver->GetSession())
+        return;
+
+    WorldPacket data(SMSG_ESTERIA_RETAIL_LOOK, 8 + CharacterRetailLook::PayloadSize);
+    data << GetGUID().GetRawValue();
+    data.append(_retailLook.data(), _retailLook.size());
+    receiver->GetSession()->SendPacket(&data);
+}
+
 void Player::SendInitialPacketsAfterAddToMap()
 {
+    SendBodyShapeTo(this);
+    SendRetailLookTo(this);
     UpdateVisibilityForPlayer(true);
 
     GetSession()->ResetTimeSync();
@@ -14319,6 +14397,9 @@ static constexpr uint32  SPELL_DIVINE_PROTECTION    = 498;
 
 void Player::HandleFall(MovementInfo const& movementInfo)
 {
+    bool const bounceLanding = m_slimeBounceLanding;
+    m_slimeBounceLanding = false;
+
     // calculate total z distance of the fall
     float z_diff = m_lastFallZ - movementInfo.pos.GetPositionZ();
 
@@ -14349,7 +14430,20 @@ void Player::HandleFall(MovementInfo const& movementInfo)
                 if (HasAura(SPELL_DIVINE_PROTECTION))
                     damage /= 2;
 
+                bool const bouncy = getRace(true) == RACE_SLIME_GIANT_HORDE
+                    && HasAura(SlimeCentaurRacials::Bouncy);
+                if (bouncy)
+                    damage /= 2;
+
                 final_damage = EnvironmentalDamage(DAMAGE_FALL, damage);
+
+                if (bouncy && !bounceLanding && IsAlive())
+                {
+                    // Ballistic launch reaches one quarter of the drop, capped at twelve yards.
+                    m_slimeBounceLanding = true;
+                    KnockbackFrom(movementInfo.pos.GetPositionX(), movementInfo.pos.GetPositionY(), 0.0f,
+                        std::sqrt(2.0f * 19.291105f * SlimeCentaurRacials::BounceHeight(z_diff)));
+                }
             }
 
             //Z given by moveinfo, LastZ, FallTime, WaterZ, MapZ, Damage, Safefall reduction
@@ -15509,13 +15603,14 @@ void Player::_SaveCharacter(bool create, CharacterDatabaseTransaction trans)
     }
 
     trans->Append(stmt);
-    if (UsesExtendedAppearance(getRace()) || UsesHaranirAppearance(getRace()))
+    bool const eyeLightning = (GetUInt32Value(OBJECT_FIELD_PADDING) & CharacterEyeEffects::LightningWordMask) != 0;
+    if (UsesExtendedAppearance(getRace()) || UsesHaranirAppearance(getRace()) || eyeLightning)
     {
         stmt = CharacterDatabase.GetPreparedStatement(CHAR_UPD_EXTENDED_APPEARANCE);
-        uint64 extra = GetByteValue(UNIT_FIELD_PADDING, 0);
+        uint64 extra = UsesExtendedAppearance(getRace()) ? GetByteValue(UNIT_FIELD_PADDING, 0) : 0;
         if (UsesHaranirAppearance(getRace()))
             extra = uint64(GetUInt32Value(UNIT_FIELD_PADDING)) | (uint64(GetUInt32Value(OBJECT_FIELD_PADDING)) << 32);
-        stmt->SetData(0, extra);
+        stmt->SetData(0, CharacterEyeEffects::WithLightning(extra, eyeLightning));
         stmt->SetData(1, GetGUID().GetCounter());
         trans->Append(stmt);
     }

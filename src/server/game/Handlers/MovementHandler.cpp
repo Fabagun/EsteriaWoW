@@ -638,6 +638,9 @@ bool WorldSession::ProcessMovementInfo(MovementInfo& movementInfo, Unit* mover, 
     }
 
     // interrupt parachutes upon falling or landing in water
+    if (opcode == MSG_MOVE_START_SWIM && plrMover)
+        plrMover->ResetSlimeBounce();
+
     if (opcode == MSG_MOVE_FALL_LAND || opcode == MSG_MOVE_START_SWIM)
     {
         mover->RemoveAurasWithInterruptFlags(AURA_INTERRUPT_FLAG_LANDING); // Parachutes

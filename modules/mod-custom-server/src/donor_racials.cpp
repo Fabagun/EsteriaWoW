@@ -1,5 +1,5 @@
 /*
- * Keeps the donor race's racials off Drakkin and Drakonid.
+ * Keeps the donor race's racials off Drakkin, Drakonid and Slime Giants.
  *
  * These races borrow Human (Alliance) or Orc (Horde) as their legacy race mask, so every
  * Human/Orc starting spell and racial skill line is offered to them. The exclusion tables
@@ -55,10 +55,14 @@ public:
         {
             case RACE_DRAKKIN_ALLIANCE:
             case RACE_DRAKONID_ALLIANCE:
+            case RACE_SLIME_GIANT_ALLIANCE:
+            case RACE_CENTAUR_ALLIANCE:
                 StripRacials(player, SkillHumanRacial, HumanRacialSpells);
                 break;
             case RACE_DRAKKIN_HORDE:
             case RACE_DRAKONID_HORDE:
+            case RACE_SLIME_GIANT_HORDE:
+            case RACE_CENTAUR_HORDE:
                 StripRacials(player, SkillOrcRacial, OrcRacialSpells);
                 break;
             default:

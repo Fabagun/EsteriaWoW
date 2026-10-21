@@ -381,6 +381,12 @@ def header():
     for faction, race in (('alliance', 69), ('horde', 70)):
         if p.manifest_path('drakonid_' + faction).exists():
             header_specs['drakonid_' + faction] = {'targets': [race], 'genders': [0]}
+    for faction, race in (('alliance', 71), ('horde', 72)):
+        if p.manifest_path('slime_giant_' + faction).exists():
+            header_specs['slime_giant_' + faction] = {'targets': [race], 'genders': [0]}
+    for faction, race in (('alliance', 73), ('horde', 74)):
+        if p.manifest_path('centaur_' + faction).exists():
+            header_specs['centaur_' + faction] = {'targets': [race], 'genders': [0, 1]}
     if p.manifest_path('darkfallen').exists():
         header_specs['darkfallen'] = {'targets': [43, 44], 'genders': [0, 1]}
     if p.load_manifest('vrykul')['appearance'].get('female_source') == 'snowzocraft-player':
@@ -390,7 +396,8 @@ def header():
     for slug, spec in header_specs.items():
         selected_profiles = p.load_manifest(slug)['appearance']['profiles'] if slug in (
             'sethrak', 'gnoll', 'saberon', 'drakkin_alliance', 'drakkin_horde', 'drakonid_alliance',
-            'drakonid_horde', 'darkfallen') \
+            'drakonid_horde', 'slime_giant_alliance', 'slime_giant_horde',
+            'centaur_alliance', 'centaur_horde', 'darkfallen') \
             else profiles(slug)
         for gender, profile in selected_profiles.items():
             name = slug.title() + ('Male' if gender == '0' else 'Female')
@@ -412,7 +419,8 @@ def header():
                       *['        ' + json.dumps(o['label']) + ',' for o in profile['options']], '    };', ''])
     uses = 'race >= 54 && race <= 59'
     for slug in ('sethrak', 'gnoll', 'saberon', 'drakkin_alliance', 'drakkin_horde', 'drakonid_alliance',
-                 'drakonid_horde', 'darkfallen'):
+                 'drakonid_horde', 'slime_giant_alliance', 'slime_giant_horde',
+                 'centaur_alliance', 'centaur_horde', 'darkfallen'):
         if slug in header_specs:
             for target in header_specs[slug]['targets']:
                 uses = '(' + uses + ') || race == ' + str(target)

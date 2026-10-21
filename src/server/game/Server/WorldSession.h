@@ -25,6 +25,8 @@
 #include "AccountMgr.h"
 #include "AddonMgr.h"
 #include "AuthDefines.h"
+#include "BodyShapeWire.h"
+#include "RetailLookWire.h"
 #include "CircularBuffer.h"
 #include "Common.h"
 #include "DatabaseEnv.h"
@@ -380,6 +382,11 @@ protected:
     uint8 FacialHair = 0;
     uint8 OutfitId = 0;
     uint64 HaranirExtra = 0;
+    bool EyeLightning = false;
+    bool HasBodyShape = false;
+    CharacterBodyShape::Values BodyShape{};
+    bool HasRetailLook = false;
+    CharacterRetailLook::Look RetailLook;
 
     /// Server side data
     uint8 CharCount = 0;
@@ -406,6 +413,12 @@ protected:
     uint8 HairStyle = 0;
     uint8 HairColor = 0;
     uint8 FacialHair = 0;
+    bool HasEyeLightning = false;
+    bool EyeLightning = false;
+    bool HasBodyShape = false;
+    CharacterBodyShape::Values BodyShape{};
+    bool HasRetailLook = false;
+    CharacterRetailLook::Look RetailLook;
 };
 
 struct CharacterFactionChangeInfo : public CharacterCustomizeInfo
@@ -694,7 +707,7 @@ public:                                                 // opcodes handlers
     void HandleCharDeleteOpcode(WorldPacket& recvPacket);
     void HandleCharCreateOpcode(WorldPacket& recvPacket);
     void HandlePlayerLoginOpcode(WorldPacket& recvPacket);
-    void HandleCharEnum(PreparedQueryResult result, PreparedQueryResult permanentAuras);
+    void HandleCharEnum(PreparedQueryResult result, PreparedQueryResult permanentAuras, PreparedQueryResult bodyShape, PreparedQueryResult retailLook);
     void HandlePlayerLoginFromDB(LoginQueryHolder const& holder);
     void HandlePlayerLoginToCharInWorld(Player* pCurrChar);
     void HandlePlayerLoginToCharOutOfWorld(Player* pCurrChar);

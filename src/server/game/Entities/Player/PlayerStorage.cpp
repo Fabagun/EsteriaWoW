@@ -37,6 +37,7 @@
 #include "HighmountainAppearance.h"
 #include "EarthenAppearance.h"
 #include "HaranirAppearance.h"
+#include "EyeEffects.h"
 #include "Guild.h"
 #include "InstanceSaveMgr.h"
 #include "LFGMgr.h"
@@ -5156,7 +5157,8 @@ bool Player::LoadFromDB(ObjectGuid playerGuid, CharacterDatabaseQueryHolder cons
     {
         auto const appearance = VulperaAppearance::Fields(fields[9].Get<uint8>(), fields[10].Get<uint8>(),
             fields[11].Get<uint8>(), fields[12].Get<uint8>(), fields[13].Get<uint8>());
-        if (fields[76].Get<uint64>() != 0 || !VulperaAppearance::Validate(fields[5].Get<uint8>(), appearance))
+        if (CharacterEyeEffects::Appearance(fields[76].Get<uint64>()) != 0
+            || !VulperaAppearance::Validate(fields[5].Get<uint8>(), appearance))
         {
             LOG_ERROR("entities.player", "Player {} has invalid Vulpera appearance; can't load.",
                 playerGuid.ToString());
@@ -5169,7 +5171,7 @@ bool Player::LoadFromDB(ObjectGuid playerGuid, CharacterDatabaseQueryHolder cons
     }
     if (UsesExtendedAppearance(getRace()))
     {
-        uint64 extra = fields[76].Get<uint64>();
+        uint64 const extra = CharacterEyeEffects::Appearance(fields[76].Get<uint64>());
         std::array<uint8, 6> const appearance = {fields[9].Get<uint8>(),
             fields[10].Get<uint8>(), fields[11].Get<uint8>(), fields[12].Get<uint8>(),
             fields[13].Get<uint8>(), uint8(extra)};
@@ -5185,7 +5187,7 @@ bool Player::LoadFromDB(ObjectGuid playerGuid, CharacterDatabaseQueryHolder cons
     }
     if (UsesHaranirAppearance(getRace()))
     {
-        uint64 extra = fields[76].Get<uint64>();
+        uint64 const extra = CharacterEyeEffects::Appearance(fields[76].Get<uint64>());
         if (!HaranirAppearance::Validate(fields[5].Get<uint8>(), HaranirAppearance::Fields(
             fields[9].Get<uint8>(), fields[10].Get<uint8>(), fields[11].Get<uint8>(),
             fields[12].Get<uint8>(), fields[13].Get<uint8>(), extra)))
@@ -5197,6 +5199,9 @@ bool Player::LoadFromDB(ObjectGuid playerGuid, CharacterDatabaseQueryHolder cons
         SetUInt32Value(UNIT_FIELD_PADDING, uint32(extra));
         SetUInt32Value(OBJECT_FIELD_PADDING, uint32(extra >> 32));
     }
+    if (CharacterEyeEffects::Lightning(fields[76].Get<uint64>()))
+        SetUInt32Value(OBJECT_FIELD_PADDING,
+            GetUInt32Value(OBJECT_FIELD_PADDING) | CharacterEyeEffects::LightningWordMask);
     ReplaceAllPlayerFlags((PlayerFlags)fields[16].Get<uint32>());
 
     RemovePlayerFlag(PLAYER_FLAGS_NO_PLAY_TIME);
@@ -5777,6 +5782,9 @@ bool Player::LoadFromDB(ObjectGuid playerGuid, CharacterDatabaseQueryHolder cons
     _LoadBrewOfTheMonth(holder.GetPreparedResult(PLAYER_LOGIN_QUERY_LOAD_BREW_OF_THE_MONTH));
 
     _LoadCharacterSettings(holder.GetPreparedResult(PLAYER_LOGIN_QUERY_LOAD_CHARACTER_SETTINGS));
+
+    LoadBodyShape(holder.GetPreparedResult(PLAYER_LOGIN_QUERY_LOAD_BODY_SHAPE));
+    LoadRetailLook(holder.GetPreparedResult(PLAYER_LOGIN_QUERY_LOAD_RETAIL_LOOK));
 
     // Players are immune to taunt
     ApplySpellImmune(0, IMMUNITY_STATE, SPELL_AURA_MOD_TAUNT, true);

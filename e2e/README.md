@@ -4,6 +4,13 @@ Protocol-level regression tests for this repository. They import
 [`github.com/azerothcore/AzerothGhost/e2e/e2eharness`](https://github.com/azerothcore/AzerothGhost)
 and run against a **live** authserver + worldserver + MySQL.
 
+Centaur coverage: `TestSession_CentaurCreationAndTravel` (protocol/session, P1) creates both sexes of races
+73/74 through `CMSG_CHAR_CREATE`, asserts ordinary mounts are rejected, Gallop has no mount display,
+bird forms restore the authored gender on repeated cancellation, and race/gender survive relog.
+It also checks the leg-armor flag with ordinary-player permissions, a nearby observer and relog,
+while the actual pants remain equipped. Requires the matched Centaur package.
+Armor fit, posed garment clearance, and rendered animation quality remain manual/native-client gates.
+
 Offline `go test ./...` (without `-tags=e2e`) skips these packages.
 
 Authoring rules for new tests live in the harness:

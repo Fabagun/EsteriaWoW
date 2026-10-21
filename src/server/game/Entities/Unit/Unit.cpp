@@ -57,6 +57,8 @@
 #include "ReputationMgr.h"
 #include "ScriptMgr.h"
 #include "SharedDefines.h"
+#include "SlimeCentaurRacials.h"
+#include "SlimeCentaurRacialData.h"
 #include "Spell.h"
 #include "SpellAuraDefines.h"
 #include "SpellAuraEffects.h"
@@ -11237,6 +11239,10 @@ void Unit::UpdateSpeed(UnitMoveType mtype, bool forced)
     if (main_speed_mod)
         AddPct(speed, main_speed_mod);
 
+    if (IsPlayer())
+        if (AuraEffect const* plainsrunner = GetAuraEffect(SlimeCentaurRacials::PlainsrunnerSpeed, EFFECT_0))
+            AddPct(speed, plainsrunner->GetAmount());
+
     switch (mtype)
     {
         case MOVE_RUN:
@@ -11647,6 +11653,14 @@ int32 Unit::ModSpellDuration(SpellInfo const* spellProto, Unit const* target, in
     // xinef: also calculate self casts, spell can be reflected for example
     if (!positive)
     {
+        if (Player const* player = target->ToPlayer())
+            if (player->getRace(true) == RACE_CENTAUR_ALLIANCE
+                && player->HasAura(SlimeCentaurRacials::HighHorsepower)
+                && spellProto->HasAura(SPELL_AURA_MOD_STUN)
+                && (SlimeCentaurRacials::IsKnockdownVisual(spellProto->SpellVisual[0])
+                    || SlimeCentaurRacials::IsKnockdownVisual(spellProto->SpellVisual[1])))
+                duration = CalculatePct(duration, 90);
+
         uint64 mechanic = spellProto->GetSpellMechanicMaskByEffectMask(effectMask);
 
         int32 durationMod;
@@ -15419,6 +15433,10 @@ void Unit::UpdateObjectVisibility(bool forced, bool /*fromUpdate*/)
 void Unit::KnockbackFrom(float x, float y, float speedXY, float speedZ)
 {
     Player* player = ToPlayer();
+    if (player && player->getRace(true) == RACE_CENTAUR_ALLIANCE
+        && player->HasAura(SlimeCentaurRacials::HighHorsepower))
+        speedXY *= 0.8f;
+
     if (!player)
     {
         if (Unit* charmer = GetCharmer())
@@ -15557,6 +15575,24 @@ void Unit::JumpTo(WorldObject* obj, float speedZ)
 
 bool Unit::HandleSpellClick(Unit* clicker, int8 seatId)
 {
+    if (Player* centaur = ToPlayer())
+        if (centaur->getRace(true) == RACE_CENTAUR_ALLIANCE
+            && (centaur->HasAura(SlimeCentaurRacials::TravelPassenger)
+                || centaur->HasAura(SlimeCentaurRacials::FlightPassenger)) && GetVehicleKit())
+        {
+            Player* passenger = clicker->ToPlayer();
+            if (!passenger || passenger == centaur || !passenger->IsAlive() || !centaur->IsAlive()
+                || passenger->IsInCombat() || centaur->IsInCombat() || passenger->GetVehicle()
+                || passenger->GetVehicleKit() || passenger->IsMounted()
+                || !centaur->IsInSameRaidWith(passenger) || !centaur->IsFriendlyTo(passenger)
+                || !centaur->IsWithinDistInMap(passenger, 5.0f) || !centaur->IsWithinLOSInMap(passenger)
+                || (centaur->GetMap() && centaur->GetMap()->IsBattleArena()))
+                return false;
+
+            passenger->EnterVehicle(centaur, 0);
+            return passenger->GetVehicleBase() == centaur;
+        }
+
     Creature* creature = ToCreature();
     if (creature && creature->IsAIEnabled)
     {

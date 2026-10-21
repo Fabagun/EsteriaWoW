@@ -150,6 +150,54 @@ namespace CreatureAppearance
         {4, 1, 1},
     }};
 
+    inline constexpr std::array<Option, 5> Slime_Giant_AllianceMale = {{
+        {0, 35, 1},
+        {1, 2, 1},
+        {2, 1, 1},
+        {3, 1, 1},
+        {4, 1, 1},
+    }};
+
+    inline constexpr std::array<Option, 5> Slime_Giant_HordeMale = {{
+        {0, 35, 1},
+        {1, 2, 1},
+        {2, 1, 1},
+        {3, 1, 1},
+        {4, 1, 1},
+    }};
+
+    inline constexpr std::array<Option, 5> Centaur_AllianceMale = {{
+        {0, 16, 1},
+        {1, 1, 1},
+        {2, 9, 1},
+        {3, 1, 1},
+        {4, 8, 1},
+    }};
+
+    inline constexpr std::array<Option, 5> Centaur_AllianceFemale = {{
+        {0, 16, 1},
+        {1, 1, 1},
+        {2, 14, 1},
+        {3, 1, 1},
+        {4, 1, 1},
+    }};
+
+    inline constexpr std::array<Option, 5> Centaur_HordeMale = {{
+        {0, 16, 1},
+        {1, 1, 1},
+        {2, 9, 1},
+        {3, 1, 1},
+        {4, 8, 1},
+    }};
+
+    inline constexpr std::array<Option, 5> Centaur_HordeFemale = {{
+        {0, 16, 1},
+        {1, 1, 1},
+        {2, 14, 1},
+        {3, 1, 1},
+        {4, 1, 1},
+    }};
+
     inline constexpr std::array<Option, 5> DarkfallenMale = {{
         {0, 5, 1},
         {1, 1, 1},
@@ -220,13 +268,13 @@ namespace CreatureAppearance
 
     constexpr bool Uses(unsigned race)
     {
-        return (((((((((race >= 54 && race <= 59) || race == 62) || race == 63) || race == 64) || race == 66) || race == 67) || race == 69) || race == 70) || race == 43) || race == 44;
+        return (((((((((((((race >= 54 && race <= 59) || race == 62) || race == 63) || race == 64) || race == 66) || race == 67) || race == 69) || race == 70) || race == 71) || race == 72) || race == 73) || race == 74) || race == 43) || race == 44;
     }
 
     constexpr bool GenderAllowed(unsigned race, unsigned gender)
     {
         return Uses(race) && (gender == 0
-            || ((race == 54 || race == 55 || race == 56 || race == 57 || race == 62 || race == 66 || race == 67 || race == 43 || race == 44) && gender == 1));
+            || ((race == 54 || race == 55 || race == 56 || race == 57 || race == 62 || race == 66 || race == 67 || race == 73 || race == 74 || race == 43 || race == 44) && gender == 1));
     }
 
     constexpr bool UsesPlayerVrykul(unsigned race, unsigned gender)
@@ -267,6 +315,14 @@ namespace CreatureAppearance
                 return Drakonid_AllianceMale;
             case 70:
                 return Drakonid_HordeMale;
+            case 71:
+                return Slime_Giant_AllianceMale;
+            case 72:
+                return Slime_Giant_HordeMale;
+            case 73:
+                return gender ? Centaur_AllianceFemale : Centaur_AllianceMale;
+            case 74:
+                return gender ? Centaur_HordeFemale : Centaur_HordeMale;
             case 43:
             case 44:
                 return gender ? DarkfallenFemale : DarkfallenMale;

@@ -87,6 +87,27 @@ void CharacterDatabaseConnection::DoPrepareStatements()
 
     PrepareStatement(CHAR_UPD_EXTENDED_APPEARANCE,
         "UPDATE characters SET extraAppearance = ? WHERE guid = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_SEL_ENUM_BODY_SHAPE,
+        "SELECT b.guid, b.data FROM character_body_shape AS b JOIN characters AS c ON c.guid = b.guid "
+        "WHERE c.account = ? AND c.deleteInfos_Name IS NULL", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_SEL_ENUM_RETAIL_LOOK,
+        "SELECT l.guid, l.data FROM character_retail_look AS l JOIN characters AS c ON c.guid = l.guid "
+        "WHERE c.account = ? AND c.deleteInfos_Name IS NULL", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_SEL_RETAIL_LOOK,
+        "SELECT data FROM character_retail_look WHERE guid = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_REP_RETAIL_LOOK,
+        "REPLACE INTO character_retail_look (guid, data) VALUES (?, ?)", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_DEL_RETAIL_LOOK,
+        "DELETE FROM character_retail_look WHERE guid = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_SEL_BODY_SHAPE,
+        "SELECT data FROM character_body_shape WHERE guid = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_REP_BODY_SHAPE,
+        "REPLACE INTO character_body_shape (guid, data) VALUES (?, ?)", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_DEL_BODY_SHAPE,
+        "DELETE FROM character_body_shape WHERE guid = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_UPD_EYE_LIGHTNING,
+        "UPDATE characters SET extraAppearance = (extraAppearance & 9223372036854775807) | ? WHERE guid = ?",
+        CONNECTION_ASYNC);
 
     PrepareStatement(CHAR_SEL_CHARACTER_AURAS, "SELECT casterGuid, itemGuid, spell, effectMask, recalculateMask, stackCount, amount0, amount1, amount2, "
                      "base_amount0, base_amount1, base_amount2, maxDuration, remainTime, remainCharges FROM character_aura WHERE guid = ?", CONNECTION_ASYNC);

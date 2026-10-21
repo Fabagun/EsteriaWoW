@@ -16,6 +16,9 @@
  */
 
 #include "AccountMgr.h"
+#include "BodyShapeWire.h"
+#include "RetailLookWire.h"
+#include "EyeEffects.h"
 #include "GameTime.h"
 #include "InstancePackets.h"
 #include "MapMgr.h"
@@ -125,6 +128,42 @@ void Player::Customize(CharacterCustomizeInfo const* customizeInfo, CharacterDat
     stmt->SetData(6, customizeInfo->Guid.GetCounter());
 
     CharacterDatabase.ExecuteOrAppend(trans, stmt);
+
+    if (customizeInfo->HasEyeLightning)
+    {
+        stmt = CharacterDatabase.GetPreparedStatement(CHAR_UPD_EYE_LIGHTNING);
+        stmt->SetData(0, customizeInfo->EyeLightning ? CharacterEyeEffects::LightningMask : uint64{0});
+        stmt->SetData(1, customizeInfo->Guid.GetCounter());
+        CharacterDatabase.ExecuteOrAppend(trans, stmt);
+    }
+
+    if (customizeInfo->HasRetailLook)
+    {
+        std::vector<uint8> payload(CharacterRetailLook::PayloadSize);
+        CharacterRetailLook::WritePayload(payload.data(), customizeInfo->RetailLook);
+        stmt = CharacterDatabase.GetPreparedStatement(CHAR_REP_RETAIL_LOOK);
+        stmt->SetData(0, customizeInfo->Guid.GetCounter());
+        stmt->SetData(1, payload);
+        CharacterDatabase.ExecuteOrAppend(trans, stmt);
+    }
+
+    if (customizeInfo->HasBodyShape)
+    {
+        if (CharacterBodyShape::AllDefault(customizeInfo->BodyShape))
+        {
+            stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_BODY_SHAPE);
+            stmt->SetData(0, customizeInfo->Guid.GetCounter());
+        }
+        else
+        {
+            std::vector<uint8> payload(CharacterBodyShape::PayloadSize);
+            CharacterBodyShape::WritePayload(payload.data(), customizeInfo->BodyShape);
+            stmt = CharacterDatabase.GetPreparedStatement(CHAR_REP_BODY_SHAPE);
+            stmt->SetData(0, customizeInfo->Guid.GetCounter());
+            stmt->SetData(1, payload);
+        }
+        CharacterDatabase.ExecuteOrAppend(trans, stmt);
+    }
 }
 
 void Player::SendAttackSwingDeadTarget()

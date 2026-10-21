@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "slug": "slime_giant_horde",
+  "name": "Slime Giant",
+  "race_ids": [
+    72
+  ],
+  "enum": "RACE_SLIME_GIANT_HORDE",
+  "faction": "horde",
+  "source_race_id": 2,
+  "legacy_mask_race": 2,
+  "visual_base_race": 29,
+  "helmet_prefix": "Kt",
+  "client_file_strings": {
+    "72": "SlimeGiantHorde"
+  },
+  "glue_token": "SLIMEGIANTHORDE",
+  "start_profile": "durotar",
+  "donor_totem_race": 2,
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11
+  ],
+  "models": {
+    "male": {
+      "model_id": 120082,
+      "display_id": 60073,
+      "model_path": "retail\\slimegiant\\3490792.m2"
+    }
+  },
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "source": "retail-creature-175382",
+    "supported_genders": [
+      0
+    ],
+    "hide_helm": false,
+    "profiles": {
+      "0": {
+        "capacities": [
+          35,
+          2,
+          1,
+          1,
+          1
+        ],
+        "descriptors": [
+          [
+            0,
+            35,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        "options": [
+          {
+            "label": "Slime Color",
+            "choices": [
+              "Green",
+              "Amber",
+              "Mauve",
+              "Red",
+              "Gold",
+              "Crimson",
+              "Scarlet",
+              "Ember Orange",
+              "Peach",
+              "Amber (Custom)",
+              "Lemon",
+              "Chartreuse",
+              "Lime",
+              "Toxic Green",
+              "Emerald",
+              "Jade",
+              "Mint",
+              "Teal",
+              "Turquoise",
+              "Ice Blue",
+              "Sky Blue",
+              "Azure",
+              "Cobalt",
+              "Indigo",
+              "Violet",
+              "Lilac",
+              "Magenta",
+              "Hot Pink",
+              "Rose",
+              "Wine",
+              "Bronze",
+              "Copper",
+              "Pearl",
+              "Silver",
+              "Charcoal"
+            ]
+          },
+          {
+            "label": "Slime Drip",
+            "choices": [
+              "Off",
+              "On"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "random_playerbot_enabled": false,
+  "custom_racial_spells": [
+    111010,
+    111011,
+    111012,
+    111013
+  ],
+  "creation_enabled": true
+}
