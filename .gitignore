@@ -134,3 +134,9 @@ compile_commands.json
 /3.3.5a - Backups/
 assets/Arakkoa-race/server/dbc/Spell.dbc
 InterfaceExtract.zip
+env/dist/data-backups/battlemon-3d-pre-20261023/acore_characters.sql
+env/dist/data-backups/battlemon-3d-pre-20261023/acore_world.sql
+env/dist/logs/Playerbots.log
+env/dist/logs/Server.log
+env/dist/logs/Playerbots.log
+env/dist/logs/Server.log
