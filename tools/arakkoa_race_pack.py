@@ -24,7 +24,7 @@ import race_portrait_pack as portraits
 import sethrak_race_pack as s
 
 TARGET = Path('R:/Users/Zach/Documents/GitHub/EsteriaWoW')
-PACKAGE = TARGET / 'Arakkoa-race'
+PACKAGE = TARGET / 'assets' / 'Arakkoa-race'
 PACKAGE_MPQ = PACKAGE / 'client/patch-ZR.MPQ'
 PACKAGE_DBC = PACKAGE / 'server/dbc'
 REFORGED_MPQ = Path('G:/Downloads/HDWoWModels/Project Reforged/Data/patch-V.MPQ')

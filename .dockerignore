@@ -16,7 +16,7 @@
 
 # Local client/generated assets are not needed to compile the server image.
 /3.3.5a/
-/CustomModules/
+/assets/CustomModules/
 /modules/mod-worgoblin-high-elf/modpaks/
 /modules/mod-worgoblin-high-elf/data/patch-A.MPQ/
 /modules/mod-worgoblin-high-elf/data/DBC/

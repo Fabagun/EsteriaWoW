@@ -18,7 +18,7 @@ import slime_giant_deploy as server
 
 p = pack.p
 ROOT = pack.WORK / 'color-expansion-30'
-ART = p.ROOT / 'SlimeSkeleton/ColorVariants'
+ART = p.ROOT / 'assets/SlimeSkeleton/ColorVariants'
 TABLES = ('CharSections', 'BarberShopStyle')
 
 
@@ -41,7 +41,7 @@ def recolor_flow(image, color):
     source = np.asarray(image)
     unique, inverse = np.unique(source[:, :, :3].reshape(-1, 3), axis=0, return_inverse=True)
     hls = np.array([colorsys.rgb_to_hls(*(pixel / 255)) for pixel in unique])
-    overlay = np.asarray(Image.open(p.ROOT / 'SlimeSkeleton/SlimeOverlay.png').convert('RGBA'))
+    overlay = np.asarray(Image.open(p.ROOT / 'assets/SlimeSkeleton/SlimeOverlay.png').convert('RGBA'))
     base_hue, base_light, base_saturation = colorsys.rgb_to_hls(*(overlay[400, 100, :3] / 255))
     hue, light, saturation = colorsys.rgb_to_hls(*(int(color[at:at + 2], 16) / 255 for at in (1, 3, 5)))
     hls[:, 0] = (hls[:, 0] + hue - base_hue) % 1

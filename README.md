@@ -11,7 +11,7 @@ native extensions (64-slot race table, Retail-style appearance, digital inventor
 this server's packets and data assume.
 
 Most of this is opt-in per module or needs the matching client. Status words follow
-[Modules.md](Modules.md): **enabled**, **installed**, **staged** (data present, not
+[Modules.md](docs/status/Modules.md): **enabled**, **installed**, **staged** (data present, not
 validated in game) and **manual** (not a normal CMake module). A feature listed here is
 not proof that it passed a live test; each section says what is known.
 
@@ -53,13 +53,13 @@ Server-side support for this lives in:
 The developer handoff in [RaceGuide/](RaceGuide/) covers the pipeline, per-race recipes,
 runtime DLLs, server changes and the validation checklist. Start at
 [RaceGuide/README.md](RaceGuide/README.md). Race racial design is in
-[RACIALS.md](RACIALS.md).
+[RACIALS.md](docs/design/RACIALS.md).
 
 ### Freeborn: a third faction
 
 `TEAM_FREEBORN` is a persistent third `TeamId`, not an alignment layer on top of
 Alliance and Horde. It is specified in
-[Freeborn_Third_TeamId_Implementation_Specification.md](Freeborn_Third_TeamId_Implementation_Specification.md),
+[Freeborn_Third_TeamId_Implementation_Specification.md](docs/design/Freeborn_Third_TeamId_Implementation_Specification.md),
 with core hooks, a classless wildcard path and unit tests in
 `src/test/server/game/Combat/FreebornTeamTest.cpp`.
 
@@ -68,7 +68,7 @@ with core hooks, a classless wildcard path and unit tests in
 | Feature | What it does |
 | --- | --- |
 | Esteria Character Select (ECS) | Virtualised roster with race portraits, search, drag reorder, notes and a detail tooltip. See [docs/CHARACTER_SELECT.md](docs/CHARACTER_SELECT.md) |
-| Retail-style Glue | Login screen, race creator, 64-race buttons and portraits from [UI.md](UI.md) and [tools/](tools/) |
+| Retail-style Glue | Login screen, race creator, 64-race buttons and portraits from [UI.md](docs/design/UI.md) and [tools/](tools/) |
 | Digital inventory | Carried inventory window with server-side search and pagination, negotiated by an `ESTERIADI` handshake so older cores keep normal bags. See [client-customization/EsteriaInventory/](client-customization/EsteriaInventory/README.md) |
 | Grand Satchel | 237-slot bag support. See [client-customization/EsteriaSatchel/](client-customization/EsteriaSatchel/README.md) |
 | Native appearance | Hair, skin, geoset, cosmetic wing and material handling in [client-customization/](client-customization/README.md) |
@@ -81,11 +81,11 @@ not imply an expanded barber.
 
 | System | Status | Summary |
 | --- | --- | --- |
-| Battlemon (`mod-battlemon`) | Enabled | Pokemon-style collection, wild encounters, world pet battles, human and bot duels. 980 converted 3D models. See [Battlemon.md](Battlemon.md) and [modules/mod-battlemon/README.md](modules/mod-battlemon/README.md) |
+| Battlemon (`mod-battlemon`) | Enabled | Pokemon-style collection, wild encounters, world pet battles, human and bot duels. 980 converted 3D models. See [Battlemon.md](docs/status/Battlemon.md) and [modules/mod-battlemon/README.md](modules/mod-battlemon/README.md) |
 | `mod-wxl-dbc` | Enabled | Server DBC continuation files, so large custom tables (Battlemon, Freeborn) load without replacing base DBCs |
 | Echoes of the Worldsoul | Staged | Permanent attunement and stat bridge, in `mod-custom-server/src/mod_attunement_plus.cpp` |
 | Prestige and Draft | Staged | Character replay, ranks and draft choices through Eluna |
-| Dream Path (`mod-seasonpass`) | Staged | Seasonal tiers, weekly goals, chests, Dream Renown. Reward tables are in [Season.md](Season.md) |
+| Dream Path (`mod-seasonpass`) | Staged | Seasonal tiers, weekly goals, chests, Dream Renown. Reward tables are in [Season.md](docs/status/Season.md) |
 | Mythic+ (`mod-mythic-plus`) | Staged | Keystones, timers, affixes and rankings |
 | Dungeon Master (`mod-dungeon-master`) | Staged | Procedural dungeons with six tiers, nine themes and Roguelike mode |
 | Instance ownership | Enabled | `InstanceMode` keeps Mythic+, Dungeon Master and Roguelike scaling from stacking with AutoBalance |
@@ -98,7 +98,7 @@ not imply an expanded barber.
 
 The full list, including the stock quality-of-life modules (AH bot, account-wide
 achievements and mounts, AOE loot, random enchants, item upgrade, corpse respawn and
-others), is in [Modules.md](Modules.md) and [ModuleStatus.md](ModuleStatus.md).
+others), is in [Modules.md](docs/status/Modules.md) and [ModuleStatus.md](docs/status/ModuleStatus.md).
 
 ### Core changes
 
@@ -122,12 +122,12 @@ These are documents, not shipped features:
 
 | Document | Scope |
 | --- | --- |
-| [ConquestOfEsteria.md](ConquestOfEsteria.md) | Audit and transport plan for the Ascension custom classes. The current core still has class IDs 1-11 |
-| [ESTERIA_LIVING_WORLD_IMPLEMENTATION.md](ESTERIA_LIVING_WORLD_IMPLEMENTATION.md) | Persistent simulation of towns, businesses, crime, trade and government |
-| [EsteriaGameplayExpansion.md](EsteriaGameplayExpansion.md) | Expanded hunter taming (drake, dragonkin, elemental, undead, mechanical), animal companion, custom Hearthstone |
-| [FORSAKEN_TAUNKA.md](FORSAKEN_TAUNKA.md), [HALFELVES.md](HALFELVES.md) | Race implementation plans |
-| [WODMODELS.md](WODMODELS.md) | Analysis of Warlords of Draenor character models |
-| [IDEAS.md](IDEAS.md) | Backlog |
+| [ConquestOfEsteria.md](docs/design/ConquestOfEsteria.md) | Audit and transport plan for the Ascension custom classes. The current core still has class IDs 1-11 |
+| [ESTERIA_LIVING_WORLD_IMPLEMENTATION.md](docs/design/ESTERIA_LIVING_WORLD_IMPLEMENTATION.md) | Persistent simulation of towns, businesses, crime, trade and government |
+| [EsteriaGameplayExpansion.md](docs/design/EsteriaGameplayExpansion.md) | Expanded hunter taming (drake, dragonkin, elemental, undead, mechanical), animal companion, custom Hearthstone |
+| [FORSAKEN_TAUNKA.md](docs/design/FORSAKEN_TAUNKA.md), [HALFELVES.md](docs/design/HALFELVES.md) | Race implementation plans |
+| [WODMODELS.md](docs/design/WODMODELS.md) | Analysis of Warlords of Draenor character models |
+| [IDEAS.md](docs/design/IDEAS.md) | Backlog |
 
 ---
 
@@ -185,7 +185,7 @@ account set gmlevel <username> 3 -1
 ```
 
 Never commit or print database or account passwords. More commands are in
-[COMMANDS.md](COMMANDS.md).
+`COMMANDS.md` (not yet written).
 
 ### SQL rules
 
@@ -193,24 +193,55 @@ Put new local SQL in `data/sql/updates/pending_db_*` or the owning module's data
 directory. Do not edit `data/sql/base/`, `data/sql/archive/` or merged
 `data/sql/updates/db_*/`. Back up the database before changing live data.
 
-## Layout
+## Repository map
 
-| Path | Contents |
+```text
+EsteriaWoW/
+|-- src/                     AzerothCore core, with Esteria changes
+|-- modules/                 57 modules; mod-custom-server holds Esteria's own C++, SQL, race registry
+|                            (Eluna scripts are mounted from mod-worgoblin-high-elf/lua_scripts)
+|-- data/
+|   |-- sql/                 base, merged and pending database updates
+|   `-- retroported-races/   per-race manifests used by the packers
+|-- conf/                    configuration templates (dist)
+|-- env/                     generated runtime config and logs (mostly ignored)
+|-- apps/  bin/  deps/       upstream build helpers, scripts and vendored dependencies
+|-- docker-compose*.yml      stack definition, local override, Two Forms image pin
+|
+|-- tools/                   race packers, deploy scripts, UI patchers, tests, loose SQL (tools/sql/)
+|-- client-customization/    native client appearance, digital inventory, satchel (sources and tests)
+|-- wxl-races-patcher/       character-select DLL source; build-artifacts/ holds stray .obj/.lib
+|-- e2e/                     protocol-level live-stack tests
+|
+|-- RaceGuide/               race and custom-content developer handoff, with evidence and indexes
+|-- Harvested/               extracted donor models and race material
+|-- exports/                 generated deliverables and packaged race exports
+|
+|-- docs/
+|   |-- design/              specs and plans: races, Freeborn, Living World, classes, taming, UI
+|   |-- status/              module inventory, progression, Dream Path, Battlemon status
+|   |-- images/              reference screenshots used by the design docs
+|   `-- (guides)             character select, retroported races, 100-character support
+|-- assets/
+|   |-- Arakkoa-race/  SlimeSkeleton/  Vehicles/  CustomModules/
+|   |-- archives/            race zips and the patch-Z MPQ copies
+|   `-- dbc/                 reference Spell, ItemSet and SpellItemEnchantment DBCs
+`-- reference/
+    `-- azerothcore-wotlk-coa/   donor class tree used by the Conquest audit
+```
+
+| Looking for | Go to |
 | --- | --- |
-| `src/` | AzerothCore core with Esteria changes |
-| `modules/` | 57 module directories, including `mod-custom-server` (Esteria's own C++, SQL and race registry) |
-| `lua_scripts/` | Eluna scripts bind-mounted into the worldserver |
-| `data/sql/` | Base, merged and pending database updates |
-| `conf/dist/` | Configuration templates |
-| `RaceGuide/` | Race and custom-content developer guide, with evidence and reference indexes |
-| `client-customization/` | Native appearance, digital inventory and satchel sources and tests |
-| `tools/` | Race packers, deploy scripts, UI patchers and their tests |
-| `docs/` | Character select, retroported race plan and design specs |
-| `e2e/` | Protocol-level live-stack tests built on AzerothGhost |
-| `Arakkoa-race/`, `SlimeSkeleton/`, `VulperaDBC/`, `Vehicles/` | Staged race and asset packages |
-| `wxl-races-patcher/`, `BinaryWork/` | Client patch inspection and race-select DLL work |
-| `Harvested/`, `NewModels/` | Extracted source models and race material |
-| `azerothcore-wotlk-coa/` | Class donor tree used for the Conquest audit |
+| Which races exist and their IDs | `modules/mod-custom-server/data/races/race_registry.json` |
+| How a race is built | [RaceGuide/](RaceGuide/README.md) and `tools/*_race_pack.py` |
+| What a module does and whether it is on | [docs/status/Modules.md](docs/status/Modules.md) |
+| Progression ownership and acceptance | [docs/status/PROGRESSION.md](docs/status/PROGRESSION.md) |
+| A planned feature | [docs/design/](docs/design/) |
+| Server SQL to apply | `data/sql/updates/pending_db_*` or a module's `data/sql/` |
+| Client-side addon or native code | `client-customization/`, `modules/*/addon/` |
+
+Local-only folders such as `BinaryWork/`, `DBCs/`, `NewModels/`, `VulperaDBC/` and `var/`
+are git-ignored working directories, not part of the repository.
 
 ## Status
 
@@ -218,7 +249,7 @@ Server build, database import and worldserver readiness are recorded. Several ra
 the creator, the digital inventory and the Vrykul and Ogre ports have been checked in
 game by the developer. Live validation of the progression modules, PlayerBots with
 every race, restart recovery and multiplayer is not complete. See
-[PROGRESSION.md](PROGRESSION.md) and [RaceGuide/10-VALIDATION.md](RaceGuide/10-VALIDATION.md).
+[PROGRESSION.md](docs/status/PROGRESSION.md) and [RaceGuide/10-VALIDATION.md](RaceGuide/10-VALIDATION.md).
 
 ## License
 

@@ -770,7 +770,7 @@ explicit legacy mask mappings. Live creation, selection, customization and relog
 
 ## Horde Arakkoa (RaceID 68, staged)
 
-`tools/arakkoa_race_pack.py` imports the supplied HD Outland Arakkoa pack (`Arakkoa-race/`) as Horde race 68.
+`tools/arakkoa_race_pack.py` imports the supplied HD Outland Arakkoa pack (`assets/Arakkoa-race/`) as Horde race 68.
 The pack came from another server, so none of its numbering is used: its race 45 is Mag'har here, so every row
 is rebased. Race 68, models 120075/120076, displays 60066/60067, CharSections 1116300+, CharHairGeosets and
 BarberShopStyle 1116300+, outfits 22180+, NameGen 90000+, spells 13990001-5, SoundEntries 414401-6, voice

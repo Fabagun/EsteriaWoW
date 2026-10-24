@@ -284,7 +284,7 @@ contract:
   path, not evidence that the full custom-race creator is active.
 
 `BinaryWork/` contains patch inspection/backup material rather than a
-verified active client installation. `CustomModules/` contains additional
+verified active client installation. `assets/CustomModules/` contains additional
 procedural-item and item-generator assets, but it is excluded from the Docker
 build context and is not counted as active server/client content here.
 

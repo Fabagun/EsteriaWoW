@@ -23,7 +23,7 @@ MODEL = 'retail\\slimegiant\\3490792.m2'
 FALLBACK_MODEL = 'CHARACTER\\Naga_\\male\\kultiranmale.m2'
 SOURCE_COLORS = ('Green', 'Amber', 'Mauve', 'Red', 'Gold')
 CUSTOM_COLORS = tuple('Amber (Custom)' if row['name'] == 'amber' else row['name'].replace('_', ' ').title()
-                      for row in p.load_json(p.ROOT / 'SlimeSkeleton/ColorVariants/manifest.json')['variants'])
+                      for row in p.load_json(p.ROOT / 'assets/SlimeSkeleton/ColorVariants/manifest.json')['variants'])
 COLORS = SOURCE_COLORS + CUSTOM_COLORS
 CLASSES = (1, 2, 3, 4, 5, 6, 7, 8, 9, 11)
 CAPACITIES = (len(COLORS), 2, 1, 1, 1)
