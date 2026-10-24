@@ -703,6 +703,7 @@ public:                                                 // opcodes handlers
 
     void HandleCharEnumOpcode(WorldPacket& recvPacket);
     void HandleEsteriaInventoryOpcode(WorldPacket& recvPacket);
+    void HandleEsteriaFormLookOpcode(WorldPacket& recvPacket);
     bool IsAtBanker() const { return CanUseBank(); }
     void HandleCharDeleteOpcode(WorldPacket& recvPacket);
     void HandleCharCreateOpcode(WorldPacket& recvPacket);

@@ -53,6 +53,8 @@ struct BattlemonSpecies
     std::string genderRatio;
     std::string growthRate;
     uint32 baseExp = 0;
+    uint32 catchRate = 0;
+    std::string evolutions;
     std::string sprite;
     std::string ability1;
     std::string ability2;

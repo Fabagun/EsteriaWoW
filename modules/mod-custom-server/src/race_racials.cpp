@@ -1198,6 +1198,25 @@ class spell_race_rummage_your_bag : public SpellScript
     }
 };
 
+// Worgen: Two Forms swaps Wolf and Human by swapping the saved looks. The spells' own transform into a costume NPC
+// is cancelled.
+class spell_race_two_forms : public SpellScript
+{
+    PrepareSpellScript(spell_race_two_forms);
+
+    void HandleToggle(SpellEffIndex /*effIndex*/)
+    {
+        PreventHitAura();
+        if (Player* player = GetHitUnit() ? GetHitUnit()->ToPlayer() : nullptr)
+            player->ToggleRetailForm();
+    }
+
+    void Register() override
+    {
+        OnEffectHitTarget += SpellEffectFn(spell_race_two_forms::HandleToggle, EFFECT_0, SPELL_EFFECT_APPLY_AURA);
+    }
+};
+
 // Dracthyr: Visage toggles the mortal form; Chosen Identity picks which race it wears.
 class spell_race_visage : public SpellScript
 {
@@ -1208,6 +1227,13 @@ class spell_race_visage : public SpellScript
         Player* player = GetCaster()->ToPlayer();
         if (!player)
             return;
+
+        // A character with both forms saved swaps Dragon and Visage; the old human transform is only for the rest.
+        if (player->ToggleRetailForm())
+        {
+            player->RemoveAurasDueToSpell(SPELL_VISAGE_FORM);
+            return;
+        }
 
         if (player->HasAura(SPELL_VISAGE_FORM))
             player->RemoveAurasDueToSpell(SPELL_VISAGE_FORM);
@@ -1708,6 +1734,7 @@ void AddSC_race_racials()
     RegisterSpellScript(spell_race_return_to_camp);
     RegisterSpellScript(spell_race_rummage_your_bag);
     RegisterSpellScript(spell_race_visage);
+    RegisterSpellScript(spell_race_two_forms);
     RegisterSpellScript(spell_race_visage_form);
     RegisterSpellScript(spell_race_chosen_identity);
     RegisterSpellScript(spell_race_ingest_minerals);

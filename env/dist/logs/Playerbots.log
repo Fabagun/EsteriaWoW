@@ -2,12 +2,12 @@ Loading World Buff Feature...
 Creating random bot accounts...
 AddClassAccountPoolSize set to 0, any AddClass accounts (type 2) will be unassigned (type 0)
 Creating random bot characters...
-Starting Playerbots Command Server on port 8888
 Assigning account types for random bot accounts...
 Found 10 total randombot accounts in database
 Account type assignment complete: 10 RNDbot accounts, 0 AddClass accounts, 0 unassigned
 >> 0 characters collected for addclass command from 0 AddClass accounts.
 Loading Battlemasters Cache...
+Starting Playerbots Command Server on port 8888
 Cached Battlemaster #347 for BG Type 1 (Horde)
 Cached Battlemaster #857 for BG Type 3 (Alliance)
 Cached Battlemaster #907 for BG Type 3 (Alliance)
@@ -8852,1249 +8852,1078 @@ Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-39 new bots prepared to login
-1/39 Bot Kaerad logged in
-2/39 Bot Ireslun logged in
-3/39 Bot Huflemak logged in
-4/39 Bot Knehkia logged in
-5/39 Bot Kust logged in
-6/39 Bot Gnuthuklink logged in
-7/39 Bot Cihwamio logged in
-8/39 Bot Westerren logged in
-9/39 Bot Darius logged in
-10/39 Bot Bengren logged in
-11/39 Bot Mellatha logged in
-12/39 Bot Mundibill logged in
-13/39 Bot Keahgevun logged in
-14/39 Bot Irra logged in
-15/39 Bot Ceerin logged in
-16/39 Bot Casparald logged in
-17/39 Bot Olette logged in
-18/39 Bot Dresera logged in
-19/39 Bot Joven logged in
-20/39 Bot Damaderon logged in
-21/39 Bot Maine logged in
-22/39 Bot Galerio logged in
-23/39 Bot Lucini logged in
-24/39 Bot Ceevia logged in
-25/39 Bot Jalelle logged in
-26/39 Bot Shernia logged in
-27/39 Bot Havogronk logged in
-28/39 Bot Westorn logged in
-29/39 Bot Landraran logged in
-30/39 Bot Babine logged in
-31/39 Bot Crondiggold logged in
-32/39 Bot Ceale logged in
-33/39 Bot Kadimir logged in
-34/39 Bot Beawi logged in
-35/39 Bot Dameloa logged in
-36/39 Bot Blanorton logged in
-37/39 Bot Atkik logged in
-38/39 Bot Celda logged in
-39/39 Bot Howeankoh logged in
-[New RPG] Bot Shernia select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 4)
-[New RPG] Bot Shernia select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 654)
-[New RPG] Bot Shernia select random flight taxi node from:1573 (node 6) to:195 (1 available)
-[New RPG] Bot Damaderon select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 18)
-[New RPG] Bot Damaderon select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 2452)
-[New RPG] Bot Damaderon select random flight taxi node from:1573 (node 6) to:213 (1 available)
-[New RPG] Bot Huflemak select random inn keeper pos Map:0 X:-14461.046 Y:491.63226 Z:15.7129 (2 available in 11)
-[New RPG] Bot Huflemak select random grind pos Map:0 X:-14900 Y:400 Z:0 (3+43 available in 512)
-[New RPG] Bot Huflemak select random flight taxi node from:2858 (node 18) to:21 (1 available)
-[New RPG] Bot Huflemak select random flight taxi node from:2858 (node 18) to:56 (1 available)
-[New RPG] Bot Kadimir select random inn keeper pos Map:0 X:400.8069 Y:-2124.6216 Z:132.164 (1 available in 8)
-[New RPG] Bot Kadimir select random grind pos Map:0 X:100 Y:-2450 Z:100 (3+81 available in 491)
-[New RPG] Bot Kadimir select random flight taxi node from:8018 (node 43) to:74 (1 available)
-[New RPG] Bot Kadimir select random inn keeper pos Map:0 X:400.8069 Y:-2124.6216 Z:132.164 (1 available in 8)
-[New RPG] Bot Atkik select random inn keeper pos Map:530 X:-573.1212 Y:4148.6943 Z:68.717 (1 available in 7)
-[New RPG] Bot Atkik select random grind pos Map:530 X:400 Y:2850 Z:50 (70+357 available in 1154)
-[New RPG] Bot Atkik select random flight taxi node from:16587 (node 99) to:127 (1 available)
-[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
-[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
-[New RPG] Bot Maine select random inn keeper pos Map:1 X:-3619.139 Y:-4466.8267 Z:14.8286 (2 available in 9)
-[New RPG] Bot Maine select random grind pos Map:1 X:-3500 Y:-3750 Z:0 (3+7 available in 480)
-[New RPG] Bot Maine select random inn keeper pos Map:1 X:-3619.139 Y:-4466.8267 Z:14.8286 (2 available in 9)
-[New RPG] Bot Landraran select random inn keeper pos Map:0 X:-5378.9497 Y:-2969.0193 Z:323.752 (1 available in 7)
-[New RPG] Bot Landraran select random grind pos Map:0 X:-4900 Y:-3400 Z:300 (14+55 available in 1279)
-[New RPG] Bot Jalelle select random inn keeper pos Map:530 X:-1233.52 Y:7164.408 Z:57.8484 (2 available in 19)
-[New RPG] Bot Jalelle select random grind pos Map:530 X:-2950 Y:4400 Z:-50 (2+367 available in 2088)
-[New RPG] Bot Jalelle select random flight taxi node from:18940 (node 128) to:163 (1 available)
-[New RPG] Bot Jalelle select random flight taxi node from:18940 (node 128) to:120 (1 available)
-Bot #380 <Knehkia>: teleport for level and refresh
-Refreshing bot GUID Full: 0x000000000000017c Type: Player Low: 380 <Knehkia>
-Random teleporting bot Knehkia (level 19) to Map: 1 (Kalimdor) Zone: 17 (The Barrens) Area: 378 (Camp Taurajo) ZoneLevel: 0 AreaLevel: 10 -2373.846,-1991.367,96.754814 (1/7 locations)
-Bot #406 <Gnuthuklink>: teleport for level and refresh
-Refreshing bot GUID Full: 0x0000000000000196 Type: Player Low: 406 <Gnuthuklink>
-Random teleporting bot Gnuthuklink (level 80) to Map: 571 (Northrend) Zone: 67 (The Storm Peaks) Area: 4441 (Camp Tunka'lo) ZoneLevel: 77 AreaLevel: 80 7800.502,-2962.5562,1259.1697 (1/13 locations)
-Bot #308 <Cihwamio>: teleport for level and refresh
-Refreshing bot GUID Full: 0x0000000000000134 Type: Player Low: 308 <Cihwamio>
-Random teleporting bot Cihwamio (level 56) to Map: 1 (Kalimdor) Zone: 618 (Winterspring) Area: 2255 (Everlook) ZoneLevel: 0 AreaLevel: 55 6699.4355,-4670.465,722.28687 (1/8 locations)
-Bot #359 <Darius>: teleport for level and refresh
-Refreshing bot GUID Full: 0x0000000000000167 Type: Player Low: 359 <Darius>
-Random teleporting bot Darius (level 19) to Map: 0 (Eastern Kingdoms) Zone: 10 (Duskwood) Area: 42 (Darkshire) ZoneLevel: 0 AreaLevel: 25 -10519.146,-1165.0957,27.796074 (1/9 locations)
-Bot #397 <Mundibill>: teleport for level and refresh
-Refreshing bot GUID Full: 0x000000000000018d Type: Player Low: 397 <Mundibill>
-Random teleporting bot Mundibill (level 26) to Map: 0 (Eastern Kingdoms) Zone: 267 (Hillsbrad Foothills) Area: 271 (Southshore) ZoneLevel: 0 AreaLevel: 22 -857.0087,-565.7517,11.114945 (1/6 locations)
-Bot #401 <Ceevia>: teleport for level and refresh
-Refreshing bot GUID Full: 0x0000000000000191 Type: Player Low: 401 <Ceevia>
-Random teleporting bot Ceevia (level 21) to Map: 0 (Eastern Kingdoms) Zone: 10 (Duskwood) Area: 42 (Darkshire) ZoneLevel: 0 AreaLevel: 25 -10519.146,-1165.0957,27.796074 (1/10 locations)
-Bot #343 <Havogronk>: teleport for level and refresh
-Refreshing bot GUID Full: 0x0000000000000157 Type: Player Low: 343 <Havogronk>
-Random teleporting bot Havogronk (level 70) to Map: 571 (Northrend) Zone: 495 (Howling Fjord) Area: 3988 (Kamagua) ZoneLevel: 70 AreaLevel: 70 708.91974,-2931.8403,-3.0184762 (1/19 locations)
-Bot #361 <Crondiggold>: teleport for level and refresh
-Refreshing bot GUID Full: 0x0000000000000169 Type: Player Low: 361 <Crondiggold>
-Random teleporting bot Crondiggold (level 32) to Map: 0 (Eastern Kingdoms) Zone: 33 (Stranglethorn Vale) Area: 117 (Grom'gol Base Camp) ZoneLevel: 0 AreaLevel: 35 -12431.322,215.49905,2.4151485 (1/7 locations)
-Mark bot Ceale as dead, will be revived in 127s.
-Bot #386 <Howeankoh>: teleport for level and refresh
-Refreshing bot GUID Full: 0x0000000000000182 Type: Player Low: 386 <Howeankoh>
-Random teleporting bot Howeankoh (level 16) to Map: 1 (Kalimdor) Zone: 17 (The Barrens) Area: 392 (Ratchet) ZoneLevel: 0 AreaLevel: 15 -1045.2338,-3666.1782,23.940815 (3/6 locations)
-[New RPG] Bot Havogronk select random inn keeper pos Map:571 X:2678.726 Y:-4387.15 Z:285.043 (2 available in 19)
-[New RPG] Bot Havogronk select random grind pos Map:571 X:350 Y:-3100 Z:50 (9+396 available in 2729)
-[New RPG] Bot Havogronk select random flight taxi node from:28197 (node 295) to:226 (1 available)
-[New RPG] Bot Knehkia select random inn keeper pos Map:1 X:-411.9045 Y:-2646.682 Z:96.8063 (2 available in 7)
-[New RPG] Bot Knehkia select random grind pos Map:1 X:-2100 Y:-2000 Z:100 (23+146 available in 1078)
-[New RPG] Bot Knehkia select random flight taxi node from:10378 (node 77) to:29 (1 available)
-[New RPG] Bot Knehkia select random grind pos Map:1 X:-2150 Y:-2550 Z:100 (23+146 available in 1078)
-[New RPG] Bot Celda select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 11)
-[New RPG] Bot Celda select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-Bot #381 <Huflemak>: teleport for level and refresh
-Refreshing bot GUID Full: 0x000000000000017d Type: Player Low: 381 <Huflemak>
-Random teleporting bot Huflemak (level 41) to Map: 1 (Kalimdor) Zone: 440 (Tanaris) Area: 2300 (Caverns of Time) ZoneLevel: 0 AreaLevel: 50 -8154.0947,-4860.675,-24.411476 (1/11 locations)
+40 new bots prepared to login
+1/40 Bot Cihwamio logged in
+2/40 Bot Melilios logged in
+3/40 Bot Bellania logged in
+4/40 Bot Cimlan logged in
+5/40 Bot Kaerad logged in
+6/40 Bot Vahaa logged in
+7/40 Bot Samaryl logged in
+8/40 Bot Flostee logged in
+9/40 Bot Thekem logged in
+10/40 Bot Nelaedon logged in
+11/40 Bot Westerren logged in
+12/40 Bot Darius logged in
+13/40 Bot Bily logged in
+14/40 Bot Irra logged in
+15/40 Bot Keahgevun logged in
+16/40 Bot Bengren logged in
+17/40 Bot Idritarre logged in
+18/40 Bot Mellatha logged in
+19/40 Bot Mundibill logged in
+20/40 Bot Salynna logged in
+21/40 Bot Truhlnush logged in
+22/40 Bot Ainimdi logged in
+23/40 Bot Ceale logged in
+24/40 Bot Alathalis logged in
+25/40 Bot Damaderon logged in
+26/40 Bot Kamig logged in
+27/40 Bot Aeveoh logged in
+28/40 Bot Mydas logged in
+29/40 Bot Kalidra logged in
+30/40 Bot Casparald logged in
+31/40 Bot Ireslun logged in
+32/40 Bot Luncic logged in
+33/40 Bot Helriel logged in
+34/40 Bot Maine logged in
+35/40 Bot Enrii logged in
+36/40 Bot Eramir logged in
+37/40 Bot Vidunuvoo logged in
+38/40 Bot Knehkia logged in
+39/40 Bot Beawi logged in
+40/40 Bot Havogronk logged in
+Incremental randomizing Beawi (level 64 class = 2)...
+Resetting player...
+Initializing skills (step 1)...
+Initializing spells (step 1)...
+Initializing talents...
+Initializing spells (step 2)...
+Initializing reputation...
+Initializing special spells...
+Initializing mounts...
+Initializing equipmemt...
+Initializing bags...
+Initializing ammo...
+Initializing food...
+Initializing potions...
+Initializing reagents...
+Initializing keys...
+Initializing inventory...
+Initializing consumables...
+Initializing glyphs...
+Initializing guilds...
+Initializing pet...
+Saving to DB...
+Initialization Done.
+Bot #389 H:64 <Beawi>: randomized
+Bot GUID Full: 0x0000000000000145 Type: Player Low: 325 A:63 <Eramir> revives at body
+[New RPG] Bot Enrii select random inn keeper pos Map:530 X:-2056.332 Y:-11892.904 Z:46.2415 (1 available in 9)
+[New RPG] Bot Enrii select random grind pos Map:530 X:-2550 Y:-12300 Z:0 (36+26 available in 1725)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Bot #356 <Melilios>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000164 Type: Player Low: 356 <Melilios>
+Random teleporting bot Melilios (level 53) to Map: 1 (Kalimdor) Zone: 1637 (Orgrimmar) Area: 1637 (Orgrimmar) ZoneLevel: 10 AreaLevel: 10 1621.5822,-4377.824,12.211316 (1/1 locations)
+Bot #351 <Vahaa>: teleport for level and refresh
+Refreshing bot GUID Full: 0x000000000000015f Type: Player Low: 351 <Vahaa>
+Random teleporting bot Vahaa (level 75) to Map: 571 (Northrend) Zone: 4395 (Dalaran) Area: 4395 (Dalaran) ZoneLevel: 75 AreaLevel: 75 5981.712,616.48615,650.67694 (1/1 locations)
+Bot #366 <Thekem>: teleport for level and refresh
+Refreshing bot GUID Full: 0x000000000000016e Type: Player Low: 366 <Thekem>
+Random teleporting bot Thekem (level 58) to Map: 1 (Kalimdor) Zone: 618 (Winterspring) Area: 2255 (Everlook) ZoneLevel: 0 AreaLevel: 55 6699.4355,-4670.465,722.28687 (1/7 locations)
+Bot #344 <Nelaedon>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000158 Type: Player Low: 344 <Nelaedon>
+Random teleporting bot Nelaedon (level 34) to Map: 0 (Eastern Kingdoms) Zone: 267 (Hillsbrad Foothills) Area: 271 (Southshore) ZoneLevel: 0 AreaLevel: 22 -857.0087,-565.7517,11.114945 (1/3 locations)
+Bot #373 <Westerren>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000175 Type: Player Low: 373 <Westerren>
+Random teleporting bot Westerren (level 69) to Map: 571 (Northrend) Zone: 495 (Howling Fjord) Area: 4532 (Vengeance Landing Inn) ZoneLevel: 70 AreaLevel: 70 1874.4447,-6213.278,13.132789 (1/19 locations)
+Bot #320 <Bily>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000140 Type: Player Low: 320 <Bily>
+Random teleporting bot Bily (level 80) to Map: 571 (Northrend) Zone: 210 (Icecrown) Area: 4477 (The Shadow Vault) ZoneLevel: 80 AreaLevel: 80 8494.949,2686.772,652.4034 (1/11 locations)
+Bot #309 <Bengren>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000135 Type: Player Low: 309 <Bengren>
+Random teleporting bot Bengren (level 33) to Map: 0 (Eastern Kingdoms) Zone: 10 (Duskwood) Area: 42 (Darkshire) ZoneLevel: 0 AreaLevel: 25 -10519.146,-1165.0957,27.796074 (1/5 locations)
 Bot #338 <Mellatha>: teleport for level and refresh
 Refreshing bot GUID Full: 0x0000000000000152 Type: Player Low: 338 <Mellatha>
-Random teleporting bot Mellatha (level 27) to Map: 1 (Kalimdor) Zone: 406 (Stonetalon Mountains) Area: 460 (Sun Rock Retreat) ZoneLevel: 0 AreaLevel: 20 897.84534,925.2238,106.30764 (1/4 locations)
-Bot #341 <Olette>: teleport for level and refresh
-Refreshing bot GUID Full: 0x0000000000000155 Type: Player Low: 341 <Olette>
-Random teleporting bot Olette (level 80) to Map: 571 (Northrend) Zone: 3711 (Sholazar Basin) Area: 4284 (Nesingwary Base Camp) ZoneLevel: 76 AreaLevel: 75 5571.243,5763.448,-75.17651 (1/11 locations)
-Bot #316 <Damaderon>: teleport for level and refresh
-Refreshing bot GUID Full: 0x000000000000013c Type: Player Low: 316 <Damaderon>
-Random teleporting bot Damaderon (level 69) to Map: 530 (Outland) Zone: 3703 (Shattrath City) Area: 3703 (Shattrath City) ZoneLevel: 0 AreaLevel: 0 -1715.2585,5492.0205,-8.252424 (1/1 locations)
-Bot #313 <Jalelle>: teleport for level and refresh
-Refreshing bot GUID Full: 0x0000000000000139 Type: Player Low: 313 <Jalelle>
-Random teleporting bot Jalelle (level 68) to Map: 530 (Outland) Zone: 3522 (Blade's Edge Mountains) Area: 3951 (Evergrove) ZoneLevel: 0 AreaLevel: 67 3020.5603,5439.18,146.81895 (1/19 locations)
-Bot #335 <Westorn>: teleport for level and refresh
-Refreshing bot GUID Full: 0x000000000000014f Type: Player Low: 335 <Westorn>
-Random teleporting bot Westorn (level 41) to Map: 1 (Kalimdor) Zone: 440 (Tanaris) Area: 2300 (Caverns of Time) ZoneLevel: 0 AreaLevel: 50 -8154.0947,-4860.675,-24.411476 (1/7 locations)
-Bot #330 <Kadimir>: teleport for level and refresh
-Refreshing bot GUID Full: 0x000000000000014a Type: Player Low: 330 <Kadimir>
-Random teleporting bot Kadimir (level 48) to Map: 1 (Kalimdor) Zone: 440 (Tanaris) Area: 976 (Gadgetzan) ZoneLevel: 0 AreaLevel: 40 -7160.833,-3836.974,8.685357 (1/8 locations)
-[New RPG] Bot Jalelle select random inn keeper pos Map:530 X:2225.0168 Y:4722.442 Z:162.575 (2 available in 19)
-[New RPG] Bot Jalelle select random grind pos Map:530 X:2700 Y:5250 Z:250 (59+227 available in 2088)
-[New RPG] Bot Jalelle select random flight taxi node from:22216 (node 160) to:126 (1 available)
-[New RPG] Bot Jalelle select random flight taxi node from:22216 (node 160) to:128 (1 available)
-[New RPG] Bot Keahgevun select random inn keeper pos Map:0 X:-9228.962 Y:-2156.6843 Z:64.5168 (1 available in 6)
-[New RPG] Bot Keahgevun select random grind pos Map:0 X:-9100 Y:-3350 Z:100 (5+26 available in 602)
-[New RPG] Bot Keahgevun select random flight taxi node from:931 (node 5) to:12 (1 available)
-Including non-random bot player Humpty Dumpty into random bot update
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Casparald select random inn keeper pos Map:1 X:-6115.034 Y:-1142.5419 Z:-186.366 (1 available in 10)
-[New RPG] Bot Casparald select random grind pos Map:1 X:-6600 Y:-1450 Z:-300 (7+33 available in 747)
-[New RPG] Bot Blanorton select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Blanorton select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 891)
-[New RPG] Bot Babine select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 7)
-[New RPG] Bot Babine select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 800)
-[New RPG] Bot Babine select random flight taxi node from:16192 (node 82) to:70 (1 available)
-Bot GUID Full: 0x0000000000000179 Type: Player Low: 377 H:14 <Ceale> auto released
-Bot GUID Full: 0x0000000000000179 Type: Player Low: 377 H:14 <Ceale> releases spirit
-Including non-random bot player Squish Metit into random bot update
-[New RPG] Bot Joven select random inn keeper pos Map:530 X:-4133.0415 Y:-12472.458 Z:44.6849 (1 available in 9)
-[New RPG] Bot Joven select random grind pos Map:530 X:-3850 Y:-12150 Z:0 (3+87 available in 1509)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Ireslun select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Ireslun select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Bot #390 <Babine>: teleport for level and refresh
-Refreshing bot GUID Full: 0x0000000000000186 Type: Player Low: 390 <Babine>
-Random teleporting bot Babine (level 57) to Map: 1 (Kalimdor) Zone: 361 (Felwood) Area: 1997 (Bloodvenom Post ) ZoneLevel: 0 AreaLevel: 0 5069.7134,-338.5833,367.7782 (1/7 locations)
-[New RPG] Bot Crondiggold select random inn keeper pos Map:0 X:-14461.046 Y:491.63226 Z:15.7129 (1 available in 7)
-[New RPG] Bot Crondiggold select random grind pos Map:0 X:-11800 Y:-300 Z:0 (0+28 available in 457)
-[New RPG] Bot Crondiggold select random flight taxi node from:1387 (node 20) to:17 (1 available)
-[New RPG] Bot Crondiggold select random flight taxi node from:1387 (node 20) to:17 (1 available)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Bot GUID Full: 0x0000000000000179 Type: Player Low: 377 H:14 <Ceale> revives at body
-Bot GUID Full: 0x0000000000000179 Type: Player Low: 377 H:14 <Ceale> auto released
-Bot GUID Full: 0x0000000000000179 Type: Player Low: 377 H:14 <Ceale> releases spirit
-Random Bots Stats: 39 online
-Bots level:
-    10..19: 5 alliance, 3 horde
-    20..29: 3 alliance, 1 horde
-    30..39: 2 alliance, 2 horde
-    40..49: 3 alliance, 2 horde
-    50..59: 2 alliance, 3 horde
-    60..69: 2 alliance, 4 horde
-    70..79: 0 alliance, 3 horde
-    80..80: 2 alliance, 2 horde
-Bots race:
-    Human: 4, avg lvl: 56
-    Orc: 5, avg lvl: 56.6
-    Dwarf: 2, avg lvl: 30
-    Night Elf: 1, avg lvl: 16
-    Undead: 4, avg lvl: 62.2
-    Tauren: 2, avg lvl: 37.5
-    Gnome: 1, avg lvl: 26
-    Troll: 2, avg lvl: 40
-    Goblin: 3, avg lvl: 61
-    Blood Elf: 4, avg lvl: 41.5
-    Draenei: 4, avg lvl: 30
-    Worgen: 3, avg lvl: 51.6
-    High Elf: 4, avg lvl: 38.2
-Bots class:
-    paladin: 39, avg lvl: 45.8
-Bots role:
-    tank: 1, heal: 0, dps: 38
-Bots status:
-    Active: 1
-    Moving: 1
-    In flight: 1
-    On mount: 8
-    In combat: 1
-    In BG: 0
-    In Rest: 6
-    Dead: 2
-Bots rpg status:
-    Idle: 24, Rest: 3, GoGrind: 1, GoCamp: 1, MoveRandom: 1, MoveNpc: 3, DoQuest: 4, TravelFlight: 2, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 0, Rewarded: 0, Dropped: 0
-Bots engine:
-    Non-combat: 34, Combat: 3, Dead: 2
-[New RPG] Bot Lucini select random inn keeper pos Map:1 X:6208.02 Y:-1948.3518 Z:572.081 (2 available in 10)
-[New RPG] Bot Lucini select random grind pos Map:1 X:4800 Y:-350 Z:350 (2+79 available in 692)
-[New RPG] Bot Lucini select random flight taxi node from:22931 (node 166) to:65 (1 available)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Dresera select random inn keeper pos Map:530 X:-2056.332 Y:-11892.904 Z:46.2415 (1 available in 5)
-[New RPG] Bot Dresera select random grind pos Map:530 X:-2500 Y:-12350 Z:0 (36+101 available in 1239)
-[New RPG] Bot Dresera select random grind pos Map:530 X:-1700 Y:-11600 Z:50 (36+101 available in 1239)
-[New RPG] Bot Ceevia select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 10)
-[New RPG] Bot Ceevia select random grind pos Map:0 X:-10100 Y:-1000 Z:50 (4+37 available in 884)
-[New RPG] Bot Ceevia select random flight taxi node from:2409 (node 12) to:5 (1 available)
-[New RPG] Bot Kadimir select random inn keeper pos Map:1 X:-8154.0947 Y:-4860.675 Z:-24.2839 (1 available in 8)
-[New RPG] Bot Kadimir select random grind pos Map:1 X:-7550 Y:-3750 Z:0 (1+131 available in 491)
-[New RPG] Bot Kadimir select random flight taxi node from:7823 (node 39) to:64 (1 available)
-[New RPG] Bot Kadimir select random grind pos Map:1 X:-7900 Y:-2500 Z:0 (1+131 available in 491)
-[New RPG] Bot Darius select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
-[New RPG] Bot Darius select random grind pos Map:0 X:-10200 Y:200 Z:0 (0+21 available in 1078)
-[New RPG] Bot Darius select random flight taxi node from:2409 (node 12) to:6 (1 available)
-[New RPG] Bot Darius select random grind pos Map:0 X:-10200 Y:0 Z:50 (0+21 available in 1078)
-[New RPG] Kadimir accept quest 6610
-Bot GUID Full: 0x0000000000000160 Type: Player Low: 352 H:73 <Ceerin> auto released
-Bot GUID Full: 0x0000000000000160 Type: Player Low: 352 H:73 <Ceerin> releases spirit
-Bot GUID Full: 0x0000000000000160 Type: Player Low: 352 H:73 <Ceerin> revives at body
-Bot GUID Full: 0x0000000000000160 Type: Player Low: 352 H:73 <Ceerin> revives at body
-Bot GUID Full: 0x0000000000000160 Type: Player Low: 352 H:73 <Ceerin> revives at body
-Bot GUID Full: 0x0000000000000160 Type: Player Low: 352 H:73 <Ceerin> revives at body
-Bot GUID Full: 0x0000000000000160 Type: Player Low: 352 H:73 <Ceerin> revives at body
-[New RPG] Bot Mellatha select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 4)
-[New RPG] Bot Mellatha select random grind pos Map:1 X:1750 Y:650 Z:200 (0+51 available in 602)
-[New RPG] Bot Mellatha select random flight taxi node from:4312 (node 29) to:61 (1 available)
-[New RPG] Bot Mellatha select random grind pos Map:1 X:650 Y:1450 Z:0 (0+51 available in 602)
-[New RPG] Bot Babine select random inn keeper pos Map:1 X:3979.627 Y:-1316.9385 Z:251.624 (1 available in 7)
-[New RPG] Bot Babine select random grind pos Map:1 X:6200 Y:-1150 Z:350 (12+21 available in 800)
-[New RPG] Bot Babine select random flight taxi node from:11900 (node 48) to:53 (1 available)
-[New RPG] Bot Babine select random grind pos Map:1 X:5250 Y:-650 Z:250 (12+21 available in 800)
-[New RPG] Bot Huflemak select random inn keeper pos Map:1 X:-7160.833 Y:-3836.974 Z:9.34809 (1 available in 11)
-[New RPG] Bot Huflemak select random grind pos Map:1 X:-6900 Y:-4400 Z:0 (0+33 available in 512)
-[New RPG] Bot Huflemak select random inn keeper pos Map:1 X:-7160.833 Y:-3836.974 Z:9.34809 (1 available in 11)
-[New RPG] Babine accept quest 4521
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Bot #348 <Kaerad>: teleport for level and refresh
-Refreshing bot GUID Full: 0x000000000000015c Type: Player Low: 348 <Kaerad>
-Random teleporting bot Kaerad (level 52) to Map: 1 (Kalimdor) Zone: 357 (Feralas) Area: 1099 (Camp Mojache) ZoneLevel: 0 AreaLevel: 42 -4455.727,245.14604,39.15746 (1/9 locations)
-[New RPG] Mellatha accept quest 5881
-[New RPG] Babine accept quest 4505
-[New RPG] Mellatha accept quest 6282
-Bot GUID Full: 0x0000000000000153 Type: Player Low: 339 A:27 <Keahgevun> auto released
-Bot GUID Full: 0x0000000000000153 Type: Player Low: 339 A:27 <Keahgevun> releases spirit
-Refreshing bot GUID Full: 0x0000000000000179 Type: Player Low: 377 <Ceale>
-Random teleporting bot Ceale for level 14 (5 locations available)
-Random teleporting bot Ceale (level 14) to Map: 530 (Outland) Zone: 3433 (Ghostlands) Area: 3488 (Tranquillien) ZoneLevel: 0 AreaLevel: 10 7555.64,-6892.895,96.07664 (1/5 locations)
-[New RPG] Bot Ireslun select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Ireslun select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Mark bot Ceerin as dead, will be revived in 134s.
-Mark bot Keahgevun as dead, will be revived in 108s.
-[New RPG] Bot Kust select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 7)
-[New RPG] Bot Kust select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 496)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
-[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
-[New RPG] Bot Bengren select random inn keeper pos Map:1 X:250.6424 Y:1253.2374 Z:192.724 (1 available in 5)
-[New RPG] Bot Bengren select random grind pos Map:1 X:-200 Y:1700 Z:100 (40+112 available in 496)
-[New RPG] Bot Bengren select random flight taxi node from:6706 (node 37) to:167 (1 available)
-[New RPG] Bot Bengren select random flight taxi node from:6706 (node 37) to:28 (1 available)
-[New RPG] Bot Shernia select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 4)
-[New RPG] Bot Shernia select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 654)
-[New RPG] Bot Shernia select random flight taxi node from:1573 (node 6) to:16 (1 available)
-[New RPG] Mellatha accept quest 1087
-[New RPG] Kadimir accept quest 1707
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Kadimir accept quest 2605
-[New RPG] Bot Cihwamio select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 8)
-[New RPG] Bot Cihwamio select random grind pos Map:1 X:6850 Y:-3500 Z:700 (25+67 available in 747)
-[New RPG] Bot Cihwamio select random flight taxi node from:11139 (node 53) to:72 (1 available)
-[New RPG] Cihwamio accept quest 6029
-[New RPG] Cihwamio accept quest 6030
-[New RPG] Bot Howeankoh select random inn keeper pos Map:1 X:-411.9045 Y:-2646.682 Z:96.8063 (2 available in 6)
-[New RPG] Bot Howeankoh select random grind pos Map:1 X:-1350 Y:-2050 Z:100 (19+330 available in 1279)
-[New RPG] Bot Howeankoh select random flight taxi node from:16227 (node 80) to:77 (1 available)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Westerren select random inn keeper pos Map:530 X:-2622.2158 Y:4445.319 Z:36.6768 (2 available in 19)
-[New RPG] Bot Westerren select random grind pos Map:530 X:-1650 Y:7600 Z:0 (0+152 available in 2452)
-[New RPG] Bot Westerren select random flight taxi node from:18940 (node 128) to:127 (1 available)
-[New RPG] Bot Kaerad select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
-[New RPG] Bot Kaerad select random grind pos Map:1 X:-3550 Y:2200 Z:50 (0+7 available in 558)
-[New RPG] Bot Kaerad select random flight taxi node from:8020 (node 42) to:79 (1 available)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Refreshing bot GUID Full: 0x0000000000000160 Type: Player Low: 352 <Ceerin>
-Random teleporting bot Ceerin for level 73 (24 locations available)
-Random teleporting bot Ceerin (level 73) to Map: 530 (Outland) Zone: 3523 (Netherstorm) Area: 3738 (The Stormspire) ZoneLevel: 0 AreaLevel: 0 4115.28,3061.665,339.5152 (1/24 locations)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Damaderon select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 18)
-[New RPG] Bot Damaderon select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 2452)
-[New RPG] Bot Damaderon select random flight taxi node from:1573 (node 6) to:213 (1 available)
-Random Bots Stats: 39 online
-Bots level:
-    10..19: 5 alliance, 3 horde
-    20..29: 3 alliance, 1 horde
-    30..39: 2 alliance, 2 horde
-    40..49: 3 alliance, 2 horde
-    50..59: 2 alliance, 3 horde
-    60..69: 2 alliance, 4 horde
-    70..79: 0 alliance, 3 horde
-    80..80: 2 alliance, 2 horde
-Bots race:
-    Human: 4, avg lvl: 56
-    Orc: 5, avg lvl: 56.6
-    Dwarf: 2, avg lvl: 30
-    Night Elf: 1, avg lvl: 16
-    Undead: 4, avg lvl: 62.2
-    Tauren: 2, avg lvl: 37.5
-    Gnome: 1, avg lvl: 26
-    Troll: 2, avg lvl: 40
-    Goblin: 3, avg lvl: 61
-    Blood Elf: 4, avg lvl: 41.5
-    Draenei: 4, avg lvl: 30
-    Worgen: 3, avg lvl: 51.6
-    High Elf: 4, avg lvl: 38.2
-Bots class:
-    paladin: 39, avg lvl: 45.8
-Bots role:
-    tank: 1, heal: 0, dps: 38
-Bots status:
-    Active: 5
-    Moving: 1
-    In flight: 0
-    On mount: 7
-    In combat: 3
-    In BG: 0
-    In Rest: 5
-    Dead: 1
-Bots rpg status:
-    Idle: 10, Rest: 3, GoGrind: 6, GoCamp: 2, MoveRandom: 0, MoveNpc: 6, DoQuest: 9, TravelFlight: 3, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 10, Rewarded: 0, Dropped: 0
-Bots engine:
-    Non-combat: 35, Combat: 3, Dead: 1
-Bot GUID Full: 0x0000000000000153 Type: Player Low: 339 A:27 <Keahgevun> revives at body
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Bot GUID Full: 0x0000000000000152 Type: Player Low: 338 H:27 <Mellatha> auto released
-Bot GUID Full: 0x0000000000000152 Type: Player Low: 338 H:27 <Mellatha> releases spirit
-Bot GUID Full: 0x0000000000000152 Type: Player Low: 338 H:27 <Mellatha> revives at body
-Bot GUID Full: 0x0000000000000152 Type: Player Low: 338 H:27 <Mellatha> revives at body
-Bot GUID Full: 0x0000000000000152 Type: Player Low: 338 H:27 <Mellatha> revives at body
-Bot GUID Full: 0x0000000000000152 Type: Player Low: 338 H:27 <Mellatha> revives at body
-[New RPG] Bot Kust select random inn keeper pos Map:0 X:-12431.322 Y:215.49905 Z:2.94848 (2 available in 7)
-[New RPG] Bot Kust select random grind pos Map:0 X:-11700 Y:-450 Z:0 (2+33 available in 496)
-[New RPG] Bot Kust select random flight taxi node from:1387 (node 20) to:18 (1 available)
-[New RPG] Bot Dameloa select random inn keeper pos Map:530 X:282.0043 Y:6093.177 Z:133.071 (3 available in 11)
-[New RPG] Bot Dameloa select random grind pos Map:530 X:600 Y:5300 Z:-50 (12+51 available in 865)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
+Random teleporting bot Mellatha (level 27) to Map: 0 (Eastern Kingdoms) Zone: 267 (Hillsbrad Foothills) Area: 272 (Tarren Mill) ZoneLevel: 0 AreaLevel: 20 -10.573854,-940.3345,57.222317 (1/4 locations)
+Bot #397 <Mundibill>: teleport for level and refresh
+Refreshing bot GUID Full: 0x000000000000018d Type: Player Low: 397 <Mundibill>
+Random teleporting bot Mundibill (level 26) to Map: 0 (Eastern Kingdoms) Zone: 1537 (Ironforge) Area: 1537 (Ironforge) ZoneLevel: 10 AreaLevel: 10 -4899.334,-999.9319,503.9904 (1/1 locations)
+Bot #362 <Salynna>: teleport for level and refresh
+Refreshing bot GUID Full: 0x000000000000016a Type: Player Low: 362 <Salynna>
+Random teleporting bot Salynna (level 73) to Map: 571 (Northrend) Zone: 495 (Howling Fjord) Area: 4003 (Fort Wildervar) ZoneLevel: 70 AreaLevel: 70 2476.5217,-5059.414,284.44077 (1/23 locations)
+Mark bot Ainimdi as dead, will be revived in 88s.
 Bot #377 <Ceale>: teleport for level and refresh
 Refreshing bot GUID Full: 0x0000000000000179 Type: Player Low: 377 <Ceale>
-Random teleporting bot Ceale (level 14) to Map: 530 (Outland) Zone: 3433 (Ghostlands) Area: 3488 (Tranquillien) ZoneLevel: 0 AreaLevel: 10 7555.64,-6892.895,96.07664 (2/5 locations)
-[New RPG] Bot Olette select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 11)
-[New RPG] Bot Olette select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-[New RPG] Bot Gnuthuklink select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Gnuthuklink select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-[New RPG] Kust accept quest 568
-[New RPG] Bot Irra select random inn keeper pos Map:1 X:2726.8015 Y:1494.2 Z:238.093 (1 available in 7)
-[New RPG] Bot Irra select random grind pos Map:1 X:250 Y:250 Z:50 (0+4 available in 1279)
-[New RPG] Bot Irra select random flight taxi node from:4407 (node 33) to:80 (1 available)
-[New RPG] Bot Irra select random inn keeper pos Map:1 X:2726.8015 Y:1494.2 Z:238.093 (1 available in 7)
+Random teleporting bot Ceale (level 15) to Map: 530 (Outland) Zone: 3433 (Ghostlands) Area: 3488 (Tranquillien) ZoneLevel: 0 AreaLevel: 10 7555.64,-6892.895,96.07664 (1/5 locations)
+Bot #347 <Aeveoh>: teleport for level and refresh
+Refreshing bot GUID Full: 0x000000000000015b Type: Player Low: 347 <Aeveoh>
+Random teleporting bot Aeveoh (level 15) to Map: 530 (Outland) Zone: 3525 (Bloodmyst Isle) Area: 3584 (Blood Watch) ZoneLevel: 0 AreaLevel: 10 -2056.332,-11892.904,46.19997 (3/5 locations)
+Bot #345 <Kalidra>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000159 Type: Player Low: 345 <Kalidra>
+Random teleporting bot Kalidra (level 78) to Map: 571 (Northrend) Zone: 210 (Icecrown) Area: 4477 (The Shadow Vault) ZoneLevel: 80 AreaLevel: 80 8494.949,2686.772,652.4034 (1/12 locations)
+Bot #405 <Ireslun>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000195 Type: Player Low: 405 <Ireslun>
+Random teleporting bot Ireslun (level 80) to Map: 571 (Northrend) Zone: 67 (The Storm Peaks) Area: 4418 (K3) ZoneLevel: 77 AreaLevel: 77 6120.427,-1077.9509,402.63684 (1/13 locations)
+Bot #388 <Helriel>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000184 Type: Player Low: 388 <Helriel>
+Random teleporting bot Helriel (level 52) to Map: 1 (Kalimdor) Zone: 440 (Tanaris) Area: 2300 (Caverns of Time) ZoneLevel: 0 AreaLevel: 50 -8154.0947,-4860.675,-24.411476 (1/11 locations)
+Bot #343 <Havogronk>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000157 Type: Player Low: 343 <Havogronk>
+Random teleporting bot Havogronk (level 70) to Map: 530 (Outland) Zone: 4080 (Isle of Quel'Danas) Area: 4087 (Sun's Reach Harbor) ZoneLevel: 70 AreaLevel: 0 12814.011,-7000.912,18.64364 (1/19 locations)
+Bot GUID Full: 0x0000000000000145 Type: Player Low: 325 A:63 <Eramir> auto released
+Bot GUID Full: 0x0000000000000145 Type: Player Low: 325 A:63 <Eramir> releases spirit
+Bot GUID Full: 0x000000000000013f Type: Player Low: 319 A:17 <Ainimdi> revives at body
+[New RPG] Bot Thekem select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 7)
+[New RPG] Bot Thekem select random grind pos Map:1 X:6900 Y:-5000 Z:700 (31+94 available in 860)
+[New RPG] Bot Thekem select random flight taxi node from:11139 (node 53) to:72 (1 available)
+[New RPG] Bot Mellatha select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 4)
+[New RPG] Bot Mellatha select random grind pos Map:0 X:-850 Y:300 Z:50 (7+84 available in 602)
+[New RPG] Bot Aeveoh select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 5)
+[New RPG] Bot Aeveoh select random grind pos Map:530 X:-1950 Y:-11600 Z:50 (52+97 available in 1219)
+[New RPG] Bot Aeveoh select random grind pos Map:530 X:-1900 Y:-12150 Z:0 (52+97 available in 1219)
+[New RPG] Bot Samaryl select random inn keeper pos Map:1 X:897.84534 Y:925.2238 Z:106.864 (1 available in 4)
+[New RPG] Bot Samaryl select random grind pos Map:1 X:600 Y:1550 Z:0 (0+22 available in 449)
+[New RPG] Bot Samaryl select random inn keeper pos Map:1 X:897.84534 Y:925.2238 Z:106.864 (1 available in 4)
+[New RPG] Bot Helriel select random inn keeper pos Map:1 X:-7160.833 Y:-3836.974 Z:9.34809 (1 available in 11)
+[New RPG] Bot Helriel select random grind pos Map:1 X:-8050 Y:-2400 Z:0 (3+66 available in 558)
+[New RPG] Bot Helriel select random inn keeper pos Map:1 X:-7160.833 Y:-3836.974 Z:9.34809 (1 available in 11)
+Bot GUID Full: 0x0000000000000145 Type: Player Low: 325 A:63 <Eramir> revives at body
+Bot #353 <Cimlan>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000161 Type: Player Low: 353 <Cimlan>
+Random teleporting bot Cimlan (level 72) to Map: 571 (Northrend) Zone: 65 (Dragonblight) Area: 4161 (Wyrmrest Temple) ZoneLevel: 0 AreaLevel: 73 3545.5303,277.91348,45.647575 (1/24 locations)
+Bot #348 <Kaerad>: teleport for level and refresh
+Refreshing bot GUID Full: 0x000000000000015c Type: Player Low: 348 <Kaerad>
+Random teleporting bot Kaerad (level 52) to Map: 0 (Eastern Kingdoms) Zone: 28 (Western Plaguelands) Area: 2620 (Thondroril River) ZoneLevel: 0 AreaLevel: 0 1938.6797,-2559.4805,61.656124 (1/9 locations)
+Bot #312 <Flostee>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000138 Type: Player Low: 312 <Flostee>
+Random teleporting bot Flostee (level 29) to Map: 1 (Kalimdor) Zone: 331 (Ashenvale) Area: 431 (Splintertree Post) ZoneLevel: 0 AreaLevel: 25 2338.5798,-2563.2166,103.14348 (1/4 locations)
+Bot #359 <Darius>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000167 Type: Player Low: 359 <Darius>
+Random teleporting bot Darius (level 20) to Map: 530 (Outland) Zone: 3525 (Bloodmyst Isle) Area: 3584 (Blood Watch) ZoneLevel: 0 AreaLevel: 10 -2056.332,-11892.904,46.19997 (1/10 locations)
+Incremental randomizing Irra (level 17 class = 2)...
+Resetting player...
+Initializing skills (step 1)...
+Initializing spells (step 1)...
+Initializing talents...
+Initializing spells (step 2)...
+Initializing reputation...
+Initializing special spells...
+Initializing mounts...
+Initializing equipmemt...
+Initializing bags...
+Initializing ammo...
+Initializing food...
+Initializing potions...
+Initializing reagents...
+Initializing keys...
+Initializing inventory...
+Initializing consumables...
+Initializing glyphs...
+Initializing guilds...
+Initializing pet...
+Saving to DB...
+Initialization Done.
+Bot #310 A:17 <Irra>: randomized
+Bot #368 <Idritarre>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000170 Type: Player Low: 368 <Idritarre>
+Random teleporting bot Idritarre (level 55) to Map: 0 (Eastern Kingdoms) Zone: 1519 (Stormwind City) Area: 1519 (Stormwind City) ZoneLevel: 10 AreaLevel: 10 -8934.032,623.4469,99.57266 (1/1 locations)
+Bot #316 <Damaderon>: teleport for level and refresh
+Refreshing bot GUID Full: 0x000000000000013c Type: Player Low: 316 <Damaderon>
+Random teleporting bot Damaderon (level 69) to Map: 530 (Outland) Zone: 3522 (Blade's Edge Mountains) Area: 3951 (Evergrove) ZoneLevel: 0 AreaLevel: 67 3020.5603,5439.18,146.81895 (1/18 locations)
+Bot #317 <Mydas>: teleport for level and refresh
+Refreshing bot GUID Full: 0x000000000000013d Type: Player Low: 317 <Mydas>
+Random teleporting bot Mydas (level 51) to Map: 530 (Outland) Zone: 3557 (The Exodar) Area: 3557 (The Exodar) ZoneLevel: 10 AreaLevel: 10 -3924.5156,-11550.453,-150.17625 (1/1 locations)
+Bot #404 <Casparald>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000194 Type: Player Low: 404 <Casparald>
+Random teleporting bot Casparald (level 56) to Map: 1 (Kalimdor) Zone: 361 (Felwood) Area: 2479 (Emerald Sanctuary) ZoneLevel: 0 AreaLevel: 48 3979.627,-1316.9385,245.17845 (1/10 locations)
+Incremental randomizing Luncic (level 22 class = 2)...
+Resetting player...
+Initializing skills (step 1)...
+Initializing spells (step 1)...
+Initializing talents...
+Initializing spells (step 2)...
+Initializing reputation...
+Initializing special spells...
+Initializing mounts...
+Initializing equipmemt...
+Initializing bags...
+Initializing ammo...
+Initializing food...
+Initializing potions...
+Initializing reagents...
+Initializing keys...
+Initializing inventory...
+Initializing consumables...
+Initializing glyphs...
+Initializing guilds...
+Initializing pet...
+Saving to DB...
+Initialization Done.
+Bot #346 H:22 <Luncic>: randomized
+Bot #395 <Enrii>: teleport for level and refresh
+Refreshing bot GUID Full: 0x000000000000018b Type: Player Low: 395 <Enrii>
+Random teleporting bot Enrii (level 11) to Map: 530 (Outland) Zone: 3525 (Bloodmyst Isle) Area: 3584 (Blood Watch) ZoneLevel: 0 AreaLevel: 10 -2056.332,-11892.904,46.19997 (2/9 locations)
+Mark bot Eramir as dead, will be revived in 221s.
+[New RPG] Bot Cimlan select random inn keeper pos Map:571 X:3219.1692 Y:-683.9957 Z:168.12 (3 available in 24)
+[New RPG] Bot Cimlan select random grind pos Map:571 X:3100 Y:350 Z:100 (42+448 available in 2696)
+[New RPG] Bot Cimlan select random flight taxi node from:26851 (node 252) to:260 (1 available)
+[New RPG] Bot Ireslun select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
+[New RPG] Bot Ireslun select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
+[New RPG] Bot Keahgevun select random inn keeper pos Map:0 X:-9228.962 Y:-2156.6843 Z:64.5168 (1 available in 6)
+[New RPG] Bot Keahgevun select random grind pos Map:0 X:-9350 Y:-3250 Z:100 (0+23 available in 536)
+[New RPG] Bot Keahgevun select random flight taxi node from:931 (node 5) to:7 (1 available)
+[New RPG] Bot Keahgevun select random inn keeper pos Map:0 X:-9228.962 Y:-2156.6843 Z:64.5168 (1 available in 6)
+[New RPG] Bot Bengren select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 5)
+[New RPG] Bot Bengren select random grind pos Map:0 X:-10300 Y:-1250 Z:50 (7+13 available in 496)
+[New RPG] Bot Bengren select random flight taxi node from:2409 (node 12) to:14 (1 available)
+Bot GUID Full: 0x000000000000013f Type: Player Low: 319 A:17 <Ainimdi> auto released
+Bot GUID Full: 0x000000000000013f Type: Player Low: 319 A:17 <Ainimdi> releases spirit
+Bot GUID Full: 0x000000000000013f Type: Player Low: 319 A:17 <Ainimdi> revives at body
+Bot GUID Full: 0x000000000000013f Type: Player Low: 319 A:17 <Ainimdi> revives at body
+Bot GUID Full: 0x000000000000013f Type: Player Low: 319 A:17 <Ainimdi> revives at body
+[New RPG] Bot Casparald select random inn keeper pos Map:1 X:6208.02 Y:-1948.3518 Z:572.081 (1 available in 10)
+[New RPG] Bot Casparald select random grind pos Map:1 X:5200 Y:-550 Z:300 (0+38 available in 747)
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-Mark bot Mellatha as dead, will be revived in 216s.
-[New RPG] Westerren accept quest 10180
-[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
-[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Ceerin select random inn keeper pos Map:530 X:3062.5857 Y:3696.839 Z:143.062 (1 available in 24)
-[New RPG] Bot Ceerin select random grind pos Map:530 X:3800 Y:3850 Z:100 (0+59 available in 2065)
-[New RPG] Bot Ceerin select random flight taxi node from:19583 (node 139) to:128 (1 available)
-[New RPG] Bot Gnuthuklink select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Gnuthuklink select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Including non-random bot player Squish Metit into random bot update
-Including non-random bot player Humpty Dumpty into random bot update
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Random Bots Stats: 39 online
-Bots level:
-    10..19: 5 alliance, 3 horde
-    20..29: 3 alliance, 1 horde
-    30..39: 2 alliance, 2 horde
-    40..49: 3 alliance, 2 horde
-    50..59: 2 alliance, 3 horde
-    60..69: 2 alliance, 4 horde
-    70..79: 0 alliance, 3 horde
-    80..80: 2 alliance, 2 horde
-Bots race:
-    Human: 4, avg lvl: 56
-    Orc: 5, avg lvl: 56.6
-    Dwarf: 2, avg lvl: 30
-    Night Elf: 1, avg lvl: 16
-    Undead: 4, avg lvl: 62.2
-    Tauren: 2, avg lvl: 37.5
-    Gnome: 1, avg lvl: 26
-    Troll: 2, avg lvl: 40
-    Goblin: 3, avg lvl: 61
-    Blood Elf: 4, avg lvl: 41.5
-    Draenei: 4, avg lvl: 30
-    Worgen: 3, avg lvl: 51.6
-    High Elf: 4, avg lvl: 38.2
-Bots class:
-    paladin: 39, avg lvl: 45.8
-Bots role:
-    tank: 1, heal: 0, dps: 38
-Bots status:
-    Active: 1
-    Moving: 1
-    In flight: 1
-    On mount: 10
-    In combat: 1
-    In BG: 0
-    In Rest: 5
-    Dead: 1
-Bots rpg status:
-    Idle: 5, Rest: 3, GoGrind: 6, GoCamp: 3, MoveRandom: 1, MoveNpc: 9, DoQuest: 9, TravelFlight: 3, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 12, Rewarded: 0, Dropped: 0
-Bots engine:
-    Non-combat: 36, Combat: 2, Dead: 1
+Bot #310 <Irra>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000136 Type: Player Low: 310 <Irra>
+Random teleporting bot Irra (level 17) to Map: 0 (Eastern Kingdoms) Zone: 38 (Loch Modan) Area: 2101 (Stoutlager Inn) ZoneLevel: 0 AreaLevel: 0 -5378.9497,-2969.0193,322.1077 (1/7 locations)
+[New RPG] Bot Salynna select random inn keeper pos Map:530 X:3020.5603 Y:5439.18 Z:147.217 (3 available in 23)
+[New RPG] Bot Salynna select random grind pos Map:530 X:2950 Y:6850 Z:350 (0+78 available in 2065)
+[New RPG] Bot Salynna select random flight taxi node from:21107 (node 156) to:121 (1 available)
+[New RPG] Bot Salynna select random inn keeper pos Map:530 X:2094.0842 Y:6901.0522 Z:183.813 (3 available in 23)
+[New RPG] Bot Kalidra select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 12)
+[New RPG] Bot Kalidra select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 891)
 [New RPG] Bot Ceale select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 5)
-[New RPG] Bot Ceale select random grind pos Map:530 X:7700 Y:-5750 Z:0 (26+130 available in 1239)
-[New RPG] Bot Ceale select random flight taxi node from:16189 (node 83) to:11 (1 available)
-[New RPG] Bot Ceale select random grind pos Map:530 X:7700 Y:-6450 Z:0 (26+130 available in 1239)
-[New RPG] Kust accept quest 9436
-[New RPG] Bot Blanorton select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Blanorton select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 891)
-[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
-[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Damaderon select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 18)
-[New RPG] Bot Damaderon select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 2452)
-[New RPG] Bot Damaderon select random flight taxi node from:1573 (node 6) to:213 (1 available)
-[New RPG] Teleport Atkik from (248.26665,2893.0667,131.2294,530) to (261.3313,3909.5864,76.416115,530) as it stuck when moving far - Zone: 3483 (Hellfire Peninsula)
-Including non-random bot player Humpty Dumpty into random bot update
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> auto released
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> releases spirit
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> revives at body
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> revives at body
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> revives at body
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> revives at body
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> revives at body
-Refreshing bot GUID Full: 0x0000000000000152 Type: Player Low: 338 <Mellatha>
-Random teleporting bot Mellatha for level 27 (4 locations available)
-Random teleporting bot Mellatha (level 27) to Map: 0 (Eastern Kingdoms) Zone: 267 (Hillsbrad Foothills) Area: 272 (Tarren Mill) ZoneLevel: 0 AreaLevel: 20 -10.573854,-940.3345,57.222317 (1/4 locations)
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> revives at body
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> revives at body
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> revives at body
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> revives at body
-[New RPG] Kadimir accept quest 2781
-[New RPG] Kadimir accept quest 2875
-Bot GUID Full: 0x0000000000000179 Type: Player Low: 377 H:14 <Ceale> auto released
-Bot GUID Full: 0x0000000000000179 Type: Player Low: 377 H:14 <Ceale> releases spirit
-[New RPG] Kadimir accept quest 3362
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Bot GUID Full: 0x0000000000000153 Type: Player Low: 339 A:27 <Keahgevun> auto released
-Bot GUID Full: 0x0000000000000153 Type: Player Low: 339 A:27 <Keahgevun> releases spirit
-Refreshing bot GUID Full: 0x0000000000000179 Type: Player Low: 377 <Ceale>
-Random teleporting bot Ceale for level 14 (5 locations available)
-Random teleporting bot Ceale (level 14) to Map: 530 (Outland) Zone: 3433 (Ghostlands) Area: 3488 (Tranquillien) ZoneLevel: 0 AreaLevel: 10 7555.64,-6892.895,96.07664 (1/5 locations)
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> revives at body
-[New RPG] Bot Landraran select random inn keeper pos Map:0 X:-5378.9497 Y:-2969.0193 Z:323.752 (1 available in 7)
-[New RPG] Bot Landraran select random grind pos Map:0 X:-5850 Y:-4150 Z:400 (14+55 available in 1279)
-[New RPG] Bot Landraran select random grind pos Map:0 X:-5650 Y:-3200 Z:300 (14+55 available in 1279)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> auto released
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> releases spirit
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Refreshing bot GUID Full: 0x0000000000000153 Type: Player Low: 339 <Keahgevun>
-Random teleporting bot Keahgevun for level 27 (6 locations available)
-Random teleporting bot Keahgevun (level 27) to Map: 0 (Eastern Kingdoms) Zone: 267 (Hillsbrad Foothills) Area: 271 (Southshore) ZoneLevel: 0 AreaLevel: 22 -857.0087,-565.7517,11.114945 (1/6 locations)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Kust select random inn keeper pos Map:0 X:-12431.322 Y:215.49905 Z:2.94848 (2 available in 7)
-[New RPG] Bot Kust select random grind pos Map:0 X:-11550 Y:-650 Z:50 (2+33 available in 496)
-[New RPG] Bot Kust select random flight taxi node from:1387 (node 20) to:13 (1 available)
-[New RPG] Cihwamio accept quest 5601
-[New RPG] Bot Westorn select random inn keeper pos Map:1 X:-7160.833 Y:-3836.974 Z:9.34809 (1 available in 7)
-[New RPG] Bot Westorn select random grind pos Map:1 X:-7250 Y:-4600 Z:0 (0+33 available in 512)
-[New RPG] Kust accept quest 581
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Random Bots Stats: 39 online
-Bots level:
-    10..19: 5 alliance, 3 horde
-    20..29: 3 alliance, 1 horde
-    30..39: 2 alliance, 2 horde
-    40..49: 3 alliance, 2 horde
-    50..59: 2 alliance, 3 horde
-    60..69: 2 alliance, 4 horde
-    70..79: 0 alliance, 3 horde
-    80..80: 2 alliance, 2 horde
-Bots race:
-    Human: 4, avg lvl: 56
-    Orc: 5, avg lvl: 56.6
-    Dwarf: 2, avg lvl: 30
-    Night Elf: 1, avg lvl: 16
-    Undead: 4, avg lvl: 62.2
-    Tauren: 2, avg lvl: 37.5
-    Gnome: 1, avg lvl: 26
-    Troll: 2, avg lvl: 40
-    Goblin: 3, avg lvl: 61
-    Blood Elf: 4, avg lvl: 41.5
-    Draenei: 4, avg lvl: 30
-    Worgen: 3, avg lvl: 51.6
-    High Elf: 4, avg lvl: 38.2
-Bots class:
-    paladin: 39, avg lvl: 45.8
-Bots role:
-    tank: 1, heal: 0, dps: 38
-Bots status:
-    Active: 5
-    Moving: 4
-    In flight: 2
-    On mount: 10
-    In combat: 1
-    In BG: 0
-    In Rest: 5
-    Dead: 1
-Bots rpg status:
-    Idle: 6, Rest: 3, GoGrind: 6, GoCamp: 2, MoveRandom: 1, MoveNpc: 8, DoQuest: 10, TravelFlight: 3, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 18, Rewarded: 0, Dropped: 0
-Bots engine:
-    Non-combat: 35, Combat: 3, Dead: 1
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> revives at body
-Bot GUID Full: 0x0000000000000136 Type: Player Low: 310 A:16 <Irra> auto released
-Bot GUID Full: 0x0000000000000136 Type: Player Low: 310 A:16 <Irra> releases spirit
-[New RPG] Bot Dameloa select random inn keeper pos Map:530 X:282.0043 Y:6093.177 Z:133.071 (3 available in 11)
-[New RPG] Bot Dameloa select random grind pos Map:530 X:350 Y:5350 Z:0 (12+51 available in 865)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Keahgevun select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 6)
-[New RPG] Bot Keahgevun select random grind pos Map:0 X:-800 Y:-200 Z:50 (23+68 available in 602)
-[New RPG] Bot Keahgevun select random flight taxi node from:2432 (node 14) to:5 (1 available)
-[New RPG] Bot Crondiggold select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 7)
-[New RPG] Bot Crondiggold select random grind pos Map:0 X:-1000 Y:-3300 Z:50 (13+59 available in 457)
-[New RPG] Bot Crondiggold select random flight taxi node from:2851 (node 17) to:20 (1 available)
-[New RPG] Bot Ceale select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 5)
-[New RPG] Bot Ceale select random grind pos Map:530 X:7900 Y:-6550 Z:50 (26+130 available in 1239)
+[New RPG] Bot Ceale select random grind pos Map:530 X:7550 Y:-6600 Z:0 (23+113 available in 1219)
 [New RPG] Bot Ceale select random flight taxi node from:16189 (node 83) to:205 (1 available)
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-Mark bot Irra as dead, will be revived in 255s.
-[New RPG] Bot Ireslun select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Ireslun select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> auto released
-Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:19 <Darius> releases spirit
-Mark bot Darius as dead, will be revived in 225s.
-Refreshing bot GUID Full: 0x0000000000000167 Type: Player Low: 359 <Darius>
-Random teleporting bot Darius for level 19 (9 locations available)
-Random teleporting bot Darius (level 19) to Map: 530 (Outland) Zone: 3525 (Bloodmyst Isle) Area: 3584 (Blood Watch) ZoneLevel: 0 AreaLevel: 10 -2056.332,-11892.904,46.19997 (1/9 locations)
-[New RPG] Bot Mundibill select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 6)
-[New RPG] Bot Mundibill select random grind pos Map:0 X:-500 Y:-1800 Z:50 (20+69 available in 583)
-[New RPG] Bot Mundibill select random flight taxi node from:2432 (node 14) to:7 (1 available)
-[New RPG] Bot Darius select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
-[New RPG] Bot Darius select random grind pos Map:530 X:-1400 Y:-10600 Z:100 (3+117 available in 1078)
-Bot GUID Full: 0x000000000000014f Type: Player Low: 335 A:41 <Westorn> auto released
-Bot GUID Full: 0x000000000000014f Type: Player Low: 335 A:41 <Westorn> releases spirit
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Gnuthuklink select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Gnuthuklink select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-[New RPG] Bot Mellatha select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 4)
-[New RPG] Bot Mellatha select random grind pos Map:0 X:-800 Y:300 Z:50 (7+84 available in 602)
-[New RPG] Cihwamio accept quest 6603
-[New RPG] Cihwamio accept quest 3783
-[New RPG] Bot Celda select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 11)
-[New RPG] Bot Celda select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
-[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Havogronk select random inn keeper pos Map:571 X:437.74115 Y:-4555.378 Z:246.209 (2 available in 19)
-[New RPG] Bot Havogronk select random grind pos Map:571 X:300 Y:-3100 Z:50 (9+396 available in 2729)
-[New RPG] Bot Havogronk select random flight taxi node from:28197 (node 295) to:258 (1 available)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Mundibill accept quest 9435
-[New RPG] Bot Galerio select random inn keeper pos Map:0 X:-10482.327 Y:-3258.3174 Z:21.6127 (1 available in 12)
-[New RPG] Bot Galerio select random grind pos Map:0 X:-10400 Y:-4400 Z:0 (0+26 available in 505)
-[New RPG] Bot Galerio select random flight taxi node from:6026 (node 56) to:11 (1 available)
-[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
-[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Mark bot Westorn as dead, will be revived in 207s.
-[New RPG] Blanorton marked as abandoned quest 1470
-Bot GUID Full: 0x000000000000014f Type: Player Low: 335 A:41 <Westorn> revives at body
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Blanorton select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Blanorton select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 891)
-[New RPG] Kaerad marked as abandoned quest 3128
-[New RPG] Bot Kaerad select random inn keeper pos Map:1 X:-4455.727 Y:245.14604 Z:39.6908 (1 available in 9)
-[New RPG] Bot Kaerad select random grind pos Map:1 X:-3850 Y:1600 Z:150 (0+1 available in 558)
-Random Bots Stats: 39 online
+Bot GUID Full: 0x000000000000013f Type: Player Low: 319 A:17 <Ainimdi> revives at body
+[New RPG] Bot Kamig select random inn keeper pos Map:530 X:3020.5603 Y:5439.18 Z:147.217 (3 available in 21)
+[New RPG] Bot Kamig select random grind pos Map:530 X:2800 Y:7000 Z:350 (0+139 available in 2977)
+[New RPG] Bot Kamig select random flight taxi node from:18937 (node 125) to:156 (1 available)
+[New RPG] Bot Kamig select random grind pos Map:530 X:3900 Y:5950 Z:250 (0+139 available in 2977)
+Random Bots Stats: 40 online
 Bots level:
-    10..19: 5 alliance, 3 horde
-    20..29: 3 alliance, 1 horde
-    30..39: 2 alliance, 2 horde
-    40..49: 3 alliance, 2 horde
-    50..59: 2 alliance, 3 horde
-    60..69: 2 alliance, 4 horde
-    70..79: 0 alliance, 3 horde
-    80..80: 2 alliance, 2 horde
+    10..19: 4 alliance, 2 horde
+    20..29: 3 alliance, 4 horde
+    30..39: 2 alliance, 1 horde
+    40..49: 1 alliance, 1 horde
+    50..59: 4 alliance, 4 horde
+    60..69: 2 alliance, 2 horde
+    70..79: 3 alliance, 4 horde
+    80..80: 1 alliance, 2 horde
 Bots race:
-    Human: 4, avg lvl: 56
-    Orc: 5, avg lvl: 56.6
-    Dwarf: 2, avg lvl: 30
-    Night Elf: 1, avg lvl: 16
-    Undead: 4, avg lvl: 62.2
-    Tauren: 2, avg lvl: 37.5
+    Human: 1, avg lvl: 69
+    Orc: 5, avg lvl: 71.6
+    Dwarf: 4, avg lvl: 37.2
+    Night Elf: 5, avg lvl: 46
+    Undead: 2, avg lvl: 49
+    Tauren: 4, avg lvl: 38
     Gnome: 1, avg lvl: 26
-    Troll: 2, avg lvl: 40
-    Goblin: 3, avg lvl: 61
-    Blood Elf: 4, avg lvl: 41.5
-    Draenei: 4, avg lvl: 30
-    Worgen: 3, avg lvl: 51.6
-    High Elf: 4, avg lvl: 38.2
+    Troll: 1, avg lvl: 64
+    Goblin: 2, avg lvl: 47
+    Blood Elf: 6, avg lvl: 43.3
+    Draenei: 3, avg lvl: 24
+    Worgen: 4, avg lvl: 54.7
+    High Elf: 2, avg lvl: 65
 Bots class:
-    paladin: 39, avg lvl: 45.8
+    paladin: 40, avg lvl: 48
 Bots role:
-    tank: 1, heal: 0, dps: 38
-Bots status:
-    Active: 8
-    Moving: 1
-    In flight: 0
-    On mount: 9
-    In combat: 6
-    In BG: 0
-    In Rest: 5
-    Dead: 1
-Bots rpg status:
-    Idle: 1, Rest: 2, GoGrind: 5, GoCamp: 2, MoveRandom: 1, MoveNpc: 12, DoQuest: 14, TravelFlight: 2, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 21, Rewarded: 0, Dropped: 0
-Bots engine:
-    Non-combat: 31, Combat: 7, Dead: 1
-Bot GUID Full: 0x0000000000000136 Type: Player Low: 310 A:16 <Irra> revives at body
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Olette select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 11)
-[New RPG] Bot Olette select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-Bot GUID Full: 0x0000000000000136 Type: Player Low: 310 A:16 <Irra> auto released
-Bot GUID Full: 0x0000000000000136 Type: Player Low: 310 A:16 <Irra> releases spirit
-[New RPG] Huflemak accept quest 1707
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Bot GUID Full: 0x000000000000014f Type: Player Low: 335 A:41 <Westorn> auto released
-Bot GUID Full: 0x000000000000014f Type: Player Low: 335 A:41 <Westorn> releases spirit
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Including non-random bot player Squish Metit into random bot update
-Refreshing bot GUID Full: 0x0000000000000136 Type: Player Low: 310 <Irra>
-Random teleporting bot Irra for level 16 (7 locations available)
-Random teleporting bot Irra (level 16) to Map: 1 (Kalimdor) Zone: 406 (Stonetalon Mountains) Area: 467 (Stonetalon Peak) ZoneLevel: 0 AreaLevel: 25 2726.8015,1494.2,238.548 (3/7 locations)
-[New RPG] Bot Crondiggold select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 7)
-[New RPG] Bot Crondiggold select random grind pos Map:0 X:-1200 Y:-2300 Z:50 (12+60 available in 457)
-[New RPG] Bot Crondiggold select random flight taxi node from:2851 (node 17) to:18 (1 available)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Bot #342 <Lucini>: teleport for level and refresh
-Refreshing bot GUID Full: 0x0000000000000156 Type: Player Low: 342 <Lucini>
-Random teleporting bot Lucini (level 54) to Map: 1 (Kalimdor) Zone: 361 (Felwood) Area: 1998 (Talonbranch Glade ) ZoneLevel: 0 AreaLevel: 53 6208.02,-1948.3518,571.2224 (1/10 locations)
-[New RPG] Bot Darius select random inn keeper pos Map:530 X:-2056.332 Y:-11892.904 Z:46.2415 (1 available in 9)
-[New RPG] Bot Darius select random grind pos Map:530 X:-2050 Y:-11500 Z:50 (1+119 available in 1078)
-[New RPG] Bot Jalelle select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 19)
-[New RPG] Bot Jalelle select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 2088)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Bot GUID Full: 0x0000000000000191 Type: Player Low: 401 A:21 <Ceevia> auto released
-Bot GUID Full: 0x0000000000000191 Type: Player Low: 401 A:21 <Ceevia> releases spirit
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Refreshing bot GUID Full: 0x000000000000014f Type: Player Low: 335 <Westorn>
-Random teleporting bot Westorn for level 41 (7 locations available)
-Random teleporting bot Westorn (level 41) to Map: 1 (Kalimdor) Zone: 440 (Tanaris) Area: 976 (Gadgetzan) ZoneLevel: 0 AreaLevel: 40 -7160.833,-3836.974,8.685357 (1/7 locations)
-[New RPG] Bot Blanorton select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Blanorton select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 891)
-[New RPG] Bot Westerren select random inn keeper pos Map:530 X:-2622.2158 Y:4445.319 Z:36.6768 (2 available in 19)
-[New RPG] Bot Westerren select random grind pos Map:530 X:-1450 Y:4200 Z:250 (0+152 available in 2452)
-[New RPG] Bot Westerren select random flight taxi node from:18940 (node 128) to:127 (1 available)
-[New RPG] Bot Westerren select random inn keeper pos Map:530 X:-2622.2158 Y:4445.319 Z:36.6768 (2 available in 19)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Mark bot Ceevia as dead, will be revived in 279s.
-Random Bots Stats: 39 online
-Bots level:
-    10..19: 5 alliance, 3 horde
-    20..29: 3 alliance, 1 horde
-    30..39: 2 alliance, 2 horde
-    40..49: 3 alliance, 2 horde
-    50..59: 2 alliance, 3 horde
-    60..69: 2 alliance, 4 horde
-    70..79: 0 alliance, 3 horde
-    80..80: 2 alliance, 2 horde
-Bots race:
-    Human: 4, avg lvl: 56
-    Orc: 5, avg lvl: 56.6
-    Dwarf: 2, avg lvl: 30
-    Night Elf: 1, avg lvl: 16
-    Undead: 4, avg lvl: 62.2
-    Tauren: 2, avg lvl: 37.5
-    Gnome: 1, avg lvl: 26
-    Troll: 2, avg lvl: 40
-    Goblin: 3, avg lvl: 61
-    Blood Elf: 4, avg lvl: 41.5
-    Draenei: 4, avg lvl: 30
-    Worgen: 3, avg lvl: 51.6
-    High Elf: 4, avg lvl: 38.2
-Bots class:
-    paladin: 39, avg lvl: 45.8
-Bots role:
-    tank: 1, heal: 0, dps: 38
+    tank: 1, heal: 0, dps: 39
 Bots status:
     Active: 2
     Moving: 1
     In flight: 1
-    On mount: 10
+    On mount: 11
+    In combat: 2
+    In BG: 0
+    In Rest: 11
+    Dead: 1
+Bots rpg status:
+    Idle: 26, Rest: 1, GoGrind: 2, GoCamp: 4, MoveRandom: 0, MoveNpc: 3, DoQuest: 4, TravelFlight: 0, OutdoorPvP: 0
+Bots total quests:
+    Accepted: 0, Rewarded: 0, Dropped: 0
+Bots engine:
+    Non-combat: 37, Combat: 2, Dead: 1
+[New RPG] Bot Darius select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 10)
+[New RPG] Bot Darius select random grind pos Map:530 X:-2100 Y:-11400 Z:50 (2+76 available in 1045)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Bot GUID Full: 0x000000000000013f Type: Player Low: 319 A:17 <Ainimdi> auto released
+Bot GUID Full: 0x000000000000013f Type: Player Low: 319 A:17 <Ainimdi> releases spirit
+[New RPG] Bot Flostee select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 4)
+[New RPG] Bot Flostee select random grind pos Map:1 X:2050 Y:-2300 Z:100 (22+63 available in 449)
+[New RPG] Bot Flostee select random flight taxi node from:12616 (node 61) to:58 (1 available)
+[New RPG] Bot Truhlnush select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
+[New RPG] Bot Truhlnush select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1286)
+Refreshing bot GUID Full: 0x000000000000013f Type: Player Low: 319 <Ainimdi>
+Random teleporting bot Ainimdi for level 17 (7 locations available)
+Random teleporting bot Ainimdi (level 17) to Map: 1 (Kalimdor) Zone: 148 (Darkshore) Area: 442 (Auberdine) ZoneLevel: 0 AreaLevel: 12 6407.9717,520.1485,8.704459 (2/7 locations)
+[New RPG] Bot Idritarre select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 10)
+[New RPG] Bot Idritarre select random grind pos Map:0 X:-8150 Y:-1600 Z:150 (0+12 available in 783)
+[New RPG] Bot Idritarre select random flight taxi node from:352 (node 2) to:383 (1 available)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Bot #319 <Ainimdi>: teleport for level and refresh
+Refreshing bot GUID Full: 0x000000000000013f Type: Player Low: 319 <Ainimdi>
+Random teleporting bot Ainimdi (level 17) to Map: 0 (Eastern Kingdoms) Zone: 44 (Redridge Mountains) Area: 69 (Lakeshire) ZoneLevel: 0 AreaLevel: 15 -9228.962,-2156.6843,63.78079 (1/7 locations)
+[New RPG] Bot Maine select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Maine select random grind pos Map:1 X:-4550 Y:1850 Z:100 (0+91 available in 480)
+[New RPG] Bot Maine select random grind pos Map:1 X:-4950 Y:1200 Z:50 (0+91 available in 480)
+[New RPG] Bot Vahaa select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
+[New RPG] Bot Vahaa select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1286)
+[New RPG] Maine accept quest 2982
+[New RPG] Maine drop quest 6624
+[New RPG] Maine drop quest 348
+[New RPG] Maine drop quest 617
+[New RPG] Maine drop quest 621
+[New RPG] Maine drop quest 992
+[New RPG] Maine drop quest 1691
+[New RPG] Maine drop quest 1707
+[New RPG] Maine drop quest 2605
+[New RPG] Maine drop quest 2741
+[New RPG] Maine drop quest 2781
+[New RPG] Maine drop quest 2847
+[New RPG] Maine drop quest 2872
+[New RPG] Maine drop quest 2875
+[New RPG] Maine drop quest 2877
+[New RPG] Maine drop quest 2880
+[New RPG] Maine drop quest 3022
+[New RPG] Maine drop quest 5535
+[New RPG] Maine drop quest 5536
+[New RPG] Maine drop quest 5863
+[New RPG] Maine drop quest 6610
+[New RPG] Maine drop quest 9470
+[New RPG] Maine drop quest 9471
+[New RPG] Maine accept quest 2939
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Bot Nelaedon select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 3)
+[New RPG] Bot Nelaedon select random grind pos Map:0 X:-1150 Y:-850 Z:0 (20+17 available in 544)
+[New RPG] Bot Nelaedon select random flight taxi node from:2432 (node 14) to:16 (1 available)
+[New RPG] Bot Nelaedon select random grind pos Map:0 X:-1000 Y:-400 Z:0 (20+17 available in 544)
+Bot #346 <Luncic>: teleport for level and refresh
+Refreshing bot GUID Full: 0x000000000000015a Type: Player Low: 346 <Luncic>
+Random teleporting bot Luncic (level 22) to Map: 0 (Eastern Kingdoms) Zone: 130 (Silverpine Forest) Area: 228 (The Sepulcher) ZoneLevel: 0 AreaLevel: 10 508.9623,1631.8674,125.720955 (1/8 locations)
+[New RPG] Nelaedon turned in quest 536
+Bot GUID Full: 0x0000000000000145 Type: Player Low: 325 A:63 <Eramir> revives at body
+[New RPG] Bot Bellania select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
+[New RPG] Bot Bellania select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bot Bengren select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 5)
+[New RPG] Bot Bengren select random grind pos Map:0 X:-10950 Y:-1100 Z:50 (7+13 available in 496)
+[New RPG] Bot Bengren select random flight taxi node from:2409 (node 12) to:16 (1 available)
+[New RPG] Bot Bengren select random grind pos Map:0 X:-10300 Y:-1300 Z:50 (7+13 available in 496)
+[New RPG] Bot Mydas select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 12)
+[New RPG] Bot Mydas select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 610)
+Including non-random bot player Drako Tresitia into random bot update
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Bot #325 <Eramir>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000145 Type: Player Low: 325 <Eramir>
+Random teleporting bot Eramir (level 63) to Map: 530 (Outland) Zone: 3703 (Shattrath City) Area: 3703 (Shattrath City) ZoneLevel: 0 AreaLevel: 0 -1723.5325,5508.154,-9.749471 (1/1 locations)
+[New RPG] Bot Luncic select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 8)
+[New RPG] Bot Luncic select random grind pos Map:0 X:-750 Y:1500 Z:0 (0+55 available in 766)
+[New RPG] Bot Luncic select random flight taxi node from:2226 (node 10) to:205 (1 available)
+[New RPG] Bot Luncic select random flight taxi node from:2226 (node 10) to:13 (1 available)
+[New RPG] Bot Eramir select random inn keeper pos Map:530 X:224.13017 Y:4334.0786 Z:119.841 (4 available in 7)
+[New RPG] Bot Eramir select random grind pos Map:530 X:-2950 Y:5400 Z:0 (0+504 available in 1117)
+[New RPG] Bot Eramir select random flight taxi node from:18940 (node 128) to:100 (1 available)
+[New RPG] Bot Mellatha select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 4)
+[New RPG] Bot Mellatha select random grind pos Map:0 X:-700 Y:-1200 Z:50 (8+83 available in 602)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bot Alathalis select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 7)
+[New RPG] Bot Alathalis select random grind pos Map:1 X:-200 Y:1750 Z:100 (0+129 available in 496)
+[New RPG] Bot Alathalis select random flight taxi node from:2995 (node 22) to:58 (1 available)
+[New RPG] Bot Alathalis select random flight taxi node from:2995 (node 22) to:30 (1 available)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Bot Cihwamio select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 7)
+[New RPG] Bot Cihwamio select random grind pos Map:0 X:-8050 Y:-1850 Z:150 (12+33 available in 800)
+[New RPG] Bot Cihwamio select random flight taxi node from:13177 (node 70) to:383 (1 available)
+[New RPG] Bot Cihwamio select random grind pos Map:0 X:-7650 Y:-2350 Z:150 (12+33 available in 800)
+Bot GUID Full: 0x0000000000000161 Type: Player Low: 353 H:72 <Cimlan> auto released
+Bot GUID Full: 0x0000000000000161 Type: Player Low: 353 H:72 <Cimlan> releases spirit
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Bot Bily select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 11)
+[New RPG] Bot Bily select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
+[New RPG] Bot Westerren select random inn keeper pos Map:571 X:437.74115 Y:-4555.378 Z:246.209 (2 available in 19)
+[New RPG] Bot Westerren select random grind pos Map:571 X:2150 Y:-6100 Z:0 (45+385 available in 2452)
+[New RPG] Bot Westerren select random flight taxi node from:27344 (node 191) to:310 (1 available)
+[New RPG] Bot Kaerad select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Kaerad select random grind pos Map:0 X:1050 Y:-1950 Z:50 (0+42 available in 558)
+[New RPG] Bot Kaerad select random flight taxi node from:37888 (node 383) to:70 (1 available)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Mark bot Cimlan as dead, will be revived in 109s.
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bot Mellatha select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 4)
+[New RPG] Bot Mellatha select random grind pos Map:0 X:-450 Y:150 Z:50 (8+83 available in 602)
+[New RPG] Bot Mellatha select random grind pos Map:0 X:-900 Y:-1000 Z:50 (8+83 available in 602)
+[New RPG] Bot Kaerad select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Kaerad select random grind pos Map:0 X:1700 Y:-1000 Z:100 (0+42 available in 558)
+[New RPG] Bot Kaerad select random flight taxi node from:37888 (node 383) to:11 (1 available)
+[New RPG] Bot Kaerad select random flight taxi node from:37888 (node 383) to:70 (1 available)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Random Bots Stats: 40 online
+Bots level:
+    10..19: 4 alliance, 2 horde
+    20..29: 3 alliance, 4 horde
+    30..39: 2 alliance, 1 horde
+    40..49: 1 alliance, 1 horde
+    50..59: 4 alliance, 4 horde
+    60..69: 2 alliance, 2 horde
+    70..79: 3 alliance, 4 horde
+    80..80: 1 alliance, 2 horde
+Bots race:
+    Human: 1, avg lvl: 69
+    Orc: 5, avg lvl: 71.6
+    Dwarf: 4, avg lvl: 37.2
+    Night Elf: 5, avg lvl: 46
+    Undead: 2, avg lvl: 49
+    Tauren: 4, avg lvl: 38
+    Gnome: 1, avg lvl: 26
+    Troll: 1, avg lvl: 64
+    Goblin: 2, avg lvl: 47
+    Blood Elf: 6, avg lvl: 43.3
+    Draenei: 3, avg lvl: 24
+    Worgen: 4, avg lvl: 54.7
+    High Elf: 2, avg lvl: 65
+Bots class:
+    paladin: 40, avg lvl: 48
+Bots role:
+    tank: 1, heal: 0, dps: 39
+Bots status:
+    Active: 6
+    Moving: 5
+    In flight: 4
+    On mount: 15
     In combat: 1
     In BG: 0
-    In Rest: 5
+    In Rest: 10
     Dead: 1
 Bots rpg status:
-    Idle: 3, Rest: 2, GoGrind: 4, GoCamp: 2, MoveRandom: 2, MoveNpc: 12, DoQuest: 13, TravelFlight: 1, OutdoorPvP: 0
+    Idle: 10, Rest: 2, GoGrind: 7, GoCamp: 3, MoveRandom: 0, MoveNpc: 9, DoQuest: 6, TravelFlight: 3, OutdoorPvP: 0
 Bots total quests:
-    Accepted: 22, Rewarded: 0, Dropped: 0
+    Accepted: 2, Rewarded: 1, Dropped: 22
 Bots engine:
-    Non-combat: 32, Combat: 6, Dead: 1
-Including non-random bot player Loong Arms into random bot update
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Bot GUID Full: 0x0000000000000191 Type: Player Low: 401 A:21 <Ceevia> revives at body
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Kaerad select random inn keeper pos Map:1 X:-4455.727 Y:245.14604 Z:39.6908 (1 available in 9)
-[New RPG] Bot Kaerad select random grind pos Map:1 X:-3850 Y:1600 Z:150 (0+1 available in 558)
-[New RPG] Bot Kaerad select random inn keeper pos Map:1 X:-4455.727 Y:245.14604 Z:39.6908 (1 available in 9)
-Bot GUID Full: 0x0000000000000191 Type: Player Low: 401 A:21 <Ceevia> auto released
-Bot GUID Full: 0x0000000000000191 Type: Player Low: 401 A:21 <Ceevia> releases spirit
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Bot #387 <Galerio>: teleport for level and refresh
-Refreshing bot GUID Full: 0x0000000000000183 Type: Player Low: 387 <Galerio>
-Random teleporting bot Galerio (level 45) to Map: 1 (Kalimdor) Zone: 440 (Tanaris) Area: 2300 (Caverns of Time) ZoneLevel: 0 AreaLevel: 50 -8154.0947,-4860.675,-24.411476 (1/12 locations)
-[New RPG] Bot Gnuthuklink select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Gnuthuklink select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-[New RPG] Bot Casparald select random inn keeper pos Map:1 X:-6115.034 Y:-1142.5419 Z:-186.366 (1 available in 10)
-[New RPG] Bot Casparald select random grind pos Map:1 X:-7700 Y:-850 Z:-250 (12+28 available in 747)
-[New RPG] Bot Casparald select random flight taxi node from:10583 (node 79) to:73 (1 available)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Darius select random inn keeper pos Map:530 X:-2056.332 Y:-11892.904 Z:46.2415 (1 available in 9)
-[New RPG] Bot Darius select random grind pos Map:530 X:-2050 Y:-11500 Z:50 (1+119 available in 1078)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Jalelle select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 19)
-[New RPG] Bot Jalelle select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 2088)
-Bot #394 <Landraran>: teleport for level and refresh
-Refreshing bot GUID Full: 0x000000000000018a Type: Player Low: 394 <Landraran>
-Random teleporting bot Landraran (level 16) to Map: 0 (Eastern Kingdoms) Zone: 44 (Redridge Mountains) Area: 69 (Lakeshire) ZoneLevel: 0 AreaLevel: 15 -9228.962,-2156.6843,63.78079 (3/7 locations)
-[New RPG] Bot Bengren select random inn keeper pos Map:1 X:2776.9197 Y:-430.3474 Z:117.165 (1 available in 5)
-[New RPG] Bot Bengren select random grind pos Map:1 X:1600 Y:-1450 Z:150 (0+3 available in 496)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
-[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
-[New RPG] Bot Ceerin select random inn keeper pos Map:530 X:3062.5857 Y:3696.839 Z:143.062 (1 available in 24)
-[New RPG] Bot Ceerin select random grind pos Map:530 X:4000 Y:4000 Z:200 (0+59 available in 2065)
-[New RPG] Bot Ceerin select random flight taxi node from:19583 (node 139) to:128 (1 available)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Kadimir accept quest 3022
-[New RPG] Kadimir accept quest 2741
-[New RPG] Bot Ireslun select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Ireslun select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-[New RPG] Bot Olette select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 11)
-[New RPG] Bot Olette select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Kadimir accept quest 5863
-[New RPG] Kadimir drop quest 4125
-[New RPG] Kadimir drop quest 1718
-[New RPG] Kadimir drop quest 2821
-[New RPG] Kadimir drop quest 2939
-[New RPG] Kadimir drop quest 2982
-[New RPG] Kadimir drop quest 5155
-[New RPG] Kadimir drop quest 6625
-[New RPG] Kadimir drop quest 7702
-[New RPG] Kadimir drop quest 7722
-[New RPG] Kadimir drop quest 7723
-[New RPG] Kadimir drop quest 7724
-[New RPG] Kadimir drop quest 7727
-[New RPG] Kadimir drop quest 8460
-[New RPG] Kadimir drop quest 9462
-[New RPG] Kadimir drop quest 9551
-[New RPG] Kadimir drop quest 6610
-[New RPG] Bot Mundibill select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 6)
-[New RPG] Bot Mundibill select random grind pos Map:0 X:-600 Y:-900 Z:50 (20+69 available in 583)
-[New RPG] Bot Mundibill select random flight taxi node from:2432 (node 14) to:5 (1 available)
-[New RPG] Kadimir accept quest 6610
-[New RPG] Bot Jalelle select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 19)
-[New RPG] Bot Jalelle select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 2088)
-Random Bots Stats: 39 online
-Bots level:
-    10..19: 5 alliance, 3 horde
-    20..29: 3 alliance, 1 horde
-    30..39: 2 alliance, 2 horde
-    40..49: 3 alliance, 2 horde
-    50..59: 2 alliance, 3 horde
-    60..69: 2 alliance, 4 horde
-    70..79: 0 alliance, 3 horde
-    80..80: 2 alliance, 2 horde
-Bots race:
-    Human: 4, avg lvl: 56
-    Orc: 5, avg lvl: 56.6
-    Dwarf: 2, avg lvl: 30
-    Night Elf: 1, avg lvl: 16
-    Undead: 4, avg lvl: 62.2
-    Tauren: 2, avg lvl: 37.5
-    Gnome: 1, avg lvl: 26
-    Troll: 2, avg lvl: 40
-    Goblin: 3, avg lvl: 61
-    Blood Elf: 4, avg lvl: 41.5
-    Draenei: 4, avg lvl: 30
-    Worgen: 3, avg lvl: 51.6
-    High Elf: 4, avg lvl: 38.2
-Bots class:
-    paladin: 39, avg lvl: 45.8
-Bots role:
-    tank: 1, heal: 0, dps: 38
-Bots status:
-    Active: 2
-    Moving: 0
-    In flight: 0
-    On mount: 10
-    In combat: 0
-    In BG: 0
-    In Rest: 5
-    Dead: 1
-Bots rpg status:
-    Idle: 7, Rest: 3, GoGrind: 3, GoCamp: 3, MoveRandom: 2, MoveNpc: 9, DoQuest: 12, TravelFlight: 0, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 26, Rewarded: 0, Dropped: 16
-Bots engine:
-    Non-combat: 37, Combat: 1, Dead: 1
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Shernia select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 4)
-[New RPG] Bot Shernia select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 654)
-[New RPG] Bot Shernia select random flight taxi node from:1573 (node 6) to:195 (1 available)
-[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
-[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-[New RPG] Bot Irra select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 7)
-[New RPG] Bot Irra select random grind pos Map:1 X:450 Y:600 Z:100 (0+2 available in 1279)
-[New RPG] Bot Irra select random flight taxi node from:4407 (node 33) to:80 (1 available)
-[New RPG] Bot Irra select random grind pos Map:1 X:450 Y:600 Z:100 (0+2 available in 1279)
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Mark bot Casparald as dead, will be revived in 112s.
-Refreshing bot GUID Full: 0x0000000000000191 Type: Player Low: 401 <Ceevia>
-Random teleporting bot Ceevia for level 21 (10 locations available)
-Random teleporting bot Ceevia (level 21) to Map: 0 (Eastern Kingdoms) Zone: 10 (Duskwood) Area: 42 (Darkshire) ZoneLevel: 0 AreaLevel: 25 -10519.146,-1165.0957,27.796074 (2/10 locations)
+    Non-combat: 37, Combat: 2, Dead: 1
 [New RPG] Bot Damaderon select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 18)
 [New RPG] Bot Damaderon select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 2452)
-[New RPG] Bot Damaderon select random flight taxi node from:1573 (node 6) to:213 (1 available)
-[New RPG] Bot Damaderon select random flight taxi node from:1573 (node 6) to:213 (1 available)
-[New RPG] Bot Atkik select random inn keeper pos Map:530 X:-573.1212 Y:4148.6943 Z:68.717 (2 available in 7)
-[New RPG] Bot Atkik select random grind pos Map:530 X:400 Y:3500 Z:50 (36+386 available in 1154)
-Bot GUID Full: 0x0000000000000194 Type: Player Low: 404 A:56 <Casparald> auto released
-Bot GUID Full: 0x0000000000000194 Type: Player Low: 404 A:56 <Casparald> releases spirit
+[New RPG] Bot Damaderon select random flight taxi node from:1573 (node 6) to:2 (1 available)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
+[New RPG] Maine accept quest 4125
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bot Havogronk select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 19)
+[New RPG] Bot Havogronk select random grind pos Map:530 X:12750 Y:-6500 Z:0 (68+8 available in 2729)
+[New RPG] Bot Havogronk select random grind pos Map:530 X:12750 Y:-6900 Z:0 (68+8 available in 2729)
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-[New RPG] Bot Cihwamio select random inn keeper pos Map:1 X:6699.4355 Y:-4670.465 Z:722.15 (1 available in 8)
-[New RPG] Bot Cihwamio select random grind pos Map:1 X:6750 Y:-4900 Z:750 (19+73 available in 747)
-[New RPG] Bot Cihwamio select random flight taxi node from:11139 (node 53) to:79 (1 available)
-[New RPG] Bot Cihwamio select random grind pos Map:1 X:6950 Y:-4600 Z:750 (19+73 available in 747)
-[New RPG] Bot Bengren select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 5)
-[New RPG] Bot Bengren select random grind pos Map:1 X:3050 Y:-2800 Z:200 (0+10 available in 496)
-[New RPG] Bot Bengren select random flight taxi node from:4267 (node 28) to:37 (1 available)
-[New RPG] Bot Bengren select random grind pos Map:1 X:1850 Y:-2650 Z:50 (0+10 available in 496)
-[New RPG] Bot Gnuthuklink select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
-[New RPG] Bot Gnuthuklink select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-[New RPG] Bot Howeankoh select random inn keeper pos Map:1 X:-411.9045 Y:-2646.682 Z:96.8063 (3 available in 6)
-[New RPG] Bot Howeankoh select random grind pos Map:1 X:-700 Y:-3400 Z:100 (18+353 available in 1279)
-[New RPG] Bot Howeankoh select random flight taxi node from:16227 (node 80) to:77 (1 available)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bot Irra select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 7)
+[New RPG] Bot Irra select random grind pos Map:0 X:-5000 Y:-2950 Z:300 (2+65 available in 1210)
+[New RPG] Bot Irra select random flight taxi node from:1572 (node 8) to:6 (1 available)
+[New RPG] Bot Irra select random grind pos Map:0 X:-6100 Y:-2950 Z:400 (2+65 available in 1210)
+[New RPG] Bot Melilios select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 5)
+[New RPG] Bot Melilios select random grind pos Map:1 X:3600 Y:-5700 Z:0 (0+38 available in 615)
+[New RPG] Bot Melilios select random flight taxi node from:3310 (node 23) to:79 (1 available)
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-[New RPG] Bot Darius select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
-[New RPG] Bot Darius select random grind pos Map:530 X:-1750 Y:-10900 Z:50 (3+117 available in 1078)
-[New RPG] Bot Westorn select random inn keeper pos Map:1 X:-8154.0947 Y:-4860.675 Z:-24.2839 (1 available in 7)
-[New RPG] Bot Westorn select random grind pos Map:1 X:-6950 Y:-4400 Z:0 (17+16 available in 512)
-[New RPG] Bot Westorn select random flight taxi node from:7823 (node 39) to:37 (1 available)
+Bot GUID Full: 0x0000000000000157 Type: Player Low: 343 H:70 <Havogronk> auto released
+Bot GUID Full: 0x0000000000000157 Type: Player Low: 343 H:70 <Havogronk> releases spirit
+[New RPG] Irra accept quest 1339
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bot Darius select random inn keeper pos Map:530 X:-2056.332 Y:-11892.904 Z:46.2415 (1 available in 10)
+[New RPG] Bot Darius select random grind pos Map:530 X:-1800 Y:-10800 Z:50 (0+78 available in 1045)
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-[New RPG] Bot Olette select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 11)
-[New RPG] Bot Olette select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
-Refreshing bot GUID Full: 0x0000000000000194 Type: Player Low: 404 <Casparald>
-Random teleporting bot Casparald for level 56 (10 locations available)
-Random teleporting bot Casparald (level 56) to Map: 1 (Kalimdor) Zone: 361 (Felwood) Area: 1998 (Talonbranch Glade ) ZoneLevel: 0 AreaLevel: 53 6208.02,-1948.3518,571.2224 (1/10 locations)
+Refreshing bot GUID Full: 0x0000000000000161 Type: Player Low: 353 <Cimlan>
+Random teleporting bot Cimlan for level 72 (24 locations available)
+Random teleporting bot Cimlan (level 72) to Map: 571 (Northrend) Zone: 3537 (Borean Tundra) Area: 4113 (Unu'pe) ZoneLevel: 0 AreaLevel: 70 3005.6636,4056.7324,26.347212 (1/24 locations)
+Bot #339 <Keahgevun>: teleport for level and refresh
+Refreshing bot GUID Full: 0x0000000000000153 Type: Player Low: 339 <Keahgevun>
+Random teleporting bot Keahgevun (level 28) to Map: 1 (Kalimdor) Zone: 406 (Stonetalon Mountains) Area: 467 (Stonetalon Peak) ZoneLevel: 0 AreaLevel: 25 2726.8015,1494.2,238.548 (1/6 locations)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bot Knehkia select random inn keeper pos Map:530 X:7555.64 Y:-6892.895 Z:96.61 (1 available in 7)
+[New RPG] Bot Knehkia select random grind pos Map:530 X:6600 Y:-6500 Z:50 (7+110 available in 1078)
+Mark bot Havogronk as dead, will be revived in 186s.
+[New RPG] Kalidra marked as abandoned quest 1638
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-Random Bots Stats: 39 online
+[New RPG] Bot Eramir select random inn keeper pos Map:530 X:-178.91858 Y:5526.9116 Z:29.9909 (4 available in 7)
+[New RPG] Bot Eramir select random grind pos Map:530 X:-2400 Y:5250 Z:0 (0+515 available in 1117)
+[New RPG] Bot Eramir select random flight taxi node from:18940 (node 128) to:100 (1 available)
+[New RPG] Bot Eramir select random inn keeper pos Map:530 X:-2922.21 Y:4018.98 Z:1.01079 (4 available in 7)
+[New RPG] Bot Ainimdi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 7)
+[New RPG] Bot Ainimdi select random grind pos Map:0 X:-9600 Y:-1950 Z:50 (21+17 available in 1210)
+[New RPG] Bot Ainimdi select random flight taxi node from:931 (node 5) to:205 (1 available)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bot Westerren select random inn keeper pos Map:571 X:437.74115 Y:-4555.378 Z:246.209 (2 available in 19)
+[New RPG] Bot Westerren select random grind pos Map:571 X:1800 Y:-5850 Z:0 (46+390 available in 2452)
+[New RPG] Bot Westerren select random flight taxi node from:27344 (node 191) to:258 (1 available)
+[New RPG] Bot Westerren select random inn keeper pos Map:571 X:437.74115 Y:-4555.378 Z:246.209 (2 available in 19)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Westerren accept quest 11227
+[New RPG] Westerren accept quest 11270
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Teleport Knehkia from (6210.2095,-6922.796,144.4031,530) to (7512,-6841,83.663795,530) as it stuck when moving far - Zone: 3433 (Ghostlands)
+[New RPG] Knehkia turned in quest 10372
+[New RPG] Bot Ceale select random inn keeper pos Map:530 X:7555.64 Y:-6892.895 Z:96.61 (1 available in 5)
+[New RPG] Bot Ceale select random grind pos Map:530 X:7300 Y:-6900 Z:50 (24+112 available in 1219)
+[New RPG] Bot Ceale select random flight taxi node from:16189 (node 83) to:205 (1 available)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Bot #380 <Knehkia>: teleport for level and refresh
+Refreshing bot GUID Full: 0x000000000000017c Type: Player Low: 380 <Knehkia>
+Random teleporting bot Knehkia (level 19) to Map: 1 (Kalimdor) Zone: 17 (The Barrens) Area: 378 (Camp Taurajo) ZoneLevel: 0 AreaLevel: 10 -2373.846,-1991.367,96.754814 (1/7 locations)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Random Bots Stats: 40 online
 Bots level:
-    10..19: 5 alliance, 3 horde
-    20..29: 3 alliance, 1 horde
-    30..39: 2 alliance, 2 horde
-    40..49: 3 alliance, 2 horde
-    50..59: 2 alliance, 3 horde
-    60..69: 2 alliance, 4 horde
-    70..79: 0 alliance, 3 horde
-    80..80: 2 alliance, 2 horde
+    10..19: 4 alliance, 2 horde
+    20..29: 3 alliance, 4 horde
+    30..39: 2 alliance, 1 horde
+    40..49: 1 alliance, 1 horde
+    50..59: 4 alliance, 4 horde
+    60..69: 2 alliance, 2 horde
+    70..79: 3 alliance, 4 horde
+    80..80: 1 alliance, 2 horde
 Bots race:
-    Human: 4, avg lvl: 56
-    Orc: 5, avg lvl: 56.6
-    Dwarf: 2, avg lvl: 30
-    Night Elf: 1, avg lvl: 16
-    Undead: 4, avg lvl: 62.2
-    Tauren: 2, avg lvl: 37.5
+    Human: 1, avg lvl: 69
+    Orc: 5, avg lvl: 71.6
+    Dwarf: 4, avg lvl: 37.2
+    Night Elf: 5, avg lvl: 46
+    Undead: 2, avg lvl: 49
+    Tauren: 4, avg lvl: 38
     Gnome: 1, avg lvl: 26
-    Troll: 2, avg lvl: 40
-    Goblin: 3, avg lvl: 61
-    Blood Elf: 4, avg lvl: 41.5
-    Draenei: 4, avg lvl: 30
-    Worgen: 3, avg lvl: 51.6
-    High Elf: 4, avg lvl: 38.2
+    Troll: 1, avg lvl: 64
+    Goblin: 2, avg lvl: 47
+    Blood Elf: 6, avg lvl: 43.3
+    Draenei: 3, avg lvl: 24
+    Worgen: 4, avg lvl: 54.7
+    High Elf: 2, avg lvl: 65
 Bots class:
-    paladin: 39, avg lvl: 45.8
+    paladin: 40, avg lvl: 48
 Bots role:
-    tank: 1, heal: 0, dps: 38
+    tank: 1, heal: 0, dps: 39
 Bots status:
     Active: 2
     Moving: 2
     In flight: 1
-    On mount: 10
+    On mount: 14
+    In combat: 0
+    In BG: 0
+    In Rest: 10
+    Dead: 2
+Bots rpg status:
+    Idle: 8, Rest: 3, GoGrind: 9, GoCamp: 5, MoveRandom: 0, MoveNpc: 6, DoQuest: 6, TravelFlight: 3, OutdoorPvP: 0
+Bots total quests:
+    Accepted: 6, Rewarded: 2, Dropped: 22
+Bots engine:
+    Non-combat: 37, Combat: 1, Dead: 2
+[New RPG] Bot Darius select random inn keeper pos Map:530 X:-2056.332 Y:-11892.904 Z:46.2415 (1 available in 10)
+[New RPG] Bot Darius select random grind pos Map:530 X:-1600 Y:-10700 Z:150 (0+78 available in 1045)
+[New RPG] Bot Darius select random grind pos Map:530 X:-2150 Y:-11150 Z:50 (0+78 available in 1045)
+[New RPG] Irra accept quest 436
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bot Damaderon select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 18)
+[New RPG] Bot Damaderon select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 2452)
+[New RPG] Bot Damaderon select random flight taxi node from:1573 (node 6) to:213 (1 available)
+Bot GUID Full: 0x0000000000000146 Type: Player Low: 326 A:71 <Kamig> auto released
+Bot GUID Full: 0x0000000000000146 Type: Player Low: 326 A:71 <Kamig> releases spirit
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Refreshing bot GUID Full: 0x0000000000000157 Type: Player Low: 343 <Havogronk>
+Random teleporting bot Havogronk for level 70 (19 locations available)
+Random teleporting bot Havogronk (level 70) to Map: 530 (Outland) Zone: 3522 (Blade's Edge Mountains) Area: 3844 (Mok'Nathal Village) ZoneLevel: 0 AreaLevel: 65 2225.0168,4722.442,162.12543 (1/19 locations)
+[New RPG] Bot Cimlan select random inn keeper pos Map:571 X:2800.1033 Y:6151.027 Z:85.7464 (3 available in 24)
+[New RPG] Bot Cimlan select random grind pos Map:571 X:3700 Y:4300 Z:0 (10+528 available in 2696)
+[New RPG] Bot Cimlan select random flight taxi node from:28195 (node 296) to:310 (1 available)
+[New RPG] Bot Cimlan select random flight taxi node from:28195 (node 296) to:248 (1 available)
+Mark bot Kamig as dead, will be revived in 70s.
+[New RPG] Bot Vidunuvoo select random inn keeper pos Map:1 X:-8154.0947 Y:-4860.675 Z:-24.2839 (1 available in 10)
+[New RPG] Bot Vidunuvoo select random grind pos Map:1 X:-8300 Y:-3600 Z:0 (3+129 available in 545)
+[New RPG] Bot Vidunuvoo select random flight taxi node from:7824 (node 40) to:48 (1 available)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Vidunuvoo accept quest 6610
+[New RPG] Bot Vahaa select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
+[New RPG] Bot Vahaa select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1286)
+[New RPG] Bot Enrii select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Enrii select random grind pos Map:530 X:-1750 Y:-11800 Z:50 (21+41 available in 1725)
+[New RPG] Bot Enrii select random flight taxi node from:17554 (node 93) to:94 (1 available)
+Bot GUID Full: 0x000000000000013f Type: Player Low: 319 A:17 <Ainimdi> auto released
+Bot GUID Full: 0x000000000000013f Type: Player Low: 319 A:17 <Ainimdi> releases spirit
+[New RPG] Bot Kalidra select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 12)
+[New RPG] Bot Kalidra select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 891)
+[New RPG] Nelaedon accept quest 559
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Including non-random bot player Grim Snarl into random bot update
+[New RPG] Bot Bily select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 11)
+[New RPG] Bot Bily select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> auto released
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> releases spirit
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+[New RPG] Bot Idritarre select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 10)
+[New RPG] Bot Idritarre select random grind pos Map:0 X:-8250 Y:-1750 Z:150 (0+12 available in 783)
+[New RPG] Bot Idritarre select random flight taxi node from:352 (node 2) to:45 (1 available)
+[New RPG] Bot Idritarre select random flight taxi node from:352 (node 2) to:66 (1 available)
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+[New RPG] Bot Melilios select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 5)
+[New RPG] Bot Melilios select random grind pos Map:1 X:3250 Y:-5300 Z:100 (0+38 available in 615)
+[New RPG] Bot Melilios select random flight taxi node from:3310 (node 23) to:79 (1 available)
+[New RPG] Bot Melilios select random grind pos Map:1 X:3200 Y:-5700 Z:0 (0+38 available in 615)
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+Bot GUID Full: 0x0000000000000167 Type: Player Low: 359 A:20 <Darius> revives at body
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Mark bot Ainimdi as dead, will be revived in 115s.
+[New RPG] Bot Knehkia select random inn keeper pos Map:1 X:-411.9045 Y:-2646.682 Z:96.8063 (2 available in 7)
+[New RPG] Bot Knehkia select random grind pos Map:1 X:-2000 Y:-2000 Z:100 (23+146 available in 1078)
+[New RPG] Bot Knehkia select random flight taxi node from:10378 (node 77) to:22 (1 available)
+[New RPG] Bot Knehkia select random flight taxi node from:10378 (node 77) to:58 (1 available)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Vidunuvoo accept quest 1707
+[New RPG] Bot Kalidra select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 12)
+[New RPG] Bot Kalidra select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 891)
+Including non-random bot player Drako Tresitia into random bot update
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bellania marked as abandoned quest 8344
+[New RPG] Bot Bellania select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
+[New RPG] Bot Bellania select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Random Bots Stats: 40 online
+Bots level:
+    10..19: 4 alliance, 2 horde
+    20..29: 3 alliance, 4 horde
+    30..39: 2 alliance, 1 horde
+    40..49: 1 alliance, 1 horde
+    50..59: 4 alliance, 4 horde
+    60..69: 2 alliance, 2 horde
+    70..79: 3 alliance, 4 horde
+    80..80: 1 alliance, 2 horde
+Bots race:
+    Human: 1, avg lvl: 69
+    Orc: 5, avg lvl: 71.6
+    Dwarf: 4, avg lvl: 37.2
+    Night Elf: 5, avg lvl: 46
+    Undead: 2, avg lvl: 49
+    Tauren: 4, avg lvl: 38
+    Gnome: 1, avg lvl: 26
+    Troll: 1, avg lvl: 64
+    Goblin: 2, avg lvl: 47
+    Blood Elf: 6, avg lvl: 43.3
+    Draenei: 3, avg lvl: 24
+    Worgen: 4, avg lvl: 54.7
+    High Elf: 2, avg lvl: 65
+Bots class:
+    paladin: 40, avg lvl: 48
+Bots role:
+    tank: 1, heal: 0, dps: 39
+Bots status:
+    Active: 5
+    Moving: 7
+    In flight: 3
+    On mount: 17
     In combat: 1
     In BG: 0
-    In Rest: 5
+    In Rest: 10
+    Dead: 2
+Bots rpg status:
+    Idle: 4, Rest: 3, GoGrind: 10, GoCamp: 5, MoveRandom: 0, MoveNpc: 6, DoQuest: 6, TravelFlight: 6, OutdoorPvP: 0
+Bots total quests:
+    Accepted: 10, Rewarded: 2, Dropped: 22
+Bots engine:
+    Non-combat: 35, Combat: 3, Dead: 2
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Refreshing bot GUID Full: 0x0000000000000146 Type: Player Low: 326 <Kamig>
+Random teleporting bot Kamig for level 71 (21 locations available)
+Random teleporting bot Kamig (level 71) to Map: 530 (Outland) Zone: 3520 (Shadowmoon Valley) Area: 3754 (Altar of Sha'tar) ZoneLevel: 0 AreaLevel: 0 -2988.5132,863.6527,-8.605481 (1/21 locations)
+[New RPG] Bot Keahgevun select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 6)
+[New RPG] Bot Keahgevun select random grind pos Map:1 X:550 Y:1700 Z:0 (7+31 available in 536)
+[New RPG] Bot Keahgevun select random flight taxi node from:4407 (node 33) to:28 (1 available)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Refreshing bot GUID Full: 0x000000000000013f Type: Player Low: 319 <Ainimdi>
+Random teleporting bot Ainimdi for level 17 (7 locations available)
+Random teleporting bot Ainimdi (level 17) to Map: 1 (Kalimdor) Zone: 406 (Stonetalon Mountains) Area: 467 (Stonetalon Peak) ZoneLevel: 0 AreaLevel: 25 2726.8015,1494.2,238.548 (1/7 locations)
+[New RPG] Bot Luncic select random inn keeper pos Map:0 X:-10.573854 Y:-940.3345 Z:57.6621 (1 available in 8)
+[New RPG] Bot Luncic select random grind pos Map:0 X:-200 Y:-750 Z:50 (17+32 available in 766)
+[New RPG] Bot Luncic select random flight taxi node from:2389 (node 13) to:205 (1 available)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bot Kamig select random inn keeper pos Map:530 X:-4137.368 Y:1129.373 Z:45.1148 (2 available in 21)
+[New RPG] Bot Kamig select random grind pos Map:530 X:-3150 Y:2100 Z:100 (57+407 available in 2977)
+[New RPG] Bot Kamig select random flight taxi node from:19581 (node 140) to:124 (1 available)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Bot Ireslun select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
+[New RPG] Bot Ireslun select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
+[New RPG] Bot Mundibill select random inn keeper pos Map:0 X:-3823.3274 Y:-829.9473 Z:10.5906 (1 available in 6)
+[New RPG] Bot Mundibill select random grind pos Map:0 X:-3300 Y:-2300 Z:50 (0+90 available in 583)
+[New RPG] Bot Mundibill select random flight taxi node from:1573 (node 6) to:5 (1 available)
+[New RPG] Bot Mundibill select random inn keeper pos Map:0 X:-3823.3274 Y:-829.9473 Z:10.5906 (1 available in 6)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Bot GUID Full: 0x0000000000000149 Type: Player Low: 329 A:46 <Maine> auto released
+Bot GUID Full: 0x0000000000000149 Type: Player Low: 329 A:46 <Maine> releases spirit
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Mark bot Irra as dead, will be revived in 218s.
+Bot GUID Full: 0x0000000000000136 Type: Player Low: 310 A:17 <Irra> auto released
+Bot GUID Full: 0x0000000000000136 Type: Player Low: 310 A:17 <Irra> releases spirit
+[New RPG] Bot Truhlnush select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
+[New RPG] Bot Truhlnush select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1286)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Mark bot Maine as dead, will be revived in 298s.
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bot Havogronk select random inn keeper pos Map:530 X:3020.5603 Y:5439.18 Z:147.217 (2 available in 19)
+[New RPG] Bot Havogronk select random grind pos Map:530 X:3700 Y:6600 Z:150 (3+202 available in 2729)
+[New RPG] Bot Havogronk select random flight taxi node from:22455 (node 163) to:140 (1 available)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+[New RPG] Bot Kalidra select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 12)
+[New RPG] Bot Kalidra select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 891)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Bot Kaerad select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Kaerad select random grind pos Map:0 X:-7850 Y:-2650 Z:150 (3+20 available in 558)
+[New RPG] Bot Kaerad select random flight taxi node from:13177 (node 70) to:383 (1 available)
+[New RPG] Flostee marked as abandoned quest 9534
+[New RPG] Bot Flostee select random inn keeper pos Map:1 X:2338.5798 Y:-2563.2166 Z:103.357 (1 available in 4)
+[New RPG] Bot Flostee select random grind pos Map:1 X:1450 Y:-2800 Z:150 (23+62 available in 449)
+[New RPG] Bot Flostee select random inn keeper pos Map:1 X:2338.5798 Y:-2563.2166 Z:103.357 (1 available in 4)
+[New RPG] Bot Vahaa select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
+[New RPG] Bot Vahaa select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1286)
+[New RPG] Bot Beawi select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 9)
+[New RPG] Bot Beawi select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1145)
+Bot GUID Full: 0x0000000000000136 Type: Player Low: 310 A:17 <Irra> revives at body
+[New RPG] Bot Kalidra select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 12)
+[New RPG] Bot Kalidra select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 891)
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+Random Bots Stats: 40 online
+Bots level:
+    10..19: 4 alliance, 2 horde
+    20..29: 3 alliance, 4 horde
+    30..39: 2 alliance, 1 horde
+    40..49: 1 alliance, 1 horde
+    50..59: 4 alliance, 4 horde
+    60..69: 2 alliance, 2 horde
+    70..79: 3 alliance, 4 horde
+    80..80: 1 alliance, 2 horde
+Bots race:
+    Human: 1, avg lvl: 69
+    Orc: 5, avg lvl: 71.6
+    Dwarf: 4, avg lvl: 37.2
+    Night Elf: 5, avg lvl: 46
+    Undead: 2, avg lvl: 49
+    Tauren: 4, avg lvl: 38
+    Gnome: 1, avg lvl: 26
+    Troll: 1, avg lvl: 64
+    Goblin: 2, avg lvl: 47
+    Blood Elf: 6, avg lvl: 43.3
+    Draenei: 3, avg lvl: 24
+    Worgen: 4, avg lvl: 54.7
+    High Elf: 2, avg lvl: 65
+Bots class:
+    paladin: 40, avg lvl: 48
+Bots role:
+    tank: 1, heal: 0, dps: 39
+Bots status:
+    Active: 6
+    Moving: 1
+    In flight: 0
+    On mount: 11
+    In combat: 2
+    In BG: 0
+    In Rest: 10
     Dead: 1
 Bots rpg status:
-    Idle: 6, Rest: 2, GoGrind: 6, GoCamp: 3, MoveRandom: 2, MoveNpc: 8, DoQuest: 11, TravelFlight: 1, OutdoorPvP: 0
+    Idle: 1, Rest: 3, GoGrind: 9, GoCamp: 7, MoveRandom: 0, MoveNpc: 9, DoQuest: 7, TravelFlight: 4, OutdoorPvP: 0
 Bots total quests:
-    Accepted: 26, Rewarded: 0, Dropped: 16
+    Accepted: 10, Rewarded: 2, Dropped: 22
 Bots engine:
-    Non-combat: 36, Combat: 2, Dead: 1
-Mark bot Ceale as dead, will be revived in 256s.
-[New RPG] Bot Celda select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 11)
-[New RPG] Bot Celda select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
+    Non-combat: 35, Combat: 4, Dead: 1
+[New RPG] Bot Vidunuvoo select random inn keeper pos Map:1 X:-8154.0947 Y:-4860.675 Z:-24.2839 (1 available in 10)
+[New RPG] Bot Vidunuvoo select random grind pos Map:1 X:-8250 Y:-3700 Z:0 (3+129 available in 545)
+[New RPG] Bot Vidunuvoo select random flight taxi node from:7824 (node 40) to:42 (1 available)
+[New RPG] Vidunuvoo accept quest 1690
+[New RPG] Bengren accept quest 222
+[New RPG] Vidunuvoo accept quest 2605
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-[New RPG] Bot Huflemak select random inn keeper pos Map:1 X:-8154.0947 Y:-4860.675 Z:-24.2839 (1 available in 11)
-[New RPG] Bot Huflemak select random grind pos Map:1 X:-7550 Y:-3600 Z:0 (17+16 available in 512)
-[New RPG] Bot Huflemak select random flight taxi node from:7824 (node 40) to:22 (1 available)
-[New RPG] Bot Ceevia select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 10)
-[New RPG] Bot Ceevia select random grind pos Map:0 X:-10650 Y:500 Z:50 (4+37 available in 884)
-[New RPG] Bot Ceevia select random flight taxi node from:2409 (node 12) to:205 (1 available)
-[New RPG] Bot Ceevia select random grind pos Map:0 X:-10100 Y:-1000 Z:50 (4+37 available in 884)
-[New RPG] Bot Landraran select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 7)
-[New RPG] Bot Landraran select random grind pos Map:0 X:-9350 Y:-1950 Z:50 (10+11 available in 1279)
-[New RPG] Bot Landraran select random flight taxi node from:931 (node 5) to:205 (1 available)
-[New RPG] Bot Landraran select random grind pos Map:0 X:-9550 Y:-2050 Z:50 (10+11 available in 1279)
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-Bot GUID Full: 0x0000000000000179 Type: Player Low: 377 H:14 <Ceale> auto released
-Bot GUID Full: 0x0000000000000179 Type: Player Low: 377 H:14 <Ceale> releases spirit
-[New RPG] Bot Joven select random inn keeper pos Map:530 X:-4133.0415 Y:-12472.458 Z:44.6849 (1 available in 9)
-[New RPG] Bot Joven select random grind pos Map:530 X:-3650 Y:-12400 Z:0 (3+87 available in 1509)
-[New RPG] Bot Galerio select random inn keeper pos Map:1 X:-7160.833 Y:-3836.974 Z:9.34809 (1 available in 12)
-[New RPG] Bot Galerio select random grind pos Map:1 X:-7500 Y:-3800 Z:0 (18+90 available in 505)
-[New RPG] Bot Galerio select random grind pos Map:1 X:-7850 Y:-5100 Z:0 (18+90 available in 505)
-[New RPG] Huflemak accept quest 1690
-[New RPG] Bot Ceerin select random inn keeper pos Map:530 X:4115.28 Y:3061.665 Z:340.048 (2 available in 24)
-[New RPG] Bot Ceerin select random grind pos Map:530 X:3900 Y:3800 Z:100 (0+59 available in 2065)
-[New RPG] Bot Ceerin select random flight taxi node from:19583 (node 139) to:150 (1 available)
-[New RPG] Bot Ceerin select random inn keeper pos Map:530 X:3062.5857 Y:3696.839 Z:143.062 (2 available in 24)
+[New RPG] Bot Keahgevun select random inn keeper pos Map:1 X:2726.8015 Y:1494.2 Z:238.093 (1 available in 6)
+[New RPG] Bot Keahgevun select random grind pos Map:1 X:650 Y:1800 Z:0 (7+31 available in 536)
+[New RPG] Bot Keahgevun select random flight taxi node from:4407 (node 33) to:28 (1 available)
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-[New RPG] Bot Casparald select random inn keeper pos Map:1 X:3979.627 Y:-1316.9385 Z:251.624 (1 available in 10)
-[New RPG] Bot Casparald select random grind pos Map:1 X:6350 Y:-1750 Z:400 (10+53 available in 747)
-[New RPG] Bot Casparald select random flight taxi node from:12578 (node 65) to:79 (1 available)
-[New RPG] Bot Casparald select random inn keeper pos Map:1 X:3979.627 Y:-1316.9385 Z:251.624 (1 available in 10)
+[New RPG] Bot Cimlan select random inn keeper pos Map:571 X:2678.726 Y:-4387.15 Z:285.043 (3 available in 24)
+[New RPG] Bot Cimlan select random grind pos Map:571 X:2300 Y:-3050 Z:150 (66+279 available in 2696)
+[New RPG] Bot Cimlan select random flight taxi node from:26844 (node 248) to:310 (1 available)
+[New RPG] Cimlan accept quest 11397
+[New RPG] Bot Bellania select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 13)
+[New RPG] Bot Bellania select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
+[New RPG] Cimlan accept quest 11301
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
+[New RPG] Bot Bily select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 11)
+[New RPG] Bot Bily select random grind pos Map:4294967295 X:0 Y:0 Z:0 (0+0 available in 1229)
+[New RPG] Vidunuvoo accept quest 2781
+[New RPG] Vidunuvoo accept quest 2875
+Refreshing bot GUID Full: 0x0000000000000149 Type: Player Low: 329 <Maine>
+Random teleporting bot Maine for level 46 (9 locations available)
+Random teleporting bot Maine (level 46) to Map: 1 (Kalimdor) Zone: 16 (Azshara) Area: 3137 (Talrendis Point) ZoneLevel: 0 AreaLevel: 0 2723.104,-3879.8818,100.69884 (1/9 locations)
+[New RPG] Vidunuvoo accept quest 3362
+[New RPG] Vidunuvoo accept quest 2741
+Checking BG Queue...
+BG Queue check finished
+Checking LFG Queue...
+LFG Queue check finished
+[New RPG] Vidunuvoo accept quest 5863
+[New RPG] Bot Knehkia select random inn keeper pos Map:4294967295 X:0 Y:0 Z:0 (0 available in 7)
+[New RPG] Bot Knehkia select random grind pos Map:1 X:3700 Y:800 Z:0 (19+37 available in 1078)
+[New RPG] Bot Knehkia select random flight taxi node from:11901 (node 58) to:23 (1 available)
 Bot Cihwamio logging out
 Bot Bengren logging out
 Bot Irra logging out
-Bot Jalelle logging out
+Bot Flostee logging out
+Bot Bellania logging out
 Bot Damaderon logging out
-Bot Dameloa logging out
-Bot Celda logging out
+Bot Mydas logging out
+Bot Ainimdi logging out
+Bot Bily logging out
+Bot Eramir logging out
+Bot Kamig logging out
 Bot Maine logging out
-Bot Kadimir logging out
-Bot Westorn logging out
 Bot Mellatha logging out
 Bot Keahgevun logging out
-Bot Joven logging out
-Bot Olette logging out
-Bot Lucini logging out
 Bot Havogronk logging out
+Bot Nelaedon logging out
+Bot Kalidra logging out
+Bot Luncic logging out
+Bot Aeveoh logging out
 Bot Kaerad logging out
-Bot Ceerin logging out
+Bot Vahaa logging out
+Bot Cimlan logging out
+Bot Melilios logging out
 Bot Darius logging out
-Bot Crondiggold logging out
-Bot Atkik logging out
-Bot Kust logging out
-Bot Dresera logging out
-Bot Shernia logging out
+Bot Salynna logging out
+Bot Vidunuvoo logging out
+Bot Thekem logging out
+Bot Idritarre logging out
+Bot Samaryl logging out
 Bot Westerren logging out
+Bot Alathalis logging out
 Bot Ceale logging out
+Bot Truhlnush logging out
 Bot Knehkia logging out
-Bot Huflemak logging out
-Bot Blanorton logging out
-Bot Howeankoh logging out
-Bot Galerio logging out
+Bot Helriel logging out
 Bot Beawi logging out
-Bot Babine logging out
-Bot Landraran logging out
+Bot Enrii logging out
 Bot Mundibill logging out
-Bot Ceevia logging out
 Bot Casparald logging out
 Bot Ireslun logging out
-Bot Gnuthuklink logging out
 Logout all bots due no real player session.
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
-Skipping invalid operation: BotLogoutGroupCleanup
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
+Skipping invalid operation: BotLogoutGroupCleanup
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
@@ -10117,7 +9946,7 @@ Bots status:
 Bots rpg status:
     Idle: 0, Rest: 0, GoGrind: 0, GoCamp: 0, MoveRandom: 0, MoveNpc: 0, DoQuest: 0, TravelFlight: 0, OutdoorPvP: 0
 Bots total quests:
-    Accepted: 26, Rewarded: 0, Dropped: 16
+    Accepted: 10, Rewarded: 2, Dropped: 22
 Bots engine:
     Non-combat: 0, Combat: 0, Dead: 0
 Checking BG Queue...
@@ -10170,112 +9999,7 @@ Bots status:
 Bots rpg status:
     Idle: 0, Rest: 0, GoGrind: 0, GoCamp: 0, MoveRandom: 0, MoveNpc: 0, DoQuest: 0, TravelFlight: 0, OutdoorPvP: 0
 Bots total quests:
-    Accepted: 26, Rewarded: 0, Dropped: 16
-Bots engine:
-    Non-combat: 0, Combat: 0, Dead: 0
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Random Bots Stats: 0 online
-Bots level:
-Bots race:
-Bots class:
-Bots role:
-    tank: 0, heal: 0, dps: 0
-Bots status:
-    Active: 0
-    Moving: 0
-    In flight: 0
-    On mount: 0
-    In combat: 0
-    In BG: 0
-    In Rest: 0
-    Dead: 0
-Bots rpg status:
-    Idle: 0, Rest: 0, GoGrind: 0, GoCamp: 0, MoveRandom: 0, MoveNpc: 0, DoQuest: 0, TravelFlight: 0, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 26, Rewarded: 0, Dropped: 16
-Bots engine:
-    Non-combat: 0, Combat: 0, Dead: 0
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Scheduled guild cache validation
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Random Bots Stats: 0 online
-Bots level:
-Bots race:
-Bots class:
-Bots role:
-    tank: 0, heal: 0, dps: 0
-Bots status:
-    Active: 0
-    Moving: 0
-    In flight: 0
-    On mount: 0
-    In combat: 0
-    In BG: 0
-    In Rest: 0
-    Dead: 0
-Bots rpg status:
-    Idle: 0, Rest: 0, GoGrind: 0, GoCamp: 0, MoveRandom: 0, MoveNpc: 0, DoQuest: 0, TravelFlight: 0, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 26, Rewarded: 0, Dropped: 16
+    Accepted: 10, Rewarded: 2, Dropped: 22
 Bots engine:
     Non-combat: 0, Combat: 0, Dead: 0
 Checking BG Queue...
@@ -10290,110 +10014,6 @@ Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Random Bots Stats: 0 online
-Bots level:
-Bots race:
-Bots class:
-Bots role:
-    tank: 0, heal: 0, dps: 0
-Bots status:
-    Active: 0
-    Moving: 0
-    In flight: 0
-    On mount: 0
-    In combat: 0
-    In BG: 0
-    In Rest: 0
-    Dead: 0
-Bots rpg status:
-    Idle: 0, Rest: 0, GoGrind: 0, GoCamp: 0, MoveRandom: 0, MoveNpc: 0, DoQuest: 0, TravelFlight: 0, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 26, Rewarded: 0, Dropped: 16
-Bots engine:
-    Non-combat: 0, Combat: 0, Dead: 0
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Random Bots Stats: 0 online
-Bots level:
-Bots race:
-Bots class:
-Bots role:
-    tank: 0, heal: 0, dps: 0
-Bots status:
-    Active: 0
-    Moving: 0
-    In flight: 0
-    On mount: 0
-    In combat: 0
-    In BG: 0
-    In Rest: 0
-    Dead: 0
-Bots rpg status:
-    Idle: 0, Rest: 0, GoGrind: 0, GoCamp: 0, MoveRandom: 0, MoveNpc: 0, DoQuest: 0, TravelFlight: 0, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 26, Rewarded: 0, Dropped: 16
-Bots engine:
-    Non-combat: 0, Combat: 0, Dead: 0
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
 Checking BG Queue...
@@ -10430,7 +10050,7 @@ Bots status:
 Bots rpg status:
     Idle: 0, Rest: 0, GoGrind: 0, GoCamp: 0, MoveRandom: 0, MoveNpc: 0, DoQuest: 0, TravelFlight: 0, OutdoorPvP: 0
 Bots total quests:
-    Accepted: 26, Rewarded: 0, Dropped: 16
+    Accepted: 10, Rewarded: 2, Dropped: 22
 Bots engine:
     Non-combat: 0, Combat: 0, Dead: 0
 Checking BG Queue...
@@ -10441,153 +10061,6 @@ Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...
 LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Random Bots Stats: 0 online
-Bots level:
-Bots race:
-Bots class:
-Bots role:
-    tank: 0, heal: 0, dps: 0
-Bots status:
-    Active: 0
-    Moving: 0
-    In flight: 0
-    On mount: 0
-    In combat: 0
-    In BG: 0
-    In Rest: 0
-    Dead: 0
-Bots rpg status:
-    Idle: 0, Rest: 0, GoGrind: 0, GoCamp: 0, MoveRandom: 0, MoveNpc: 0, DoQuest: 0, TravelFlight: 0, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 26, Rewarded: 0, Dropped: 16
-Bots engine:
-    Non-combat: 0, Combat: 0, Dead: 0
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Random Bots Stats: 0 online
-Bots level:
-Bots race:
-Bots class:
-Bots role:
-    tank: 0, heal: 0, dps: 0
-Bots status:
-    Active: 0
-    Moving: 0
-    In flight: 0
-    On mount: 0
-    In combat: 0
-    In BG: 0
-    In Rest: 0
-    Dead: 0
-Bots rpg status:
-    Idle: 0, Rest: 0, GoGrind: 0, GoCamp: 0, MoveRandom: 0, MoveNpc: 0, DoQuest: 0, TravelFlight: 0, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 26, Rewarded: 0, Dropped: 16
-Bots engine:
-    Non-combat: 0, Combat: 0, Dead: 0
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Checking BG Queue...
-BG Queue check finished
-Checking LFG Queue...
-LFG Queue check finished
-Random Bots Stats: 0 online
-Bots level:
-Bots race:
-Bots class:
-Bots role:
-    tank: 0, heal: 0, dps: 0
-Bots status:
-    Active: 0
-    Moving: 0
-    In flight: 0
-    On mount: 0
-    In combat: 0
-    In BG: 0
-    In Rest: 0
-    Dead: 0
-Bots rpg status:
-    Idle: 0, Rest: 0, GoGrind: 0, GoCamp: 0, MoveRandom: 0, MoveNpc: 0, DoQuest: 0, TravelFlight: 0, OutdoorPvP: 0
-Bots total quests:
-    Accepted: 26, Rewarded: 0, Dropped: 16
-Bots engine:
-    Non-combat: 0, Combat: 0, Dead: 0
 Checking BG Queue...
 BG Queue check finished
 Checking LFG Queue...

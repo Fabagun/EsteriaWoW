@@ -1,0 +1,37 @@
+{
+  "status": "installed_pending_live_client_confirmation",
+  "live_client_verified": false,
+  "files": [
+    {
+      "name": "0577_Solosis.m2",
+      "before": "e13a7e1f7e282a1765f821f6a82c5b66b60080570235a387b3372f55254148bd",
+      "after": "5f2f020543edd60aec67a6a4324b808fb261420e9fc60b3d22c09737e3e590c6"
+    },
+    {
+      "name": "0577_Solosis00.skin",
+      "before": "647702e23a9ffed0600885c337dcf6af7fbc71a122e20b26af14ec931d999195",
+      "after": "1c6e470cef5e5817f4783d330cfc4c937cbba701487787ff5fd53b9ef47703cf"
+    },
+    {
+      "name": "0577_Solosis_s.m2",
+      "before": "ad5897edd1f0e7b9083bccbdfd00c4067d3c567decb183be31ed5c3ed25cecc0",
+      "after": "b79811cb42c95c346111471539429c4152c5daa0f3004a5e8f59a79debb85acb"
+    },
+    {
+      "name": "0577_Solosis_s00.skin",
+      "before": "647702e23a9ffed0600885c337dcf6af7fbc71a122e20b26af14ec931d999195",
+      "after": "1c6e470cef5e5817f4783d330cfc4c937cbba701487787ff5fd53b9ef47703cf"
+    }
+  ],
+  "visual_views": 12,
+  "body_faces": 486,
+  "shell_faces": 192,
+  "body_alpha_samples": 32076,
+  "body_alpha": 255,
+  "geometry_animation_uv_bytes_unchanged": true,
+  "textures": {
+    "0577_Solosis.blp": "6df9d0dfab735c745ab8834a6144517f348a0a7848dbbb9e2089463d52925e34",
+    "0577_Solosis_s.blp": "8277c56fe89eff4c4c7120b7a9b0e76ad91d047aa0ca13ddba08bde76e5da463"
+  },
+  "installed_client": "D:\\WoW\\Dark-Bro-WXL-COA\\Dark-Brotherhood-wxl\\data\\patch-z.mpq\\creature\\Battlemon"
+}

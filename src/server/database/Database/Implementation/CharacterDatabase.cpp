@@ -99,6 +99,12 @@ void CharacterDatabaseConnection::DoPrepareStatements()
         "REPLACE INTO character_retail_look (guid, data) VALUES (?, ?)", CONNECTION_ASYNC);
     PrepareStatement(CHAR_DEL_RETAIL_LOOK,
         "DELETE FROM character_retail_look WHERE guid = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_SEL_FORM_LOOK,
+        "SELECT data FROM character_form_look WHERE guid = ?", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_REP_FORM_LOOK,
+        "REPLACE INTO character_form_look (guid, data) VALUES (?, ?)", CONNECTION_ASYNC);
+    PrepareStatement(CHAR_DEL_FORM_LOOK,
+        "DELETE FROM character_form_look WHERE guid = ?", CONNECTION_ASYNC);
     PrepareStatement(CHAR_SEL_BODY_SHAPE,
         "SELECT data FROM character_body_shape WHERE guid = ?", CONNECTION_ASYNC);
     PrepareStatement(CHAR_REP_BODY_SHAPE,

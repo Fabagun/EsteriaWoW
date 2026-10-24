@@ -5,6 +5,7 @@
 #include "BattlemonTypes.h"
 
 #include <string>
+#include <functional>
 
 class BattlemonMgr;
 
@@ -14,6 +15,8 @@ struct BmCtx
     BattlemonMgr* mgr = nullptr;
     BattlemonEncounter* enc = nullptr;
     bool uturn = false;
+    std::function<void(std::string const&)> output = {};
+    std::function<void(bool, std::string const&)> animation = {};
 };
 
 bool BmHasAbility(BattlemonBattler const& b, char const* id);

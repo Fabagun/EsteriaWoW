@@ -1,4 +1,8 @@
+#include "BattlemonNpcTrainers.h"
+#include "BattlemonTrainerProgression.h"
 #include "BattlemonMgr.h"
+#include "BattlemonCenter.h"
+#include "BattlemonModelCatalog.h"
 #include "BattlemonBattle.h"
 #include "BattlemonSidecarServer.h"
 
@@ -193,6 +197,8 @@ void BattlemonMgr::LoadConfig()
 
 void BattlemonMgr::LoadCatalog()
 {
+    if (_extension)
+        _extension->OnCatalogReload();
     _species.clear();
     _forms.clear();
     _moves.clear();
@@ -210,7 +216,8 @@ void BattlemonMgr::LoadCatalog()
 
     if (QueryResult result = WorldDatabase.Query(
             "SELECT id, internal_name, name, type1, type2, hp, atk, def, spa, spd, spe, "
-            "gender_ratio, growth_rate, base_exp, sprite, ability1, ability2, hidden_ability FROM battlemon_species"))
+            "gender_ratio, growth_rate, base_exp, sprite, ability1, ability2, hidden_ability, "
+            "catch_rate, evolutions FROM battlemon_species"))
     {
         do
         {
@@ -234,6 +241,8 @@ void BattlemonMgr::LoadCatalog()
             s.ability1 = f[15].IsNull() ? "" : f[15].Get<std::string>();
             s.ability2 = f[16].IsNull() ? "" : f[16].Get<std::string>();
             s.hiddenAbility = f[17].IsNull() ? "" : f[17].Get<std::string>();
+            s.catchRate = f[18].IsNull() ? 0 : f[18].Get<uint32>();
+            s.evolutions = f[19].IsNull() ? "" : f[19].Get<std::string>();
             _species[s.id] = s;
         } while (result->NextRow());
     }
@@ -251,6 +260,8 @@ void BattlemonMgr::LoadCatalog()
             form.variant = f[3].IsNull() ? "" : f[3].Get<std::string>();
             form.name = f[4].Get<std::string>();
             form.backSprite = f[5].IsNull() ? form.sprite : f[5].Get<std::string>();
+            if (!BattlemonModels::Find(form.id, false) && !BattlemonModels::Find(form.id, true))
+                continue;
             _forms[form.id] = form;
             _formIds.push_back(form.id);
             if (IsLegendarySpecies(form.speciesId))
@@ -509,13 +520,15 @@ uint32 BattlemonMgr::ExpYield(BattlemonBattler const& enemy) const
     return n < 1 ? 1 : n;
 }
 
-std::vector<uint32> BattlemonMgr::AddExp(BattlemonOwned& row, uint32 amount) const
+std::vector<uint32> BattlemonMgr::AddExp(BattlemonOwned& row, uint32 amount, uint32 levelCap) const
 {
+    if (row.level >= levelCap)
+        return {};
     row.exp += amount;
     BattlemonSpecies const* s = GetSpecies(row.speciesId);
     std::string growth = s ? s->growthRate : "Medium";
     std::vector<uint32> gained;
-    while (row.level < 100)
+    while (row.level < std::min<uint32>(100, levelCap))
     {
         uint32 need = ExpAtLevel(growth, row.level + 1);
         if (row.exp >= need)
@@ -526,6 +539,8 @@ std::vector<uint32> BattlemonMgr::AddExp(BattlemonOwned& row, uint32 amount) con
         else
             break;
     }
+    if (row.level >= levelCap)
+        row.exp = std::min(row.exp, ExpAtLevel(growth, row.level));
     return gained;
 }
 
@@ -549,13 +564,17 @@ char BattlemonMgr::RollGender(std::string const& ratio) const
     return urand(1, 100) <= female ? 'F' : 'M';
 }
 
-std::vector<std::string> BattlemonMgr::PickMoves(uint32 speciesId, uint32 level) const
+std::vector<std::string> BattlemonMgr::PickMoves(uint32 speciesId, uint32 level, uint32 formId) const
 {
-    auto it = _learnsets.find(speciesId);
+    std::vector<BattlemonLearn> const* learnset = nullptr;
+    if (auto it = _formMoves.find(formId); it != _formMoves.end() && !it->second.levelUp.empty())
+        learnset = &it->second.levelUp;
+    else if (auto it = _learnsets.find(speciesId); it != _learnsets.end())
+        learnset = &it->second;
     std::vector<std::string> order;
-    if (it != _learnsets.end())
+    if (learnset)
     {
-        for (BattlemonLearn const& e : it->second)
+        for (BattlemonLearn const& e : *learnset)
             if (e.level <= level)
                 order.push_back(e.moveInternal);
     }
@@ -647,7 +666,7 @@ BattlemonBattler BattlemonMgr::MakeBattler(BattlemonOwned const& row) const
         if (!row.move[i].empty())
             moves.push_back(row.move[i]);
     if (moves.empty())
-        moves = PickMoves(row.speciesId, row.level);
+        moves = PickMoves(row.speciesId, row.level, row.formId);
     FillMoves(b, moves);
     BmInitBattler(b);
     return b;
@@ -661,12 +680,12 @@ BattlemonBattler BattlemonMgr::MakeWild(BattlemonForm const& form, uint32 level,
     fake.sprite = form.sprite;
     fake.level = level;
     fake.exp = 0;
-    fake.shiny = shiny;
+    fake.shiny = BattlemonModels::PreferredShiny(form.id, shiny);
     BattlemonSpecies const* s = GetSpecies(form.speciesId);
     fake.gender = RollGender(s ? s->genderRatio : "Female50Percent");
     BattlemonBattler b = MakeBattler(fake);
     b.ownedId = 0;
-    FillMoves(b, PickMoves(form.speciesId, level));
+    FillMoves(b, PickMoves(form.speciesId, level, form.id));
     return b;
 }
 
@@ -737,6 +756,9 @@ void BattlemonMgr::PersistParty(BattlemonEncounter& enc)
 
 uint32 BattlemonMgr::InsertOwned(BattlemonOwned const& row)
 {
+    if (!GetForm(row.formId) || !BattlemonModels::Find(row.formId, row.shiny))
+        return 0;
+
     CharacterDatabase.DirectExecute(
         "INSERT INTO battlemon_owned "
         "(guid, form_id, species_id, sprite, level, exp, gender, hp, shiny, move1, move2, move3, move4) "
@@ -879,11 +901,12 @@ void BattlemonMgr::GrantStarter(uint32 guid)
     row.formId = form->id;
     row.speciesId = form->speciesId;
     row.sprite = form->sprite;
+    row.shiny = BattlemonModels::PreferredShiny(form->id, false);
     row.level = _starterLevel;
     row.exp = 0;
     BattlemonSpecies const* s = GetSpecies(form->speciesId);
     row.gender = RollGender(s ? s->genderRatio : "Female50Percent");
-    std::vector<std::string> moves = PickMoves(row.speciesId, row.level);
+    std::vector<std::string> moves = PickMoves(row.speciesId, row.level, row.formId);
     for (size_t i = 0; i < 4 && i < moves.size(); ++i)
         row.move[i] = moves[i];
     row.hp = CalcHP(s ? s->hp : 35, row.level);
@@ -960,6 +983,8 @@ std::vector<BattlemonOwned> BattlemonMgr::LoadOwned(uint32 guid) const
         row.move[2] = f[11].IsNull() ? "" : f[11].Get<std::string>();
         row.move[3] = f[12].IsNull() ? "" : f[12].Get<std::string>();
         row.faintedAt = f[13].Get<uint32>();
+        if (!GetForm(row.formId) || !BattlemonModels::Find(row.formId, row.shiny))
+            continue;
         ReviveIfDue(row);
         out.push_back(row);
     } while (result->NextRow());
@@ -994,6 +1019,8 @@ BattlemonOwned BattlemonMgr::LoadOwnedById(uint32 ownedId) const
     row.move[2] = f[12].IsNull() ? "" : f[12].Get<std::string>();
     row.move[3] = f[13].IsNull() ? "" : f[13].Get<std::string>();
     row.faintedAt = f[14].Get<uint32>();
+    if (!GetForm(row.formId) || !BattlemonModels::Find(row.formId, row.shiny))
+        return {};
     ReviveIfDue(row);
     return row;
 }
@@ -1136,6 +1163,8 @@ void BattlemonMgr::ClearEncounter(ObjectGuid guid)
 
 void BattlemonMgr::ResetPlayer(Player* player)
 {
+    if (player && IsExternallyReserved(player->GetGUID()))
+        return;
     uint32 guid = SessionLowGuid(player);
     CharacterDatabase.DirectExecute("DELETE FROM battlemon_party WHERE guid = {}", guid);
     CharacterDatabase.DirectExecute("DELETE FROM battlemon_owned WHERE guid = {}", guid);
@@ -1237,6 +1266,11 @@ uint32 BattlemonMgr::SessionLowGuid(Player* player) const
     return player ? player->GetGUID().GetCounter() : 0;
 }
 
+void BattlemonMgr::SendMoveAnimation(Player* player, bool playerSide, std::string const& move)
+{
+    SendAddon(player, std::string(playerSide ? "BM\tFX\t0\t" : "BM\tFX\t1\t") + move);
+}
+
 void BattlemonMgr::SendAddon(Player* player, std::string const& payload)
 {
     if (_currentSession)
@@ -1244,6 +1278,8 @@ void BattlemonMgr::SendAddon(Player* player, std::string const& payload)
     if (!player && _currentSession)
         player = _currentSession->player;
     if (!player || !player->GetSession())
+        return;
+    if (_extension && _extension->OnPacket(player, payload))
         return;
     WorldPacket data;
     ChatHandler::BuildChatPacket(data, CHAT_MSG_WHISPER, payload.c_str(), LANG_ADDON,
@@ -1351,6 +1387,7 @@ void BattlemonMgr::SendReady(Player* player, BattlemonAccount const& acc)
 
 void BattlemonMgr::SendOwnedList(Player* player, uint32 guid)
 {
+    SendAddon(player, "BM\tOWNEDBEGIN");
     uint32 slots[6] = {};
     for (uint8 i = 1; i <= 6; ++i)
         slots[i - 1] = PartyOwnedId(guid, i);
@@ -1384,6 +1421,7 @@ void BattlemonMgr::SendOwnedList(Player* player, uint32 guid)
            << '\t' << ReviveSecondsLeft(row);
         SendAddon(player, ss.str());
     }
+    SendAddon(player, "BM\tOWNEDEND");
 }
 
 void BattlemonMgr::SendDexOwned(Player* player, uint32 guid)
@@ -1406,6 +1444,8 @@ void BattlemonMgr::SendDexList(Player* player, uint32 guid, bool shiny)
     do
     {
         uint32 formId = result->Fetch()[0].Get<uint32>();
+        if (!GetForm(formId) || !BattlemonModels::Find(formId, shiny))
+            continue;
         std::string next = "\t" + std::to_string(formId);
         if (chunk.size() + next.size() > 230)
         {
@@ -1647,7 +1687,11 @@ void BattlemonMgr::AwardAndPersist(Player* player, BattlemonEncounter& enc)
     if (!row.id)
         return;
     uint32 gained = ExpYield(enc.enemy);
-    auto levels = AddExp(row, gained);
+    BattlemonTrainerProgression::AwardPractice(player);
+    uint32 const cap = BattlemonTrainerProgression::LevelCap(player);
+    if (row.level >= cap)
+        gained = 0;
+    auto levels = AddExp(row, gained, cap);
     cur->exp = row.exp;
     cur->level = row.level;
     ApplyStats(*cur);
@@ -1755,6 +1799,16 @@ bool BattlemonMgr::HasActiveEncounter(Player* player)
 void BattlemonMgr::StartWild(Player* player, uint32 formId, bool shiny, bool skipCooldown,
                              ObjectGuid sourceCreature)
 {
+    if (player && IsExternallyReserved(player->GetGUID()))
+    {
+        SendAddon(player, "BM\tMSG\tFinish your pet duel first.");
+        return;
+    }
+    if (player && HasActiveEncounter(player))
+    {
+        SendAddon(player, "BM\tMSG\tFinish your current battle first.");
+        return;
+    }
     if (_forms.empty())
     {
         SendAddon(player, "BM\tMSG\tBattlemon catalog is empty. Import forms.csv into battlemon_forms.");
@@ -1792,6 +1846,11 @@ void BattlemonMgr::StartWild(Player* player, uint32 formId, bool shiny, bool ski
         BattlemonOwned row = LoadOwnedById(ownedId);
         if (!row.id)
             continue;
+        if (row.level > BattlemonTrainerProgression::LevelCap(player))
+        {
+            SendAddon(player, "BM\tMSG\tA party Pokemon exceeds your Pokemon Trainer level limit.");
+            continue;
+        }
         enc.party[i - 1] = MakeBattler(row);
         enc.party[i - 1].partySlot = i;
         // Only fainting carries between battles. A bruised Pokemon turns up
@@ -1926,6 +1985,8 @@ void BattlemonMgr::UseMove(Player* player, uint8 slotIndex)
     }
 
     BattlemonSlot* pSlot = nullptr;
+    BattlemonSlot struggle;
+    BattlemonMoveDef fallback;
     if (!cur->charging && !cur->mustRecharge)
     {
         if (slotIndex >= cur->moves.size() || !cur->moves[slotIndex].def)
@@ -1933,8 +1994,28 @@ void BattlemonMgr::UseMove(Player* player, uint8 slotIndex)
         pSlot = &cur->moves[slotIndex];
         if (pSlot->pp <= 0)
         {
-            SendAddon(player, "BM\tMSG\tThere's no PP left for this move!");
-            return;
+            bool const usable = std::any_of(cur->moves.begin(), cur->moves.end(), [](BattlemonSlot const& move)
+            {
+                return move.def && move.pp > 0;
+            });
+            if (usable)
+            {
+                SendAddon(player, "BM\tMSG\tThere's no PP left for this move!");
+                return;
+            }
+            struggle.def = GetMove("STRUGGLE");
+            if (!struggle.def)
+            {
+                fallback.internalName = "STRUGGLE";
+                fallback.name = "Struggle";
+                fallback.type = "NORMAL";
+                fallback.category = "Physical";
+                fallback.power = 50;
+                fallback.accuracy = 100;
+                fallback.functionCode = "RecoilQuarterOfDamageDealt";
+                struggle.def = &fallback;
+            }
+            pSlot = &struggle;
         }
     }
 
@@ -1958,17 +2039,24 @@ void BattlemonMgr::UseMove(Player* player, uint8 slotIndex)
     bool playerFirst = pPri > ePri || (pPri == ePri && (pSpe > eSpe || (pSpe == eSpe && urand(0, 1))));
 
     BmCtx ctx{ _currentSession, this, &enc, false };
+    auto runAction = [&](BattlemonBattler& actor, BattlemonBattler& target, BattlemonSlot* slot, bool playerSide)
+    {
+        BmRunSingleAction(ctx, actor, target, slot, playerSide);
+        SendAddon(player, FormatState(*cur, 'P'));
+        SendAddon(player, FormatState(enc.enemy, 'E'));
+        SendCombatFx(player, enc);
+    };
     if (playerFirst)
     {
-        BmRunSingleAction(ctx, *cur, enc.enemy, pSlot, true);
+        runAction(*cur, enc.enemy, pSlot, true);
         if (!enc.enemy.fainted && !cur->fainted)
-            BmRunSingleAction(ctx, enc.enemy, *cur, eSlot, false);
+            runAction(enc.enemy, *cur, eSlot, false);
     }
     else
     {
-        BmRunSingleAction(ctx, enc.enemy, *cur, eSlot, false);
+        runAction(enc.enemy, *cur, eSlot, false);
         if (!enc.enemy.fainted && !cur->fainted)
-            BmRunSingleAction(ctx, *cur, enc.enemy, pSlot, true);
+            runAction(*cur, enc.enemy, pSlot, true);
     }
 
     if (!enc.enemy.fainted && !cur->fainted)
@@ -2295,6 +2383,7 @@ void BattlemonMgr::ThrowBall(Player* player, std::string const& ballArg)
     bool caught = ball == "MASTERBALL" || urand(1, 1000) <= odds;
     if (caught)
     {
+        BattlemonTrainerProgression::AwardPractice(player);
         BattlemonOwned row;
         row.guid = SessionLowGuid(player);
         row.formId = enc.enemy.formId;
@@ -2484,6 +2573,14 @@ void BattlemonMgr::HandleCommand(BattlemonSession& session, std::string const& m
     if (!session.playerGuid)
         session.playerGuid = ObjectGuid::Create<HighGuid::Player>(session.guid);
 
+    if (IsExternallyReserved(session.playerGuid))
+    {
+        session.outbox.clear();
+        session.outbox.push_back("BM\tMSG\tFinish your pet duel first.");
+        if (session.player)
+            SendAddon(session.player, "BM\tMSG\tFinish your pet duel first.");
+        return;
+    }
     Player* player = session.player;
     _currentSession = &session;
     session.outbox.clear();
@@ -2510,6 +2607,11 @@ void BattlemonMgr::HandleCommand(BattlemonSession& session, std::string const& m
         cmd = rest.substr(0, tab);
         arg = rest.substr(tab + 1);
     }
+
+    if (_extension && _extension->IsPlaybackBusy(session.playerGuid)
+        && (cmd == "WILD" || cmd == "MOVE" || cmd == "SWITCH" || cmd == "USEITEM"
+            || cmd == "BALL" || cmd == "SKIPCATCH"))
+        return;
 
     if (cmd == "HELLO" || cmd == "STATUS")
     {
@@ -2632,4 +2734,213 @@ void BattlemonMgr::HandleCommand(BattlemonSession& session, std::string const& m
         SwitchParty(player, slot);
         return;
     }
+}
+
+bool BattlemonMgr::IsExternallyReserved(ObjectGuid guid) const
+{
+    return _extension && _extension->IsReserved(guid);
+}
+
+bool BattlemonMgr::GetBattleSnapshot(Player* player, BattlemonEncounter& snapshot)
+{
+    if (!player)
+        return false;
+    std::lock_guard<std::mutex> guard(_lock);
+    auto it = _encounters.find(player->GetGUID());
+    if (it == _encounters.end() || !it->second.active)
+        return false;
+    snapshot = it->second;
+    return true;
+}
+
+std::vector<BattlemonBattler> BattlemonMgr::BuildDuelParty(Player* player, uint8 limit)
+{
+    std::vector<BattlemonBattler> party;
+    if (!player)
+        return party;
+    uint32 const guid = SessionLowGuid(player);
+    for (uint8 slot = 1; slot <= 6 && party.size() < limit; ++slot)
+    {
+        BattlemonOwned const row = LoadOwnedById(PartyOwnedId(guid, slot));
+        if (!row.id || row.guid != guid || !row.hp || !GetForm(row.formId)
+            || row.level > BattlemonTrainerProgression::LevelCap(player))
+            continue;
+        BattlemonBattler battler = MakeBattler(row);
+        battler.partySlot = static_cast<uint32>(party.size() + 1);
+        party.push_back(std::move(battler));
+    }
+    return party;
+}
+
+std::vector<BattlemonBattler> BattlemonMgr::BuildGeneratedTeam(
+    uint32 averageLevel, uint32 trainerLevel, uint8 limit) const
+{
+    std::vector<BattlemonBattler> party;
+    if (!limit)
+        return party;
+    limit = std::min<uint8>(limit, 6);
+    averageLevel = std::clamp(averageLevel, 1u, 100u);
+
+    // The catalog encodes evolution branches as target,method,parameter triples.
+    // Reverse those links: low-stat evolved species must not enter the beginner pool.
+    std::unordered_set<std::string> evolved;
+    for (auto const& entry : _species)
+    {
+        auto const branches = Split(entry.second.evolutions, ',');
+        for (std::size_t i = 0; i < branches.size(); i += 3)
+            if (!branches[i].empty())
+                evolved.insert(branches[i]);
+    }
+    std::vector<uint32> basic;
+    std::vector<uint32> regular;
+    std::vector<uint32> rare;
+    for (uint32 id : _formIds)
+    {
+        BattlemonForm const* form = GetForm(id);
+        BattlemonSpecies const* species = form ? GetSpecies(form->speciesId) : nullptr;
+        // Cosmetic/battle-state forms are not independent species rolls.
+        if (!species || !form->variant.empty() || !species->catchRate)
+            continue;
+        uint32 const stats = species->hp + species->atk + species->def + species->spa + species->spd + species->spe;
+        bool const special = IsLegendarySpecies(species->id) || stats >= 550 || species->catchRate <= 25;
+        if (special)
+            rare.push_back(id);
+        else
+        {
+            regular.push_back(id);
+            if (stats <= 400 && !evolved.count(species->internalName))
+                basic.push_back(id);
+        }
+    }
+    uint32 const minimum = trainerLevel < 20 ? 1 : std::min<uint32>(3, limit);
+    uint32 const maximum = trainerLevel < 20 ? std::min<uint32>(3, limit) : limit;
+    uint32 const count = urand(minimum, maximum);
+    // Tiny parties stay at their rounded average; thereafter use at most +/-3 levels.
+    uint32 const spread = averageLevel < 5 ? 0 : std::clamp(averageLevel / 10, 1u, 3u);
+    uint32 const low = std::max(1u, averageLevel - spread);
+    uint32 const high = std::min(100u, averageLevel + spread);
+    for (uint32 slot = 0; slot < count; ++slot)
+    {
+        std::vector<uint32>* pool = &regular;
+        if (trainerLevel < 20)
+            pool = &basic;
+        else if (trainerLevel >= 60 && !rare.empty() && roll_chance_i(25))
+            pool = &rare;
+        if (pool->empty())
+            pool = trainerLevel < 20 ? &basic : &regular;
+        if (pool->empty())
+            return {}; // Never silently give a beginner a legendary as a fallback.
+        uint32 const index = urand(0, static_cast<uint32>(pool->size() - 1));
+        uint32 const formId = (*pool)[index];
+        BattlemonForm const* form = GetForm(formId);
+        if (!form)
+            return {};
+        BattlemonBattler battler = MakeWild(*form, urand(low, high));
+        battler.partySlot = slot + 1;
+        party.push_back(std::move(battler));
+        // No duplicate species on one bot's team, including across the basic/regular pools.
+        for (auto* candidates : {&basic, &regular, &rare})
+            candidates->erase(std::remove_if(candidates->begin(), candidates->end(), [this, form](uint32 id)
+            {
+                BattlemonForm const* candidate = GetForm(id);
+                return candidate && candidate->speciesId == form->speciesId;
+            }), candidates->end());
+    }
+    return party;
+}
+
+std::vector<BattlemonBattler> BattlemonMgr::BuildTrainerTeam(uint32 entry, uint32 level, uint8 limit) const
+{
+    auto const* trainer = BattlemonNpcTrainers::Find(entry);
+    if (!trainer || !limit)
+        return {};
+    std::vector<uint32> species = trainer->species;
+    uint32 const count = std::min<uint32>(std::min<uint8>(limit, 6), trainer->random
+        ? urand(trainer->minimum, trainer->maximum) : static_cast<uint32>(species.size()));
+    std::vector<BattlemonBattler> team;
+    for (uint32 slot = 0; slot < count && !species.empty(); ++slot)
+    {
+        uint32 const index = trainer->random ? urand(0, static_cast<uint32>(species.size() - 1)) : 0;
+        uint32 const wanted = species[index];
+        species.erase(species.begin() + index);
+        BattlemonForm const* selected = nullptr;
+        for (uint32 id : _formIds)
+        {
+            BattlemonForm const* form = GetForm(id);
+            if (form && form->speciesId == wanted && form->variant.empty()
+                && (!selected || form->id < selected->id))
+                selected = form;
+        }
+        // A broken catalog must not silently replace a leader's signature Pokemon.
+        if (!selected || !GetSpecies(wanted))
+            return {};
+        BattlemonBattler member = MakeWild(*selected, std::clamp(level, 1u, 100u));
+        member.partySlot = slot + 1;
+        team.push_back(std::move(member));
+    }
+    return team;
+}
+
+std::string BattlemonMgr::FormatBattlerState(BattlemonBattler const& battler, char side) const
+{
+    return FormatState(battler, side);
+}
+
+bool BattlemonMgr::HasRemoteSession(Player* player) const
+{
+    return player && sBattlemonSidecar->HasLease(SessionLowGuid(player));
+}
+
+// Only invoked by the nearby center attendant gossip, never by addon commands.
+void BattlemonMgr::UseCenterService(Player* player, uint32 action)
+{
+    if (!player || !ShouldHandle(player) || player->IsInCombat()
+        || HasRemoteSession(player) || IsExternallyReserved(player->GetGUID()) || HasActiveEncounter(player))
+        return;
+
+    BattlemonAccount const account = EnsureAccount(player);
+    if (action == BattlemonCenter::Heal)
+    {
+        std::lock_guard<std::mutex> guard(_lock);
+        std::vector<BattlemonBattler> party;
+        for (uint8 slot = 1; slot <= 6; ++slot)
+        {
+            BattlemonOwned const row = LoadOwnedById(PartyOwnedId(account.guid, slot));
+            if (!row.id)
+                continue;
+            if (row.guid != account.guid || !GetForm(row.formId) || !GetSpecies(row.speciesId))
+            {
+                Msg(player, "Your party could not be loaded. Please try again.");
+                return;
+            }
+            BattlemonBattler battler = MakeBattler(row);
+            // Healing must not repair or replace an equipped move as a side effect.
+            for (uint8 move = 0; move < 4; ++move)
+            {
+                if (MoveName(battler, move) != row.move[move])
+                {
+                    Msg(player, "Please check your equipped moves before healing.");
+                    return;
+                }
+            }
+            party.push_back(battler);
+        }
+        for (BattlemonBattler const& battler : party)
+            PersistBattler(battler);
+        Msg(player, party.empty() ? "Set your Pokemon party first."
+            : "Your party has been treated. Enjoy your next adventure!");
+    }
+    else if (action == BattlemonCenter::Shop)
+    {
+        SendShop(player);
+        SendBag(player, account.guid);
+        SendAddon(player, "BM\tCENTER\tSHOP");
+    }
+    else if (action == BattlemonCenter::Party)
+    {
+        SendOwnedList(player, account.guid);
+        SendAddon(player, "BM\tCENTER\tPARTY");
+    }
+    if (action == BattlemonCenter::Heal && BattlemonCenter::HealCompanion)
+        BattlemonCenter::HealCompanion(player);
 }

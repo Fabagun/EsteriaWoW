@@ -896,6 +896,7 @@ enum PlayerLoginQueryIndex
     PLAYER_LOGIN_QUERY_LOAD_DIGITAL_ITEMS,
     PLAYER_LOGIN_QUERY_LOAD_BODY_SHAPE,
     PLAYER_LOGIN_QUERY_LOAD_RETAIL_LOOK,
+    PLAYER_LOGIN_QUERY_LOAD_FORM_LOOK,
     MAX_PLAYER_LOGIN_QUERY
 };
 
@@ -1156,6 +1157,11 @@ public:
     // Full Retail customization (see RetailLookWire.h): opaque to the server, passed on to every player who sees this one.
     void LoadRetailLook(PreparedQueryResult result);
     void SendRetailLookTo(Player* receiver) const;
+    // Two Forms (Worgen Wolf/Human, Dracthyr Dragon/Visage): the look of the form that is not showing.
+    // ToggleRetailForm swaps it with the active one, saves both and tells everyone who sees this player; false when
+    // there is no saved pair.
+    void LoadFormLook(PreparedQueryResult result);
+    bool ToggleRetailForm();
     void SendTransferAborted(uint32 mapid, TransferAbortReason reason, uint8 arg = 0);
     void SendInstanceResetWarning(uint32 mapid, Difficulty difficulty, uint32 time, bool onEnterMap);
 
@@ -2823,6 +2829,8 @@ protected:
     CharacterBodyShape::Values _bodyShape{};
     bool _hasRetailLook = false;
     std::array<uint8, CharacterRetailLook::PayloadSize> _retailLook{};
+    bool _hasParkedLook = false;
+    std::array<uint8, CharacterRetailLook::PayloadSize> _parkedLook{};
     void _LoadPetStable(uint8 petStableSlots, PreparedQueryResult result);
 
     /*********************************************************/

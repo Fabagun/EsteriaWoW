@@ -160,7 +160,7 @@ bool BmWeatherSuppressed(BattlemonEncounter const& enc, BattlemonBattler const& 
         || BmHasAbility(b, "AIRLOCK") || BmHasAbility(b, "CLOUDNINE");
 }
 
-float BmAccuracyAbilityMul(BattlemonBattler const& user, BattlemonBattler const& target)
+float BmAccuracyAbilityMul(BattlemonBattler const& user, BattlemonBattler const& /*target*/)
 {
     float m = 1.f;
     if (BmHasAbility(user, "COMPOUNDEYES"))
@@ -295,7 +295,6 @@ bool BmImmuneToMove(BmCtx& ctx, BattlemonBattler const& user, BattlemonBattler& 
     }
     if (BmHasAbility(target, "WONDERGUARD"))
     {
-        float eff = 1.f;
         if (ctx.mgr)
         {
             bool crit = false;

@@ -1,0 +1,2323 @@
+{
+  "schema": 1,
+  "entries": {
+    "d994e4fe74be83ea92760290a6db567cc9490b7b47547fd2c8167b247b8f0696": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\corsola.bmd",
+                "sha256": "5537a53fa5b2d7b809f818b5a041abbe5e1f63fe9ffeeedba48a540be969a5a7"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\texture.png",
+                "sha256": "c793f1ae5fdffa398e5f5b78112b72742c3c77f49fc09cddd01c556ded536577"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\idle.bmd",
+                "sha256": "f4e0241a9dc29752f1724ef65ce2c29535552d03c59d95d858ca6064f682c437"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\idle.bmd",
+                "sha256": "f4e0241a9dc29752f1724ef65ce2c29535552d03c59d95d858ca6064f682c437"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\corsolafeelers.bmd",
+                "sha256": "9644b6e6eed38247ade1ee978c82e4e6cf87da1e0043525c966a4125929a6531"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\texture.png",
+                "sha256": "c793f1ae5fdffa398e5f5b78112b72742c3c77f49fc09cddd01c556ded536577"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\idle.bmd",
+                "sha256": "f4e0241a9dc29752f1724ef65ce2c29535552d03c59d95d858ca6064f682c437"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\idle.bmd",
+                "sha256": "f4e0241a9dc29752f1724ef65ce2c29535552d03c59d95d858ca6064f682c437"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "1c3b38791ce69b4f7e11ff657ccefe8b5ee673d41f88026d9f3f7065434b900c",
+        "skin": "0f3e39d46f7f5372819e4dd22105045af6ecbebd10dc38fab2af6afb2fa6bafc",
+        "texture": "ec703d884a030d296b389131b33996e179a046dbe4371e54c957f2b21026c63b"
+      }
+    },
+    "d80852b4590443e95dfb0e1f18c61df2f4d5e871d8073c761c2f9e6ed3f660ba": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\corsola.bmd",
+                "sha256": "5537a53fa5b2d7b809f818b5a041abbe5e1f63fe9ffeeedba48a540be969a5a7"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\shiny\\texture.png",
+                "sha256": "07d3892eb38665e2432d398d3f7e226e0a44a2ce73152dfff457766162030e56"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\idle.bmd",
+                "sha256": "f4e0241a9dc29752f1724ef65ce2c29535552d03c59d95d858ca6064f682c437"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\idle.bmd",
+                "sha256": "f4e0241a9dc29752f1724ef65ce2c29535552d03c59d95d858ca6064f682c437"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\corsolafeelers.bmd",
+                "sha256": "9644b6e6eed38247ade1ee978c82e4e6cf87da1e0043525c966a4125929a6531"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\shiny\\texture.png",
+                "sha256": "07d3892eb38665e2432d398d3f7e226e0a44a2ce73152dfff457766162030e56"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\idle.bmd",
+                "sha256": "f4e0241a9dc29752f1724ef65ce2c29535552d03c59d95d858ca6064f682c437"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\222_corsola\\all\\galarian\\none\\idle.bmd",
+                "sha256": "f4e0241a9dc29752f1724ef65ce2c29535552d03c59d95d858ca6064f682c437"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "1c3b38791ce69b4f7e11ff657ccefe8b5ee673d41f88026d9f3f7065434b900c",
+        "skin": "0f3e39d46f7f5372819e4dd22105045af6ecbebd10dc38fab2af6afb2fa6bafc",
+        "texture": "7ba9d41239c9935264cefa1a9883fa38d74708a1c8ba87c79a2beea24b7f6547"
+      }
+    },
+    "5d0a308f7573532e878834bc06ef0366c93a364b4bd4fc210bde88240323581f": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\castform.bmd",
+                "sha256": "43c14bc8ff14ff663f81379d74885952d650a87be15525a447c53d90547b9ed7"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\texture.png",
+                "sha256": "b28d6d757035fb35946158d367b9e8580f759f80a49bb6f797fc77658dfd3e39"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\idle.bmd",
+                "sha256": "dac4380b695a0008c9fdd9b7099e29a6db32d2a9afa3783f225960d0ae14cb79"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\walk.bmd",
+                "sha256": "07fa05d8eb46a9b20f6b26576d779c25e6dcd870e0fb8b867eea126e885a3fca"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\castformorb.bmd",
+                "sha256": "9d033f53b4f8cdc5562123f921c822a3503520e10440431f32dfcc9d77c53f09"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\texture.png",
+                "sha256": "b28d6d757035fb35946158d367b9e8580f759f80a49bb6f797fc77658dfd3e39"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\idleorb.bmd",
+                "sha256": "20d88ad1666ccb2421422f53861be930dce7f19440bc5cc8401452508dd2bf07"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\walkorb.bmd",
+                "sha256": "de1511ce8cebdcd75bfe12d5709fa497174a036e7c5bd5ee887fa937c9f3a6f2"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "e8cf9c9a239949c1d4edc3acf178e0d86697d767a0a80e42b97b90dd7fc201aa",
+        "skin": "a01d98fd11eb39e6ca05de844103d46f7f542b009c47a607eccff22f493f3ad0",
+        "texture": "73a62c0d710070d2b5c0f43838168aac797868b302ef868a14637f76e5c4487d"
+      }
+    },
+    "991f671119448861855e79d492c3613368973842eb2025eff07c02de3c54e6a5": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\castform.bmd",
+                "sha256": "43c14bc8ff14ff663f81379d74885952d650a87be15525a447c53d90547b9ed7"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\shiny\\texture.png",
+                "sha256": "aa39175ab8e22fedcd6520ee0b51c3617c0ac64809c345bb256575640c82c5ca"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\idle.bmd",
+                "sha256": "dac4380b695a0008c9fdd9b7099e29a6db32d2a9afa3783f225960d0ae14cb79"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\walk.bmd",
+                "sha256": "07fa05d8eb46a9b20f6b26576d779c25e6dcd870e0fb8b867eea126e885a3fca"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\castformorb.bmd",
+                "sha256": "9d033f53b4f8cdc5562123f921c822a3503520e10440431f32dfcc9d77c53f09"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\shiny\\texture.png",
+                "sha256": "aa39175ab8e22fedcd6520ee0b51c3617c0ac64809c345bb256575640c82c5ca"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\idleorb.bmd",
+                "sha256": "20d88ad1666ccb2421422f53861be930dce7f19440bc5cc8401452508dd2bf07"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\sun\\none\\walkorb.bmd",
+                "sha256": "de1511ce8cebdcd75bfe12d5709fa497174a036e7c5bd5ee887fa937c9f3a6f2"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "e8cf9c9a239949c1d4edc3acf178e0d86697d767a0a80e42b97b90dd7fc201aa",
+        "skin": "a01d98fd11eb39e6ca05de844103d46f7f542b009c47a607eccff22f493f3ad0",
+        "texture": "c5630066107c70140e0d03aa8961f7c29c7b6ce44cd4237483de91fa3a92432e"
+      }
+    },
+    "340a00d87a44321691ee0a0eee69c969a36b9c5dc05090d96518b3845d0fa3e6": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\castform.bmd",
+                "sha256": "328ad22002c3c6cb18499675c1aefd4d44ebf1fbce2016ad9e108e0b788d2f6b"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\texture.png",
+                "sha256": "ae7fd6fc89c2689df02d6ca1b70085d985d63c0d981a6f5997c23cdb2e5b87b9"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\idle.bmd",
+                "sha256": "20d88ad1666ccb2421422f53861be930dce7f19440bc5cc8401452508dd2bf07"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\walk.bmd",
+                "sha256": "fa959abd0c73f5fb903059be17d4a078213669ca6c0c02f76cd86cf4b4fa241a"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\castformorb.bmd",
+                "sha256": "a4003b4e0edd3549b5dc8ef603364d43390ba5684ca11431e81253c9cc1592d2"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\texture.png",
+                "sha256": "ae7fd6fc89c2689df02d6ca1b70085d985d63c0d981a6f5997c23cdb2e5b87b9"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\idleorb.bmd",
+                "sha256": "20d88ad1666ccb2421422f53861be930dce7f19440bc5cc8401452508dd2bf07"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\walkorb.bmd",
+                "sha256": "fa959abd0c73f5fb903059be17d4a078213669ca6c0c02f76cd86cf4b4fa241a"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "6740e7b40b498b7df32befbdfb197106ddedf5449a5199eba838d4d8f513ec9a",
+        "skin": "fe1a5953ac56680c42dd7d44a28907ee19e14b6256bed7ab845dd453046b891b",
+        "texture": "513d98d3fc5aab0992a520fc84145755acd9924728dd364386e19b893cc2be91"
+      }
+    },
+    "e232922710e10b0abf1740387d6618ac05c2ae47dc4c7a85f8df57fbb1483b47": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\castform.bmd",
+                "sha256": "328ad22002c3c6cb18499675c1aefd4d44ebf1fbce2016ad9e108e0b788d2f6b"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\shiny\\texture.png",
+                "sha256": "aa438a3c1bd3bf445461f4197ab2aed8bcaeb5627be18cb741890727e7193401"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\idle.bmd",
+                "sha256": "20d88ad1666ccb2421422f53861be930dce7f19440bc5cc8401452508dd2bf07"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\walk.bmd",
+                "sha256": "fa959abd0c73f5fb903059be17d4a078213669ca6c0c02f76cd86cf4b4fa241a"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\castformorb.bmd",
+                "sha256": "a4003b4e0edd3549b5dc8ef603364d43390ba5684ca11431e81253c9cc1592d2"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\shiny\\texture.png",
+                "sha256": "aa438a3c1bd3bf445461f4197ab2aed8bcaeb5627be18cb741890727e7193401"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\idleorb.bmd",
+                "sha256": "20d88ad1666ccb2421422f53861be930dce7f19440bc5cc8401452508dd2bf07"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\351_castform\\all\\ice\\none\\walkorb.bmd",
+                "sha256": "fa959abd0c73f5fb903059be17d4a078213669ca6c0c02f76cd86cf4b4fa241a"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "6740e7b40b498b7df32befbdfb197106ddedf5449a5199eba838d4d8f513ec9a",
+        "skin": "fe1a5953ac56680c42dd7d44a28907ee19e14b6256bed7ab845dd453046b891b",
+        "texture": "86f65bc4f95132ff1ca9f56aeb45f95a48c7db0a45eac21a26c4c0be2f4fa18c"
+      }
+    },
+    "4b5cea628709bba7c6a0a49a40dbd32ef820f9f6980e938fdfd6abce11c809c9": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\rotom.bmd",
+                "sha256": "89762c9c5c2f9767b7c9971b89fa78d0fc3a33587299fe53cf991604c06fb1cb"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\texture.png",
+                "sha256": "75514fdd74e64cf6ee772e5355d2cd6e814996ac92a58d588b9743695091254b"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\idle.bmd",
+                "sha256": "0616565aaa9d5f1c08f6d081820576ec214325491bf506fdd0d7cd608e0494b9"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\walk.bmd",
+                "sha256": "8bd2e854133cb4d79caa2222d7dd8fb6d2818b97206d7fc074568fdf27ecd44b"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\rotomspectre.bmd",
+                "sha256": "3cde5142bd92e0836c6459082be9a57fdb08bb2e547f9a54592188d0b5d8a302"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\texture.png",
+                "sha256": "75514fdd74e64cf6ee772e5355d2cd6e814996ac92a58d588b9743695091254b"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\idle.bmd",
+                "sha256": "0616565aaa9d5f1c08f6d081820576ec214325491bf506fdd0d7cd608e0494b9"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\walk.bmd",
+                "sha256": "8bd2e854133cb4d79caa2222d7dd8fb6d2818b97206d7fc074568fdf27ecd44b"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.8
+          }
+        ]
+      },
+      "export": {
+        "m2": "7b24334f8e835c791e3423b5fd8ea7e6abe1c0f699d89d474a9325db23394c9c",
+        "skin": "417ba89afa1f522e9942e5736004a55e5a9b331467940a196acd2b8b52a7b2b9",
+        "texture": "13df7d8166a7fa22b5b8010f827ae5aa93f22863eb5868da9faadae4c5140bbc"
+      }
+    },
+    "bd37fb7493d09b00e78fef9cc781894756558aa8a1f056ba6a91b4ca11a157c0": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\rotom.bmd",
+                "sha256": "89762c9c5c2f9767b7c9971b89fa78d0fc3a33587299fe53cf991604c06fb1cb"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\shiny\\texture.png",
+                "sha256": "409d67503244b64fc895d3ad236b580d3bc8ed8cfbdd4fac42e58977755e3941"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\idle.bmd",
+                "sha256": "0616565aaa9d5f1c08f6d081820576ec214325491bf506fdd0d7cd608e0494b9"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\walk.bmd",
+                "sha256": "8bd2e854133cb4d79caa2222d7dd8fb6d2818b97206d7fc074568fdf27ecd44b"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\rotomspectre.bmd",
+                "sha256": "3cde5142bd92e0836c6459082be9a57fdb08bb2e547f9a54592188d0b5d8a302"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\shiny\\texture.png",
+                "sha256": "409d67503244b64fc895d3ad236b580d3bc8ed8cfbdd4fac42e58977755e3941"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\idle.bmd",
+                "sha256": "0616565aaa9d5f1c08f6d081820576ec214325491bf506fdd0d7cd608e0494b9"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\base\\none\\walk.bmd",
+                "sha256": "8bd2e854133cb4d79caa2222d7dd8fb6d2818b97206d7fc074568fdf27ecd44b"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.8
+          }
+        ]
+      },
+      "export": {
+        "m2": "7b24334f8e835c791e3423b5fd8ea7e6abe1c0f699d89d474a9325db23394c9c",
+        "skin": "417ba89afa1f522e9942e5736004a55e5a9b331467940a196acd2b8b52a7b2b9",
+        "texture": "b04af67cc2b83232946bd4d54f257b037e30857728ed6dc8b27e2f28bbf5f89b"
+      }
+    },
+    "01a5381d35509c656bea29b0573c94f1d3ad48b7cfc0bf88b39f44d6a314808c": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\rotom.bmd",
+                "sha256": "5a645f04101af0eaa5dd69beba227fa64be93d551484608684eb573d89abee4d"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\texture.png",
+                "sha256": "9391605454ba5934be204bbda70ccfb9f1d485179d662e2285c68e9878646d95"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\idle.bmd",
+                "sha256": "e51babd29b35cb1940d556d2cfa15da63dcbd392b4e42653ccca6f6b1574bc51"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\walk.bmd",
+                "sha256": "659f54e152312d0a0e888f682344a040c246640ccd1cc51014d8c624d8b62f7e"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\rotomspectre.bmd",
+                "sha256": "df60995ababfaa9ae14e3ea06228ca4c7f0d1c08b4a6084ce8d4c7c28115d3db"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\texture.png",
+                "sha256": "9391605454ba5934be204bbda70ccfb9f1d485179d662e2285c68e9878646d95"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\idle.bmd",
+                "sha256": "e51babd29b35cb1940d556d2cfa15da63dcbd392b4e42653ccca6f6b1574bc51"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\walk.bmd",
+                "sha256": "659f54e152312d0a0e888f682344a040c246640ccd1cc51014d8c624d8b62f7e"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.8
+          }
+        ]
+      },
+      "export": {
+        "m2": "4adda3dcea463aa0dd86825b3970003d561c1056505c073613b30a65ed4975b3",
+        "skin": "1b1626563d09d8017524af9e44b05b3ab8755a81b2ee132d2eb18f30d64e4c84",
+        "texture": "a34725cb84fca3fb322bedb7d2f5cc8b3e91c42a2d6bd60552f595d178c3121f"
+      }
+    },
+    "e2f2e28c361ed459a3ff017bdfc402a6ea6cf3409f9d8894b38ef90e50a80c64": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\rotom.bmd",
+                "sha256": "5a645f04101af0eaa5dd69beba227fa64be93d551484608684eb573d89abee4d"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\shiny\\texture.png",
+                "sha256": "9034b61595d65c67b00f2603f1528b483c5df371d966ee9cc1ea26e6d5f18028"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\idle.bmd",
+                "sha256": "e51babd29b35cb1940d556d2cfa15da63dcbd392b4e42653ccca6f6b1574bc51"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\walk.bmd",
+                "sha256": "659f54e152312d0a0e888f682344a040c246640ccd1cc51014d8c624d8b62f7e"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\rotomspectre.bmd",
+                "sha256": "df60995ababfaa9ae14e3ea06228ca4c7f0d1c08b4a6084ce8d4c7c28115d3db"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\shiny\\texture.png",
+                "sha256": "9034b61595d65c67b00f2603f1528b483c5df371d966ee9cc1ea26e6d5f18028"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\idle.bmd",
+                "sha256": "e51babd29b35cb1940d556d2cfa15da63dcbd392b4e42653ccca6f6b1574bc51"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\heat\\none\\walk.bmd",
+                "sha256": "659f54e152312d0a0e888f682344a040c246640ccd1cc51014d8c624d8b62f7e"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.8
+          }
+        ]
+      },
+      "export": {
+        "m2": "4adda3dcea463aa0dd86825b3970003d561c1056505c073613b30a65ed4975b3",
+        "skin": "1b1626563d09d8017524af9e44b05b3ab8755a81b2ee132d2eb18f30d64e4c84",
+        "texture": "47978235f50c214e22044fda23eaec3fdbf9e9ee38443e220103cd7500411ce0"
+      }
+    },
+    "464d353b3bb41e528c17817d957f81c859532c78b6960c690f0106255fb800dc": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\rotom.bmd",
+                "sha256": "76b7b483e8fe82afa7174c907edbb30d33019d6c10e7725705e5b7e69c4a7362"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\texture.png",
+                "sha256": "a53e9c06de5cd2e9c93277472cea6ca5ad95644faac2e8f8e8780f69bd62a5c7"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\idle.bmd",
+                "sha256": "96ac15284603a95133e239a81acb53e6fc98115a49cc9cb26794c75c212a83ca"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\walk.bmd",
+                "sha256": "22e9bbc58d623acc0a5908c0c602ee622f76a30597875aee3f8bfb607a6e489d"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\rotomspectre.bmd",
+                "sha256": "506ae8c7a2ddb06cf7ff377381a21fb64b9cc1be2d47f1436a969a9ae0f73ef0"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\texture.png",
+                "sha256": "a53e9c06de5cd2e9c93277472cea6ca5ad95644faac2e8f8e8780f69bd62a5c7"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\idle.bmd",
+                "sha256": "96ac15284603a95133e239a81acb53e6fc98115a49cc9cb26794c75c212a83ca"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\walk.bmd",
+                "sha256": "22e9bbc58d623acc0a5908c0c602ee622f76a30597875aee3f8bfb607a6e489d"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.8
+          }
+        ]
+      },
+      "export": {
+        "m2": "b6c153817357642260fb00649c475b991a6eb985654c9e5625eae6004baeca23",
+        "skin": "945b626aebc1620642a8d083da9758a9e18f072ad29d1c42aa2b6d0e4b854b97",
+        "texture": "dbc9f4fa861cc32d0fdbd4e8d1a51bef5565be684fbd0ba4428e2928d79c7e46"
+      }
+    },
+    "3db0c01b6c691674202eb7d4c328182e7a30fb036a0b5f3ecc797b1e574976a1": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\rotom.bmd",
+                "sha256": "76b7b483e8fe82afa7174c907edbb30d33019d6c10e7725705e5b7e69c4a7362"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\shiny\\texture.png",
+                "sha256": "180567ae2b690d42232ad4edbe62e08225512c1496fac444401bec177337d532"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\idle.bmd",
+                "sha256": "96ac15284603a95133e239a81acb53e6fc98115a49cc9cb26794c75c212a83ca"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\walk.bmd",
+                "sha256": "22e9bbc58d623acc0a5908c0c602ee622f76a30597875aee3f8bfb607a6e489d"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\rotomspectre.bmd",
+                "sha256": "506ae8c7a2ddb06cf7ff377381a21fb64b9cc1be2d47f1436a969a9ae0f73ef0"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\shiny\\texture.png",
+                "sha256": "180567ae2b690d42232ad4edbe62e08225512c1496fac444401bec177337d532"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\idle.bmd",
+                "sha256": "96ac15284603a95133e239a81acb53e6fc98115a49cc9cb26794c75c212a83ca"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\wash\\none\\walk.bmd",
+                "sha256": "22e9bbc58d623acc0a5908c0c602ee622f76a30597875aee3f8bfb607a6e489d"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.8
+          }
+        ]
+      },
+      "export": {
+        "m2": "b6c153817357642260fb00649c475b991a6eb985654c9e5625eae6004baeca23",
+        "skin": "945b626aebc1620642a8d083da9758a9e18f072ad29d1c42aa2b6d0e4b854b97",
+        "texture": "3097f8db35de9da2495b1bbdfc7d9c396b048682f6b630536350288642085337"
+      }
+    },
+    "504ab480111aac7eeb4240be12cc5a3fe1a6a1ce1429b3d3760dea7c3e73a6b0": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\rotom.bmd",
+                "sha256": "a0503fbc691e489a712fcbc69f0b70b8768e75f97d3bb086190add94a705a395"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\texture.png",
+                "sha256": "dfb97bc75ce829c0da5ceb12ba603e9a35b681f961dc62df7cf43e0658b2d445"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\idle.bmd",
+                "sha256": "6e7baae1fe19916b92104e79998cf9e3b5b17c22897f3cb93de264ac3d12454b"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\walk.bmd",
+                "sha256": "4c92cabc4e64400594c30a53dc5b853215c6d5c16164e92ddfe3b0d7a6550d18"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\rotomspectre.bmd",
+                "sha256": "ec721571b7b27b0951fda4df0cca90a97dd8d52923236a1009e340092c0594ac"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\texture.png",
+                "sha256": "dfb97bc75ce829c0da5ceb12ba603e9a35b681f961dc62df7cf43e0658b2d445"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\idle.bmd",
+                "sha256": "6e7baae1fe19916b92104e79998cf9e3b5b17c22897f3cb93de264ac3d12454b"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\walk.bmd",
+                "sha256": "4c92cabc4e64400594c30a53dc5b853215c6d5c16164e92ddfe3b0d7a6550d18"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.8
+          }
+        ]
+      },
+      "export": {
+        "m2": "b06c1a6a592301489d8ed2d747e617374ad9b79aa46d37ee88ca1dc99ca30a53",
+        "skin": "2a5e886b0603644ddd71c88ab4e6b2ecc34a73d9450b7f106e789cd0cc2c73de",
+        "texture": "838d398e09dd2247b6cf847736dc567980e8f8e6f561d33262ce295968eae55b"
+      }
+    },
+    "9f7a75536f0337415da3bf013fc2d2a159354d897e2f3d79841c7e4d7c174f0e": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\rotom.bmd",
+                "sha256": "a0503fbc691e489a712fcbc69f0b70b8768e75f97d3bb086190add94a705a395"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\shiny\\texture.png",
+                "sha256": "7c681a9d506b6d8076b662ad945ebbd22801ed4e608259b061a8d513ee23bcfb"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\idle.bmd",
+                "sha256": "6e7baae1fe19916b92104e79998cf9e3b5b17c22897f3cb93de264ac3d12454b"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\walk.bmd",
+                "sha256": "4c92cabc4e64400594c30a53dc5b853215c6d5c16164e92ddfe3b0d7a6550d18"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\rotomspectre.bmd",
+                "sha256": "ec721571b7b27b0951fda4df0cca90a97dd8d52923236a1009e340092c0594ac"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\shiny\\texture.png",
+                "sha256": "7c681a9d506b6d8076b662ad945ebbd22801ed4e608259b061a8d513ee23bcfb"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\idle.bmd",
+                "sha256": "6e7baae1fe19916b92104e79998cf9e3b5b17c22897f3cb93de264ac3d12454b"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\frost\\none\\walk.bmd",
+                "sha256": "4c92cabc4e64400594c30a53dc5b853215c6d5c16164e92ddfe3b0d7a6550d18"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.8
+          }
+        ]
+      },
+      "export": {
+        "m2": "b06c1a6a592301489d8ed2d747e617374ad9b79aa46d37ee88ca1dc99ca30a53",
+        "skin": "2a5e886b0603644ddd71c88ab4e6b2ecc34a73d9450b7f106e789cd0cc2c73de",
+        "texture": "0f5fcc4dcee3d8b633d4836e839fd62ff132504374b4bc27b856b77706ce7a6c"
+      }
+    },
+    "2d8cc2777ecef74e5c391a860c36113675105f8b7afa79fd6052d539e029fb41": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\rotom.bmd",
+                "sha256": "b75bf4c035c80f2c0ed3965a8d9bde6c80cd4d6ec94a785abc6b41af54acd025"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\texture.png",
+                "sha256": "c1c15ba02c612d5117c1f22ebd36cb0555adeb8cac1cb40e62356ba349f9ecdd"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\idle.bmd",
+                "sha256": "61e8060dd2d85fb71ca5eb6e6a7df375d6dc7413c20694cc8b4478eb1f4e10ed"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\walk.bmd",
+                "sha256": "66e73abbc72a0c391691d851dfb6210294610a63fb2ef0a572a17af2eb4f7184"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\rotomspectre.bmd",
+                "sha256": "2acad4b444277a3db5cbbeb36cf2d6d91ff7093d838be46b49f5cfbeba7c45ee"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\texture.png",
+                "sha256": "c1c15ba02c612d5117c1f22ebd36cb0555adeb8cac1cb40e62356ba349f9ecdd"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\idle.bmd",
+                "sha256": "61e8060dd2d85fb71ca5eb6e6a7df375d6dc7413c20694cc8b4478eb1f4e10ed"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\walk.bmd",
+                "sha256": "66e73abbc72a0c391691d851dfb6210294610a63fb2ef0a572a17af2eb4f7184"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.8
+          }
+        ]
+      },
+      "export": {
+        "m2": "8b2b98f7150ec2e457c607cbab6455f8cddce6b4933fcbe1d950e8952deeb740",
+        "skin": "1a1426527ffc982c9d41e48fa7b8f9276674421a5a2be7d960467e71389d0b33",
+        "texture": "e2b1020e3a6edc28219a9f708f26a33ecfb3441d3c842d75f18e5e4d24a37f3f"
+      }
+    },
+    "d6e09d731aa1cad9f0a7985c3ca919fa89db7703fe16fbbc418d49f4304c7bd6": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\rotom.bmd",
+                "sha256": "b75bf4c035c80f2c0ed3965a8d9bde6c80cd4d6ec94a785abc6b41af54acd025"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\shiny\\texture.png",
+                "sha256": "0427c60b9508bb2fc9d0e77aa482f75bfcc01e19a3ef9d624ebfea58e2bbc91f"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\idle.bmd",
+                "sha256": "61e8060dd2d85fb71ca5eb6e6a7df375d6dc7413c20694cc8b4478eb1f4e10ed"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\walk.bmd",
+                "sha256": "66e73abbc72a0c391691d851dfb6210294610a63fb2ef0a572a17af2eb4f7184"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\rotomspectre.bmd",
+                "sha256": "2acad4b444277a3db5cbbeb36cf2d6d91ff7093d838be46b49f5cfbeba7c45ee"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\shiny\\texture.png",
+                "sha256": "0427c60b9508bb2fc9d0e77aa482f75bfcc01e19a3ef9d624ebfea58e2bbc91f"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\idle.bmd",
+                "sha256": "61e8060dd2d85fb71ca5eb6e6a7df375d6dc7413c20694cc8b4478eb1f4e10ed"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\479_rotom\\all\\mow\\none\\walk.bmd",
+                "sha256": "66e73abbc72a0c391691d851dfb6210294610a63fb2ef0a572a17af2eb4f7184"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.8
+          }
+        ]
+      },
+      "export": {
+        "m2": "8b2b98f7150ec2e457c607cbab6455f8cddce6b4933fcbe1d950e8952deeb740",
+        "skin": "1a1426527ffc982c9d41e48fa7b8f9276674421a5a2be7d960467e71389d0b33",
+        "texture": "458fddea4ac739c9d70e266614c32a1f5618b7775b3c430c2c142870d6806857"
+      }
+    },
+    "dd0ce007afb4c37c545f93456e0b34ae5b48b51a1775771cfcf340d218a9b899": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\solosis.bmd",
+                "sha256": "9398e9c7c386069bcf824ec981152ad1d3bea225a88d0f7fd63e9877b231eb8d"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\texture.png",
+                "sha256": "3220324d67a17246d16e1f5fc0ae0ae89c32913d718756939961d402f1d975e4"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\idle.bmd",
+                "sha256": "29b05efe8dee8538c0500a3890413befc62cc910996854e1aab6b03a4c317a40"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\walk.bmd",
+                "sha256": "d7287533cb48a8a1205dc2054866d2a9852cc8764a24a423f7ca8078e0171c6a"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\solosis_transparency.bmd",
+                "sha256": "88fb5c4eafe426b7f4d7833039bba1561619dbfa3c44edd832d742539f475cb5"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\texture.png",
+                "sha256": "3220324d67a17246d16e1f5fc0ae0ae89c32913d718756939961d402f1d975e4"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\idle.bmd",
+                "sha256": "29b05efe8dee8538c0500a3890413befc62cc910996854e1aab6b03a4c317a40"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\walk.bmd",
+                "sha256": "d7287533cb48a8a1205dc2054866d2a9852cc8764a24a423f7ca8078e0171c6a"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "9e797ea9af35010a5237f76c69efa804ca74f07d4c7077da2dad7282bde0f362",
+        "skin": "647702e23a9ffed0600885c337dcf6af7fbc71a122e20b26af14ec931d999195",
+        "texture": "54f9278ce46c0086915ceef44c5c442cf8852a38766e3a76cc61346fa67a4c04"
+      }
+    },
+    "2035b4d187c60ece2df8d79997c91e6002ae7454ed8b2933ea42b9fc366202c9": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\solosis.bmd",
+                "sha256": "9398e9c7c386069bcf824ec981152ad1d3bea225a88d0f7fd63e9877b231eb8d"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\shiny\\texture.png",
+                "sha256": "2bf72b54968ffc8890dc2916a63a4cb565b835555cd258973fb88be265290900"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\idle.bmd",
+                "sha256": "29b05efe8dee8538c0500a3890413befc62cc910996854e1aab6b03a4c317a40"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\walk.bmd",
+                "sha256": "d7287533cb48a8a1205dc2054866d2a9852cc8764a24a423f7ca8078e0171c6a"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\solosis_transparency.bmd",
+                "sha256": "88fb5c4eafe426b7f4d7833039bba1561619dbfa3c44edd832d742539f475cb5"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\shiny\\texture.png",
+                "sha256": "2bf72b54968ffc8890dc2916a63a4cb565b835555cd258973fb88be265290900"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\idle.bmd",
+                "sha256": "29b05efe8dee8538c0500a3890413befc62cc910996854e1aab6b03a4c317a40"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\577_solosis\\all\\base\\none\\walk.bmd",
+                "sha256": "d7287533cb48a8a1205dc2054866d2a9852cc8764a24a423f7ca8078e0171c6a"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "9e797ea9af35010a5237f76c69efa804ca74f07d4c7077da2dad7282bde0f362",
+        "skin": "647702e23a9ffed0600885c337dcf6af7fbc71a122e20b26af14ec931d999195",
+        "texture": "b316ab075a05e6cf5104b15611eab55b3a9cc7ecf7d90cc4e3b1a0252732bc08"
+      }
+    },
+    "f41fa7ccb90b565694c5088ac5677828c9d504d2e7c0405ddb16c70b22213a7f": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\duosion.bmd",
+                "sha256": "501dc20dd1706a262e97870006936fa2dab544872660f15f9c8d2d59f1588a0d"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\texture.png",
+                "sha256": "f3f2d789f48c7a845ac310e84c4c4c2e3d7db2923325dc1ca44408bbd1dc820f"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\idle.bmd",
+                "sha256": "0e1169505416ff9d80199f77b925fafd97165c582b08a26731e26ce502d9b5e6"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\walk.bmd",
+                "sha256": "cf2b9d9b1c2c1769457f1b59022cd6e2380ef72d0e8c2c6583c1ddb5ad4869c3"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\duosion_transparency.bmd",
+                "sha256": "be8e428201a6f03afab5f97fa8ef64759933d2809aa1bd44f24e68fc5bef4c27"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\texture.png",
+                "sha256": "f3f2d789f48c7a845ac310e84c4c4c2e3d7db2923325dc1ca44408bbd1dc820f"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\idle.bmd",
+                "sha256": "0e1169505416ff9d80199f77b925fafd97165c582b08a26731e26ce502d9b5e6"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\walk.bmd",
+                "sha256": "cf2b9d9b1c2c1769457f1b59022cd6e2380ef72d0e8c2c6583c1ddb5ad4869c3"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "01370c24f1b9da3f330a5e53c7923c94efac11ff3905a385c146b417cb3a545a",
+        "skin": "3931899aa6c8cdc8f2e32533eb3a467364bf50d3836f9ae8e67ca73215bf34d8",
+        "texture": "a1e10344d7b89b105435ad7b4fdb96559633f377ba3e6c52d2d184206ff35e32"
+      }
+    },
+    "8e02c7be516ace4bec097391bc9010ef6f8570eb2ce484848c74abd7e520eda2": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\duosion.bmd",
+                "sha256": "501dc20dd1706a262e97870006936fa2dab544872660f15f9c8d2d59f1588a0d"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\shiny\\texture.png",
+                "sha256": "09d6b469545ab93d6b48175ee6ad9169fbba22cb0e52e09b76a64ec2778259e7"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\idle.bmd",
+                "sha256": "0e1169505416ff9d80199f77b925fafd97165c582b08a26731e26ce502d9b5e6"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\walk.bmd",
+                "sha256": "cf2b9d9b1c2c1769457f1b59022cd6e2380ef72d0e8c2c6583c1ddb5ad4869c3"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\duosion_transparency.bmd",
+                "sha256": "be8e428201a6f03afab5f97fa8ef64759933d2809aa1bd44f24e68fc5bef4c27"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\shiny\\texture.png",
+                "sha256": "09d6b469545ab93d6b48175ee6ad9169fbba22cb0e52e09b76a64ec2778259e7"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\idle.bmd",
+                "sha256": "0e1169505416ff9d80199f77b925fafd97165c582b08a26731e26ce502d9b5e6"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\578_duosion\\all\\base\\none\\walk.bmd",
+                "sha256": "cf2b9d9b1c2c1769457f1b59022cd6e2380ef72d0e8c2c6583c1ddb5ad4869c3"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "01370c24f1b9da3f330a5e53c7923c94efac11ff3905a385c146b417cb3a545a",
+        "skin": "3931899aa6c8cdc8f2e32533eb3a467364bf50d3836f9ae8e67ca73215bf34d8",
+        "texture": "48b0de27bf00d391c880a6626e78f78e5503caf37271740ecb5ca11f7f85fcec"
+      }
+    },
+    "f84f2e82349fc72c3d1787a91a16338882bd01160bc231d5a62e199ee28ae121": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\reuniclus.bmd",
+                "sha256": "da45990b6be101d2843aabe39c1b8e52604dfe022f8033fa9d5cd3e8f1ba8aa0"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\texture.png",
+                "sha256": "fea79811387a79f6d51f7f664303f61db64faac296673bd83912f9ae6654ac94"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\idle.bmd",
+                "sha256": "07c21ed1579066a518d22277f8c318bd95d5a6f9d60df7552a21b8360b51a1d9"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\walk.bmd",
+                "sha256": "ebc548f117bfcbdfcaa8941c05175238209c6066ac34b488e4aa5ca0a6ec6a84"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\reuniclus_transparency.bmd",
+                "sha256": "e199d1aea25bc78d864554c16ff41687cdbb5e8c036e224033e7a1e16f7efe96"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\texture.png",
+                "sha256": "fea79811387a79f6d51f7f664303f61db64faac296673bd83912f9ae6654ac94"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\idle.bmd",
+                "sha256": "07c21ed1579066a518d22277f8c318bd95d5a6f9d60df7552a21b8360b51a1d9"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\walk.bmd",
+                "sha256": "ebc548f117bfcbdfcaa8941c05175238209c6066ac34b488e4aa5ca0a6ec6a84"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "8ac2e98fac8716f2bff79685c67f1e6db2c4676ecdbeaabbc927da2d9d2436c8",
+        "skin": "b3461750b16043821168056a6ca65a9fe1feb589185a6363d3b072dea599f3d8",
+        "texture": "d22a9a9d99164852815624567ce478fd0c6b547618c9b270646fda75ca8a927f"
+      }
+    },
+    "c0125b569330c96e39f18b404a4fc8c0054351044ec026da13970f47a22f3beb": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\reuniclus.bmd",
+                "sha256": "da45990b6be101d2843aabe39c1b8e52604dfe022f8033fa9d5cd3e8f1ba8aa0"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\shiny\\texture.png",
+                "sha256": "b6d129489166a4a477a03cd84abad2a690c1c5186f71c92fb5f1815592887207"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\idle.bmd",
+                "sha256": "07c21ed1579066a518d22277f8c318bd95d5a6f9d60df7552a21b8360b51a1d9"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\walk.bmd",
+                "sha256": "ebc548f117bfcbdfcaa8941c05175238209c6066ac34b488e4aa5ca0a6ec6a84"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\reuniclus_transparency.bmd",
+                "sha256": "e199d1aea25bc78d864554c16ff41687cdbb5e8c036e224033e7a1e16f7efe96"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\shiny\\texture.png",
+                "sha256": "b6d129489166a4a477a03cd84abad2a690c1c5186f71c92fb5f1815592887207"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\idle.bmd",
+                "sha256": "07c21ed1579066a518d22277f8c318bd95d5a6f9d60df7552a21b8360b51a1d9"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\579_reuniclus\\all\\base\\none\\walk.bmd",
+                "sha256": "ebc548f117bfcbdfcaa8941c05175238209c6066ac34b488e4aa5ca0a6ec6a84"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "8ac2e98fac8716f2bff79685c67f1e6db2c4676ecdbeaabbc927da2d9d2436c8",
+        "skin": "b3461750b16043821168056a6ca65a9fe1feb589185a6363d3b072dea599f3d8",
+        "texture": "24c27b94c20811de2399bdd02dbaa1f14edb62d93ed151a432b1c35b8ad96048"
+      }
+    },
+    "453454ef1eb5004b2f79aebdd1bf4410ff3ed86e0035d83eb84399b8172af330": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\chandelure.bmd",
+                "sha256": "f8d73502972e6097248e3970bb2f902d5ddb99606514a8bf8073e12d7efe679b"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\texture.png",
+                "sha256": "6bb702f39865f51872f51905a134e85797269bec1db71d16684a65f0963ff755"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\idle.bmd",
+                "sha256": "2744af451d1ca19e8e43f8162772933611aca61439a6748aaa02eb32f2891f13"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\walk.bmd",
+                "sha256": "1771df587f3d23539d4d0ae79fd701daedca76a2ba2e4b484541f94aab56d1cc"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\chandelure_transparent.bmd",
+                "sha256": "cbd5a80bf70b38685944a43784de0b9f333e69177206316542a9b582e4f16ca4"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\texture.png",
+                "sha256": "6bb702f39865f51872f51905a134e85797269bec1db71d16684a65f0963ff755"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\idle.bmd",
+                "sha256": "2744af451d1ca19e8e43f8162772933611aca61439a6748aaa02eb32f2891f13"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\walk.bmd",
+                "sha256": "1771df587f3d23539d4d0ae79fd701daedca76a2ba2e4b484541f94aab56d1cc"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.5
+          }
+        ]
+      },
+      "export": {
+        "m2": "3bd20d7f736b7bba404052fe0472407f355615d91402745a31d959095c4fd337",
+        "skin": "9635d20f6d270da373a40e5c902a6ee0d2b30b6350765e66e9e313bed56c7297",
+        "texture": "c0c961490efebe869743f8ec18d2c62b340e0b0937ca29454d3b4f473fbe215e"
+      }
+    },
+    "85b8598b484133f89637b809137473fc0439f5959cf09eea5de09e4f8b6734c7": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\chandelure.bmd",
+                "sha256": "f8d73502972e6097248e3970bb2f902d5ddb99606514a8bf8073e12d7efe679b"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\shiny\\texture.png",
+                "sha256": "d33339f1ba0b14c747c6dcbb2f2932e93cd2915780b6f39031bd05b7ffe638c0"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\idle.bmd",
+                "sha256": "2744af451d1ca19e8e43f8162772933611aca61439a6748aaa02eb32f2891f13"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\walk.bmd",
+                "sha256": "1771df587f3d23539d4d0ae79fd701daedca76a2ba2e4b484541f94aab56d1cc"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\chandelure_transparent.bmd",
+                "sha256": "cbd5a80bf70b38685944a43784de0b9f333e69177206316542a9b582e4f16ca4"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\shiny\\texture.png",
+                "sha256": "d33339f1ba0b14c747c6dcbb2f2932e93cd2915780b6f39031bd05b7ffe638c0"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\idle.bmd",
+                "sha256": "2744af451d1ca19e8e43f8162772933611aca61439a6748aaa02eb32f2891f13"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\609_chandelure\\all\\base\\none\\walk.bmd",
+                "sha256": "1771df587f3d23539d4d0ae79fd701daedca76a2ba2e4b484541f94aab56d1cc"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.5
+          }
+        ]
+      },
+      "export": {
+        "m2": "3bd20d7f736b7bba404052fe0472407f355615d91402745a31d959095c4fd337",
+        "skin": "9635d20f6d270da373a40e5c902a6ee0d2b30b6350765e66e9e313bed56c7297",
+        "texture": "e07a33dc631b7219972e3432d51a4e667f2c1b167358209f366b2ba58c5c428e"
+      }
+    },
+    "0d1541baac4724260d0b3256bc3c71f58e35a3c7afc604f42f512b5246eb9f1d": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\diancie.bmd",
+                "sha256": "8fcd8a2e8091fe4ee2c0c71f01dc1206377126327790ae64f14fe928d3c5271e"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\texture.png",
+                "sha256": "00b020f9f9a35ac4425180329d3ce79e8acaa42eecf02ddfce20cf90009ee9ab"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\idle.bmd",
+                "sha256": "41ffc24ed302cb25060556cdfd3b13a0feec70e42c3eecefa82c0809791a5902"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\walk.bmd",
+                "sha256": "10362e545f36a50d692ac8e45676c41a86bb5d41d742c74848e5c40dd188e1bb"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\dianciecrystals.bmd",
+                "sha256": "df9d7f62a86e677e0e36414462b6d1710768a7bf858b3a210e214e5f4361f0d7"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\texture.png",
+                "sha256": "00b020f9f9a35ac4425180329d3ce79e8acaa42eecf02ddfce20cf90009ee9ab"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\idle.bmd",
+                "sha256": "41ffc24ed302cb25060556cdfd3b13a0feec70e42c3eecefa82c0809791a5902"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\walk.bmd",
+                "sha256": "10362e545f36a50d692ac8e45676c41a86bb5d41d742c74848e5c40dd188e1bb"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.5
+          }
+        ]
+      },
+      "export": {
+        "m2": "9e320707e241615f0b9179236e52a85a60d59b7506e94f8aab10933488a9191a",
+        "skin": "4806331e2a2c2a20560851162dc93c881ffe19d2ca614cf76a6368bbadec5b99",
+        "texture": "762e195a5551a708012618ceca5a54b8409de53d64496009589cda61287e57cf"
+      }
+    },
+    "4edf05b9b3927f1ed930fdacb902d6cfcb4459428bf3bbcda03abddb0cfcc960": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\diancie.bmd",
+                "sha256": "8fcd8a2e8091fe4ee2c0c71f01dc1206377126327790ae64f14fe928d3c5271e"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\shiny\\texture.png",
+                "sha256": "e7ef17f09f45b07d3f07370b6741ced4070f48baa63c0e5f3ee077f0888e6413"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\idle.bmd",
+                "sha256": "41ffc24ed302cb25060556cdfd3b13a0feec70e42c3eecefa82c0809791a5902"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\walk.bmd",
+                "sha256": "10362e545f36a50d692ac8e45676c41a86bb5d41d742c74848e5c40dd188e1bb"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\dianciecrystals.bmd",
+                "sha256": "df9d7f62a86e677e0e36414462b6d1710768a7bf858b3a210e214e5f4361f0d7"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\shiny\\texture.png",
+                "sha256": "e7ef17f09f45b07d3f07370b6741ced4070f48baa63c0e5f3ee077f0888e6413"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\idle.bmd",
+                "sha256": "41ffc24ed302cb25060556cdfd3b13a0feec70e42c3eecefa82c0809791a5902"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\719_diancie\\all\\base\\none\\walk.bmd",
+                "sha256": "10362e545f36a50d692ac8e45676c41a86bb5d41d742c74848e5c40dd188e1bb"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.5
+          }
+        ]
+      },
+      "export": {
+        "m2": "9e320707e241615f0b9179236e52a85a60d59b7506e94f8aab10933488a9191a",
+        "skin": "4806331e2a2c2a20560851162dc93c881ffe19d2ca614cf76a6368bbadec5b99",
+        "texture": "4a64ec59d8706b41b649889e61f611773635385251671eb7d69336c8013812fe"
+      }
+    },
+    "be5bf4a8a096d34f6673a18fcd4905e21a62dca0831df9cd9dd9740b696fa5fd": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\dewpider.bmd",
+                "sha256": "943869632c986c0bb5cf47812268c76c269ddff89870ee9850156605ec02f911"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\texture.png",
+                "sha256": "170168dad9b42386a752029b98ff88d5eaea3ae2fc3f388133b5a7777ae8e9f6"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\idlebasic.bmd",
+                "sha256": "1ec6d6385f8590d3de0acd8947235328209f5eac18fd402abcaf2cd90f0a2dd1"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\walk.bmd",
+                "sha256": "36fc22fe65a9ec9b0b5ae53739721a53fc5b820008b3d2cbb599157b0cf7af85"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\dewpiderbubble.bmd",
+                "sha256": "4779f64cf4bd7084278f199162a34083334b1c970a3833f6316792e7ecf8c0f6"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\texture.png",
+                "sha256": "170168dad9b42386a752029b98ff88d5eaea3ae2fc3f388133b5a7777ae8e9f6"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\idlebasic.bmd",
+                "sha256": "1ec6d6385f8590d3de0acd8947235328209f5eac18fd402abcaf2cd90f0a2dd1"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\walk.bmd",
+                "sha256": "36fc22fe65a9ec9b0b5ae53739721a53fc5b820008b3d2cbb599157b0cf7af85"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "58e8b66e90f8b479c6461a447c1d180d5675d4da1a8e96aa61eff7749d240686",
+        "skin": "384337243d4006389e96ea98c8df609d038a8e0dfc42d25ab40f6020fad8a5af",
+        "texture": "9eb70c087aeef4b96ed2635baf658d87a322a5e605806305c92d439d74379806"
+      }
+    },
+    "5e5aafbe626e01d3e2a4250227dec47a7b786ec328aba35b91f7e35a19ca6b71": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\dewpider.bmd",
+                "sha256": "943869632c986c0bb5cf47812268c76c269ddff89870ee9850156605ec02f911"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\shiny\\texture.png",
+                "sha256": "08bb03a576869d064872a5e913eb1aaa69339271ffaad5d02e43432a4a835c70"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\idlebasic.bmd",
+                "sha256": "1ec6d6385f8590d3de0acd8947235328209f5eac18fd402abcaf2cd90f0a2dd1"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\walk.bmd",
+                "sha256": "36fc22fe65a9ec9b0b5ae53739721a53fc5b820008b3d2cbb599157b0cf7af85"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\dewpiderbubble.bmd",
+                "sha256": "4779f64cf4bd7084278f199162a34083334b1c970a3833f6316792e7ecf8c0f6"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\shiny\\texture.png",
+                "sha256": "08bb03a576869d064872a5e913eb1aaa69339271ffaad5d02e43432a4a835c70"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\idlebasic.bmd",
+                "sha256": "1ec6d6385f8590d3de0acd8947235328209f5eac18fd402abcaf2cd90f0a2dd1"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\751_dewpider\\all\\base\\none\\walk.bmd",
+                "sha256": "36fc22fe65a9ec9b0b5ae53739721a53fc5b820008b3d2cbb599157b0cf7af85"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "58e8b66e90f8b479c6461a447c1d180d5675d4da1a8e96aa61eff7749d240686",
+        "skin": "384337243d4006389e96ea98c8df609d038a8e0dfc42d25ab40f6020fad8a5af",
+        "texture": "995d38af66136ced0a4b05169f18571e76114a342fd54539c6a9aeede0e85c92"
+      }
+    },
+    "d8faeae012950c4543f9830d4aac55bd40024ff2e5d80aa0bed196e820643ac7": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\dusk.bmd",
+                "sha256": "6669cd4db90ce63fd7cced250fde5c517dfdc224c3b54c4cb4d49ded4d4cc68f"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\texture.png",
+                "sha256": "3dd2aaeee8f3d9ecacc353e021050f1747720720bd00200fdcbd096dd4b43b41"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\idlebasic.bmd",
+                "sha256": "cac6da6812c95ed452502194034e6f73e800409b2016077fbb0a87b783d8a7ee"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\walk.bmd",
+                "sha256": "1f74b982cef026d1a1539f63d2e4ee0243cce23e097dd4c4d1ccb5dfd51b428f"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\visor.bmd",
+                "sha256": "16b7234b3658d55a52c7b25d99758bf0074fd6926f3b164c789a57356cd890b0"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\texture.png",
+                "sha256": "3dd2aaeee8f3d9ecacc353e021050f1747720720bd00200fdcbd096dd4b43b41"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\idlebasic.bmd",
+                "sha256": "cac6da6812c95ed452502194034e6f73e800409b2016077fbb0a87b783d8a7ee"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\walk.bmd",
+                "sha256": "1f74b982cef026d1a1539f63d2e4ee0243cce23e097dd4c4d1ccb5dfd51b428f"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.6
+          }
+        ]
+      },
+      "export": {
+        "m2": "dddf2771d536114b6ee3f870e720d79bc0b6c3f8ede9ad38aad9d7ad9cd57348",
+        "skin": "2003e57ac5453e88ce9851a181d78eb9d1f6e89613f498ac29f1bc4665076ba2",
+        "texture": "c90a086da70ab293d4f1cba3ef0895f0158b6ef43ebb790d8523069459c675bd"
+      }
+    },
+    "972dbff0498a7036adb62bfd96a013c785112195d344899441cc9efa40cef8c9": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\dusk.bmd",
+                "sha256": "6669cd4db90ce63fd7cced250fde5c517dfdc224c3b54c4cb4d49ded4d4cc68f"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\shiny\\texture.png",
+                "sha256": "3d7997641356d6adcb5921c290f6a5302c454cf900415e7f9e4826d80d5a1e18"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\idlebasic.bmd",
+                "sha256": "cac6da6812c95ed452502194034e6f73e800409b2016077fbb0a87b783d8a7ee"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\walk.bmd",
+                "sha256": "1f74b982cef026d1a1539f63d2e4ee0243cce23e097dd4c4d1ccb5dfd51b428f"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\visor.bmd",
+                "sha256": "16b7234b3658d55a52c7b25d99758bf0074fd6926f3b164c789a57356cd890b0"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\shiny\\texture.png",
+                "sha256": "3d7997641356d6adcb5921c290f6a5302c454cf900415e7f9e4826d80d5a1e18"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\idlebasic.bmd",
+                "sha256": "cac6da6812c95ed452502194034e6f73e800409b2016077fbb0a87b783d8a7ee"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dusk\\none\\walk.bmd",
+                "sha256": "1f74b982cef026d1a1539f63d2e4ee0243cce23e097dd4c4d1ccb5dfd51b428f"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.6
+          }
+        ]
+      },
+      "export": {
+        "m2": "dddf2771d536114b6ee3f870e720d79bc0b6c3f8ede9ad38aad9d7ad9cd57348",
+        "skin": "2003e57ac5453e88ce9851a181d78eb9d1f6e89613f498ac29f1bc4665076ba2",
+        "texture": "84802fc58f9673add7d1893932e8bb7a2d93f3743d8c1df09fac2904295a965a"
+      }
+    },
+    "119c3d0ada352a1b623efa74e2c4a8eee5a68105a551c2975e711af8664caad4": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\necrozma-dawnwings.bmd",
+                "sha256": "16408e2afee57edd2d3262cdcbcdc246a1491cc08b2d3cf95606e3128c73fb49"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\texture.png",
+                "sha256": "3c00334db58b135c6e6a02173f102c4a93d09824e4f11ff6c44f5b8640683be2"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\idle.bmd",
+                "sha256": "ca75951b3c003a83a7def35748b279fba1e9603976a75e2a046701933c009d4b"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\walk.bmd",
+                "sha256": "285fc31a14b003d74341ee606acfc5851adae586fe69c62a834d60bf1df186ea"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\necrozma-dawnwingsvisor.bmd",
+                "sha256": "f862b961c8d6ebafa70cfda4c18c503690f4c661f560e10d38862741382779b8"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\texture.png",
+                "sha256": "3c00334db58b135c6e6a02173f102c4a93d09824e4f11ff6c44f5b8640683be2"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\idle.bmd",
+                "sha256": "ca75951b3c003a83a7def35748b279fba1e9603976a75e2a046701933c009d4b"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\walk.bmd",
+                "sha256": "285fc31a14b003d74341ee606acfc5851adae586fe69c62a834d60bf1df186ea"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.6
+          }
+        ]
+      },
+      "export": {
+        "m2": "bdd73c6b426a31b3ce9009a1893debab97f97f7070a6460f110a64a3e4c5cc24",
+        "skin": "d7a951543fb9ab7a6d423e9468cc8c8238e061ef0572ffc66b9532b639a49bb4",
+        "texture": "608af5e85b256874d06f4c6bf0a0b0ade8b76145f8cbe57e989a5484330333e3"
+      }
+    },
+    "a7f545a4f354968db6eaadd73153366d31f5e057beb96452e75392646f44da42": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\necrozma-dawnwings.bmd",
+                "sha256": "16408e2afee57edd2d3262cdcbcdc246a1491cc08b2d3cf95606e3128c73fb49"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\shiny\\texture.png",
+                "sha256": "1227d8e2b271cd99570c3d8060dfa82738a8fbce350d0841a4471ebc29c210f8"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\idle.bmd",
+                "sha256": "ca75951b3c003a83a7def35748b279fba1e9603976a75e2a046701933c009d4b"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\walk.bmd",
+                "sha256": "285fc31a14b003d74341ee606acfc5851adae586fe69c62a834d60bf1df186ea"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\necrozma-dawnwingsvisor.bmd",
+                "sha256": "f862b961c8d6ebafa70cfda4c18c503690f4c661f560e10d38862741382779b8"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\shiny\\texture.png",
+                "sha256": "1227d8e2b271cd99570c3d8060dfa82738a8fbce350d0841a4471ebc29c210f8"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\idle.bmd",
+                "sha256": "ca75951b3c003a83a7def35748b279fba1e9603976a75e2a046701933c009d4b"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\800_necrozma\\all\\dawn\\none\\walk.bmd",
+                "sha256": "285fc31a14b003d74341ee606acfc5851adae586fe69c62a834d60bf1df186ea"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.6
+          }
+        ]
+      },
+      "export": {
+        "m2": "bdd73c6b426a31b3ce9009a1893debab97f97f7070a6460f110a64a3e4c5cc24",
+        "skin": "d7a951543fb9ab7a6d423e9468cc8c8238e061ef0572ffc66b9532b639a49bb4",
+        "texture": "fd6ce0409356154818ade2c37c47f17cba863936ed6a19a2d69c8201c6b291a8"
+      }
+    },
+    "65d510a923a52a8ded833f485eb9f807a0d021c72f2c61557be53ec00fd5ec4e": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\cursola.bmd",
+                "sha256": "4c55766d49b8aa24f907c0f5e2754386c77a372b21792824ee6f59555c3e9ab1"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\texture.png",
+                "sha256": "692aa5f7f7d78ecd3e649551bd2e22427057a30af917e2ea1d353612a12563df"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\idle.bmd",
+                "sha256": "a8433d094483dd334aefd93eadd71bdc792a77c7c68579661d78fce20fe7806f"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\walk.bmd",
+                "sha256": "10d0446ec2414bc58d43dfe5973548cf18d02e940faf815e4837dc4fbc280162"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\ghost.bmd",
+                "sha256": "6fb58a86cf3094786e20bfdaeb33b0eea0b028d4595e926f9911c2656f33d759"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\texture.png",
+                "sha256": "692aa5f7f7d78ecd3e649551bd2e22427057a30af917e2ea1d353612a12563df"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\idle.bmd",
+                "sha256": "a8433d094483dd334aefd93eadd71bdc792a77c7c68579661d78fce20fe7806f"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\walk.bmd",
+                "sha256": "10d0446ec2414bc58d43dfe5973548cf18d02e940faf815e4837dc4fbc280162"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "063817e9ce9ffe0a6d542cae22cf0a873ab8f2ac1d5efb8061ee9774c83ca54e",
+        "skin": "1e97576c48307ba28c875dedf898d6a5b86d9002ad00b619ad287838de8d4491",
+        "texture": "0b9ce2114f9dd24c64b80798a0862b79db851e8be965399722ae960599214427"
+      }
+    },
+    "6a4e08a1712feec8727c49ba65efe7b9526266b92cb3cedcae860615acfa790b": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\cursola.bmd",
+                "sha256": "4c55766d49b8aa24f907c0f5e2754386c77a372b21792824ee6f59555c3e9ab1"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\shiny\\texture.png",
+                "sha256": "d6260ac593c5551c137261b2b916f890b580e15041f7fc38bbd8aee4d9a0897b"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\idle.bmd",
+                "sha256": "a8433d094483dd334aefd93eadd71bdc792a77c7c68579661d78fce20fe7806f"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\walk.bmd",
+                "sha256": "10d0446ec2414bc58d43dfe5973548cf18d02e940faf815e4837dc4fbc280162"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\ghost.bmd",
+                "sha256": "6fb58a86cf3094786e20bfdaeb33b0eea0b028d4595e926f9911c2656f33d759"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\shiny\\texture.png",
+                "sha256": "d6260ac593c5551c137261b2b916f890b580e15041f7fc38bbd8aee4d9a0897b"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\idle.bmd",
+                "sha256": "a8433d094483dd334aefd93eadd71bdc792a77c7c68579661d78fce20fe7806f"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\864_cursola\\all\\base\\none\\walk.bmd",
+                "sha256": "10d0446ec2414bc58d43dfe5973548cf18d02e940faf815e4837dc4fbc280162"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.4
+          }
+        ]
+      },
+      "export": {
+        "m2": "063817e9ce9ffe0a6d542cae22cf0a873ab8f2ac1d5efb8061ee9774c83ca54e",
+        "skin": "1e97576c48307ba28c875dedf898d6a5b86d9002ad00b619ad287838de8d4491",
+        "texture": "633a0f895e61acff9e20d0e33f2d0a10014490bb8021fd0efb19e14598660d47"
+      }
+    },
+    "6e5a5fb2ece00e440181732b553eac6423cb371764356f93aaffdf17518065fa": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\snom.bmd",
+                "sha256": "0c6db8d089a65596afa355100bc2c1a0354f0d437e1e50a1909b2ce874cc7f8a"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\texture.png",
+                "sha256": "dd42caf4f5cdd7c3a6799b8d121e928cd44963a6b481ace75bbf4b9b8c06cd9f"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\idle.bmd",
+                "sha256": "79fff884ec074884cb59c01c96ade9433de9502c7dd408fd3a7262cee4f136c7"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\walk.bmd",
+                "sha256": "007e00bdff530ee9ff2f6c7de79d6e12fe6d656710d8d4e8120f2bc9661ba479"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\ice.bmd",
+                "sha256": "12207ebfe796ccaaf05f7a4fac819c54e4fe094b46b1d72ca1c59c955b17574a"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\texture.png",
+                "sha256": "dd42caf4f5cdd7c3a6799b8d121e928cd44963a6b481ace75bbf4b9b8c06cd9f"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\idle.bmd",
+                "sha256": "79fff884ec074884cb59c01c96ade9433de9502c7dd408fd3a7262cee4f136c7"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\walk.bmd",
+                "sha256": "007e00bdff530ee9ff2f6c7de79d6e12fe6d656710d8d4e8120f2bc9661ba479"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.3
+          }
+        ]
+      },
+      "export": {
+        "m2": "a47ee7754b35920f9691a753b50f274490a741e4fa173eeebe4a1c4ab109b82c",
+        "skin": "52e79016adc585c2da1d8d9ac8d26ded29184bebf2125a7a97e103daa70c2fe3",
+        "texture": "2e67016f81bf34ad9fb27be1d1896366d70ae80cb7e3275dfba11f7db77f2177"
+      }
+    },
+    "35e97e9d7ee5e8ba52ff30ad51c6bcf1c8b2cb750763b6698e47934a4e666809": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\snom.bmd",
+                "sha256": "0c6db8d089a65596afa355100bc2c1a0354f0d437e1e50a1909b2ce874cc7f8a"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\shiny\\texture.png",
+                "sha256": "2df7c15eb1c15e098eddd30e3f3a8957dc3d78e583669219e99adea1fd46be11"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\idle.bmd",
+                "sha256": "79fff884ec074884cb59c01c96ade9433de9502c7dd408fd3a7262cee4f136c7"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\walk.bmd",
+                "sha256": "007e00bdff530ee9ff2f6c7de79d6e12fe6d656710d8d4e8120f2bc9661ba479"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\ice.bmd",
+                "sha256": "12207ebfe796ccaaf05f7a4fac819c54e4fe094b46b1d72ca1c59c955b17574a"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\shiny\\texture.png",
+                "sha256": "2df7c15eb1c15e098eddd30e3f3a8957dc3d78e583669219e99adea1fd46be11"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\idle.bmd",
+                "sha256": "79fff884ec074884cb59c01c96ade9433de9502c7dd408fd3a7262cee4f136c7"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\872_snom\\all\\base\\none\\walk.bmd",
+                "sha256": "007e00bdff530ee9ff2f6c7de79d6e12fe6d656710d8d4e8120f2bc9661ba479"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.3
+          }
+        ]
+      },
+      "export": {
+        "m2": "a47ee7754b35920f9691a753b50f274490a741e4fa173eeebe4a1c4ab109b82c",
+        "skin": "52e79016adc585c2da1d8d9ac8d26ded29184bebf2125a7a97e103daa70c2fe3",
+        "texture": "38d15ae662c007b6f6fc16cdb50a3b9fa9e6099d19e725c325200a7a59f25f81"
+      }
+    },
+    "2d29b11e13b7f893dff7a551134b8b5ce12f0adc240ba7e4aa0168b986e777aa": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\glimmet.bmd",
+                "sha256": "b1e69fd7d4a788e4951e4a72d87ca8e3b1acaf158da3fd03c7038777ece4e6f6"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\texture.png",
+                "sha256": "6577ea08d7411a48ff9eded7895a12269bc581148b35107b59472399c2068f03"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\idle.bmd",
+                "sha256": "d4e6b06e9a14a71595618aad7606788cb2585dc6e99b7ddd501834e50dbb8faf"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\walk.bmd",
+                "sha256": "fd76e9d49e2a0aba059ac2d54e3cc966b3b4ca2c44564c55dfb99a130a26d6cc"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\glimmet_transparent.bmd",
+                "sha256": "63ea539190ae7d733fd19901484c6ea4a81201023ca22ac668268284400f19ac"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\texture.png",
+                "sha256": "6577ea08d7411a48ff9eded7895a12269bc581148b35107b59472399c2068f03"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\idle.bmd",
+                "sha256": "d4e6b06e9a14a71595618aad7606788cb2585dc6e99b7ddd501834e50dbb8faf"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\walk.bmd",
+                "sha256": "fd76e9d49e2a0aba059ac2d54e3cc966b3b4ca2c44564c55dfb99a130a26d6cc"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.42
+          }
+        ]
+      },
+      "export": {
+        "m2": "49cee0353228a14bfa86342d0b62399aba4b42d388e9d3e4936d02e9c29b6d05",
+        "skin": "f4189d1fd4880e1fe2ef298434fbe46d1d6dc3441df68eed0e096a6f863e06c5",
+        "texture": "392415ddfd0b27c6b80c3ec12d1f0d8c55a0c9fdae1114b8ed832251bc66b6b1"
+      }
+    },
+    "bb9954d31a53594e81c43dbaea38aaf3dc3cb64e65adbb2c4d518fbacb99fceb": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\glimmet.bmd",
+                "sha256": "b1e69fd7d4a788e4951e4a72d87ca8e3b1acaf158da3fd03c7038777ece4e6f6"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\shiny\\texture.png",
+                "sha256": "3b77510f893daf1199c464fd037f4a3107db7c7dfe3bb51375bf8ec0a0467797"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\idle.bmd",
+                "sha256": "d4e6b06e9a14a71595618aad7606788cb2585dc6e99b7ddd501834e50dbb8faf"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\walk.bmd",
+                "sha256": "fd76e9d49e2a0aba059ac2d54e3cc966b3b4ca2c44564c55dfb99a130a26d6cc"
+              }
+            },
+            "transform": null
+          },
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\glimmet_transparent.bmd",
+                "sha256": "63ea539190ae7d733fd19901484c6ea4a81201023ca22ac668268284400f19ac"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\shiny\\texture.png",
+                "sha256": "3b77510f893daf1199c464fd037f4a3107db7c7dfe3bb51375bf8ec0a0467797"
+              },
+              "idle": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\idle.bmd",
+                "sha256": "d4e6b06e9a14a71595618aad7606788cb2585dc6e99b7ddd501834e50dbb8faf"
+              },
+              "walk": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\969_glimmet\\all\\base\\none\\walk.bmd",
+                "sha256": "fd76e9d49e2a0aba059ac2d54e3cc966b3b4ca2c44564c55dfb99a130a26d6cc"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 30.0,
+        "motion": "animated",
+        "legacy_metadata": [
+          {
+            "part": 1,
+            "value": 0.42
+          }
+        ]
+      },
+      "export": {
+        "m2": "49cee0353228a14bfa86342d0b62399aba4b42d388e9d3e4936d02e9c29b6d05",
+        "skin": "f4189d1fd4880e1fe2ef298434fbe46d1d6dc3441df68eed0e096a6f863e06c5",
+        "texture": "3d7a87f8a391479b00587ae9b20fbb6c806dafe6b8842269156ef9d60225d0a2"
+      }
+    }
+  }
+}

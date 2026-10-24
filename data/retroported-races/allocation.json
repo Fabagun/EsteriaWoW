@@ -83,16 +83,22 @@
     ],
     "centaur_horde": [
       74
+    ],
+    "kyrian": [
+      75
+    ],
+    "venthyr": [
+      76
     ]
   },
   "dbc_ranges": {
     "CreatureModelData": [
       120000,
-      120199
+      121063
     ],
     "CreatureDisplayInfo": [
       60030,
-      60078
+      60086
     ],
     "CreatureDisplayInfoExtra": [
       60000,
@@ -937,6 +943,26 @@
         108000,
         110999
       ]
+    },
+    "kyrian": {
+      "CreatureModelData": {
+        "male": 121060,
+        "female": 121061
+      },
+      "CreatureDisplayInfo": {
+        "male": 60083,
+        "female": 60084
+      }
+    },
+    "venthyr": {
+      "CreatureModelData": {
+        "male": 121062,
+        "female": 121063
+      },
+      "CreatureDisplayInfo": {
+        "male": 60085,
+        "female": 60086
+      }
     }
   },
   "extra_allocations": {

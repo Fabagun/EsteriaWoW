@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "slug": "venthyr",
+  "name": "Venthyr",
+  "race_ids": [
+    76
+  ],
+  "source_race_id": 61,
+  "source_package": "G:\\Downloads\\HDWoWModels\\Kyrian-Venthyr-Approved-20261021",
+  "faction": "horde",
+  "legacy_mask_race": 5,
+  "visual_base_race": 5,
+  "start_profile": "deathknell",
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    11
+  ],
+  "models": {
+    "male": {
+      "model_id": 121062,
+      "display_id": 60085,
+      "model_path": "custom\\venthyr\\native\\vampire_male.m2"
+    },
+    "female": {
+      "model_id": 121063,
+      "display_id": 60086,
+      "model_path": "custom\\venthyr\\native\\vampire_female.m2"
+    }
+  },
+  "random_playerbot_enabled": false,
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "supported_genders": [
+      0,
+      1
+    ],
+    "profiles": {
+      "0": {
+        "capacities": [
+          7,
+          108,
+          8,
+          7,
+          32
+        ],
+        "descriptors": [
+          [
+            0,
+            7,
+            1
+          ],
+          [
+            2,
+            8,
+            1
+          ],
+          [
+            3,
+            7,
+            1
+          ],
+          [
+            1,
+            6,
+            1
+          ],
+          [
+            4,
+            8,
+            1
+          ],
+          [
+            4,
+            4,
+            8
+          ],
+          [
+            1,
+            6,
+            6
+          ],
+          [
+            1,
+            3,
+            36
+          ]
+        ],
+        "options": [
+          {
+            "label": "Skin / Body Palette"
+          },
+          {
+            "label": "Accessory Palette"
+          },
+          {
+            "label": "Hair Color"
+          },
+          {
+            "label": "Body / Outfit Style"
+          },
+          {
+            "label": "Hair Style"
+          },
+          {
+            "label": "Facial Hair"
+          },
+          {
+            "label": "Collar / Robe"
+          },
+          {
+            "label": "Headwear"
+          }
+        ]
+      },
+      "1": {
+        "capacities": [
+          6,
+          216,
+          6,
+          6,
+          40
+        ],
+        "descriptors": [
+          [
+            0,
+            6,
+            1
+          ],
+          [
+            2,
+            6,
+            1
+          ],
+          [
+            3,
+            6,
+            1
+          ],
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            4,
+            8,
+            1
+          ],
+          [
+            4,
+            5,
+            8
+          ],
+          [
+            1,
+            6,
+            4
+          ],
+          [
+            1,
+            9,
+            24
+          ]
+        ],
+        "options": [
+          {
+            "label": "Skin / Body Palette"
+          },
+          {
+            "label": "Accessory Palette"
+          },
+          {
+            "label": "Hair Color"
+          },
+          {
+            "label": "Body / Outfit Style"
+          },
+          {
+            "label": "Hair Style"
+          },
+          {
+            "label": "Earrings"
+          },
+          {
+            "label": "Collar / Cape"
+          },
+          {
+            "label": "Headwear"
+          }
+        ]
+      }
+    }
+  }
+}

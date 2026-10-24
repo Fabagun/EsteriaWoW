@@ -64,7 +64,7 @@ namespace CreatureAppearance
 
     inline constexpr std::array<Option, 5> ThinhumanMale = {{
         {0, 4, 1},
-        {1, 1, 1},
+        {1, 2, 1},
         {2, 4, 1},
         {3, 4, 1},
         {4, 7, 1},
@@ -198,6 +198,38 @@ namespace CreatureAppearance
         {4, 1, 1},
     }};
 
+    inline constexpr std::array<Option, 5> KyrianMale = {{
+        {0, 3, 1},
+        {1, 15, 1},
+        {2, 3, 1},
+        {3, 12, 1},
+        {4, 16, 1},
+    }};
+
+    inline constexpr std::array<Option, 5> KyrianFemale = {{
+        {0, 2, 1},
+        {1, 20, 1},
+        {2, 2, 1},
+        {3, 8, 1},
+        {4, 16, 1},
+    }};
+
+    inline constexpr std::array<Option, 5> VenthyrMale = {{
+        {0, 14, 1},
+        {1, 108, 1},
+        {2, 8, 1},
+        {3, 7, 1},
+        {4, 32, 1},
+    }};
+
+    inline constexpr std::array<Option, 5> VenthyrFemale = {{
+        {0, 6, 1},
+        {1, 216, 1},
+        {2, 6, 1},
+        {3, 6, 1},
+        {4, 40, 1},
+    }};
+
     inline constexpr std::array<Option, 5> DarkfallenMale = {{
         {0, 5, 1},
         {1, 1, 1},
@@ -266,15 +298,103 @@ namespace CreatureAppearance
         "Eye Color",
     };
 
+    inline constexpr std::array<Option, 8> KyrianMaleControls = {{
+        {0, 3, 1},
+        {2, 3, 1},
+        {3, 4, 1},
+        {3, 3, 4},
+        {1, 3, 1},
+        {1, 5, 3},
+        {4, 4, 1},
+        {4, 4, 4},
+    }};
+
+    inline constexpr std::array<char const*, 8> KyrianMaleLabels = {
+        "Body Palette",
+        "Armor Palette",
+        "Wing Palette",
+        "Hair Palette",
+        "Hair Style",
+        "Headwear",
+        "Outfit",
+        "Shoulders",
+    };
+
+    inline constexpr std::array<Option, 8> KyrianFemaleControls = {{
+        {0, 2, 1},
+        {2, 2, 1},
+        {3, 4, 1},
+        {3, 2, 4},
+        {1, 4, 1},
+        {1, 5, 4},
+        {4, 4, 1},
+        {4, 4, 4},
+    }};
+
+    inline constexpr std::array<char const*, 8> KyrianFemaleLabels = {
+        "Body Palette",
+        "Armor Palette",
+        "Wing Palette",
+        "Hair Palette",
+        "Hair Style",
+        "Headwear",
+        "Outfit",
+        "Shoulders",
+    };
+
+    inline constexpr std::array<Option, 8> VenthyrMaleControls = {{
+        {0, 14, 1},
+        {2, 8, 1},
+        {3, 7, 1},
+        {1, 6, 1},
+        {4, 8, 1},
+        {4, 4, 8},
+        {1, 6, 6},
+        {1, 3, 36},
+    }};
+
+    inline constexpr std::array<char const*, 8> VenthyrMaleLabels = {
+        "Skin / Body Palette",
+        "Accessory Palette",
+        "Hair Color",
+        "Body / Outfit Style",
+        "Hair Style",
+        "Facial Hair",
+        "Collar / Robe",
+        "Headwear",
+    };
+
+    inline constexpr std::array<Option, 8> VenthyrFemaleControls = {{
+        {0, 6, 1},
+        {2, 6, 1},
+        {3, 6, 1},
+        {1, 4, 1},
+        {4, 8, 1},
+        {4, 5, 8},
+        {1, 6, 4},
+        {1, 9, 24},
+    }};
+
+    inline constexpr std::array<char const*, 8> VenthyrFemaleLabels = {
+        "Skin / Body Palette",
+        "Accessory Palette",
+        "Hair Color",
+        "Body / Outfit Style",
+        "Hair Style",
+        "Earrings",
+        "Collar / Cape",
+        "Headwear",
+    };
+
     constexpr bool Uses(unsigned race)
     {
-        return (((((((((((((race >= 54 && race <= 59) || race == 62) || race == 63) || race == 64) || race == 66) || race == 67) || race == 69) || race == 70) || race == 71) || race == 72) || race == 73) || race == 74) || race == 43) || race == 44;
+        return (((((((((((((((race >= 54 && race <= 59) || race == 62) || race == 63) || race == 64) || race == 66) || race == 67) || race == 69) || race == 70) || race == 71) || race == 72) || race == 73) || race == 74) || race == 43) || race == 44) || race == 75) || race == 76;
     }
 
     constexpr bool GenderAllowed(unsigned race, unsigned gender)
     {
         return Uses(race) && (gender == 0
-            || ((race == 54 || race == 55 || race == 56 || race == 57 || race == 62 || race == 66 || race == 67 || race == 73 || race == 74 || race == 43 || race == 44) && gender == 1));
+            || ((race == 54 || race == 55 || race == 56 || race == 57 || race == 62 || race == 66 || race == 67 || race == 73 || race == 74 || race == 75 || race == 76 || race == 43 || race == 44) && gender == 1));
     }
 
     constexpr bool UsesPlayerVrykul(unsigned race, unsigned gender)
@@ -323,6 +443,10 @@ namespace CreatureAppearance
                 return gender ? Centaur_AllianceFemale : Centaur_AllianceMale;
             case 74:
                 return gender ? Centaur_HordeFemale : Centaur_HordeMale;
+            case 75:
+                return gender ? KyrianFemale : KyrianMale;
+            case 76:
+                return gender ? VenthyrFemale : VenthyrMale;
             case 43:
             case 44:
                 return gender ? DarkfallenFemale : DarkfallenMale;

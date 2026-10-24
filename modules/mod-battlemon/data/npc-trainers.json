@@ -1,0 +1,404 @@
+{
+  "source": "https://pokemondb.net/red-blue/gymleaders-elitefour",
+  "trainers": [
+    {
+      "entry": 950100,
+      "display": 950100,
+      "folder": "Brock",
+      "name": "Brock",
+      "role": "leader",
+      "species": [
+        74,
+        95
+      ],
+      "random": false,
+      "theme": "",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950101,
+      "display": 950101,
+      "folder": "Misty",
+      "name": "Misty",
+      "role": "leader",
+      "species": [
+        120,
+        121
+      ],
+      "random": false,
+      "theme": "",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950102,
+      "display": 950102,
+      "folder": "Lillie",
+      "name": "Lillie",
+      "role": "trainer",
+      "species": [
+        35,
+        173,
+        764
+      ],
+      "random": false,
+      "theme": "Fairy companions",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950103,
+      "display": 950103,
+      "folder": "LillieZ",
+      "name": "Lillie (Z-Powered)",
+      "role": "trainer",
+      "species": [
+        36,
+        742,
+        764
+      ],
+      "random": false,
+      "theme": "Fairy companions",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950104,
+      "display": 950104,
+      "folder": "CenterLady",
+      "name": "Nurse Joy",
+      "role": "healer",
+      "species": [],
+      "random": false,
+      "theme": "",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950107,
+      "display": 950107,
+      "folder": "Beauty",
+      "name": "Beauty",
+      "role": "trainer",
+      "species": [
+        35,
+        37,
+        39,
+        52,
+        133,
+        300,
+        572,
+        676
+      ],
+      "random": true,
+      "theme": "Elegant companions",
+      "min_size": 2,
+      "max_size": 4
+    },
+    {
+      "entry": 950108,
+      "display": 950108,
+      "folder": "BlackBelt",
+      "name": "Black Belt",
+      "role": "trainer",
+      "species": [
+        56,
+        57,
+        66,
+        67,
+        68,
+        106,
+        107,
+        237,
+        296,
+        297,
+        447,
+        448,
+        532,
+        533,
+        534
+      ],
+      "random": true,
+      "theme": "FIGHTING",
+      "min_size": 2,
+      "max_size": 4
+    },
+    {
+      "entry": 950109,
+      "display": 950109,
+      "folder": "Fisherman",
+      "name": "Fisherman",
+      "role": "trainer",
+      "species": [
+        60,
+        61,
+        72,
+        73,
+        90,
+        98,
+        99,
+        118,
+        119,
+        129,
+        130,
+        170,
+        223,
+        224
+      ],
+      "random": true,
+      "theme": "WATER",
+      "min_size": 2,
+      "max_size": 4
+    },
+    {
+      "entry": 950110,
+      "display": 950110,
+      "folder": "James",
+      "name": "James",
+      "role": "trainer",
+      "species": [
+        110,
+        71,
+        52
+      ],
+      "random": false,
+      "theme": "Team Rocket signature team",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950111,
+      "display": 950111,
+      "folder": "Jessie",
+      "name": "Jessie",
+      "role": "trainer",
+      "species": [
+        24,
+        202,
+        52
+      ],
+      "random": false,
+      "theme": "Team Rocket signature team",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950112,
+      "display": 950112,
+      "folder": "Koga",
+      "name": "Koga",
+      "role": "leader",
+      "species": [
+        109,
+        89,
+        109,
+        110
+      ],
+      "random": false,
+      "theme": "",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950113,
+      "display": 950113,
+      "folder": "Lass",
+      "name": "Lass",
+      "role": "trainer",
+      "species": [
+        16,
+        19,
+        29,
+        32,
+        35,
+        39,
+        43,
+        52,
+        133,
+        300
+      ],
+      "random": true,
+      "theme": "Route companions",
+      "min_size": 2,
+      "max_size": 4
+    },
+    {
+      "entry": 950114,
+      "display": 950114,
+      "folder": "Lorelei",
+      "name": "Lorelei",
+      "role": "elite",
+      "species": [
+        87,
+        91,
+        80,
+        124,
+        131
+      ],
+      "random": false,
+      "theme": "",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950115,
+      "display": 950115,
+      "folder": "LtSurge",
+      "name": "Lt. Surge",
+      "role": "leader",
+      "species": [
+        100,
+        25,
+        26
+      ],
+      "random": false,
+      "theme": "",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950116,
+      "display": 950116,
+      "folder": "OfficerJenny",
+      "name": "Officer Jenny",
+      "role": "guard",
+      "species": [],
+      "random": false,
+      "theme": "",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950117,
+      "display": 950117,
+      "folder": "ProfessorOak",
+      "name": "Professor Oak",
+      "role": "teacher",
+      "species": [],
+      "random": false,
+      "theme": "",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950118,
+      "display": 950118,
+      "folder": "Sabrina",
+      "name": "Sabrina",
+      "role": "leader",
+      "species": [
+        64,
+        122,
+        49,
+        65
+      ],
+      "random": false,
+      "theme": "",
+      "min_size": 0,
+      "max_size": 0
+    },
+    {
+      "entry": 950119,
+      "display": 950119,
+      "folder": "Shrek",
+      "name": "Shrek",
+      "role": "trainer",
+      "species": [
+        88,
+        89,
+        194,
+        195,
+        453,
+        454,
+        535,
+        536,
+        537
+      ],
+      "random": true,
+      "theme": "Swamp companions",
+      "min_size": 3,
+      "max_size": 4
+    },
+    {
+      "entry": 950120,
+      "display": 950120,
+      "folder": "SwimmerFemale",
+      "name": "Swimmer",
+      "role": "trainer",
+      "species": [
+        7,
+        8,
+        54,
+        55,
+        60,
+        61,
+        72,
+        86,
+        87,
+        116,
+        117,
+        120,
+        183,
+        184,
+        226,
+        278,
+        279
+      ],
+      "random": true,
+      "theme": "WATER",
+      "min_size": 2,
+      "max_size": 4
+    },
+    {
+      "entry": 950121,
+      "display": 950121,
+      "folder": "TeamRocketGruntFemale",
+      "name": "Team Rocket Grunt (Female)",
+      "role": "trainer",
+      "species": [
+        19,
+        20,
+        23,
+        24,
+        41,
+        42,
+        88,
+        89,
+        96,
+        97,
+        109,
+        110
+      ],
+      "random": true,
+      "theme": "Team Rocket",
+      "min_size": 2,
+      "max_size": 4
+    },
+    {
+      "entry": 950122,
+      "display": 950122,
+      "folder": "TeamRocketGruntMale",
+      "name": "Team Rocket Grunt (Male)",
+      "role": "trainer",
+      "species": [
+        19,
+        20,
+        23,
+        24,
+        41,
+        42,
+        88,
+        89,
+        96,
+        97,
+        109,
+        110
+      ],
+      "random": true,
+      "theme": "Team Rocket",
+      "min_size": 2,
+      "max_size": 4
+    }
+  ]
+}

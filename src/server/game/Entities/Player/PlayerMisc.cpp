@@ -137,6 +137,11 @@ void Player::Customize(CharacterCustomizeInfo const* customizeInfo, CharacterDat
         CharacterDatabase.ExecuteOrAppend(trans, stmt);
     }
 
+    // A customize, faction or race change can change the model's options, so the parked form's look is stale.
+    stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_FORM_LOOK);
+    stmt->SetData(0, customizeInfo->Guid.GetCounter());
+    CharacterDatabase.ExecuteOrAppend(trans, stmt);
+
     if (customizeInfo->HasRetailLook)
     {
         std::vector<uint8> payload(CharacterRetailLook::PayloadSize);

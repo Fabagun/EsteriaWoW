@@ -10,7 +10,9 @@
 
 void BmMsg(BmCtx& ctx, std::string const& text)
 {
-    if (ctx.mgr && ctx.session)
+    if (ctx.output)
+        ctx.output(text);
+    else if (ctx.mgr && ctx.session)
         ctx.mgr->Msg(*ctx.session, text);
 }
 
@@ -427,7 +429,7 @@ void BmEndOfRound(BmCtx& ctx, BattlemonBattler& a, BattlemonBattler& b)
     yawnTick(b);
 }
 
-void BmExecuteMove(BmCtx& ctx, BattlemonBattler& user, BattlemonBattler& target, BattlemonSlot& slot, bool /*isPlayer*/)
+void BmExecuteMove(BmCtx& ctx, BattlemonBattler& user, BattlemonBattler& target, BattlemonSlot& slot, bool isPlayer)
 {
     BattlemonMoveDef const* mv = slot.def;
     if (!mv)
@@ -437,6 +439,11 @@ void BmExecuteMove(BmCtx& ctx, BattlemonBattler& user, BattlemonBattler& target,
     {
         // forced continuation
     }
+
+    if (ctx.animation)
+        ctx.animation(isPlayer, mv->internalName);
+    else if (ctx.session && ctx.session->player && ctx.mgr)
+        ctx.mgr->SendMoveAnimation(ctx.session->player, isPlayer, mv->internalName);
 
     bool twoTurn = BmIsTwoTurnMove(*mv);
     bool sunSkip = twoTurn && mv->functionCode.find("OneTurnInSun") != std::string::npos

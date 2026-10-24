@@ -129,7 +129,9 @@ enum Races
     RACE_SLIME_GIANT_ALLIANCE  = 71,
     RACE_SLIME_GIANT_HORDE     = 72,
     RACE_CENTAUR_ALLIANCE      = 73,
-    RACE_CENTAUR_HORDE         = 74
+    RACE_CENTAUR_HORDE         = 74,
+    RACE_KYRIAN_ALLIANCE       = 75,
+    RACE_VENTHYR_HORDE         = 76
 };
 
 uint32 constexpr DARKFALLEN_RACE_MASK = 0x80000000u;
@@ -146,13 +148,15 @@ inline constexpr bool UsesHaranirAppearance(uint32 race)
 
 inline constexpr bool IsExtendedPlayableRace(uint32 race)
 {
-    return race >= RACE_MAGHAR_ORC && race <= RACE_CENTAUR_HORDE;
+    return race >= RACE_MAGHAR_ORC && race <= RACE_VENTHYR_HORDE;
 }
 
 inline constexpr uint8 GetLegacyMaskRaceForRace(uint32 race)
 {
     switch (race)
     {
+        case RACE_KYRIAN_ALLIANCE:      return RACE_DRAENEI;
+        case RACE_VENTHYR_HORDE:        return RACE_UNDEAD_PLAYER;
         case RACE_MAGHAR_ORC:          return RACE_ORC;
         case RACE_HIGHMOUNTAIN_TAUREN: return RACE_TAUREN;
         case RACE_MECHAGNOME:          return RACE_GNOME;
@@ -191,6 +195,8 @@ inline constexpr uint8 GetVisualBaseRaceForRace(uint32 race)
 {
     switch (race)
     {
+        case RACE_KYRIAN_ALLIANCE:      return RACE_DRAENEI;
+        case RACE_VENTHYR_HORDE:        return RACE_UNDEAD_PLAYER;
         case RACE_MAGHAR_ORC:          return RACE_ORC;
         case RACE_HIGHMOUNTAIN_TAUREN: return RACE_TAUREN;
         case RACE_MECHAGNOME:          return RACE_GNOME;

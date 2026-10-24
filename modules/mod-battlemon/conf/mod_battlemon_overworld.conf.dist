@@ -1,0 +1,49 @@
+# Unified mod-battlemon: overworld settings (filename retained for existing servers).
+# Exact 3D form/palette mappings come from BattlemonModelCatalog.h.
+
+BattlemonOverworld.Enable = 1
+
+BattlemonOverworld.MorphCritters = 1
+
+# 0 = every morph rolls the full catalog (same weights as Fight).
+# A non-zero cap is only useful if you want a tiny safari on purpose.
+BattlemonOverworld.FormPool = 0
+
+# In-place reroll window in seconds. Each spawn picks its own time in [min, max]
+# so a zone does not flip together. A spawn will not reroll into the same form
+# it just was (same spawn id). RefreshMax = 0 disables rotation.
+BattlemonOverworld.RefreshMin = 480
+BattlemonOverworld.RefreshMax = 900
+
+#
+# Model size / height
+#
+# Source model size is retained. Height applies additional species scaling,
+# then clamps it to the configured minimum and maximum.
+# Scale / Hover are applied after that. Nudge replaces the final values.
+#
+#   finalScale = Nudge.scale   or  clamp(height / ScaleAtMeters) * Scale
+#   finalHover = Nudge.hover   or  (Flying/Levitate/Ghost) + Hover
+#
+# Hover is yards above the ground (Flying types float, Snorlax does not).
+# Global Hover lifts every model if an overall height adjustment is needed.
+# Name height comes from the DBC/M2 bounds. Preserve per-form ground nudges.
+#
+BattlemonOverworld.Scale = 1.5
+BattlemonOverworld.Hover = 0.0
+BattlemonOverworld.ScaleFromHeight = 1
+BattlemonOverworld.ScaleAtMeters = 1.0
+BattlemonOverworld.ScaleMin = 0.7
+BattlemonOverworld.ScaleMax = 1.75
+BattlemonOverworld.Hover.Flying = 1.25
+BattlemonOverworld.Hover.Levitate = 1.0
+BattlemonOverworld.Hover.Ghost = 0.4
+
+# Per-form overrides: formId:scale:hover
+# Empty field keeps the auto value. Examples:
+#   37:1.15:     Pikachu a bit bigger, keep auto hover
+#   144::2.5     Articuno auto scale, hover 2.5
+#   321:2.8:0    Wailord huge and on the ground
+# .bmo spawn prints the line to paste here.
+# Mega Charizard Y stands on its feet; Flying type alone does not imply an airborne pose.
+BattlemonOverworld.Nudge = 10::0

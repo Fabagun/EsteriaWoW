@@ -240,6 +240,10 @@ bool LoginQueryHolder::Initialize()
     stmt->SetData(0, rawGUID);
     res &= SetPreparedQuery(PLAYER_LOGIN_QUERY_LOAD_RETAIL_LOOK, stmt);
 
+    stmt = CharacterDatabase.GetPreparedStatement(CHAR_SEL_FORM_LOOK);
+    stmt->SetData(0, rawGUID);
+    res &= SetPreparedQuery(PLAYER_LOGIN_QUERY_LOAD_FORM_LOOK, stmt);
+
     return res;
 }
 
@@ -2269,6 +2273,92 @@ void WorldSession::HandleEquipmentSetUse(WorldPacket& recvData)
     WorldPacket data(SMSG_EQUIPMENT_SET_USE_RESULT, 1);
     data << uint8(errorId);                                       // 4 - equipment swap failed - inventory is full
     SendPacket(&data);
+}
+
+// Two Forms: the client commits both forms of a Worgen or Dracthyr after creating it (or editing it later).
+//   CMSG: guid(8) revision(u32) activeForm(u8) look(132) look(132). The first look is the active form's, the second the
+//         other form's; both are version-2 looks (CharacterRetailLook).
+//   SMSG_ESTERIA_FORM_LOOK_ACK: guid(8) revision(u32) result(u8): 0 saved, 1 not this account's character, 2 invalid,
+//         3 not a Two Forms race. The write is a plain REPLACE, so a resend of the same commit is harmless.
+void WorldSession::HandleEsteriaFormLookOpcode(WorldPacket& recvData)
+{
+    constexpr size_t payloadSize = CharacterRetailLook::PayloadSize;
+    if (recvData.size() - recvData.rpos() != 8 + 4 + 1 + 2 * payloadSize)
+        return;
+
+    uint64 rawGuid;
+    uint32 revision;
+    uint8 activeForm;
+    std::array<uint8, payloadSize> activePayload, parkedPayload;
+    recvData >> rawGuid >> revision >> activeForm;
+    recvData.read(activePayload.data(), payloadSize);
+    recvData.read(parkedPayload.data(), payloadSize);
+
+    ObjectGuid const guid(rawGuid);
+    auto reply = [&](uint8 result)
+    {
+        if (result)
+            LOG_WARN("network.opcode", "CMSG_ESTERIA_FORM_LOOK from account {} refused with result {}", GetAccountId(), result);
+        WorldPacket data(SMSG_ESTERIA_FORM_LOOK_ACK, 8 + 4 + 1);
+        data << rawGuid << revision << result;
+        SendPacket(&data);
+    };
+
+    if (!IsLegitCharacterForAccount(guid))
+    {
+        reply(1);
+        return;
+    }
+
+    CharacterCacheEntry const* character = sCharacterCache->GetCharacterCacheByGuid(guid);
+    if (!character)
+    {
+        reply(1);
+        return;
+    }
+
+    // The two forms of each Two Forms race: Worgen Wolf (1) and Human (2), Dracthyr Dragon (3) and Visage (4).
+    uint8 first = 0;
+    if (character->Race == RACE_WORGEN)
+        first = 1;
+    else if (character->Race == RACE_DRACTHYR)
+        first = 3;
+    else
+    {
+        reply(3);
+        return;
+    }
+    uint8 const second = static_cast<uint8>(first + 1);
+
+    CharacterRetailLook::Look active, parked;
+    if (!CharacterRetailLook::ReadPayload(activePayload.data(), payloadSize, active)
+        || !CharacterRetailLook::ReadPayload(parkedPayload.data(), payloadSize, parked)
+        || (activeForm != first && activeForm != second)
+        || active.form != activeForm || parked.form != (activeForm == first ? second : first)
+        || active.race != character->Race || parked.race != character->Race
+        || active.sex != character->Sex || parked.sex != character->Sex)
+    {
+        reply(2);
+        return;
+    }
+
+    // Written from the parsed looks, so what is stored is always the canonical encoding.
+    std::vector<uint8> activeOut(payloadSize), parkedOut(payloadSize);
+    CharacterRetailLook::WritePayload(activeOut.data(), active);
+    CharacterRetailLook::WritePayload(parkedOut.data(), parked);
+
+    CharacterDatabaseTransaction trans = CharacterDatabase.BeginTransaction();
+    CharacterDatabasePreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_REP_RETAIL_LOOK);
+    stmt->SetData(0, guid.GetCounter());
+    stmt->SetData(1, activeOut);
+    trans->Append(stmt);
+    stmt = CharacterDatabase.GetPreparedStatement(CHAR_REP_FORM_LOOK);
+    stmt->SetData(0, guid.GetCounter());
+    stmt->SetData(1, parkedOut);
+    trans->Append(stmt);
+    CharacterDatabase.CommitTransaction(trans);
+
+    reply(0);
 }
 
 void WorldSession::HandleCharFactionOrRaceChange(WorldPacket& recvData)

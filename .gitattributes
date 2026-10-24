@@ -28,3 +28,23 @@
 
 # Ignore sql/* files
 data/sql/*    linguist-documentation
+
+# Binary assets: never normalize line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.blend binary
+*.m2 binary
+*.skin binary
+*.wmo binary
+*.vmo binary
+*.blp binary
+*.dbc binary
+*.dbc1-* binary
+*.mpq binary
+*.zip binary
+*.dll binary
+*.exe binary
+*.lib binary
+*.obj binary
+*.exp binary

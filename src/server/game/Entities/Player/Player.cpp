@@ -4475,6 +4475,10 @@ void Player::DeleteFromDB(ObjectGuid::LowType lowGuid, uint32 accountId, bool up
                 stmt->SetData(0, lowGuid);
                 trans->Append(stmt);
 
+                stmt = CharacterDatabase.GetPreparedStatement(CHAR_DEL_FORM_LOOK);
+                stmt->SetData(0, lowGuid);
+                trans->Append(stmt);
+
                 Corpse::DeleteFromDB(playerGuid, trans);
 
                 sScriptMgr->OnPlayerDeleteFromDB(trans, lowGuid);
@@ -12013,6 +12017,67 @@ void Player::SendRetailLookTo(Player* receiver) const
     data << GetGUID().GetRawValue();
     data.append(_retailLook.data(), _retailLook.size());
     receiver->GetSession()->SendPacket(&data);
+}
+
+void Player::LoadFormLook(PreparedQueryResult result)
+{
+    _hasParkedLook = false;
+    _parkedLook = {};
+    if (!result)
+        return;
+
+    auto const payload = (*result)[0].Get<Binary, CharacterRetailLook::PayloadSize>();
+    CharacterRetailLook::Look look;
+    if (CharacterRetailLook::ReadPayload(payload.data(), payload.size(), look))
+    {
+        _parkedLook = payload;
+        _hasParkedLook = true;
+    }
+}
+
+bool Player::ToggleRetailForm()
+{
+    if (!_hasRetailLook || !_hasParkedLook)
+        return false;
+
+    CharacterRetailLook::Look active, parked;
+    if (!CharacterRetailLook::ReadPayload(_retailLook.data(), _retailLook.size(), active)
+        || !CharacterRetailLook::ReadPayload(_parkedLook.data(), _parkedLook.size(), parked))
+        return false;
+
+    // The pair has to be this race's two forms: Worgen Wolf (1) and Human (2), Dracthyr Dragon (3) and Visage (4).
+    uint8 first = 0;
+    if (getRace() == RACE_WORGEN)
+        first = 1;
+    else if (getRace() == RACE_DRACTHYR)
+        first = 3;
+    uint8 const second = static_cast<uint8>(first + 1);
+    bool const formsMatch = (active.form == first && parked.form == second)
+        || (active.form == second && parked.form == first);
+    if (!first || !formsMatch || active.race != getRace() || parked.race != getRace()
+        || active.sex != getGender() || parked.sex != getGender())
+        return false;
+
+    std::swap(_retailLook, _parkedLook);
+
+    CharacterDatabaseTransaction trans = CharacterDatabase.BeginTransaction();
+    CharacterDatabasePreparedStatement* stmt = CharacterDatabase.GetPreparedStatement(CHAR_REP_RETAIL_LOOK);
+    stmt->SetData(0, GetGUID().GetCounter());
+    stmt->SetData(1, std::vector<uint8>(_retailLook.begin(), _retailLook.end()));
+    trans->Append(stmt);
+    stmt = CharacterDatabase.GetPreparedStatement(CHAR_REP_FORM_LOOK);
+    stmt->SetData(0, GetGUID().GetCounter());
+    stmt->SetData(1, std::vector<uint8>(_parkedLook.begin(), _parkedLook.end()));
+    trans->Append(stmt);
+    CharacterDatabase.CommitTransaction(trans);
+
+    // To this player and everyone who has them in view; players who come into view later get the active look from
+    // SendRetailLookTo like any other.
+    WorldPacket data(SMSG_ESTERIA_RETAIL_LOOK, 8 + CharacterRetailLook::PayloadSize);
+    data << GetGUID().GetRawValue();
+    data.append(_retailLook.data(), _retailLook.size());
+    SendMessageToSet(&data, true);
+    return true;
 }
 
 void Player::SendInitialPacketsAfterAddToMap()

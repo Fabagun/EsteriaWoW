@@ -1,0 +1,1561 @@
+{
+  "schema": 1,
+  "evidence": "Visually compared actual addon front sprites with declared Pixelmon normal palette sprites; generated/pixelmon-recovery/variants/comparison0-2.jpg; Alcremie colors and sweets: generated/pixelmon-recovery/alcremie/comparisons.jpg",
+  "aliases": [
+    {
+      "form": 38,
+      "name": "Pikachu (02)",
+      "sprite": "0025_Pikachu_02",
+      "dex": 25,
+      "source_form": "cosplay",
+      "gender": "ALL",
+      "addon_sprite_sha256": "69afa20335ab8b2ed79532075b6b7b22466419fc14ceab39033be644df0a4548",
+      "source_sprite_sha256": "a018d12faaf09dd6131acdc19c56a446912944c0a8e6b665c7c068c45aea2e57"
+    },
+    {
+      "form": 39,
+      "name": "Pikachu (03)",
+      "sprite": "0025_Pikachu_03",
+      "dex": 25,
+      "source_form": "belle",
+      "gender": "ALL",
+      "addon_sprite_sha256": "ee3ff4b02fe141260377286ececc63c8ee50c046a5a7fc95d173c5edbf2a07cc",
+      "source_sprite_sha256": "fa8b7294bd0d9187aee0dd6c83b19081223efc87faf43dc600f2e80113c7fe7a"
+    },
+    {
+      "form": 41,
+      "name": "Pikachu (04)",
+      "sprite": "0025_Pikachu_04",
+      "dex": 25,
+      "source_form": "libre",
+      "gender": "ALL",
+      "addon_sprite_sha256": "1fb3c52e6d9b05278305172534f102e2eda2ea0b7092440f6b7e7e48074f8684",
+      "source_sprite_sha256": "6827ee5642b6e3c3860c6890d32829b9736cac7c7b3d67240a688eb755093f65"
+    },
+    {
+      "form": 42,
+      "name": "Pikachu (05)",
+      "sprite": "0025_Pikachu_05",
+      "dex": 25,
+      "source_form": "phd",
+      "gender": "ALL",
+      "addon_sprite_sha256": "c05ba5dce5224ef99b256a7bd7517317652b05c10db23d51b5f6e74d009d66be",
+      "source_sprite_sha256": "2302a7b07c67aca6e4c6f6ef1f9a5030a5a3fd4cfef670bc06bcc205739040f8"
+    },
+    {
+      "form": 43,
+      "name": "Pikachu (06)",
+      "sprite": "0025_Pikachu_06",
+      "dex": 25,
+      "source_form": "popstar",
+      "gender": "ALL",
+      "addon_sprite_sha256": "6b926ddce5f74e77cd082e21d914a4543a79ebd9b789ad566b6b0c63ef8d413e",
+      "source_sprite_sha256": "c811aa392ab5a01892167f2a5b8cfd93dfab9b2320404b720c0799ae9c3a0d3f"
+    },
+    {
+      "form": 44,
+      "name": "Pikachu (07)",
+      "sprite": "0025_Pikachu_07",
+      "dex": 25,
+      "source_form": "rockstar",
+      "gender": "ALL",
+      "addon_sprite_sha256": "80c5f2af84f6c9834d4948036816e345538ab257cf4fd3c9ef1b58dfcc5bd2b1",
+      "source_sprite_sha256": "4f50f60588a7fd049c1bb6a0b9bcf86bc6c4d8c31f71e9b46bc8765b94ac1ba3"
+    },
+    {
+      "form": 57,
+      "name": "Raichu (02)",
+      "sprite": "0026_Raichu_02",
+      "dex": 26,
+      "source_form": "megax",
+      "gender": "ALL",
+      "addon_sprite_sha256": "c85e045c942f0e2c7be27be07f7404d692edcbe8a84e546923603e6a4095ba9a",
+      "source_sprite_sha256": "12f98982aba205e15577d991fdde4b70eea8ec9886e28d33548a7218f158b855"
+    },
+    {
+      "form": 58,
+      "name": "Raichu (03)",
+      "sprite": "0026_Raichu_03",
+      "dex": 26,
+      "source_form": "megay",
+      "gender": "ALL",
+      "addon_sprite_sha256": "25865bb51abd34dffdc582ea9fa0ca12caa4885fba54aebbe31c3bc511539b63",
+      "source_sprite_sha256": "f007432517b2867d2a3a8a48a68b1463759a5188720911bd7aae3f828e853fd9"
+    },
+    {
+      "form": 106,
+      "name": "Growlithe (01)",
+      "sprite": "0058_Growlithe_01",
+      "dex": 58,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "6906bbcc021578248e2eab4c4933cd3c64fc4e1ded36b0d5b587ccd8f5b3ad4d",
+      "source_sprite_sha256": "a5aa725959db4a823efe8dc4abe63f4baf402862145999f0550ed8a596b9e506"
+    },
+    {
+      "form": 108,
+      "name": "Arcanine (01)",
+      "sprite": "0059_Arcanine_01",
+      "dex": 59,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "167e343948277bd5b6b03583e23092f29ce9ab5258bebb3cf37de09f81c9b25e",
+      "source_sprite_sha256": "456c98373c39dc6cc4068d37840c09fced57d38d7b90ec3ef4872a85c69612e6"
+    },
+    {
+      "form": 169,
+      "name": "Voltorb (01)",
+      "sprite": "0100_Voltorb_01",
+      "dex": 100,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "3f805acf24365488a869a28d2c46c427dd9795b0acb87cee77bdb2179ed0b94f",
+      "source_sprite_sha256": "1d1331faa7b9e05ede4cc7258b9f9d91aa6b296c98460a69b07f0f6a5aa1b872"
+    },
+    {
+      "form": 171,
+      "name": "Electrode (01)",
+      "sprite": "0101_Electrode_01",
+      "dex": 101,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "0f5e69875eadf9ac49145d1b0bad7ffc145822c8d52becc2fa32e00df652b2ea",
+      "source_sprite_sha256": "def4ed830936d9a596b052cb96d84afb8f6256b1a3a561c955326e0646ad76c4"
+    },
+    {
+      "form": 200,
+      "name": "Starmie (01)",
+      "sprite": "0121_Starmie_01",
+      "dex": 121,
+      "source_form": "mega",
+      "gender": "ALL",
+      "addon_sprite_sha256": "727eab4726bf8963817166a1d3016cfaf733d9f5ce880dfc9d5e08fd21c6ec31",
+      "source_sprite_sha256": "a88ce6da63a30d8b960e92151d76d169a90617970467d104885cf1f5e7ee2c49"
+    },
+    {
+      "form": 211,
+      "name": "Tauros (01)",
+      "sprite": "0128_Tauros_01",
+      "dex": 128,
+      "source_form": "paldean_combat",
+      "gender": "ALL",
+      "addon_sprite_sha256": "98b628a2bf770dfc0848ab1f3b040422bbe37f575036a86a9b2c243ff1367919",
+      "source_sprite_sha256": "ec0ab5471605b50a78a3c7ac5a8b154be8fd131da1c60d9d667442a9a4bd447f"
+    },
+    {
+      "form": 212,
+      "name": "Tauros (02)",
+      "sprite": "0128_Tauros_02",
+      "dex": 128,
+      "source_form": "paldean_blaze",
+      "gender": "ALL",
+      "addon_sprite_sha256": "8094014af8e1d145428183d91620fd1d968c620fd23a495b398be3374fb83c87",
+      "source_sprite_sha256": "8d93d323e368e9dc31a8a1e4edac58eea5d6f0b82f32a2e22338e019ca007d7b"
+    },
+    {
+      "form": 213,
+      "name": "Tauros (03)",
+      "sprite": "0128_Tauros_03",
+      "dex": 128,
+      "source_form": "paldean_aqua",
+      "gender": "ALL",
+      "addon_sprite_sha256": "6982c2c8feef47dccc0745e8cb750f631e48305b4e9ce4096277829e1711f679",
+      "source_sprite_sha256": "c529a17714087be1b56192b611d23233cc0a60c11f96aa0b250c2907afb0fa1d"
+    },
+    {
+      "form": 242,
+      "name": "Dragonite (01)",
+      "sprite": "0149_Dragonite_01",
+      "dex": 149,
+      "source_form": "mega",
+      "gender": "ALL",
+      "addon_sprite_sha256": "b95ed0b9e08d510038199eaeef7ca1105980f2f514c975708f1d5a3049f6635a",
+      "source_sprite_sha256": "68d59e39b6c0dc432431edb785930b5be1b3bf01e23235cd68d1a4da324201c3"
+    },
+    {
+      "form": 255,
+      "name": "Typhlosion (01)",
+      "sprite": "0157_Typhlosion_01",
+      "dex": 157,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "569e16f9c6278b74d0d8a2e5c6cb641308714d607a4e405744ade92043d0dde7",
+      "source_sprite_sha256": "2f131eafded485aeb03b521d5847e10827714d3ac90a4af5112c312438295b7a"
+    },
+    {
+      "form": 301,
+      "name": "Wooper (01)",
+      "sprite": "0194_Wooper_01",
+      "dex": 194,
+      "source_form": "paldean",
+      "gender": "ALL",
+      "addon_sprite_sha256": "f92b0d1befc8814832caf01825154c500a2b9332c125602e4637df9a02be31e8",
+      "source_sprite_sha256": "392c6da563410e0ac1740e62e4a7e5969f121a6841272de34000383473e2908c"
+    },
+    {
+      "form": 355,
+      "name": "Qwilfish (01)",
+      "sprite": "0211_Qwilfish_01",
+      "dex": 211,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "1851c019d345fbf385075a5e21d6e8adc9832c94ffdab56ce116db64fe9f51f2",
+      "source_sprite_sha256": "bbb26c5f79e045780d374052621697edc038645f314dfaae7105f5e5b39625a0"
+    },
+    {
+      "form": 364,
+      "name": "Sneasel (01)",
+      "sprite": "0215_Sneasel_01",
+      "dex": 215,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "97fcbc5a231668b3a3cc3b8135ad5e5dc743fa4586c0b1e034d5f2fd423f818d",
+      "source_sprite_sha256": "f332ae688c937249168f4df110fc2674aea4a142f059a37ff39bb031085f6401"
+    },
+    {
+      "form": 365,
+      "name": "Sneasel (01 Female)",
+      "sprite": "0215_Sneasel_01_female",
+      "dex": 215,
+      "source_form": "hisuian",
+      "gender": "FEMALE",
+      "addon_sprite_sha256": "e2a86cfc3acd4feda72e0b95e8f4a770955298db2418741b4d80b35fb98bb7b5",
+      "source_sprite_sha256": "f332ae688c937249168f4df110fc2674aea4a142f059a37ff39bb031085f6401"
+    },
+    {
+      "form": 510,
+      "name": "Camerupt (01 Female)",
+      "sprite": "0323_Camerupt_01_female",
+      "dex": 323,
+      "source_form": "mega",
+      "gender": "FEMALE",
+      "addon_sprite_sha256": "1d0cc112c08c51fbf4834f43231538dac40a8ccd4a7dfe71cb3f567f122fc55c",
+      "source_sprite_sha256": "c24d502f718b7ca69fbbaff2f85c230fac97c8a14f19d8335e55016307dbf329"
+    },
+    {
+      "form": 744,
+      "name": "Dialga (01)",
+      "sprite": "0483_Dialga_01",
+      "dex": 483,
+      "source_form": "origin",
+      "gender": "ALL",
+      "addon_sprite_sha256": "04436fc989c745a141660892e883c6469d5ebe3c7a4d840cf134beed59240593",
+      "source_sprite_sha256": "ce04f1b0a9fbb741bf29477795da002c7d4a3f322368da18e12e0b46afd5ec98"
+    },
+    {
+      "form": 746,
+      "name": "Palkia (01)",
+      "sprite": "0484_Palkia_01",
+      "dex": 484,
+      "source_form": "origin",
+      "gender": "ALL",
+      "addon_sprite_sha256": "e9fa90601e70c0789bc280a9f7338a79a43c38f761671627e7b7d79d60f08c48",
+      "source_sprite_sha256": "27978c0b84cc32eaf03c94334a6b7be92706ba1b463fdf8b82c4d4fbe95d4391"
+    },
+    {
+      "form": 756,
+      "name": "Darkrai (01)",
+      "sprite": "0491_Darkrai_01",
+      "dex": 491,
+      "source_form": "mega",
+      "gender": "ALL",
+      "addon_sprite_sha256": "7eae7dd5b45173608e69e62c2958ec9a35917ca9f020fa6b0f504b20c6099046",
+      "source_sprite_sha256": "4514c859cbe2e3a15403edac47f3fb334c8e05b587693aed083ba9ae7f1741a7"
+    },
+    {
+      "form": 788,
+      "name": "Samurott (01)",
+      "sprite": "0503_Samurott_01",
+      "dex": 503,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "a50556f5334c5ad390fe144ea8c8b1917790521420ac63b48b04a87c4a26b555",
+      "source_sprite_sha256": "5827f35ed952464d263980b7340396eceb3986751a8c673d385701db0786897b"
+    },
+    {
+      "form": 839,
+      "name": "Lilligant (01)",
+      "sprite": "0549_Lilligant_01",
+      "dex": 549,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "ad85ca9df763b3dde04a29d6637c364bc76e08067ee6be98c7452138931980fb",
+      "source_sprite_sha256": "071f74c3e8ac20eaf6e150eb580ec135d2f4be6ff7404faae28406a3f8d09118"
+    },
+    {
+      "form": 842,
+      "name": "Basculin (02)",
+      "sprite": "0550_Basculin_02",
+      "dex": 550,
+      "source_form": "white",
+      "gender": "ALL",
+      "addon_sprite_sha256": "d753c4e91d3831652e694433c48de0a5649b94ced59b36c5215a405405eed0e1",
+      "source_sprite_sha256": "d681abdd196a2a83376dcdb84306454b0490fd78aba6bfa1ebfe97fae4ea04eb"
+    },
+    {
+      "form": 847,
+      "name": "Darumaka (01)",
+      "sprite": "0554_Darumaka_01",
+      "dex": 554,
+      "source_form": "galarian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "c88f9c3839dc6a084afe8e21d398f5edc8aef0e1698792ef8cc9c80ad51144e4",
+      "source_sprite_sha256": "fd97f76ec4d2bc2b33c3d2a92ff4b961e8a747cabf6fa808310d36cd97936979"
+    },
+    {
+      "form": 870,
+      "name": "Zorua (01)",
+      "sprite": "0570_Zorua_01",
+      "dex": 570,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "b02f4f30881c48a68b4967004b0088dfb4ec275ef7393d334811443523724f10",
+      "source_sprite_sha256": "b5a63f2cbd939fa900a36c138950ea8a4b69beae85fc43cc12062b158923084b"
+    },
+    {
+      "form": 872,
+      "name": "Zoroark (01)",
+      "sprite": "0571_Zoroark_01",
+      "dex": 571,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "7b886eeed413f33dff80778dbedae26f9f1f40d11c4dca79eda91002ed8edcb3",
+      "source_sprite_sha256": "b30b17d56df90f2d20891857b9827c6729793ccdba4f166d45cc88e9e75b3c3c"
+    },
+    {
+      "form": 920,
+      "name": "Chandelure (01)",
+      "sprite": "0609_Chandelure_01",
+      "dex": 609,
+      "source_form": "mega",
+      "gender": "ALL",
+      "addon_sprite_sha256": "2aaded3f68f2a17d579adf0bf8919f0ce1174ce2ead6cb7651f8b40bb9c7e058",
+      "source_sprite_sha256": "58449861382867881d902513710e339a6f2b4f00162341cb309155814cc0c6e8"
+    },
+    {
+      "form": 942,
+      "name": "Braviary (01)",
+      "sprite": "0628_Braviary_01",
+      "dex": 628,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "325f898b3549140935b026cd8a3aa7914999729a656667184bbd4f2cadccd395",
+      "source_sprite_sha256": "29594ca94d960675a2e76f1a2ffc14fefdb05e82729d292ab455e99c353beec7"
+    },
+    {
+      "form": 1089,
+      "name": "Sliggoo (01)",
+      "sprite": "0705_Sliggoo_01",
+      "dex": 705,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "fb494d88f8023df0d9bd81d72e5bb21131b75192de92627209ab5ca5dcfe903f",
+      "source_sprite_sha256": "533e88d87f1f5da512d8f590fec0352e7a4a0114a68c97a39bfba78f82058107"
+    },
+    {
+      "form": 1091,
+      "name": "Goodra (01)",
+      "sprite": "0706_Goodra_01",
+      "dex": 706,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "2f860c2908394c8fa5adf7b14256aff83831fce645592c1ca19e3c88e2c379bc",
+      "source_sprite_sha256": "177c5a03f876482784bf9e91f05f25e5c73efd262325ff7b148c84477687969b"
+    },
+    {
+      "form": 1105,
+      "name": "Avalugg (01)",
+      "sprite": "0713_Avalugg_01",
+      "dex": 713,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "ccc2d4a9c2b0aaef4b5a58c0221cb33405d6f7a2c76b7d0f5189095cf0933757",
+      "source_sprite_sha256": "e7ec4d5cebd5d955a099fea19e4576d1c811be2a444f77597526813254e50496"
+    },
+    {
+      "form": 1125,
+      "name": "Decidueye (01)",
+      "sprite": "0724_Decidueye_01",
+      "dex": 724,
+      "source_form": "hisuian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "9b14a222fda7d2458b6bdbd29a086953cbfed926205d33b95715585bbe0ce77c",
+      "source_sprite_sha256": "c445c0e8f6fb6968732845a68e0397858458290a3d61d08664a658b0248b4754"
+    },
+    {
+      "form": 1227,
+      "name": "Solgaleo (01)",
+      "sprite": "0791_Solgaleo_01",
+      "dex": 791,
+      "source_form": "radiantsun",
+      "gender": "ALL",
+      "addon_sprite_sha256": "c582b2d893b0483b824898d00954dfa9574f984c8074b6b9a86c35fa8893bbba",
+      "source_sprite_sha256": "bd280b70f7817537232d1ff528a8eac80b0f0814b89be091f9290ea587a5e6bb"
+    },
+    {
+      "form": 1229,
+      "name": "Lunala (01)",
+      "sprite": "0792_Lunala_01",
+      "dex": 792,
+      "source_form": "fullmoon",
+      "gender": "ALL",
+      "addon_sprite_sha256": "c62a7f45225942e6488b95c444dff7fbab5989877e7205a8346da572f3f5768b",
+      "source_sprite_sha256": "5bc3c64f2b1c72375ca4ed9ed3220ed7f043f8697ac534ac46365275fecd1813"
+    },
+    {
+      "form": 1247,
+      "name": "Marshadow (01)",
+      "sprite": "0802_Marshadow_01",
+      "dex": 802,
+      "source_form": "zenith",
+      "gender": "ALL",
+      "addon_sprite_sha256": "70dfb7304f11b933d6aa7a2e0af1b7b9d415f02157a22ce39d1b0ae804b97a7e",
+      "source_sprite_sha256": "ef3021e4d007e9af64bd3d36c708b09e93f00ebbcfbf99709147f2e4b2f56816"
+    },
+    {
+      "form": 1426,
+      "name": "Ursaluna (01)",
+      "sprite": "0901_Ursaluna_01",
+      "dex": 901,
+      "source_form": "bloodmoon",
+      "gender": "ALL",
+      "addon_sprite_sha256": "2ad43111cce03aa7c0f474eef4bdab471b7444da19e23880721ca23da3818153",
+      "source_sprite_sha256": "e906f2c8d47e1e984fea4573ec34184546b65aae6c36f35e7cd32408a58fe252"
+    },
+    {
+      "form": 1432,
+      "name": "Enamorus (01)",
+      "sprite": "0905_Enamorus_01",
+      "dex": 905,
+      "source_form": "therian",
+      "gender": "ALL",
+      "addon_sprite_sha256": "59bde6ebdafd68749c681ff95cab43dad5111b42820ef52235a29c8d5559dd4f",
+      "source_sprite_sha256": "93e7d1adf5d4f719271c5a7136493b2ad427442e47b78ad026d5954fbe2e762e"
+    },
+    {
+      "form": 1444,
+      "name": "Oinkologne (01)",
+      "sprite": "0916_Oinkologne_01",
+      "dex": 916,
+      "source_form": "female",
+      "gender": "ALL",
+      "addon_sprite_sha256": "6b88fb414c6eadf1771313d7f11e829ffedf5e21b3299dd4b624a867bcec1aba",
+      "source_sprite_sha256": "3d329369410d2fd316a15c8d0fa140e5a400403e9a3793ec5aec00adc54f5555"
+    },
+    {
+      "form": 1454,
+      "name": "Maushold (01)",
+      "sprite": "0925_Maushold_01",
+      "dex": 925,
+      "source_form": "family_three",
+      "gender": "ALL",
+      "addon_sprite_sha256": "360d45c8f160de727545b59a92c29a90c7c0d8755c787eb3b09c87c57f605896",
+      "source_sprite_sha256": "3070af09404b8f176b0af785b030337f59a83e69e9d38db804538a565c634307"
+    },
+    {
+      "form": 1461,
+      "name": "Squawkabilly (01)",
+      "sprite": "0931_Squawkabilly_01",
+      "dex": 931,
+      "source_form": "blue",
+      "gender": "ALL",
+      "addon_sprite_sha256": "41e43b47e24be3bf7916da4f87fbb1ad0f4a1b26d7e48259cd00dc90daf913ec",
+      "source_sprite_sha256": "c66aaa16bcef4b8733270086ef950f4844f14fa5f4c6e0444ba01962c7fae0fa"
+    },
+    {
+      "form": 1462,
+      "name": "Squawkabilly (02)",
+      "sprite": "0931_Squawkabilly_02",
+      "dex": 931,
+      "source_form": "yellow",
+      "gender": "ALL",
+      "addon_sprite_sha256": "fb2250f6bdba02997d6ccfa39491fe6cba8fc45b0ddfcf25e15243a9121c5bb9",
+      "source_sprite_sha256": "ae4c6ecd1c114ee5f727455b735daf6f742777b6eb221e24d4ad22cc2c543683"
+    },
+    {
+      "form": 1463,
+      "name": "Squawkabilly (03)",
+      "sprite": "0931_Squawkabilly_03",
+      "dex": 931,
+      "source_form": "white",
+      "gender": "ALL",
+      "addon_sprite_sha256": "1d71505ea393bcf04f09fb203a6bafb7988125ccaf1d04adabb3186c9b54cd2a",
+      "source_sprite_sha256": "abae8daa05b5f873d980030d8f18769de9ff6064badefa2bd349add0e6b547c9"
+    },
+    {
+      "form": 1498,
+      "name": "Palafin (01)",
+      "sprite": "0964_Palafin_01",
+      "dex": 964,
+      "source_form": "hero",
+      "gender": "ALL",
+      "addon_sprite_sha256": "049d806f2aa86412837c7d4dc7489d6560cb9ea1cc21b9a068448de15b28d387",
+      "source_sprite_sha256": "7b7bc7c69993f8ad049e95242c9416b4a39a13eac84ed73cba3ae762bab35541"
+    },
+    {
+      "form": 1514,
+      "name": "Tatsugiri (01)",
+      "sprite": "0978_Tatsugiri_01",
+      "dex": 978,
+      "source_form": "droopy",
+      "gender": "ALL",
+      "addon_sprite_sha256": "e3eafb4f0765e38dc6c661592a4a133d0ebb9257561327d3d3892a0916c86466",
+      "source_sprite_sha256": "c9965120b91fc3589c73b7384221d2bdecc5e32a16589a0eb9a46133fb8c8a1f"
+    },
+    {
+      "form": 1515,
+      "name": "Tatsugiri (02)",
+      "sprite": "0978_Tatsugiri_02",
+      "dex": 978,
+      "source_form": "stretchy",
+      "gender": "ALL",
+      "addon_sprite_sha256": "486ce08987f3a0b5f3d11b697017e037fc1456bc4416efea43f86a878765466d",
+      "source_sprite_sha256": "5215afc08b511f34af4d9c65d13e071ba9688103d604d8d403dd115f27b51954"
+    },
+    {
+      "form": 1523,
+      "name": "Dudunsparce (01)",
+      "sprite": "0982_Dudunsparce_01",
+      "dex": 982,
+      "source_form": "three_segment",
+      "gender": "ALL",
+      "addon_sprite_sha256": "aec26f34e0acf5ae68304f3efe4ef142c1e7fcb06b49e29e0a95e1adffed69c1",
+      "source_sprite_sha256": "12d1caa062276d379dbe4369fa1382d683324976d0ca77ca68469415569951e6"
+    },
+    {
+      "form": 1542,
+      "name": "Gimmighoul (01)",
+      "sprite": "0999_Gimmighoul_01",
+      "dex": 999,
+      "source_form": "roaming",
+      "gender": "ALL",
+      "addon_sprite_sha256": "e4ae78397bff5a3411f0f843d165d973b280f338f7c19d0e79a14e10a8eaab1c",
+      "source_sprite_sha256": "e5df27883c0e37534f05202fd176bcf1a89ca382b49c8619300d85e36699ecb0"
+    },
+    {
+      "form": 1561,
+      "name": "Ogerpon (01)",
+      "sprite": "1017_Ogerpon_01",
+      "dex": 1017,
+      "source_form": "wellspring",
+      "gender": "ALL",
+      "addon_sprite_sha256": "ed5d70dc4b35cf75254f641f6adc89d477bd2d118740236a9fb0cdc8747a3819",
+      "source_sprite_sha256": "ceb9ed25fc93d6cd5dff1b47009ce148fd1bd0f277e22db2d18ed3150bd02526"
+    },
+    {
+      "form": 1562,
+      "name": "Ogerpon (02)",
+      "sprite": "1017_Ogerpon_02",
+      "dex": 1017,
+      "source_form": "hearthflame",
+      "gender": "ALL",
+      "addon_sprite_sha256": "3171ffce4cf2b4a4e7d6357107e54fe912f52bee59ec196629d02598fb188b41",
+      "source_sprite_sha256": "0840f941553a420eb6b503620e2d8334577c718206e45506a6467dfcd9376085"
+    },
+    {
+      "form": 1563,
+      "name": "Ogerpon (03)",
+      "sprite": "1017_Ogerpon_03",
+      "dex": 1017,
+      "source_form": "cornerstone",
+      "gender": "ALL",
+      "addon_sprite_sha256": "793d8d01416aef9d9044754fb17b8d66838f68897e44df574ba7ae905d86a806",
+      "source_sprite_sha256": "d44e4f348a00fc017d488fa1e796f2055375ae8782f9f7262a51062d6323a3e8"
+    },
+    {
+      "form": 1579,
+      "name": "Terapagos (01)",
+      "sprite": "1024_Terapagos_01",
+      "dex": 1024,
+      "source_form": "terastal",
+      "gender": "ALL",
+      "addon_sprite_sha256": "65464b44b4a2386dfd3a2d03eea046931bd404a3cffd0c2b6a8aaf19b6fb2ab0",
+      "source_sprite_sha256": "17e19fe557dc3c95b1e9731e5354e3fbe2b1510342c26d39755661b14c23f762"
+    },
+    {
+      "form": 1318,
+      "name": "Alcremie",
+      "sprite": "0869_Alcremie",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "strawberry_vanilla_cream",
+        "shiny": "strawberry_shiny"
+      },
+      "addon_sprite_sha256": "ba2b235bd0210f695b919bfb07ed43efe1d5e857d0b8f2a21580e668200930e1",
+      "source_sprite_sha256": "252a3025bc1329661d2fef6b05fd75e81e01e12b6de422b3fa1d5d828d9aa728"
+    },
+    {
+      "form": 1319,
+      "name": "Alcremie (01)",
+      "sprite": "0869_Alcremie_01",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "berry_vanilla_cream",
+        "shiny": "berry_shiny"
+      },
+      "addon_sprite_sha256": "49b4d851a378abda1bb4611941bfa38a0f69b7ee38b960757af8c499f37c27d5",
+      "source_sprite_sha256": "46ddf3a11245f6b1b5741f5dab6d8d16c276e0e406fc3769a39aa6a9bbc4d15e"
+    },
+    {
+      "form": 1320,
+      "name": "Alcremie (02)",
+      "sprite": "0869_Alcremie_02",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "love_vanilla_cream",
+        "shiny": "love_shiny"
+      },
+      "addon_sprite_sha256": "272e5836fdfb2ecbf16bdf88bd4dfc4634853861a9a97cfd4b28ca63bf7901f8",
+      "source_sprite_sha256": "8caebe03f5378d652c4f73284a0671f3b9d48c22dae87db8da5ccb937c889008"
+    },
+    {
+      "form": 1321,
+      "name": "Alcremie (03)",
+      "sprite": "0869_Alcremie_03",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "star_vanilla_cream",
+        "shiny": "star_shiny"
+      },
+      "addon_sprite_sha256": "af97c9144a78a4f0b8633026691c800c5546697c2c72fe15a40f34d385fa7086",
+      "source_sprite_sha256": "6cb7fac7997314bd6c95296ca325aa3bb9dae01c22810de3b8cbfee9b305f4d0"
+    },
+    {
+      "form": 1322,
+      "name": "Alcremie (04)",
+      "sprite": "0869_Alcremie_04",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "clover_vanilla_cream",
+        "shiny": "clover_shiny"
+      },
+      "addon_sprite_sha256": "eae67b23298e4f986f058c97358b6e74de7aef4d2d2bb0ce1dd633aba839e0d2",
+      "source_sprite_sha256": "34c832957c0df70511bc730f5861cd0dfa0478cccbaf5c9eb4a977298dd82836"
+    },
+    {
+      "form": 1323,
+      "name": "Alcremie (05)",
+      "sprite": "0869_Alcremie_05",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "flower_vanilla_cream",
+        "shiny": "flower_shiny"
+      },
+      "addon_sprite_sha256": "cdb421eefb64e4b7263672ec317fe60726ccb3f466c26c6fd19d22c6a2516db5",
+      "source_sprite_sha256": "e01384b3cd8c6dbe17d39931fc603a027e98036e3ef78fe1554a06a9548afd20"
+    },
+    {
+      "form": 1324,
+      "name": "Alcremie (06)",
+      "sprite": "0869_Alcremie_06",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "ribbon_vanilla_cream",
+        "shiny": "ribbon_shiny"
+      },
+      "addon_sprite_sha256": "8003d48ff616285462cad851d8835786b01fba9d4f32c85dba6f103358905e7a",
+      "source_sprite_sha256": "f22cbcd969436f5a62f1f4b2c2de9df792bd6ebc7656cc47776597a55866e995"
+    },
+    {
+      "form": 1325,
+      "name": "Ruby Cream Alcremie",
+      "sprite": "0869_Alcremie_07",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "strawberry_ruby_cream",
+        "shiny": "strawberry_shiny"
+      },
+      "addon_sprite_sha256": "2c3bb59ef5941225be14d73c165641001b0ebec52366fb512c71d306adaf6be8",
+      "source_sprite_sha256": "9536f65a8106068017fb674eb369df935fb7c4cd5cfb6a626db44be95153711b"
+    },
+    {
+      "form": 1326,
+      "name": "Alcremie (08)",
+      "sprite": "0869_Alcremie_08",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "berry_ruby_cream",
+        "shiny": "berry_shiny"
+      },
+      "addon_sprite_sha256": "9f78d9d41b89cef05cabc75c8e64ec6e0fbcdbbe499b250be55e643ff43a7d68",
+      "source_sprite_sha256": "3a63692db22be8154cca23c337c9cbdb957ba8c0e26bebcf9276e1284b11ac4d"
+    },
+    {
+      "form": 1327,
+      "name": "Alcremie (09)",
+      "sprite": "0869_Alcremie_09",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "love_ruby_cream",
+        "shiny": "love_shiny"
+      },
+      "addon_sprite_sha256": "47b740fc3e7afd328b750309bfa376bf22ab34cd654301a40879990ff646a1f2",
+      "source_sprite_sha256": "82691081ae8e52d3ee075e3dfb231fb2fea11f63ec1ea154d1e33d64f34c3df6"
+    },
+    {
+      "form": 1328,
+      "name": "Alcremie (10)",
+      "sprite": "0869_Alcremie_10",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "star_ruby_cream",
+        "shiny": "star_shiny"
+      },
+      "addon_sprite_sha256": "26287727eea171de13a1dc1d78526dc65204600b1d096188919ec02624a94785",
+      "source_sprite_sha256": "61d0d3193b3136491410cb0cf8acf6160d0a922c6ffa04f8d555f97c6e74de20"
+    },
+    {
+      "form": 1329,
+      "name": "Alcremie (11)",
+      "sprite": "0869_Alcremie_11",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "clover_ruby_cream",
+        "shiny": "clover_shiny"
+      },
+      "addon_sprite_sha256": "f88cca35c11ab56c567db9710108fc0147ef057eec21c6a7d85886c58f5a6a5d",
+      "source_sprite_sha256": "c90c0ec8a4a97bdd9ddbb4b653ff0733682a77e0289355da310f544d65c6600d"
+    },
+    {
+      "form": 1330,
+      "name": "Alcremie (12)",
+      "sprite": "0869_Alcremie_12",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "flower_ruby_cream",
+        "shiny": "flower_shiny"
+      },
+      "addon_sprite_sha256": "695b8011951d7af8781b96857344c5e71d493cefccfb7af5f9c0c20aa938966e",
+      "source_sprite_sha256": "c007ec1c39f79043eaf09aa26bfcd74576fb38081bfe36ec2596533c0fd51857"
+    },
+    {
+      "form": 1331,
+      "name": "Alcremie (13)",
+      "sprite": "0869_Alcremie_13",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "ribbon_ruby_cream",
+        "shiny": "ribbon_shiny"
+      },
+      "addon_sprite_sha256": "a54beba382d4f8359cf35e528d7df7688a008b594d05793193ded2fc15f168af",
+      "source_sprite_sha256": "e7c89bef254a5b368fa3d7e57e63b4af2b75c2f72709cbf34642f2cdcea38dde"
+    },
+    {
+      "form": 1332,
+      "name": "Matcha Cream Alcremie",
+      "sprite": "0869_Alcremie_14",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "strawberry_matcha_cream",
+        "shiny": "strawberry_shiny"
+      },
+      "addon_sprite_sha256": "0886880694a5d5b9690dab57747552c3c3355aaa1e062e520a394713583868f2",
+      "source_sprite_sha256": "e41a3e8201743047c29bf60640591cb31a8dabde9a09646d90a5ac6e58183781"
+    },
+    {
+      "form": 1333,
+      "name": "Alcremie (15)",
+      "sprite": "0869_Alcremie_15",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "berry_matcha_cream",
+        "shiny": "berry_shiny"
+      },
+      "addon_sprite_sha256": "24d4e467c2b7243c7b2ac03d95822fe9a73c3aa9bd8bab1b0689c10026e9a720",
+      "source_sprite_sha256": "764d51c0e7cdfc8f4dc34d284028e1fc314d2282cb390676cefd5bfa00d2d8e7"
+    },
+    {
+      "form": 1334,
+      "name": "Alcremie (16)",
+      "sprite": "0869_Alcremie_16",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "love_matcha_cream",
+        "shiny": "love_shiny"
+      },
+      "addon_sprite_sha256": "ccd6c1cf0caae81388276c5103bd7d6667bb77d0c22b7b1d69d23ff2607bb93b",
+      "source_sprite_sha256": "3287a03ee14d2f7249025f5febff6c93d58eae67a3603f81c812a3a57ecdc051"
+    },
+    {
+      "form": 1335,
+      "name": "Alcremie (17)",
+      "sprite": "0869_Alcremie_17",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "star_matcha_cream",
+        "shiny": "star_shiny"
+      },
+      "addon_sprite_sha256": "de410e65607f3e5bbc7a08e61bbbcde65c3f3939fa8cc6cca82eb46fb4acbaa8",
+      "source_sprite_sha256": "e0e1d0fcca413d16bdcfa47e00360619d16c0df9e7102e13069c46a7cf37f5bb"
+    },
+    {
+      "form": 1336,
+      "name": "Alcremie (18)",
+      "sprite": "0869_Alcremie_18",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "clover_matcha_cream",
+        "shiny": "clover_shiny"
+      },
+      "addon_sprite_sha256": "8d7f56585f168889bf89a5712e2cd76d834bd9642c3b87dc32326a548985379b",
+      "source_sprite_sha256": "f70c48d0663ecd663cf98b1d5cd920f03091ca2ffa143c36eeeb996bf64497dc"
+    },
+    {
+      "form": 1337,
+      "name": "Alcremie (19)",
+      "sprite": "0869_Alcremie_19",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "flower_matcha_cream",
+        "shiny": "flower_shiny"
+      },
+      "addon_sprite_sha256": "ce6753a6365dac86b76e95351bea958e87508bcdddac6194c55f0d418f185aa1",
+      "source_sprite_sha256": "052c50eda08d8438bf9157e80bc178a2a851be78f7a9ca021952f6f7516c4258"
+    },
+    {
+      "form": 1338,
+      "name": "Alcremie (20)",
+      "sprite": "0869_Alcremie_20",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "ribbon_matcha_cream",
+        "shiny": "ribbon_shiny"
+      },
+      "addon_sprite_sha256": "b0583296299ad080d935b2c1427d6c12078b07dc37d62b48c08ae4466c4178f1",
+      "source_sprite_sha256": "214ab93e24906ec46d7ff19a8685cda55fde0f453cab8007fba494d085fb362c"
+    },
+    {
+      "form": 1339,
+      "name": "Mint Cream Alcremie",
+      "sprite": "0869_Alcremie_21",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "strawberry_mint_cream",
+        "shiny": "strawberry_shiny"
+      },
+      "addon_sprite_sha256": "27ed9c80367484e5de8d538ac0f92ae0514e51c95c59bbc498df5895ccb709e2",
+      "source_sprite_sha256": "9a39ecb8a5f0bc94038002d10c39aa7cdf82ae78a86f7b1c470d76f2c8e103bc"
+    },
+    {
+      "form": 1340,
+      "name": "Alcremie (22)",
+      "sprite": "0869_Alcremie_22",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "berry_mint_cream",
+        "shiny": "berry_shiny"
+      },
+      "addon_sprite_sha256": "e7e046b5d559a95e6a1f05fcb1f95ec7921fdb8eed59443c5d434fdb1c52d4bd",
+      "source_sprite_sha256": "717539a6c1d169e36d55841814814992ddbad658190ada625ce1a5560a35f72a"
+    },
+    {
+      "form": 1341,
+      "name": "Alcremie (23)",
+      "sprite": "0869_Alcremie_23",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "love_mint_cream",
+        "shiny": "love_shiny"
+      },
+      "addon_sprite_sha256": "fad1578e7a2df38045621e9775c32f33c933fb37412ae686e41593374952858a",
+      "source_sprite_sha256": "8cfc8f76bf44de1a88f256277b3d3c3815a8c0de7e10888583a1537c8239bf81"
+    },
+    {
+      "form": 1342,
+      "name": "Alcremie (24)",
+      "sprite": "0869_Alcremie_24",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "star_mint_cream",
+        "shiny": "star_shiny"
+      },
+      "addon_sprite_sha256": "d62ae2ea280577c24fa61ca46402e7305256aae785afdaabf6b63236648e9d55",
+      "source_sprite_sha256": "e76730e0682626be0b220012b976c11eb2667bfb943eca5aea5c2a969aebc681"
+    },
+    {
+      "form": 1343,
+      "name": "Alcremie (25)",
+      "sprite": "0869_Alcremie_25",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "clover_mint_cream",
+        "shiny": "clover_shiny"
+      },
+      "addon_sprite_sha256": "94c18c9a6e295f4c7fa09a7aba1c0b994f92cc2ee8a119a41af35250686c544c",
+      "source_sprite_sha256": "2b182ce9445320dff9a5786396a411e0846aff501af77a74c6b2fcd201a6fde3"
+    },
+    {
+      "form": 1344,
+      "name": "Alcremie (26)",
+      "sprite": "0869_Alcremie_26",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "flower_mint_cream",
+        "shiny": "flower_shiny"
+      },
+      "addon_sprite_sha256": "1cabe4372764044b644ed4aee26ad5f8e9ec86ed5e80ac8d70dbb3c977e5fa5f",
+      "source_sprite_sha256": "7c48ed0d1463ca0b3c285c569da811a627a8067e1bee1574aaf6216ebebe4e3b"
+    },
+    {
+      "form": 1345,
+      "name": "Alcremie (27)",
+      "sprite": "0869_Alcremie_27",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "ribbon_mint_cream",
+        "shiny": "ribbon_shiny"
+      },
+      "addon_sprite_sha256": "c05993d6d9d87fdf8039e408a93d2a917e066067020c1ecff94356320d4277ae",
+      "source_sprite_sha256": "20711024105eb99de5c3bd346182004c7e56fc26da8f2d9ae61d87e8667583a3"
+    },
+    {
+      "form": 1346,
+      "name": "Lemon Cream Alcremie",
+      "sprite": "0869_Alcremie_28",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "strawberry_lemon_cream",
+        "shiny": "strawberry_shiny"
+      },
+      "addon_sprite_sha256": "88942bfedcf73eca06b0ea6ab8bd9b514e9ab294020d10940902004697e67eef",
+      "source_sprite_sha256": "2627f5edd0eea69629ffaab88594d9bfdcd06f4e6f4320b70d608539344b4a3d"
+    },
+    {
+      "form": 1347,
+      "name": "Alcremie (29)",
+      "sprite": "0869_Alcremie_29",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "berry_lemon_cream",
+        "shiny": "berry_shiny"
+      },
+      "addon_sprite_sha256": "78810aed8c241180ac54eabe0fd715628eb821e7498250457d9cd5a94eb7e8ba",
+      "source_sprite_sha256": "991e320153e9d96f27e13307ab3512b824a9c93be132abb5ac986c4b11f5ca6b"
+    },
+    {
+      "form": 1348,
+      "name": "Alcremie (30)",
+      "sprite": "0869_Alcremie_30",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "love_lemon_cream",
+        "shiny": "love_shiny"
+      },
+      "addon_sprite_sha256": "118b70b2a872127d59d5a1f15a7f4f64fd6a5c9655989ee8871babad32513e93",
+      "source_sprite_sha256": "0f8aa85359c4b5c7bb8f20dc1d59677944e03d11decb6b664ad3a2fe3397df45"
+    },
+    {
+      "form": 1349,
+      "name": "Alcremie (31)",
+      "sprite": "0869_Alcremie_31",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "star_lemon_cream",
+        "shiny": "star_shiny"
+      },
+      "addon_sprite_sha256": "ee6b125600596a4a5279a01501c936b98d4e97da0ee4fcdc44340f2e0df8f8ce",
+      "source_sprite_sha256": "d70db4f96f3c82252dc80382e74dd87cb3b9d7dbaa3d6adc69163e567b4d5172"
+    },
+    {
+      "form": 1350,
+      "name": "Alcremie (32)",
+      "sprite": "0869_Alcremie_32",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "clover_lemon_cream",
+        "shiny": "clover_shiny"
+      },
+      "addon_sprite_sha256": "45460441dc0060f9decc310275d91c00a0cc99808e6372ee6bbdde31911749bf",
+      "source_sprite_sha256": "3fcb8781ff473811f970c188c80830a5886b977049e37b79b9b4708dc6770477"
+    },
+    {
+      "form": 1351,
+      "name": "Alcremie (33)",
+      "sprite": "0869_Alcremie_33",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "flower_lemon_cream",
+        "shiny": "flower_shiny"
+      },
+      "addon_sprite_sha256": "85df7ac7f8d57a726bd87930bca699f77de4c42d4cafe0a9ec3a5795ac750001",
+      "source_sprite_sha256": "07405048b9da6d6e82efe9d4970066c04c8a8939e1680a6715e8e09ab0367f45"
+    },
+    {
+      "form": 1352,
+      "name": "Alcremie (34)",
+      "sprite": "0869_Alcremie_34",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "ribbon_lemon_cream",
+        "shiny": "ribbon_shiny"
+      },
+      "addon_sprite_sha256": "958ddd1f78d534cecef1e0f99a26f386d01295eb4de5854d13b246c8bf9acb9f",
+      "source_sprite_sha256": "df100203d0f60989591d0208abad2108a6a97f362fa664e63ed5e3068c8baee9"
+    },
+    {
+      "form": 1353,
+      "name": "Salted Cream Alcremie",
+      "sprite": "0869_Alcremie_35",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "strawberry_salted_cream",
+        "shiny": "strawberry_shiny"
+      },
+      "addon_sprite_sha256": "655674ca6e5d448cde9f0b28330e4ecc6d61d198e3a871faad2eac2a14d73ae6",
+      "source_sprite_sha256": "924518c8f5d9250ba8af6d824b4375be3e0733cfbacfb006535bdc1af6cd2101"
+    },
+    {
+      "form": 1354,
+      "name": "Alcremie (36)",
+      "sprite": "0869_Alcremie_36",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "berry_salted_cream",
+        "shiny": "berry_shiny"
+      },
+      "addon_sprite_sha256": "4a8b9870b24ac2e6bf98f82b2875712df93063875265fa57c4a534caf15fc538",
+      "source_sprite_sha256": "c847f86fbb97b2eeb8ddb909f21a2905cfab09716db27f350035e41b35fd20f8"
+    },
+    {
+      "form": 1355,
+      "name": "Alcremie (37)",
+      "sprite": "0869_Alcremie_37",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "love_salted_cream",
+        "shiny": "love_shiny"
+      },
+      "addon_sprite_sha256": "520530d7210b67552022c1438cade08adbe5b2947fb50f5a4dd31c2e628d46ca",
+      "source_sprite_sha256": "9e178fa4e5d5669d9dc85a9c76cdc9ed58923326d5cb73f4694bba24b6b46cf4"
+    },
+    {
+      "form": 1356,
+      "name": "Alcremie (38)",
+      "sprite": "0869_Alcremie_38",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "star_salted_cream",
+        "shiny": "star_shiny"
+      },
+      "addon_sprite_sha256": "8286a50db619befda8d160e88acf6389a97f7b18a8dbfcd05a5a51d8aa77f6d1",
+      "source_sprite_sha256": "3356fe2333211b569658e13371da685c2765689a5fa1ffc675aa47c21e3477d8"
+    },
+    {
+      "form": 1357,
+      "name": "Alcremie (39)",
+      "sprite": "0869_Alcremie_39",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "clover_salted_cream",
+        "shiny": "clover_shiny"
+      },
+      "addon_sprite_sha256": "a2696540a8c48d33718a2ac0e0c9db664bfc7e46288f94878a12939e8cb94382",
+      "source_sprite_sha256": "036a534b328672551f6401fba3d7743cf28c655a6915c13bb6e18a4bc65a9dc0"
+    },
+    {
+      "form": 1358,
+      "name": "Alcremie (40)",
+      "sprite": "0869_Alcremie_40",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "flower_salted_cream",
+        "shiny": "flower_shiny"
+      },
+      "addon_sprite_sha256": "07e22b5016d6da34bf138a73392f17c7f77e010b76a48d3975e7dffa40dd3dcb",
+      "source_sprite_sha256": "2693012236d2bc84cf79dbbd4f84b4370b53fcc3f4b521c69dac6b204fd69ef1"
+    },
+    {
+      "form": 1359,
+      "name": "Alcremie (41)",
+      "sprite": "0869_Alcremie_41",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "ribbon_salted_cream",
+        "shiny": "ribbon_shiny"
+      },
+      "addon_sprite_sha256": "fdc471cf41be73e309a3db413a70e0c507030b1036b624a77d78f413c9384c6a",
+      "source_sprite_sha256": "8306854e597c7c7ab3bf632aecece45037ae36270a5d311df876a80618df8923"
+    },
+    {
+      "form": 1360,
+      "name": "Ruby Swirl Alcremie",
+      "sprite": "0869_Alcremie_42",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "strawberry_ruby_swirl",
+        "shiny": "strawberry_shiny"
+      },
+      "addon_sprite_sha256": "2a0b3a526639be0cb53fb932d12e3eb3ace187fa5481bee6ff81749abea5a95a",
+      "source_sprite_sha256": "82293b76d8d94bd2cbedf40a4d8ad2f0675d5e77f0bdf3f076e94431cf0ff777"
+    },
+    {
+      "form": 1361,
+      "name": "Alcremie (43)",
+      "sprite": "0869_Alcremie_43",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "berry_ruby_swirl",
+        "shiny": "berry_shiny"
+      },
+      "addon_sprite_sha256": "2ec62b027a80a1ae9aceea93c23c31d6bc8b045a4c86b70a0801de5da79a2ba8",
+      "source_sprite_sha256": "85ac4bf703e46a9effa25c85780aac7a68690f0eb4bde7422165f9e4a0054443"
+    },
+    {
+      "form": 1362,
+      "name": "Alcremie (44)",
+      "sprite": "0869_Alcremie_44",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "love_ruby_swirl",
+        "shiny": "love_shiny"
+      },
+      "addon_sprite_sha256": "ce36c69614b0f0bbd0e2a9db4ca5b35a6bd102f147ed70f4a96aecc57a3afbec",
+      "source_sprite_sha256": "3e897cfebc3d7275b9bdc91634a645478e5939013f9713b76a29701745892743"
+    },
+    {
+      "form": 1363,
+      "name": "Alcremie (45)",
+      "sprite": "0869_Alcremie_45",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "star_ruby_swirl",
+        "shiny": "star_shiny"
+      },
+      "addon_sprite_sha256": "daa5492ec9f1a36de448b171ff338ac44416d44689147df2195dded9765ec6de",
+      "source_sprite_sha256": "4f49c2a204aaa0f09fe485fd3cd61de131d8520dfaaed2653fa609c2569ffc0c"
+    },
+    {
+      "form": 1364,
+      "name": "Alcremie (46)",
+      "sprite": "0869_Alcremie_46",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "clover_ruby_swirl",
+        "shiny": "clover_shiny"
+      },
+      "addon_sprite_sha256": "7ad2c6e720a2971f51717b04814e5777600dc7e7244dbd3d5b1a2caec2e5e71b",
+      "source_sprite_sha256": "ea167e7cf94772f728996e5829d07c3ea0e5d0abbff50ec19bb821f5638df95e"
+    },
+    {
+      "form": 1365,
+      "name": "Alcremie (47)",
+      "sprite": "0869_Alcremie_47",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "flower_ruby_swirl",
+        "shiny": "flower_shiny"
+      },
+      "addon_sprite_sha256": "1aa4762d4d00d834de4fa95b3f3f3f80833d9a3aab7f2b60424f31b5e27c062f",
+      "source_sprite_sha256": "55e74e3f74aeabb51de9d8ca51d16ddf04eb75a2163a6e6863bc386068a234b0"
+    },
+    {
+      "form": 1366,
+      "name": "Alcremie (48)",
+      "sprite": "0869_Alcremie_48",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "ribbon_ruby_swirl",
+        "shiny": "ribbon_shiny"
+      },
+      "addon_sprite_sha256": "a3b6af5ae816aa3a69865cc3b91b2feab4ff33eedf012958518a13dcaea02549",
+      "source_sprite_sha256": "f5a23973e456e00797d4b2254ad075adbe1d3c991933a903d33875a0300f520b"
+    },
+    {
+      "form": 1367,
+      "name": "Caramel Swirl Alcremie",
+      "sprite": "0869_Alcremie_49",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "strawberry_caramel_swirl",
+        "shiny": "strawberry_shiny"
+      },
+      "addon_sprite_sha256": "65e85ba399e94d170741c9a031f4767a35d6bb74df2baeb0bd6554a9ae147c5b",
+      "source_sprite_sha256": "d0c6abffa8da21b979e198cbb39b742f78d5e69e67c1642e81d99201c8c9f619"
+    },
+    {
+      "form": 1368,
+      "name": "Alcremie (50)",
+      "sprite": "0869_Alcremie_50",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "berry_caramel_swirl",
+        "shiny": "berry_shiny"
+      },
+      "addon_sprite_sha256": "1e2ed3b833bee355f4da45765beba4d61950a9002730c564377d150fb780dcd7",
+      "source_sprite_sha256": "68261c7f5bd027f54328eb6c0fb78e69d0b2801b48279310414bd133b7837a5b"
+    },
+    {
+      "form": 1369,
+      "name": "Alcremie (51)",
+      "sprite": "0869_Alcremie_51",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "love_caramel_swirl",
+        "shiny": "love_shiny"
+      },
+      "addon_sprite_sha256": "81aad1ade450c308c6ecb3d5e21ff029fc7ecd42a46c56f64da169d35d3ca30b",
+      "source_sprite_sha256": "13a9d61de05c7bd73a5dc0ec821b4ddfea62dcf2084783223e6a72ad94d11ce0"
+    },
+    {
+      "form": 1370,
+      "name": "Alcremie (52)",
+      "sprite": "0869_Alcremie_52",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "star_caramel_swirl",
+        "shiny": "star_shiny"
+      },
+      "addon_sprite_sha256": "6620041facab32355c373021cf06faff0f25a02b1b0d5973fd1a0097c58ad8c6",
+      "source_sprite_sha256": "ef1d3f4037fa2755efadfd87f436d569b42ac27f2230410add0f8918cbeebc49"
+    },
+    {
+      "form": 1371,
+      "name": "Alcremie (53)",
+      "sprite": "0869_Alcremie_53",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "clover_caramel_swirl",
+        "shiny": "clover_shiny"
+      },
+      "addon_sprite_sha256": "4c6970598b57c39994d5b4d76c68cc313316acf78fe49f4766fef4b50ed9b162",
+      "source_sprite_sha256": "6208e5025148b3d047caa99cbd1298731ed281ed3094e28fe3d261a90df16670"
+    },
+    {
+      "form": 1372,
+      "name": "Alcremie (54)",
+      "sprite": "0869_Alcremie_54",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "flower_caramel_swirl",
+        "shiny": "flower_shiny"
+      },
+      "addon_sprite_sha256": "2a7554f4080d531ac1a23cef83aab8e12b854c89861014a6a63fa7c1c0bb0e8b",
+      "source_sprite_sha256": "235711d37389fa2b649295d54ebc5da91790ad5058f0b337fd2313e0ededac60"
+    },
+    {
+      "form": 1373,
+      "name": "Alcremie (55)",
+      "sprite": "0869_Alcremie_55",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "ribbon_caramel_swirl",
+        "shiny": "ribbon_shiny"
+      },
+      "addon_sprite_sha256": "01ea3f6f77e556795d16b55f8e7dd5cbb6de6ba0935ceaec8bec69af138e68f4",
+      "source_sprite_sha256": "a0eb8548a8c53aa4bdbb23e5bc455afad33d44a3e9ea7baae84a0f4a7ec06ba6"
+    },
+    {
+      "form": 1374,
+      "name": "Rainbow Swirl Alcremie",
+      "sprite": "0869_Alcremie_56",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "strawberry_rainbow_swirl",
+        "shiny": "strawberry_shiny"
+      },
+      "addon_sprite_sha256": "089334e505d5eae56eae7a407ce4e1f7fdf75ebe45285fbfa8c3c8ff67c7b6f1",
+      "source_sprite_sha256": "843e71953fa4a7feb181cdb30fbb29c924be536d6e98d75cba9ab26ce6906ecd"
+    },
+    {
+      "form": 1375,
+      "name": "Alcremie (57)",
+      "sprite": "0869_Alcremie_57",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "berry_rainbow_swirl",
+        "shiny": "berry_shiny"
+      },
+      "addon_sprite_sha256": "8f91f97d95c6a56b455e606535874c1be335f0f4119ef1c7a3dec09133a5d789",
+      "source_sprite_sha256": "832bc19af096093fa42d2de6f599262c9cd69b94540c30a03ee51c758e43c483"
+    },
+    {
+      "form": 1376,
+      "name": "Alcremie (58)",
+      "sprite": "0869_Alcremie_58",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "love_rainbow_swirl",
+        "shiny": "love_shiny"
+      },
+      "addon_sprite_sha256": "1f7393bbdce0f137f14461d7f98db3c0ea401f1b87c85dee1e0dcae745f0af11",
+      "source_sprite_sha256": "dd7951ca1141800bea0694fa4806da52805f159ac07f6917a8056f8e2206187d"
+    },
+    {
+      "form": 1377,
+      "name": "Alcremie (59)",
+      "sprite": "0869_Alcremie_59",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "star_rainbow_swirl",
+        "shiny": "star_shiny"
+      },
+      "addon_sprite_sha256": "e72419f558bfed1d4e21264723bbba7f166867cbdbebe55b91945cfd07b904cf",
+      "source_sprite_sha256": "331be243880400a46a88f59c5382836884f6fb3f63186fb1eea5ffe4e6025fac"
+    },
+    {
+      "form": 1378,
+      "name": "Alcremie (60)",
+      "sprite": "0869_Alcremie_60",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "clover_rainbow_swirl",
+        "shiny": "clover_shiny"
+      },
+      "addon_sprite_sha256": "113ebb6b554079fa2db5a595da281c2b44bf184d579c98a7639da82d835327a4",
+      "source_sprite_sha256": "321f085aca57a970ed4b06fe010f1870e752296764c496cd11aab20ad9778333"
+    },
+    {
+      "form": 1379,
+      "name": "Alcremie (61)",
+      "sprite": "0869_Alcremie_61",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "flower_rainbow_swirl",
+        "shiny": "flower_shiny"
+      },
+      "addon_sprite_sha256": "d196f4bff30bf84fbbe7ef378eda3febf0821a6a359d50a9fa06bc46236208d4",
+      "source_sprite_sha256": "e80ce19151b821984ff351a2e2e185a326dad5e725702d3f40808a0db8a17a89"
+    },
+    {
+      "form": 1380,
+      "name": "Alcremie (62)",
+      "sprite": "0869_Alcremie_62",
+      "dex": 869,
+      "source_form": "base",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "ribbon_rainbow_swirl",
+        "shiny": "ribbon_shiny"
+      },
+      "addon_sprite_sha256": "237b144556c74d4c8f677d75a267dd0f94f5a04c1368edcfc90ed7e86784181a",
+      "source_sprite_sha256": "f3515c6aeffffdb5fcc8d0398c2692d801febbb1baa724d624933700a22a4fc5"
+    },
+    {
+      "form": 1048,
+      "name": "Dandy Trim Furfrou",
+      "sprite": "0676_Furfrou_06",
+      "dex": 676,
+      "source_form": "dandy",
+      "gender": "ALL",
+      "palettes": {
+        "normal": "base",
+        "shiny": "shiny"
+      },
+      "addon_sprite_sha256": "fe7d3b231b760d05c9a8ce20c6b213b21e9fe4b9f53e7fb0bafd1db2c4400c60",
+      "source_sprite_sha256": "9049171e447dcb71fef1cfde758b017907bfcd64df098b81c7dd4ace02a8c6c0",
+      "evidence": "generated/pixelmon-recovery/dandy-palette-reference.jpg"
+    },
+    {
+      "form": 40,
+      "name": "Pikachu (03 Female)",
+      "sprite": "0025_Pikachu_03_female",
+      "dex": 25,
+      "source_form": "cosplay",
+      "gender": "ALL",
+      "addon_sprite_sha256": "69afa20335ab8b2ed79532075b6b7b22466419fc14ceab39033be644df0a4548",
+      "source_evidence": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\025_pikachu\\all\\cosplay\\none\\sprite.png",
+      "source_evidence_sha256": "a018d12faaf09dd6131acdc19c56a446912944c0a8e6b665c7c068c45aea2e57",
+      "review": "grouped-recovery: sprite identity; decoded model review required for stellar"
+    },
+    {
+      "form": 1580,
+      "name": "Terapagos (02)",
+      "sprite": "1024_Terapagos_02",
+      "dex": 1024,
+      "source_form": "stellar",
+      "gender": "ALL",
+      "addon_sprite_sha256": "380bb6369c0c3ae407c781ac4714b54525ac28deeabe7520e6f6a23a2d0cbb78",
+      "source_evidence": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\1024_terapagos\\all\\stellar\\none\\terapagos.bmd",
+      "source_evidence_sha256": "21a44f6c4b73e9c18ebd2f97b564704becb6eeee2fd14dbaaf670e8b1e16abbb",
+      "review": "grouped-recovery: sprite identity; decoded model review required for stellar"
+    },
+    {
+      "form": 1114,
+      "name": "Zygarde (03)",
+      "sprite": "0718_Zygarde_03",
+      "dex": 718,
+      "source_form": "complete",
+      "gender": "ALL",
+      "addon_sprite_sha256": "018ae89726da40d6b0140ff115752d470a6c00a3cd8ab7401fe50e91b6b241c8",
+      "source_sprite_sha256": "25e66b79328349007eaa32f69bc11de4b86904ff09234fe67503cc7beb514268",
+      "review": "grouped-identities: both normal/shiny cropped RGBA equal supported form 1113; metadata and model references verified",
+      "identity_peer": 1113,
+      "identity_evidence": {
+        "normal": {
+          "path": "D:\\WoW\\Dark-Bro-WXL-COA\\Dark-Brotherhood-wxl\\Interface\\AddOns\\Battlemon\\assets\\Front\\0718_Zygarde_03.png",
+          "sha256": "018ae89726da40d6b0140ff115752d470a6c00a3cd8ab7401fe50e91b6b241c8",
+          "pixel_sha256": "44f135674564fe49c35a734921da8f55da16b8e76b3800e5ca5026e44971ad31",
+          "size": [
+            176,
+            191
+          ]
+        },
+        "shiny": {
+          "path": "D:\\WoW\\Dark-Bro-WXL-COA\\Dark-Brotherhood-wxl\\Interface\\AddOns\\Battlemon\\assets\\Front shiny\\0718_Zygarde_03.png",
+          "sha256": "bd964c37d23a8d890f36b91bc6408fc57515f4abcf238258175cc572493c190c",
+          "pixel_sha256": "46517a750fa35c75ac3d899ddffd696aaa7a89bee1f581ec221b3d9f865efe17",
+          "size": [
+            176,
+            191
+          ]
+        }
+      }
+    },
+    {
+      "form": 1241,
+      "name": "Necrozma (04)",
+      "sprite": "0800_Necrozma_04",
+      "dex": 800,
+      "source_form": "ultra",
+      "gender": "ALL",
+      "addon_sprite_sha256": "637bcf4d528df2e7225ebad4c90c15870fa5fa87a3565b5d0f08a1016d78ea7a",
+      "source_sprite_sha256": "bdc155dcebf439f36b458da61bbc04d20066330921544a3d6206e839551297a5",
+      "review": "grouped-identities: both normal/shiny cropped RGBA equal supported form 1240; metadata and model references verified",
+      "identity_peer": 1240,
+      "identity_evidence": {
+        "normal": {
+          "path": "D:\\WoW\\Dark-Bro-WXL-COA\\Dark-Brotherhood-wxl\\Interface\\AddOns\\Battlemon\\assets\\Front\\0800_Necrozma_04.png",
+          "sha256": "637bcf4d528df2e7225ebad4c90c15870fa5fa87a3565b5d0f08a1016d78ea7a",
+          "pixel_sha256": "2d16921cf5962785c98fafa1c85b6d2faaa75fb52f9c5e168d04663162aa4ff8",
+          "size": [
+            180,
+            176
+          ]
+        },
+        "shiny": {
+          "path": "D:\\WoW\\Dark-Bro-WXL-COA\\Dark-Brotherhood-wxl\\Interface\\AddOns\\Battlemon\\assets\\Front shiny\\0800_Necrozma_04.png",
+          "sha256": "ad751dc4d9845647e888afa6a8d9d346ffd298ca0b065adbd05563d9ae058ce1",
+          "pixel_sha256": "faf3ffdcff954dce5df082a2ac485b3ffdc0cd9569219a392bca1813f2262603",
+          "size": [
+            180,
+            176
+          ]
+        }
+      }
+    }
+  ]
+}

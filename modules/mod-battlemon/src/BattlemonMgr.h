@@ -2,6 +2,7 @@
 #define BATTLEMON_MGR_H
 
 #include "BattlemonSession.h"
+#include "BattlemonExtension.h"
 #include "BattlemonTypes.h"
 #include "ObjectGuid.h"
 
@@ -18,6 +19,15 @@ class BattlemonMgr
 {
 public:
     static BattlemonMgr* instance();
+
+    void SetExtension(BattlemonExtension* extension) { _extension = extension; }
+    bool IsExternallyReserved(ObjectGuid guid) const;
+    bool HasRemoteSession(Player* player) const;
+    bool GetBattleSnapshot(Player* player, BattlemonEncounter& snapshot);
+    std::vector<BattlemonBattler> BuildDuelParty(Player* player, uint8 limit);
+    std::vector<BattlemonBattler> BuildGeneratedTeam(uint32 averageLevel, uint32 trainerLevel, uint8 limit) const;
+    std::vector<BattlemonBattler> BuildTrainerTeam(uint32 entry, uint32 level, uint8 limit) const;
+    std::string FormatBattlerState(BattlemonBattler const& battler, char side) const;
 
     void LoadConfig();
     void LoadCatalog();
@@ -70,12 +80,14 @@ public:
     void SetParty(Player* player, uint32 ownedIds[6]);
     void ClearEncounter(ObjectGuid guid);
     void SendStatus(Player* player);
+    void UseCenterService(Player* player, uint32 action);
     void HandleAddon(Player* player, std::string const& msg);
     void HandleCommand(BattlemonSession& session, std::string const& msg);
 
     void Msg(Player* player, std::string const& text);
     void Msg(BattlemonSession& session, std::string const& text);
     void SendCombatFx(Player* player, BattlemonEncounter& enc);
+    void SendMoveAnimation(Player* player, bool playerSide, std::string const& move);
     float TypeChartMul(std::string const& atk, std::string const& def) const { return TypeMult(atk, def); }
 
     static uint32 CalcHP(uint32 base, uint32 level);
@@ -89,9 +101,9 @@ private:
     BattlemonForm const* RandomForm() const;
     uint32 ScaledEnemyLevel(uint32 playerLevel) const;
     uint32 ExpYield(BattlemonBattler const& enemy) const;
-    std::vector<uint32> AddExp(BattlemonOwned& row, uint32 amount) const;
+    std::vector<uint32> AddExp(BattlemonOwned& row, uint32 amount, uint32 levelCap = 100) const;
     char RollGender(std::string const& ratio) const;
-    std::vector<std::string> PickMoves(uint32 speciesId, uint32 level) const;
+    std::vector<std::string> PickMoves(uint32 speciesId, uint32 level, uint32 formId = 0) const;
     void FillMoves(BattlemonBattler& b, std::vector<std::string> const& internals) const;
     void ApplyStats(BattlemonBattler& b) const;
     BattlemonBattler MakeBattler(BattlemonOwned const& row) const;
@@ -140,6 +152,7 @@ private:
     void UnlockSource(Player* player, ObjectGuid guid);
     void BeginCooldown(uint32 guid);
 
+    BattlemonExtension* _extension = nullptr;
     bool _enabled = true;
     bool _announce = true;
     bool _grantToBots = false;

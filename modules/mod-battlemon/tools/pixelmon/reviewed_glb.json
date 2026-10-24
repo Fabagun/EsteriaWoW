@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "entries": {
+    "3425a2de0f58703a1594aee861e9d9ad55434c87d80e6ae37aa22b42e0b63f33": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\491_darkrai\\all\\mega\\none\\megadarkrai.glb",
+                "sha256": "b0e54a0e6c4c46674431ae88670448081cf535335274fe3764457011451a8414"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\491_darkrai\\all\\mega\\none\\megadarkrai.glb",
+                "sha256": "b0e54a0e6c4c46674431ae88670448081cf535335274fe3764457011451a8414"
+              },
+              "metadata": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\data\\pixelmon\\species\\491_darkrai.json",
+                "sha256": "290a4ada412ed87b69e30a15aa9ac9bdba1e37f03692634756bed296a657b1de"
+              },
+              "emissive": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\491_darkrai\\all\\mega\\none\\emissive.png",
+                "sha256": "cd7976b005d0ad1c819e8a3f5b07d3c56cb93dee98caf5f5bc4e482da1590440"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 24,
+        "motion": "animated",
+        "legacy_metadata": []
+      },
+      "export": {
+        "m2": "5ecdfdcd71b23e385308849fce2c0bb6b0247964b572cca0a2d91a664609d89f",
+        "skin": "f9370c20e7b84a950965bcef54481727dd9600914cc9e6b88dbacac2968fa564",
+        "texture": "cde9b2ef61acaf6ba925f45416896bd30f6cfe3eaaf97d4d59578976db99a36f"
+      }
+    },
+    "f56aceb445e0bbca85c30b95f3641f6d63859ed5d8a1e9cc595ce1d8d6d19510": {
+      "source": {
+        "parts": [
+          {
+            "files": {
+              "model": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\491_darkrai\\all\\mega\\none\\megadarkrai.glb",
+                "sha256": "b0e54a0e6c4c46674431ae88670448081cf535335274fe3764457011451a8414"
+              },
+              "texture": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\491_darkrai\\all\\mega\\shiny\\texture.png",
+                "sha256": "20f7d3cc85ab6db0dc9a1a35de94992919ec936c90749eb0789c2f8a618e7d44"
+              },
+              "metadata": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\data\\pixelmon\\species\\491_darkrai.json",
+                "sha256": "290a4ada412ed87b69e30a15aa9ac9bdba1e37f03692634756bed296a657b1de"
+              },
+              "emissive": {
+                "path": "F:\\_d-bak\\_other\\Pixelmon-1.21.1-9.4.0-universal\\assets\\pixelmon\\textures\\pokemon\\491_darkrai\\all\\mega\\none\\emissive.png",
+                "sha256": "cd7976b005d0ad1c819e8a3f5b07d3c56cb93dee98caf5f5bc4e482da1590440"
+              }
+            },
+            "transform": null
+          }
+        ],
+        "fps": 24,
+        "motion": "animated",
+        "legacy_metadata": []
+      },
+      "export": {
+        "m2": "5ecdfdcd71b23e385308849fce2c0bb6b0247964b572cca0a2d91a664609d89f",
+        "skin": "f9370c20e7b84a950965bcef54481727dd9600914cc9e6b88dbacac2968fa564",
+        "texture": "31a53fb3d715311687c62afec0f9cf9ab3926137401d9c93c6886dca3fb6c892"
+      }
+    }
+  }
+}

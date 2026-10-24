@@ -690,6 +690,36 @@
         0,
         1
       ]
+    },
+    {
+      "id": 75,
+      "species_key": "kyrian",
+      "display_name": "Kyrian",
+      "faction": "alliance",
+      "asset_owner": "approved_kyrian_venthyr",
+      "legacy_mask_race": 11,
+      "visual_base_race": 11,
+      "start_profile": "azuremyst",
+      "supported_genders": [
+        0,
+        1
+      ],
+      "species_selection": true
+    },
+    {
+      "id": 76,
+      "species_key": "venthyr",
+      "display_name": "Venthyr",
+      "faction": "horde",
+      "asset_owner": "approved_kyrian_venthyr",
+      "legacy_mask_race": 5,
+      "visual_base_race": 5,
+      "start_profile": "deathknell",
+      "supported_genders": [
+        0,
+        1
+      ],
+      "species_selection": true
     }
   ],
   "npc_only": [
@@ -854,6 +884,7 @@
     "supplied_arakkoa": "G:\\RetroPorterWork\\arakkoa\\stage-20261011\\assets",
     "retroporter_drakonid": "G:\\RetroPorterWork\\drakonid\\deploy\\assets",
     "native_slime_giant": "G:\\RetroportWork\\slime-giant-175382\\stage\\assets",
-    "native_centaur": "G:\\RetroportWork\\centaur\\stage\\assets"
+    "native_centaur": "G:\\RetroportWork\\centaur\\stage\\assets",
+    "approved_kyrian_venthyr": "G:\\Downloads\\HDWoWModels\\Kyrian-Venthyr-Approved-20261021"
   }
 }

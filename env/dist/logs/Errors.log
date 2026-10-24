@@ -48,6 +48,260 @@ Item (Entry: 52532) does not exist in `item_template` but is referenced in `Char
 Item (Entry: 52550) does not exist in `item_template` but is referenced in `CharStartOutfit.dbc`
 Item (Entry: 52551) does not exist in `item_template` but is referenced in `CharStartOutfit.dbc`
 Item (Entry: 52552) does not exist in `item_template` but is referenced in `CharStartOutfit.dbc`
+Table `creature_model_info` has model for not existed display id (50045).
+Table `creature_model_info` has model for not existed display id (50046).
+Table `creature_model_info` has model for not existed display id (50047).
+Table `creature_model_info` has model for not existed display id (50048).
+Table `creature_model_info` has model for not existed display id (50049).
+Table `creature_model_info` has model for not existed display id (50050).
+Table `creature_model_info` has model for not existed display id (50051).
+Table `creature_model_info` has model for not existed display id (50052).
+Table `creature_model_info` has model for not existed display id (50053).
+Table `creature_model_info` has model for not existed display id (50072).
+Table `creature_model_info` has model for not existed display id (50124).
+Table `creature_model_info` has model for not existed display id (50250).
+Table `creature_model_info` has model for not existed display id (50259).
+Table `creature_model_info` has model for not existed display id (50383).
+Table `creature_model_info` has model for not existed display id (50544).
+Table `creature_model_info` has model for not existed display id (50554).
+Table `creature_model_info` has model for not existed display id (50557).
+Table `creature_model_info` has model for not existed display id (50611).
+Table `creature_model_info` has model for not existed display id (50675).
+Table `creature_model_info` has model for not existed display id (50682).
+Table `creature_model_info` has model for not existed display id (50688).
+Table `creature_model_info` has model for not existed display id (50733).
+Table `creature_model_info` has model for not existed display id (50738).
+Table `creature_model_info` has model for not existed display id (50748).
+Table `creature_model_info` has model for not existed display id (50784).
+Table `creature_model_info` has model for not existed display id (50817).
+Table `creature_model_info` has model for not existed display id (50834).
+Table `creature_model_info` has model for not existed display id (50840).
+Table `creature_model_info` has model for not existed display id (50841).
+Table `creature_model_info` has model for not existed display id (50858).
+Table `creature_model_info` has model for not existed display id (50904).
+Table `creature_model_info` has model for not existed display id (50914).
+Table `creature_model_info` has model for not existed display id (50918).
+Table `creature_model_info` has model for not existed display id (50936).
+Table `creature_model_info` has model for not existed display id (50966).
+Table `creature_model_info` has model for not existed display id (50967).
+Table `creature_model_info` has model for not existed display id (50980).
+Table `creature_model_info` has model for not existed display id (50984).
+Table `creature_model_info` has model for not existed display id (50989).
+Table `creature_model_info` has model for not existed display id (51019).
+Table `creature_model_info` has model for not existed display id (51032).
+Table `creature_model_info` has model for not existed display id (51045).
+Table `creature_model_info` has model for not existed display id (51049).
+Table `creature_model_info` has model for not existed display id (51050).
+Table `creature_model_info` has model for not existed display id (51051).
+Table `creature_model_info` has model for not existed display id (51055).
+Table `creature_model_info` has model for not existed display id (51056).
+Table `creature_model_info` has model for not existed display id (51067).
+Table `creature_model_info` has model for not existed display id (51070).
+Table `creature_model_info` has model for not existed display id (51073).
+Table `creature_model_info` has model for not existed display id (51084).
+Table `creature_model_info` has model for not existed display id (51096).
+Table `creature_model_info` has model for not existed display id (51097).
+Table `creature_model_info` has model for not existed display id (51098).
+Table `creature_model_info` has model for not existed display id (51100).
+Table `creature_model_info` has model for not existed display id (51101).
+Table `creature_model_info` has model for not existed display id (51102).
+Table `creature_model_info` has model for not existed display id (51115).
+Table `creature_model_info` has model for not existed display id (51116).
+Table `creature_model_info` has model for not existed display id (51142).
+Table `creature_model_info` has model for not existed display id (51160).
+Table `creature_model_info` has model for not existed display id (51177).
+Table `creature_model_info` has model for not existed display id (51215).
+Table `creature_model_info` has model for not existed display id (51244).
+Table `creature_model_info` has model for not existed display id (51245).
+Table `creature_model_info` has model for not existed display id (51253).
+Table `creature_model_info` has model for not existed display id (51382).
+Table `creature_model_info` has model for not existed display id (51406).
+Table `creature_model_info` has model for not existed display id (51409).
+Table `creature_model_info` has model for not existed display id (51415).
+Table `creature_model_info` has model for not existed display id (51485).
+Table `creature_model_info` has model for not existed display id (51505).
+Table `creature_model_info` has model for not existed display id (51516).
+Table `creature_model_info` has model for not existed display id (51517).
+Table `creature_model_info` has model for not existed display id (51518).
+Table `creature_model_info` has model for not existed display id (51540).
+Table `creature_model_info` has model for not existed display id (51553).
+Table `creature_model_info` has model for not existed display id (51564).
+Table `creature_model_info` has model for not existed display id (51565).
+Table `creature_model_info` has model for not existed display id (51566).
+Table `creature_model_info` has model for not existed display id (51567).
+Table `creature_model_info` has model for not existed display id (51568).
+Table `creature_model_info` has model for not existed display id (51569).
+Table `creature_model_info` has model for not existed display id (51570).
+Table `creature_model_info` has model for not existed display id (51571).
+Table `creature_model_info` has model for not existed display id (70038).
+Table `creature_model_info` has model for not existed display id (70039).
+Table `creature_model_info` has model for not existed display id (70040).
+Table `creature_model_info` has model for not existed display id (70041).
+Table `creature_model_info` has model for not existed display id (70042).
+Table `creature_model_info` has model for not existed display id (70043).
+Table `creature_model_info` has model for not existed display id (70044).
+Table `creature_model_info` has model for not existed display id (70045).
+Table `creature_model_info` has model for not existed display id (70046).
+Table `creature_model_info` has model for not existed display id (70047).
+Table `creature_model_info` has model for not existed display id (70048).
+Table `creature_model_info` has model for not existed display id (70049).
+Table `creature_model_info` has model for not existed display id (70050).
+Table `creature_model_info` has model for not existed display id (70051).
+Table `creature_model_info` has model for not existed display id (70052).
+Table `creature_model_info` has model for not existed display id (70053).
+Table `creature_model_info` has model for not existed display id (70072).
+Table `creature_model_info` has model for not existed display id (70124).
+Table `creature_model_info` has model for not existed display id (70250).
+Table `creature_model_info` has model for not existed display id (70259).
+Table `creature_model_info` has model for not existed display id (70383).
+Table `creature_model_info` has model for not existed display id (70544).
+Table `creature_model_info` has model for not existed display id (70554).
+Table `creature_model_info` has model for not existed display id (70557).
+Table `creature_model_info` has model for not existed display id (70611).
+Table `creature_model_info` has model for not existed display id (70675).
+Table `creature_model_info` has model for not existed display id (70682).
+Table `creature_model_info` has model for not existed display id (70688).
+Table `creature_model_info` has model for not existed display id (70733).
+Table `creature_model_info` has model for not existed display id (70738).
+Table `creature_model_info` has model for not existed display id (70748).
+Table `creature_model_info` has model for not existed display id (70784).
+Table `creature_model_info` has model for not existed display id (70817).
+Table `creature_model_info` has model for not existed display id (70834).
+Table `creature_model_info` has model for not existed display id (70840).
+Table `creature_model_info` has model for not existed display id (70841).
+Table `creature_model_info` has model for not existed display id (70858).
+Table `creature_model_info` has model for not existed display id (70904).
+Table `creature_model_info` has model for not existed display id (70914).
+Table `creature_model_info` has model for not existed display id (70918).
+Table `creature_model_info` has model for not existed display id (70936).
+Table `creature_model_info` has model for not existed display id (70966).
+Table `creature_model_info` has model for not existed display id (70967).
+Table `creature_model_info` has model for not existed display id (70980).
+Table `creature_model_info` has model for not existed display id (70984).
+Table `creature_model_info` has model for not existed display id (70989).
+Table `creature_model_info` has model for not existed display id (71019).
+Table `creature_model_info` has model for not existed display id (71032).
+Table `creature_model_info` has model for not existed display id (71045).
+Table `creature_model_info` has model for not existed display id (71049).
+Table `creature_model_info` has model for not existed display id (71050).
+Table `creature_model_info` has model for not existed display id (71051).
+Table `creature_model_info` has model for not existed display id (71055).
+Table `creature_model_info` has model for not existed display id (71056).
+Table `creature_model_info` has model for not existed display id (71067).
+Table `creature_model_info` has model for not existed display id (71070).
+Table `creature_model_info` has model for not existed display id (71073).
+Table `creature_model_info` has model for not existed display id (71084).
+Table `creature_model_info` has model for not existed display id (71096).
+Table `creature_model_info` has model for not existed display id (71097).
+Table `creature_model_info` has model for not existed display id (71098).
+Table `creature_model_info` has model for not existed display id (71100).
+Table `creature_model_info` has model for not existed display id (71101).
+Table `creature_model_info` has model for not existed display id (71102).
+Table `creature_model_info` has model for not existed display id (71115).
+Table `creature_model_info` has model for not existed display id (71116).
+Table `creature_model_info` has model for not existed display id (71142).
+Table `creature_model_info` has model for not existed display id (71160).
+Table `creature_model_info` has model for not existed display id (71177).
+Table `creature_model_info` has model for not existed display id (71215).
+Table `creature_model_info` has model for not existed display id (71244).
+Table `creature_model_info` has model for not existed display id (71245).
+Table `creature_model_info` has model for not existed display id (71253).
+Table `creature_model_info` has model for not existed display id (71382).
+Table `creature_model_info` has model for not existed display id (71406).
+Table `creature_model_info` has model for not existed display id (71409).
+Table `creature_model_info` has model for not existed display id (71415).
+Table `creature_model_info` has model for not existed display id (71485).
+Table `creature_model_info` has model for not existed display id (71505).
+Table `creature_model_info` has model for not existed display id (71516).
+Table `creature_model_info` has model for not existed display id (71517).
+Table `creature_model_info` has model for not existed display id (71518).
+Table `creature_model_info` has model for not existed display id (71540).
+Table `creature_model_info` has model for not existed display id (71553).
+Table `creature_model_info` has model for not existed display id (71564).
+Table `creature_model_info` has model for not existed display id (71565).
+Table `creature_model_info` has model for not existed display id (71566).
+Table `creature_model_info` has model for not existed display id (71567).
+Table `creature_model_info` has model for not existed display id (71568).
+Table `creature_model_info` has model for not existed display id (71569).
+Table `creature_model_info` has model for not existed display id (71570).
+Table `creature_model_info` has model for not existed display id (71571).
+Creature (Entry: 1000045) lists non-existing CreatureDisplayID id (50045), this can crash the client.
+Creature (Entry: 1000046) lists non-existing CreatureDisplayID id (50046), this can crash the client.
+Creature (Entry: 1000047) lists non-existing CreatureDisplayID id (50047), this can crash the client.
+Creature (Entry: 1000048) lists non-existing CreatureDisplayID id (50048), this can crash the client.
+Creature (Entry: 1000049) lists non-existing CreatureDisplayID id (50049), this can crash the client.
+Creature (Entry: 1000050) lists non-existing CreatureDisplayID id (50050), this can crash the client.
+Creature (Entry: 1000051) lists non-existing CreatureDisplayID id (50051), this can crash the client.
+Creature (Entry: 1000052) lists non-existing CreatureDisplayID id (50052), this can crash the client.
+Creature (Entry: 1000053) lists non-existing CreatureDisplayID id (50053), this can crash the client.
+Creature (Entry: 1000072) lists non-existing CreatureDisplayID id (50072), this can crash the client.
+Creature (Entry: 1000124) lists non-existing CreatureDisplayID id (50124), this can crash the client.
+Creature (Entry: 1000250) lists non-existing CreatureDisplayID id (50250), this can crash the client.
+Creature (Entry: 1000259) lists non-existing CreatureDisplayID id (50259), this can crash the client.
+Creature (Entry: 1000383) lists non-existing CreatureDisplayID id (50383), this can crash the client.
+Creature (Entry: 1000554) lists non-existing CreatureDisplayID id (50554), this can crash the client.
+Creature (Entry: 1000557) lists non-existing CreatureDisplayID id (50557), this can crash the client.
+Creature (Entry: 1000611) lists non-existing CreatureDisplayID id (50611), this can crash the client.
+Creature (Entry: 1000682) lists non-existing CreatureDisplayID id (50682), this can crash the client.
+Creature (Entry: 1000688) lists non-existing CreatureDisplayID id (50688), this can crash the client.
+Creature (Entry: 1000733) lists non-existing CreatureDisplayID id (50733), this can crash the client.
+Creature (Entry: 1000748) lists non-existing CreatureDisplayID id (50748), this can crash the client.
+Creature (Entry: 1000784) lists non-existing CreatureDisplayID id (50784), this can crash the client.
+Creature (Entry: 1000817) lists non-existing CreatureDisplayID id (50817), this can crash the client.
+Creature (Entry: 1000834) lists non-existing CreatureDisplayID id (50834), this can crash the client.
+Creature (Entry: 1000858) lists non-existing CreatureDisplayID id (50858), this can crash the client.
+Creature (Entry: 1000914) lists non-existing CreatureDisplayID id (50914), this can crash the client.
+Creature (Entry: 1000936) lists non-existing CreatureDisplayID id (50936), this can crash the client.
+Creature (Entry: 1000966) lists non-existing CreatureDisplayID id (50966), this can crash the client.
+Creature (Entry: 1000967) lists non-existing CreatureDisplayID id (50967), this can crash the client.
+Creature (Entry: 1000980) lists non-existing CreatureDisplayID id (50980), this can crash the client.
+Creature (Entry: 1000984) lists non-existing CreatureDisplayID id (50984), this can crash the client.
+Creature (Entry: 1000989) lists non-existing CreatureDisplayID id (50989), this can crash the client.
+Creature (Entry: 1001019) lists non-existing CreatureDisplayID id (51019), this can crash the client.
+Creature (Entry: 1001032) lists non-existing CreatureDisplayID id (51032), this can crash the client.
+Creature (Entry: 1001045) lists non-existing CreatureDisplayID id (51045), this can crash the client.
+Creature (Entry: 1001049) lists non-existing CreatureDisplayID id (51049), this can crash the client.
+Creature (Entry: 1001050) lists non-existing CreatureDisplayID id (51050), this can crash the client.
+Creature (Entry: 1001051) lists non-existing CreatureDisplayID id (51051), this can crash the client.
+Creature (Entry: 1001055) lists non-existing CreatureDisplayID id (51055), this can crash the client.
+Creature (Entry: 1001056) lists non-existing CreatureDisplayID id (51056), this can crash the client.
+Creature (Entry: 1001067) lists non-existing CreatureDisplayID id (51067), this can crash the client.
+Creature (Entry: 1001070) lists non-existing CreatureDisplayID id (51070), this can crash the client.
+Creature (Entry: 1001073) lists non-existing CreatureDisplayID id (51073), this can crash the client.
+Creature (Entry: 1001084) lists non-existing CreatureDisplayID id (51084), this can crash the client.
+Creature (Entry: 1001096) lists non-existing CreatureDisplayID id (51096), this can crash the client.
+Creature (Entry: 1001097) lists non-existing CreatureDisplayID id (51097), this can crash the client.
+Creature (Entry: 1001098) lists non-existing CreatureDisplayID id (51098), this can crash the client.
+Creature (Entry: 1001100) lists non-existing CreatureDisplayID id (51100), this can crash the client.
+Creature (Entry: 1001101) lists non-existing CreatureDisplayID id (51101), this can crash the client.
+Creature (Entry: 1001102) lists non-existing CreatureDisplayID id (51102), this can crash the client.
+Creature (Entry: 1001115) lists non-existing CreatureDisplayID id (51115), this can crash the client.
+Creature (Entry: 1001116) lists non-existing CreatureDisplayID id (51116), this can crash the client.
+Creature (Entry: 1001142) lists non-existing CreatureDisplayID id (51142), this can crash the client.
+Creature (Entry: 1001177) lists non-existing CreatureDisplayID id (51177), this can crash the client.
+Creature (Entry: 1001215) lists non-existing CreatureDisplayID id (51215), this can crash the client.
+Creature (Entry: 1001244) lists non-existing CreatureDisplayID id (51244), this can crash the client.
+Creature (Entry: 1001245) lists non-existing CreatureDisplayID id (51245), this can crash the client.
+Creature (Entry: 1001253) lists non-existing CreatureDisplayID id (51253), this can crash the client.
+Creature (Entry: 1001382) lists non-existing CreatureDisplayID id (51382), this can crash the client.
+Creature (Entry: 1001406) lists non-existing CreatureDisplayID id (51406), this can crash the client.
+Creature (Entry: 1001409) lists non-existing CreatureDisplayID id (51409), this can crash the client.
+Creature (Entry: 1001415) lists non-existing CreatureDisplayID id (51415), this can crash the client.
+Creature (Entry: 1001485) lists non-existing CreatureDisplayID id (51485), this can crash the client.
+Creature (Entry: 1001505) lists non-existing CreatureDisplayID id (51505), this can crash the client.
+Creature (Entry: 1001516) lists non-existing CreatureDisplayID id (51516), this can crash the client.
+Creature (Entry: 1001517) lists non-existing CreatureDisplayID id (51517), this can crash the client.
+Creature (Entry: 1001518) lists non-existing CreatureDisplayID id (51518), this can crash the client.
+Creature (Entry: 1001540) lists non-existing CreatureDisplayID id (51540), this can crash the client.
+Creature (Entry: 1001553) lists non-existing CreatureDisplayID id (51553), this can crash the client.
+Creature (Entry: 1001564) lists non-existing CreatureDisplayID id (51564), this can crash the client.
+Creature (Entry: 1001565) lists non-existing CreatureDisplayID id (51565), this can crash the client.
+Creature (Entry: 1001566) lists non-existing CreatureDisplayID id (51566), this can crash the client.
+Creature (Entry: 1001567) lists non-existing CreatureDisplayID id (51567), this can crash the client.
+Creature (Entry: 1001568) lists non-existing CreatureDisplayID id (51568), this can crash the client.
+Creature (Entry: 1001569) lists non-existing CreatureDisplayID id (51569), this can crash the client.
+Creature (Entry: 1001570) lists non-existing CreatureDisplayID id (51570), this can crash the client.
+Creature (Entry: 1001571) lists non-existing CreatureDisplayID id (51571), this can crash the client.
 creature_template_spell has spell definitions for creature 990117 but this creature doesn't exist
 creature_template_spell has spell definitions for creature 990117 but this creature doesn't exist
 creature_template_spell has spell definitions for creature 990117 but this creature doesn't exist
@@ -56,6 +310,83 @@ creature_template_spell has spell definitions for creature 990118 but this creat
 creature_template_spell has spell definitions for creature 990119 but this creature doesn't exist
 Creature (Entry: 600000) does not have any existing display id in creature_template_model.
 Creature (Entry: 600001) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000045) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000046) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000047) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000048) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000049) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000050) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000051) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000052) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000053) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000072) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000124) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000250) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000259) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000383) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000554) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000557) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000611) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000682) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000688) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000733) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000748) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000784) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000817) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000834) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000858) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000914) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000936) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000966) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000967) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000980) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000984) does not have any existing display id in creature_template_model.
+Creature (Entry: 1000989) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001019) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001032) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001045) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001049) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001050) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001051) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001055) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001056) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001067) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001070) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001073) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001084) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001096) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001097) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001098) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001100) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001101) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001102) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001115) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001116) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001142) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001177) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001215) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001244) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001245) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001253) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001382) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001406) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001409) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001415) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001485) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001505) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001516) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001517) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001518) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001540) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001553) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001564) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001565) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001566) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001567) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001568) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001569) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001570) does not have any existing display id in creature_template_model.
+Creature (Entry: 1001571) does not have any existing display id in creature_template_model.
 Pool Id 1072 is empty (has no creatures, no gameobjects, no quests and no valid child pools). The pool will not be spawned.
 Wrong race mask 16384 in `playercreateinfo_skills` table, ignoring.
 Wrong race mask 16384 in `playercreateinfo_skills` table, ignoring.
@@ -4166,6 +4497,8 @@ Wrong race mask 33554432 in `playercreateinfo_spell_custom` table, ignoring.
 Wrong race mask 33554432 in `playercreateinfo_spell_custom` table, ignoring.
 Wrong race mask 33554432 in `playercreateinfo_spell_custom` table, ignoring.
 Wrong race mask 33554432 in `playercreateinfo_spell_custom` table, ignoring.
+Script named 'npc_battlemon_center' is not assigned in the database.
+Script named 'npc_battlemon_trainer' is not assigned in the database.
 Script named 'npc_cw_reclaimed_sentry' is not assigned in the database.
 Script named 'npc_racial_sticky_slime' is not assigned in the database.
 Script named 'spell_dk_blade_barrier' is not assigned in the database.
@@ -4192,8 +4525,6 @@ SmartAIMgr: Creature 24825 Event 13 Action 53 uses invalid forcedMovement 3, ski
 SmartAIMgr: Creature 24825 Event 14 Action 53 uses invalid forcedMovement 3, skipped.
 SmartAIMgr: Creature 24825 Event 15 Action 53 uses invalid forcedMovement 3, skipped.
 SmartAIMgr: Creature 24825 Event 16 Action 53 uses invalid forcedMovement 3, skipped.
-Creature (Entry: 600000) has no model defined in table `creature_template_model`, can't load. 
-Creature (Entry: 600001) has no model defined in table `creature_template_model`, can't load. 
 Creature (Entry: 600000) has no model defined in table `creature_template_model`, can't load. 
 Creature (Entry: 600001) has no model defined in table `creature_template_model`, can't load. 
 Creature (Entry: 600000) has no model defined in table `creature_template_model`, can't load. 

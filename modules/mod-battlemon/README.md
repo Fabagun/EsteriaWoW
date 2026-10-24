@@ -1,2 +1,57 @@
-# battlemon
+# Battlemon
 
+One AzerothCore module containing the Pokemon collection and battle engine, overworld encounters,
+classic battle UI support, world pet battles, human duels, Playerbot duels and the optional sidecar API.
+The active 3D catalog includes all 980 converted Extras. Both client addons live under `addon/`.
+
+## Installation and upgrades
+
+Keep only `modules/mod-battlemon` for Battlemon server code. The former `mod-battlemon-overworld`
+and `mod-battlemon-battles` directories have been merged into this module and must not remain enabled
+from an older checkout. Commit the moved/new files **and** old-path deletions together. Retain
+`mod-playerbots` for bot integration. Build remotely using your normal process; CMake must regenerate
+its module/source list after the directory changes. No local configure/build was performed.
+
+See [3D deployment](3D-DEPLOYMENT.md) for the catalog SQL and paired eDBC installer. Module SQL keeps
+its original filenames and contents, so previously applied module migrations are still recognized.
+Do not reimport base SQL just because the files moved. No consolidation-specific SQL is needed.
+
+## Configuration
+
+All **56 existing options**, their names and defaults remain available. The single module registers
+all three original config filenames, so existing server settings require no rename or merge:
+
+| File in the server's modules config directory | Options |
+| --- | --- |
+| `mod_battlemon.conf` | `Battlemon.*`: enable, starters, captures, encounters, rewards, revival, sidecar |
+| `mod_battlemon_overworld.conf` | `BattlemonOverworld.*`: enable, critter morphing, rerolls, scale, hover, nudges |
+| `mod_battlemon_battles.conf` | `BattlemonBattles.*`: enable, classic mode, duels, bot teams, timers, distance, actors, effects |
+
+The matching `.conf.dist` templates are in `conf/`. Keep your existing `.conf` files; templates are
+references for missing settings, not replacements for customized values. Disable features through
+`BattlemonOverworld.Enable`, `BattlemonBattles.Enable`, `BattlemonBattles.EnableDuels` and
+`BattlemonBattles.EnableBotDuels` instead of the retired per-module CMake switches. Disabling the
+single `mod-battlemon` module disables the entire server integration.
+
+## Client and tools
+
+- `addon/Battlemon`: collection, moves, bag, classic UI and 3D previews.
+- `addon/BattlemonBattles`: world battle HUD, switching/capture menus and duels.
+- `tools/install_addon.py`: existing companion installer and packet hook, with backups.
+- `tools/install_3d_dbcs.py`: guarded paired eDBC deployment.
+- `tools/pixelmon/`: model/texture conversion and validation tools.
+- `assets/battle-effects/`: preserved effect assets and delivery evidence.
+- [Battle presentation and duel guide](docs/BATTLES.md).
+- [Overworld guide](docs/OVERWORLD.md).
+
+## Verification
+
+Run `python tests/test_module_layout.py`, `python tools/test_3d_catalog.py` and
+`python tests/test_addon.py addon/Battlemon`. Installer regression tests are under `tests/`. The real-MySQL migration regression is
+`tests/test_3d_migration_mysql.py`; it requires a MySQL client/connection file and creates only
+disposable test databases. It covers full migration, partial-failure retry, collision/schema guards,
+precise ownership cleanup and rollback.
+No model reconversion or asset changes are needed for the consolidation. The frozen 2D distribution
+remains unchanged. Historical generated conversion evidence was moved byte-for-byte into `generated/`;
+its original absolute paths can be translated using `generated/module-consolidation/receipt.json`.
+Do not rewrite old proof hashes or rerun historical install scripts merely to change their path strings.

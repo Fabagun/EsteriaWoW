@@ -1344,7 +1344,9 @@ enum Opcodes : uint16
     SMSG_ESTERIA_INVENTORY                          = 0x522,
     SMSG_ESTERIA_BODY_SHAPE                         = 0x523,
     SMSG_ESTERIA_RETAIL_LOOK                        = 0x524,
-    NUM_MSG_TYPES                                   = 0x525
+    CMSG_ESTERIA_FORM_LOOK                          = 0x525,
+    SMSG_ESTERIA_FORM_LOOK_ACK                      = 0x526,
+    NUM_MSG_TYPES                                   = 0x527
 };
 
 enum OpcodeMisc : uint16

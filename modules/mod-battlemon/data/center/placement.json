@@ -1,0 +1,53 @@
+{
+  "map": 0,
+  "phase": 1,
+  "entrance_gps": [
+    -9062.506,
+    352.9509,
+    93.1162
+  ],
+  "floor_world_z": 96.3562,
+  "entrance_facing": 2.3489094,
+  "origin": [
+    -9056.188569464357,
+    346.54074622436116,
+    96.1162
+  ],
+  "orientation": 3.9197057267948967,
+  "display_id": 900500,
+  "gameobject_entry": 900500,
+  "npc_entry": 900501,
+  "services": {
+    "healer": [
+      -9051.736071692,
+      345.72693507479755,
+      96.3862,
+      2.3489094
+    ],
+    "shop": [
+      -9056.548130745436,
+      341.34952857479675,
+      96.3862,
+      2.3489094
+    ],
+    "collection": [
+      -9050.282828453765,
+      349.623216518755,
+      96.3862,
+      2.3489094
+    ]
+  },
+  "world_update": "data/sql/updates/pending_db_world/rev_1790826694.sql",
+  "world_followup_updates": [
+    "data/sql/updates/pending_db_world/rev_1790830984.sql",
+    "data/sql/updates/pending_db_world/rev_1790832337.sql",
+    "data/sql/updates/pending_db_world/rev_1790833393.sql"
+  ],
+  "gameobject_type": 14,
+  "room_scale": 0.65,
+  "door_threshold_world": [
+    -9060.294899312525,
+    350.7073461785264,
+    96.3562
+  ]
+}

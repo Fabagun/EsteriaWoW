@@ -1,0 +1,8 @@
+{
+  "wmo_groups": 15,
+  "triangles": 48545,
+  "server_geometry_equals_client": true,
+  "collision_tree_coverage": true,
+  "entrance_clearance_tested": true,
+  "live_verified": false
+}

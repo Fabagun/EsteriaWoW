@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "slug": "kyrian",
+  "name": "Kyrian",
+  "race_ids": [
+    75
+  ],
+  "source_race_id": 60,
+  "source_package": "G:\\Downloads\\HDWoWModels\\Kyrian-Venthyr-Approved-20261021",
+  "faction": "alliance",
+  "legacy_mask_race": 11,
+  "visual_base_race": 11,
+  "start_profile": "azuremyst",
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    11
+  ],
+  "models": {
+    "male": {
+      "model_id": 121060,
+      "display_id": 60083,
+      "model_path": "custom\\kyrian\\native\\kyrianmale.m2"
+    },
+    "female": {
+      "model_id": 121061,
+      "display_id": 60084,
+      "model_path": "custom\\kyrian\\native\\kyrianfemale.m2"
+    }
+  },
+  "random_playerbot_enabled": false,
+  "appearance": {
+    "mode": "native-stock-five-byte-v1",
+    "supported_genders": [
+      0,
+      1
+    ],
+    "profiles": {
+      "0": {
+        "capacities": [
+          3,
+          15,
+          3,
+          12,
+          16
+        ],
+        "descriptors": [
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            3,
+            4,
+            1
+          ],
+          [
+            3,
+            3,
+            4
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            1,
+            5,
+            3
+          ],
+          [
+            4,
+            4,
+            1
+          ],
+          [
+            4,
+            4,
+            4
+          ]
+        ],
+        "options": [
+          {
+            "label": "Body Palette"
+          },
+          {
+            "label": "Armor Palette"
+          },
+          {
+            "label": "Wing Palette"
+          },
+          {
+            "label": "Hair Palette"
+          },
+          {
+            "label": "Hair Style"
+          },
+          {
+            "label": "Headwear"
+          },
+          {
+            "label": "Outfit"
+          },
+          {
+            "label": "Shoulders"
+          }
+        ]
+      },
+      "1": {
+        "capacities": [
+          2,
+          20,
+          2,
+          8,
+          16
+        ],
+        "descriptors": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            4,
+            1
+          ],
+          [
+            3,
+            2,
+            4
+          ],
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            1,
+            5,
+            4
+          ],
+          [
+            4,
+            4,
+            1
+          ],
+          [
+            4,
+            4,
+            4
+          ]
+        ],
+        "options": [
+          {
+            "label": "Body Palette"
+          },
+          {
+            "label": "Armor Palette"
+          },
+          {
+            "label": "Wing Palette"
+          },
+          {
+            "label": "Hair Palette"
+          },
+          {
+            "label": "Hair Style"
+          },
+          {
+            "label": "Headwear"
+          },
+          {
+            "label": "Outfit"
+          },
+          {
+            "label": "Shoulders"
+          }
+        ]
+      }
+    }
+  }
+}
