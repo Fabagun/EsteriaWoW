@@ -1,0 +1,83 @@
+[worldserver]
+
+########################################
+# Esteria Skyriding (client: wowdecomp Extensions/Skyriding; docs: wowdecomp/docs/SKYRIDING_*.md)
+#
+#    Skyriding.Enable
+#        Description: Let capable clients skyride on eligible mounts. 0 leaves every mount on stock flight.
+#        Default:     1
+#
+#    Skyriding.AllFlyingMounts
+#        Description: Every mount with a flight-speed aura is eligible. Rows in world.esteria_skyriding_mounts
+#                     add mounts (enabled = 1) or remove them (enabled = 0) either way.
+#        Default:     1
+#
+#    Skyriding.Validate
+#        Description: Check airborne movement against the simulator's energy envelope and correct riders who fail.
+#        Default:     1
+
+Skyriding.Enable = 1
+Skyriding.AllFlyingMounts = 1
+Skyriding.Validate = 1
+
+#    Skyriding.FlyEverywhere
+#        Description: Make every open-world area flyable, no-fly zones (Dalaran, ...) included, for all flying mounts.
+#                     Instances, battlegrounds and arenas are unchanged. Needs a restart. The Esteria client does the
+#                     same on its side; a stock client still refuses to cast in former no-fly zones.
+#        Default:     1
+
+Skyriding.FlyEverywhere = 1
+
+#    Skyriding.Validate.DriftPerSecond
+#        Description: Energy (yd^2/s^2) the rider may gain per second without an ability (integration error).
+#    Skyriding.Validate.Noise
+#        Description: Energy one sample may read above the budget (measurement noise; does not accumulate).
+#    Skyriding.Validate.HoverMs
+#        Description: How long a rider may stay below 3 yd/s in the air (outside Aerial Halt).
+
+Skyriding.Validate.DriftPerSecond = 25
+Skyriding.Validate.Noise = 300
+Skyriding.Validate.HoverMs = 2500
+
+#    Skyriding.ResourceProfile
+#        Description: 0 = shared charges (retail 11.2.7), 1 = Vigor (Dragonflight).
+#    Skyriding.MaxCharges, *RegenMs, *CooldownMs
+#        Description: Charges/vigor and ability timings in milliseconds. All tuning-only values.
+
+Skyriding.ResourceProfile = 0
+Skyriding.MaxCharges = 6
+Skyriding.ChargeRegenMs = 12000
+Skyriding.ThrillChargeRegenMs = 4000
+Skyriding.VigorGroundRegenMs = 5000
+Skyriding.VigorThrillRegenMs = 15000
+Skyriding.WhirlingSurgeCooldownMs = 30000
+Skyriding.AerialHaltCooldownMs = 6000
+Skyriding.FlapCooldownMs = 600
+
+#    Skyriding.Physics.*
+#        Description: Simulator constants, sent to the client when skyriding begins (yards, seconds, radians).
+#                     Tuning-only placeholders, not retail numbers. Out-of-range values fall back to the defaults.
+
+Skyriding.Physics.Gravity = 19.29
+Skyriding.Physics.DragLinear = 0.01
+Skyriding.Physics.DragQuadratic = 0.0006
+Skyriding.Physics.OverspeedDrag = 6.0
+Skyriding.Physics.MinGlideSpeed = 20
+Skyriding.Physics.StallSpeed = 10
+Skyriding.Physics.LiftEfficiency = 0.985
+Skyriding.Physics.MaxAirSpeed = 65
+Skyriding.Physics.MaxBoostSpeed = 80
+Skyriding.Physics.TurnResponse = 3.5
+Skyriding.Physics.TurnSpeedRef = 45
+Skyriding.Physics.SurgeAccel = 30
+Skyriding.Physics.SurgeSeconds = 1.0
+Skyriding.Physics.WhirlAccel = 45
+Skyriding.Physics.WhirlSeconds = 1.5
+Skyriding.Physics.AscentImpulse = 30
+Skyriding.Physics.LiftOffUp = 32
+Skyriding.Physics.LiftOffForward = 12
+Skyriding.Physics.FlapImpulse = 7
+Skyriding.Physics.HaltFactor = 0.15
+Skyriding.Physics.HaltSeconds = 1.0
+Skyriding.Physics.HaltGravityScale = 0.15
+Skyriding.Physics.ThrillSpeed = 50

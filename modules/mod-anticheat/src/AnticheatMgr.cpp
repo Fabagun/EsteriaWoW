@@ -111,7 +111,9 @@ void AnticheatMgr::StartHackDetection(Player* player, MovementInfo movementInfo,
 
     ObjectGuid key = player->GetGUID();
 
-    if (player->IsInFlight() || player->GetTransport() || player->GetVehicle())
+    // Esteria Skyriding: mod-esteria-skyriding validates these riders against its own physics envelope.
+    if (player->IsInFlight() || player->GetTransport() || player->GetVehicle()
+        || player->CustomData.Get<DataMap::Base>("EsteriaSkyriding"))
     {
         m_Players[key].SetLastInformations(movementInfo, opcode, player->GetMapId(), GetPlayerCurrentSpeedRate(player));
         return;
