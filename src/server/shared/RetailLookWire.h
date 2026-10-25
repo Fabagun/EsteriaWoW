@@ -33,6 +33,7 @@ namespace CharacterRetailLook
     inline constexpr size_t PayloadSize = 4 + 2 * MaxOptions;
     inline constexpr uint32_t FooterMagic = 0x314B4C52; // "RLK1"
     inline constexpr uint32_t EnumMagic = 0x31454C52;   // "RLE1"
+    inline constexpr uint32_t ParkedMagic = 0x31504C52; // "RLP1": same layout as RLE1, the Two Forms look that is not showing
     inline constexpr size_t FooterSize = PayloadSize + 4;
     inline constexpr size_t EnumStride = 8 + PayloadSize;
 

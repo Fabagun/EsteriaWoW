@@ -91,7 +91,9 @@ void CharacterDatabaseConnection::DoPrepareStatements()
         "SELECT b.guid, b.data FROM character_body_shape AS b JOIN characters AS c ON c.guid = b.guid "
         "WHERE c.account = ? AND c.deleteInfos_Name IS NULL", CONNECTION_ASYNC);
     PrepareStatement(CHAR_SEL_ENUM_RETAIL_LOOK,
-        "SELECT l.guid, l.data FROM character_retail_look AS l JOIN characters AS c ON c.guid = l.guid "
+        "SELECT l.guid, l.data, 0 FROM character_retail_look AS l JOIN characters AS c ON c.guid = l.guid "
+        "WHERE c.account = ? AND c.deleteInfos_Name IS NULL "
+        "UNION ALL SELECT f.guid, f.data, 1 FROM character_form_look AS f JOIN characters AS c ON c.guid = f.guid "
         "WHERE c.account = ? AND c.deleteInfos_Name IS NULL", CONNECTION_ASYNC);
     PrepareStatement(CHAR_SEL_RETAIL_LOOK,
         "SELECT data FROM character_retail_look WHERE guid = ?", CONNECTION_ASYNC);

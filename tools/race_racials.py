@@ -742,12 +742,13 @@ passive("INNER_PEACE", B, 5, "Inner Peace", "You earn twice as much rested exper
 for race in (PANDAREN_A, PANDAREN_H):
     grant(race, "INNER_PEACE")
 
-# Dracthyr: Soar (ground-bound burst), Visage and Chosen Identity
+# Dracthyr: Soar (free flight: right-click the buff to land), Visage and Chosen Identity
 B = "DRACTHYR"
+AURA_FLY, AURA_MOD_INCREASE_FLIGHT_SPEED = 201, 207
 active("SOAR", B, 4, "Soar",
-       "Surge forward, increasing movement speed by 60% and slowing your fall for 6 sec. (Ground-bound: WotLK has no free flight.)",
-       90 * ICD, aura(1, AURA_MOD_INCREASE_SPEED, 60), aura(2, AURA_FEATHER_FALL, 1), icon=2983, duration=DUR_6_SEC,
-       aura_description="Movement speed increased by 60%. Falling slowly.")
+       "Take to the air in free flight, increasing flight speed by 60%. Cancel the effect to land.",
+       3 * ICD, aura(1, AURA_FLY, 0), aura(2, AURA_MOD_INCREASE_FLIGHT_SPEED, 60), icon=2983, duration=DURATION_INFINITE,
+       aura_description="Flying freely. Flight speed increased by 60%.")
 active("VISAGE", B, 5, "Visage", "Assume your visage, a mortal form. Use again to return to dracthyr form.", 5 * ICD,
        dummy(1), icon=20550)
 bind("VISAGE", "spell_race_visage")

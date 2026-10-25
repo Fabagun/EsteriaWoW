@@ -12035,6 +12035,12 @@ void Player::LoadFormLook(PreparedQueryResult result)
     }
 }
 
+uint8 Player::GetActiveRetailForm() const
+{
+    CharacterRetailLook::Look look;
+    return _hasRetailLook && CharacterRetailLook::ReadPayload(_retailLook.data(), _retailLook.size(), look) ? look.form : 0;
+}
+
 bool Player::ToggleRetailForm()
 {
     if (!_hasRetailLook || !_hasParkedLook)

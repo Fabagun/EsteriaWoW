@@ -1198,6 +1198,8 @@ class spell_race_rummage_your_bag : public SpellScript
     }
 };
 
+constexpr uint32 SPELL_TWO_FORMS = 68996; // the male Two Forms spell; any of the four would do
+
 // Worgen: Two Forms swaps Wolf and Human by swapping the saved looks. The spells' own transform into a costume NPC
 // is cancelled.
 class spell_race_two_forms : public SpellScript
@@ -1217,6 +1219,70 @@ class spell_race_two_forms : public SpellScript
     }
 };
 
+constexpr uint32 SPELL_TAIL_SWIPE = 110688; // retail 368970
+constexpr uint8 RETAIL_FORM_DRAGON = 3;       // Player::GetActiveRetailForm()
+
+// Soar and Tail Swipe need the dragon body. A character with no saved pair (form 0) shows its native dragon.
+bool InDragonForm(Player const* player)
+{
+    uint8 const form = player->GetActiveRetailForm();
+    return !form || form == RETAIL_FORM_DRAGON;
+}
+
+SpellCastResult CheckDragonForm(Unit* caster)
+{
+    Player* player = caster->ToPlayer();
+    if (player && !InDragonForm(player))
+    {
+        Say(player, "You can only do that in dragon form.");
+        return SPELL_FAILED_DONT_REPORT;
+    }
+
+    return SPELL_CAST_OK;
+}
+
+class spell_race_dragon_only : public SpellScript
+{
+    PrepareSpellScript(spell_race_dragon_only);
+
+    SpellCastResult CheckForm()
+    {
+        return CheckDragonForm(GetCaster());
+    }
+
+    void Register() override
+    {
+        OnCheckCast += SpellCheckCastFn(spell_race_dragon_only::CheckForm);
+    }
+};
+
+// Tail Swipe: knocks back everything in reach, like Wing Buffet does in front of the caster.
+class spell_race_tail_swipe : public SpellScript
+{
+    PrepareSpellScript(spell_race_tail_swipe);
+
+    SpellCastResult CheckForm()
+    {
+        return CheckDragonForm(GetCaster());
+    }
+
+    void HandleDummy(SpellEffIndex /*effIndex*/)
+    {
+        Unit* target = GetHitUnit();
+        if (!target || IsBoss(target))
+            return;
+
+        Unit* caster = GetCaster();
+        target->KnockbackFrom(caster->GetPositionX(), caster->GetPositionY(), KnockSpeedXY, KnockSpeedZ);
+    }
+
+    void Register() override
+    {
+        OnCheckCast += SpellCheckCastFn(spell_race_tail_swipe::CheckForm);
+        OnEffectHitTarget += SpellEffectFn(spell_race_tail_swipe::HandleDummy, EFFECT_0, SPELL_EFFECT_DUMMY);
+    }
+};
+
 // Dracthyr: Visage toggles the mortal form; Chosen Identity picks which race it wears.
 class spell_race_visage : public SpellScript
 {
@@ -1232,6 +1298,7 @@ class spell_race_visage : public SpellScript
         if (player->ToggleRetailForm())
         {
             player->RemoveAurasDueToSpell(SPELL_VISAGE_FORM);
+            player->RemoveAurasDueToSpell(SPELL_SOAR); // flight is for the dragon body
             return;
         }
 
@@ -1396,6 +1463,15 @@ public:
 
     void OnPlayerLogin(Player* player) override
     {
+        // Worgen are not among the generated racial grants. Every Worgen gets Two Forms: one spell for both sexes, since
+        // all it does is swap the saved Wolf and Human looks (spell_race_two_forms).
+        if (player->getRace() == RACE_WORGEN && !player->HasSpell(SPELL_TWO_FORMS))
+            player->learnSpell(SPELL_TWO_FORMS);
+
+        // Dracthyr Tail Swipe is not among the generated racial grants either.
+        if (player->getRace() == RACE_DRACTHYR && !player->HasSpell(SPELL_TAIL_SWIPE))
+            player->learnSpell(SPELL_TAIL_SWIPE);
+
         if (!OwnsRacials(player))
             return;
 
@@ -1719,6 +1795,8 @@ void AddSC_race_racials()
     RegisterSpellScript(spell_race_pounce);
     RegisterSpellScript(spell_race_bag_of_tricks);
     RegisterSpellScript(spell_race_wing_buffet);
+    RegisterSpellScript(spell_race_dragon_only);
+    RegisterSpellScript(spell_race_tail_swipe);
     RegisterSpellScript(spell_race_azerite_surge);
     RegisterSpellScript(spell_race_thorn_bloom);
     RegisterSpellScript(spell_race_cantrips);

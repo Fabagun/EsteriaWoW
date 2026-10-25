@@ -23,6 +23,9 @@ enum WorgenRiding
     SPELL_RW_JOURN_FEMALE    = 110011,
     SPELL_RW_DRAKKIN_APPRENTICE = 110050,
     SPELL_RW_DRAKKIN_JOURNEYMAN = 110051,
+    SPELL_RW_WORGEN_APPRENTICE = 110052,
+    SPELL_RW_WORGEN_JOURNEYMAN = 110053,
+    RETAIL_FORM_WORGEN_HUMAN = 2, // Player::GetActiveRetailForm()
 };
 
 enum BrokenRacials : uint32
@@ -147,6 +150,24 @@ private:
             && (player->getRace() != RACE_DRAKKIN_ALLIANCE || player->getGender() != GENDER_MALE))
             return;
 
+        // Worgen have Running Wild from level 1, as in retail: the fast rank at 40, no riding skill needed.
+        if (player->getRace() == RACE_WORGEN)
+        {
+            for (uint32 old : { SPELL_RW_APPR_MALE, SPELL_RW_APPR_FEMALE, SPELL_RW_JOURN_MALE, SPELL_RW_JOURN_FEMALE,
+                                SPELL_RW_DRAKKIN_APPRENTICE, SPELL_RW_DRAKKIN_JOURNEYMAN })
+                if (player->HasSpell(old))
+                    player->removeSpell(old, SPEC_MASK_ALL, false);
+
+            bool const fast = player->GetLevel() >= 40;
+            uint32 const want = fast ? SPELL_RW_WORGEN_JOURNEYMAN : SPELL_RW_WORGEN_APPRENTICE;
+            uint32 const other = fast ? SPELL_RW_WORGEN_APPRENTICE : SPELL_RW_WORGEN_JOURNEYMAN;
+            if (player->HasSpell(other))
+                player->removeSpell(other, SPEC_MASK_ALL, false);
+            if (!player->HasSpell(want))
+                player->learnSpell(want);
+            return;
+        }
+
         // riding-skill spells don't reliably show up on AC for DKs, so give them the fast RW at creation
         if (player->getClass() == CLASS_DEATH_KNIGHT)
         {
@@ -172,11 +193,21 @@ private:
             && level >= 40 && !player->HasSpell(SPELL_JOURNEYMAN_RIDING))
             player->learnSpell(SPELL_JOURNEYMAN_RIDING);
 
+        // The donor's wolf-mount Running Wild has no client spell and no animation; the no-mount form replaces it.
+        if (player->getRace() == RACE_WORGEN)
+            for (uint32 old : { SPELL_RW_APPR_MALE, SPELL_RW_APPR_FEMALE, SPELL_RW_JOURN_MALE, SPELL_RW_JOURN_FEMALE })
+                if (player->HasSpell(old))
+                    player->removeSpell(old, SPEC_MASK_ALL, false);
+
         SyncRunningWild(player);
     }
 
     uint32 GetRWSpell(Player* player, bool journeyman) const
     {
+        // Worgen use the same no-mount form as the Drakkin (their retail model carries the self-mount animations), with
+        // spells of their own.
+        if (player->getRace() == RACE_WORGEN)
+            return journeyman ? SPELL_RW_WORGEN_JOURNEYMAN : SPELL_RW_WORGEN_APPRENTICE;
         if (player->getRace() == RACE_DRAKKIN_ALLIANCE)
             return journeyman ? SPELL_RW_DRAKKIN_JOURNEYMAN : SPELL_RW_DRAKKIN_APPRENTICE;
 
@@ -216,15 +247,15 @@ class spell_drakkin_running_wild : public SpellScript
     SpellCastResult CheckForm()
     {
         Player* player = GetCaster()->ToPlayer();
-        if (!player || player->getRace() != RACE_DRAKKIN_ALLIANCE || player->getGender() != GENDER_MALE)
+        if (!player || (player->getRace() == RACE_DRAKKIN_ALLIANCE ? player->getGender() != GENDER_MALE : player->getRace() != RACE_WORGEN))
             return SPELL_FAILED_SPELL_UNAVAILABLE;
 
         if (player->GetShapeshiftForm() != FORM_NONE || player->getTransForm())
             return SPELL_FAILED_NOT_SHAPESHIFT;
 
-        bool journeyman = GetSpellInfo()->Id == SPELL_RW_DRAKKIN_JOURNEYMAN;
+        bool journeyman = GetSpellInfo()->Id == SPELL_RW_DRAKKIN_JOURNEYMAN || GetSpellInfo()->Id == SPELL_RW_WORGEN_JOURNEYMAN;
         uint16 riding = player->GetBaseSkillValue(SKILL_RIDING);
-        if (riding < (journeyman ? 150 : 75))
+        if (player->getRace() != RACE_WORGEN && riding < (journeyman ? 150 : 75))
             return SPELL_FAILED_MIN_SKILL;
 
         return SPELL_CAST_OK;
@@ -234,6 +265,11 @@ class spell_drakkin_running_wild : public SpellScript
     {
         if (GetCaster()->HasAura(GetSpellInfo()->Id))
             GetCaster()->SetSheath(SHEATH_STATE_UNARMED);
+
+        // Only the wolf model has the all-fours animations: a Worgen in Gilnean form drops to it first.
+        Player* player = GetCaster()->ToPlayer();
+        if (player && player->getRace() == RACE_WORGEN && player->GetActiveRetailForm() == RETAIL_FORM_WORGEN_HUMAN)
+            player->ToggleRetailForm();
     }
 
     void Register() override

@@ -251,6 +251,7 @@ void WorldSession::HandleCharEnum(PreparedQueryResult result, PreparedQueryResul
 {
     // Saved full Retail looks, by character (opaque to the server; only structurally checked).
     std::unordered_map<uint32, std::array<uint8, CharacterRetailLook::PayloadSize>> retailLooks;
+    std::unordered_map<uint32, std::array<uint8, CharacterRetailLook::PayloadSize>> parkedLooks; // Two Forms: the form not showing
     if (retailLook)
     {
         do
@@ -258,7 +259,7 @@ void WorldSession::HandleCharEnum(PreparedQueryResult result, PreparedQueryResul
             auto const payload = (*retailLook)[1].Get<Binary, CharacterRetailLook::PayloadSize>();
             CharacterRetailLook::Look look;
             if (CharacterRetailLook::ReadPayload(payload.data(), payload.size(), look))
-                retailLooks[(*retailLook)[0].Get<uint32>()] = payload;
+                ((*retailLook)[2].Get<uint8>() ? parkedLooks : retailLooks)[(*retailLook)[0].Get<uint32>()] = payload;
         } while (retailLook->NextRow());
     }
 
@@ -300,6 +301,8 @@ void WorldSession::HandleCharEnum(PreparedQueryResult result, PreparedQueryResul
     uint32 bodyShapeCount = 0;
     ByteBuffer retailLookBlock;
     uint32 retailLookCount = 0;
+    ByteBuffer parkedLookBlock;
+    uint32 parkedLookCount = 0;
 
     data << num;
 
@@ -324,6 +327,12 @@ void WorldSession::HandleCharEnum(PreparedQueryResult result, PreparedQueryResul
                     retailLookBlock << guid.GetRawValue();
                     retailLookBlock.append(look->second.data(), look->second.size());
                     ++retailLookCount;
+                }
+                if (auto const look = parkedLooks.find((*result)[0].Get<uint32>()); look != parkedLooks.end())
+                {
+                    parkedLookBlock << guid.GetRawValue();
+                    parkedLookBlock.append(look->second.data(), look->second.size());
+                    ++parkedLookCount;
                 }
                 if (auto const shape = bodyShapes.find((*result)[0].Get<uint32>()); shape != bodyShapes.end())
                 {
@@ -377,6 +386,12 @@ void WorldSession::HandleCharEnum(PreparedQueryResult result, PreparedQueryResul
         data << retailLookCount << CharacterRetailLook::EnumMagic; // RLE1: GUID + full Retail look, stripped by the native client.
     }
 
+    if (parkedLookCount)
+    {
+        data.append(parkedLookBlock);
+        data << parkedLookCount << CharacterRetailLook::ParkedMagic; // RLP1: GUID + the Two Forms look that is not showing.
+    }
+
     SendPacket(&data);
 }
 
@@ -409,6 +424,7 @@ void WorldSession::HandleCharEnumOpcode(WorldPacket& /*recvData*/)
                         {
                             auto* lookStmt = CharacterDatabase.GetPreparedStatement(CHAR_SEL_ENUM_RETAIL_LOOK);
                             lookStmt->SetData(0, GetAccountId());
+                            lookStmt->SetData(1, GetAccountId());
                             lastCallback.WithPreparedCallback(
                                 [this, result, permanentAuras, bodyShape](PreparedQueryResult retailLook)
                                 {

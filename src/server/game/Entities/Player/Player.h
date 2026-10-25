@@ -1162,6 +1162,7 @@ public:
     // there is no saved pair.
     void LoadFormLook(PreparedQueryResult result);
     bool ToggleRetailForm();
+    uint8 GetActiveRetailForm() const; // the form (see RetailLookWire.h) of the look showing, 0 when none or the race's default
     void SendTransferAborted(uint32 mapid, TransferAbortReason reason, uint8 arg = 0);
     void SendInstanceResetWarning(uint32 mapid, Difficulty difficulty, uint32 time, bool onEnterMap);
 
