@@ -89,16 +89,22 @@
     ],
     "venthyr": [
       76
+    ],
+    "ethereal_alliance": [
+      77
+    ],
+    "ethereal_horde": [
+      78
     ]
   },
   "dbc_ranges": {
     "CreatureModelData": [
       120000,
-      121063
+      121067
     ],
     "CreatureDisplayInfo": [
       60030,
-      60086
+      60090
     ],
     "CreatureDisplayInfoExtra": [
       60000,
@@ -106,11 +112,11 @@
     ],
     "CharSections": [
       450000,
-      1123299
+      1127999
     ],
     "CharHairGeosets": [
       450000,
-      1122399
+      1127099
     ],
     "CharHairTextures": [
       450000,
@@ -118,15 +124,15 @@
     ],
     "BarberShopStyle": [
       450000,
-      1122499
+      1127199
     ],
     "CharStartOutfit": [
       21000,
-      22279
+      22599
     ],
     "NameGen": [
       22000,
-      110999
+      116999
     ]
   },
   "race_allocations": {
@@ -963,6 +969,66 @@
         "male": 60085,
         "female": 60086
       }
+    },
+    "ethereal_alliance": {
+      "CreatureModelData": {
+        "male": 121064,
+        "female": 121065
+      },
+      "CreatureDisplayInfo": {
+        "male": 60087,
+        "female": 60088
+      },
+      "CharSections": [
+        1126000,
+        1126999
+      ],
+      "CharHairGeosets": [
+        1126000,
+        1126099
+      ],
+      "BarberShopStyle": [
+        1126000,
+        1126199
+      ],
+      "CharStartOutfit": [
+        22400,
+        22499
+      ],
+      "NameGen": [
+        111000,
+        113999
+      ]
+    },
+    "ethereal_horde": {
+      "CreatureModelData": {
+        "male": 121066,
+        "female": 121067
+      },
+      "CreatureDisplayInfo": {
+        "male": 60089,
+        "female": 60090
+      },
+      "CharSections": [
+        1127000,
+        1127999
+      ],
+      "CharHairGeosets": [
+        1127000,
+        1127099
+      ],
+      "BarberShopStyle": [
+        1127000,
+        1127199
+      ],
+      "CharStartOutfit": [
+        22500,
+        22599
+      ],
+      "NameGen": [
+        114000,
+        116999
+      ]
     }
   },
   "extra_allocations": {

@@ -720,6 +720,36 @@
         1
       ],
       "species_selection": true
+    },
+    {
+      "id": 77,
+      "species_key": "ethereal_alliance",
+      "display_name": "Ethereal",
+      "faction": "alliance",
+      "species_selection": true,
+      "start_profile": "elwynn",
+      "asset_owner": "native_ethereal",
+      "legacy_mask_race": 1,
+      "visual_base_race": 4,
+      "supported_genders": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 78,
+      "species_key": "ethereal_horde",
+      "display_name": "Ethereal",
+      "faction": "horde",
+      "species_selection": true,
+      "start_profile": "durotar",
+      "asset_owner": "native_ethereal",
+      "legacy_mask_race": 2,
+      "visual_base_race": 4,
+      "supported_genders": [
+        0,
+        1
+      ]
     }
   ],
   "npc_only": [
@@ -847,6 +877,11 @@
       "species_key": "ogre",
       "alliance_id": 61,
       "horde_id": 60
+    },
+    {
+      "species_key": "ethereal",
+      "alliance_id": 77,
+      "horde_id": 78
     }
   ],
   "sources": {
@@ -885,6 +920,7 @@
     "retroporter_drakonid": "G:\\RetroPorterWork\\drakonid\\deploy\\assets",
     "native_slime_giant": "G:\\RetroportWork\\slime-giant-175382\\stage\\assets",
     "native_centaur": "G:\\RetroportWork\\centaur\\stage\\assets",
-    "approved_kyrian_venthyr": "G:\\Downloads\\HDWoWModels\\Kyrian-Venthyr-Approved-20261021"
+    "approved_kyrian_venthyr": "G:\\Downloads\\HDWoWModels\\Kyrian-Venthyr-Approved-20261021",
+    "native_ethereal": "G:\\RetroportWork\\ethereal-shadowguard\\source"
   }
 }

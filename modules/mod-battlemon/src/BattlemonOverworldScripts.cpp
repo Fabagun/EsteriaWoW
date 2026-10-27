@@ -145,7 +145,7 @@ public:
 
         uint32 formId = formIdArg.value_or(BattlemonOverworldIds::PikachuFormId);
         bool shiny = shinyArg.value_or(0) != 0;
-        if (!sBattlemonMgr->GetForm(formId))
+        if (!sBattlemonMgr->GetBattlemonForm(formId))
         {
             handler->SendSysMessage(Acore::StringFormat("Unknown Battlemon form {}.", formId));
             return true;
@@ -167,7 +167,7 @@ public:
             return true;
         }
         sBattlemonOverworld->ApplyLook(creature, formId, shiny);
-        BattlemonForm const* form = sBattlemonMgr->GetForm(formId);
+        BattlemonForm const* form = sBattlemonMgr->GetBattlemonForm(formId);
         float scale = 1.0f;
         float hover = 0.0f;
         sBattlemonOverworld->ComputeNudge(formId, scale, hover);

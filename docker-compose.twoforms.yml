@@ -1,3 +1,3 @@
 services:
   ac-worldserver:
-    image: esteria-skyriding:20261025d
+    image: esteria-launcherapi:20261026

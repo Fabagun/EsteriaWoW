@@ -1200,6 +1200,26 @@ class spell_race_rummage_your_bag : public SpellScript
 
 constexpr uint32 SPELL_TWO_FORMS = 68996; // the male Two Forms spell; any of the four would do
 
+class spell_race_ethereal_two_forms : public SpellScript
+{
+    PrepareSpellScript(spell_race_ethereal_two_forms);
+
+    void HandleDummy(SpellEffIndex /*effIndex*/)
+    {
+        Player* player = GetCaster()->ToPlayer();
+        if (!player || (player->getRace() != RACE_ETHEREAL_ALLIANCE && player->getRace() != RACE_ETHEREAL_HORDE))
+            return;
+
+        if (!player->ToggleRetailForm())
+            Say(player, "Customize and save both Ethereal forms before transforming.");
+    }
+
+    void Register() override
+    {
+        OnEffectHitTarget += SpellEffectFn(spell_race_ethereal_two_forms::HandleDummy, EFFECT_0, SPELL_EFFECT_DUMMY);
+    }
+};
+
 // Worgen: Two Forms swaps Wolf and Human by swapping the saved looks. The spells' own transform into a costume NPC
 // is cancelled.
 class spell_race_two_forms : public SpellScript
@@ -1813,6 +1833,7 @@ void AddSC_race_racials()
     RegisterSpellScript(spell_race_rummage_your_bag);
     RegisterSpellScript(spell_race_visage);
     RegisterSpellScript(spell_race_two_forms);
+    RegisterSpellScript(spell_race_ethereal_two_forms);
     RegisterSpellScript(spell_race_visage_form);
     RegisterSpellScript(spell_race_chosen_identity);
     RegisterSpellScript(spell_race_ingest_minerals);

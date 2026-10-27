@@ -131,7 +131,9 @@ enum Races
     RACE_CENTAUR_ALLIANCE      = 73,
     RACE_CENTAUR_HORDE         = 74,
     RACE_KYRIAN_ALLIANCE       = 75,
-    RACE_VENTHYR_HORDE         = 76
+    RACE_VENTHYR_HORDE         = 76,
+    RACE_ETHEREAL_ALLIANCE     = 77,
+    RACE_ETHEREAL_HORDE        = 78
 };
 
 uint32 constexpr DARKFALLEN_RACE_MASK = 0x80000000u;
@@ -148,13 +150,15 @@ inline constexpr bool UsesHaranirAppearance(uint32 race)
 
 inline constexpr bool IsExtendedPlayableRace(uint32 race)
 {
-    return race >= RACE_MAGHAR_ORC && race <= RACE_VENTHYR_HORDE;
+    return race >= RACE_MAGHAR_ORC && race <= RACE_ETHEREAL_HORDE;
 }
 
 inline constexpr uint8 GetLegacyMaskRaceForRace(uint32 race)
 {
     switch (race)
     {
+        case RACE_ETHEREAL_ALLIANCE:   return RACE_HUMAN;
+        case RACE_ETHEREAL_HORDE:      return RACE_ORC;
         case RACE_KYRIAN_ALLIANCE:      return RACE_DRAENEI;
         case RACE_VENTHYR_HORDE:        return RACE_UNDEAD_PLAYER;
         case RACE_MAGHAR_ORC:          return RACE_ORC;
@@ -195,6 +199,8 @@ inline constexpr uint8 GetVisualBaseRaceForRace(uint32 race)
 {
     switch (race)
     {
+        case RACE_ETHEREAL_ALLIANCE:
+        case RACE_ETHEREAL_HORDE:      return RACE_NIGHTELF;
         case RACE_KYRIAN_ALLIANCE:      return RACE_DRAENEI;
         case RACE_VENTHYR_HORDE:        return RACE_UNDEAD_PLAYER;
         case RACE_MAGHAR_ORC:          return RACE_ORC;
@@ -235,6 +241,8 @@ inline constexpr uint8 GetPairedRaceForRace(uint32 race)
 {
     switch (race)
     {
+        case RACE_ETHEREAL_ALLIANCE: return RACE_ETHEREAL_HORDE;
+        case RACE_ETHEREAL_HORDE:    return RACE_ETHEREAL_ALLIANCE;
         case RACE_OGRE_ALLIANCE:     return RACE_OGRE_HORDE;
         case RACE_OGRE_HORDE:        return RACE_OGRE_ALLIANCE;
         case RACE_EARTHEN_ALLIANCE:  return RACE_EARTHEN_HORDE;

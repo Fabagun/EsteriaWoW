@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "slug": "ethereal_horde",
+  "name": "Ethereal",
+  "race_ids": [
+    78
+  ],
+  "enum": "RACE_ETHEREAL_HORDE",
+  "faction": "horde",
+  "source_race_id": 2,
+  "legacy_mask_race": 2,
+  "visual_base_race": 4,
+  "helmet_prefix": "Nb",
+  "client_file_strings": {
+    "78": "EtherealHorde"
+  },
+  "glue_token": "ETHEREALHORDE",
+  "start_profile": "durotar",
+  "classes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    11
+  ],
+  "donor_totem_race": 2,
+  "random_playerbot_enabled": false,
+  "models": {
+    "male": {
+      "model_id": 121066,
+      "display_id": 60089,
+      "model_path": "retail\\ethereal\\5926159.m2"
+    },
+    "female": {
+      "model_id": 121067,
+      "display_id": 60090,
+      "model_path": "retail\\ethereal\\6152557.m2"
+    }
+  },
+  "appearance": {
+    "mode": "native-retail-look-v2",
+    "supported_genders": [
+      0,
+      1
+    ],
+    "profiles": {
+      "0": {
+        "capacities": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "descriptors": [],
+        "options": []
+      },
+      "1": {
+        "capacities": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "descriptors": [],
+        "options": []
+      }
+    },
+    "native_profile": 4026728448,
+    "source_build": "88d5e8ef05ec5a8446cdec93d142d7c6",
+    "forms": [
+      {
+        "id": 5,
+        "name": "Darkweaver",
+        "npc": 247577,
+        "models": [
+          5926159,
+          6152557
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Dreadnaught",
+        "npc": 246331,
+        "models": [
+          6254042
+        ]
+      }
+    ],
+    "transport": "RLK1/RLE1/RLP1, independent 132-byte looks per form"
+  },
+  "custom_racial_spells": [
+    111004
+  ],
+  "runtime_patch_root": "G:\\RetroportWork\\ethereal-shadowguard\\stage",
+  "source_patch_root": "G:\\RetroportWork\\ethereal-shadowguard\\source"
+}

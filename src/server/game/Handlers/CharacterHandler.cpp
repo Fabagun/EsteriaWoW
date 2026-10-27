@@ -2333,13 +2333,8 @@ void WorldSession::HandleEsteriaFormLookOpcode(WorldPacket& recvData)
         return;
     }
 
-    // The two forms of each Two Forms race: Worgen Wolf (1) and Human (2), Dracthyr Dragon (3) and Visage (4).
-    uint8 first = 0;
-    if (character->Race == RACE_WORGEN)
-        first = 1;
-    else if (character->Race == RACE_DRACTHYR)
-        first = 3;
-    else
+    uint8 const first = CharacterRetailLook::FirstFormForRace(character->Race);
+    if (!first)
     {
         reply(3);
         return;

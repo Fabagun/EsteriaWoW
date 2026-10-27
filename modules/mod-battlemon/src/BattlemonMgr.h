@@ -38,7 +38,7 @@ public:
     bool ShouldHandle(Player* player) const;
 
     BattlemonSpecies const* GetSpecies(uint32 id) const;
-    BattlemonForm const* GetForm(uint32 id) const;
+    BattlemonForm const* GetBattlemonForm(uint32 id) const;
     BattlemonForm const* GetStarterForm() const;
     BattlemonMoveDef const* GetMove(std::string const& internal) const;
     // Same legendary/starter/normal weights as the addon Fight button.

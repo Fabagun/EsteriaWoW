@@ -81,7 +81,7 @@ bool BattlemonOverworld::TryStartFromCreature(Player* player, Creature* creature
     bool shiny = false;
     if (!ParseDisplay(creature->GetDisplayId(), formId, shiny))
         return false;
-    if (!sBattlemonMgr->GetForm(formId))
+    if (!sBattlemonMgr->GetBattlemonForm(formId))
         return false;
 
     StartLinkedWild(player, formId, shiny, creature->GetGUID());
@@ -111,7 +111,7 @@ void BattlemonOverworld::ApplyLook(Creature* creature, uint32 formId, bool shiny
     }
     else
     {
-        if (BattlemonForm const* form = sBattlemonMgr->GetForm(formId))
+        if (BattlemonForm const* form = sBattlemonMgr->GetBattlemonForm(formId))
             creature->SetName(form->name);
         creature->SetDisplayId(display);
         creature->SetNativeDisplayId(display);
@@ -236,7 +236,7 @@ void BattlemonOverworld::ParseNudges(std::string const& raw)
 
 void BattlemonOverworld::ComputeNudge(uint32 formId, float& scale, float& hover) const
 {
-    BattlemonForm const* form = sBattlemonMgr->GetForm(formId);
+    BattlemonForm const* form = sBattlemonMgr->GetBattlemonForm(formId);
     BattlemonSpecies const* species = form ? sBattlemonMgr->GetSpecies(form->speciesId) : nullptr;
 
     float autoScale = 1.0f;

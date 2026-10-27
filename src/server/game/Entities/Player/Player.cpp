@@ -12051,12 +12051,7 @@ bool Player::ToggleRetailForm()
         || !CharacterRetailLook::ReadPayload(_parkedLook.data(), _parkedLook.size(), parked))
         return false;
 
-    // The pair has to be this race's two forms: Worgen Wolf (1) and Human (2), Dracthyr Dragon (3) and Visage (4).
-    uint8 first = 0;
-    if (getRace() == RACE_WORGEN)
-        first = 1;
-    else if (getRace() == RACE_DRACTHYR)
-        first = 3;
+    uint8 const first = CharacterRetailLook::FirstFormForRace(getRace());
     uint8 const second = static_cast<uint8>(first + 1);
     bool const formsMatch = (active.form == first && parked.form == second)
         || (active.form == second && parked.form == first);

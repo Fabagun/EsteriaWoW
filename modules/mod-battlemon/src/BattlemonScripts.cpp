@@ -61,7 +61,7 @@ public:
 
         uint32 leadId = sBattlemonMgr->PartyOwnedId(acc.guid, 1);
         BattlemonOwned lead = sBattlemonMgr->LoadOwnedById(leadId);
-        BattlemonForm const* form = sBattlemonMgr->GetForm(lead.formId);
+        BattlemonForm const* form = sBattlemonMgr->GetBattlemonForm(lead.formId);
         uint32 wait = sBattlemonMgr->SecondsUntilReady(acc);
         std::string ready = wait == 0 ? "Fight is ready" : Acore::StringFormat("Fight in {}s", wait);
         ChatHandler(player->GetSession()).SendSysMessage(Acore::StringFormat(
@@ -130,7 +130,7 @@ public:
         BattlemonAccount const acc = sBattlemonMgr->EnsureAccount(player);
         uint32 leadId = sBattlemonMgr->PartyOwnedId(acc.guid, 1);
         BattlemonOwned lead = sBattlemonMgr->LoadOwnedById(leadId);
-        BattlemonForm const* form = sBattlemonMgr->GetForm(lead.formId);
+        BattlemonForm const* form = sBattlemonMgr->GetBattlemonForm(lead.formId);
         uint32 wait = sBattlemonMgr->SecondsUntilReady(acc);
         handler->SendSysMessage(Acore::StringFormat(
             "Battlemon: lead {} Lv.{}  party {}/6  balls {}  points {}  fight {}",

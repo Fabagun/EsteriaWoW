@@ -403,7 +403,7 @@ BattlemonSpecies const* BattlemonMgr::GetSpecies(uint32 id) const
     return it == _species.end() ? nullptr : &it->second;
 }
 
-BattlemonForm const* BattlemonMgr::GetForm(uint32 id) const
+BattlemonForm const* BattlemonMgr::GetBattlemonForm(uint32 id) const
 {
     auto it = _forms.find(id);
     return it == _forms.end() ? nullptr : &it->second;
@@ -440,7 +440,7 @@ BattlemonForm const* BattlemonMgr::RandomForm() const
     uint32 const normalW = _normalFormIds.empty() ? 0 : _weightNormal;
     uint32 const total = legendaryW + starterW + normalW;
     if (total == 0)
-        return GetForm(_formIds[urand(0, static_cast<uint32>(_formIds.size() - 1))]);
+        return GetBattlemonForm(_formIds[urand(0, static_cast<uint32>(_formIds.size() - 1))]);
 
     uint32 const roll = urand(1, total);
     BattlemonForm const* picked = nullptr;
@@ -454,7 +454,7 @@ BattlemonForm const* BattlemonMgr::RandomForm() const
     if (!picked)
         picked = PickForm(_normalFormIds, _forms);
     if (!picked)
-        picked = GetForm(_formIds[urand(0, static_cast<uint32>(_formIds.size() - 1))]);
+        picked = GetBattlemonForm(_formIds[urand(0, static_cast<uint32>(_formIds.size() - 1))]);
     return picked;
 }
 
@@ -651,7 +651,7 @@ BattlemonBattler BattlemonMgr::MakeBattler(BattlemonOwned const& row) const
     b.formId = row.formId;
     b.speciesId = row.speciesId;
     b.species = GetSpecies(row.speciesId);
-    b.form = GetForm(row.formId);
+    b.form = GetBattlemonForm(row.formId);
     b.name = b.form ? b.form->name : (b.species ? b.species->name : "???");
     b.sprite = !row.sprite.empty() ? row.sprite : (b.form ? b.form->sprite : "");
     b.backSprite = b.form ? b.form->backSprite : b.sprite;
@@ -756,7 +756,7 @@ void BattlemonMgr::PersistParty(BattlemonEncounter& enc)
 
 uint32 BattlemonMgr::InsertOwned(BattlemonOwned const& row)
 {
-    if (!GetForm(row.formId) || !BattlemonModels::Find(row.formId, row.shiny))
+    if (!GetBattlemonForm(row.formId) || !BattlemonModels::Find(row.formId, row.shiny))
         return 0;
 
     CharacterDatabase.DirectExecute(
@@ -983,7 +983,7 @@ std::vector<BattlemonOwned> BattlemonMgr::LoadOwned(uint32 guid) const
         row.move[2] = f[11].IsNull() ? "" : f[11].Get<std::string>();
         row.move[3] = f[12].IsNull() ? "" : f[12].Get<std::string>();
         row.faintedAt = f[13].Get<uint32>();
-        if (!GetForm(row.formId) || !BattlemonModels::Find(row.formId, row.shiny))
+        if (!GetBattlemonForm(row.formId) || !BattlemonModels::Find(row.formId, row.shiny))
             continue;
         ReviveIfDue(row);
         out.push_back(row);
@@ -1019,7 +1019,7 @@ BattlemonOwned BattlemonMgr::LoadOwnedById(uint32 ownedId) const
     row.move[2] = f[12].IsNull() ? "" : f[12].Get<std::string>();
     row.move[3] = f[13].IsNull() ? "" : f[13].Get<std::string>();
     row.faintedAt = f[14].Get<uint32>();
-    if (!GetForm(row.formId) || !BattlemonModels::Find(row.formId, row.shiny))
+    if (!GetBattlemonForm(row.formId) || !BattlemonModels::Find(row.formId, row.shiny))
         return {};
     ReviveIfDue(row);
     return row;
@@ -1406,7 +1406,7 @@ void BattlemonMgr::SendOwnedList(Player* player, uint32 guid)
             ss << '\t' << row.move[i];
         // Name and sprite trail the moves so the addon can label the party
         // without depending on its own catalog copy.
-        BattlemonForm const* form = GetForm(row.formId);
+        BattlemonForm const* form = GetBattlemonForm(row.formId);
         std::string name = form ? form->name : "";
         std::string sprite = form ? form->sprite : row.sprite;
         if (name.empty())
@@ -1444,7 +1444,7 @@ void BattlemonMgr::SendDexList(Player* player, uint32 guid, bool shiny)
     do
     {
         uint32 formId = result->Fetch()[0].Get<uint32>();
-        if (!GetForm(formId) || !BattlemonModels::Find(formId, shiny))
+        if (!GetBattlemonForm(formId) || !BattlemonModels::Find(formId, shiny))
             continue;
         std::string next = "\t" + std::to_string(formId);
         if (chunk.size() + next.size() > 230)
@@ -1815,7 +1815,7 @@ void BattlemonMgr::StartWild(Player* player, uint32 formId, bool shiny, bool ski
         return;
     }
 
-    BattlemonForm const* form = formId ? GetForm(formId) : nullptr;
+    BattlemonForm const* form = formId ? GetBattlemonForm(formId) : nullptr;
     if (formId && !form)
     {
         SendAddon(player, "BM\tMSG\tThat Battlemon is not in the catalog.");
@@ -2296,7 +2296,7 @@ void BattlemonMgr::BagUse(Player* player, std::string const& item, uint32 ownedI
         return;
     }
 
-    BattlemonForm const* form = GetForm(row.formId);
+    BattlemonForm const* form = GetBattlemonForm(row.formId);
     std::string const name = form ? form->name : "Your Pokémon";
     uint32 const maxHp = MaxHpFor(row);
 
@@ -2762,7 +2762,7 @@ std::vector<BattlemonBattler> BattlemonMgr::BuildDuelParty(Player* player, uint8
     for (uint8 slot = 1; slot <= 6 && party.size() < limit; ++slot)
     {
         BattlemonOwned const row = LoadOwnedById(PartyOwnedId(guid, slot));
-        if (!row.id || row.guid != guid || !row.hp || !GetForm(row.formId)
+        if (!row.id || row.guid != guid || !row.hp || !GetBattlemonForm(row.formId)
             || row.level > BattlemonTrainerProgression::LevelCap(player))
             continue;
         BattlemonBattler battler = MakeBattler(row);
@@ -2796,7 +2796,7 @@ std::vector<BattlemonBattler> BattlemonMgr::BuildGeneratedTeam(
     std::vector<uint32> rare;
     for (uint32 id : _formIds)
     {
-        BattlemonForm const* form = GetForm(id);
+        BattlemonForm const* form = GetBattlemonForm(id);
         BattlemonSpecies const* species = form ? GetSpecies(form->speciesId) : nullptr;
         // Cosmetic/battle-state forms are not independent species rolls.
         if (!species || !form->variant.empty() || !species->catchRate)
@@ -2832,7 +2832,7 @@ std::vector<BattlemonBattler> BattlemonMgr::BuildGeneratedTeam(
             return {}; // Never silently give a beginner a legendary as a fallback.
         uint32 const index = urand(0, static_cast<uint32>(pool->size() - 1));
         uint32 const formId = (*pool)[index];
-        BattlemonForm const* form = GetForm(formId);
+        BattlemonForm const* form = GetBattlemonForm(formId);
         if (!form)
             return {};
         BattlemonBattler battler = MakeWild(*form, urand(low, high));
@@ -2842,7 +2842,7 @@ std::vector<BattlemonBattler> BattlemonMgr::BuildGeneratedTeam(
         for (auto* candidates : {&basic, &regular, &rare})
             candidates->erase(std::remove_if(candidates->begin(), candidates->end(), [this, form](uint32 id)
             {
-                BattlemonForm const* candidate = GetForm(id);
+                BattlemonForm const* candidate = GetBattlemonForm(id);
                 return candidate && candidate->speciesId == form->speciesId;
             }), candidates->end());
     }
@@ -2866,7 +2866,7 @@ std::vector<BattlemonBattler> BattlemonMgr::BuildTrainerTeam(uint32 entry, uint3
         BattlemonForm const* selected = nullptr;
         for (uint32 id : _formIds)
         {
-            BattlemonForm const* form = GetForm(id);
+            BattlemonForm const* form = GetBattlemonForm(id);
             if (form && form->speciesId == wanted && form->variant.empty()
                 && (!selected || form->id < selected->id))
                 selected = form;
@@ -2908,7 +2908,7 @@ void BattlemonMgr::UseCenterService(Player* player, uint32 action)
             BattlemonOwned const row = LoadOwnedById(PartyOwnedId(account.guid, slot));
             if (!row.id)
                 continue;
-            if (row.guid != account.guid || !GetForm(row.formId) || !GetSpecies(row.speciesId))
+            if (row.guid != account.guid || !GetBattlemonForm(row.formId) || !GetSpecies(row.speciesId))
             {
                 Msg(player, "Your party could not be loaded. Please try again.");
                 return;
