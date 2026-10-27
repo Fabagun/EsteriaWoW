@@ -5,6 +5,7 @@ Standalone AzerothCore module that gives a game launcher an HTTP API for:
 - **Account creation** - creates a normal game account (name, password, email). The same login works in the launcher and the game client.
 - **Account management** - change password and email.
 - **Characters** - list, soft-delete / restore, and the rename, faction change, race change and re-customize services.
+- **Armory and world database** - public, read-only, live lookups of characters with gear, and of items, quests, NPCs, spells and zones.
 - **Presence** - which character an account is playing right now (name, level, race, class, zone).
 
 No SQL and no extra tables. Services reuse the core `at_login` flags, delete/restore reuse the core soft-delete path.
@@ -35,6 +36,8 @@ JSON in/out under `/launcher/v1/`. `login` returns a bearer token; send it as `A
 | `POST characters/<guid>/delete` | | blocked for guild leaders / arena captains / online |
 | `POST characters/<guid>/restore` | | needs a free slot and unused name |
 | `POST characters/<guid>/service` | `service: rename\|customize\|faction\|race` | sets `at_login`; player finishes at character select |
+| `GET armory?q=` | | public; characters with gear (100 per search, 250 without). Bots hidden unless `LauncherApi.Armory.IncludeBots = 1` |
+| `GET database?q=&type=` | | public; `type` = item, quest, npc, spell, zone or all. Answers are cached 60 s and limited to 120 lookups/min per IP |
 | `GET presence` | | `{online, character{name, level, race, class, zone, map}}` |
 
 ## Limits

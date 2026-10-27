@@ -10,8 +10,11 @@
 #include "GuildMgr.h"
 #include "Log.h"
 #include "ObjectAccessor.h"
+#include "ObjectMgr.h"
 #include "Player.h"
 #include "ScriptMgr.h"
+#include "SpellInfo.h"
+#include "SpellMgr.h"
 #include "StringFormat.h"
 #include "Util.h"
 #include "World.h"
@@ -21,6 +24,7 @@
 #include <boost/asio/ssl.hpp>
 #include <boost/beast.hpp>
 #include <boost/beast/ssl.hpp>
+#include <algorithm>
 #include <atomic>
 #include <chrono>
 #include <deque>
@@ -29,8 +33,11 @@
 #include <memory>
 #include <mutex>
 #include <random>
+#include <cmath>
+#include <ctime>
 #include <regex>
 #include <thread>
+#include <vector>
 #include <unordered_map>
 
 namespace
@@ -60,6 +67,7 @@ namespace
         bool customize = true;
         bool faction = true;
         bool race = true;
+        bool armoryBots = false;
     };
 
     struct Reply
@@ -141,6 +149,7 @@ namespace
             next.customize = sConfigMgr->GetOption<bool>("LauncherApi.Service.Customize", true);
             next.faction = sConfigMgr->GetOption<bool>("LauncherApi.Service.Faction", true);
             next.race = sConfigMgr->GetOption<bool>("LauncherApi.Service.Race", true);
+            next.armoryBots = sConfigMgr->GetOption<bool>("LauncherApi.Armory.IncludeBots", false);
             std::lock_guard lock(mutex_);
             settings_ = next; // shortcut: listener address/TLS changes need a restart; the rest applies on reload
         }
@@ -295,7 +304,7 @@ namespace
             response.set(http::field::access_control_allow_headers, "authorization, content-type");
             response.set(http::field::access_control_allow_methods, "GET, POST, OPTIONS");
             response.keep_alive(false);
-            response.body() = reply.status == 204 ? std::string() : reply.body.dump();
+            response.body() = reply.status == 204 ? std::string() : reply.body.dump(-1, ' ', false, Json::error_handler_t::replace);
             response.prepare_payload();
             http::write(stream, response);
         }
@@ -350,6 +359,8 @@ namespace
                 return {200, {{"name", "launcher-api"}, {"registration", s.registration},
                     {"services", {{"rename", s.rename}, {"customize", s.customize}, {"faction", s.faction}, {"race", s.race}}},
                     {"characterDelete", s.charDelete}}};
+            if (get && (route == "armory" || route == "database"))
+                return Lookup(route, std::string(request.target()), ip, s);
             if (post && route == "register")
                 return Register(body, ip, s);
             if (post && route == "login")
@@ -442,6 +453,370 @@ namespace
             if (hits.empty())
                 hits_.erase(key);
             return over;
+        }
+
+        // ---- public lookups: armory and world database ---------------------------------------------------------
+        // Read-only and unauthenticated. Answers are cached for a minute and throttled per IP.
+
+        static std::string Lower(std::string text)
+        {
+            for (char& c : text)
+                c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+            return text;
+        }
+
+        static bool Has(std::string const& hay, std::string const& lowerNeedle)
+        {
+            return Lower(hay).find(lowerNeedle) != std::string::npos;
+        }
+
+        static std::string UrlDecode(std::string const& text)
+        {
+            std::string out;
+            for (std::size_t i = 0; i < text.size(); ++i)
+            {
+                if (text[i] == '+')
+                    out += ' ';
+                else if (text[i] == '%' && i + 2 < text.size() && std::isxdigit(static_cast<unsigned char>(text[i + 1])) &&
+                    std::isxdigit(static_cast<unsigned char>(text[i + 2])))
+                {
+                    out += static_cast<char>(std::stoi(text.substr(i + 1, 2), nullptr, 16));
+                    i += 2;
+                }
+                else
+                    out += text[i];
+            }
+            return out;
+        }
+
+        static std::string QueryParam(std::string const& target, std::string const& key)
+        {
+            std::size_t mark = target.find('?');
+            while (mark != std::string::npos)
+            {
+                std::size_t end = target.find('&', mark + 1);
+                std::string pair = target.substr(mark + 1, end == std::string::npos ? std::string::npos : end - mark - 1);
+                std::size_t eq = pair.find('=');
+                if (eq != std::string::npos && pair.substr(0, eq) == key)
+                    return UrlDecode(pair.substr(eq + 1));
+                mark = end;
+            }
+            return {};
+        }
+
+        // Keeps letters, digits, spaces and dashes only, so the term is safe inside a LIKE pattern.
+        static std::string SearchTerm(std::string const& raw)
+        {
+            std::string out;
+            for (char c : raw)
+            {
+                unsigned char u = static_cast<unsigned char>(c);
+                if (std::isalnum(u) || c == ' ' || c == '-' || u >= 0x80)
+                    out += c;
+            }
+            std::size_t first = out.find_first_not_of(' ');
+            out = first == std::string::npos ? std::string() : out.substr(first, out.find_last_not_of(' ') - first + 1);
+            return out.substr(0, 40);
+        }
+
+        Reply Lookup(std::string const& route, std::string const& target, std::string const& ip, Settings const& s)
+        {
+            if (Throttled("lookup:" + ip, 120, 60, true))
+                return Fail(429, "throttled", "Too many lookups; slow down.");
+            std::string q = SearchTerm(QueryParam(target, "q"));
+            std::string type = Lower(SearchTerm(QueryParam(target, "type")));
+            std::string key = route + '|' + Lower(q) + '|' + type;
+            {
+                std::lock_guard lock(mutex_);
+                auto found = lookups_.find(key);
+                if (found != lookups_.end() && found->second.first > Clock::now())
+                    return {200, found->second.second};
+            }
+            bool bots = s.armoryBots;
+            Reply reply = OnWorld(route == "armory" ? std::function<Reply()>([q, bots] { return ArmorySearch(q, bots); })
+                                                    : std::function<Reply()>([q, type] { return DatabaseSearch(q, type); }));
+            if (reply.status == 200)
+            {
+                std::lock_guard lock(mutex_);
+                if (lookups_.size() > 256)
+                    lookups_.clear();
+                lookups_[key] = {Clock::now() + std::chrono::seconds(60), reply.body};
+            }
+            return reply;
+        }
+
+        static std::string IdList(std::vector<uint32> const& ids)
+        {
+            std::string out;
+            for (uint32 id : ids)
+                out += (out.empty() ? "" : ",") + std::to_string(id);
+            return out;
+        }
+
+        static Reply ArmorySearch(std::string const& q, bool includeBots)
+        {
+            static char const* const Slots[] = {"Head", "Neck", "Shoulder", "Shirt", "Chest", "Waist", "Legs", "Feet", "Wrist",
+                "Hands", "Finger 1", "Finger 2", "Trinket 1", "Trinket 2", "Back", "Main Hand", "Off Hand", "Ranged", "Tabard"};
+            std::string lower = Lower(q);
+            std::string where = "c.deleteDate IS NULL";
+            if (!includeBots)
+            {
+                std::vector<uint32> bots;
+                if (QueryResult result = LoginDatabase.Query("SELECT id FROM account WHERE username LIKE 'RNDBOT%' LIMIT 5000"))
+                    do
+                        bots.push_back(result->Fetch()[0].Get<uint32>());
+                    while (result->NextRow());
+                if (!bots.empty())
+                    where += " AND c.account NOT IN (" + IdList(bots) + ")";
+            }
+            if (!q.empty())
+            {
+                std::string any = "c.name LIKE '%" + q + "%' OR IFNULL(g.name, '') LIKE '%" + q + "%'";
+                std::vector<uint32> races, classes, zones;
+                for (uint32 i = 0; i < sChrRacesStore.GetNumRows(); ++i)
+                    if (ChrRacesEntry const* race = sChrRacesStore.LookupEntry(i))
+                        if (Has(LocaleName(race->name), lower))
+                            races.push_back(i);
+                for (uint32 i = 0; i < sChrClassesStore.GetNumRows(); ++i)
+                    if (ChrClassesEntry const* cls = sChrClassesStore.LookupEntry(i))
+                        if (Has(LocaleName(cls->name), lower))
+                            classes.push_back(i);
+                for (uint32 i = 0; i < sAreaTableStore.GetNumRows() && zones.size() < 200; ++i)
+                    if (AreaTableEntry const* area = sAreaTableStore.LookupEntry(i))
+                        if (Has(LocaleName(area->area_name), lower))
+                            zones.push_back(i);
+                if (!races.empty())
+                    any += " OR c.race IN (" + IdList(races) + ")";
+                if (!classes.empty())
+                    any += " OR c.class IN (" + IdList(classes) + ")";
+                if (!zones.empty())
+                    any += " OR c.zone IN (" + IdList(zones) + ")";
+                where += " AND (" + any + ")";
+            }
+
+            struct Row
+            {
+                uint32 guid = 0;
+                Json json;
+                std::vector<std::pair<uint8, Json>> gear;
+                uint32 points = 0;
+            };
+            std::vector<Row> rows;
+            std::vector<uint32> guids;
+            if (QueryResult result = CharacterDatabase.Query(Acore::StringFormat(
+                "SELECT c.guid, c.name, c.level, c.race, c.class, IFNULL(g.name, ''), c.zone, c.online, c.logout_time "
+                "FROM characters c LEFT JOIN guild_member gm ON gm.guid = c.guid LEFT JOIN guild g ON g.guildid = gm.guildid "
+                "WHERE {} ORDER BY c.online DESC, c.level DESC, c.totaltime DESC LIMIT {}", where, q.empty() ? 250 : 100)))
+            {
+                do
+                {
+                    Field* f = result->Fetch();
+                    ChrRacesEntry const* race = sChrRacesStore.LookupEntry(f[3].Get<uint8>());
+                    ChrClassesEntry const* cls = sChrClassesStore.LookupEntry(f[4].Get<uint8>());
+                    AreaTableEntry const* area = sAreaTableStore.LookupEntry(f[6].Get<uint32>());
+                    Row row;
+                    row.guid = f[0].Get<uint32>();
+                    row.json = {{"name", f[1].Get<std::string>()}, {"level", f[2].Get<uint8>()},
+                        {"race", race ? LocaleName(race->name) : "Unknown"}, {"className", cls ? LocaleName(cls->name) : "Unknown"},
+                        {"online", f[7].Get<bool>()}};
+                    if (std::string guild = f[5].Get<std::string>(); !guild.empty())
+                        row.json["guild"] = guild;
+                    if (area)
+                        row.json["zone"] = LocaleName(area->area_name);
+                    if (time_t seen = static_cast<time_t>(f[8].Get<uint32>()))
+                    {
+                        char buffer[32];
+                        std::tm utc{};
+#ifdef _WIN32
+                        gmtime_s(&utc, &seen);
+#else
+                        gmtime_r(&seen, &utc);
+#endif
+                        std::strftime(buffer, sizeof(buffer), "%Y-%m-%dT%H:%M:%S.000Z", &utc);
+                        row.json["lastSeen"] = buffer;
+                    }
+                    guids.push_back(row.guid);
+                    rows.push_back(std::move(row));
+                } while (result->NextRow());
+            }
+
+            if (!guids.empty())
+            {
+                std::unordered_map<uint32, std::size_t> index;
+                for (std::size_t i = 0; i < rows.size(); ++i)
+                    index[rows[i].guid] = i;
+                std::string list = IdList(guids);
+                if (QueryResult result = CharacterDatabase.Query(Acore::StringFormat(
+                    "SELECT ci.guid, ci.slot, ii.itemEntry FROM character_inventory ci JOIN item_instance ii ON ii.guid = ci.item "
+                    "WHERE ci.bag = 0 AND ci.slot < 19 AND ci.guid IN ({})", list)))
+                {
+                    do
+                    {
+                        Field* f = result->Fetch();
+                        ItemTemplate const* item = sObjectMgr->GetItemTemplate(f[2].Get<uint32>());
+                        auto row = index.find(f[0].Get<uint32>());
+                        if (!item || row == index.end())
+                            continue;
+                        uint8 slot = f[1].Get<uint8>();
+                        rows[row->second].gear.push_back({slot, {{"slot", Slots[slot]}, {"id", item->ItemId}, {"name", item->Name1},
+                            {"quality", item->Quality}, {"itemLevel", item->ItemLevel}}});
+                    } while (result->NextRow());
+                }
+                if (QueryResult result = CharacterDatabase.Query(Acore::StringFormat(
+                    "SELECT guid, achievement FROM character_achievement WHERE guid IN ({})", list)))
+                {
+                    do
+                    {
+                        Field* f = result->Fetch();
+                        auto row = index.find(f[0].Get<uint32>());
+                        AchievementEntry const* entry = sAchievementStore.LookupEntry(f[1].Get<uint32>());
+                        if (entry && row != index.end())
+                            rows[row->second].points += entry->points;
+                    } while (result->NextRow());
+                }
+            }
+
+            Json characters = Json::array();
+            for (Row& row : rows)
+            {
+                std::sort(row.gear.begin(), row.gear.end(), [](auto const& a, auto const& b) { return a.first < b.first; });
+                Json equipment = Json::array();
+                uint32 total = 0, counted = 0;
+                for (auto const& [slot, item] : row.gear)
+                {
+                    equipment.push_back(item);
+                    if (slot != 3 && slot != 18)
+                    {
+                        total += item["itemLevel"].get<uint32>();
+                        ++counted;
+                    }
+                }
+                row.json["itemLevel"] = counted ? static_cast<uint32>(std::lround(double(total) / counted)) : 0;
+                row.json["achievementPoints"] = row.points;
+                row.json["equipment"] = std::move(equipment);
+                characters.push_back(std::move(row.json));
+            }
+            return {200, {{"schemaVersion", 1}, {"characters", characters}}};
+        }
+
+        static Reply DatabaseSearch(std::string const& q, std::string const& type)
+        {
+            std::string lower = Lower(q);
+            uint32 wantedId = !q.empty() && q.size() <= 9 && q.find_first_not_of("0123456789") == std::string::npos ? std::stoul(q) : 0;
+            bool specific = !type.empty() && type != "all";
+            std::size_t cap = specific ? 200 : 40;
+            LocaleConstant locale = sWorld->GetDefaultDbcLocale();
+
+            struct Hit
+            {
+                int rank;
+                std::string name;
+                Json json;
+            };
+            std::vector<Hit> hits;
+            auto want = [&](char const* kind) { return !specific || type == kind; };
+            // rank 0: exact id, 1: name starts with the term, 2: name contains it
+            auto consider = [&](uint32 id, std::string const& name, std::function<Json()> build) {
+                int rank = 3;
+                if (wantedId && id == wantedId)
+                    rank = 0;
+                else if (!lower.empty() && !name.empty())
+                {
+                    std::size_t at = Lower(name).find(lower);
+                    rank = at == 0 ? 1 : at != std::string::npos ? 2 : 3;
+                }
+                if (rank < 3)
+                    hits.push_back({rank, name, build()});
+            };
+            Json entries = Json::array();
+            auto take = [&] {
+                std::sort(hits.begin(), hits.end(), [](Hit const& a, Hit const& b) {
+                    if (a.rank != b.rank)
+                        return a.rank < b.rank;
+                    return a.name.size() != b.name.size() ? a.name.size() < b.name.size() : a.name < b.name;
+                });
+                for (std::size_t i = 0; i < hits.size() && i < cap; ++i)
+                    entries.push_back(std::move(hits[i].json));
+                hits.clear();
+            };
+            auto text = [](std::string const& value, std::size_t max) { return value.size() > max ? value.substr(0, max) + "..." : value; };
+
+            if (q.empty())
+            {
+                // No search yet: show the legendary items as a starting point.
+                if (!want("item"))
+                    return {200, {{"schemaVersion", 1}, {"entries", entries}}};
+                std::vector<ItemTemplate const*> legendary;
+                for (auto const& [id, item] : *sObjectMgr->GetItemTemplateStore())
+                    if (item.Quality == 5)
+                        legendary.push_back(&item);
+                std::sort(legendary.begin(), legendary.end(), [](auto a, auto b) { return a->ItemLevel > b->ItemLevel; });
+                for (std::size_t i = 0; i < legendary.size() && i < 60; ++i)
+                    entries.push_back({{"type", "item"}, {"id", legendary[i]->ItemId}, {"name", legendary[i]->Name1},
+                        {"subtitle", "Item level " + std::to_string(legendary[i]->ItemLevel)}, {"description", legendary[i]->Description},
+                        {"quality", legendary[i]->Quality}, {"level", legendary[i]->ItemLevel}});
+                return {200, {{"schemaVersion", 1}, {"entries", entries}}};
+            }
+
+            if (want("item"))
+            {
+                for (auto const& [id, item] : *sObjectMgr->GetItemTemplateStore())
+                    consider(id, item.Name1, [&] {
+                        return Json{{"type", "item"}, {"id", id}, {"name", item.Name1},
+                            {"subtitle", "Item level " + std::to_string(item.ItemLevel)}, {"description", item.Description},
+                            {"quality", item.Quality}, {"level", item.ItemLevel}, {"requiredLevel", item.RequiredLevel}};
+                    });
+                take();
+            }
+            if (want("quest"))
+            {
+                for (auto const& [id, quest] : sObjectMgr->GetQuestTemplates())
+                    consider(id, quest->GetTitle(), [&] {
+                        std::string zone;
+                        if (quest->GetZoneOrSort() > 0)
+                            if (AreaTableEntry const* area = sAreaTableStore.LookupEntry(quest->GetZoneOrSort()))
+                                zone = LocaleName(area->area_name);
+                        return Json{{"type", "quest"}, {"id", id}, {"name", quest->GetTitle()}, {"subtitle", zone},
+                            {"description", text(quest->GetDetails(), 260)}, {"level", quest->GetQuestLevel()}, {"minLevel", quest->GetMinLevel()}};
+                    });
+                take();
+            }
+            if (want("npc"))
+            {
+                for (auto const& [id, creature] : *sObjectMgr->GetCreatureTemplates())
+                    consider(id, creature.Name, [&] {
+                        return Json{{"type", "npc"}, {"id", id}, {"name", creature.Name}, {"subtitle", creature.SubName},
+                            {"level", creature.maxlevel}, {"minLevel", creature.minlevel}, {"maxLevel", creature.maxlevel}};
+                    });
+                take();
+            }
+            if (want("spell"))
+            {
+                for (uint32 id = 1; id < sSpellMgr->GetSpellInfoStoreSize(); ++id)
+                    if (SpellInfo const* spell = sSpellMgr->GetSpellInfo(id))
+                    {
+                        char const* name = spell->SpellName[locale];
+                        if (!name || !*name)
+                            continue;
+                        consider(id, name, [&] {
+                            char const* rank = spell->Rank[locale];
+                            return Json{{"type", "spell"}, {"id", id}, {"name", name}, {"subtitle", rank ? rank : ""}};
+                        });
+                    }
+                take();
+            }
+            if (want("zone"))
+            {
+                for (uint32 id = 0; id < sAreaTableStore.GetNumRows(); ++id)
+                    if (AreaTableEntry const* area = sAreaTableStore.LookupEntry(id))
+                        consider(id, LocaleName(area->area_name), [&] {
+                            AreaTableEntry const* parent = area->zone ? sAreaTableStore.LookupEntry(area->zone) : nullptr;
+                            return Json{{"type", "zone"}, {"id", id}, {"name", LocaleName(area->area_name)},
+                                {"subtitle", parent ? LocaleName(parent->area_name) : ""}, {"mapId", area->mapid}};
+                        });
+                take();
+            }
+            return {200, {{"schemaVersion", 1}, {"entries", entries}}};
         }
 
         // ---- handlers ------------------------------------------------------------------------------------------
@@ -545,8 +920,11 @@ namespace
         {
             Json live = Json::array();
             if (QueryResult result = CharacterDatabase.Query(Acore::StringFormat(
-                "SELECT guid, name, race, class, gender, level, zone, map, online, at_login FROM characters "
-                "WHERE account = {} ORDER BY guid", account)))
+                "SELECT c.guid, c.name, c.race, c.class, c.gender, c.level, c.zone, c.map, c.online, c.at_login, "
+                "c.totaltime, c.logout_time, c.money, c.totalKills, c.totalHonorPoints, c.arenaPoints, "
+                "IFNULL(g.name, ''), (SELECT COUNT(*) FROM character_achievement a WHERE a.guid = c.guid) "
+                "FROM characters c LEFT JOIN guild_member gm ON gm.guid = c.guid LEFT JOIN guild g ON g.guildid = gm.guildid "
+                "WHERE c.account = {} AND c.deleteDate IS NULL ORDER BY c.guid", account)))
             {
                 do
                 {
@@ -560,12 +938,15 @@ namespace
                         {"raceId", raceId}, {"classId", classId}, {"gender", f[4].Get<uint8>()},
                         {"race", race ? LocaleName(race->name) : ""}, {"class", cls ? LocaleName(cls->name) : ""},
                         {"level", f[5].Get<uint8>()}, {"zone", area ? LocaleName(area->area_name) : ""},
-                        {"online", f[8].Get<bool>()}, {"pendingService", f[9].Get<uint32>()}});
+                        {"online", f[8].Get<bool>()}, {"pendingService", f[9].Get<uint32>()},
+                        {"playedSeconds", f[10].Get<uint32>()}, {"lastSeen", f[11].Get<uint32>()}, {"money", f[12].Get<uint32>()},
+                        {"kills", f[13].Get<uint32>()}, {"honor", f[14].Get<uint32>()}, {"arena", f[15].Get<uint32>()},
+                        {"guild", f[16].Get<std::string>()}, {"achievements", f[17].Get<uint64>()}});
                 } while (result->NextRow());
             }
             Json deleted = Json::array();
             if (QueryResult result = CharacterDatabase.Query(Acore::StringFormat(
-                "SELECT guid, deleteInfos_Name, race, class, level, deleteDate FROM characters "
+                "SELECT guid, deleteInfos_Name, race, class, level, deleteDate, gender FROM characters "
                 "WHERE deleteInfos_Account = {} AND deleteDate IS NOT NULL ORDER BY deleteDate DESC", account)))
             {
                 do
@@ -574,11 +955,19 @@ namespace
                     ChrRacesEntry const* race = sChrRacesStore.LookupEntry(f[2].Get<uint8>());
                     ChrClassesEntry const* cls = sChrClassesStore.LookupEntry(f[3].Get<uint8>());
                     deleted.push_back({{"guid", f[0].Get<uint32>()}, {"name", f[1].Get<std::string>()},
+                        {"raceId", f[2].Get<uint8>()}, {"classId", f[3].Get<uint8>()}, {"gender", f[6].Get<uint8>()},
                         {"race", race ? LocaleName(race->name) : ""}, {"class", cls ? LocaleName(cls->name) : ""},
                         {"level", f[4].Get<uint8>()}, {"deletedAt", f[5].Get<uint32>()}});
                 } while (result->NextRow());
             }
-            return {200, {{"characters", live}, {"deleted", deleted}}};
+            Json acct = Json::object();
+            if (QueryResult result = LoginDatabase.Query(Acore::StringFormat(
+                "SELECT UNIX_TIMESTAMP(joindate), IFNULL(UNIX_TIMESTAMP(last_login), 0) FROM account WHERE id = {}", account)))
+            {
+                Field* f = result->Fetch();
+                acct = {{"joined", f[0].Get<uint32>()}, {"lastLogin", f[1].Get<uint32>()}};
+            }
+            return {200, {{"characters", live}, {"deleted", deleted}, {"account", acct}}};
         }
 
         // route: "<guid>/delete" | "<guid>/restore" | "<guid>/service"
@@ -623,7 +1012,15 @@ namespace
                 return Fail(409, "arena_captain", "Hand over your arena team before deleting this character.");
             sScriptMgr->OnPlayerDelete(object, account);
             sCalendarMgr->RemoveAllPlayerEventsAndInvites(object);
+            // The core erases the character for good unless CharDelete.Method is "unlink" (and the level
+            // is above CharDelete.MinLevel). Force a soft delete so the launcher can offer a restore.
+            uint32 method = sWorld->getIntConfig(CONFIG_CHARDELETE_METHOD);
+            uint32 minLevel = sWorld->getIntConfig(CONFIG_CHARDELETE_MIN_LEVEL);
+            sWorld->setIntConfig(CONFIG_CHARDELETE_METHOD, CHAR_DELETE_UNLINK);
+            sWorld->setIntConfig(CONFIG_CHARDELETE_MIN_LEVEL, 0);
             Player::DeleteFromDB(guid, account, true, false);
+            sWorld->setIntConfig(CONFIG_CHARDELETE_METHOD, method);
+            sWorld->setIntConfig(CONFIG_CHARDELETE_MIN_LEVEL, minLevel);
             sWorld->UpdateRealmCharCount(account);
             LOG_INFO("module.launcherapi", "Account {} deleted character {} from the launcher", account, guid);
             return {200, {{"ok", true}}};
@@ -700,6 +1097,7 @@ namespace
         Settings settings_;
         std::unordered_map<std::string, Token> tokens_;
         std::unordered_map<std::string, std::deque<Clock::time_point>> hits_;
+        std::unordered_map<std::string, std::pair<Clock::time_point, Json>> lookups_;
         std::unordered_map<uint32, Presence> online_;
         std::deque<Task> tasks_;
         asio::io_context io_;

@@ -54,3 +54,10 @@ LauncherApi.Service.Rename = 1
 LauncherApi.Service.Customize = 1
 LauncherApi.Service.Faction = 1
 LauncherApi.Service.Race = 1
+
+#
+#    LauncherApi.Armory.IncludeBots
+#        Description: Show playerbot (RNDBOT*) characters in the public armory.
+#        Default:     0
+#
+LauncherApi.Armory.IncludeBots = 0
