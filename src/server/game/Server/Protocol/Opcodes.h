@@ -1346,9 +1346,7 @@ enum Opcodes : uint16
     SMSG_ESTERIA_RETAIL_LOOK                        = 0x524,
     CMSG_ESTERIA_FORM_LOOK                          = 0x525,
     SMSG_ESTERIA_FORM_LOOK_ACK                      = 0x526,
-    CMSG_ESTERIA_SKYRIDE                            = 0x527, // SkyridingWire.h; consumed by mod-esteria-skyriding
-    SMSG_ESTERIA_SKYRIDE                            = 0x528,
-    NUM_MSG_TYPES                                   = 0x529
+    NUM_MSG_TYPES                                   = 0x527
 };
 
 enum OpcodeMisc : uint16

@@ -42,13 +42,6 @@
 
 #define MOVEMENT_PACKET_TIME_DELAY 0
 
-// Skyriding messages are read by mod-esteria-skyriding in ServerScript::CanPacketReceive, which consumes them; this
-// only runs when the module is not built, and drops the message.
-void WorldSession::HandleEsteriaSkyrideOpcode(WorldPacket& recvData)
-{
-    recvData.rfinish();
-}
-
 void WorldSession::HandleMoveWorldportAckOpcode(WorldPacket& /*recvData*/)
 {
     LOG_DEBUG("network", "WORLD: got MSG_MOVE_WORLDPORT_ACK.");
